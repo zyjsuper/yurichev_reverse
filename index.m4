@@ -92,7 +92,7 @@ _HL2(`Archive')
 
 <li>_HTML_LINK(`openwatcom.html', `OpenWatcom patches')
 
-<li>My GitHub account _HTML_LINK(`https://github.com/dennis714')
+<li>_HTML_LINK(`https://github.com/dennis714', `My GitHub account')
 
 <li>rdesktop-1.7.1 mouse wheel double event issue patch: _HTML_LINK(`http://sourceforge.net/mailarchive/message.php?msg_id=30237555', `post #1'), <a href="https://sourceforge.net/p/rdesktop/patches/215/'">patch info</a>
 
