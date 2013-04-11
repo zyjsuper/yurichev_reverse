@@ -78,7 +78,7 @@ _HL2(`Archive')
 
 <li>_HTML_LINK(`http://conus.info/patches/BitchX/', `BitchX IRC client patches and binaries').
 
-<li>_HTML_LINK(`http://conus.info/retrocomputing/', `Some retrocomputing files')
+<li>_HTML_LINK(`retrocomputing.html', `Some retrocomputing files')
 
 <li>_HTML_LINK(`http://conus.info/archive/', `cuetools 1.3.1 win32 binaries, Intel microcode table dumps')
 
