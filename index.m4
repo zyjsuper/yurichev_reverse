@@ -30,7 +30,7 @@ _HL2(`Blogs, etc')
 
 <p>Some kind of tech _HTML_LINK(`http://blog.yurichev.com/', `blog here').</p>
 
-<p>_HTML_LINK(`https://twitter.com/yurichev', `English-language twitter.'), _HTML_LINK(`https://twitter.com/yonkie', `Russian-language twitter')</p>
+<p>_HTML_LINK(`https://twitter.com/yurichev', `English-language twitter.'), _HTML_LINK(`https://twitter.com/yurichev_ru', `Russian-language twitter')</p>
 
 <p>_HTML_LINK(`http://dennis.livejournal.com/', `Livejournal (Russian language).')</p>
 
