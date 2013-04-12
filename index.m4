@@ -32,7 +32,7 @@ _HL2(`Blogs, etc')
 
 <p>_HTML_LINK(`https://twitter.com/yurichev', `English-language twitter.'), _HTML_LINK(`https://twitter.com/yurichev_ru', `Russian-language twitter')</p>
 
-<p>_HTML_LINK(`http://dennis.livejournal.com/', `Livejournal (Russian language).')</p>
+<p>_HTML_LINK(`http://yurichev.dreamwidth.org/', `Dreamwidth blog (Russian language).')</p>
 
 _HL2(`Contacts')
 
