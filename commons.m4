@@ -12,7 +12,7 @@ _MAKE_TITLE(`$1')
 
 m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`index.html',`index page')] [email me: dennis(a)yurichev.com]</p>
 
-<h5>File last updated on m4_esyscmd(stat --format="%y" m4___file__)</h5>
+<h5>File last updated on m4_esyscmd(c:/cygwin/bin/date -r m4___file__ +"%d-%B-%Y")</h5>
 
 </body>
 </html>')
