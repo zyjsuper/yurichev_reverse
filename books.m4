@@ -7,7 +7,7 @@ _HL1(`Books I would recommend:')
 _HL2(`Non-fiction')
 
 <ul>
-<li>Jean Baudrillard - Le système des objets; La société de consommation: ses mythes et ses structures
+<li>Jean Baudrillard - The System of Objects (1968); The Consumer Society: Myths and Structures (1970); America (1986)
 <li>The Blackwell Encyclopedia of Sociology
 <li>Emmanuel Le Roy Ladurie - Montaillou, village occitan de 1294 à 1324
 <li>_HTML_LINK(`http://lib.ru/CULTURE/MUSIC/KOZLOV/kozel_na_saxe.txt', `Алексей Козлов - "Козел на саксе"')
