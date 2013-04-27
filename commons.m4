@@ -21,4 +21,4 @@ m4_define(`_HL1', `<h2>$1</h2>')
 m4_define(`_HL2', `<h3>$1</h3>')
 m4_define(`_HL3', `<h4>$1</h4>')
 m4_define(`_HL4', `<h5>$1</h5>')
-
+m4_define(`_GREY', `<font color="#808080">$1</font>')
