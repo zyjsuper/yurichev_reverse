@@ -7,12 +7,8 @@ _HL1(`Books I would recommend:')
 _HL2(`Non-fiction')
 
 <ul>
-<li>Jean Baudrillard - The System of Objects (1968); The Consumer Society: Myths and Structures (1970); America (1986)
-<li>_GREY(`The Blackwell Encyclopedia of Sociology')
 <li>_GREY(`Emmanuel Le Roy Ladurie - Montaillou, village occitan de 1294 à 1324')
-<li>_HTML_LINK(`http://lib.ru/CULTURE/MUSIC/KOZLOV/kozel_na_saxe.txt', `Алексей Козлов - "Козел на саксе"')
 <li>_HTML_LINK(`http://en.wikipedia.org/wiki/The_Rebel_Sell', `Joseph Heath and Andrew Potter - "The Rebel Sell"')
-<li>Richard Feynman - "Surely You're Joking, Mr. Feynman!", "What Do You Care What Other People Think?"
 <li>_HTML_LINK(`http://www.codersatwork.com/', `Coders At Work')
 <li>Hugh MacLeod - _HTML_LINK(`http://changethis.com/manifesto/show/6.HowToBeCreative', `How To Be Creative')
 <li>_HTML_LINK(`http://en.wikipedia.org/wiki/The_Real_Frank_Zappa_Book', `The Real Frank Zappa Book')
@@ -20,7 +16,6 @@ _HL2(`Non-fiction')
 <li>_GREY(`David Allen - Getting Things Done')
 <li>_GREY(`The Singapore Story: Memoirs of Lee Kuan Yew')
 <li>Umberto Eco, Jean-Claude Carriere - This is Not the End of the Book: A Conversation Curated by Jean-Philippe De Tonnac
-<li>_GREY(`Daniel Keyes - The Minds of Billy Milligan')
 <li>Андрей Горохов. Музпросвет
 <li>Илья Юрьевич Стогов - Грешники
 <li>Alan Sokal, Jean Bricmont - _HTML_LINK(`http://en.wikipedia.org/wiki/Fashionable_Nonsense', `Intellectual Impostures') (_HTML_LINK(`http://scepsis.ru/library/id_1052.html', `Russian translation'))
@@ -28,6 +23,14 @@ _HL2(`Non-fiction')
 <li>Marcus Aurelius - Meditations
 <li>_GREY(`Легасов, Валерий Алексеевич - Текст из пяти магнитофонных кассет, надиктованных академиком Легасовым В.А., "Об аварии на Чернобыльской АЭС"')
 <li>Гарри Каспаров - Шахматы как модель жизни
+<li>Masters of Doom: How Two Guys Created an Empire and Transformed Pop Culture
+</ul>
+
+_HL2(`Sociology')
+
+<ul>
+<li>Jean Baudrillard - The System of Objects (1968); The Consumer Society: Myths and Structures (1970); America (1986)
+<li>_GREY(`The Blackwell Encyclopedia of Sociology')
 </ul>
 
 _HL2(`Computer science')
@@ -42,6 +45,7 @@ _HL2(`Psychology')
 <li>_GREY(`Diagnostic and Statistical Manual of Mental Disorders')
 <li>Oliver Sacks - _HTML_LINK(`http://en.wikipedia.org/wiki/The_Man_Who_Mistook_His_Wife_for_a_Hat',`"The Man Who Mistook His Wife for a Hat"')
 <li>_HTML_LINK(`http://nancymcwilliams.com/books-authored/', `Nancy McWilliams - Psychoanalytic Diagnosis')
+<li>_GREY(`Daniel Keyes - The Minds of Billy Milligan')
 </ul>
 
 _HL2(`Business')
@@ -50,6 +54,20 @@ _HL2(`Business')
 <li>_GREY(`Richard Branson - Losing My Virginity: The Autobiography')
 <li>_HTML_LINK(`http://www.ashmanov.com/pap/bubble', `Игорь Ашманов - Жизнь внутри пузыря')
 <li>Олег Тиньков - Я такой как все
+</ul>
+
+_HL2(`Politics')
+
+<ul>
+<li>_GREY(`Noam Chomsky - How the World Works')
+</ul>
+
+_HL2(`Biographies')
+
+<ul>
+<li>_GREY(`Walter Isaacson - Steve Jobs')
+<li>_HTML_LINK(`http://lib.ru/CULTURE/MUSIC/KOZLOV/kozel_na_saxe.txt', `Алексей Козлов - "Козел на саксе"')
+<li>Richard Feynman - "Surely You're Joking, Mr. Feynman!", "What Do You Care What Other People Think?"
 </ul>
 
 _HL2(`Fiction')
