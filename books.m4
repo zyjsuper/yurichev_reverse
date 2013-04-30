@@ -37,6 +37,7 @@ _HL2(`Computer science')
 
 <ul>
 <li>_GREY(`Michael Sipser - Introduction to the Theory of Computation')
+<li>_GREY(`Henry S. Warren Jr. - Hacker&#39;s Delight')
 </ul>
 
 _HL2(`Psychology')
