@@ -38,6 +38,7 @@ _HL2(`Computer science')
 <ul>
 <li>_BOOK_NOT_FINISHED(`Michael Sipser - Introduction to the Theory of Computation')
 <li>_BOOK_NOT_FINISHED(`Henry S. Warren Jr. - Hacker&#39;s Delight')
+<li>_BOOK_NOT_FINISHED(`Bjarne Stroustrup - The Design and Evolution of C++')
 </ul>
 
 _HL2(`Psychology')
