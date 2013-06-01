@@ -24,6 +24,7 @@ _HL2(`Non-fiction')
 <li>_BOOK_NOT_FINISHED(`Легасов, Валерий Алексеевич - Текст из пяти магнитофонных кассет, надиктованных академиком Легасовым В.А., "Об аварии на Чернобыльской АЭС"')
 <li>Гарри Каспаров - Шахматы как модель жизни
 <li>Masters of Doom: How Two Guys Created an Empire and Transformed Pop Culture
+<li>_BOOK_NOT_FINISHED(`Theodore Kaczynski - Industrial Society and Its Future')
 </ul>
 
 _HL2(`Sociology')

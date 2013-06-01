@@ -55,9 +55,6 @@ _HL2(`Contacts')
 <p>My timezone is EET = East-European time = GMT+2h = EST+7h = PST+10h</p>
 
 <p>_HTML_LINK(`http://www.linkedin.com/in/dennisyurichev', `LinkedIn profile').</p>
-<p>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV')</p>
-
-<p>(I'm not looking for a job. Please, do not offer it to me.)</p>
 
 <p>_HTML_LINK(`http://facebook.com/yurichev', `Facebook')</p>
 
