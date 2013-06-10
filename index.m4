@@ -101,10 +101,6 @@ _HL2(`Other')
 <p>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')</p>
 <p>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')</p>
 
-<p>_HTML_LINK(`movies.html', `Movies') I would recommend.</p>
-
-<p>_HTML_LINK(`books.html', `Books') I find worth reading.</p>
-
 <img src="http://projecteuler.net/profile/dennis714.png" alt="Project Euler stats:">
 
 _FOOTER()
