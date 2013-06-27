@@ -14,18 +14,19 @@ _HL2(`Currently I&#39;m working on:')
 <li>My own yet primitive static analysis framework for experimenting.
 </ul>
 
-_HL2(`Some of my other projects:')
+_HL2(`Oracle RDBMS stuff:')
 
 <ul>
 <li>_HTML_LINK(`ops_FPGA.html', `FPGA-based Oracle RDBMS passwords cracker')
+<li>_HTML_LINK(`http://conus.info/utils/ops_SIMD/', `Oracle passwords (DES) cracker 0.3 (SSE2/AVX)')
+<li>_HTML_LINK(`http://conus.info/utils/#oracle_msb', `Oracle RDBMS .msb files unpacker')
+<li>_HTML_LINK(`oracle_tables.html', `Utility intended to dump some Oracle RDBMS 11.2 tables')
 </ul>
 
 _HL2(`Random utilities:')
 
 <ul>
-<li>_HTML_LINK(`http://conus.info/utils/ops_SIMD/', `Oracle passwords (DES) cracker 0.3 (SSE2/AVX)')
 <li>_HTML_LINK(`http://conus.info/utils/#sap', `SAP network packets decompressor')
-<li>_HTML_LINK(`http://conus.info/utils/#oracle_msb', `Oracle RDBMS .msb files unpacker')
 <li>_HTML_LINK(`http://conus.info/utils/#demux', `The demux command-line utility can be used to demultiplex a file to set of files.')
 <li>_HTML_LINK(`ddff.html', `Duplicate Directories and Files Finder')
 <li>_HTML_LINK(`https://github.com/dennis714/sort_photos', `Simple Python script just for sorting photos (based on EXIF data)')

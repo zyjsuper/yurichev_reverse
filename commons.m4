@@ -11,7 +11,7 @@ _MAKE_TITLE(`$1')
 <link rel="stylesheet" href="style.css">
 <body>')
 
-m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`index.html',`index page')] [email me: dennis(a)yurichev.com]</p>
+m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`index.html',`index page')]</p>
 
 <h5>File last updated on m4_esyscmd(c:/cygwin/bin/date -r m4___file__ +"%d-%B-%Y")</h5>
 
