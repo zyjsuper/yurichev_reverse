@@ -87,6 +87,7 @@ _HL2(`Also hosted somewhere on this website')
 <li>_HTML_LINK(`retrocomputing.html', `Some retrocomputing files')
 <li>_HTML_LINK(`http://conus.info/archive/', `cuetools 1.3.1 win32 binaries, Intel microcode table dumps')
 <li>_HTML_LINK(`http://yurichev.com/ref/Draft%20ANSI%20C%20Standard%20(ANSI%20X3J11-88-090)%20(May%2013,%201988).txt', `Draft ANSI C Standard (ANSI X3J11/88-090) (May 13, 1988)')
+<li>_HTML_LINK(`http://yurichev.com/ref/ARM%20Cookbook%20(1994)/', `ARM Cookbook (1994)')
 </ul>
 
 _HL2(`My patches')
