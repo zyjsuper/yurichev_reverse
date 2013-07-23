@@ -10,7 +10,7 @@ Want to thank me for something?
 
 <li><p>Bitcoin</p>
 
-<p>Bitcoin address: <b>1LLa7aqQbRmCYbccnCNwaLgxK9jFPTqPw</b>:</p>
+<p>My address: <b>1LLa7aqQbRmCYbccnCNwaLgxK9jFPTqPw</b>:</p>
 
 <img src="bitcoin.png">
 
@@ -26,7 +26,11 @@ Want to thank me for something?
  Ukraine
 </pre>
 
-Please, do not send cash in envelopes.
+Please, do not send cash through the mail.
+
+<li><p>S.W.I.F.T. wire transfer</p>
+
+<p>Please email dennis(a)yurichev.com for more information on how to make a bank transfer.</p>
 
 </ul>
 
