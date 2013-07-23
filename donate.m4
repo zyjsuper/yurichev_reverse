@@ -14,6 +14,10 @@ Want to thank me for something?
 
 <img src="bitcoin.png">
 
+<li><p>Money Bookers</p>
+
+<p>Email: dennis@yurichev.com</p>
+
 <li><p>Check?</p>
 
 <p>Please make checks payable for Denys Yurichev and send them to the following postal address:</p>
