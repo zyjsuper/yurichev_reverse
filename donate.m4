@@ -16,7 +16,7 @@ Want to thank me for something?
 
 <li><p>Money Bookers</p>
 
-<p>Email: dennis@yurichev.com</p>
+<p>Email: dennis(a)yurichev.com</p>
 
 <li><p>Check?</p>
 
@@ -37,5 +37,7 @@ Please, do not send cash through the mail.
 <p>Please email dennis(a)yurichev.com for more information on how to make a bank transfer.</p>
 
 </ul>
+
+<p>Major benefactors will be mentioned right here.</p>
 
 _FOOTER()
