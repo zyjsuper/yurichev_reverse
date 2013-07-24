@@ -4,7 +4,7 @@ _HEADER(`index')
 
 _HL1(`Dennis Yurichev / Денис Юричев')
 
-_HTML_LINK(`pix/Dennis_Yurichev.jpg', `<img src="pix/Dennis_Yurichev_tn.jpg" alt="click for bigger image">')
+_HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
 _HL2(`Currently I&#39;m working on:')
 

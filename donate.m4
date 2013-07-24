@@ -12,7 +12,7 @@ Want to thank me for something?
 
 <p>My address: <b>1LLa7aqQbRmCYbccnCNwaLgxK9jFPTqPw</b>:</p>
 
-<img src="bitcoin.png">
+_HTML_IMG(`bitcoin.png',`QR code of bitcoin address')
 
 <li><p>Money Bookers</p>
 
@@ -35,6 +35,15 @@ Please, do not send cash through the mail.
 <li><p>S.W.I.F.T. wire transfer</p>
 
 <p>Please email dennis(a)yurichev.com for more information on how to make a bank transfer.</p>
+
+<li><p>Webmoney (_HTML_LINK(`http://www.wmtransfer.com/',`www.wmtransfer.com'))</p>
+
+	<ul>
+	<li>WMR R275619051346
+	<li>WMZ Z389264823069
+	<li>WME E116290914116
+	<li>WMU U334589110508
+	</ul>
 
 </ul>
 

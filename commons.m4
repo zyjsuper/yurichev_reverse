@@ -1,4 +1,5 @@
 m4_define(`_HTML_LINK', `<a href="$1">$2</a>')
+m4_define(`_HTML_IMG', `<img src="$1" alt="$2">')
 m4_define(`_HTML_EMAIL_LINK', `_HTML_LINK(mailto:_EMAIL_ADDRESS,_EMAIL_ADDRESS)')
 m4_define(`_MAKE_TITLE', `<title>Dennis Yurichev: $1</title>')
 
