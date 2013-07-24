@@ -77,7 +77,7 @@ _HL3(`Snail mail')
 
 _HL2(`Want to thank me for something?')
 
-Here is _HTML_LINK(`http://www.amazon.com/gp/wishlist/GFIL6Y9I4OHM/ref=reg_hu-rd_add_wl', `my amazon.com wishlist').
+_HTML_LINK(`donate.html', `Donate').
 
 _HL2(`Also hosted somewhere on this website')
 

@@ -45,6 +45,8 @@ Please, do not send cash through the mail.
 	<li>WMU U334589110508
 	</ul>
 
+<li><p>_HTML_LINK(`http://www.amazon.com/gp/wishlist/GFIL6Y9I4OHM/ref=reg_hu-rd_add_wl', `My amazon.com wishlist').</p>
+
 </ul>
 
 <p>Major benefactors will be mentioned right here.</p>
