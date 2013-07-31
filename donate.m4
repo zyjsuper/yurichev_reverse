@@ -47,6 +47,10 @@ Please, do not send cash through the mail.
 
 <li><p>_HTML_LINK(`http://www.amazon.com/gp/wishlist/GFIL6Y9I4OHM/ref=reg_hu-rd_add_wl', `My amazon.com wishlist').</p>
 
+<li>Yandex.Money:
+
+<p>410011929828115</p>
+
 </ul>
 
 <p>Major benefactors will be mentioned right here.</p>
