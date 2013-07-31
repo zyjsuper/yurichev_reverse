@@ -4,7 +4,7 @@ _HEADER(`Copyfile')
 
 _HL1(`Copyfile:')
 
-<img src="pix/copyfile.png" alt="">
+_HTML_IMG(`pix/copyfile.png',`screenshot')
 
 <p>A very simple win32-utility to copy a file ignoring errors (including CRC errors).</p>
 

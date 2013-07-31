@@ -51,4 +51,12 @@ Please, do not send cash through the mail.
 
 <p>Major benefactors will be mentioned right here.</p>
 
+<ul>
+<li>Anonymous donor, $5
+<li>Anonymous donor, $1
+<li>Anonymous donor, $100
+<li>Anonymous donor, $15
+<li>Anonymous donor, $5
+</ul>
+
 _FOOTER()
