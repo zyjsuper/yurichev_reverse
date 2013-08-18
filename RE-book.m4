@@ -8,6 +8,8 @@ _HEADER(`Quick introduction to reverse engineering for beginners')
 
 <p>Feel free to send me corrections, or, it's even possible to submit patches on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `book&#39;s source code')!</p>
 
+<p>See _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/ChangeLog',`ChangeLog')</p>
+
 <p>This book is free, available freely and available in source code form (LaTeX), 
 and it will be so forever.
 If you want to support my work, so that I could continue to add things to it regularly, 

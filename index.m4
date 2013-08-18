@@ -4,6 +4,8 @@ _HEADER(`index')
 
 _HL1(`Dennis Yurichev / Денис Юричев')
 
+<p><h5>My surname in IPA form: [yʊritʃev]</h5></p>
+
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
 _HL2(`Currently I&#39;m working on:')
