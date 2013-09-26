@@ -5,7 +5,7 @@ _HL1(`tracer v0.7')
 
 <p>(_HTML_LINK(`tracer-ru.html',`переключиться на русский язык'))</p>
 
-<p><i>tracer</i> (previous name is <i>generic tracer</i>) is command-line debugger for performing simple debugging tasks.</p>
+<p><i>tracer</i> (previously named as <i>generic tracer</i>) is command-line win32-debugger for performing simple debugging tasks.</p>
 
 <p>Major features:</p>
 <ul>

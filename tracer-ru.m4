@@ -5,7 +5,7 @@ _HL1(`tracer v0.7')
 
 <p>(_HTML_LINK(`tracer-en.html',`switch to English language'))</p>
 
-<p><i>tracer</i> (раннее <i>generic tracer</i>) это отладчик командной строки для выполнения простых отладочных задач.</p>
+<p><i>tracer</i> (раннее <i>generic tracer</i>) это win32-отладчик командной строки для выполнения простых отладочных задач.</p>
 
 <p>Главные возможности:</p>
 <ul>
