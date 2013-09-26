@@ -11,7 +11,7 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 _HL2(`Currently I&#39;m working on:')
 
 <ul>
-<li>_HTML_LINK(`http://conus.info/gt/', `Tracer')
+<li>_HTML_LINK(`tracer-en.html', `Tracer')
 <li>_HTML_LINK(`RE-book.html', `Quick introduction to reverse engineering for beginners') book.
 <li>My own yet primitive static analysis framework for experimenting.
 </ul>
@@ -107,8 +107,11 @@ _HL2(`My patches')
 
 _HL2(`Other')
 
-<p>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')</p>
-<p>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')</p>
+<ul>
+<li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
+<li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
+<li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')
+</ul>
 
 <img src="http://projecteuler.net/profile/dennis714.png" alt="Project Euler stats:">
 
