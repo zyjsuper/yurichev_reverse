@@ -111,6 +111,7 @@ _HL2(`Other')
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
 <li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')
+<li>_HTML_LINK(`kiev_city_train.html', `Kiev city train schedule')
 </ul>
 
 <img src="http://projecteuler.net/profile/dennis714.png" alt="Project Euler stats:">
