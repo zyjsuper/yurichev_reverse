@@ -28,6 +28,7 @@ _HL2(`Oracle RDBMS stuff:')
 _HL2(`Random utilities:')
 
 <ul>
+<li>_HTML_LINK(`PE_add_import.html',`<i>PE_add_import</i> is a simple tool for adding symbol to PE executable import table')
 <li>_HTML_LINK(`http://conus.info/utils/#sap', `SAP network packets decompressor')
 <li>_HTML_LINK(`http://conus.info/utils/#demux', `The demux command-line utility can be used to demultiplex a file to set of files.')
 <li>_HTML_LINK(`ddff.html', `Duplicate Directories and Files Finder')
