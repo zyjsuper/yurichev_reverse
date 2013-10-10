@@ -28,6 +28,7 @@ _HL2(`Oracle RDBMS stuff:')
 _HL2(`Random utilities:')
 
 <ul>
+<li>_HTML_LINK(`https://github.com/yurichev/bgrep',`Binary grep')
 <li>_HTML_LINK(`PE_add_import.html',`<i>PE_add_import</i> is a simple tool for adding symbol to PE executable import table')
 <li>_HTML_LINK(`http://conus.info/utils/#sap', `SAP network packets decompressor')
 <li>_HTML_LINK(`http://conus.info/utils/#demux', `The demux command-line utility can be used to demultiplex a file to set of files.')
@@ -46,7 +47,7 @@ _HL2(`Blogs, etc')
 
 <p>_HTML_LINK(`http://yurichev.dreamwidth.org/', `Dreamwidth blog (Russian language).')</p>
 
-<p>_HTML_LINK(`https://github.com/dennis714', `My GitHub account')</p>
+<p>_HTML_LINK(`https://github.com/dennis714', `My GitHub account #1') _HTML_LINK(`https://github.com/dennis714', `Another GitHub account #2')</p>
 
 _HL2(`Contacts')
 
@@ -109,6 +110,7 @@ _HL2(`My patches')
 _HL2(`Other')
 
 <ul>
+<li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
 <li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')

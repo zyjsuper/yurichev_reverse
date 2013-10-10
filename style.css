@@ -12,11 +12,16 @@ A:active, A:hover
 {
     color: #0000FF;
 }
-pre {
+pre
+{
     border: 1px dashed #2f6fab;
     color: black;
     background-color: #f9f9f9;
     line-height: 1.1em;
     padding: 15px 20px 15px 20px;
     border-radius: 6px;
+}
+p.right 
+{
+    text-align: right
 }
