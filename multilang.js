@@ -1,17 +1,21 @@
 function set_english()
 {
-	var elems = document.getElementsByName("multilang");
-	for (var i=0; i<elems.length; i++)
-	{
-		elems[i].innerHTML=elems[i].getAttribute("data-en");
-	}
+	var elements = document.getElementsByClassName('ru')
+	for (var i = 0; i < elements.length; i++)
+		elements[i].style.display = 'none';
+
+	var elements = document.getElementsByClassName('eng')
+	for (var i = 0; i < elements.length; i++)
+		elements[i].style.display = 'block';
 }
 function set_russian()
 {
-	var elems = document.getElementsByName("multilang");
-	for (var i=0; i<elems.length; i++)
-	{
-		elems[i].innerHTML=elems[i].getAttribute("data-ru");
-	}
+	var elements = document.getElementsByClassName('ru')
+	for (var i = 0; i < elements.length; i++)
+		elements[i].style.display = 'block';
+
+	var elements = document.getElementsByClassName('eng')
+	for (var i = 0; i < elements.length; i++)
+		elements[i].style.display = 'none';
 }
 window.onload = set_english;

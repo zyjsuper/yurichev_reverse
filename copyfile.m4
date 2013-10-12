@@ -8,18 +8,21 @@ _HL1(`Copyfile:')
 
 _HTML_IMG(`pix/copyfile.png',`screenshot')
 
-<p><span name="multilang" id="id1" 
-	data-ru="Это очень простая win32-утилита для копирования файлов игнорируя ошибки, включая CRC-ошибки."
-	data-en="A very simple win32-utility to copy a file ignoring errors (including CRC errors).">
-A very simple win32-utility to copy a file ignoring errors (including CRC errors).</span></p>
+m4_define(`_DOWNLOAD_URL', `http://conus.info/attic-files/copyfile/copyfile.exe')
+m4_define(`_SOURCE_CODE_URL', `https://github.com/dennis714/Copyfile')
 
-<p><span name="multilang" id="id2"
-        data-ru="Бывает полезной, когда нужно прочитать файл с поцарапанного CD или винчестера с бэд-блоками и если вы можете согласиться с тем что вместо оных в результирующем файле будут нулевые блоки."
-	data-en="This is useful when you try to recover a file from scratchy CD or hard disk with bad blocks and you can live with zeroed blocks instead of parts were not read.">
-This is useful when you try to recover a file from scratchy CD or hard disk with bad blocks and you can live with zeroed blocks instead of parts were not read.</span></p>
+<div class="ru">
+<p>Это очень простая win32-утилита для копирования файлов игнорируя ошибки, включая CRC-ошибки.</p>
+<p>Бывает полезной, когда нужно прочитать файл с поцарапанного CD или винчестера с бэд-блоками и если вы можете согласиться с тем что вместо оных в результирующем файле будут нулевые блоки.</p>
+<p>_HTML_LINK(`_DOWNLOAD_URL',`Скачать')</p>
+<p>_HTML_LINK(`_SOURCE_CODE_URL',`Исходный код')</p>
+</div>
 
-<p>_HTML_LINK(`http://conus.info/attic-files/copyfile/copyfile.exe',`<span name="multilang" id="id3" data-en="Download" data-ru="Скачать">Download</span>')</p>
-
-<p>_HTML_LINK(`https://github.com/dennis714/Copyfile',`<span name="multilang" id="id4" data-en="Source code" data-ru="Исходный код">Source code</span>')</p>
+<div class="eng">
+<p>A very simple win32-utility to copy a file ignoring errors (including CRC errors).</p>
+<p>This is useful when you try to recover a file from scratchy CD or hard disk with bad blocks and you can live with zeroed blocks instead of parts were not read.</p>
+<p>_HTML_LINK(`_DOWNLOAD_URL',`Download')</p>
+<p>_HTML_LINK(`_SOURCE_CODE_URL',`Source code')</p>
+</div>
 
 _FOOTER()
