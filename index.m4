@@ -44,6 +44,8 @@ _HL2(`Blogs, etc')
 
 <p>_HTML_LINK(`https://twitter.com/yurichev', `English-language twitter.'), _HTML_LINK(`https://twitter.com/yurichev_ru', `Russian-language twitter')</p>
 
+<p>_HTML_LINK(`mailing_lists.html', `My own mailing list').</p>
+
 <p>_HTML_LINK(`http://dennisyurichev.blogspot.com/', `blogspot blog (English language).')</p>
 
 <p>_HTML_LINK(`http://yurichev.dreamwidth.org/', `Dreamwidth blog (Russian language).')</p>

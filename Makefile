@@ -4,7 +4,8 @@
 default: index.html pgp.html RE-book.html C-book.html ops_FPGA.html openwatcom.html vuln.html ddff.html \
 	cordbg.html wget.html exim.html \
 	dongles.html copyfile.html retrocomputing.html oracle_tables.html donate.html \
-	tracer-en.html tracer-ru.html kiev_city_train.html PE_add_import.html
+	tracer-en.html tracer-ru.html kiev_city_train.html PE_add_import.html \
+	mailing_lists.html
 all: default 
 clean: 
 	rm *.html
