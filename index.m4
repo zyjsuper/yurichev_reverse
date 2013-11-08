@@ -50,7 +50,8 @@ _HL2(`Blogs, etc')
 
 <p>_HTML_LINK(`http://yurichev.dreamwidth.org/', `Dreamwidth blog (Russian language).')</p>
 
-<p>_HTML_LINK(`https://github.com/dennis714', `My GitHub account #1') _HTML_LINK(`https://github.com/dennis714', `Another GitHub account #2')</p>
+<p>_HTML_LINK(`https://github.com/dennis714', `My GitHub account (#1)');
+_HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')</p>
 
 _HL2(`Contacts')
 
