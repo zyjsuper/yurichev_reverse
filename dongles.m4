@@ -4,7 +4,22 @@ _HEADER(`Dongles')
 
 _HL1(`Dongles:')
 
-_HL2(`MicroPhar is 93c46-based dongle.')
+_HL2(`My services:')
+
+Occasionally I do 
+_HTML_LINK(`https://en.wikipedia.org/wiki/Software_protection_dongle',`software copy-protection dongle') 
+replacements or dongle emulators.
+In general, it is somewhat unlawful to break software protection, so I can do this only if these conditions are met:
+1) software company who developed the software product is not to be exist anymore to my best knowledge;
+2) the software product is older than 20 years. In other words, I can only help to those who still uses some
+very old software, completely satisfied with it, but afraid of dongle electrical breakage and there are no company
+who can still sell the dongle replacement.
+These includes ancient MS-DOS and UNIX software.
+_HTML_LINK(`contacts.html', `Contact me if you wish to').
+
+_HL2(`Some other information:')
+
+_HL3(`MicroPhar is 93c46-based dongle.')
 
 <p>About 93c46-based dongles emulation:</p>
 
@@ -12,9 +27,9 @@ _HL2(`MicroPhar is 93c46-based dongle.')
 
 <p>_HTML_LINK(`http://conus.info/dongle/src/microph.asm', `Source code of DOS MicroPhar emulator relying on EMM386 feature of I/O interception')</p>
 
-_HL2(`Rockey 4')
+_HL3(`Rockey 4')
 
-<p>_HTML_LINK(`http://blog.yurichev.com/node/71', `Rockey 4 algorithm solving.')</p>
+<p>_HTML_LINK(`http://yurichev.com/writings/z3_rockey.pdf', `Rockey 4 algorithm solving.')</p>
 
 _FOOTER()
 
