@@ -2,7 +2,7 @@
 
 _HEADER(`C/C++ programming language notes')
 
-<p>"C/C++ programming language notes" is ... not yet translated.</p>
+<p>"C/C++ programming language notes" is _HTML_LINK(`http://yurichev.com/writings/C-notes-en.pdf', `here').</p>
 
 <p>"Заметки о языке программирования Си/Си++" теперь находится _HTML_LINK(`http://yurichev.com/writings/C-notes-ru.pdf', `тут')</p>
 
