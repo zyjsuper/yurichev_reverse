@@ -6,7 +6,7 @@ _HL1(`Dongles:')
 
 _HL2(`My services:')
 
-Occasionally I do 
+<p>Occasionally I do 
 _HTML_LINK(`https://en.wikipedia.org/wiki/Software_protection_dongle',`software copy-protection dongle') 
 replacements or dongle emulators.
 In general, it is somewhat unlawful to break software protection, so I can do this only if these conditions are met:
@@ -15,7 +15,9 @@ In general, it is somewhat unlawful to break software protection, so I can do th
 very old software, completely satisfied with it, but afraid of dongle electrical breakage and there are no company
 who can still sell the dongle replacement.
 These includes ancient MS-DOS and UNIX software.
-_HTML_LINK(`contacts.html', `Contact me if you wish to').
+Exotic computer architectures (like MIPS, DEC Alpha, PowerPC) accepted as well.</p>
+
+<p>_HTML_LINK(`contacts.html', `Contact me if you wish to').</p>
 
 _HL2(`Some other information:')
 
