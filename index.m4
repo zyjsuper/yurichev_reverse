@@ -53,10 +53,6 @@ _HL2(`Blogs, etc')
 <p>_HTML_LINK(`https://github.com/dennis714', `My GitHub account (#1)');
 _HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')</p>
 
-_HL2(`Want to thank me for something?')
-
-_HTML_LINK(`donate.html', `Donate').
-
 _HL2(`Also hosted somewhere on this website')
 
 <ul>

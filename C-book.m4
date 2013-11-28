@@ -12,10 +12,4 @@ _HEADER(`C/C++ programming language notes')
 
 <p>Subscribe to _HTML_LINK(`http://yurichev.com/mailing_lists.html',`my mailing list') for receiving updates of this book.</p>
 
-<p>This book is free, available freely and available in source code form (LaTeX), 
-and it will be so forever.
-If you want to support my work, so that I could continue to add things to it regularly, 
-you may consider donation.
-Several ways to donate are available on this page: _HTML_LINK(`donate.html',`donate')</p>
-
 _FOOTER()
