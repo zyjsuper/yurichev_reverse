@@ -17,6 +17,10 @@ who can still sell the dongle replacement.
 These includes ancient MS-DOS and UNIX software.
 Exotic computer architectures (like MIPS, DEC Alpha, PowerPC) accepted as well.</p>
 
+<p>Examples of my work you may find in my 
+_HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en.pdf',`book devoted to reverse engineering'), 
+section 7.1.</p>
+
 <p>_HTML_LINK(`contacts.html', `Contact me if you wish to').</p>
 
 _HL2(`Some other information:')
