@@ -11,7 +11,8 @@ _HTML_LINK(`https://en.wikipedia.org/wiki/Software_protection_dongle',`software 
 replacements or dongle emulators.
 In general, it is somewhat unlawful to break software protection, so I can do this only if these conditions are met:
 1) software company who developed the software product is not to be exist anymore to my best knowledge;
-2) the software product is older than 10 years. In other words, I can only help to those who still uses some
+2) the software product is older than 10 years;
+3) you have a dongle to read information from it. In other words, I can only help to those who still uses some
 very old software, completely satisfied with it, but afraid of dongle electrical breakage and there are no company
 who can still sell the dongle replacement.
 These includes ancient MS-DOS and UNIX software.
