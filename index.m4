@@ -80,6 +80,7 @@ _HL2(`My patches')
 _HL2(`Other')
 
 <ul>
+<li>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV') (<b>N.B.: I'm not looking for job anymore</b>)
 <li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')

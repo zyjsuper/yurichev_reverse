@@ -16,8 +16,6 @@ _HL1(`Contacts:')
 
 <p>_HTML_LINK(`http://www.linkedin.com/in/dennisyurichev', `LinkedIn profile').</p>
 
-<p>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV')</p>
-
 <p>_HTML_LINK(`http://facebook.com/yurichev', `Facebook')</p>
 
 <p>_HTML_LINK(`https://plus.google.com/u/0/115277036633799920016/', `Google+')</p>
