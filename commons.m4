@@ -23,7 +23,7 @@ m4_define(`_MULTILANG_SWITCH',`<h5>
 
 m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`index.html',`index page')]</p>
 
-<h5>File last updated on m4_esyscmd(c:/cygwin/bin/date -r m4___file__ +"%d-%B-%Y")</h5>
+<h5>The page last updated on m4_esyscmd(c:/cygwin/bin/date -r m4___file__ +"%d-%B-%Y")</h5>
 
 </body>
 </html>')
