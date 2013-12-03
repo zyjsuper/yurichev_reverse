@@ -9,15 +9,12 @@ phone on the go. I read my emails on phone via IMAP and I find this idea useful:
 only emails from your address book in inbox and move all the rest to another folder for
 reading it later.</p>
 
-<p>This piece should be placed in <b>~/.forward</b> file</p>
-
 <p><b>~/address_book</b> file is plain text file
 containing all your correspondent's email addresses you wish to read post from them in the first place.</p>
 
 <p>All other emails are moved to <b>not-in-my-address-book</b> IMAP folder. It should be present.</p>
 
-<p><b>allow_filter = true</b> options is also should be set in Exim configuration files 
-(<b>/etc/exim4/conf.d/router/600_exim4-config_userforward</b>).</p>
+<p>And this piece should be placed in <b>~/.forward</b> file</p>
 
 <pre>
 # Exim filter
@@ -33,5 +30,8 @@ then
     finish
 endif
 </pre>
+
+<p><b>allow_filter = true</b> options is also should be set in Exim configuration files 
+(<b>/etc/exim4/conf.d/router/600_exim4-config_userforward</b>).</p>
 
 _FOOTER()
