@@ -14,9 +14,14 @@ Want to thank me for something?
 
 _HTML_IMG(`bitcoin.png',`QR code of bitcoin address')
 
-<li><p>Money Bookers</p>
+<li><p>_HTML_LINK(`http://www.westernunion.com',`Western Union')</p>
 
-<p>Email: dennis(a)yurichev.com</p>
+<p>Make transfer to Denys Yurichev, Ukraine, Kiev city.
+Please also send me (dennis(a)yurichev.com) information about MCTN, your name and your country.</p>
+
+<!-- <li><p>Money Bookers</p>
+
+<p>Email: dennis(a)yurichev.com</p> -->
 
 <li><p>Check?</p>
 
