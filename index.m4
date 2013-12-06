@@ -91,6 +91,12 @@ _HL2(`Contacts')
 
 _HTML_LINK(`contacts.html', `Contacts').
 
+_HL2(`Please donate')
+
+<p>All my writings, tools, etc, are here for free and, most likely, will remain so.
+The site is ad-free. So please help me to keep writing, etc.</p>
+
+_HTML_LINK(`donate.html', `Ways to donate').
 
 _FOOTER()
 
