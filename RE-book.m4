@@ -6,7 +6,12 @@ _HEADER(`An introduction to reverse engineering for beginners')
 
 <p>"Введение в reverse engineering для начинающих" теперь находится _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `тут')</p>
 
-<p>Feel free to send me corrections, or, it's even possible to submit patches on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `book&#39;s source code')!</p>
+<p>Feel free to send me corrections, or, it's even possible to submit patches on book's source code
+on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `github')
+or _HTML_LINK(`https://gitorious.org/re-book/re-book/', `gitorious')
+or _HTML_LINK(`https://code.google.com/p/re-book/source/browse/', `Google Code')
+or _HTML_LINK(`https://code.google.com/p/re-book/source/browse/', `Google Code')
+or _HTML_LINK(`https://bitbucket.org/yurichev/re-book', `BitBucket')!</p>
 
 <p>See _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/ChangeLog',`ChangeLog')</p>
 
