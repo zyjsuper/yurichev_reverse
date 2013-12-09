@@ -1,10 +1,12 @@
 m4_include(`commons.m4')
 
-_HEADER(`Donate')
+_HEADER(`Crowdfunding')
 
-_HL1(`Donate:')
+<p>Please crowdfund me, so I can continue to work on 
+_HTML_LINK(`RE-book.html',`my book about reverse engineering') and other related projects.
+All donor names will be included in the book!</p>
 
-Want to thank me for something?
+<p>Ways:</p>
 
 <ul>
 

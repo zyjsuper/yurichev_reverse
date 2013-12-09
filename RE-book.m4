@@ -10,17 +10,22 @@ _HEADER(`An introduction to reverse engineering for beginners')
 on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `github')
 or _HTML_LINK(`https://gitorious.org/re-book/re-book/', `gitorious')
 or _HTML_LINK(`https://code.google.com/p/re-book/source/browse/', `Google Code')
-or _HTML_LINK(`https://code.google.com/p/re-book/source/browse/', `Google Code')
 or _HTML_LINK(`https://bitbucket.org/yurichev/re-book', `BitBucket')!</p>
 
 <p>See _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/ChangeLog',`ChangeLog')</p>
 
 <p>Subscribe to _HTML_LINK(`http://yurichev.com/mailing_lists.html',`my mailing list') for receiving updates of this book.</p>
 
-<p>This book is free, available freely and available in source code form (LaTeX), 
-and it will be so forever.
-If you want to support my work, so that I could continue to add things to it regularly, 
-you may consider donation.
-Several ways to donate are available on this page: _HTML_LINK(`donate.html',`donate')</p>
+<p>My current plans for this books is to add a lot of information about 
+MIPS, C++ STL, Objective-C, Visual Basic, anti-debugging tricks, Windows NT kernel debugger, OpenMP, 
+Java, .NET, Oracle RDBMS.</p>
+
+<p>So if you want me to continue, you may consider crowdfunding.
+Several ways to are available on this page: _HTML_LINK(`crowdfunding.html',`crowdfunding').</p>
+
+<p>All donor names will be included in the book!</p>
+
+<p>Beside that, this book is free, freely available, also in source code form (LaTeX), 
+and it will be so forever, I have no plans for publishing.</p>
 
 _FOOTER()
