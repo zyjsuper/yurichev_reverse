@@ -12,15 +12,4 @@ _HEADER(`C/C++ programming language notes')
 
 <p>Subscribe to _HTML_LINK(`http://yurichev.com/mailing_lists.html',`my mailing list') for receiving updates of this book.</p>
 
-<p>My current plans for this books is to add a lot of information about 
-C++11 features, flex/yacc, etc.</p>
-
-<p>So if you want me to continue, you may consider crowdfunding.
-Several ways to are available on this page: _HTML_LINK(`crowdfunding.html',`crowdfunding').</p>
-
-<p>All donor names will be included in the book!</p>
-
-<p>Beside that, this book is free, freely available, also in source code form (LaTeX), 
-and it will be so forever, I have no plans for publishing.</p>
-
 _FOOTER()

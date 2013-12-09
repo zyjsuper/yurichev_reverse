@@ -23,7 +23,8 @@ Java, .NET, Oracle RDBMS.</p>
 <p>So if you want me to continue, you may consider crowdfunding.
 Several ways to are available on this page: _HTML_LINK(`crowdfunding.html',`crowdfunding').</p>
 
-<p>All donor names will be included in the book!</p>
+<p>Every donor name will be included in the book!
+Donor also have a right to rearrange items in my writing plan.</p>
 
 <p>Beside that, this book is free, freely available, also in source code form (LaTeX), 
 and it will be so forever, I have no plans for publishing.</p>

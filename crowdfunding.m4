@@ -3,8 +3,10 @@ m4_include(`commons.m4')
 _HEADER(`Crowdfunding')
 
 <p>Please crowdfund me, so I can continue to work on 
-_HTML_LINK(`RE-book.html',`my book about reverse engineering') and other related projects.
-All donor names will be included in the book!</p>
+_HTML_LINK(`RE-book.html',`my book about reverse engineering') and other related projects.<p>
+
+<p>Every donor name will be included in the book!
+Donor also have a right to rearrange items in my writing plan.</p>
 
 <p>Ways:</p>
 
@@ -25,28 +27,45 @@ All donor names will be included in the book!</p>
 	<p>Make transfer to Denys Yurichev, Ukraine, Kiev city.
 	Please also send me (dennis(a)yurichev.com) information about MCTN, your name and your country.</p>
 
-	<!-- <li><p>Money Bookers</p>
+	<li><p>Money Bookers</p>
 
-	<p>Email: dennis(a)yurichev.com</p> -->
+	<p>Email: dennis(a)yurichev.com</p>
 
 	<li><p>Check?</p>
 
 	<p>Please make checks payable for Denys Yurichev and send them to the following postal address:</p>
 
 	<pre>
- Dennis Yurichev
- P.O. box 10
- Kyiv
- 04071
- Ukraine
+Dennis Yurichev
+P.O. box 10
+Kyiv
+04071
+Ukraine
 	</pre>
 
 	Please, do not send cash through the mail.
 
 	<li><p>S.W.I.F.T. wire transfer</p>
 
-	<p>Please email dennis(a)yurichev.com for more information on how to make a bank transfer.</p>
+	<pre>
+Beneficiary:                    DENYS YURYCHEV 
+Account#:                       26253701862415
+Beneficiary's bank:             OTP Bank, 43 Zhylyanska Str., Kyiv, 01033
+SWIFT code:                     OTPVUAUK 
+
+BANK CORRESPONDENT:
+Bank name:                      Standard Chartered Bank New York Branch
+City:                           New York
+Country:                        USA
+Account no:                     3582023463002
+SWIFT code:                     SCBLUS33
+Clearing code:                  ABA: 026002561
+	</pre>
+
 	</ul>
+
+	<li>Paypal?
+	<p>Sorry, no Paypal (Ukrainian citizens are not allowed to receive funds)</p>
 
 <li>For ex-USSR donors:
 
