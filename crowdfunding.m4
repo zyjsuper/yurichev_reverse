@@ -5,7 +5,7 @@ _HEADER(`Crowdfunding')
 <p>Please crowdfund me, so I can continue to work on 
 _HTML_LINK(`RE-book.html',`my book about reverse engineering') and other related projects.<p>
 
-<p>Every donor name will be included in the book!
+<p>Every donor's name will be included in the book!
 Donor also have a right to rearrange items in my writing plan.</p>
 
 <p>Ways:</p>
