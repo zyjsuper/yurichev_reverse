@@ -8,9 +8,7 @@ _HL1(`Contacts:')
 
 <p>_HTML_LINK(`pgp.html', `My PGP public key')</p>
 
-<p>Phone: +380-67-9647038</p>
-
-<p>Skype: dennis.yurichev</p>
+<p>Skype: dennis.yurichev (I'm not often online)</p>
 
 <p>My timezone is EET = East-European time = GMT+2h = EST+7h = PST+10h</p>
 
