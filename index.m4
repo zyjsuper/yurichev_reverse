@@ -84,6 +84,7 @@ _HL2(`Other')
 <li>_HTML_LINK(`VIM.html', `Notes about VIM text editor')
 <li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')
 <li>_HTML_LINK(`kiev_city_train.html', `Kiev city train schedule')
+<li>_HTML_LINK(`silence.ogg',`10 seconds of silence'): best ever Android ringtone, to be placed in <i>Ringtones</i> folder.
 </ul>
 
 <img src="http://projecteuler.net/profile/dennis714.png" alt="Project Euler stats:">
