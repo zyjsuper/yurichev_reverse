@@ -37,16 +37,16 @@ Search for pattern in all *.c files in all folders:
 :vimgrep /regexp/ **/*.c
 </pre>
 
-Open window with results:
-
-<pre>
-:cw
-</pre>
-
 Jump to next result:
 
 <pre>
 :cn
+</pre>
+
+Open window with results:
+
+<pre>
+:cw
 </pre>
 
 Close results window: <b>^Wc</b>
