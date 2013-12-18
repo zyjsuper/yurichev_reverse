@@ -11,7 +11,7 @@ to information about them (metadata) instead.</p>
 <p>These files are very useful for saving space on storing half-empty ISO files,
 half-downloaded torrent files, virtual machine disk images.</p>
 
-<p>More about them: _HTML_LINK(`https://en.wikipedia.org/wiki/Sparse_file',`https://en.wikipedia.org/wiki/Sparse_file').</p>
+<p>More about them: _HTML_LINK(`https://en.wikipedia.org/wiki/Sparse_file',`on Wikipedia'), _HTML_LINK(`http://msdn.microsoft.com/en-us/library/windows/desktop/aa365564(v=vs.85).aspx',`on MSDN').</p>
 
 <p>_HTML_IMG(`cvt2sparse.png',`screenshot')</p>
 
