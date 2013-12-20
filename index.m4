@@ -11,9 +11,9 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 _HL2(`Currently I&#39;m working on:')
 
 <ul>
-<li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>_HTML_LINK(`RE-book.html', `Quick introduction to reverse engineering for beginners') book.
 <li>_HTML_LINK(`tracer-en.html', `Tracer')
+<li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>My own yet primitive static analysis framework for experimenting purposes.
 </ul>
 
