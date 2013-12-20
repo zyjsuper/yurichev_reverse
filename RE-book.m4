@@ -10,7 +10,8 @@ _HEADER(`An introduction to reverse engineering for beginners')
 on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `github')
 or _HTML_LINK(`https://gitorious.org/re-book/re-book/', `gitorious')
 or _HTML_LINK(`https://code.google.com/p/re-book/source/browse/', `Google Code')
-or _HTML_LINK(`https://bitbucket.org/yurichev/re-book', `BitBucket')!</p>
+or _HTML_LINK(`https://bitbucket.org/yurichev/re-book', `BitBucket'),
+or _HTML_LINK(`https://sourceforge.net/projects/re-for-beginners/',`SourceForge')!</p>
 
 <p>See _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/ChangeLog',`ChangeLog')</p>
 
