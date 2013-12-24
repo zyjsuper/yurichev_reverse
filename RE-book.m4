@@ -30,4 +30,7 @@ Donor also have a right to rearrange items in my writing plan.</p>
 <p>Beside that, this book is free, freely available, also in source code form (LaTeX), 
 and it will be so forever, I have no plans for publishing.</p>
 
+<p>I also available as a freelance teacher of assembly language, reverse engineering, C/C++.
+I can teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev, Ukraine.</p>
+
 _FOOTER()
