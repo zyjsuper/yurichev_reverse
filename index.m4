@@ -8,6 +8,11 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
+_HL2(`What I do?')
+
+<p>I'm available as a freelance teacher of assembly language, reverse engineering, C/C++.
+I can teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev, Ukraine.</p>
+
 _HL2(`Currently I&#39;m working on:')
 
 <ul>
