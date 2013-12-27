@@ -49,6 +49,12 @@ Open window with results:
 :cw
 </pre>
 
-Close results window: <b>^Wc</b>
+Close results window: <kbd>C-w</kbd> <kbd>c</kbd>
+
+_HL2(`Selecting')
+
+Count lines/words/chars/bytes selected:
+
+<kbd>g</kbd> <kbd>C-g</kbd>
 
 _FOOTER()
