@@ -10,8 +10,8 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 
 _HL2(`What I do?')
 
-<p>I'm available as a freelance teacher of assembly language, reverse engineering, C/C++.
-I can teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev, Ukraine.</p>
+<p>I'm freelance teacher of assembly language, reverse engineering, C/C++.
+I teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev, Ukraine.</p>
 
 _HL2(`Currently I&#39;m working on:')
 
@@ -25,6 +25,7 @@ _HL2(`Currently I&#39;m working on:')
 _HL2(`Oracle RDBMS stuff:')
 
 <ul>
+<li>_HTML_LINK(`http://yurichev.com/writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 <li>_HTML_LINK(`ops_FPGA.html', `FPGA-based Oracle RDBMS passwords cracker')
 <li>_HTML_LINK(`http://conus.info/utils/ops_SIMD/', `Oracle passwords (DES) cracker 0.3 (SSE2/AVX)')
 <li>_HTML_LINK(`http://conus.info/utils/#oracle_msb', `Oracle RDBMS .msb files unpacker')

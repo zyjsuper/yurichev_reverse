@@ -57,4 +57,10 @@ Count lines/words/chars/bytes selected:
 
 <kbd>g</kbd> <kbd>C-g</kbd>
 
+Result may be in form:
+
+<pre>
+Selected 7 of 22 Lines; 8 of 32 Words; 201 of 491 Chars; 201 of 497 Bytes
+</pre>
+
 _FOOTER()
