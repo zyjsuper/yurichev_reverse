@@ -6,6 +6,12 @@ _HEADER(`An introduction to reverse engineering for beginners')
 
 <p>"Введение в reverse engineering для начинающих" теперь находится _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `тут')</p>
 
+<p>Topics covered: x86, ARM.</p>
+
+<p>Topics touched: Oracle RDBMS, Itanium, copy-protection dongles, LD_PRELOAD,
+                stack overflow, ELF, win32 PE, x86-64, critical sections, syscalls, TLS,
+                position-independent code (PIC), profile-guided optimization, C++ STL.</p>
+
 <p>Feel free to send me corrections, or, it's even possible to submit patches on book's source code
 on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `github')
 or _HTML_LINK(`https://gitorious.org/re-book/re-book/', `gitorious')
@@ -18,7 +24,7 @@ or _HTML_LINK(`https://sourceforge.net/projects/re-for-beginners/',`SourceForge'
 <p>Subscribe to _HTML_LINK(`http://yurichev.com/mailing_lists.html',`my mailing list') for receiving updates of this book.</p>
 
 <p>My current plans for this books is to add a lot of information about 
-MIPS, C++ STL, Objective-C, Visual Basic, anti-debugging tricks, Windows NT kernel debugger, OpenMP, 
+MIPS, Objective-C, Visual Basic, anti-debugging tricks, Windows NT kernel debugger, OpenMP, 
 Java, .NET, Oracle RDBMS.</p>
 
 <p>So if you want me to continue, you may consider crowdfunding.
