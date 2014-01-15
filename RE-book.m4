@@ -6,7 +6,7 @@ _HEADER(`An introduction to reverse engineering for beginners')
 
 <p>"Введение в reverse engineering для начинающих" теперь находится _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `тут')</p>
 
-<p>Topics covered: x86, ARM.</p>
+<p>Topics discussed: x86, ARM.</p>
 
 <p>Topics touched: Oracle RDBMS, Itanium, copy-protection dongles, LD_PRELOAD,
                 stack overflow, ELF, win32 PE, x86-64, critical sections, syscalls, TLS,
