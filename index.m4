@@ -75,7 +75,6 @@ _HL2(`My patches')
 <li>_HTML_LINK(`dongles.html', `Dongles'): DosBox patches for 93c46-based dongles support, etc.
 <li>_HTML_LINK(`http://conus.info/patches/BitchX/', `BitchX IRC client patches and binaries').
 <li>_HTML_LINK(`http://conus.info/patches/gcc-RAND/', `GCC 4.5.2 patched to support __RAND__ macro (32-bit random number different at each compilation) + MinGW 4.5.2 compiled with the patch')
-<li>MediaWiki GeSHi - Generic Syntax Highlighter asm.php patch: Added MMX/SSE/new x86-64 registers, MMX/SSE (up to 4.2) instructions: _HTML_LINK(`http://conus.info/patches/geshi/asm.php.diff', `patch') and _HTML_LINK(`http://conus.info/patches/geshi/asm.php.txt', `patched asm.php')
 <li>_HTML_LINK(`cordbg.html', `Cordbg.exe from .NET 1.1 patch')
 <li>_HTML_LINK(`openwatcom.html', `OpenWatcom patches')
 <li>rdesktop-1.7.1 mouse wheel double event issue patch: _HTML_LINK(`http://sourceforge.net/mailarchive/message.php?msg_id=30237555', `post #1'), <a href="https://sourceforge.net/p/rdesktop/patches/215/">patch info</a>
