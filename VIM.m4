@@ -53,14 +53,38 @@ Close results window: <kbd>C-w</kbd> <kbd>c</kbd>
 
 _HL2(`Selecting')
 
-Count lines/words/chars/bytes selected:
+<p>Count lines/words/chars/bytes selected: <kbd>g</kbd> <kbd>C-g</kbd></p>
 
-<kbd>g</kbd> <kbd>C-g</kbd>
-
-Result may be in form:
+<p>Result may be in form:</p>
 
 <pre>
 Selected 7 of 22 Lines; 8 of 32 Words; 201 of 491 Chars; 201 of 497 Bytes
+</pre>
+
+_HL2(`File formats')
+
+EOLs:
+
+<pre>
+:set ff?
+:set ff=unix
+:set ff=dos
+</pre>
+
+Suppress writing Unicode BOM:
+
+<pre>
+:set nobomb
+</pre>
+
+_HL2(`Command-line')
+
+<p>Commands separator: |</p>
+
+<p>For exampe:</p>
+
+<pre>
+set nobomb|w|bd
 </pre>
 
 _FOOTER()
