@@ -1,10 +1,10 @@
 ﻿m4_include(`commons.m4')
 
-_HEADER(`An introduction to reverse engineering for beginners')
+_HEADER(`Reverse Engineering for Beginners')
 
-<p>"An introduction to reverse engineering for beginners" is now located _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en.pdf', `here')</p>
+<p>"Reverse Engineering for Beginners" is now located _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en.pdf', `here')</p>
 
-<p>"Введение в reverse engineering для начинающих" теперь находится _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `тут')</p>
+<p>"Reverse Engineering для начинающих" теперь находится _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `тут')</p>
 
 <p>Topics discussed: x86, ARM.</p>
 

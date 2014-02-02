@@ -16,7 +16,7 @@ I teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev,
 _HL2(`Currently I&#39;m working on:')
 
 <ul>
-<li>_HTML_LINK(`RE-book.html', `Quick introduction to reverse engineering for beginners') book.
+<li>_HTML_LINK(`RE-book.html', `Reverse Engineering for Beginners') book.
 <li>_HTML_LINK(`tracer-en.html', `Tracer')
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>My own yet primitive static analysis framework for experimenting purposes.
