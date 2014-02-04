@@ -6,11 +6,7 @@ _HEADER(`Reverse Engineering for Beginners')
 
 <p>"Reverse Engineering для начинающих" теперь находится _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `тут')</p>
 
-<p>Topics discussed: x86, ARM.</p>
-
-<p>Topics touched: Oracle RDBMS, Itanium, copy-protection dongles, LD_PRELOAD,
-                stack overflow, ELF, win32 PE file format, x86-64, critical sections, syscalls, TLS,
-                position-independent code (PIC), profile-guided optimization, C++ STL, OpenMP, win32 SEH.</p>
+<p>Read more about its contents: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/README',`README').</p>
 
 <p>Feel free to send me corrections, or, it's even possible to submit patches on book's source code
 on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `github')
