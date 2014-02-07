@@ -83,7 +83,7 @@ _HL2(`My patches')
 _HL2(`Other')
 
 <ul>
-<li>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV') (<b>N.B.: I'm not looking for job anymore</b>)
+<li>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV')
 <li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
@@ -105,7 +105,7 @@ _HL2(`Please donate')
 <p>All my writings, tools, etc, are here for free and, most likely, will remain so.
 The site is ad-free. So please help me to keep writing, etc.</p>
 
-_HTML_LINK(`crowdfunding.html', `Ways to donate').
+_HTML_LINK(`donate.html', `Ways to donate').
 
 _FOOTER()
 

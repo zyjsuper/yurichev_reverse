@@ -23,8 +23,8 @@ or _HTML_LINK(`https://sourceforge.net/projects/re-for-beginners/',`SourceForge'
 MIPS, Objective-C, Visual Basic, anti-debugging tricks, Windows NT kernel debugger,
 Java, .NET, Oracle RDBMS.</p>
 
-<p>So if you want me to continue, you may consider crowdfunding.
-Several ways to are available on this page: _HTML_LINK(`crowdfunding.html',`crowdfunding').</p>
+<p>So if you want me to continue, you may consider donating.
+Several ways to are available on this page: _HTML_LINK(`donate.html',`donate').</p>
 
 <p>Every donor name will be included in the book!
 Donor also have a right to rearrange items in my writing plan.</p>
