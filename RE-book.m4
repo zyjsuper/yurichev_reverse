@@ -19,9 +19,8 @@ or _HTML_LINK(`https://sourceforge.net/projects/re-for-beginners/',`SourceForge'
 
 <p>Subscribe to _HTML_LINK(`http://yurichev.com/mailing_lists.html',`my mailing list') for receiving updates of this book.</p>
 
-<p>My current plans for this books is to add a lot of information about 
-MIPS, Objective-C, Visual Basic, anti-debugging tricks, Windows NT kernel debugger,
-Java, .NET, Oracle RDBMS.</p>
+<p>My current plans for this book: 
+_HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/PLANS',`PLANS')</p>
 
 <p>So if you want me to continue, you may consider donating.
 Several ways to are available on this page: _HTML_LINK(`donate.html',`donate').</p>
