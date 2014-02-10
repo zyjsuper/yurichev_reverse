@@ -22,18 +22,6 @@ Donor also have a right to rearrange items in my writing plan.</p>
 
 	_HTML_IMG(`bitcoin.png',`QR code of bitcoin address')
 
-	<li>Peercoin (PPCoin)
-
-	<p><b>PMiNf99ShRNqVDd3cRKYwcqeJUHT2VUeHS</b></p>
-	
-	<li>Litecoin
-
-	<p><b>LSxh7s5yvXF4PLcEX3sRJk8KtMkn283N6M</b></p>
-	
-	<li>Namecoin
-
-	<p><b>NCnsJ5HCbbimuDnw4dsBi93pLix8iFGg9m</b></p>
-
 	<li><p>_HTML_LINK(`http://www.westernunion.com',`Western Union')</p>
 
 	<p>Make transfer to Denys Yurichev, Ukraine, Kiev city.
