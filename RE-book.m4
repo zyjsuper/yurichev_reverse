@@ -22,14 +22,12 @@ or _HTML_LINK(`https://sourceforge.net/projects/re-for-beginners/',`SourceForge'
 <p>My current plans for this book: 
 _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/PLANS',`PLANS')</p>
 
-<p>So if you want me to continue, you may consider donating.
-Several ways to are available on this page: _HTML_LINK(`donate.html',`donate').</p>
-
-<p>Every donor name will be included in the book!
+<p>This book is free, freely available, also in source code form (LaTeX), 
+and it will be so forever, I have no plans for publishing.
+So if you want me to continue, you may consider donating.
+Several ways to are available on this page: _HTML_LINK(`donate.html',`donate').
+Every donor name will be included in the book!
 Donor also have a right to rearrange items in my writing plan.</p>
-
-<p>Beside that, this book is free, freely available, also in source code form (LaTeX), 
-and it will be so forever, I have no plans for publishing.</p>
 
 <p>I also available as a freelance teacher of assembly language, reverse engineering, C/C++.
 I can teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev, Ukraine.</p>
