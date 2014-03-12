@@ -25,7 +25,8 @@ Donor also have a right to rearrange items in my writing plan.</p>
 	<li><p>_HTML_LINK(`http://www.westernunion.com',`Western Union')</p>
 
 	<p>Make transfer to Denys Yurichev, Ukraine, Kiev city.
-	Please also send me (dennis(a)yurichev.com) information about MCTN, your name and your country.</p>
+	Please also send me (dennis(a)yurichev.com) information about MCTN, your name and your country.
+	It is possible to send payment right on _HTML_LINK(`http://www.westernunion.com',`their website') using credit card.</p>
 
 	<li><p>Money Bookers</p>
 
