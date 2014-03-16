@@ -16,6 +16,12 @@ Donor also have a right to rearrange items in my writing plan.</p>
 
 	<ul>
 
+	<li>Paypal
+
+	<p><b>smatviyc(a)hotmail.com</b> - it is in fact my friend's account, so please add comment like
+	"for Dennis Yurichev" or "for Reverse Engineering book".
+	I have my own PayPal acccount, but citizens of Ukraine are not allowed to receive funds in it.</p>
+
 	<li><p>Bitcoin</p>
 
 	<p>My address: <b>1LLa7aqQbRmCYbccnCNwaLgxK9jFPTqPw</b></p>
@@ -64,9 +70,6 @@ Clearing code:                  ABA: 026002561
 	</pre>
 
 	</ul>
-
-	<li>Paypal?
-	<p>Sorry, no Paypal (Ukrainian citizens are not allowed to receive funds)</p>
 
 <li>For ex-USSR donors:
 
