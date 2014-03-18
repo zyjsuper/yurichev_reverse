@@ -20,7 +20,7 @@ Donor also have a right to rearrange items in my writing plan.</p>
 
 	<p><b>smatviyc(a)hotmail.com</b> - it is in fact my friend's account, so please add comment like
 	"for Dennis Yurichev" or "for Reverse Engineering book".
-	I have my own PayPal acccount, but citizens of Ukraine are not allowed to receive funds in it.</p>
+	I have my own PayPal account, but citizens of Ukraine are not allowed to receive funds in it.</p>
 
 	<li><p>Bitcoin</p>
 
