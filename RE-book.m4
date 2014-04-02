@@ -8,6 +8,10 @@ _HEADER(`Reverse Engineering for Beginners')
 
 <p>Read more about its contents: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/README',`README').</p>
 
+<p>Supplementary materials:
+_HTML_LINK(`http://yurichev.com/RE-exercises/',`exercises'),
+_HTML_LINK(`http://yurichev.com/RE-exercise-solutions/',`exercise solutions')</p>
+
 <p>Feel free to send me corrections, or, it's even possible to submit patches on book's source code
 on _HTML_LINK(`https://github.com/dennis714/RE-for-beginners', `github')
 or _HTML_LINK(`https://gitorious.org/re-book/re-book/', `gitorious')
