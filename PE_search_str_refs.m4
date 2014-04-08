@@ -20,6 +20,12 @@ PE_search_str_refs.exe filename.exe hello
 
 <p>Resulting address will (hopefully) be an address of function which use this text string.</p>
 
+<p>It may produce a lot of disassembling errors to stderr, so it can be redirected to NUL:</p>
+
+<pre>
+PE_search_str_refs.exe filename.exe hello 2> nul
+</pre>
+
 <p>Download: _HTML_LINK(`utils/PE_search_str_refs.exe',`win32 executable'), 
 _HTML_LINK(`utils/PE_search_str_refs64.exe',`win64 executable')</p>
 <p>_HTML_LINK(`https://github.com/dennis714/bolt/blob/master/PE_search_str_refs.c',`Source code'). 
