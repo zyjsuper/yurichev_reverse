@@ -26,6 +26,9 @@ PE_search_str_refs.exe filename.exe hello
 PE_search_str_refs.exe filename.exe hello 2> nul
 </pre>
 
+<p>It can also be used in pair with my other utility: 
+_HTML_LINK(`PE_patcher.html',`PE_patcher').</p>
+
 <p>Download: _HTML_LINK(`utils/PE_search_str_refs.exe',`win32 executable'), 
 _HTML_LINK(`utils/PE_search_str_refs64.exe',`win64 executable')</p>
 <p>_HTML_LINK(`https://github.com/dennis714/bolt/blob/master/PE_search_str_refs.c',`Source code'). 
