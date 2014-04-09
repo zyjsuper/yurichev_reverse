@@ -34,3 +34,5 @@ m4_define(`_HL3', `<h4>$1</h4>')
 m4_define(`_HL4', `<h5>$1</h5>')
 m4_define(`_GREY', `<font color="#808080">$1</font>')
 m4_define(`_BOOK_NOT_FINISHED', `$1')
+
+m4_define(`_UTIL_DONATE', `<p>If you find this utility useful, please _HTML_LINK(`donate.html',`donate')!</p>')
