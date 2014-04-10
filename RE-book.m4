@@ -33,7 +33,4 @@ Several ways to are available on this page: _HTML_LINK(`donate.html',`donate').
 Every donor name will be included in the book!
 Donor also have a right to rearrange items in my writing plan.</p>
 
-<p>I also available as a freelance teacher of assembly language, reverse engineering, C/C++.
-I can teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev, Ukraine.</p>
-
 _FOOTER()

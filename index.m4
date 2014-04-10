@@ -8,11 +8,6 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
-_HL2(`What I do?')
-
-<p>I'm freelance teacher of assembly language, reverse engineering, C/C++.
-I teach remotely via E-Mail, Skype, any other messengers, or personally in Kiev, Ukraine.</p>
-
 _HL2(`Currently I&#39;m working on:')
 
 <ul>
@@ -35,10 +30,14 @@ _HL2(`Oracle RDBMS stuff:')
 _HL2(`Random utilities:')
 
 <ul>
+<li>Win32 PE-files utilities:
+	<ul>
+	<li>_HTML_LINK(`PE_add_imports.html',`<i>PE_add_import</i> is a simple tool for adding symbol to PE executable import table')
+	<li>_HTML_LINK(`PE_patcher.html',`<i>PE_patcher</i> is a simple tool for PE executables patching')
+	<li>_HTML_LINK(`PE_search_str_refs.html',`<i>PE_search_str_refs</i> is a simple tool for searching for a function in PE executables which use some text string')
+	</ul>
+
 <li>_HTML_LINK(`https://github.com/yurichev/bgrep',`Binary grep')
-<li>_HTML_LINK(`PE_add_imports.html',`<i>PE_add_import</i> is a simple tool for adding symbol to PE executable import table')
-<li>_HTML_LINK(`PE_patcher.html',`<i>PE_patcher</i> is a simple tool for PE executables patching')
-<li>_HTML_LINK(`PE_search_str_refs.html',`<i>PE_search_str_refs</i> is a simple tool for searching for a function in PE executables which use some text string')
 <li>_HTML_LINK(`cvt2sparse.html',`Convert to sparse file utility (win32)')
 <li>_HTML_LINK(`http://conus.info/utils/#sap', `SAP network packets decompressor')
 <li>_HTML_LINK(`http://conus.info/utils/#demux', `The demux command-line utility can be used to demultiplex a file to set of files.')
