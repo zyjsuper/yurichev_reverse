@@ -61,12 +61,9 @@ _HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')</p>
 _HL2(`Also hosted somewhere on this website')
 
 <ul>
-<li>_HTML_LINK(`http://wikipedia-stats.conus.info/', `A list of Wikipedia articles created last month/week/day with most users contributing to article within the same period.')
 <li>_HTML_LINK(`http://avantgardeproject.conus.info/mirror/', `Mirror of Avant Garde Project') - series of recordings of 20th-century classical, experimental, and electroacoustic music digitized from LPs whose music has in most cases never been released on CD, and so is effectively inaccessible to the vast majority of music listeners today. mp3 versions of these recordings are also _HTML_LINK(`http://avantgardeproject.conus.info/', `here').
 <li>_HTML_LINK(`retrocomputing.html', `Some retrocomputing files')
 <li>_HTML_LINK(`http://conus.info/archive/', `cuetools 1.3.1 win32 binaries, Intel microcode table dumps')
-<li>_HTML_LINK(`http://yurichev.com/ref/Draft%20ANSI%20C%20Standard%20(ANSI%20X3J11-88-090)%20(May%2013,%201988).txt', `Draft ANSI C Standard (ANSI X3J11/88-090) (May 13, 1988)')
-<li>_HTML_LINK(`http://yurichev.com/ref/ARM%20Cookbook%20(1994)/', `ARM Cookbook (1994)')
 </ul>
 
 _HL2(`My patches')
