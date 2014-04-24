@@ -1,8 +1,8 @@
 m4_include(`commons.m4')
 
-_HEADER(`Exim MTA (mail transfer agent)')
+_HEADER(`Exim MTA (mail transfer agent) whitelisting')
 
-_HL1(`Exim MTA (mail transfer agent)')
+_HL1(`Exim MTA (mail transfer agent) whitelisting')
 
 <p>I was really tired of receiving email SPAM, various notifications, etc, right to my mobile
 phone on the go. I read my emails on phone via IMAP and I find this idea useful: leave
