@@ -1,10 +1,28 @@
 ﻿m4_include(`commons.m4')
 
-_HEADER(`Reverse Engineering for Beginners')
+_HEADER(`Reverse Engineering for Beginners book')
+_HL1(`Reverse Engineering for Beginners book')
 
-<p>"Reverse Engineering for Beginners" is now located _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en.pdf', `here')</p>
+<p>... is now freely downloadable _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en.pdf', `here') (_HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en-A5.pdf', `here') is also an A5 version for e-book readers)</p>
 
-<p>"Reverse Engineering для начинающих" теперь находится _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `тут')</p>
+<p>Russian version is _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `here'), _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru-A5.pdf', `A5 version')</p>
+
+<p>Praise for the book:</p>
+
+<ul>
+<li><i>"It's very well done .. and for free .. amazing."</i> 
+(_HTML_LINK(`https://twitter.com/daniel_bilar/status/436578617221742593',`Daniel Bilar, Siege Technologies, LLC.'))
+<li><i>"...excellent and free"</i> 
+(_HTML_LINK(`https://twitter.com/petefinnigan/status/400551705797869568',`Pete Finnigan, Oracle RDBMS security guru.')).
+<li><i>"... book is interesting, great job!"</i> 
+(Michael Sikorski, author of <i>Practical Malware Analysis: The Hands-On Guide to Dissecting Malicious Software</i>.)
+<li><i>"... my compliments for the very nice tutorial!"</i> 
+(Herbert Bos, full professor at the Vrije Universiteit Amsterdam.)
+<li><i>"... It is amazing and unbelievable."</i> 
+(Luis Rocha, CISSP / ISSAP, Technical Manager, Network &amp; Information Security at Verizon Business.)
+<li><i>"Thanks for the great work and your book."</i> 
+(Joris van de Vis, SAP Netweaver &amp; Security specialist.)
+</ul>
 
 <p>Read more about its contents: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/README',`README').</p>
 
