@@ -3,7 +3,7 @@
 _HEADER(`Reverse Engineering for Beginners book')
 _HL1(`Reverse Engineering for Beginners book')
 
-<p>... is now freely downloadable _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en.pdf', `here') (_HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en-A5.pdf', `here') is also an A5 version for e-book readers)</p>
+<p>... is freely downloadable _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en.pdf', `here') (_HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-en-A5.pdf', `here') is also an A5 version for e-book readers)</p>
 
 <p>Russian version is _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru.pdf', `here'), _HTML_LINK(`http://yurichev.com/writings/RE_for_beginners-ru-A5.pdf', `A5 version')</p>
 
