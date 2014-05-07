@@ -95,8 +95,8 @@ Clearing code:                  ABA: 026002561
 <li>For Ukrainian donors:
 
 	<ul>
-	<li>Privatbank (UAH card): 5168 7553 4043 6373
-	<li>Privatbank (USD card): 5168 7572 1877 4000
+	<li>Privatbank (UAH card): 5457 0822 3238 9812
+	<li>Privatbank (USD card): 5168 7572 6011 0293
 	</ul>
 
 </ul>
