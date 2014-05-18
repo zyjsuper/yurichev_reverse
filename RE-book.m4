@@ -22,6 +22,7 @@ _HL1(`Reverse Engineering for Beginners book')
 (Luis Rocha, CISSP / ISSAP, Technical Manager, Network &amp; Information Security at Verizon Business.)
 <li><i>Thanks for the great work and your book.</i> 
 (Joris van de Vis, SAP Netweaver &amp; Security specialist.)
+<li><i>_HTML_LINK(`http://www.reddit.com/r/IAmA/comments/24nb6f/i_was_a_professional_password_cracker_who_taught/',`... reasonable intro to some of the techniques.')</i> (Mike Stay, teacher at the Federal Law Enforcement Training Center, Georgia, US.)
 </ul>
 
 <p>Read more about its contents: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/README',`README').</p>
