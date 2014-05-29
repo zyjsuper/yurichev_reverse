@@ -52,4 +52,6 @@ Several ways to are available on this page: _HTML_LINK(`donate.html',`donate').
 Every donor name will be included in the book!
 Donor also have a right to rearrange items in my writing plan.</p>
 
+<p>There is also _HTML_LINK(`http://forum.yurichev.com/',`supporting forum')! You may ask any questions there!</p>
+
 _FOOTER()
