@@ -25,6 +25,12 @@ _HL1(`Reverse Engineering for Beginners book')
 <li><i>_HTML_LINK(`http://www.reddit.com/r/IAmA/comments/24nb6f/i_was_a_professional_password_cracker_who_taught/',`... reasonable intro to some of the techniques.')</i> (Mike Stay, teacher at the Federal Law Enforcement Training Center, Georgia, US.)
 </ul>
 
+As seen on _HTML_LINK(`https://news.ycombinator.com/item?id=7726213',`hacker news'), 
+reddit 
+_HTML_LINK(`http://www.reddit.com/r/ReverseEngineering/comments/1ahnen/re_for_beginners/',`&#35;1'), 
+_HTML_LINK(`http://www.reddit.com/r/ReverseEngineering/comments/1qg2x8/an_introduction_to_reverse_engineering_for/',`&#35;2'), 
+_HTML_LINK(`http://www.reddit.com/r/ReverseEngineering/comments/25b71d/reverse_engineering_for_beginners/',`&#35;3').
+
 <p>Read more about its contents: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/README',`README').</p>
 
 <p>Supplementary materials:
