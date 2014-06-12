@@ -55,7 +55,8 @@ _HL2(`Blogs, etc')
 <li>_HTML_LINK(`http://dennisyurichev.blogspot.com/', `blogspot blog (English language).')
 <li>_HTML_LINK(`http://yurichev.dreamwidth.org/', `Dreamwidth blog (Russian language).')
 <li>_HTML_LINK(`https://github.com/dennis714', `My GitHub account (#1)');
-_HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')</p>
+_HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')
+<li>_HTML_LINK(`http://www.weibo.com/u/5177867117',`Weibo account')
 </ul>
 
 _HL2(`Also hosted somewhere on this website')
