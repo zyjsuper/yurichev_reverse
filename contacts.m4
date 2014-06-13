@@ -6,7 +6,8 @@ _HL1(`Contacts:')
 
 <p>E-Mail: dennis(a)yurichev.com</p>
 
-<p>_HTML_LINK(`pgp.html', `My PGP public key')</p>
+<p>_HTML_LINK(`pgp.html', `My PGP public key'). Please use PGP! I always sign my emails with it.
+If you got one from my email unsigned, it may be SPAM.</p>
 
 <p>Skype: dennis.yurichev (I'm not often online)</p>
 
