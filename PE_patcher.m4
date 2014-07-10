@@ -25,6 +25,4 @@ _HTML_LINK(`utils/PE_patcher64.exe',`win64 executable')</p>
 <p>_HTML_LINK(`https://github.com/dennis714/bolt/blob/master/PE_patcher.c',`Source code'). 
 _HTML_LINK(`https://github.com/dennis714/bolt',`Bolt library') in which this utility is incorporated</p>
 
-_UTIL_DONATE()
-
 _FOOTER()

@@ -11,7 +11,7 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 _HL2(`Currently I&#39;m working on:')
 
 <ul>
-<li>_HTML_LINK(`RE-book.html', `Reverse Engineering for Beginners') book.
+<li>_HTML_LINK(`http://beginners.re/', `"Reverse Engineering for Beginners"') free book.
 <li>_HTML_LINK(`tracer-en.html', `Tracer')
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>My own yet primitive static analysis framework for experimenting purposes.
@@ -98,13 +98,6 @@ _HL2(`Other')
 _HL2(`Contacts')
 
 _HTML_LINK(`contacts.html', `Contacts').
-
-_HL2(`Please donate')
-
-<p>All my writings, tools, etc, are here for free and, most likely, will remain so.
-The site is ad-free. So please help me to keep writing, etc.</p>
-
-_HTML_LINK(`donate.html', `Ways to donate').
 
 _FOOTER()
 
