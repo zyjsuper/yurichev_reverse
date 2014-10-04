@@ -50,10 +50,8 @@ _HL2(`Blogs, etc')
 
 <ul>
 <li>Some kind of tech _HTML_LINK(`http://blog.yurichev.com/', `blog here').
-<li>_HTML_LINK(`https://twitter.com/yurichev', `English-language twitter.'), _HTML_LINK(`https://twitter.com/yurichev_ru', `Russian-language twitter')
+<li>_HTML_LINK(`https://twitter.com/yurichev', `Twitter')
 <li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
-<li>_HTML_LINK(`http://dennisyurichev.blogspot.com/', `blogspot blog (English language).')
-<li>_HTML_LINK(`http://yurichev.dreamwidth.org/', `Dreamwidth blog (Russian language).')
 <li>_HTML_LINK(`https://github.com/dennis714', `My GitHub account (#1)');
 _HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')
 <li>_HTML_LINK(`http://www.weibo.com/u/5177867117',`Weibo account')
