@@ -90,7 +90,6 @@ _HTML_LINK(`http://www.reddit.com/r/netsec/comments/29kq7v/rnetsecs_q3_2014_info
 <li>_HTML_LINK(`VIM.html', `Notes about VIM text editor')
 <li>_HTML_LINK(`windows.html', `Notes about Windows OS')
 <li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')
-<li>_HTML_LINK(`kiev_city_train.html', `Kiev city train schedule')
 <li>_HTML_LINK(`silence.ogg',`10 seconds of silence'): best ever Android ringtone, to be placed in <i>Ringtones</i> folder.
 </ul>
 
