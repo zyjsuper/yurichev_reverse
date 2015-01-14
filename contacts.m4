@@ -13,12 +13,6 @@ If you got one from my email unsigned, it may be SPAM.</p>
 
 <p>My timezone is EET = East-European time = GMT+2h = EST+7h = PST+10h</p>
 
-<p>_HTML_LINK(`http://www.linkedin.com/in/dennisyurichev', `LinkedIn profile').</p>
-
-<p>_HTML_LINK(`http://facebook.com/yurichev', `Facebook')</p>
-
-<p>_HTML_LINK(`https://plus.google.com/u/0/115277036633799920016/', `Google+')</p>
-
 _HL3(`Snail mail')
 
 <pre>
