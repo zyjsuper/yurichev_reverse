@@ -17,6 +17,11 @@ _HL2(`Currently I&#39;m working on:')
 <li>My own yet primitive static analysis framework for experimenting purposes.
 </ul>
 
+_HL2(`I can be hired:')
+
+I'm open for reverse engineering project offers.
+I can be contacted by email: <b>dennis(a)yurichev.com</b>, or Skype: <b>dennis.yurichev</b>.
+
 _HL2(`Oracle RDBMS stuff:')
 
 <ul>
@@ -80,10 +85,7 @@ _HL2(`My patches')
 _HL2(`Other')
 
 <ul>
-<li>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV'). Sorry, I'm not looking for job.
-If you are looking for reverse engineer, try to post your request on reddit hiring threads,
-_HTML_LINK(`http://www.reddit.com/r/ReverseEngineering/comments/1vui22/rreverseengineerings_2014_hiring_thread/',`here') or 
-_HTML_LINK(`http://www.reddit.com/r/netsec/comments/29kq7v/rnetsecs_q3_2014_information_security_hiring',`here').
+<li>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV'). 
 <li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
