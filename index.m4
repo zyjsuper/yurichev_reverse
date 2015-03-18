@@ -20,6 +20,9 @@ _HL2(`Currently I&#39;m working on:')
 _HL2(`I can be hired:')
 
 I'm open for reverse engineering project offers.
+He is also available as a freelance teacher of assembly language, 
+reverse engineering, and C language.
+He can teach remotely via E-Mail, Skype, any other messengers.
 I can be contacted by email: <b>dennis(a)yurichev.com</b>, or Skype: <b>dennis.yurichev</b>.
 
 _HL2(`Oracle RDBMS stuff:')
