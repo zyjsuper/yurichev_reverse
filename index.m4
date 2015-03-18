@@ -8,22 +8,40 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
-_HL2(`Currently I&#39;m working on:')
+_HL2(`I can be hired:')
+
+I'm open for reverse engineering project offers.<br>
+I'm is also available as a freelance teacher of assembly language, 
+reverse engineering, and C language.
+I can teach remotely via E-Mail, Skype, any other messengers.<br>
+_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV').<br>
+I can be contacted by email: <b>dennis(a)yurichev.com</b>, or Skype: <b>dennis.yurichev</b>.
+
+_HL2(`Some of my writings:')
 
 <ul>
 <li>_HTML_LINK(`http://beginners.re/', `"Reverse Engineering for Beginners"') free book.
-<li>_HTML_LINK(`tracer-en.html', `Tracer')
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
-<li>My own yet primitive static analysis framework for experimenting purposes.
+<li>_HTML_LINK(`http://yurichev.com/writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
+<li>_HTML_LINK(`http://yurichev.com/writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 </ul>
 
-_HL2(`I can be hired:')
+_HL2(`Vulnerabilities I found:')
 
-I'm open for reverse engineering project offers.
-He is also available as a freelance teacher of assembly language, 
-reverse engineering, and C language.
-He can teach remotely via E-Mail, Skype, any other messengers.
-I can be contacted by email: <b>dennis(a)yurichev.com</b>, or Skype: <b>dennis.yurichev</b>.
+<ul>
+<li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
+</ul>
+
+_HL2(`Blogs, etc')
+
+<ul>
+<li>Some kind of tech _HTML_LINK(`http://blog.yurichev.com/', `blog here').
+<li>_HTML_LINK(`https://twitter.com/yurichev', `Twitter')
+<li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
+<li>_HTML_LINK(`https://github.com/dennis714', `My GitHub account (#1)');
+_HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')
+<li>_HTML_LINK(`http://www.weibo.com/u/5177867117',`Weibo account')
+</ul>
 
 _HL2(`Oracle RDBMS stuff:')
 
@@ -38,7 +56,8 @@ _HL2(`Oracle RDBMS stuff:')
 _HL2(`Random utilities:')
 
 <ul>
-<li>Win32 PE-files utilities:
+<li>_HTML_LINK(`tracer-en.html', `Tracer')
+<li>Random win32 PE-files utilities:
 	<ul>
 	<li>_HTML_LINK(`PE_add_imports.html',`<i>PE_add_import</i> is a simple tool for adding symbol to PE executable import table')
 	<li>_HTML_LINK(`PE_patcher.html',`<i>PE_patcher</i> is a simple tool for PE executables patching')
@@ -52,17 +71,6 @@ _HL2(`Random utilities:')
 <li>_HTML_LINK(`ddff.html', `Duplicate Directories and Files Finder')
 <li>_HTML_LINK(`https://github.com/dennis714/sort_photos', `Simple Python script just for sorting photos (based on EXIF data)')
 <li>_HTML_LINK(`copyfile.html', `Copyfile') - A very simple win32-utility to copy a file ignoring errors (including CRC errors).
-</ul>
-
-_HL2(`Blogs, etc')
-
-<ul>
-<li>Some kind of tech _HTML_LINK(`http://blog.yurichev.com/', `blog here').
-<li>_HTML_LINK(`https://twitter.com/yurichev', `Twitter')
-<li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
-<li>_HTML_LINK(`https://github.com/dennis714', `My GitHub account (#1)');
-_HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')
-<li>_HTML_LINK(`http://www.weibo.com/u/5177867117',`Weibo account')
 </ul>
 
 _HL2(`Also hosted somewhere on this website')
@@ -88,14 +96,11 @@ _HL2(`My patches')
 _HL2(`Other')
 
 <ul>
-<li>_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV'). 
 <li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
-<li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
 <li>_HTML_LINK(`VIM.html', `Notes about VIM text editor')
 <li>_HTML_LINK(`windows.html', `Notes about Windows OS')
 <li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')
-<li>_HTML_LINK(`silence.ogg',`10 seconds of silence'): best ever Android ringtone, to be placed in <i>Ringtones</i> folder.
 </ul>
 
 <img src="http://projecteuler.net/profile/dennis714.png" alt="Project Euler stats:">
