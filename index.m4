@@ -20,10 +20,10 @@ I can be contacted by email: <b>dennis(a)yurichev.com</b>, or Skype: <b>dennis.y
 _HL2(`Some of my writings:')
 
 <ul>
-<li>_HTML_LINK(`http://beginners.re/', `"Reverse Engineering for Beginners"') free book. <a href="http://beginners.re/#acorn">Published in 2015 by Acorn</a>.
+<li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book. _HTML_LINK(`http://go.yurichev.com/45001',`Published in 2015 by Acorn').
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
-<li>_HTML_LINK(`http://yurichev.com/writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
-<li>_HTML_LINK(`http://yurichev.com/writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
+<li>_HTML_LINK(`writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
+<li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 </ul>
 
 _HL2(`Vulnerabilities I found:')
@@ -38,17 +38,17 @@ _HL2(`Blogs, etc')
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 <ul>
-<li>Some kind of tech _HTML_LINK(`http://blog.yurichev.com/', `blog here').
+<li>Some kind of tech _HTML_LINK(`http://go.yurichev.com/45002', `blog here').
 <li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
-<li>_HTML_LINK(`https://github.com/dennis714', `My GitHub account (#1)');
-_HTML_LINK(`https://github.com/yurichev', `Another GitHub account (#2)')
-<li>_HTML_LINK(`http://www.weibo.com/u/5177867117',`Weibo account')
+<li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account (#1)');
+_HTML_LINK(`http://go.yurichev.com/45004', `Another GitHub account (#2)')
+<li>_HTML_LINK(`http://go.yurichev.com/45005',`Weibo account')
 </ul>
 
 _HL2(`Oracle RDBMS stuff:')
 
 <ul>
-<li>_HTML_LINK(`http://yurichev.com/writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
+<li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 <li>_HTML_LINK(`ops_FPGA.html', `FPGA-based Oracle RDBMS passwords cracker')
 <li>_HTML_LINK(`http://conus.info/utils/ops_SIMD/', `Oracle passwords (DES) cracker 0.3 (SSE2/AVX)')
 <li>_HTML_LINK(`http://conus.info/utils/#oracle_msb', `Oracle RDBMS .msb files unpacker')
