@@ -20,7 +20,7 @@ I can be contacted by email: <b>dennis(a)yurichev.com</b>, or Skype: <b>dennis.y
 _HL2(`Some of my writings:')
 
 <ul>
-<li>_HTML_LINK(`http://beginners.re/', `"Reverse Engineering for Beginners"') free book.
+<li>_HTML_LINK(`http://beginners.re/', `"Reverse Engineering for Beginners"') free book. <a href="http://beginners.re/#acorn">Published in 2015 by Acorn</a>.
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>_HTML_LINK(`http://yurichev.com/writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
 <li>_HTML_LINK(`http://yurichev.com/writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
