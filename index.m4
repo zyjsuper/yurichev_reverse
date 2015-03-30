@@ -8,19 +8,10 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
-_HL2(`I can be hired:')
-
-I'm open for reverse engineering project offers.<br>
-I'm is also available as a freelance teacher of assembly language, 
-reverse engineering, and C language.
-I can teach remotely via E-Mail, Skype, any other messengers.<br>
-_HTML_LINK(`Dennis_Yurichev.pdf', `My slightly outdated CV').<br>
-I can be contacted by email: <b>dennis(a)yurichev.com</b>, or Skype: <b>dennis.yurichev</b>.
-
 _HL2(`Some of my writings:')
 
 <ul>
-<li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book. _HTML_LINK(`http://go.yurichev.com/45001',`Published in 2015 by Acorn').
+<li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>_HTML_LINK(`writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
 <li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
@@ -104,8 +95,6 @@ _HL2(`Other')
 <li>_HTML_LINK(`windows.html', `Notes about Windows OS')
 <li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')
 </ul>
-
-<img src="http://projecteuler.net/profile/dennis714.png" alt="Project Euler stats:">
 
 _HL2(`Contacts')
 
