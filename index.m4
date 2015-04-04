@@ -91,9 +91,7 @@ _HL2(`Other')
 <ul>
 <li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
-<li>_HTML_LINK(`VIM.html', `Notes about VIM text editor')
-<li>_HTML_LINK(`windows.html', `Notes about Windows OS')
-<li>_HTML_LINK(`exim.html', `Exim MTA (mail transfer agent)')
+<li>_HTML_LINK(`refs', `Some of my references')
 </ul>
 
 _HL2(`Contacts')
