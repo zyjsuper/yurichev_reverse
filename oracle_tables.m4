@@ -22,7 +22,8 @@ ar -x libserver11.a
 
 <p>_HTML_LINK(`https://github.com/dennis714/oracle-tables', `source code')</p>
 
-<p>Download compiled version (win32): _HTML_LINK(`oracle/ora_tables.exe', `ora_tables.exe')</p>
+<p>Download compiled version (win64): _HTML_LINK(`oracle/oracle_tables_win64.exe', `oracle_tables_win64.exe')</p>
+<p>Download compiled version (Linux x64): _HTML_LINK(`oracle/oracle_tables_linux64.tar', `oracle_tables_linux64.tar')</p>
 
 <p>Sample dumps:</p>
 
