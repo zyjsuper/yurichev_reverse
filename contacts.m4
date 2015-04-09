@@ -13,6 +13,8 @@ If you got one from my email unsigned, it may be SPAM.</p>
 
 <p>Skype: dennis.yurichev (I'm not often online)</p>
 
+<p>I'm no longer use any social networks, except _HTML_LINK(`http://twitter.com/yurichev',`twitter').</p>
+
 <p>My timezone is EET = East-European time = GMT+2h = EST+7h = PST+10h</p>
 
 _HL3(`Snail mail')

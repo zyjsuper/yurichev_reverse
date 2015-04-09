@@ -25,11 +25,9 @@ _HL2(`Vulnerabilities I found:')
 
 _HL2(`Blogs, etc')
 
-<a href="https://twitter.com/yurichev" class="twitter-follow-button" data-show-count="false">Follow @yurichev</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
 <ul>
 <li>Some kind of tech _HTML_LINK(`http://go.yurichev.com/45002', `blog here').
+<li>_HTML_LINK(`http://twitter.com/yurichev',`twitter').
 <li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
 <li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account (#1)');
 _HTML_LINK(`http://go.yurichev.com/45004', `Another GitHub account (#2)')
