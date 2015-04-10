@@ -4,7 +4,7 @@ _HEADER(`index')
 
 _HL1(`Dennis Yurichev / Денис Юричев')
 
-<p><h5>My surname in IPA form: [yʊritʃev]</h5></p>
+<!-- <p><h5>My surname in IPA form: [yʊritʃev]</h5></p> -->
 
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
@@ -17,11 +17,10 @@ _HL2(`Some of my writings:')
 <li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 </ul>
 
-_HL2(`Vulnerabilities I found:')
-
+<!-- _HL2(`Vulnerabilities I found:')
 <ul>
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
-</ul>
+</ul> -->
 
 _HL2(`Blogs, etc')
 
@@ -67,7 +66,7 @@ _HL2(`Random utilities:')
 _HL2(`Also hosted somewhere on this website')
 
 <ul>
-<li>_HTML_LINK(`http://avantgardeproject.conus.info/mirror/', `Mirror of Avant Garde Project') - series of recordings of 20th-century classical, experimental, and electroacoustic music digitized from LPs whose music has in most cases never been released on CD, and so is effectively inaccessible to the vast majority of music listeners today. mp3 versions of these recordings are also _HTML_LINK(`http://avantgardeproject.conus.info/', `here').
+<!-- <li>_HTML_LINK(`http://avantgardeproject.conus.info/mirror/', `Mirror of Avant Garde Project') - series of recordings of 20th-century classical, experimental, and electroacoustic music digitized from LPs whose music has in most cases never been released on CD, and so is effectively inaccessible to the vast majority of music listeners today. mp3 versions of these recordings are also _HTML_LINK(`http://avantgardeproject.conus.info/', `here').-->
 <li>_HTML_LINK(`retrocomputing.html', `Some retrocomputing files')
 <li>_HTML_LINK(`http://conus.info/archive/', `cuetools 1.3.1 win32 binaries, Intel microcode table dumps')
 </ul>
