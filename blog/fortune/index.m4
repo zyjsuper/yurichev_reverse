@@ -32,10 +32,42 @@ But the text file can get bigger, and even on modern computers, this naive algor
 The straightforward way is to keep binary index file containing offset of each phrase in text file.
 With index file, <i>fortune</i> program can work much faster: just to choose random index element, take offset from there, set offset in text file and read phrase from it.
 This is actually done in <i>fortune</i> file.
-Let's inspect what is in its index file inside (these are .dat files in the same directory) in Hiew hexdecimal editor.
+Let's inspect what is in its index file inside (these are .dat files in the same directory) in hexdecimal editor.
 This program is open-source of course, but intentionally, I will not peek into its source code.</p>
 
-<center><img src="fortunes_dat.png"></center>
+<pre>
+$ od -t x1 --address-radix=x fortunes.dat
+000000 00 00 00 02 00 00 01 af 00 00 00 bb 00 00 00 0f
+000010 00 00 00 00 25 00 00 00 00 00 00 00 00 00 00 2b
+000020 00 00 00 60 00 00 00 8f 00 00 00 df 00 00 01 14
+000030 00 00 01 48 00 00 01 7c 00 00 01 ab 00 00 01 e6
+000040 00 00 02 20 00 00 02 3b 00 00 02 7a 00 00 02 c5
+000050 00 00 03 04 00 00 03 3d 00 00 03 68 00 00 03 a7
+000060 00 00 03 e1 00 00 04 19 00 00 04 2d 00 00 04 7f
+000070 00 00 04 ad 00 00 04 d5 00 00 05 05 00 00 05 3b
+000080 00 00 05 64 00 00 05 82 00 00 05 ad 00 00 05 ce
+000090 00 00 05 f7 00 00 06 1c 00 00 06 61 00 00 06 7a
+0000a0 00 00 06 d1 00 00 07 0a 00 00 07 53 00 00 07 9a
+0000b0 00 00 07 f8 00 00 08 27 00 00 08 59 00 00 08 8b
+0000c0 00 00 08 a0 00 00 08 c4 00 00 08 e1 00 00 08 f9
+0000d0 00 00 09 27 00 00 09 43 00 00 09 79 00 00 09 a3
+0000e0 00 00 09 e3 00 00 0a 15 00 00 0a 4d 00 00 0a 5e
+0000f0 00 00 0a 8a 00 00 0a a6 00 00 0a bf 00 00 0a ef
+000100 00 00 0b 18 00 00 0b 43 00 00 0b 61 00 00 0b 8e
+000110 00 00 0b cf 00 00 0b fa 00 00 0c 3b 00 00 0c 66
+000120 00 00 0c 85 00 00 0c b9 00 00 0c d2 00 00 0d 02
+000130 00 00 0d 3b 00 00 0d 67 00 00 0d ac 00 00 0d e0
+000140 00 00 0e 1e 00 00 0e 67 00 00 0e a5 00 00 0e da
+000150 00 00 0e ff 00 00 0f 43 00 00 0f 8a 00 00 0f bc
+000160 00 00 0f e5 00 00 10 1e 00 00 10 63 00 00 10 9d
+000170 00 00 10 e3 00 00 11 10 00 00 11 46 00 00 11 6c
+000180 00 00 11 99 00 00 11 cb 00 00 11 f5 00 00 12 32
+000190 00 00 12 61 00 00 12 8c 00 00 12 ca 00 00 13 87
+0001a0 00 00 13 c4 00 00 13 fc 00 00 14 1a 00 00 14 6f
+0001b0 00 00 14 ae 00 00 14 de 00 00 15 1b 00 00 15 55
+0001c0 00 00 15 a6 00 00 15 d8 00 00 16 0f 00 00 16 4e
+...
+</pre>
 
 <p>Without any special aid we could see that there are four 4-byte elements on each 16-byte line.
 It's probably our index array.
@@ -57,7 +89,7 @@ Out[]= {33554432, 2936078336, 3137339392, 251658240, 0, 37, 0, \
 </pre>
 
 <p>Nope, something wrong. Numbers are suspiciously big.
-But let's back to Hiew screenshot: each common 4-byte element has two zero bytes and two non-zero bytes, so the offsets (at least at the beginning of the file) are 16-bit at maximum.
+But let's back to <i>od</i> output: each common 4-byte element has two zero bytes and two non-zero bytes, so the offsets (at least at the beginning of the file) are 16-bit at maximum.
 Probably different endiannes is used in file?
 Default endiannes in Mathematica is little-endian, as used in Intel CPUs.
 Now I'm changing it to big-endian:</p>
@@ -78,7 +110,20 @@ Out[]= {2, 431, 187, 15, 0, 620756992, 0, 43, 96, 143, 223, 276, \
 
 <p>Yes, this is something readable.
 I choose random element (3066) which is 0xBFA in hexadecimal form.
-I'm opening 'fortunes' text file in Hiew, I'm setting 0xBFA as offset and I see this phrase:</p>
+I'm opening 'fortunes' text file in hex editor, I'm setting 0xBFA as offset and I see this phrase:</p>
+
+<pre>
+$ od -t x1 -c --skip-bytes=0xbfa --address-radix=x fortunes
+000bfa  44  6f  20  77  68  61  74  20  63  6f  6d  65  73  20  6e  61
+         D   o       w   h   a   t       c   o   m   e   s       n   a
+000c0a  74  75  72  61  6c  6c  79  2e  20  20  53  65  65  74  68  65
+         t   u   r   a   l   l   y   .           S   e   e   t   h   e
+000c1a  20  61  6e  64  20  66  75  6d  65  20  61  6e  64  20  74  68
+             a   n   d       f   u   m   e       a   n   d       t   h
+....
+</pre>
+
+Or:
 
 <pre>
 Do what comes naturally.  Seethe and fume and throw a tantrum.
@@ -126,17 +171,45 @@ Out[]= {429, -244, -172, -15, 620756992, -620756992, 43, 53, 47, \
 <p>As we can see, except of the very first 6 values (which is probably belongs to index file header), all numbers are in fact length of all text phrases (offset of the next phrase minus offset of the current phrase is in fact length of the current phrase).</p>
 
 <p>It's very important to keep in mind that bit-endiannes can be confused with incorrect array start.
-Indeed, from Hiew screenshot we see that each element started with two zeroes.
+Indeed, from <i>od</i> output we see that each element started with two zeroes.
 But when shifted by two bytes in either side, we can interpret this array as little-endian:</p>
 
-<center><img src="fortunes_dat_2.png"></center>
+<pre>
+$ od -t x1 --address-radix=x --skip-bytes=0x32 fortunes.dat
+000032 01 48 00 00 01 7c 00 00 01 ab 00 00 01 e6 00 00
+000042 02 20 00 00 02 3b 00 00 02 7a 00 00 02 c5 00 00
+000052 03 04 00 00 03 3d 00 00 03 68 00 00 03 a7 00 00
+000062 03 e1 00 00 04 19 00 00 04 2d 00 00 04 7f 00 00
+000072 04 ad 00 00 04 d5 00 00 05 05 00 00 05 3b 00 00
+000082 05 64 00 00 05 82 00 00 05 ad 00 00 05 ce 00 00
+000092 05 f7 00 00 06 1c 00 00 06 61 00 00 06 7a 00 00
+0000a2 06 d1 00 00 07 0a 00 00 07 53 00 00 07 9a 00 00
+0000b2 07 f8 00 00 08 27 00 00 08 59 00 00 08 8b 00 00
+0000c2 08 a0 00 00 08 c4 00 00 08 e1 00 00 08 f9 00 00
+0000d2 09 27 00 00 09 43 00 00 09 79 00 00 09 a3 00 00
+0000e2 09 e3 00 00 0a 15 00 00 0a 4d 00 00 0a 5e 00 00
+...
+</pre>
 
 <p>If we would interpret this array as little-endian, the first element is 0x4801, second is 0x7C01, etc.
 High 8-bit part of each of these 16-bit values are seems random to us, and the lowest 8-bit part is seems ascending.</p>
 
-<p>But I'm sure that this is big-endian array, because the very last 32-bit element of the file is big-endian (I put Hiew cursor on it):</p>
+<p>But I'm sure that this is big-endian array, because the very last 32-bit element of the file is big-endian 
+(00 00 5f c4 here):</p>
 
-<center><img src="fortunes_dat_end.png"></center>
+<pre>
+$ od -t x1 --address-radix=x fortunes.dat
+...
+000660 00 00 59 0d 00 00 59 55 00 00 59 7d 00 00 59 b5
+000670 00 00 59 f4 00 00 5a 35 00 00 5a 5e 00 00 5a 9c
+000680 00 00 5a cb 00 00 5a f4 00 00 5b 1f 00 00 5b 3d
+000690 00 00 5b 68 00 00 5b ab 00 00 5b f9 00 00 5c 49
+0006a0 00 00 5c ae 00 00 5c eb 00 00 5d 34 00 00 5d 7a
+0006b0 00 00 5d a3 00 00 5d f5 00 00 5e 3a 00 00 5e 67
+0006c0 00 00 5e a8 00 00 5e ce 00 00 5e f7 00 00 5f 30
+0006d0 00 00 5f 82 00 00 5f c4
+0006d8
+</pre>
 
 <p>Perhaps, <i>fortune</i> program developer had big-endian computer or maybe it was ported from something like it.</p>
 
