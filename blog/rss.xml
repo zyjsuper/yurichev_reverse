@@ -1,0 +1,13 @@
+<rss version="2.0"> 
+  <channel> 
+    <title>Dennis Yurichev</title> 
+    <link>http://yurichev.com/blog/</link> 
+    <description>by Dennis Yurichev</description>
+    <item> 
+      <title>(Beginners level) reverse engineering of simple fortune program indexing file.</title> 
+      <link>http://yurichev.com/blog/fortune/</link> 
+      <description>(Beginners level) reverse engineering of simple fortune program indexing file.</description> 
+      <pubDate>Sat, 25 Apr 2015 00:00:00 GMT</pubDate> 
+    </item>
+  </channel>
+</rss>

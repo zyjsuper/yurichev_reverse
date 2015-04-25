@@ -3,7 +3,7 @@
 _HEADER(`Mailing lists')
 
 <p>Here is also my own mailing list, dedicated to news about my tools, writings, etc.
-Mostly the same information as in _HTML_LINK(`http://blog.yurichev.com',`blog.yurichev.com'). Low-traffic.</p>
+Mostly the same information as in _HTML_LINK(`http://yurichev.com/blog',`my blog'). Low-traffic.</p>
 
 <p>_HTML_LINK(`https://groups.google.com/forum/#!forum/yurichev/join', `Click here')</p>
 

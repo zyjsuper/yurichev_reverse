@@ -25,7 +25,7 @@ _HL2(`Some of my writings:')
 _HL2(`Blogs, etc')
 
 <ul>
-<li>Some kind of tech _HTML_LINK(`http://go.yurichev.com/45002', `blog here').
+<li>Some kind of tech _HTML_LINK(`blog', `blog here'), _HTML_LINK(`http://go.yurichev.com/45002', `and here is old one, Drupal-based').
 <li>_HTML_LINK(`http://twitter.com/yurichev',`twitter').
 <li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
 <li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account (#1)');

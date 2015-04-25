@@ -9,8 +9,9 @@ m4_define(`_HEADER',`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//E
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <meta name="author" content="Dennis Yurichev">
 _MAKE_TITLE(`$1')
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="http://yurichev.com/style.css">
 <script src="multilang.js" type="text/javascript"></script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 </head>
 <body>')
 
@@ -22,8 +23,17 @@ m4_define(`_MULTILANG_SWITCH',`<h5>
 
 
 m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`index.html',`index page')]</p>
+<p><h5>The page last updated on m4_esyscmd(c:/cygwin/bin/date -r m4___file__ +"%d-%B-%Y")</h5></p>
+</body>
+</html>')
 
-<h5>The page last updated on m4_esyscmd(c:/cygwin/bin/date -r m4___file__ +"%d-%B-%Y")</h5>
+m4_define(`_BLOG_FOOTER',`<p>&rarr; [_HTML_LINK(`http://yurichev.com/blog/index.html',`other blog posts')]</p>
+<p><h5>The page last updated on m4_esyscmd(c:/cygwin/bin/date -r m4___file__ +"%d-%B-%Y")</h5></p>
+
+<span class="st_twitter" displayText="Tweet"></span>
+<span class="st_facebook" displayText="Facebook"></span>
+
+m4_include(`disqus.html')
 
 </body>
 </html>')
