@@ -4,7 +4,7 @@ _HEADER(`25-Apr-2015: (Beginners level) reverse engineering of simple <i>fortune
 
 _HL1(`25-Apr-2015: (Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
 
-<p><i>fortune</i> is well-known UNIX program which shows random phrase from a collection.
+<p><i>fortune</i> is <a href="http://en.wikipedia.org/wiki/Fortune_%28Unix%29">well-known UNIX program</a> which shows random phrase from a collection.
 Some geeks are often set up their system in such way, so <i>fortune</i> can be called after logging on.
 <i>fortune</i> takes phrases from the text files laying in <i>/usr/share/games</i> (as of Ubuntu Linux).
 Here is example ('fortunes' text file):</p>
