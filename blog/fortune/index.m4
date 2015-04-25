@@ -271,4 +271,6 @@ Files I took from Ubuntu Linux 14.04 are here:
 It is because <i>fortune</i> text files are probably never exceeds 4GB size.
 But if it will, all elements must have size of 64 bit so to be able to store offset to the text file larger than 4GB.</p>
 
+<p>For impatient readers, the source code of <i>fortune</i> is _HTML_LINK(`https://launchpad.net/ubuntu/+source/fortune-mod/1:1.99.1-3.1ubuntu4',`here').</p>
+
 _BLOG_FOOTER()
