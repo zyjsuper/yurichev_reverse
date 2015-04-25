@@ -143,6 +143,14 @@ High 8-bit part of each of these 16-bit values are seems random to us, and the l
 <p>OK, so the array is big-endian, and, judging by common sense, the very first phrase in the text file should be started at zeroth offset. So zero value should be present in the array somewhere at the very beginning.
 We've got couple of zero elements at the beginning. But the second is most appealing: 43 is going right after it and 43 is valid offset to valid English phrase in the text file.</p>
 
+<p>The last array element is 0x5FC4, and there are no such byte at this offset in the text file.
+So the last array element is pointing behind the end of file.
+It's probably done because phrase length is calculated as difference between offset to the current phrase
+and offset to the next phrase. 
+This can be faster than traversing phrase string for percent character.
+But this wouldn't work for the last element.
+So the <i>dummy</i> element is also added at the end of array.</p>
+
 <p>So the first 6 32-bit integer values are probably some kind of header.</p>
 
 <p>Oh, I forgot to count phrases in text file:</p>
@@ -165,18 +173,21 @@ In Mathematica, I'm loading each of three available files and I'm taking a look 
 <center><img src="mathematica.png"></center>
 
 <p>I have no idea what other values mean, except the size of index file.
+Some fields are the same for all files, some are not.
 From my own experience, there could be:</p>
 
 <ul>
-<li> file version; 
-<li> some other flags; 
-<li> maybe even text language identifier; 
+<li> file version;
+<li> some other flags;
+<li> maybe even text language identifier;
 <li> text file timestamp, so <i>fortune</i> program will regenerate index file if user added some new phrase(s) to it.
 </ul>
 
 <p>For example, Oracle .SYM files which contain symbols table for DLL files, also contain timestamp of corresponding DLL file, so to be sure it is still valid.
 But there are still possibility that the index file is regenerated if modification time of index file is older than text file.
 On the other hand, text file and index file timestamps can gone out of sync after archiving/unarchiving/installing/deploying/etc.</p>
+
+<p>But there are no timestamp, in my opinion. The most compact way of representing date and time is UNIX time value, which is big 32-bit number. We don't see any of such here. Other ways are even less compact.</p>
 
 <p>For the sake of demonstration, I still didn't take a look in <i>fortune</i> source code.
 If you want to try to understand meaning of other values in index file header, you may try to achieve it without looking into source code as well.
