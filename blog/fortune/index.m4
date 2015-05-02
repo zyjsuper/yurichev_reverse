@@ -262,6 +262,16 @@ On the other hand, text file and index file timestamps can gone out of sync afte
 
 <p>But there are no timestamp, in my opinion. The most compact way of representing date and time is UNIX time value, which is big 32-bit number. We don't see any of such here. Other ways are even less compact.</p>
 
+<p>So here is algorithm, how <i>fortune</i> probably works:</p>
+<ul>
+<li> take number of last phrase from the second element;
+<li> generate random number in range of 0..number_of_last_phrase;
+<li> find corresponding element in array of offsets, take also following offset;
+<li> output to <i>stdout</i> all characters from the text file starting at current offset until
+the next offset minus 2 (so to ignore terminating percent sign 
+and character of the following phrase).
+</ul>
+
 <p>For the sake of demonstration, I still didn't take a look in <i>fortune</i> source code.
 If you want to try to understand meaning of other values in index file header, you may try to achieve it without looking into source code as well.
 Files I took from Ubuntu Linux 14.04 are here:
