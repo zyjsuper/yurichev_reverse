@@ -4,6 +4,12 @@
     <link>http://yurichev.com/blog/</link> 
     <description>by Dennis Yurichev</description>
     <item> 
+      <title>(Beginners level) Analyzing unknown binary files using information entropy.</title> 
+      <link>http://yurichev.com/blog/entropy/</link> 
+      <description>(Beginners level) Analyzing unknown binary files using information entropy.</description> 
+      <pubDate>Sat, 13 May 2015 00:00:00 GMT</pubDate> 
+    </item>
+    <item> 
       <title>(Beginners level) reverse engineering of simple fortune program indexing file.</title> 
       <link>http://yurichev.com/blog/fortune/</link> 
       <description>(Beginners level) reverse engineering of simple fortune program indexing file.</description> 
