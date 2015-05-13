@@ -4,7 +4,7 @@ _HEADER(`13-May-2015: (Beginners level) Analyzing unknown binary files using inf
 
 _HL1(`13-May-2015: (Beginners level) Analyzing unknown binary files using information entropy.')
 
-<p>I would say, information entropy is a measure, how tightly some piece of data can be compressed.
+<p>For the sake of simplification, I would say, information entropy is a measure, how tightly some piece of data can be compressed.
 For example, it is usually not possible to compress already compressed archive file, so it has high entropy.
 On the other hand, one megabyte of zero bytes can be compressed to a tiny output file.
 Indeed, in plain English language, one million of zeroes can be described just as "resulting file is one million zero bytes".
