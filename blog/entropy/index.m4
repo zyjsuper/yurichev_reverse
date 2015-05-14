@@ -265,7 +265,8 @@ in executable code (which has high entropy as well), but I didn't tried this by 
 _HL2(`Links')
 
 <p>Binary files used while writing: _HTML_LINK_AS_IS(`http://yurichev.com/blog/entropy/files/').
-Wolfram Mathematica notebook file: _HTML_LINK_AS_IS(`http://yurichev.com/blog/entropy/files/binary_file_entropy.nb').</p>
+Wolfram Mathematica notebook file: _HTML_LINK_AS_IS(`http://yurichev.com/blog/entropy/files/binary_file_entropy.nb') 
+(all cells must be evaluated to start things working).</p>
 
 <p>There is a great (and more complex) online entropy visualizer made by Aldo Cortesi, 
 which I tried to mimic: _HTML_LINK_AS_IS(`http://binvis.io').
