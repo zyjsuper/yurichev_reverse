@@ -48,6 +48,7 @@ fToASCII[val_]:=FromCharacterCode[val,"PrintableASCII"]
 fToHex[val_]:=IntegerString[val,16]
 fPutASCIIWindow[data_]:=Framed[Grid[Partition[Map[fToASCII,data],16]]]
 fPutHexWindow[data_]:=Framed[Grid[Partition[Map[fToHex,data],16],Alignment->Right]]
+
 (* that will be the main knob here *)
 {Slider[Dynamic[offset],{0,Length[input]-BlockSize,BlockSize}],Dynamic[BaseForm[offset,16]]}
 
