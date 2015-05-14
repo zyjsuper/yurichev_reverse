@@ -311,4 +311,8 @@ address of the "function" twice.</p>
 <p>To deal with this, executable compressors are sometimes able to reduce entropy here.
 One example is UPX: _HTML_LINK_AS_IS(`http://sourceforge.net/p/upx/code/ci/default/tree/doc/filter.txt').</p>
 
+<hr>
+
+<p>Update: some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=9545276')</p>
+
 _BLOG_FOOTER()
