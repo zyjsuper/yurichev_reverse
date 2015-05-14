@@ -10,8 +10,11 @@ On the other hand, one megabyte of zero bytes can be compressed to a tiny output
 Indeed, in plain English language, one million of zeroes can be described just as "resulting file is one million zero bytes".
 Compressed files are usually a list of instructions to decompressor, like this: "put 1000 zeroes, then 0x23 byte, then 0x45 byte, then 2000 more zeroes, etc".</p>
 
-<p>Texts written in natural languages are also can be compressed tightly, because natural languages has a lot of redundancy
-(otherwise, a tiny typo will always lead to misunderstanding), some words are used very often, etc.</p>
+<p>Texts written in natural languages are also can be compressed tightly, 
+because natural languages has a lot of redundancy
+(otherwise, a tiny typo will always lead to misunderstanding, 
+like any toggled bit in compressed archive make decompression nearly impossible), 
+some words are used very often, etc.</p>
 
 <p>Code for CPUs is also can be compressed, because some ISA instructions are always used more often than others.
 In x86, most used instructions are MOV/PUSH/CALL -- indeed, most of the time, computer CPU is just shuffling data and switching between
