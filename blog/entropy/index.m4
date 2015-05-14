@@ -295,10 +295,17 @@ while they are in fact pointing to the same function:</p>
 <pre>
 function proc
 ...
+function endp
+
+...
 
 CALL function
 CALL function
 </pre>
+
+<p>Ideal executable code compressor would encode information like this:
+"there is a CALL to a "function" at address X and the same CALL at address Y" without need to encode
+address of the "function" twice.</p>
 
 <p>To deal with this, executable compressors are sometimes able to reduce entropy here.
 One example is UPX: _HTML_LINK_AS_IS(`http://sourceforge.net/p/upx/code/ci/default/tree/doc/filter.txt').</p>
