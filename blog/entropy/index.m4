@@ -163,7 +163,7 @@ in the first half of graph).</p>
 
 <img src="notepad2.png">
 
-<p>In hex editor I can see PNG file here, embedded in the PE file resource section (it is large image of notepad icon).
+<p>In hex editor I can see PNG file here, embedded in the PE file resource section (it is a large image of notepad icon).
 PNG files are compressed, indeed.</p>
 
 _HL2(`Unnamed dashcam:')
@@ -176,7 +176,7 @@ _HL2(`Unnamed dashcam:')
 I checked various ISAs and I found that 
 the first third of the whole file (with the text segment inside) is in fact MIPS (little-endian) code!</p>
 
-<p>For instance, this is very distinctive function epilogue:</p>
+<p>For instance, this is very distinctive MIPS function epilogue:</p>
 
 <pre>
 ROM:000013B0                 move    $sp, $fp
@@ -290,9 +290,11 @@ _HL2(`A word about XOR encryption.')
 I've shown this in "Norton Guide" example in my book (<a href="http://beginners.re/">"Reverse Engineering for Beginners" free book</a>).
 (The page about XOR encryption is also accessible in LaTeX form: <a href="https://github.com/dennis714/RE-for-beginners/blob/master/ff/XOR/ng/main.tex">link</a>).</p>
 
+<p>That's true -- XOR operation shuffles each bit at place without affecting any other bit.</p>
+
 _HL2(`More about entropy of executable code.')
 
-<p>It is quickly noticeable that probably biggest source of high-entropy in executable code is relative offsets.
+<p>It is quickly noticeable that probably biggest source of high-entropy in executable code are relative offsets encoded in opcodes.
 For example, these two consequent instructions will produce different relative offsets in their opcodes, 
 while they are in fact pointing to the same function:</p>
 
@@ -304,6 +306,7 @@ function endp
 ...
 
 CALL function
+...
 CALL function
 </pre>
 
