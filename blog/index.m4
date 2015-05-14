@@ -17,7 +17,7 @@ _HL2(`The posts:')
 
 _HL2(`Subscribe to the blog:')
 
-<p><a href="http://yurichev.com/blog/rss.xml"><img src="xml.png"></a></p>
+<p><a href="http://yurichev.com/blog/rss.xml"><img src="rss_button.gif"></a></p>
 
 <p>Here is usual _HTML_LINK(`http://yurichev.com/blog/rss.xml',`RSS') link.
 Someone may be interesting in subscribing my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').
