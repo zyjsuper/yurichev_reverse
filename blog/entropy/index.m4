@@ -290,7 +290,7 @@ _HL2(`A word about XOR encryption.')
 I've shown this in "Norton Guide" example in my book (<a href="http://beginners.re/">"Reverse Engineering for Beginners" free book</a>).
 (The page about XOR encryption is also accessible in LaTeX form: <a href="https://github.com/dennis714/RE-for-beginners/blob/master/ff/XOR/ng/main.tex">link</a>).</p>
 
-<p>That's true -- XOR operation shuffles each bit at place without affecting any other bit.</p>
+<p>That's true -- XOR operation toggles each bit at place without affecting any other bit.</p>
 
 _HL2(`More about entropy of executable code.')
 
@@ -320,5 +320,7 @@ One example is UPX: _HTML_LINK_AS_IS(`http://sourceforge.net/p/upx/code/ci/defau
 <hr>
 
 <p>Update: some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=9545276')</p>
+
+<p>Interesting in articles like this? Subscribe to my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').</p>
 
 _BLOG_FOOTER()

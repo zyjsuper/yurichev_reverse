@@ -283,4 +283,8 @@ But if it will, all elements must have size of 64 bit so to be able to store off
 
 <p>For impatient readers, the source code of <i>fortune</i> is _HTML_LINK(`https://launchpad.net/ubuntu/+source/fortune-mod/1:1.99.1-3.1ubuntu4',`here').</p>
 
+<hr>
+
+<p>Interesting in articles like this? Subscribe to my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').</p>
+
 _BLOG_FOOTER()
