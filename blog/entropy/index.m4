@@ -8,7 +8,7 @@ _HL1(`13-May-2015: (Beginners level) Analyzing unknown binary files using inform
 For example, it is usually not possible to compress already compressed archive file, so it has high entropy.
 On the other hand, one megabyte of zero bytes can be compressed to a tiny output file.
 Indeed, in plain English language, one million of zeroes can be described just as "resulting file is one million zero bytes".
-Compressed files are usually a list of instructions to decompressor, like this: "put 1000 zeroes, then 0x23 byte, then 0x45 byte, then 2000 more zeroes, etc".</p>
+Compressed files are usually a list of instructions to decompressor, like this: "put 1000 zeroes, then 0x23 byte, then 0x45 byte, then put a block of size 10 bytes which we've seen 500 bytes back, etc".</p>
 
 <p>Texts written in natural languages are also can be compressed tightly, 
 because natural languages has a lot of redundancy
@@ -16,9 +16,10 @@ because natural languages has a lot of redundancy
 like any toggled bit in compressed archive make decompression nearly impossible), 
 some words are used very often, etc.</p>
 
-<p>Code for CPUs is also can be compressed, because some ISA instructions are always used more often than others.
+<p>Code for CPUs is also can be compressed, because some ISA instructions are used much more often than others.
 In x86, most used instructions are MOV/PUSH/CALL -- indeed, most of the time, computer CPU is just shuffling data and switching between
-levels of abstractions.</p>
+levels of abstractions.
+If to consider data shuffling as moving data between levels of abstractions, this is also part of switching.</p>
 
 <p>Data compressors and encryptors tend to produce very high entropy results.
 Good perudorandom number generators also produce data which cannot be compressed 
