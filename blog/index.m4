@@ -5,7 +5,7 @@ _HEADER(`My new blog')
 _HL1(`My new blog:')
 
 <p>I stepped aside from Drupal since it requires a lot of maintenance. 
-On the other hand, web1.0 + m4 + git + rsync takes much less maintenance, if at all.
+On the other hand, web1.0 + m4 + git + rsync requires much less maintenance, if at all.
 My old blog is still accessible at its old address: _HTML_LINK_AS_IS(`http://blog.yurichev.com')</p>
 
 _HL2(`The posts:')
@@ -33,7 +33,7 @@ _HTML_LINK(`https://www.mozilla.org/en-US/thunderbird/',`Thunderbird') (local re
 
 <p>There is also my low-traffic mailing list at google groups.
 _HTML_LINK(`https://groups.google.com/forum/#!forum/yurichev/join', `Click here to join').
-Or send empty an email to: _HTML_LINK(`mailto:yurichev+subscribe@googlegroups.com',`yurichev+subscribe@googlegroups.com')</p>
+Or send an empty email to: _HTML_LINK(`mailto:yurichev+subscribe@googlegroups.com',`yurichev+subscribe@googlegroups.com')</p>
 
 _FOOTER()
 
