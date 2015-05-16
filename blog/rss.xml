@@ -4,6 +4,12 @@
     <link>http://yurichev.com/blog/</link> 
     <description>by Dennis Yurichev</description>
     <item> 
+      <title>Tweaking LLVM Obfuscator + quick look into some of LLVM internals.</title> 
+      <link>http://yurichev.com/blog/llvm/</link> 
+      <description>Tweaking LLVM Obfuscator + quick look into some of LLVM internals.</description> 
+      <pubDate>Sat, 16 May 2015 00:00:00 GMT</pubDate> 
+    </item>
+    <item> 
       <title>(Beginners level) Analyzing unknown binary files using information entropy.</title> 
       <link>http://yurichev.com/blog/entropy/</link> 
       <description>(Beginners level) Analyzing unknown binary files using information entropy.</description> 

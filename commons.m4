@@ -28,7 +28,9 @@ m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`index.html',`index page')]</p>
 </body>
 </html>')
 
-m4_define(`_BLOG_FOOTER',`<p>&rarr; [_HTML_LINK(`http://yurichev.com/blog/index.html',`other blog posts')]</p>
+m4_define(`_BLOG_FOOTER',`<hr>
+<p>Interesting in articles like this? Subscribe to my _HTML_LINK(`http://yurichev.com/blog/index.html',`blog') and/or twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').</p>
+<p>&rarr; [_HTML_LINK(`http://yurichev.com/blog/index.html',`list of blog posts')]</p>
 <p><h5>The page last updated on m4_esyscmd(c:/cygwin64/bin/date -r m4___file__ +"%d-%B-%Y")</h5></p>
 
 <span class="st_twitter" displayText="Tweet"></span>
@@ -45,3 +47,4 @@ m4_define(`_HL3', `<h4>$1</h4>')
 m4_define(`_HL4', `<h5>$1</h5>')
 m4_define(`_GREY', `<font color="#808080">$1</font>')
 m4_define(`_BOOK_NOT_FINISHED', `$1')
+m4_define(`_HEADER_HL1', `_HEADER(`$1')_HL1(`$1')')

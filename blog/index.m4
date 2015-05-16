@@ -11,6 +11,7 @@ My old blog is still accessible at its old address: _HTML_LINK_AS_IS(`http://blo
 _HL2(`The posts:')
 
 <ul>
+<li>16-May-2015: _HTML_LINK(`http://yurichev.com/blog/llvm/',`Tweaking LLVM Obfuscator + quick look into some of LLVM internals.')
 <li>13-May-2015: _HTML_LINK(`http://yurichev.com/blog/entropy/',`(Beginners level) Analyzing unknown binary files using information entropy.')
 <li>25-Apr-2015: _HTML_LINK(`http://yurichev.com/blog/fortune/',`(Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
 </ul>
