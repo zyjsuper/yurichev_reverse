@@ -275,7 +275,7 @@ _HL2(`Twine')
 <p>LLVM is my favorite open-source C++ project for learning.
 Some time ago I found nice <a href="http://llvm.org/docs/ProgrammersManual.html#the-twine-class">Twine class (and/or data structure)</a> there.</p>
 
-<p>Understanding how Twine operates may also help to understand how expressions are built in LLVM and LISP.<p>
+<p>Understanding how Twine operates may also help to understand how expressions are constructed in LLVM and LISP.<p>
 
 <p>So. Many programmers know that text string concatenation task is somewhat costly if strings are growing (O(n) complexity class, speed is linearly depending on size of data).
 Imagine, we need to devise a string class (or library) which will work as fast as possible (memory trade-off accepted).
@@ -331,7 +331,7 @@ On the other hand, memory consumption is bigger than to store a simple C-string.
 <p>Twine can be implemented probably in any programming language.
 And it is misnomer to my taste. I would rather call it <i>Knot</i> or maybe <i>StringKnot</i>.</p>
 
-_HL2(`Pattern Matching and term rewriting systems')
+_HL2(`Pattern matching and term rewriting systems')
 
 <p>When expression is represented as a tree (which is, frankly speaking, always), some magic things are possible.
 LLVM has pattern matcher which operates on trees.
@@ -364,12 +364,12 @@ They are used in LLVM extensively to simplify expressions.</p>
 </pre>
 ( _HTML_LINK(`https://github.com/llvm-mirror/llvm/blob/e027d74733de7dc086c9d2190d14884e9240ce89/lib/Transforms/InstCombine/InstCombineAndOrXor.cpp#L2200',`lib/Transforms/InstCombine/InstCombineAndOrXor.cpp') )
 
-<p><i>match()</i> function operation is surprisingly simple.</p>
+<p><i>match()</i> function internals is surprisingly simple.</p>
 
 <p>I would say, this is because it can be viewed as <a href="http://en.wikipedia.org/wiki/Rewriting#Term_rewriting_systems">term rewriting system (TRS)</a> 
 (which is also simple).
 The whole compiler (especially optimizer) can be viewed as TRS working on abstract syntax tree, finding something known to it and transforming
-it according to its rules. It does this as long as nothing more is left to "rewrite".
+it according to its rules. It does this as long as there is something left to "rewrite".
 Obfuscated XOR function which I showed in this article is just another rule for TRS: each time TRS seeing XOR somewhere in the tree, it is then
 replacing it to one of tree obfuscated XOR functions, picked randomly.</p>
 
