@@ -6,7 +6,7 @@ _HL1(`My new blog:')
 
 <p>I stepped aside from Drupal since it requires a lot of maintenance. 
 On the other hand, web1.0 + m4 + git + rsync takes much less maintenance, if at all.
-My old blog is still accessible at its old address: <a href="http://blog.yurichev.com/">http://blog.yurichev.com/</a></p>
+My old blog is still accessible at its old address: _HTML_LINK_AS_IS(`http://blog.yurichev.com')</p>
 
 _HL2(`The posts:')
 
@@ -14,6 +14,11 @@ _HL2(`The posts:')
 <li>13-May-2015: _HTML_LINK(`http://yurichev.com/blog/entropy/',`(Beginners level) Analyzing unknown binary files using information entropy.')
 <li>25-Apr-2015: _HTML_LINK(`http://yurichev.com/blog/fortune/',`(Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
 </ul>
+
+<p>Some of older posts: _HTML_LINK_AS_IS(`http://blog.yurichev.com/')</p>
+
+<p>Feel free to translate them to other languages, except Russian, please!
+Just ask me, I will prepare Russian version by myself.</p>
 
 _HL2(`Subscribe to the blog:')
 
