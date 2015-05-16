@@ -30,7 +30,10 @@ Popular RSS reader choices include _HTML_LINK(`https://feedly.com/',`feedly') (w
 _HTML_LINK(`https://www.mozilla.org/en-US/thunderbird/',`Thunderbird') (local reader).</p>
 
 <p>Someone may be interesting in subscribing my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').
-There are also very _HTML_LINK(`http://yurichev.com/mailing_lists.html',`low-traffic mailing list').</p>
+
+<p>There is also my low-traffic mailing list at google groups.
+_HTML_LINK(`https://groups.google.com/forum/#!forum/yurichev/join', `Click here to join').
+Or send empty an email to: _HTML_LINK(`mailto:yurichev+subscribe@googlegroups.com',`yurichev+subscribe@googlegroups.com')</p>
 
 _FOOTER()
 
