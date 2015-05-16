@@ -26,7 +26,10 @@ _HL2(`Subscribe to the blog:')
 <p><a href="http://yurichev.com/blog/rss.xml"><img src="rss_button.gif"></a></p>
 
 <p>Here is usual _HTML_LINK(`http://yurichev.com/blog/rss.xml',`RSS') link.
-Someone may be interesting in subscribing my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').
+Popular RSS reader choices include _HTML_LINK(`https://feedly.com/',`feedly') (web reader) and 
+_HTML_LINK(`https://www.mozilla.org/en-US/thunderbird/',`Thunderbird') (local reader).</p>
+
+<p>Someone may be interesting in subscribing my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').
 There are also very _HTML_LINK(`http://yurichev.com/mailing_lists.html',`low-traffic mailing list').</p>
 
 _FOOTER()
