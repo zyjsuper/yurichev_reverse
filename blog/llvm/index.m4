@@ -266,7 +266,7 @@ Ouch, something wrong.
 Of course, I could do something wrong or introduce a bug somewhere.
 Nevertheless, judging by OpenSSL tests, our added XOR function is working fine.</p>
 
-<p>Keep in mind, code obfuscation is not a real protection from motivated reverse engineers.
+<p>Keep in mind, code obfuscation is not a real protection against motivated reverse engineer.
 On an untangling of o-LLVM obfuscated code, there is well known article about it: 
 _HTML_LINK_AS_IS(`http://blog.quarkslab.com/deobfuscation-recovering-an-ollvm-protected-program.html')</p>
 
@@ -326,7 +326,7 @@ On the other hand, memory consumption is bigger than to store a simple C-string.
 
 <p>Actual splicing is done only when <i>.str()</i> method is called: _HTML_LINK_AS_IS(`http://llvm.org/docs/doxygen/html/Twine_8cpp_source.html#l00016')</p>
 
-<p>In fact, Twine behaves just like somewhat limited LISP cons cell: its elements are always strings/numbers or links to another Twine objects.</p>
+<p>In fact, Twine behaves just like somewhat limited LISP _HTML_LINK(`http://en.wikipedia.org/wiki/Cons',`cons cell'): its elements are always strings/numbers or links to another Twine objects.</p>
 
 <p>Twine can be implemented probably in any programming language.
 And it is misnomer to my taste. I would rather call it <i>Knot</i> or maybe <i>StringKnot</i>.</p>
