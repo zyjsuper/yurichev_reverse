@@ -31,9 +31,15 @@ _HTML_LINK(`https://www.mozilla.org/en-US/thunderbird/',`Thunderbird') (local re
 
 <p>Someone may be interesting in subscribing my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').
 
+_HL3(`Mailing list')
+
 <p>There is also my low-traffic mailing list at google groups.
 _HTML_LINK(`https://groups.google.com/forum/#!forum/yurichev/join', `Click here to join').
 Or send an empty email to: _HTML_LINK(`mailto:yurichev+subscribe@googlegroups.com',`yurichev+subscribe@googlegroups.com')</p>
+
+<form METHOD=POST action="send_email.php">
+<p>Enter email for subscription:  <input type="text" name="email"><input type="submit" value="Submit"></p>
+</form> 
 
 _FOOTER()
 
