@@ -6,7 +6,7 @@ _HEADER_HL1(`16-May-2015: Tweaking LLVM Obfuscator + quick look into some of LLV
 and is intended to make things harder for reverse engineer.</p>
 
 <p>In past, I tried to _HTML_LINK(`http://blog.yurichev.com/node/58',`patch Tiny C compiler to produce really messy code'), 
-which, as far as I known, can be easily simplified by Hex-Rays decompiler.</p>
+which, as far as I known, its results can be easily simplified by Hex-Rays decompiler.</p>
 
 <p>One of the much more known examples is _HTML_LINK(`https://github.com/obfuscator-llvm/obfuscator/wiki',`LLVM Obfuscator'), 
 which is set of transformation passes for LLVM.</p>
@@ -135,7 +135,8 @@ I strongly encourage every programmer to learn LISP (or any its variant) basics,
 LISP _HTML_LINK(`http://en.wikipedia.org/wiki/Homoiconicity',`is homoiconic language') (surprisingly, assembly language is also homoiconic), 
 it's when disctinction between data and code is blurred. 
 Any code can be represented as data and otherwise. 
-This allows to build new functions on fly, using the very same operations and data primitives for both data and code.</p>
+Aside from self-modifying code, this allows to build new functions on fly, 
+using the very same operations and data primitives for both data and code.</p>
 
 <p>Now back to o-LLVM.
 Aside from my tweak, there are _HTML_LINK(`https://github.com/yurichev/obfuscator/blob/cef63dd6139fe2acbbcc61f34bd1b5994866b40f/lib/Transforms/Obfuscation/Substitution.cpp',`two other XOR substitution functions').
