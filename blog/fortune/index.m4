@@ -1,12 +1,10 @@
 m4_include(`commons.m4')
 
-_HEADER(`25-Apr-2015: (Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
-
-_HL1(`25-Apr-2015: (Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
+_HEADER_HL1(`25-Apr-2015: (Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
 
 <p><i>fortune</i> is <a href="http://en.wikipedia.org/wiki/Fortune_%28Unix%29">well-known UNIX program</a> which shows random phrase from a collection.
 Some geeks are often set up their system in such way, so <i>fortune</i> can be called after logging on.
-<i>fortune</i> takes phrases from the text files laying in <i>/usr/share/games</i> (as of Ubuntu Linux).
+<i>fortune</i> takes phrases from the text files laying in <i>/usr/share/games/fortunes</i> (as of Ubuntu Linux).
 Here is example ('fortunes' text file):</p>
 
 <pre>
@@ -250,7 +248,9 @@ Some fields are the same for all files, some are not.
 From my own experience, there could be:</p>
 
 <ul>
+<li> file signature;
 <li> file version;
+<li> checksum;
 <li> some other flags;
 <li> maybe even text language identifier;
 <li> text file timestamp, so <i>fortune</i> program will regenerate index file if user added some new phrase(s) to it.
@@ -272,19 +272,75 @@ the next offset minus 2 (so to ignore terminating percent sign
 and character of the following phrase).
 </ul>
 
+_HL2(`Hacking!')
+
+<p>Let's try to check some of our assumtpions.
+I will create this text file under the path and name <i>/usr/share/games/fortunes/fortunes</i>:</p>
+
+<pre>
+Phrase one.
+%
+Phrase two.
+%
+</pre>
+
+<p>Then this forunes.dat file. I take header from the original fortunes.dat, I changed second field (count of all phrases) to zero and I left two
+elements in the array: 0 and 0x1c, because the whole length of the text <i>fortunes</i> file is 28 (0x1c) bytes:</p>
+
+<pre>
+$ od -t x1 --address-radix=x fortunes.dat
+000000 00 00 00 02 00 00 00 00 00 00 00 bb 00 00 00 0f
+000010 00 00 00 00 25 00 00 00 00 00 00 00 00 00 00 1c
+</pre>
+
+<p>Now I run it:</p>
+
+<pre>
+$ /usr/games/fortune 
+fortune: no fortune found
+</pre>
+
+<p>Something wrong. Let's change the second field to 1:</p>
+
+<pre>
+$ od -t x1 --address-radix=x fortunes.dat
+000000 00 00 00 02 00 00 00 01 00 00 00 bb 00 00 00 0f
+000010 00 00 00 00 25 00 00 00 00 00 00 00 00 00 00 1c
+</pre>
+
+<p>Now it works. It's always shows only the first phrase:</p>
+
+<pre>
+$ /usr/games/fortune 
+Phrase one.
+</pre>
+
+<p>Hmmm. Let's leave only one element in array (0) without terminating one:</p>
+
+<pre>
+$ od -t x1 --address-radix=x fortunes.dat
+000000 00 00 00 02 00 00 00 01 00 00 00 bb 00 00 00 0f
+000010 00 00 00 00 25 00 00 00 00 00 00 00
+00001c
+</pre>
+
+<p>Fortune program always shows only first phrase.</p>
+
+<p>From this experiment we got to know that percent sign is parsed inside of fortune file and the size is not calculated as I deduced,
+perhaps, even terminal array element is not used.
+However, it's still possible use it. And probably it was in past?</p>
+
+_HL2(`The files')
+
 <p>For the sake of demonstration, I still didn't take a look in <i>fortune</i> source code.
 If you want to try to understand meaning of other values in index file header, you may try to achieve it without looking into source code as well.
 Files I took from Ubuntu Linux 14.04 are here:
-<a href="http://beginners.re/examples/fortune/">http://beginners.re/examples/fortune/</a></p>
+<a href="http://beginners.re/examples/fortune/">http://beginners.re/examples/fortune/</a>, hacked files are also here.</p>
 
 <p>Oh, and I took the files from x64 version of Ubuntu, but array elements are still has size of 32 bit.
 It is because <i>fortune</i> text files are probably never exceeds 4GB size.
 But if it will, all elements must have size of 64 bit so to be able to store offset to the text file larger than 4GB.</p>
 
 <p>For impatient readers, the source code of <i>fortune</i> is _HTML_LINK(`https://launchpad.net/ubuntu/+source/fortune-mod/1:1.99.1-3.1ubuntu4',`here').</p>
-
-<hr>
-
-<p>Interesting in articles like this? Subscribe to my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').</p>
 
 _BLOG_FOOTER()

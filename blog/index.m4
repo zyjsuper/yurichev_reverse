@@ -1,8 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER(`My new blog')
-
-_HL1(`My new blog:')
+_HEADER_HL1(`My new blog')
 
 <p>I stepped aside from Drupal since it requires a lot of maintenance. 
 On the other hand, web1.0 + m4 + git + rsync requires much less maintenance, if at all.
