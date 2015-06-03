@@ -1,8 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER(`13-May-2015: (Beginners level) Analyzing unknown binary files using information entropy.')
-
-_HL1(`13-May-2015: (Beginners level) Analyzing unknown binary files using information entropy.')
+_HEADER_HL1(`13-May-2015: (Beginners level) Analyzing unknown binary files using information entropy.')
 
 <p>For the sake of simplification, I would say, information entropy is a measure, how tightly some piece of data can be compressed.
 For example, it is usually not possible to compress already compressed archive file, so it has high entropy.
@@ -285,13 +283,15 @@ _HTML_LINK(`http://corte.si/posts/visualisation/binvis/index.html',`3').</p>
 
 <p><a href="http://rada.re/">radare2</a> framework has <i>&#35;entropy</i> command for this.</p>
 
-_HL2(`A word about XOR encryption.')
+_HL2(`A word about primitive encryption like XORing.')
 
 <p>It's interesting that simple XOR encryption doesn't affect entropy of data.
-I've shown this in "Norton Guide" example in my book (<a href="http://beginners.re/">"Reverse Engineering for Beginners" free book</a>).
-(The page about XOR encryption is also accessible in LaTeX form: <a href="https://github.com/dennis714/RE-for-beginners/blob/master/ff/XOR/ng/main.tex">link</a>).</p>
+I've shown this in "Norton Guide" example in my book (_HTML_LINK(`http://beginners.re/',`"Reverse Engineering for Beginners" free book')).
+(The page about XOR encryption is also accessible in LaTeX form: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/ff/XOR/ng/main.tex',`link').</p>
 
-<p>That's true -- XOR operation toggles each bit at place without affecting any other bit.</p>
+<p>Generalizing: encryption by substitution cipher also doesn't affect entropy of data (and XOR can be viewed as substitution cipher).
+The reason of that is because entropy calculation algorithm view data on byte-level.
+On the other hand, the data encrypted by 2 or 4-byte XOR pattern will result another entropy.</p>
 
 _HL2(`More about entropy of executable code.')
 
@@ -321,7 +321,5 @@ One example is UPX: _HTML_LINK_AS_IS(`http://sourceforge.net/p/upx/code/ci/defau
 <hr>
 
 <p>Update: some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=9545276')</p>
-
-<p>Interesting in articles like this? Subscribe to my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').</p>
 
 _BLOG_FOOTER()
