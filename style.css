@@ -14,6 +14,7 @@ A:active, A:hover
 }
 pre
 {
+    font-family: monospace, sans-serif;
     border: 1px dashed #2f6fab;
     color: black;
     background-color: #f9f9f9;

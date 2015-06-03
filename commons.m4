@@ -36,7 +36,7 @@ m4_define(`_BLOG_FOOTER',`<hr>
 <span class="st_twitter" displayText="Tweet"></span>
 <span class="st_facebook" displayText="Facebook"></span>
 
-m4_include(`disqus.html')
+m4_include(`disqus.inc')
 
 </body>
 </html>')
@@ -48,3 +48,7 @@ m4_define(`_HL4', `<h5>$1</h5>')
 m4_define(`_GREY', `<font color="#808080">$1</font>')
 m4_define(`_BOOK_NOT_FINISHED', `$1')
 m4_define(`_HEADER_HL1', `_HEADER(`$1')_HL1(`$1')')
+
+m4_define(`_PRE_BEGIN',`<pre><span class="inner-pre" style="font-size: 13px">')
+m4_define(`_PRE_END',`</pre>')
+

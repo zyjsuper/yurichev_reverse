@@ -18,13 +18,13 @@ but they are not related to me in any way (neither me to them).</p>
 
 _HL3(`Snail mail')
 
-<pre>
+_PRE_BEGIN
  Dennis Yurichev
  P.O. box 10
  Kyiv
  04071
  Ukraine
-</pre>
+_PRE_END
 
 _FOOTER()
 

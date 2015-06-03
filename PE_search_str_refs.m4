@@ -8,23 +8,23 @@ PE executables which use some text string</p>
 
 <p>Usage:</p>
 
-<pre>
+_PRE_BEGIN
 PE_search_str_refs.exe [--unicode] [--verbose] filename.exe text_string
-</pre>
+_PRE_END
 
 <p>For example:</p>
 
-<pre>
+_PRE_BEGIN
 PE_search_str_refs.exe filename.exe hello
-</pre>
+_PRE_END
 
 <p>Resulting address will (hopefully) be an address of function which use this text string.</p>
 
 <p>It may produce a lot of disassembling errors to stderr, so it can be redirected to NUL:</p>
 
-<pre>
+_PRE_BEGIN
 PE_search_str_refs.exe filename.exe hello 2> nul
-</pre>
+_PRE_END
 
 <p>It can also be used in pair with my other utility: 
 _HTML_LINK(`PE_patcher.html',`PE_patcher').</p>

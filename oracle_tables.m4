@@ -6,7 +6,7 @@ _HL1(`Oracle tables:')
 
 <p>This utility intended to dump some Oracle RDBMS 11.2 tables.</p>
 
-<pre>
+_PRE_BEGIN
 Usage:
 
 To dump kqftab, kqftap, kqfvip, kqfviw:
@@ -18,7 +18,7 @@ ora_tables.exe kqfd.o
 These .o files can be extracted from libserver11.a:
 
 ar -x libserver11.a
-</pre>
+_PRE_END
 
 <p>_HTML_LINK(`https://github.com/dennis714/oracle-tables', `source code')</p>
 

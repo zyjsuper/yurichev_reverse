@@ -9,9 +9,9 @@ _HL1(`PE_add_imports')
 
 <p>This utility adds yourdll.dll!function import into PE image and writes the following code at the specified point:</p>
 
-<pre>
+_PRE_BEGIN
 JMP [yourdll.dll!function]
-</pre>
+_PRE_END
 
 A FIXUP is also added at the relevant place of JMP instruction.
 
@@ -19,23 +19,25 @@ A FIXUP is also added at the relevant place of JMP instruction.
 
 First, prepare a file with imports, in the following format:
 
-<pre>address1 yourdll.dll!symbol1
+_PRE_BEGIN
+address1 yourdll.dll!symbol1
 address2 yourdll.dll!symbol2
-..etc..</pre>
+..etc.._PRE_END
 
 For example:
 
-<pre>0x11223344 yourdll.dll!symbol1
+_PRE_BEGIN
+0x11223344 yourdll.dll!symbol1
 0x10203040 yourdll.dll!symbol2
-..etc..</pre>
+..etc.._PRE_END
 
 Let it be in imports_table.txt file.
 
 Then run:
 
-<pre>
+_PRE_BEGIN
 PE_add_imports.exe fname.exe imports_table.txt
-</pre>
+_PRE_END
 
 <p>Download: _HTML_LINK(`utils/PE_add_imports.exe',`win32 executable'), 
 _HTML_LINK(`utils/PE_add_imports64.exe',`win64 executable')</p>

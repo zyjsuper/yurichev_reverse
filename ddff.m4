@@ -4,7 +4,7 @@ _HEADER(`Duplicate Directories and Files Finder')
 
 _HL1(`Duplicate Directories and Files Finder:')
 
-<pre>
+_PRE_BEGIN
 * How to run it:
 
 Usage: ddff.exe <directory1> <directory2> ...
@@ -24,7 +24,7 @@ scanning will be much faster.
 
 - Win32 only
 - Command-line only
-</pre>
+_PRE_END
 
 <p>_HTML_LINK(`http://conus.info/utils/ddff.exe', `Download for win32').</p>
 <p>_HTML_LINK(`https://github.com/dennis714/DDFF', `source code').</p>

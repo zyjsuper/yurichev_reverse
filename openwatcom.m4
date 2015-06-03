@@ -4,7 +4,7 @@ _HEADER(`OpenWatcom patches')
 
 <p>Patching OpenWatcom 1.9 for __RAND__ macro support.</p>
 
-<pre>
+_PRE_BEGIN
 --- macro.h~	2010-03-08 14:41:04.000000000 +0200
 +++ macro.h	2011-09-30 03:25:45.371384000 +0300
 @@ -34,6 +34,7 @@ enum    special_macros {
@@ -15,9 +15,9 @@ _HEADER(`OpenWatcom patches')
      MACRO_STDC,
      MACRO_STDC_HOSTED,
      MACRO_STDC_LIB_EXT1,
-</pre>
+_PRE_END
 
-<pre>
+_PRE_BEGIN
 --- cmac1.c~	2010-03-08 14:46:18.000000000 +0200
 +++ cmac1.c	2011-09-30 03:18:25.859962200 +0300
 @@ -32,6 +32,9 @@
@@ -67,7 +67,7 @@ _HEADER(`OpenWatcom patches')
      case MACRO_FILE:
          p = FileIndexToFName( TokenLoc.fno )->name;
          bufp = Buffer;
-</pre>
+_PRE_END
 
 _FOOTER()
 

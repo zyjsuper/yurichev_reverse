@@ -7,7 +7,7 @@ Some geeks are often set up their system in such way, so <i>fortune</i> can be c
 <i>fortune</i> takes phrases from the text files laying in <i>/usr/share/games/fortunes</i> (as of Ubuntu Linux).
 Here is example ('fortunes' text file):</p>
 
-<pre>
+_PRE_BEGIN
 A day for firm decisions!!!!!  Or is it?
 %
 A few hours grace before the madness begins again.
@@ -21,7 +21,7 @@ Buy the negatives at any price.
 A tall, dark stranger will have more fun than you.
 %
 ...
-</pre>
+_PRE_END
 
 <p>So it is just phrases, sometimes multiline ones, divided by percent sign.
 The task of <i>fortune</i> program is to find random phrase and to print it.
@@ -33,7 +33,7 @@ This is actually done in <i>fortune</i> file.
 Let's inspect what is in its index file inside (these are .dat files in the same directory) in hexdecimal editor.
 This program is open-source of course, but intentionally, I will not peek into its source code.</p>
 
-<pre>
+_PRE_BEGIN
 $ od -t x1 --address-radix=x fortunes.dat
 000000 00 00 00 02 00 00 01 af 00 00 00 bb 00 00 00 0f
 000010 00 00 00 00 25 00 00 00 00 00 00 00 00 00 00 2b
@@ -65,13 +65,13 @@ $ od -t x1 --address-radix=x fortunes.dat
 0001b0 00 00 14 ae 00 00 14 de 00 00 15 1b 00 00 15 55
 0001c0 00 00 15 a6 00 00 15 d8 00 00 16 0f 00 00 16 4e
 ...
-</pre>
+_PRE_END
 
 <p>Without any special aid we could see that there are four 4-byte elements on each 16-byte line.
 It's probably our index array.
 I'm trying to load the whole file in Wolfram Mathematica as 32-bit integer array:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= BinaryReadList["c:/tmp1/fortunes.dat", "UnsignedInteger32"]
 
 Out[]= {33554432, 2936078336, 3137339392, 251658240, 0, 37, 0, \
@@ -84,7 +84,7 @@ Out[]= {33554432, 2936078336, 3137339392, 251658240, 0, 37, 0, \
 1392967680, 2584150016, 4161208320, 654835712, 1493696512, \
 2332557312, 2684878848, 3288858624, 3775397888, 4178051072, \
 ...
-</pre>
+_PRE_END
 
 <p>Nope, something wrong. Numbers are suspiciously big.
 But let's back to <i>od</i> output: each common 4-byte element has two zero bytes and two non-zero bytes, so the offsets (at least at the beginning of the file) are 16-bit at maximum.
@@ -92,7 +92,7 @@ Probably different endiannes is used in file?
 Default endiannes in Mathematica is little-endian, as used in Intel CPUs.
 Now I'm changing it to big-endian:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= BinaryReadList["c:/tmp1/fortunes.dat", "UnsignedInteger32", 
  ByteOrdering -> 1]
 
@@ -104,13 +104,13 @@ Out[]= {2, 431, 187, 15, 0, 620756992, 0, 43, 96, 143, 223, 276, \
 2637, 2654, 2698, 2726, 2751, 2799, 2840, 2883, 2913, 2958, 3023, \
 3066, 3131, 3174, 3205, 3257, 3282, 3330, 3387, 3431, 3500, 3552, \
 ...
-</pre>
+_PRE_END
 
 <p>Yes, this is something readable.
 I choose random element (3066) which is 0xBFA in hexadecimal form.
 I'm opening 'fortunes' text file in hex editor, I'm setting 0xBFA as offset and I see this phrase:</p>
 
-<pre>
+_PRE_BEGIN
 $ od -t x1 -c --skip-bytes=0xbfa --address-radix=x fortunes
 000bfa  44  6f  20  77  68  61  74  20  63  6f  6d  65  73  20  6e  61
          D   o       w   h   a   t       c   o   m   e   s       n   a
@@ -119,14 +119,14 @@ $ od -t x1 -c --skip-bytes=0xbfa --address-radix=x fortunes
 000c1a  20  61  6e  64  20  66  75  6d  65  20  61  6e  64  20  74  68
              a   n   d       f   u   m   e       a   n   d       t   h
 ....
-</pre>
+_PRE_END
 
 Or:
 
-<pre>
+_PRE_BEGIN
 Do what comes naturally.  Seethe and fume and throw a tantrum.
 %
-</pre>
+_PRE_END
 
 <p>Other offset are also can be checked, yes, they are valid offsets.</p>
 
@@ -134,7 +134,7 @@ Do what comes naturally.  Seethe and fume and throw a tantrum.
 I.e., the array is ascending.
 In mathematics lingo, this is called <i>strictly increasing monotonic function</i>.</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Differences[input]
 
 Out[]= {429, -244, -172, -15, 620756992, -620756992, 43, 53, 47, \
@@ -164,7 +164,7 @@ Out[]= {429, -244, -172, -15, 620756992, -620756992, 43, 53, 47, \
 51, 91, 99, 58, 51, 49, 46, 68, 72, 40, 56, 63, 65, 41, 62, 47, 41, \
 43, 30, 43, 67, 78, 80, 101, 61, 73, 70, 41, 82, 69, 45, 65, 38, 41, \
 57, 82, 66}
-</pre>
+_PRE_END
 
 <p>As we can see, except of the very first 6 values (which is probably belongs to index file header), all numbers are in fact length of all text phrases (offset of the next phrase minus offset of the current phrase is in fact length of the current phrase).</p>
 
@@ -172,7 +172,7 @@ Out[]= {429, -244, -172, -15, 620756992, -620756992, 43, 53, 47, \
 Indeed, from <i>od</i> output we see that each element started with two zeroes.
 But when shifted by two bytes in either side, we can interpret this array as little-endian:</p>
 
-<pre>
+_PRE_BEGIN
 $ od -t x1 --address-radix=x --skip-bytes=0x32 fortunes.dat
 000032 01 48 00 00 01 7c 00 00 01 ab 00 00 01 e6 00 00
 000042 02 20 00 00 02 3b 00 00 02 7a 00 00 02 c5 00 00
@@ -187,7 +187,7 @@ $ od -t x1 --address-radix=x --skip-bytes=0x32 fortunes.dat
 0000d2 09 27 00 00 09 43 00 00 09 79 00 00 09 a3 00 00
 0000e2 09 e3 00 00 0a 15 00 00 0a 4d 00 00 0a 5e 00 00
 ...
-</pre>
+_PRE_END
 
 <p>If we would interpret this array as little-endian, the first element is 0x4801, second is 0x7C01, etc.
 High 8-bit part of each of these 16-bit values are seems random to us, and the lowest 8-bit part is seems ascending.</p>
@@ -195,7 +195,7 @@ High 8-bit part of each of these 16-bit values are seems random to us, and the l
 <p>But I'm sure that this is big-endian array, because the very last 32-bit element of the file is big-endian 
 (00 00 5f c4 here):</p>
 
-<pre>
+_PRE_BEGIN
 $ od -t x1 --address-radix=x fortunes.dat
 ...
 000660 00 00 59 0d 00 00 59 55 00 00 59 7d 00 00 59 b5
@@ -207,7 +207,7 @@ $ od -t x1 --address-radix=x fortunes.dat
 0006c0 00 00 5e a8 00 00 5e ce 00 00 5e f7 00 00 5f 30
 0006d0 00 00 5f 82 00 00 5f c4
 0006d8
-</pre>
+_PRE_END
 
 <p>Perhaps, <i>fortune</i> program developer had big-endian computer or maybe it was ported from something like it.</p>
 
@@ -226,10 +226,10 @@ So the <i>dummy</i> element is also added at the end of array.</p>
 
 <p>Oh, I forgot to count phrases in text file:</p>
 
-<pre>
+_PRE_BEGIN
 $ cat fortunes | grep % | wc -l
 432
-</pre>
+_PRE_END
 
 <p>The number of phrases can be present in index, but may be not.
 In case of very simple index files, number of elements can be easily deduced from index file size.
@@ -277,52 +277,52 @@ _HL2(`Hacking!')
 <p>Let's try to check some of our assumtpions.
 I will create this text file under the path and name <i>/usr/share/games/fortunes/fortunes</i>:</p>
 
-<pre>
+_PRE_BEGIN
 Phrase one.
 %
 Phrase two.
 %
-</pre>
+_PRE_END
 
 <p>Then this forunes.dat file. I take header from the original fortunes.dat, I changed second field (count of all phrases) to zero and I left two
 elements in the array: 0 and 0x1c, because the whole length of the text <i>fortunes</i> file is 28 (0x1c) bytes:</p>
 
-<pre>
+_PRE_BEGIN
 $ od -t x1 --address-radix=x fortunes.dat
 000000 00 00 00 02 00 00 00 00 00 00 00 bb 00 00 00 0f
 000010 00 00 00 00 25 00 00 00 00 00 00 00 00 00 00 1c
-</pre>
+_PRE_END
 
 <p>Now I run it:</p>
 
-<pre>
+_PRE_BEGIN
 $ /usr/games/fortune 
 fortune: no fortune found
-</pre>
+_PRE_END
 
 <p>Something wrong. Let's change the second field to 1:</p>
 
-<pre>
+_PRE_BEGIN
 $ od -t x1 --address-radix=x fortunes.dat
 000000 00 00 00 02 00 00 00 01 00 00 00 bb 00 00 00 0f
 000010 00 00 00 00 25 00 00 00 00 00 00 00 00 00 00 1c
-</pre>
+_PRE_END
 
 <p>Now it works. It's always shows only the first phrase:</p>
 
-<pre>
+_PRE_BEGIN
 $ /usr/games/fortune 
 Phrase one.
-</pre>
+_PRE_END
 
 <p>Hmmm. Let's leave only one element in array (0) without terminating one:</p>
 
-<pre>
+_PRE_BEGIN
 $ od -t x1 --address-radix=x fortunes.dat
 000000 00 00 00 02 00 00 00 01 00 00 00 bb 00 00 00 0f
 000010 00 00 00 00 25 00 00 00 00 00 00 00
 00001c
-</pre>
+_PRE_END
 
 <p>Fortune program always shows only first phrase.</p>
 

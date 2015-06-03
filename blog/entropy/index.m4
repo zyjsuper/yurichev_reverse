@@ -27,7 +27,7 @@ Good perudorandom number generators also produce data which cannot be compressed
 Even more than that, it is possible to slice some file by blocks, probe each and draw a graph.
 I did this in Wolfram Mathematica for demonstration and here is a source code (Mathematica 10):</p>
 
-<pre>
+_PRE_BEGIN
 (* loading the file *)
 input=BinaryReadList["file.bin"];
 
@@ -59,7 +59,7 @@ Dynamic[{ListLinePlot[entropies,GridLines->{{-1,offset/BlockSize,1}},Filling->Ax
 CurrentBlock=fBlockToShow[input,offset];
 fPutHexWindow[CurrentBlock],
 fPutASCIIWindow[CurrentBlock]}]
-</pre>
+_PRE_END
 
 _HL2(`GeoIP ISP database:')
 
@@ -87,10 +87,10 @@ Now I put slider in the middle of the second block and I see English text:</p>
 So, entropy of English text is 4.5-5.5 bits per byte? Yes, something like this.
 Wolfram Mathematica has some well-known English literature corpus embedded, and we can see entropy of Shakespeare's sonnets:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Entropy[2,ExampleData[{"Text","ShakespearesSonnets"}]]//N
 Out[]= 4.42366
-</pre>
+_PRE_END
 
 <p>4.4 is close to what we've got (4.7-5.3). 
 Of course, classic English literature texts are somewhat different from ISP names and other English texts we can find in binary files 
@@ -109,7 +109,7 @@ compressed and/or encrypted.<p>
 
 <p>I tried <a href="http://binwalk.org/">binwalk</a> for this firmware file:</p>
 
-<pre>
+_PRE_BEGIN
 DECIMAL       HEXADECIMAL     DESCRIPTION
 --------------------------------------------------------------------------------
 0             0x0             TP-Link firmware header, firmware version: 0.-15221.3, image version: "", product ID: 0x0, product version: 155254789, kernel load address: 0x0, kernel entry point: 0x-7FFFE000, kernel offset: 4063744, kernel length: 512, rootfs offset: 837431, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
@@ -120,13 +120,13 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 131584        0x20200         TP-Link firmware header, firmware version: 0.0.3, image version: "", product ID: 0x0, product version: 155254789, kernel load address: 0x0, kernel entry point: 0x-7FFFE000, kernel offset: 3932160, kernel length: 512, rootfs offset: 837431, rootfs length: 1048576, bootloader offset: 2883584, bootloader length: 0
 132096        0x20400         LZMA compressed data, properties: 0x5D, dictionary size: 33554432 bytes, uncompressed size: 2388212 bytes
 1180160       0x120200        Squashfs filesystem, little endian, version 4.0, compression:lzma, size: 2548511 bytes, 536 inodes, blocksize: 131072 bytes, created: 2014-06-27 07:06:52
-</pre>
+_PRE_END
 
 <p>Indeed: there are some stuff at the beginning, but two large LZMA compressed blocks are started at 0x20400 and 0x120200.
 These are roughly addresses we have seen in Mathematica.
 Oh, and by the way, binwalk can show entropy information as well (-E option):</p>
 
-<pre>
+_PRE_BEGIN
 DECIMAL       HEXADECIMAL     ENTROPY
 --------------------------------------------------------------------------------
 0             0x0             Falling entropy edge (0.419187)
@@ -136,7 +136,7 @@ DECIMAL       HEXADECIMAL     ENTROPY
 968704        0xEC800         Falling entropy edge (0.508720)
 1181696       0x120800        Rising entropy edge (0.989615)
 3727360       0x38E000        Falling entropy edge (0.732390)
-</pre>
+_PRE_END
 
 <p>Rising edges are corresponding to rising edges of block on our graph.
 Falling edges are the points where empty lacunas are started.</p>
@@ -177,7 +177,7 @@ the first third of the whole file (with the text segment inside) is in fact MIPS
 
 <p>For instance, this is very distinctive MIPS function epilogue:</p>
 
-<pre>
+_PRE_BEGIN
 ROM:000013B0                 move    $sp, $fp
 ROM:000013B4                 lw      $ra, 0x1C($sp)
 ROM:000013B8                 lw      $fp, 0x18($sp)
@@ -185,7 +185,7 @@ ROM:000013BC                 lw      $s1, 0x14($sp)
 ROM:000013C0                 lw      $s0, 0x10($sp)
 ROM:000013C4                 jr      $ra
 ROM:000013C8                 addiu   $sp, 0x20
-</pre>
+_PRE_END
 
 <p>From our graph we can see that MIPS code has entropy of 5-6 bits per byte.
 Indeed, I once measured various ISAs entropy and I've got these values:</p>
@@ -209,7 +209,7 @@ Maybe some kind of data?</p>
 I also don't know what is at the end.
 Let's try binwalk for this file:</p>
 
-<pre>
+_PRE_BEGIN
 dennis@ubuntu:~/P/entropy$ binwalk FW96650A.bin 
 
 DECIMAL       HEXADECIMAL     DESCRIPTION
@@ -242,7 +242,7 @@ DECIMAL       HEXADECIMAL     ENTROPY
 2670592       0x28C000        Rising entropy edge (0.967883)
 2676736       0x28D800        Rising entropy edge (0.975779)
 2684928       0x28F800        Falling entropy edge (0.744369)
-</pre>
+_PRE_END
 
 <p>Yes, it found JPEG file and even MySQL data!
 But I'm not sure if it's true -- I didn't checked it yet.</p>
@@ -299,7 +299,7 @@ _HL2(`More about entropy of executable code.')
 For example, these two consequent instructions will produce different relative offsets in their opcodes, 
 while they are in fact pointing to the same function:</p>
 
-<pre>
+_PRE_BEGIN
 function proc
 ...
 function endp
@@ -309,7 +309,7 @@ function endp
 CALL function
 ...
 CALL function
-</pre>
+_PRE_END
 
 <p>Ideal executable code compressor would encode information like this:
 "there is a CALL to a "function" at address X and the same CALL at address Y" without need to encode

@@ -27,7 +27,9 @@ _HTML_LINK(`pix/ops_FPGA.jpg', `<img src="pix/ops_FPGA_400px.jpg" alt="Here is h
 
 <p>A following SQL query can be used for passwords hash fetching (login as SYS):</p>
 
-<pre>select name,password from sys.user$;</pre>
+_PRE_BEGIN
+select name,password from sys.user$;
+_PRE_END
 
 <p>After the moment of password solved or not, it will remain in table for 14 days.
 Usernames with only alpha symbols and underscore (_) are allowed (so far).

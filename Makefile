@@ -14,3 +14,8 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 all: default 
 clean: 
 	rm *.html
+	rm blog/*.html
+	rm blog/entropy/*.html
+	rm blog/fortune/*.html
+	rm blog/llvm/*.html
+

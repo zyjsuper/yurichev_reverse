@@ -18,7 +18,7 @@ This is <i>(((x & y) * -2) + (x + y))</i>, which is, hard to believe, behaves ju
 
 <p>So here we go, let's open <i>lib/Transforms/Obfuscation/Substitution.cpp</i> file and add this:</p>
 
-<pre>
+_PRE_BEGIN
 // Implementation of a = (((x & y) * -2) + (x + y))
 void Substitution::xorSubstitutionAha(BinaryOperator *bo) {
   Type *ty = bo->getType();
@@ -47,7 +47,7 @@ void Substitution::xorSubstitutionAha(BinaryOperator *bo) {
 					       "", bo);
   bo->replaceAllUsesWith(op);
 }
-</pre>
+_PRE_END
 
 <p>The function takes expression in form <i>x^y</i> on input and returns its transformed version.</p>
 
@@ -67,7 +67,7 @@ Thus, expression elements can be combined, nested, sliced, etc.</p>
 
 <p><i>op1</i> can be graphically represented in this form:</p>
 
-<pre>
+_PRE_BEGIN
 op1 = +-----+
       | MUL |
       |     | ----> +-----+
@@ -82,11 +82,11 @@ op1 = +-----+
                 +---> +------------------+
                       | (ConstantInt) -2 |
                       +------------------+
-</pre>
+_PRE_END
 
 <p><i>op2</i> is just:</p>
 
-<pre>
+_PRE_BEGIN
 op2 = +-----+                      
       | AND |         +-----------+
       |     | ------> | (Value) x |
@@ -95,11 +95,11 @@ op2 = +-----+
                  |    +-----------+
                  +--> | (Value) y |
                       +-----------+
-</pre>
+_PRE_END
 
 <p><i>op</i> is construction of ADD operation with two pointers to both halves we've just constructed:</p>
 
-<pre>
+_PRE_BEGIN
 op = +-----+
      | ADD |
      |     | ------------------> +-----+                             
@@ -116,7 +116,7 @@ op = +-----+
                            | |                                                                |   |
                            | +----------------------------------------------------------------+   |
                            +----------------------------------------------------------------------+
-</pre>
+_PRE_END
 
 <p>All rectangular blocks has <i>BinaryOperation</i> type, except when it's noted explicitly.
 Arrows shows how objects has pointers to other objects.<p>
@@ -144,7 +144,7 @@ I disabled them temporarily and now I'll try to test what I did.</p>
 
 <p>test.c:</p>
 
-<pre>
+_PRE_BEGIN
 #include <stdio.h>
 
 int test_XOR(int a, int b)
@@ -157,9 +157,9 @@ int main()
 #define C 0xBADF00D
 	printf ("%x\n", test_XOR (test_XOR (0x12345678, C), C));
 };
-</pre>
+_PRE_END
 
-<pre>
+_PRE_BEGIN
 $ bin/clang test.c -c -o test -mllvm -sub
 $ objdump -d test
 
@@ -182,7 +182,7 @@ Disassembly of section .text:
   1c:	01 f0                	add    %esi,%eax
   1e:	5d                   	pop    %rbp
   1f:	c3                   	retq   
-</pre>
+_PRE_END
 
 <p>Yeah, that works.</p>
 
@@ -193,7 +193,7 @@ I had some problems with compiling, and here is _HTML_LINK(`https://github.com/y
 
 <p>Interestingly, o-LLVM under Cygwin generates slightly different code:</p>
 
-<pre>
+_PRE_BEGIN
 sub_1004010E0   proc near
 
 var_8           = dword ptr -8
@@ -215,7 +215,7 @@ var_4           = dword ptr -4
                 pop     rbp
                 retn
 sub_1004010E0   endp
-</pre>
+_PRE_END
 
 <p>There is no <i>imul</i> instruction and there are no -2 constant.
 The resulting expression is reshuffled: <i>y + x - 2 * (x & y)</i>, but it has the very same effect as original one.
@@ -224,7 +224,7 @@ by -2 is slower than single add operation.<p>
 
 <p>OK, so _HTML_LINK(`https://github.com/yurichev/obfuscator/commits/XOR_experiment2',`I enabled two other XOR functions') and now o-LLVM picking XOR functions randomly:</p>
 
-<pre>
+_PRE_BEGIN
 #define NUMBER_XOR_SUBST 3
 
 ...
@@ -238,7 +238,7 @@ by -2 is slower than single add operation.<p>
         case Instruction::Xor:
             (this->*
              funcXor[llvm::cryptoutils->get_range(NUMBER_XOR_SUBST)])(cast<BinaryOperator>(inst));
-</pre>
+_PRE_END
 
 _HL2(`Tests')
 
@@ -253,12 +253,12 @@ _HTML_LINK_AS_IS(`https://github.com/yurichev/openssl/commit/56bdb20af29c5617733
 
 <p>Now I run it. Correct your path to o-LLVM where clang binary is, if you want to run this yourself:</p>
 
-<pre>
+_PRE_BEGIN
 export PATH=$PATH:~/src/llvm-obfuscator/build/bin
 ./Configure linux-x86_64-clang
 make
 make test
-</pre>
+_PRE_END
 
 <p>OpenSSL tests now works much slower. No wonder.
 Now it's a time for a slightly deranged mood: when I enable "sub" o-LLVM pass (<i>Instructions Substitution</i>), 
@@ -298,14 +298,14 @@ Oh, there is even Rope implementation in C++ STL from SGI: _HTML_LINK_AS_IS(`htt
 
 <p>Now example from LLVM:</p>
 
-<pre>
+_PRE_BEGIN
   // Emit the code (index) for the abbreviation.
   if (isVerbose())
     OutStreamer->AddComment("Abbrev [" + Twine(Abbrev.getNumber()) +
                             "] 0x" + Twine::utohexstr(Die.getOffset()) +
                             ":0x" + Twine::utohexstr(Die.getSize()) + " " +
                             dwarf::TagString(Abbrev.getTag()));
-</pre>
+_PRE_END
 ( _HTML_LINK(`https://github.com/llvm-mirror/llvm/blob/579cebfb15c5f80cc8bbc7d51da9f7827424125a/lib/CodeGen/AsmPrinter/AsmPrinterDwarf.cpp#L250',`lib/CodeGen/AsmPrinter/AsmPrinterDwarf.cpp') )
 
 <p>This piece of code is probably provides some debugging output. When writing such code in C++ using <i>std::string</i>, numbers are converted into
@@ -341,19 +341,19 @@ They are used in LLVM extensively to simplify expressions.</p>
 
 <p>For example:</p>
 
-<pre>
+_PRE_BEGIN
   // (X >> A) << A -> X
   Value *X;
   if (match(Op0, m_Exact(m_Shr(m_Value(X), m_Specific(Op1)))))
     return X;
-</pre>
+_PRE_END
 ( _HTML_LINK(`https://github.com/llvm-mirror/llvm/blob/f23c6af13d9c4a4920a935de303140cc83b2bbaa/lib/Analysis/InstructionSimplify.cpp#L1397',`lib/Analysis/InstructionSimplify.cpp') )
 
 <p>In this example, <i>match()</i> sets <i>X</i> so it will point to the sub-expression and it will be returned as simplified expression.</p>
 
 <p>Another cool example is detecting and replacing the whole expression into BSWAP instruction:</p>
 
-<pre>
+_PRE_BEGIN
   // (A | B) | C  and  A | (B | C)                  -> bswap if possible.
   // (A >> B) | (C << D)  and  (A << B) | (B >> C)  -> bswap if possible.
   if (match(Op0, m_Or(m_Value(), m_Value())) ||
@@ -362,7 +362,7 @@ They are used in LLVM extensively to simplify expressions.</p>
        match(Op1, m_LogicalShift(m_Value(), m_Value())))) {
     if (Instruction *BSwap = MatchBSwap(I))
       return BSwap;
-</pre>
+_PRE_END
 ( _HTML_LINK(`https://github.com/llvm-mirror/llvm/blob/e027d74733de7dc086c9d2190d14884e9240ce89/lib/Transforms/InstCombine/InstCombineAndOrXor.cpp#L2200',`lib/Transforms/InstCombine/InstCombineAndOrXor.cpp') )
 
 <p><i>match()</i> function internals is surprisingly simple.</p>

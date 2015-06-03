@@ -71,13 +71,13 @@ _HL3(`CVE-2012-1745, CVE-2012-1746 and CVE-2012-1747 in CPUjul2012:')
 
 _HL2(`DoS vulnerability in binkd FidoNet mailer:')
 
-<pre>
+_PRE_BEGIN
 2009/02/14 15:14:46 1.0a-525 gul
 protocol.c,2.193,2.194
 Bugfix: segfault on crafted input sequences,
 possible remote DoS for multithread versions (win32 and OS/2).
 Thanks to Dennis Yurichev.
-</pre>
+_PRE_END
 
 <p>_HTML_LINK(`http://binkd2.grumbler.org/viewcvs/HISTORY?root=binkd&view=co', `CVS binkd history')</p>
 

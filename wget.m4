@@ -20,7 +20,7 @@ _HL1(`My Wget patches:')
 
 <p>Make it exit on specific HTTP error (patch for 1.12):</p>
 
-<pre>
+_PRE_BEGIN
 --- http.c~	2009-09-22 06:02:18.000000000 +0300
 +++ http.c	2011-08-03 14:43:00.000000000 +0300
 @@ -2673,6 +2673,8 @@
@@ -32,7 +32,7 @@ _HL1(`My Wget patches:')
              }
            logputs (LOG_VERBOSE, "\n");
            ret = WRONGCODE;
-</pre>
+_PRE_END
 
 _FOOTER()
 

@@ -7,15 +7,15 @@ _HL1(`PE_patcher')
 
 <p>Usage:</p>
 
-<pre>
+_PRE_BEGIN
 PE_patcher.exe filename.exe address bytes
-</pre>
+_PRE_END
 
 <p>For example:</p>
 
-<pre>
+_PRE_BEGIN
 PE_patcher.exe filename.exe 0x401000 33C0C3
-</pre>
+_PRE_END
 
 <p>It can also be used in pair with my other utility: 
 _HTML_LINK(`PE_search_str_refs.html',`PE_search_str_refs').</p>

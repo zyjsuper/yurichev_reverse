@@ -4,7 +4,7 @@ _HEADER(`PGP public keys')
 
 _HL1(`My new PGP public key generated in June-2014, expired in June-2015 (0x431A2D1C):')
 
-<pre>
+_PRE_BEGIN
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2.0.22 (MingW32)
 
@@ -57,11 +57,11 @@ edVJOwpawqK7lRCT89t2qkeFWC9zyIrl4Bhf0EueTdBa2oaNnqWkQzCkWhd8xgu0
 XcNoYMYFxBcWuCDVASGy9g==
 =DQt6
 -----END PGP PUBLIC KEY BLOCK-----
-</pre>
+_PRE_END
 
 _HL1(`My old PGP public key generated in March-2007 (0x6246FBE3):')
 
-<pre>
+_PRE_BEGIN
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 Version: GnuPG v2.0.17 (MingW32)
 
@@ -108,7 +108,7 @@ TUpG9PaRmN+iEwdooUFAA5tKpgRKkjUcHmPL1WRXa2Q3JijNGs+eCD/8EHUtoCdo
 l6XjYcE4FmmYeIgi7gCfcCs9zhrSrviZ8SVobsOrjrwQA9Q=
 =tbA2
 -----END PGP PUBLIC KEY BLOCK-----
-</pre>
+_PRE_END
 
 _FOOTER()
 
