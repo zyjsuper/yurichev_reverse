@@ -380,4 +380,14 @@ Compiler doesn't compile (linker does), it rather translates from one language t
 
 <p>Oh, and by the way, decompiler can also be viewed as TRS.</p>
 
+_HL2(`Another known LLVM obfuscator: Kryptonite')
+
+<p>Here is another well-known LLVM obfuscator, Kryptonite.</p>
+
+<p>_HTML_LINK(`https://github.com/0vercl0k/stuffz/blob/master/llvm-funz/kryptonite/llvm-functionpass-kryptonite-obfuscater.cpp',`Source code').</p>
+
+<p>_HTML_LINK(`https://github.com/0vercl0k/articles/blob/master/Obfuscation%20of%20steel%20meet%20Kryptonite.pdf',`Article about it')</p>
+
+<p>_HTML_LINK(`http://doar-e.github.io/blog/2013/09/16/breaking-kryptonites-obfuscation-with-symbolic-execution/',`Article about breaking it')</p>
+
 _BLOG_FOOTER()
