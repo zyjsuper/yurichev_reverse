@@ -17,10 +17,10 @@ _HL2(`Some of my writings:')
 <li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 </ul>
 
-<!-- _HL2(`Vulnerabilities I found:')
+_HL2(`Vulnerabilities I found:')
 <ul>
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
-</ul> -->
+</ul>
 
 _HL2(`Blogs, etc')
 
