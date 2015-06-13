@@ -275,7 +275,7 @@ ret
 <p>The reason it works is because division by 5 is actually happens here (and 5 is coprime to 2^32), and then the final result is divided by 2
 (so there is 3 instead of 2 in the SHR instruction).</p>
 
-_HL2(`Reversible LCG')
+_HL2(`Reversible linear congruential generator')
 
 <p><acronym title="Linear congruential generator">LCG</acronym> is very simple: just multiply seed by some value, add another one and here is a new random number.
 Here is how it is implemented in MSVC (the source code is not original one and is reconstructed by me):</p>
