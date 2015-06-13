@@ -4,6 +4,12 @@
     <link>http://yurichev.com/blog/</link> 
     <description>by Dennis Yurichev</description>
     <item> 
+      <title>Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3.</title> 
+      <link>http://yurichev.com/blog/modulo/</link> 
+      <description>Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3.</description> 
+      <pubDate>Sat, 13 Jun 2015 00:00:00 GMT</pubDate> 
+    </item>
+    <item> 
       <title>Tweaking LLVM Obfuscator + quick look into some of LLVM internals.</title> 
       <link>http://yurichev.com/blog/llvm/</link> 
       <description>Tweaking LLVM Obfuscator + quick look into some of LLVM internals.</description> 
