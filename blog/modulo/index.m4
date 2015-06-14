@@ -183,7 +183,7 @@ Out[]//BaseForm= 140000000a
 
 <p>(BaseForm is the instruction to print result in hexadecimal form).</p>
 
-<p>There was multiplication, but division by 2^32 or 2^n is not happened yet.
+<p>It has been multiplication, but division by 2^32 or 2^n is not happened yet.
 So after division by 2^32, 0x14 will be a result and 0xA is remainder.
 0x14 is 20, which twice as large as the result we expect (90/9=10).
 It's because k=2, so final result should also be divided by 2.</p>
@@ -294,7 +294,7 @@ uint32_t rand()
 Will it be possible to make an inverse function to rand(), which can reverse state back?
 First, let's try to think, what would make this possible? Well, if state internal variable would be some kind of BigInt or BigNum container which can
 store infinitely big numbers, then, although state is increasing rapidly, it would be possible to reverse the process.
-<i>state</i> isn't BigInt/BigNum, it's 32-bit variable, and summing operation is easily reversible on it (just subtract 2531011 at each step).
+But <i>state</i> isn't BigInt/BigNum, it's 32-bit variable, and summing operation is easily reversible on it (just subtract 2531011 at each step).
 As we may know now, multiplication is also reversible: just multiply the state by modular multiplicative inverse of 214013!</p>
 
 <pre>
