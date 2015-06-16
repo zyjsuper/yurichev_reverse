@@ -101,6 +101,68 @@ C/C++ has percent sign (%) for this operation, but some other PLs like Pascal an
 are defined preliminarily.
 However, this implicit division operation or "wrapping around" can be exploited usefully.</p>
 
+_HL2(`Remainder of division by modulo 2^n')
+
+<p>... can be easily computed with AND operation.
+If you need a random number in range of 0..16, here you go: rand()&0xF.
+That helps sometimes.</p>
+
+<p>For example, you need a some kind of wrapping counter variable which always should be in 0..16 range. What you do?
+Programmers often write this:</p>
+
+<pre>
+int counter=0;
+...
+counter++;
+if (counter==16)
+    counter=0;
+</pre>
+
+<p>But here is a version without conditional branching:</p>
+
+<pre>
+int counter=0;
+...
+counter++;
+counter=counter&0xF;
+</pre>
+
+<p>As an example, this I found in the git source code:</p>
+
+<pre>
+char *sha1_to_hex(const unsigned char *sha1)
+{
+	static int bufno;
+	static char hexbuffer[4][GIT_SHA1_HEXSZ + 1];
+	static const char hex[] = "0123456789abcdef";
+	char *buffer = hexbuffer[3 & ++bufno], *buf = buffer;
+	int i;
+
+	for (i = 0; i < GIT_SHA1_RAWSZ; i++) {
+		unsigned int val = *sha1++;
+		*buf++ = hex[val >> 4];
+		*buf++ = hex[val & 0xf];
+	}
+	*buf = '\0';
+
+	return buffer;
+}
+</pre>
+
+( _HTML_LINK_AS_IS(`https://github.com/git/git/blob/aa1c6fdf478c023180e5ca5f1658b00a72592dc6/hex.c') )
+
+<p>This function returns a pointer to the string containing hexadecimal representation of SHA1 digest.
+But this is plain C and you can calculate SHA1 for some block, get pointer to the string, then calculate SHA1 for another block, get pointer to the string,
+and both pointers are still points to the same string buffer containing the result of the second calculation.
+As a solution, it's possible to allocate/deallocate string buffer each time, but more hackish way is to have several buffers (4 are here) and fill the next each time.
+The <i>bufno</i> variable here is a buffer counter in 0..3 range. Its value increments each time, and its value is also always kept in limits
+by AND operation (<i>3 & ++bufno</i>).</p>
+
+<p>The author of this piece of code (seems to be Linus Torvalds himself) went even further and forgot (?) to initialize <i>bufno</i> counter variable, which will
+have random garbage at the function start.
+Indeed: no matter, which buffer we are starting each time!
+This can be mistake which isn't affect correctness of the code, or maybe this is left so intentionally -- I don't know.</p>
+
 _HL2(`Getting random numbers')
 
 <p>When you write some kind of videogame, you need random numbers, and the standard C/C++ rand() function gives you them in 0..0x7FFF range (MSVC)
@@ -116,6 +178,54 @@ Y_coord_of_something_spawned_somewhere=rand() % 10;
 Hence, result is remainder of division of rand() result by 10.</p>
 
 <p>One nasty consequence is that neither 0x8000 nor 0x80000000 cannot be divided by 10 evenly, so you'll get some numbers slightly more often than others.</p>
+
+<p>I tried to calculate in Mathematica. Here is what you get if you write <i>rand() % 3</i> and rand() produce numbers in range of 0..0x7FFF (like MSVC):</p>
+
+<pre>
+In[]:= Counts[Map[Mod[#, 3] &, Range[0, 16^^8000 - 1]]]
+Out[]= <|0 -> 10923, 1 -> 10923, 2 -> 10922|>
+</pre>
+
+<p>So number 2 happens slightly seldom than others.</p>
+
+<p>Here is a result for <i>rand() % 10</i>:</p>
+
+<pre>
+In[]:= Counts[Map[Mod[#, 10] &, Range[0, 16^^8000 - 1]]]
+Out[]= <|0 -> 3277, 1 -> 3277, 2 -> 3277, 3 -> 3277, 4 -> 3277, 
+ 5 -> 3277, 6 -> 3277, 7 -> 3277, 8 -> 3276, 9 -> 3276|>
+</pre>
+
+<p>Numbers 8 and 9 happens slightly seldom.</p>
+
+<p>Here is a result for <i>rand() % 100</i>:</p>
+
+<pre>
+In[]:= Counts[Map[Mod[#, 100] &, Range[0, 16^^8000 - 1]]]
+Out[]= <|0 -> 328, 1 -> 328, 2 -> 328, 3 -> 328, 4 -> 328, 5 -> 328,
+  6 -> 328, 7 -> 328, 8 -> 328, 9 -> 328, 10 -> 328, 11 -> 328, 
+ 12 -> 328, 13 -> 328, 14 -> 328, 15 -> 328, 16 -> 328, 17 -> 328, 
+ 18 -> 328, 19 -> 328, 20 -> 328, 21 -> 328, 22 -> 328, 23 -> 328, 
+ 24 -> 328, 25 -> 328, 26 -> 328, 27 -> 328, 28 -> 328, 29 -> 328, 
+ 30 -> 328, 31 -> 328, 32 -> 328, 33 -> 328, 34 -> 328, 35 -> 328, 
+ 36 -> 328, 37 -> 328, 38 -> 328, 39 -> 328, 40 -> 328, 41 -> 328, 
+ 42 -> 328, 43 -> 328, 44 -> 328, 45 -> 328, 46 -> 328, 47 -> 328, 
+ 48 -> 328, 49 -> 328, 50 -> 328, 51 -> 328, 52 -> 328, 53 -> 328, 
+ 54 -> 328, 55 -> 328, 56 -> 328, 57 -> 328, 58 -> 328, 59 -> 328, 
+ 60 -> 328, 61 -> 328, 62 -> 328, 63 -> 328, 64 -> 328, 65 -> 328, 
+ 66 -> 328, 67 -> 328, 68 -> 327, 69 -> 327, 70 -> 327, 71 -> 327, 
+ 72 -> 327, 73 -> 327, 74 -> 327, 75 -> 327, 76 -> 327, 77 -> 327, 
+ 78 -> 327, 79 -> 327, 80 -> 327, 81 -> 327, 82 -> 327, 83 -> 327, 
+ 84 -> 327, 85 -> 327, 86 -> 327, 87 -> 327, 88 -> 327, 89 -> 327, 
+ 90 -> 327, 91 -> 327, 92 -> 327, 93 -> 327, 94 -> 327, 95 -> 327, 
+ 96 -> 327, 97 -> 327, 98 -> 327, 99 -> 327|>
+</pre>
+
+<p>... now larger part of numbers happens slightly seldom, these are 68...99.</p>
+
+<p>Constructing a PRNG with uniform distribution may be tricky, there are couple of methods: 
+_HTML_LINK(`http://www.reddit.com/r/algorithms/comments/39tire/using_a_01_generator_generate_a_random_number/',`1'),
+_HTML_LINK(`http://www.prismmodelchecker.org/casestudies/dice.php',`2').</p>
 
 _HL2(`Multiplicative inverse')
 
