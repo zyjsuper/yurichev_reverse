@@ -223,6 +223,8 @@ Out[]= <|0 -> 328, 1 -> 328, 2 -> 328, 3 -> 328, 4 -> 328, 5 -> 328,
 
 <p>... now larger part of numbers happens slightly seldom, these are 68...99.</p>
 
+<p>It's perhaps not critical for videogames, but may be critical for scientific simulations, including Monte Carlo method.</p>
+
 <p>Constructing a PRNG with uniform distribution may be tricky, there are couple of methods: 
 _HTML_LINK(`http://www.reddit.com/r/algorithms/comments/39tire/using_a_01_generator_generate_a_random_number/',`1'),
 _HTML_LINK(`http://www.prismmodelchecker.org/casestudies/dice.php',`2').</p>
