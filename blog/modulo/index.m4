@@ -151,14 +151,14 @@ char *sha1_to_hex(const unsigned char *sha1)
 
 ( _HTML_LINK_AS_IS(`https://github.com/git/git/blob/aa1c6fdf478c023180e5ca5f1658b00a72592dc6/hex.c') )
 
-<p>This function returns a pointer to the string containing hexadecimal representation of SHA1 digest.
+<p>This function returns a pointer to the string containing hexadecimal representation of SHA1 digest (like "4e1243bd22c66e76c2ba9eddc1f91394e57f9f83").
 But this is plain C and you can calculate SHA1 for some block, get pointer to the string, then calculate SHA1 for another block, get pointer to the string,
 and both pointers are still points to the same string buffer containing the result of the second calculation.
 As a solution, it's possible to allocate/deallocate string buffer each time, but more hackish way is to have several buffers (4 are here) and fill the next each time.
 The <i>bufno</i> variable here is a buffer counter in 0..3 range. Its value increments each time, and its value is also always kept in limits
 by AND operation (<i>3 & ++bufno</i>).</p>
 
-<p>The author of this piece of code (seems to be Linus Torvalds himself) went even further and forgot (?) to initialize <i>bufno</i> counter variable, which will
+<p>The author of this piece of code (seemingly Linus Torvalds himself) went even further and forgot (?) to initialize <i>bufno</i> counter variable, which will
 have random garbage at the function start.
 Indeed: no matter, which buffer we are starting each time!
 This can be mistake which isn't affect correctness of the code, or maybe this is left so intentionally -- I don't know.</p>
@@ -223,7 +223,7 @@ Out[]= <|0 -> 328, 1 -> 328, 2 -> 328, 3 -> 328, 4 -> 328, 5 -> 328,
 
 <p>... now larger part of numbers happens slightly seldom, these are 68...99.</p>
 
-<p>This is sometimes called <i>modulo bias</i>. It's perhaps not critical for videogames, but may be critical for scientific simulations, including Monte Carlo method.</p>
+<p>This is sometimes called <i>modulo bias</i>. It's perhaps acceptable for videogames, but may be critical for scientific simulations, including Monte Carlo method.</p>
 
 <p>Constructing a PRNG with uniform distribution may be tricky, there are couple of methods: 
 _HTML_LINK(`http://www.reddit.com/r/algorithms/comments/39tire/using_a_01_generator_generate_a_random_number/',`1'),

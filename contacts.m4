@@ -12,9 +12,7 @@ _HL1(`Contacts:')
 
 <p>Skype: dennis.yurichev (I'm not often online)</p>
 
-<p>I don't use any social networking sites anymore, except _HTML_LINK(`http://twitter.com/yurichev',`twitter').
-There are some of my homonyms on facebook.com and vkontakte.ru, 
-but they are not related to me in any way (neither me to them).</p>
+<p>My _HTML_LINK(`http://twitter.com/yurichev',`twitter') and _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>
 
 _HL3(`Snail mail')
 

@@ -30,7 +30,7 @@ _HL2(`Subscribe to the blog:')
 Popular RSS reader choices include _HTML_LINK(`https://feedly.com/',`feedly') (web reader) and 
 _HTML_LINK(`https://www.mozilla.org/en-US/thunderbird/',`Thunderbird') (local reader).</p>
 
-<p>Someone may be interesting in subscribing my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev').
+<p>Someone may be interesting in subscribing my twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev') or _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').
 
 _HL3(`Mailing list')
 
