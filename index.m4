@@ -81,7 +81,7 @@ _HL2(`My patches')
 <li>_HTML_LINK(`http://conus.info/patches/gcc-RAND/', `GCC 4.5.2 patched to support __RAND__ macro (32-bit random number different at each compilation) + MinGW 4.5.2 compiled with the patch')
 <li>_HTML_LINK(`cordbg.html', `Cordbg.exe from .NET 1.1 patch')
 <li>_HTML_LINK(`openwatcom.html', `OpenWatcom patches')
-<li>rdesktop-1.7.1 mouse wheel double event issue patch: _HTML_LINK(`http://sourceforge.net/mailarchive/message.php?msg_id=30237555', `post #1'), <a href="https://sourceforge.net/p/rdesktop/patches/215/">patch info</a>
+<li>rdesktop-1.7.1 mouse wheel double event issue patch: _HTML_LINK(`http://sourceforge.net/mailarchive/message.php?msg_id=30237555', `post #1'), <a href="https://sourceforge.net/p/rdesktop/patches/215/">patch info</a>. Seemengly fixed in rdesktop 1.8.0.
 </ul>
 
 _HL2(`Other')
