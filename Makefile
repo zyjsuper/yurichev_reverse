@@ -11,7 +11,8 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/fortune/index.html \
 	blog/entropy/index.html \
 	blog/modulo/index.html \
-	blog/llvm/index.html
+	blog/llvm/index.html \
+	blog/RSA/index.html
 all: default 
 clean: 
 	rm *.html
@@ -19,4 +20,5 @@ clean:
 	rm blog/entropy/*.html
 	rm blog/fortune/*.html
 	rm blog/llvm/*.html
+	rm blog/RSA/*.html
 

@@ -4,6 +4,12 @@
     <link>http://yurichev.com/blog/</link> 
     <description>by Dennis Yurichev</description>
     <item> 
+      <title>How RSA works.</title> 
+      <link>http://yurichev.com/blog/RSA/</link> 
+      <description>How RSA works.</description> 
+      <pubDate>Sat, 9 Jul 2015 00:00:00 GMT</pubDate> 
+    </item>
+    <item> 
       <title>Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3.</title> 
       <link>http://yurichev.com/blog/modulo/</link> 
       <description>Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3.</description> 
