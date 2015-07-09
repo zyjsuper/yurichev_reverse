@@ -183,7 +183,7 @@ In mathematical lingo, GCD (greatest common divisor) of all coprime numbers is 1
 <p>One application of coprime numbers in engineering is to make number of cogs on cogwheel and number of chain elements on chain to be coprimes.
 Let's imagine bike cogwheels and chain:</p>
 
-<center><img src="http://yurichev/com/blog/RSA/CHAINPUL.gif" alt="The picture was taken from www.mechanical-toys.com"></center>
+<center><img src="http://yurichev.com/blog/RSA/CHAINPUL.gif" alt="The picture was taken from www.mechanical-toys.com"></center>
 
 <p>If you choose 5 as number of cogs on one of cogwhell and you have 10 or 15 or 20 chain elements, each cog on cogwheel will meet some set of the same chain elements.
 For example, if there are 5 cogs on cogwheel and 20 chain elements, each cog will meet only 4 chain elements and vice versa: 
