@@ -478,7 +478,7 @@ _PRE_END
 _HL2(`Hybrid cryptosystem')
 
 <p>RSA is slow, because exponentiation is slow and exponentiation by modulo is also slow.
-Perhaps, this is the reason why it was treated impractical by GCHQ when _HTML_LINK(`https://en.wikipedia.org/wiki/Clifford_Cocks',`Clifford Cocks') 
+Perhaps, this is the reason why it was considered impractical by GCHQ when _HTML_LINK(`https://en.wikipedia.org/wiki/Clifford_Cocks',`Clifford Cocks') 
 first came with this idea in 1970s.
 So in practice, if <i>The Sender</i> wants to encrypt some big piece of data to <i>The Receiver</i>, a random number is generated, which is used as a key
 for symmetrical cryptosystem like DES or AES. The piece of data is encrypted by the random key.
