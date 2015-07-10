@@ -201,7 +201,7 @@ _HL2(`Semiprime numbers')
 
 <p>Semiprime is a product of two prime numbers.</p>
 
-<p>A an interesting property of semiprime:</p>
+<p>An interesting property of semiprime:</p>
 
 <blockquote>
 In 1974 the Arecibo message was sent with a radio signal aimed at a star cluster. It consisted of 1679 binary digits intended to be interpreted as a 23×73 bitmap image. The number 1679 = 23×73 was chosen because it is a semiprime and therefore can only be broken down into 23 rows and 73 columns, or 73 rows and 23 columns.
@@ -397,7 +397,7 @@ When you use some big ones, factorizing is extremely slow, making RSA unbreakabl
 
 <p>The bigger $p$, $q$ and $n$ numbers, the harder to factorize $n$, so the bigger keys in bits are, the harder it to break.</p>
 
-_HL2(`Difference between my simplified example and a real RSA')
+_HL2(`Difference between my simplified example and a real RSA algorithm')
 
 <p>In my example, public key is $n=pq$ (product) and secret key are $p$ and $q$ values stored separately.
 This is not very efficient, to calculate totient and decrypting exponent each time.
