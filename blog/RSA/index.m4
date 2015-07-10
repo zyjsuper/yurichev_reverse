@@ -13,38 +13,38 @@ This can be represented graphically.</p>
 
 <p>Let's take 9 balls or some other objects. 9 balls can be arranged into rectangle:</p>
 
-<pre>
+_PRE_BEGIN
 ooo
 ooo
 ooo
-</pre>
+_PRE_END
 
 <p>So is 12 balls:</p>
 
-<pre>
+_PRE_BEGIN
 oooo
 oooo
 oooo
-</pre>
+_PRE_END
 
 <p>Or:</p>
 
-<pre>
+_PRE_BEGIN
 ooo
 ooo
 ooo
 ooo
-</pre>
+_PRE_END
 
 <p>So 9 and 12 are not prime numbers. 7 is prime number:</p>
 
-<pre>
+_PRE_BEGIN
 ooooooo
-</pre>
+_PRE_END
 
 <p>Or:</p>
 
-<pre>
+_PRE_BEGIN
 o
 o
 o
@@ -52,7 +52,7 @@ o
 o
 o
 o
-</pre>
+_PRE_END
 
 <p>It's not possible to form a rectangle using 7 balls, or 11 balls or any other prime number.</p>
 
@@ -64,41 +64,41 @@ _HL2(`Integer factorization')
 <p>Natural number can be either prime or composite number. Composite number is a number which can be breaked up by product of prime numbers.
 Let's take 100. It's not prime.</p>
 
-<p>By the _HTML(`https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic',`fundamental theorem of arithmetic'), 
+<p>By the _HTML_LINK(`https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic',`fundamental theorem of arithmetic'), 
 any number can be represented as product of prime numbers, in only one single way.
 Let's factor 100 in Wolfram Mathematica:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= FactorInteger[100]
 Out[]= {{2, 2}, {5, 2}}
-</pre>
+_PRE_END
 
 <p>This mean that 100 can be constructed using 2 and 5 prime numbers:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= 2^2*5^2
 Out[]= 100
-</pre>
+_PRE_END
 
 <p>Even more than that, it's possible to encode some information in prime numbers using factoring.
 Let's say, we would encode "Hello" text string.
 First, let's find ASCII codes of each character in the string:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= ToCharacterCode["Hello"]
 Out[]= {72, 101, 108, 108, 111}
-</pre>
+_PRE_END
 
 <p>Let's find first 5 prime numbers, each number for each character:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Map[Prime[#] &, Range[5]]
 Out[]= {2, 3, 5, 7, 11}
-</pre>
+_PRE_END
 
 <p>Build a huge number using prime numbers as bases and ASCII codes as exponents, then get a product of all them:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= 2^72*3^101*5^108*7^108*11^111
 Out[]= \
 1649465578065933994718255257642275679479006861206428830641826551739434\
@@ -107,29 +107,29 @@ Out[]= \
 5837524252859632074600687844523389231265776082000229507684707641601562\
 5000000000000000000000000000000000000000000000000000000000000000000000\
 000
-</pre>
+_PRE_END
 
 <p>It's a big number, but Wolfram Mathematica is able to factor it back:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= FactorInteger[%]
 Out[]= {{2, 72}, {3, 101}, {5, 108}, {7, 108}, {11, 111}}
-</pre>
+_PRE_END
 
 <p>First number in each pair is prime number and the second is exponent.
 Get the text string back:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= FromCharacterCode[Map[#[[2]] &, %]]
 Out[]= "Hello"
-</pre>
+_PRE_END
 
 <p>That allows to have some fun.
 Let's add exclamation point to the end of string by manipulating only the <i>big number</i>.
 ASCII code of exlamation point is 33. The next prime number after 11 is 13.
 So add it:</p>
 
-<pre>
+_PRE_BEGIN
 In[122]:= %116*13^33
 Out[122]= \
 9494539005656577744061615691556750598033024729435332190254469113536733\
@@ -138,26 +138,26 @@ Out[122]= \
 9497958680836430182400405525832564875875193876694267121604212637095253\
 0725145452728611417114734649658203125000000000000000000000000000000000\
 000000000000000000000000000000000000000
-</pre>
+_PRE_END
 
 <p>(%116 is the number of cell is Mathematica with the <i>big number</i>).</p>
 
 <p>So we got new number. Let's factor it back and decode:</p>
 
-<pre>
+_PRE_BEGIN
 In[124]:= FactorInteger[%122]
 Out[124]= {{2, 72}, {3, 101}, {5, 108}, {7, 108}, {11, 111}, {13, 33}}
 
 In[125]:= FromCharacterCode[Map[#[[2]] &, %124]]
 Out[125]= "Hello!"
-</pre>
+_PRE_END
 
 <p>Wow, that works. Will it be possible to remove one 'l' character from the string at the third position?
 'l' has ASCII code of 108 and it is exponent for two prime numbers in our expression: 5 (first 'l') and 7 (second 'l').</p>
 
 <p>To knock out the character, we divide the <i>big number</i> by the corresponding prime number with the exponent of 108:</p>
 
-<pre>
+_PRE_BEGIN
 In[126]:= %122/5^108
 Out[126]= \
 3081154065769189664244341216329094565621009415122099836376732969546063\
@@ -171,7 +171,7 @@ Out[127]= {{2, 72}, {3, 101}, {7, 108}, {11, 111}, {13, 33}}
 
 In[128]:= FromCharacterCode[Map[#[[2]] &, %127]]
 Out[128]= "Helo!"
-</pre>
+_PRE_END
 
 _HL2(`Coprime numbers')
 
@@ -179,6 +179,9 @@ _HL2(`Coprime numbers')
 In mathematical lingo, GCD (greatest common divisor) of all coprime numbers is 1.</p>
 
 <p>3 and 5 are coprimes. So are 7 and 10. So are 4, 5 and 9.</p>
+
+<p>Coprime numbers are the numerator and denominator in fraction which cannot be reduced further (irreducible fraction).
+For example, $\frac{130}{14}$ is $\frac{65}{7}$ after reduction (or simplification), 65 and 7 are coprime to each other, but 130 and 14 are not (they has 2 as common divisor).</p>
 
 <p>One application of coprime numbers in engineering is to make number of cogs on cogwheel and number of chain elements on chain to be coprimes.
 Let's imagine bike cogwheels and chain:</p>
@@ -227,17 +230,17 @@ So far, you can just take it as granted.</p>
 <p>This theorem may be used to sieve prime numbers. So you take, for example, 10 and test it.
 Let's take some random $a$ value (123) (Wolfram Mathematica):</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Mod[123^(10 - 1), 10]
 Out[]= 3
-</pre>
+_PRE_END
 
 <p>We've got 3, which is not 1, indicating the 10 is not prime. On the other hand, 11 is prime:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Mod[123^(11 - 1), 11]
 Out[]= 1
-</pre>
+_PRE_END
 
 <p>This method is not perfect (_HTML_LINK(`https://en.wikipedia.org/wiki/Carmichael_number',`some composite p numbers can lead to 1, for example p=1105')), 
 but can be used as a method to sieve vast amount of prime numbers candidates.</p>
@@ -273,7 +276,7 @@ Both $p$ and $q$ are kept secret.</p>
 
 <p>For the illustration, let's randomly pick p and q among the first 50 prime numbers in Wolfram Mathematica:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= p = Prime[RandomInteger[50]]
 Out[]= 89
 
@@ -282,7 +285,7 @@ Out[]= 43
 
 In[]:= n = p*q
 Out[]= 3827
-</pre>
+_PRE_END
 
 <p>3827 is published as public key, named "public key modulus" or "modulo".
 It is semiprime.
@@ -290,16 +293,17 @@ There is also public key exponent $e$, which is not secret, is often 65537, but 
 
 <p>Now <i>The Sender</i> wants to send a message (123 number) to <i>The Receiver</i> and he/she uses one-way function:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= e = 17
 Out[]= 17
 
 In[]:= encrypted = Mod[123^e, n]
 Out[]= 3060
-</pre>
+_PRE_END
 
 <p>3060 is encrypted message, which can be decrypted only using $p$ and $q$ values separately.
-This is one-way function, and important consequence is that even <i>The Sender</i> can't decrypt it.
+This is one-way function, because only part of exponentiation result is left.
+One and important consequence is that even <i>The Sender</i> can't decrypt it.
 This is why you can encrypt a piece of text in PGP/GnuPG to someone using his/her public key, but can't decrypt it.
 Perhaps, that's how CryptoLockers works, making impossible to decrypt the files.</p>
 
@@ -307,25 +311,25 @@ Perhaps, that's how CryptoLockers works, making impossible to decrypt the files.
 
 <p>First, we get the result of Euler's totient function $(p-1)(q-1)$ (this is the point where $p$ and $q$ values are needed):</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= totient = (p - 1)*(q - 1)
 Out[]= 3696
-</pre>
+_PRE_END
 
 <p>Now we calculating decrypting exponent using multiplicative modulo inverse 
 (multiplicative inverse was also described in _HTML_LINK(`http://yurichev.com/blog/modulo/',`my previous article')) ($e^{-1} \pmod{totient=(p-q)(q-1)}$):</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= d = PowerMod[e, -1, totient]
 Out[]= 2609
-</pre>
+_PRE_END
 
 <p>Now decrypt the message:</p>
 
-<pre>
+_PRE_BEGIN
 In[18]:= Mod[encrypted^d, n]
 Out[18]= 123
-</pre>
+_PRE_END
 
 <p>So the $d$ exponent forms another one-way function, restoring the work of what was done during encryption.</p>
 
@@ -333,10 +337,10 @@ _HL2(`So how it works?')
 
 <p>It works, because $e$ and $d$ exponents are reciprocal to each other by modulo $totient=(p-1)(q-1)$:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Mod[e*d, totient] (* check *)
 Out[]= 1
-</pre>
+_PRE_END
 
 <p>This allows...</p>
 
@@ -344,10 +348,10 @@ Out[]= 1
 
 Or in Mathematica:
 
-<pre>
+_PRE_BEGIN
 In[]:= Mod[123^(e*d), n]
 Out[]= 123
-</pre>
+_PRE_END
 
 <p>So the encryption process is $m^{e} \pmod{n}$, decryption is $(m^{e})^{d}=m \pmod{n}$.</p>
 
@@ -383,13 +387,15 @@ _HL2(`Breaking RSA')
 
 <p>We can try to factor $n$ semiprime (or RSA modulus) in Mathematica:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= FactorInteger[n]
 Out[]= {{43, 1}, {89, 1}}
-</pre>
+_PRE_END
 
 <p>And we getting correct $p$ and $q$, but this is possible only for small values.
 When you use some big ones, factorizing is extremely slow, making RSA unbreakable, if implemented correctly.</p>
+
+<p>The bigger $p$, $q$ and $n$ numbers, the harder to factorize $n$, so the bigger keys in bits are, the harder it to break.</p>
 
 _HL2(`Difference between my simplified example and a real RSA')
 
@@ -399,7 +405,7 @@ So in practice, a public key is $n$ and $e$, and a secret key is at least $n$ an
 
 <p>For example, here is _HTML_LINK(`http://yurichev.com/pgp.html',`my PGP public key'):</p>
 
-<pre>
+_PRE_BEGIN
 dennis@...:~$ gpg --export-options export-reset-subkey-passwd --export-secret-subkeys 0x3B262349\! | pgpdump 
 Old: Secret Key Packet(tag 5)(533 bytes)
         Ver 4 - new
@@ -408,13 +414,13 @@ Old: Secret Key Packet(tag 5)(533 bytes)
         RSA n(4096 bits) - ...
         RSA e(17 bits) - ...
 ...
-</pre>
+_PRE_END
 
 <p>... so there are available openly big (4096 bits) $n$ and $e$ (17 bits).</p>
 
 <p>And here is my PGP secret key:</p>
 
-<pre>
+_PRE_BEGIN
 dennis@...:~$ gpg --export-options export-reset-subkey-passwd --export-secret-subkeys 0x55B5C64F\! | pgpdump 
 gpg: about to export an unprotected subkey
 
@@ -442,7 +448,7 @@ Old: Secret Subkey Packet(tag 7)(1816 bytes)
         RSA u(2048 bits) - ...
         Checksum - 94 53 
 ...
-</pre>
+_PRE_END
 
 <p>... it has all variables stored in the file, including $d$, $p$ and $q$.</p>
 
@@ -452,18 +458,18 @@ _HL2(`RSA signature')
 For example, <i>The Publisher</i> wants to sign the message (let's say, 456).
 Then he/she uses $d$ exponent to compute signature:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= signed = Mod[456^d, n]
 Out[]= 2282
-</pre>
+_PRE_END
 
 <p>Now he publishes $n=pq$ (3827), $e$ (17 in our example), the message (456) and the signature (2282).
 Some other <i>Consumers</i> can verify its signature using $e$ exponent and $n$:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Mod[2282^e, n]
 Out[]= 456
-</pre>
+_PRE_END
 
 <p>... this is another illustration that $e$ and $d$ exponents are complement each other, by modulo $totient=(p-1)(q-1)$.</p>
 
@@ -472,6 +478,8 @@ Out[]= 456
 _HL2(`Hybrid cryptosystem')
 
 <p>RSA is slow, because exponentiation is slow and exponentiation by modulo is also slow.
+Perhaps, this is the reason why it was treated impractical by GCHQ when _HTML_LINK(`https://en.wikipedia.org/wiki/Clifford_Cocks',`Clifford Cocks') 
+first came with this idea in 1970s.
 So in practice, if <i>The Sender</i> wants to encrypt some big piece of data to <i>The Receiver</i>, a random number is generated, which is used as a key
 for symmetrical cryptosystem like DES or AES. The piece of data is encrypted by the random key.
 The key is then encrypted by RSA to <i>The Receiver</i> and destroyed.

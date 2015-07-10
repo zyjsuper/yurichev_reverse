@@ -12,7 +12,8 @@ Compressed files are usually a list of instructions to decompressor, like this: 
 because natural languages has a lot of redundancy
 (otherwise, a tiny typo will always lead to misunderstanding, 
 like any toggled bit in compressed archive make decompression nearly impossible), 
-some words are used very often, etc.</p>
+some words are used very often, etc.
+It's possible to drop some words and text will be still readable.</p>
 
 <p>Code for CPUs is also can be compressed, because some ISA instructions are used much more often than others.
 In x86, most used instructions are MOV/PUSH/CALL -- indeed, most of the time, computer CPU is just shuffling data and switching between
@@ -317,6 +318,25 @@ address of the "function" twice.</p>
 
 <p>To deal with this, executable compressors are sometimes able to reduce entropy here.
 One example is UPX: _HTML_LINK_AS_IS(`http://sourceforge.net/p/upx/code/ci/default/tree/doc/filter.txt').</p>
+
+_HL2(`Random number generators')
+
+<p>When I run GnuPG to generate new secret key, it asking for some entropy...</p>
+
+_PRE_BEGIN
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+
+Not enough random bytes available.  Please do some other work to give
+the OS a chance to collect more entropy! (Need 169 more bytes)
+_PRE_END
+
+<p>This means that good a PRNG produces long high-entropy results, and this is what the secret assimetrical cryptographical key needs.
+But _HTML_LINK(`https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator',`cryptographically secure PRNG') is tricky 
+(because computer is highly deterministic device itself),
+so the GnuPG asking for some additional randomness from the user.</p>
 
 <hr>
 

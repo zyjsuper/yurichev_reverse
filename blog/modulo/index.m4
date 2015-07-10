@@ -66,7 +66,7 @@ parts.</p>
 
 <center><img src="http://yurichev.com/blog/modulo/counter.jpg" alt="The picture was stolen from http://www.featurepics.com/ - sorry for it!"></center>
 
-<p>This counter has 6 wheels, so it can count from 0 to 10^6-1 or 999999.
+<p>This counter has 6 wheels, so it can count from 0 to $10^{6}-1$ or 999999.
 When you have 999999 and you increase the counter, it will resetting to 000000 - this situation is usually understood by engineers and computer programmers as overflow.
 And if you have 000000 and you decrease it, the counter will show you 999999. This situation is often called "wrap around".
 See also: _HTML_LINK_AS_IS(`http://en.wikipedia.org/wiki/Integer_overflow').</p>
@@ -76,20 +76,20 @@ _HL2(`Modular arithmetic on CPUs')
 <p>The reason I talk about mechanical counter is that CPU registers acting in the very same way, because this is, perhaps, simplest possible and efficient way
 to compute using integer numbers.</p>
 
-<p>This implies that almost all operations on integer values on your CPU is happens by modulo 2^32 or 2^64 depending on your CPU.
+<p>This implies that almost all operations on integer values on your CPU is happens by modulo $2^{32}$ or $2^{64}$ depending on your CPU.
 For example, you can sum up 0x87654321 and 0xDEADBABA, which resulting in 0x16612FDDB. 
 This value is too big for 32-bit register, so only 0x6612FDDB is stored, and leading 1 is dropped.
 If you will multiply these two numbers, the actual result it 0x75C5B266EDA5BFFA, which is also too big, so only low 32-bit part is stored into destination
 register: 0xEDA5BFFA. This is what happens when you multiply numbers in plain C/C++ language, but some readers may argue:
 when sum is too big for register, CF (carry flag) is set, and it can be used after.
 And there is x86 MUL instruction which in fact produces 64-bit result in 32-bit environment (in EDX:EAX registers pair).
-That's true, but observing just 32-bit registers, this is exactly environment of modulo with base 2^32.</p>
+That's true, but observing just 32-bit registers, this is exactly environment of modulo with base $2^{32}$.</p>
 
 <p>Now that leads to surprising consequence: almost every result of arithmetic operation stored in general purpose register of 32-bit CPU is in fact
-remainder of division operation: result is always divided by 2^32 and remainder is left in register.
-For example, 0x16612FDDB is too large for storage, and it's divided by 2^32 (or 0x100000000).
+remainder of division operation: result is always divided by $2^{32}$ and remainder is left in register.
+For example, 0x16612FDDB is too large for storage, and it's divided by $2^{32}$ (or 0x100000000).
 The result of division (quotient) is 1 (which is dropped) and remainder is 0x6612FDDB (which is stored as a result).
-0x75C5B266EDA5BFFA divided by 2^32 (0x100000000) produces 0x75C5B266 as a result of division (quotient) and 0xEDA5BFFA as a remainder, the latter is stored.</p>
+0x75C5B266EDA5BFFA divided by $2^{32}$ (0x100000000) produces 0x75C5B266 as a result of division (quotient) and 0xEDA5BFFA as a remainder, the latter is stored.</p>
 
 <p>And if your code is 32-bit one in 64-bit environment, CPU registers are bigger, so the whole result can be stored there, 
 but high half is hidden behind the scenes -- because no 32-bit code can access it.</p>
@@ -101,7 +101,7 @@ C/C++ has percent sign (%) for this operation, but some other PLs like Pascal an
 are defined preliminarily.
 However, this implicit division operation or "wrapping around" can be exploited usefully.</p>
 
-_HL2(`Remainder of division by modulo 2^n')
+_HL2(`Remainder of division by modulo $2^{n}$')
 
 <p>... can be easily computed with AND operation.
 If you need a random number in range of 0..16, here you go: rand()&0xF.
@@ -234,10 +234,10 @@ _HL2(`Multiplicative inverse')
 _HL3(`Finding multiplicative inverse')
 
 <p>From school-level mathematics we may recall there is an easy way to replace multiplication by division.
-For example, if you need to divide some number by 3, multiply it by 1/3 (or 0.33333...).
-So if you've got a lot of numbers you need to divide by 3, and if multiplication on your FPU works faster than division, you can precompute 1/3 and then 
+For example, if you need to divide some number by 3, multiply it by $\frac{1}{3}$ (or 0.33333...).
+So if you've got a lot of numbers you need to divide by 3, and if multiplication on your FPU works faster than division, you can precompute $\frac{1}{3}$ and then 
 multiply all numbers by this one.
-1/3 is called <i>multiplicative inverse</i> or <i>reciprocal</i>.
+$\frac{1}{3}$ is called <i>multiplicative inverse</i> or <i>reciprocal</i>.
 Russian textbook also uses more terse <i>inverse number</i> or <i>inverse value</i> term.</p>
 
 <p>But that works for real numbers only. What about integer ones?</p>
@@ -250,13 +250,14 @@ _HL3(`Finding modular multiplicative inverse')
 
 <ul>
 <li> multiplication is fast;
-<li> division by 2^32 consumes nothing;
-<li> finding remainder of division by 2^32 is also consumes nothing;
-<li> division by 2^n is very fast (binary shift right).
+<li> division by $2^{32}$ consumes nothing;
+<li> finding remainder of division by $2^{32}$ is also consumes nothing;
+<li> division by $2^{n}$ is very fast (binary shift right);
+<li> division by other numbers is slow.
 </ul>
 
-<p>We can't divide by 9 using bit shifts, but we can divide by 2^32 or by 2^n in general.
-What if we would multiply input number to make it much bigger so to compensate difference between 9 and 2^32?
+<p>We can't divide by 9 using bit shifts, but we can divide by $2^{32}$ or by $2^{n}$ in general.
+What if we would multiply input number to make it much bigger so to compensate difference between 9 and $2^{32}$?
 Yes!</p>
 
 <p>Our initial task is:</p>
@@ -295,30 +296,30 @@ Out[]//BaseForm= 140000000a
 
 <p>(BaseForm is the instruction to print result in hexadecimal form).</p>
 
-<p>It has been multiplication, but division by 2^32 or 2^n is not happened yet.
-So after division by 2^32, 0x14 will be a result and 0xA is remainder.
-0x14 is 20, which twice as large as the result we expect (90/9=10).
+<p>It has been multiplication, but division by $2^{32}$ or $2^{n}$ is not happened yet.
+So after division by $2^{32}$, 0x14 will be a result and 0xA is remainder.
+0x14 is 20, which twice as large as the result we expect ($\frac{90}{9}$=10).
 It's because k=2, so final result should also be divided by 2.</p>
 
 <p>That is exactly what the code produced by GCC does:</p>
 
 <ul>
 <li> input value is multiplicated by 954437177 (x);
-<li> then it is divided by 2^32 using quick bit shift right;
+<li> then it is divided by $2^{32}$ using quick bit shift right;
 <li> final value is divided by 2 (k).
 </ul>
 
 <p>Two last steps are coalesced into one SHR instruction, which does shifting by 33 bits.</p>
 
-<p>Let's also check relation between modular multiplicative inverse coefficient we've got and 2^32 (modulo base):</p>
+<p>Let's also check relation between modular multiplicative inverse coefficient we've got and $2^{32}$ (modulo base):</p>
 
 <pre>
 In[]:= 954437177 / 2^32 // N
 Out[]= 0.222222
 </pre>
 
-<p>0.222... is twice as large than 1/9.
-So this number acting like a real 1/9 number, but on integer <acronym title="Arithmetic logic unit">ALU</acronym>!</p>
+<p>0.222... is twice as large than $\frac{1}{9}$.
+So this number acting like a real $\frac{1}{9}$ number, but on integer <acronym title="Arithmetic logic unit">ALU</acronym>!</p>
 
 _HL3(`A little more theory')
 
@@ -333,14 +334,14 @@ Diophantine equation is so important here because we work on integer ALU, after 
 <p>So the coefficient used is in fact modular multiplicative inverse.
 And when you see such piece of code in some software, Mathematica can find division number easily, just find modular multiplicative inverse of modular
 multiplicative inverse!
-It works because x=1/(1/x).</p>
+It works because $x=\frac{1}{(\frac{1}{x})}$.</p>
 
 <pre>
 In[]:= PowerMod[954437177, -1, 2^32]
 Out[]= 9
 </pre>
 
-<p>PowerMod command is so called because it computes x^(-1) by given modulo (2^32), which is the same thing.
+<p>PowerMod command is so called because it computes $x^{-1}$ by given modulo ($2^{32}$), which is the same thing.
 Other representations of this algorithm are there: _HTML_LINK_AS_IS(`http://rosettacode.org/wiki/Modular_inverse').</p>
 
 _HL3(`Remainder?')
@@ -352,11 +353,11 @@ In[]:= Mod[954437177*18, 2^32]
 Out[]= 2
 </pre>
 
-<p>The number we've got is in fact remainder of division by 2^32.
+<p>The number we've got is in fact remainder of division by $2^{32}$.
 It is the same as result we are looking for, because diophantine equation we solved has 1 in "1+k...", this 1 is multiplied by result and it is left
 as remainder.</p>
 
-<p>This is somewhat useless, because this calculation is going crazy when we need to divide some number (like 19) by 9 (19/9=2.111...), which should leave remainder (19 % 9 = 1):</p>
+<p>This is somewhat useless, because this calculation is going crazy when we need to divide some number (like 19) by 9 ($\frac{19}{9}=2.111...$), which should leave remainder (19 % 9 = 1):</p>
 
 <pre>
 In[]:= Mod[954437177*19, 2^32]
@@ -367,10 +368,10 @@ Out[]= 954437179
 
 _HL3(`Always coprimes?')
 
-<p>As it's stated in many textbooks, to find modular multiplicative inverse, modulo base (2^32) and initial value (e.g., 9) 
+<p>As it's stated in many textbooks, to find modular multiplicative inverse, modulo base ($2^{32}$) and initial value (e.g., 9) 
 should be _HTML_LINK(`http://en.wikipedia.org/wiki/Coprime_integers',`coprime') to each other.
-9 is coprime to 2^32, so is 7, but not 10.
-But if you try to compile x/10 code, GCC can do it as well:</p>
+9 is coprime to $2^{32}$, so is 7, but not 10.
+But if you try to compile $\frac{x}{10}$ code, GCC can do it as well:</p>
 
 <pre>
 push   %ebp
@@ -384,7 +385,7 @@ pop    %ebp
 ret    
 </pre>
 
-<p>The reason it works is because division by 5 is actually happens here (and 5 is coprime to 2^32), and then the final result is divided by 2
+<p>The reason it works is because division by 5 is actually happens here (and 5 is coprime to $2^{32}$), and then the final result is divided by 2
 (so there is 3 instead of 2 in the SHR instruction).</p>
 
 _HL2(`Reversible linear congruential generator')
