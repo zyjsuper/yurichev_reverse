@@ -65,8 +65,11 @@ _HL2(`Integer factorization')
 Let's take 100. It's not prime.</p>
 
 <p>By the _HTML_LINK(`https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic',`fundamental theorem of arithmetic'), 
-any number can be represented as product of prime numbers, in only one single way.
-Let's factor 100 in Wolfram Mathematica:</p>
+any number can be represented as product of prime numbers, in only one single way.</p>
+
+<p>So the <i>composite number</i> phrase means that the number is <i>composed</i> of prime numbers.</p>
+
+<p>Let's factor 100 in Wolfram Mathematica:</p>
 
 _PRE_BEGIN
 In[]:= FactorInteger[100]
@@ -79,6 +82,8 @@ _PRE_BEGIN
 In[]:= 2^2*5^2
 Out[]= 100
 _PRE_END
+
+_HL3(`Using composite number as a container')
 
 <p>Even more than that, it's possible to encode some information in prime numbers using factoring.
 Let's say, we would encode "Hello" text string.
@@ -109,7 +114,7 @@ Out[]= \
 000
 _PRE_END
 
-<p>It's a big number, but Wolfram Mathematica is able to factor it back:</p>
+<p>It's a big number, but Wolfram Mathematica is able to factor it back (percent sign in Mathematica denotes the last result):</p>
 
 _PRE_BEGIN
 In[]:= FactorInteger[%]
@@ -172,6 +177,64 @@ Out[127]= {{2, 72}, {3, 101}, {7, 108}, {11, 111}, {13, 33}}
 In[128]:= FromCharacterCode[Map[#[[2]] &, %127]]
 Out[128]= "Helo!"
 _PRE_END
+
+_HL3(`Using composite number as a container (another example)')
+
+<p>Let's say, the initial <i>container</i> number is 1.
+Let's increment the number at the second position within it by multiplicating by the first prime number (3):</p>
+
+_PRE_BEGIN
+In[]:= 1*3
+Out[]= 3
+_PRE_END
+
+<p>Then let's set the number at fourth posistion to 123. The fourth prime number is 7 (the percent sign in Mathematica denotes the last result):</p>
+
+_PRE_BEGIN
+In[]:= %*7^123
+Out[]= 26557071110804040505330743411815438275701018334410643480070773\
+5780279761186999642944265644421128096489029
+_PRE_END
+
+<p>Then let's set the number at fifth position to 456. The fifth prime number is 11:</p>
+
+_PRE_BEGIN
+In[]:= %*11^456
+Out[]= 19917948660639605307938425372554395433764512138284060223646519\
+1257621966825293455339751080188144910510813322192288287162176499976800\
+9147068591160798243308591883294649069355015558472564457422829073938118\
+4396204999051856879940101934339913600942451006747982291524910653185084\
+4057972896537894301213735252418639782974592077393028390193060138936503\
+0125465578958567377627063815620261557939484036628536230966158222960762\
+8509899641574477547658142457598168497006309608599830554758951672484533\
+9216105863754463712957143732563375990198901073698626584903164027850451\
+8825659837114080589573087269
+_PRE_END
+
+<p>Then let's decrement the number at fourth position, the fourth prime number is 7:</p>
+
+_PRE_BEGIN
+In[]:= %/7
+Out[]= 28454212372342293297054893389363422048235017340405800319495027\
+3225174238321847793342501543125921300729733317417554695945966428538287\
+0210097987372568919012274118992355813364307940675092082032612962768740\
+6280292855788366971343002763342733715632072866782831845035586647407263\
+4368532709339849001733907503455199689963702967704326271704371627052147\
+1607807969940810539467234022314659368484977195183623187094511747086804\
+0728428059392110782368774939425954995723299440856900792512788103549334\
+1737294091077805304224491046519108557427001533855180835575948611214931\
+260808548159154369939012467
+_PRE_END
+
+<p>Let's factor the composite number and get all the numbers we set inside <i>container</i> (1, 122, 456):</p>
+
+_PRE_BEGIN
+In[]:= FactorInteger[%]
+Out[]= {{3, 1}, {7, 122}, {11, 456}}
+_PRE_END
+
+<p>This is somewhat wasteful way to store the numbers, but out of curiosity: 
+there are infinite number of prime numbers and infinitely big numbers can be <i>stored</i> within composite number.</p>
 
 _HL2(`Coprime numbers')
 

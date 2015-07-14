@@ -35,7 +35,7 @@ m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`http://yurichev.com',`back to the ma
 </html>')
 
 m4_define(`_BLOG_FOOTER',`<hr>
-<p>Interesting in articles like this? Subscribe to my _HTML_LINK(`http://yurichev.com/blog/index.html',`blog') and/or twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev') and/or _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>
+<p>Interesting in articles like this? Subscribe to my _HTML_LINK(`http://yurichev.com/blog/index.html',`blog') and/or twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev') and/or _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook'). Please _HTML_LINK(`http://yurichev.com/donate.html',`donate'), so I can continue my writings.</p>
 <p>&rarr; [_HTML_LINK(`http://yurichev.com/blog/index.html',`list of blog posts')]</p>
 <p><h5>The page last updated on m4_esyscmd(date -r m4___file__ +"%d-%B-%Y")</h5></p>
 
