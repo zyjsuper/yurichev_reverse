@@ -6,16 +6,18 @@ _HEADER_HL1(`13-Jun-2015: Modular arithmetic + division by multiplication + reve
 
 <p>Here is an example:</p>
 
-<pre>
+_PRE_BEGIN
 #include &lt;stdint.h&gt;
 
 uint32_t divide_by_9 (uint32_t a)
 {
         return a/9;
 };
+_PRE_END
 
-Optimizing GCC 4.8.2 does this:
+<p>Optimizing GCC 4.8.2 does this:</p>
 
+_PRE_BEGIN
 divide_by_9:
         mov     edx, 954437177
         mov     eax, edx
@@ -23,18 +25,18 @@ divide_by_9:
         shr     edx
         mov     eax, edx
         ret
-</pre>
+_PRE_END
 
 <p>The following code can be rewritten into C/C++:</p>
 
-<pre>
+_PRE_BEGIN
 #include &lt;stdint.h&gt;
 
 uint32_t divide_by_9_v2 (uint32_t a)
 {
         return ((uint64_t)a * (uint64_t)954437177)) >> 33; // 954437177 = 0x38e38e39
 };
-</pre>
+_PRE_END
 
 <p>And it works: you can compile it and check it.
 Let's see, how.</p>
@@ -110,26 +112,26 @@ That helps sometimes.</p>
 <p>For example, you need a some kind of wrapping counter variable which always should be in 0..16 range. What you do?
 Programmers often write this:</p>
 
-<pre>
+_PRE_BEGIN
 int counter=0;
 ...
 counter++;
 if (counter==16)
     counter=0;
-</pre>
+_PRE_END
 
 <p>But here is a version without conditional branching:</p>
 
-<pre>
+_PRE_BEGIN
 int counter=0;
 ...
 counter++;
 counter=counter&0xF;
-</pre>
+_PRE_END
 
 <p>As an example, this I found in the git source code:</p>
 
-<pre>
+_PRE_BEGIN
 char *sha1_to_hex(const unsigned char *sha1)
 {
 	static int bufno;
@@ -147,7 +149,7 @@ char *sha1_to_hex(const unsigned char *sha1)
 
 	return buffer;
 }
-</pre>
+_PRE_END
 
 ( _HTML_LINK_AS_IS(`https://github.com/git/git/blob/aa1c6fdf478c023180e5ca5f1658b00a72592dc6/hex.c') )
 
@@ -169,10 +171,10 @@ _HL2(`Getting random numbers')
 or in 0..0x7FFFFFFF range (GCC).
 And when you need a random number in 0..10 range, the common way to do it is:</p>
 
-<pre>
+_PRE_BEGIN
 X_coord_of_something_spawned_somewhere=rand() % 10;
 Y_coord_of_something_spawned_somewhere=rand() % 10;
-</pre>
+_PRE_END
 
 <p>No matter what compiler do you use, you can think about it as 10 is subtraced from rand() result, as long as there is still a number bigger than 10.
 Hence, result is remainder of division of rand() result by 10.</p>
@@ -181,26 +183,26 @@ Hence, result is remainder of division of rand() result by 10.</p>
 
 <p>I tried to calculate in Mathematica. Here is what you get if you write <i>rand() % 3</i> and rand() produce numbers in range of 0..0x7FFF (like MSVC):</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Counts[Map[Mod[#, 3] &, Range[0, 16^^8000 - 1]]]
 Out[]= <|0 -> 10923, 1 -> 10923, 2 -> 10922|>
-</pre>
+_PRE_END
 
 <p>So number 2 happens slightly seldom than others.</p>
 
 <p>Here is a result for <i>rand() % 10</i>:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Counts[Map[Mod[#, 10] &, Range[0, 16^^8000 - 1]]]
 Out[]= <|0 -> 3277, 1 -> 3277, 2 -> 3277, 3 -> 3277, 4 -> 3277, 
  5 -> 3277, 6 -> 3277, 7 -> 3277, 8 -> 3276, 9 -> 3276|>
-</pre>
+_PRE_END
 
 <p>Numbers 8 and 9 happens slightly seldom.</p>
 
 <p>Here is a result for <i>rand() % 100</i>:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Counts[Map[Mod[#, 100] &, Range[0, 16^^8000 - 1]]]
 Out[]= <|0 -> 328, 1 -> 328, 2 -> 328, 3 -> 328, 4 -> 328, 5 -> 328,
   6 -> 328, 7 -> 328, 8 -> 328, 9 -> 328, 10 -> 328, 11 -> 328, 
@@ -219,7 +221,7 @@ Out[]= <|0 -> 328, 1 -> 328, 2 -> 328, 3 -> 328, 4 -> 328, 5 -> 328,
  84 -> 327, 85 -> 327, 86 -> 327, 87 -> 327, 88 -> 327, 89 -> 327, 
  90 -> 327, 91 -> 327, 92 -> 327, 93 -> 327, 94 -> 327, 95 -> 327, 
  96 -> 327, 97 -> 327, 98 -> 327, 99 -> 327|>
-</pre>
+_PRE_END
 
 <p>... now larger part of numbers happens slightly seldom, these are 68...99.</p>
 
@@ -262,37 +264,37 @@ Yes!</p>
 
 <p>Our initial task is:</p>
 
-<pre>
+_PRE_BEGIN
 result = input / 9
-</pre>
+_PRE_END
 
 <p>What we can do:</p>
 
-<pre>
+_PRE_BEGIN
 result = input * coefficient / 2^32
-</pre>
+_PRE_END
 
 <p><i>coefficient</i> is the solution of this equation:</p>
 
-<pre>
+_PRE_BEGIN
 9x = 1+k(2^32).
-</pre>
+_PRE_END
 
 <p>We can solve it in Wolfram Mathematica:</p>
 
-<pre>
+_PRE_BEGIN
 In[]= FindInstance[9 x == 1 + k (2^32), {x, k}, Integers]
 Out[]= {{x -> 954437177, k -> 2}}
-</pre>
+_PRE_END
 
 <p><i>x</i> (which is modular multiplicative inverse) will be coefficient, <i>k</i> will be another special value, used at the very end.</p>
 
 <p>Let's check it in Mathematica:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= BaseForm[954437177*90, 16]
 Out[]//BaseForm= 140000000a
-</pre>
+_PRE_END
 
 <p>(BaseForm is the instruction to print result in hexadecimal form).</p>
 
@@ -313,10 +315,10 @@ It's because k=2, so final result should also be divided by 2.</p>
 
 <p>Let's also check relation between modular multiplicative inverse coefficient we've got and $2^{32}$ (modulo base):</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= 954437177 / 2^32 // N
 Out[]= 0.222222
-</pre>
+_PRE_END
 
 <p>0.222... is twice as large than $\frac{1}{9}$.
 So this number acting like a real $\frac{1}{9}$ number, but on integer <acronym title="Arithmetic logic unit">ALU</acronym>!</p>
@@ -336,22 +338,24 @@ And when you see such piece of code in some software, Mathematica can find divis
 multiplicative inverse!
 It works because $x=\frac{1}{(\frac{1}{x})}$.</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= PowerMod[954437177, -1, 2^32]
 Out[]= 9
-</pre>
+_PRE_END
 
 <p>PowerMod command is so called because it computes $x^{-1}$ by given modulo ($2^{32}$), which is the same thing.
 Other representations of this algorithm are there: _HTML_LINK_AS_IS(`http://rosettacode.org/wiki/Modular_inverse').</p>
+
+<p>So, multiplicative inverse is denoted as $x^{-1}$ and modular multiplicative inverse as $x^{-1} \pmod b$ where b is modulo base.</p>
 
 _HL3(`Remainder?')
 
 <p>It can be easily observed that no bit shifting need, just multiply number by modular inverse:</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Mod[954437177*18, 2^32]
 Out[]= 2
-</pre>
+_PRE_END
 
 <p>The number we've got is in fact remainder of division by $2^{32}$.
 It is the same as result we are looking for, because diophantine equation we solved has 1 in "1+k...", this 1 is multiplied by result and it is left
@@ -359,10 +363,10 @@ as remainder.</p>
 
 <p>This is somewhat useless, because this calculation is going crazy when we need to divide some number (like 19) by 9 ($\frac{19}{9}=2.111...$), which should leave remainder (19 % 9 = 1):</p>
 
-<pre>
+_PRE_BEGIN
 In[]:= Mod[954437177*19, 2^32]
 Out[]= 954437179
-</pre>
+_PRE_END
 
 <p>Perhaps, this can be used to detect situations when remainder is also present?</p>
 
@@ -373,7 +377,7 @@ should be _HTML_LINK(`http://en.wikipedia.org/wiki/Coprime_integers',`coprime') 
 9 is coprime to $2^{32}$, so is 7, but not 10.
 But if you try to compile $\frac{x}{10}$ code, GCC can do it as well:</p>
 
-<pre>
+_PRE_BEGIN
 push   %ebp
 mov    %esp,%ebp
 mov    0x8(%ebp),%eax
@@ -383,7 +387,7 @@ mov    %edx,%eax
 shr    $0x3,%eax
 pop    %ebp
 ret    
-</pre>
+_PRE_END
 
 <p>The reason it works is because division by 5 is actually happens here (and 5 is coprime to $2^{32}$), and then the final result is divided by 2
 (so there is 3 instead of 2 in the SHR instruction).</p>
@@ -393,7 +397,7 @@ _HL2(`Reversible linear congruential generator')
 <p><acronym title="Linear congruential generator">LCG</acronym> is very simple: just multiply seed by some value, add another one and here is a new random number.
 Here is how it is implemented in MSVC (the source code is not original one and is reconstructed by me):</p>
 
-<pre>
+_PRE_BEGIN
 uint32_t state;
 
 uint32_t rand()
@@ -401,7 +405,7 @@ uint32_t rand()
 	state=state*214013+2531011;
 	return (state>>16)&0x7FFF;
 };
-</pre>
+_PRE_END
 
 <p>The last bit shift is attempt to compensate LCG weakness and we may ignore it so far.
 Will it be possible to make an inverse function to rand(), which can reverse state back?
@@ -410,7 +414,7 @@ store infinitely big numbers, then, although state is increasing rapidly, it wou
 But <i>state</i> isn't BigInt/BigNum, it's 32-bit variable, and summing operation is easily reversible on it (just subtract 2531011 at each step).
 As we may know now, multiplication is also reversible: just multiply the state by modular multiplicative inverse of 214013!</p>
 
-<pre>
+_PRE_BEGIN
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 
@@ -446,11 +450,11 @@ int main()
 	prev_state();
 	printf ("state=%d\n", state);
 };
-</pre>
+_PRE_END
 
 <p>Wow, that works!</p>
 
-<pre>
+_PRE_BEGIN
 state=12345
 state=-1650445800
 state=1255958651
@@ -458,7 +462,7 @@ state=-456978094
 state=1255958651
 state=-1650445800
 state=12345
-</pre>
+_PRE_END
 
 <p>It's very hard to find a real-world application of reversible LCG, but it was a spectacular demonstration of modular multiplicative inverse, so I added it.</p>
 
@@ -473,7 +477,7 @@ We would define all relations between LCG states in term of Z3 SMT solver.
 (I first made attempt to do it using _HTML_LINK(`https://reference.wolfram.com/language/ref/FindInstance.html',`FindInstance') in Mathematica, but failed, perhaps, made a mistake somewhere).
 Here is a test progam:</p>
 
-<pre>
+_PRE_BEGIN
 #include &lt;stdlib.h&gt;
 #include &lt;stdio.h&gt;
 #include &lt;time.h&gt;
@@ -487,12 +491,12 @@ int main()
 	for (i=0; i<10; i++)
 		printf ("%d\n", rand()%100);
 };
-</pre>
+_PRE_END
 
 <p>It is intended to print 10 pseudorandom numbers in 0..99 range.
 So it does:</p>
 
-<pre>
+_PRE_BEGIN
 37
 29
 74
@@ -503,13 +507,13 @@ So it does:</p>
 58
 61
 17
-</pre>
+_PRE_END
 
 <p>Let's say we are observing only 8 of these numbers (from 29 to 61) and we need to predict next one (17) and/or previous one (37).</p>
 
 <p>The program is compiled using MSVC 2013 (I choose it because its LCG is simpler than that in Glib):</p>
 
-<pre>
+_PRE_BEGIN
 .text:0040112E rand            proc near
 .text:0040112E                 call    __getptd
 .text:00401133                 imul    ecx, [eax+0x14], 214013
@@ -520,12 +524,12 @@ So it does:</p>
 .text:0040114C                 mov     eax, ecx
 .text:0040114E                 retn
 .text:0040114E rand            endp
-</pre>
+_PRE_END
 
 <p>This is very simple LCG, but the result is not clipped state, but it's rather shifted by 16 bits.
 Let's define LCG in Z3:</p>
 
-<pre>
+_PRE_BEGIN
 #!/usr/bin/python
 from z3 import *
 
@@ -567,12 +571,12 @@ s.add(output_next==URem((state10>>16)&0x7FFF,100))
 
 print(s.check())
 print(s.model())
-</pre>
+_PRE_END
 
 <p>URem states for <i>unsigned remainder</i>.
 It works for some time and gave us correct result!</p>
 
-<pre>
+_PRE_BEGIN
 sat
 [state3 = 2276903645,
  state4 = 1467740716,
@@ -586,7 +590,7 @@ sat
  output_next = 17,
  output_prev = 37,
  state10 = 1390515370]
-</pre>
+_PRE_END
 
 <p>I added about 10 states to be sure result will be correct. It may be not if you supply lesser amount of PRNG numbers.</p>
 
@@ -597,5 +601,10 @@ Well, at least if _HTML_LINK(`https://en.wikipedia.org/wiki/Dual_EC_DRBG',`NSA i
 <p>As far, as I can understand, _HTML_LINK(`http://en.wikipedia.org/wiki/Security_token',`security tokens') like _HTML_LINK(`http://en.wikipedia.org/wiki/RSA_SecurID',`RSA SecurID') can be viewed as just <acronym title="cryptographically secure pseudorandom number generator">CPRNG</acronym> with a secret seed.
 It shows new pseudorandom number each minute, and the server can predict it, because it knows the seed.
 Imagine if such token would implement LCG -- it would be much easier to break!</p>
+
+_HL2(`RSA')
+
+<p>Modular arithmetic is also used in RSA algorithm in its core.
+I've written an article about it: _HTML_LINK_AS_IS(`http://yurichev.com/blog/RSA/').</p>
 
 _BLOG_FOOTER()

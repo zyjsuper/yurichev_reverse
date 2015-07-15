@@ -234,7 +234,8 @@ Out[]= {{3, 1}, {7, 122}, {11, 456}}
 _PRE_END
 
 <p>This is somewhat wasteful way to store the numbers, but out of curiosity: 
-there are infinite number of prime numbers and infinitely big numbers can be <i>stored</i> within composite number.</p>
+since there are infinite number of prime numbers and so any number of infinitely big numbers can be <i>stored</i> 
+within one (although huge) composite number.</p>
 
 _HL2(`Coprime numbers')
 
