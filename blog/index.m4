@@ -10,13 +10,7 @@ My old blog is still accessible at its old address: _HTML_LINK_AS_IS(`http://blo
 
 _HL2(`The posts:')
 
-<ul>
-<li>9-Jul-2015: _HTML_LINK(`http://yurichev.com/blog/RSA/',`How RSA works')
-<li>13-Jun-2015: _HTML_LINK(`http://yurichev.com/blog/modulo/',`Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3.')
-<li>16-May-2015: _HTML_LINK(`http://yurichev.com/blog/llvm/',`Tweaking LLVM Obfuscator + quick look into some of LLVM internals.')
-<li>13-May-2015: _HTML_LINK(`http://yurichev.com/blog/entropy/',`(Beginners level) Analyzing unknown binary files using information entropy.')
-<li>25-Apr-2015: _HTML_LINK(`http://yurichev.com/blog/fortune/',`(Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
-</ul>
+m4_include(`blog/posts.html')
 
 <p>Some of older posts: _HTML_LINK_AS_IS(`http://blog.yurichev.com/')</p>
 

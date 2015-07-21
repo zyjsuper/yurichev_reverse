@@ -8,6 +8,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	PE_patcher.html PE_search_str_refs.html \
 	mailing_lists.html contacts.html cvt2sparse.html \
 	donate.html donors.html \
+	blog/posts.html \
 	blog/index.html \
 	blog/fortune/index.html \
 	blog/entropy/index.html \
@@ -15,6 +16,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/llvm/index.html \
 	blog/clique/index.html \
 	blog/RSA/index.html
+
 all: default 
 clean: 
 	rm *.html

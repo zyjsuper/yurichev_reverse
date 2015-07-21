@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`21-Jul-2015: Clique in graph theory.')
+_HEADER_HL1(`22-Jul-2015: Clique in graph theory.')
 
 <p>
 Graph is a group of nodes, some of them may be connected with each other, some are not.
