@@ -28,7 +28,7 @@ community =
   VertexLabels -> "Name"]
 _PRE_END
 
-<p><center><img src="http://yurichev.com/blog/clique/graph1.jpg"></center></p>
+<p><center><img src="http://yurichev.com/blog/clique/graph1.png"></center></p>
 
 <p>Let's try to find largest clique:</p>
 
@@ -44,7 +44,7 @@ _PRE_BEGIN
 HighlightGraph[community, clique]
 _PRE_END
 
-<p><center><img src="http://yurichev.com/blog/clique/graph2.jpg"></center></p>
+<p><center><img src="http://yurichev.com/blog/clique/graph2.png"></center></p>
 
 _HL2(`Social graph: IRC network')
 
