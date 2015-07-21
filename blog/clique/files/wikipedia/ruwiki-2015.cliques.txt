@@ -1,4 +1,4 @@
-* clique size 31
+﻿* clique size 31
 Acleris askoldana
 Acleris ophthalmicana
 Acleris delicatana
