@@ -13,6 +13,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/entropy/index.html \
 	blog/modulo/index.html \
 	blog/llvm/index.html \
+	blog/clique/index.html \
 	blog/RSA/index.html
 all: default 
 clean: 
