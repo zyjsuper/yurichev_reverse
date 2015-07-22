@@ -68,7 +68,7 @@ Let's say, we would build a link between two IRC users if
 2) do this at least 6 months (not necessary consequent).
 </p>
 
-<p>The largest cliques of #ubuntu IRC channel is then these:</p>
+<p>The largest cliques of #ubuntu IRC channel in 10-11 years period are these:</p>
 
 _PRE_BEGIN
 * clique size 11
