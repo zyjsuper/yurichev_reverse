@@ -18,7 +18,7 @@ In graph theory, <i>clique</i> is a <i>subgraph</i> (part of graph) each <i>vert
 _HL2(`Social graph: simple example')
 
 <p><i>Social graph</i> is a graph representing social links.
-Her is example I made in Wolfram Mathematica:</p>
+Here is example I made in Wolfram Mathematica:</p>
 
 _PRE_BEGIN
 community = 
@@ -37,7 +37,7 @@ In[]:= clique = FindClique[community]
 Out[]= {{John, Mark, Alice, Tim}}
 _PRE_END
 
-<p>Indeed, each of these four persons is connected to every other 3.
+<p>Indeed, each of these four persons is connected to each among other 3.
 Wolfram Mathematica can highlight subgraph in graph:</p>
 
 _PRE_BEGIN
