@@ -12,7 +12,7 @@ Computer network is graph indeed, but it's closer to <i>sparse graph</i>, becaus
 
 <p>
 <i>Clique</i> in everyday speech (especially in political news) denotes a tight-knit group of people inside of some community.
-In graph theory, <i>clique</i> is a <i>subgraph</i> (part of graph) each <i>vertices</i> (<i>nodes</i> or <i>members</i>) of which are connected to each other.
+In graph theory, <i>clique</i> is a <i>subgraph</i> (part of graph) each <i>vertices</i> (<i>nodes</i> or <i>members</i>) of which are connected with each other.
 </p>
 
 _HL2(`Social graph: simple example')
@@ -97,6 +97,7 @@ _PRE_END
 <p>
 Perhaps, these users are frequenters of the channel. List of all cliques are _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/clique/files/IRC/results.txt',`here').
 The output is not terse, because all listed cliques are cliques indeed, and single user or users group can be member of several cliques, that's correct.
+Cliques can be overlapped and be members of bigger cliques.
 It's possible to produce more human-like results using 
 _HTML_LINK(`https://en.wikipedia.org/wiki/Community_structure#Algorithms_for_finding_communities',`more complex algorithms for finding communities').
 </p>
@@ -105,7 +106,7 @@ _HTML_LINK(`https://en.wikipedia.org/wiki/Community_structure#Algorithms_for_fin
 
 _HL2(`Links graph: Wikipedia')
 
-<p>Wikipedia has a lot of internal links, ~450,000,000 in English Wikipedia as of summer 2015, if not to count user/talk/media pages, etc.
+<p>Wikipedia has a lot of internal links, ~463,000,000 in English Wikipedia as of summer 2015, if not to count user/talk/media pages, etc.
 It's possible to build a graph where Wikipedia article is a vertice (or node) and a link from one article to another is edge.
 By link between articles we would call the case when the first article has the link to the second article, but also the second has the link to the first one.</p>
 
