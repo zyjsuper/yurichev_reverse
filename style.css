@@ -57,3 +57,9 @@ blockquote
   padding: 0.5em 10px;
 }
 
+.ImageBorder
+{
+    border-width: 1px;
+    border-color: Black;
+}
+
