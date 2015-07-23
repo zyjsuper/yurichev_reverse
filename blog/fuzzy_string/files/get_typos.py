@@ -6,12 +6,42 @@ from lxml import etree
 from sets import Set
 import sys, time, re, os, frobenoid, Levenshtein
 
-def process_file (fname):
+def wikipedia_main_namespace(title):
+    if title.startswith ("Wikipedia:"):
+        return False
+    if title.startswith ("Wikipedia talk:"):
+        return False
+    if title.startswith ("User:"):
+        return False
+    if title.startswith ("User talk:"):
+        return False
+    if title.startswith ("Category:"):
+        return False
+    if title.startswith ("Category talk:"):
+        return False
+    if title.startswith ("Talk:"):
+        return False
+    if title.startswith ("File:"):
+        return False
+    if title.startswith ("File talk:"):
+        return False
+    if title.startswith ("Template:"):
+        return False
+    if title.startswith ("Template talk:"):
+        return False
+    if title.startswith ("Portal:"):
+        return False
+    if title.startswith ("Special:"):
+        return False
+    if title.startswith (":"):
+        return False
+    return True
+
+def process_file (fname, words_stat):
     current_tags=[]
     tmp="{http://www.mediawiki.org/xml/export-0.10/}"
     namespaces = []
     cur_title=""
-    words_stat={}
 
     context = etree.iterparse(fname, events=("start", "end", "start-ns", "end-ns"))
     for event, elem in context:
@@ -33,8 +63,8 @@ def process_file (fname):
 		cur_title=elem.text
 
             if elem.tag==tmp+"text":
-                if elem.text!=None: # FIXME
-		    # this is text
+		if wikipedia_main_namespace(cur_title) and elem.text!=None: # FIXME
+		    # this is text in main namespace
 		    for x in re.split('\s+', elem.text):
 			l=unicode(x.lower())
 			if len(l)>5 and frobenoid.str_is_latin(l):
@@ -43,10 +73,22 @@ def process_file (fname):
             if elem.tag==tmp+"page":
                 pass
             elem.clear()
-    return words_stat
 
-words_stat=process_file(sys.argv[1])
-sys.stderr.write (sys.argv[1]+" parsed\n")
+words_stat={}
+
+i=1
+args=len(sys.argv)
+while i<args:
+    fname=sys.argv[i]
+    sys.stderr.write ("parsing "+fname+"...\n")
+    process_file(fname, words_stat)
+    sys.stderr.write (fname+" parsed\n")
+    i=i+1
+
+if i==1:
+    print "no files at input"
+    print "usage: enwiki* > typos"
+    exit(0)
 
 words_stat_len=len(words_stat)
 dictionary_word_threshold=words_stat_len/500
