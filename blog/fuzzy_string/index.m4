@@ -6,14 +6,14 @@ _HEADER_HL1(`23-Jul-2015: Fuzzy string matching + simplest possible spellcheckin
 
 <center><img src="http://yurichev.com/blog/fuzzy_string/google_typo.png" class="ImageBorder"></center>
 
-<p>Google (and any other search engine) detect typos and misspelling with the help of information that input word ("infr<b>u</b>structure") is really rare
-and it can be transformed to a very popular word ("infr<b>a</b>structure") using just single editing operation.</p>
+<p>Google (and any other search engine) detect typos and misspellings with the help of information that input word ("infr<b>u</b>structure") is really rare
+(according to their database) and it can be transformed to a very popular word ("infr<b>a</b>structure", again, in their database) using just single editing operation.</p>
 
 <p>This is called <i>fuzzy string matching</i> or <i>approximate string matching</i>.</p>
 
 _HL2(`Levenshtein distance')
 
-<p>One of the simplest and popular fuzzy string matching metrics is Levenshtein distance, it is just number of editing operations (inserting, deleting, replacing) 
+<p>One of the simplest and popular fuzzy string matching metrics is Levenshtein distance, it is just a number of editing operations (inserting, deleting, replacing) 
 required to transform one string to another.</p>
 
 <p>Let's test it in Wolfram Mathematica:</p>
@@ -81,7 +81,7 @@ Indeed, "Holms" word is almost equal to "Holmes" with one character deleted.</p>
 
 _HL2(`Simplest possible spellchecking: typos and  misspellings correction in Wikipedia')
 
-<p>Fuzzy string matching algorithms are very popular nowadays at a websites, because it's almost impossible to demand correct spelling from website users.</p>
+<p>Fuzzy string matching algorithms are very popular nowadays at a websites, because it's almost impossible to demand correct spelling from its users.</p>
 
 <p>Let's try to find typos in Wikipedia.
 It's size is tremendous, so I'll take only one part of june 2015 dump: 
@@ -101,7 +101,7 @@ The second part is called "words to check" and contain rare words, which occurre
 <p>Then the script takes each "word to check" and calculates distance between it and an each word in the "probably correct words" dictionary.
 If the resulting distance is 1 or 2, it may be a typo and it's reported.</p>
 
-<p>Here is example output (number in parenthesis is a number of occurrences of the "rare" word in the whole dump):</p>
+<p>Here is example report (number in parenthesis is a number of occurrences of the "rare" word in the whole dump):</p>
 
 _PRE_BEGIN
 typo? motori (7) suggestions= [u'motors']
@@ -125,7 +125,7 @@ typo? arbour (2) suggestions= [u'harbour']
 _PRE_END
 
 <p>These are just rare words, and my script didn't collected big enough dictionary with these.
-Keep in mind, my script doesn't have its own English dictionary, it's just collected from Wikipedia itself.</p>
+Keep in mind, my script doesn't have its own English dictionary, its dictionary is built using Wikipedia itself.</p>
 
 <p>The full list of typos my script found is: 
 _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015-current9-dist1.txt',`enwiki2015-current9-dist1.txt').
