@@ -58,7 +58,8 @@ _HL2(`Approximate grep utility')
 <p>There is a variant of grep which works <i>approximately</i>: agrep 
 (_HTML_LINK(`https://en.wikipedia.org/wiki/Agrep',`wikipedia article'), 
 _HTML_LINK(`https://github.com/Wikinaut/agrep',`source code'), 
-_HTML_LINK(`http://www.tgries.de/agrep/',`more information')).</p>
+_HTML_LINK(`http://www.tgries.de/agrep/',`more information')).
+It is a standard package at least in Ubuntu Linux.</p>
 
 <p>Let's pretend, I forgot how to spell name of Sherlock Holmes correctly.
 I've downloaded "The Adventures of Sherlock Holmes", by Arthur Conan Doyle from the Gutenberg library 
@@ -78,6 +79,18 @@ _PRE_END
 
 <p><i>-1</i> mean that agrep would match words with Levenshtein distance of 1 editing operation.
 Indeed, "Holms" word is almost equal to "Holmes" with one character deleted.</p>
+
+<p>The following command will not find any Holmes word ("Homs" is different from "Holmes" by 2 characters):</p>
+
+_PRE_BEGIN
+agrep -1 "Homs" pg1661.txt
+_PRE_END
+
+<p>But this will do:</p>
+
+_PRE_BEGIN
+agrep -2 "Homs" pg1661.txt
+_PRE_END
 
 _HL2(`Simplest possible spellchecking: typos and  misspellings correction in Wikipedia')
 
@@ -130,6 +143,11 @@ Keep in mind, my script doesn't have its own English dictionary, its dictionary 
 <p>The full list of typos my script found is: 
 _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015-current9-dist1.txt',`enwiki2015-current9-dist1.txt').
 Keep in mind, it's not whole Wikipedia, only it's part (since I do not own powerful computers and my script is very far from optimized).</p>
+
+<p>Update: I added the list of all suspicious typos and misspellings for the whole Wikipedia:
+_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015.typos.txt',`enwiki2015.typos.txt').</p>
+
+<hr>
 
 <p>When the script reports words which matching words in dictionary by distance of 2, the report will be bigger.</p>
 
