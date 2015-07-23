@@ -59,7 +59,6 @@ blockquote
 
 .ImageBorder
 {
-    border-width: 1px;
-    border-color: Black;
+    border: 1px solid black;
 }
 
