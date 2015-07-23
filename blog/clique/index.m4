@@ -104,6 +104,59 @@ _HTML_LINK(`https://en.wikipedia.org/wiki/Community_structure#Algorithms_for_fin
 
 <p>The source code of my scripts _HTML_LINK(`https://github.com/dennis714/yurichev.com/tree/master/blog/clique/files/IRC',`here'). I used excellent _HTML_LINK(`https://networkx.github.io/',`networkx graph library').</p>
 
+_HL3(`Attempt to find communities in IRC social graph')
+
+<p>Wolfram Mathematica can try to find communities within social graph.
+Here I will import information about all IRC interactions from the start of 2013 till the summer of 2015.
+User nicknames are coded by numbers for simplicity.</p>
+
+_PRE_BEGIN
+In[]:= g2 = 
+ Graph[{91708 -> 93574, 93414 -> 91525, 93414 -> 89579, 
+   90407 -> 93896, 93414 -> 93598, 93809 -> 5909, 93698 -> 93801, 
+   93163 -> 83317, 84930 -> 93896, 93414 -> 92947, 93414 -> 91708, 
+   93792 -> 92887, 84930 -> 91708, 91708 -> 84930, 88400 -> 93698, 
+   ...
+   93809 -> 93475, 93698 -> 92887, 93801 -> 93670, 92887 -> 93598}]
+_PRE_END
+
+<p>The resulting graph is:</p>
+
+<center><img src="http://yurichev.com/blog/clique/IRC_g2.png"></center>
+
+<p>There some artifacts (at the bottom) which can be ignored so far, I think.
+There is prominent centers: one huge and two others are smaller.
+I'm not sure, but I can suggest these parts of graph are just users who has different sleep paterns, or, more likely, from different time zones,
+so each important time zone (like Americas, Europe, Asia/Oceania) may have their own social communities.
+But again, I'm not sure, this should be investigated first.</p>
+
+<p>Let's try to find communities and hightlight them within the graph:</p>
+
+_PRE_BEGIN
+c2 = FindGraphCommunities[g2];
+HighlightGraph[g2, Map[Subgraph[g2, #] &, c2]]
+_PRE_END
+
+<center><img src="http://yurichev.com/blog/clique/IRC_c2.png"></center>
+
+<p>Hard to say if Mathematica right, but this is what it did.</p>
+
+<p>Now let's take the whole graph of all IRC interactions starting at year 2004 till the summer of 2015.
+The graph is much bigger:</p>
+
+<center><img src="http://yurichev.com/blog/clique/IRC_g1.png"></center>
+
+<p>There are more artifacts.</p>
+
+<p>Let's apply Mathematica's method to find communities:</p>
+
+<center><img src="http://yurichev.com/blog/clique/IRC_c1.png"></center>
+
+<p>Is it right? Maybe. Needless to say, since timespan is so long (at least 10 years), we can belive that some communities which may exists in 2004-2006 may be
+extinct in 2014-2015 (people got older, lost their interest in Ubuntu Linux, etc), but they all are visible on this graph.</p>
+
+<p>Summary: perhaps, on our next experiment we should filter out IRC data by years and time zones.</p>
+
 _HL2(`Social graph: social networks')
 
 <p>Perhaps, social networking websites like Facebook and Twitter in the "people you may know" tab shows you users of most populous (by your current friends) cliques.
