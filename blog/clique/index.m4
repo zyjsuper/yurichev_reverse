@@ -104,6 +104,11 @@ _HTML_LINK(`https://en.wikipedia.org/wiki/Community_structure#Algorithms_for_fin
 
 <p>The source code of my scripts _HTML_LINK(`https://github.com/dennis714/yurichev.com/tree/master/blog/clique/files/IRC',`here'). I used excellent _HTML_LINK(`https://networkx.github.io/',`networkx graph library').</p>
 
+_HL2(`Social graph: social networks')
+
+<p>Perhaps, social networking websites like Facebook and Twitter in the "people you may know" tab shows you users of most populous (by your current friends) cliques.
+It may be much more complex in reality, but nevertheless, this is simplest possible way to offer you new social contacts.</p>
+
 _HL2(`Links graph: Wikipedia')
 
 <p>Wikipedia has a lot of internal links, ~463,000,000 in English Wikipedia as of summer 2015, if not to count user/talk/media pages, etc.
