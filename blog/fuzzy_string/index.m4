@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`23-Jul-2015: Fuzzy string matching.')
+_HEADER_HL1(`23-Jul-2015: Fuzzy string matching + simplest possible spellchecking + hunting for typos and misspellings in Wikipedia.')
 
 <p>Almost all Internet users sometimes typing so fast and see something like this:</p>
 
@@ -79,7 +79,7 @@ _PRE_END
 <p><i>-1</i> mean that agrep would match words with Levenshtein distance of 1 editing operation.
 Indeed, "Holms" word is almost equal to "Holmes" with one character deleted.</p>
 
-_HL2(`Typos correction in Wikipedia')
+_HL2(`Simplest possible spellchecking: typos and  misspellings correction in Wikipedia')
 
 <p>Fuzzy string matching algorithms are very popular nowadays at a websites, because it's almost impossible to demand correct spelling from website users.</p>
 
@@ -113,7 +113,7 @@ typo? synonim (7) suggestions= [u'synonym']
 typo? choise (7) suggestions= [u'choose', u'choice']
 _PRE_END
 
-<p>These are clearly typos.
+<p>These are clearly typos/misspellings.
 It seems, "choise" is a very popular typo: _HTML_LINK_AS_IS(`https://archive.is/CaMTD').
 (I made snapshot of Wikipedia search page because someone may correct these typos very soon).</p>
 

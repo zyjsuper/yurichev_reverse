@@ -26,7 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
-    post(f1,f2,datetime.datetime(2015,7,23,0,0,0), "fuzzy_string", "Fuzzy string matching")
+    post(f1,f2,datetime.datetime(2015,7,23,0,0,0), "fuzzy_string", "Fuzzy string matching + simplest possible spellchecking + hunting for typos and misspellings in Wikipedia")
     post(f1,f2,datetime.datetime(2015,7,22,0,0,0), "clique", "Clique in graph theory")
     post(f1,f2,datetime.datetime(2015,7,9,0,0,0), "RSA", "How RSA works")
     post(f1,f2,datetime.datetime(2015,6,13,0,0,0), "modulo", "Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3")
