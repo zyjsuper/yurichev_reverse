@@ -15,6 +15,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/modulo/index.html \
 	blog/llvm/index.html \
 	blog/clique/index.html \
+	blog/fuzzy_string/index.html \
 	blog/RSA/index.html
 
 all: default 
