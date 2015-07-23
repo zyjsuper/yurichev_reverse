@@ -76,7 +76,7 @@ In[]:= FactorInteger[100]
 Out[]= {{2, 2}, {5, 2}}
 _PRE_END
 
-<p>This mean that 100 can be constructed using 2 and 5 prime numbers:</p>
+<p>This mean that 100 can be constructed using 2 and 5 prime numbers ($2^2 \cdot 5^2$):</p>
 
 _PRE_BEGIN
 In[]:= 2^2*5^2
@@ -101,7 +101,8 @@ In[]:= Map[Prime[#] &, Range[5]]
 Out[]= {2, 3, 5, 7, 11}
 _PRE_END
 
-<p>Build a huge number using prime numbers as bases and ASCII codes as exponents, then get a product of all them:</p>
+<p>Build a huge number using prime numbers as bases and ASCII codes as exponents, then get a product of all them 
+($2^{72} \cdot 3^{101} \cdot 5^{108} \cdot 7^{108} \cdot 11^{111}$):</p>
 
 _PRE_BEGIN
 In[]:= 2^72*3^101*5^108*7^108*11^111
@@ -132,7 +133,7 @@ _PRE_END
 <p>That allows to have some fun.
 Let's add exclamation point to the end of string by manipulating only the <i>big number</i>.
 ASCII code of exlamation point is 33. The next prime number after 11 is 13.
-So add it:</p>
+So add it (by multiplying by $13^{33}$):</p>
 
 _PRE_BEGIN
 In[122]:= %116*13^33
@@ -160,7 +161,7 @@ _PRE_END
 <p>Wow, that works. Will it be possible to remove one 'l' character from the string at the third position?
 'l' has ASCII code of 108 and it is exponent for two prime numbers in our expression: 5 (first 'l') and 7 (second 'l').</p>
 
-<p>To knock out the character, we divide the <i>big number</i> by the corresponding prime number with the exponent of 108:</p>
+<p>To knock out the character, we divide the <i>big number</i> by the corresponding prime number with the exponent of 108 (divide by $5^{108}$):</p>
 
 _PRE_BEGIN
 In[126]:= %122/5^108
@@ -232,6 +233,8 @@ _PRE_BEGIN
 In[]:= FactorInteger[%]
 Out[]= {{3, 1}, {7, 122}, {11, 456}}
 _PRE_END
+
+<p>So the resulting number has $3 \cdot 7^{122} \cdot 11^{456}$ form at the end.</p>
 
 <p>This is somewhat wasteful way to store the numbers, but out of curiosity: 
 since there are infinite number of prime numbers and so any number of infinitely big numbers can be <i>stored</i> 
