@@ -592,7 +592,7 @@ sat
  state10 = 1390515370]
 _PRE_END
 
-<p>I added about 10 states to be sure result will be correct. It may be not if you supply lesser amount of PRNG numbers.</p>
+<p>I added ~10 states to be sure result will be correct. It may be not if you supply lesser amount of PRNG numbers.</p>
 
 <p>That is the reason why LCG is not suitable for any security-related task.
 This is why _HTML_LINK(`https://en.wikipedia.org/wiki/Cryptographically_secure_pseudorandom_number_generator',`cryptographically secure pseudorandom number generators') are exist: they are designed to be protected against such simple attack.
