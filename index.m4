@@ -89,7 +89,6 @@ _HL2(`Other')
 <ul>
 <li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
-<li>_HTML_LINK(`refs', `Some of my references')
 </ul>
 
 _HL2(`Contacts')
