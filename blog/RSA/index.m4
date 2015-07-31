@@ -105,7 +105,7 @@ _PRE_END
 ($2^{72} \cdot 3^{101} \cdot 5^{108} \cdot 7^{108} \cdot 11^{111}$):</p>
 
 _PRE_BEGIN
-In[]:= 2^72*3^101*5^108*7^108*11^111
+In[]:= tmp = 2^72*3^101*5^108*7^108*11^111
 Out[]= \
 1649465578065933994718255257642275679479006861206428830641826551739434\
 9344066214616222018844835866267141943107823334187149334898562231349428\
@@ -115,10 +115,10 @@ Out[]= \
 000
 _PRE_END
 
-<p>It's a big number, but Wolfram Mathematica is able to factor it back (percent sign in Mathematica denotes the last result):</p>
+<p>It's a big number, but Wolfram Mathematica is able to factor it back:</p>
 
 _PRE_BEGIN
-In[]:= FactorInteger[%]
+In[]:= FactorInteger[tmp]
 Out[]= {{2, 72}, {3, 101}, {5, 108}, {7, 108}, {11, 111}}
 _PRE_END
 
@@ -126,7 +126,7 @@ _PRE_END
 Get the text string back:</p>
 
 _PRE_BEGIN
-In[]:= FromCharacterCode[Map[#[[2]] &, %]]
+In[]:= FromCharacterCode[Map[#[[2]] &, tmp]]
 Out[]= "Hello"
 _PRE_END
 
@@ -136,8 +136,8 @@ ASCII code of exlamation point is 33. The next prime number after 11 is 13.
 So add it (by multiplying by $13^{33}$):</p>
 
 _PRE_BEGIN
-In[122]:= %116*13^33
-Out[122]= \
+In[]:= tmp = tmp*13^33
+Out[]= \
 9494539005656577744061615691556750598033024729435332190254469113536733\
 9032823543118405499931761589928052797992206631285822671397023217541663\
 5920521812548793623881568510051214975599793760307837993570818136014139\
@@ -146,16 +146,14 @@ Out[122]= \
 000000000000000000000000000000000000000
 _PRE_END
 
-<p>(%116 is the number of cell is Mathematica with the <i>big number</i>).</p>
-
 <p>So we got new number. Let's factor it back and decode:</p>
 
 _PRE_BEGIN
-In[124]:= FactorInteger[%122]
-Out[124]= {{2, 72}, {3, 101}, {5, 108}, {7, 108}, {11, 111}, {13, 33}}
+In[]:= factored = FactorInteger[tmp]
+Out[]= {{2, 72}, {3, 101}, {5, 108}, {7, 108}, {11, 111}, {13, 33}}
 
-In[125]:= FromCharacterCode[Map[#[[2]] &, %124]]
-Out[125]= "Hello!"
+In[]:= FromCharacterCode[Map[#[[2]] &, factored]]
+Out[]= "Hello!"
 _PRE_END
 
 <p>Wow, that works. Will it be possible to remove one 'l' character from the string at the third position?
@@ -164,19 +162,19 @@ _PRE_END
 <p>To knock out the character, we divide the <i>big number</i> by the corresponding prime number with the exponent of 108 (divide by $5^{108}$):</p>
 
 _PRE_BEGIN
-In[126]:= %122/5^108
-Out[126]= \
+In[]:= tmp = tmp/5^108
+Out[]= \
 3081154065769189664244341216329094565621009415122099836376732969546063\
 1079164051611808432546107410277501678916823138724630810880390384343750\
 1196528030610615786507542545262118293483878711112407171889948257893463\
 8494741216231004109210436295299274515484540190050751059821909485854359\
 9630924207126074604240892753608704
 
-In[127]:= FactorInteger[%126]
-Out[127]= {{2, 72}, {3, 101}, {7, 108}, {11, 111}, {13, 33}}
+In[]:= factored = FactorInteger[tmp]
+Out[]= {{2, 72}, {3, 101}, {7, 108}, {11, 111}, {13, 33}}
 
-In[128]:= FromCharacterCode[Map[#[[2]] &, %127]]
-Out[128]= "Helo!"
+In[]:= FromCharacterCode[Map[#[[2]] &, factored]]
+Out[]= "Helo!"
 _PRE_END
 
 _HL3(`Using composite number as a container (another example)')
@@ -185,14 +183,14 @@ _HL3(`Using composite number as a container (another example)')
 Let's increment the number at the second position within it by multiplicating by the first prime number (3):</p>
 
 _PRE_BEGIN
-In[]:= 1*3
+In[]:= tmp = 1*3
 Out[]= 3
 _PRE_END
 
 <p>Then let's set the number at fourth posistion to 123. The fourth prime number is 7 (the percent sign in Mathematica denotes the last result):</p>
 
 _PRE_BEGIN
-In[]:= %*7^123
+In[]:= tmp = tmp*7^123
 Out[]= 26557071110804040505330743411815438275701018334410643480070773\
 5780279761186999642944265644421128096489029
 _PRE_END
@@ -200,7 +198,7 @@ _PRE_END
 <p>Then let's set the number at fifth position to 456. The fifth prime number is 11:</p>
 
 _PRE_BEGIN
-In[]:= %*11^456
+In[]:= tmp = tmp*11^456
 Out[]= 19917948660639605307938425372554395433764512138284060223646519\
 1257621966825293455339751080188144910510813322192288287162176499976800\
 9147068591160798243308591883294649069355015558472564457422829073938118\
@@ -215,7 +213,7 @@ _PRE_END
 <p>Then let's decrement the number at fourth position, the fourth prime number is 7:</p>
 
 _PRE_BEGIN
-In[]:= %/7
+In[]:= tmp = tmp/7
 Out[]= 28454212372342293297054893389363422048235017340405800319495027\
 3225174238321847793342501543125921300729733317417554695945966428538287\
 0210097987372568919012274118992355813364307940675092082032612962768740\
@@ -230,7 +228,7 @@ _PRE_END
 <p>Let's factor the composite number and get all the numbers we set inside <i>container</i> (1, 122, 456):</p>
 
 _PRE_BEGIN
-In[]:= FactorInteger[%]
+In[]:= FactorInteger[tmp]
 Out[]= {{3, 1}, {7, 122}, {11, 456}}
 _PRE_END
 
