@@ -165,6 +165,11 @@ _PRE_END
 <p>The full list is here:
 _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015-current9-dist2.txt',`enwiki2015-current9-dist2.txt').</p>
 
+<hr>
+
+<p>In this example, I use English language Wikipedia, byt my script can be easily extended to any other language.
+Just write your own _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/get_typos.py#L70',`str_is_latin() function').</p>
+
 _HL2(`Other applications')
 
 <p>Another extremely important application of fuzzy string matching is data entry applications where it's very easy to make mistakes in spelling of someone's names
