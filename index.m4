@@ -91,6 +91,8 @@ _HL2(`Other')
 <li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
 </ul>
 
+m4_include(`google.html')
+
 _HL2(`Contacts')
 
 _HTML_LINK(`contacts.html', `Contacts').

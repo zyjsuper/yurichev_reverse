@@ -17,6 +17,8 @@ m4_include(`blog/posts.html')
 <p>Feel free to translate them to other languages, except Russian, please!
 Just ask me, I will prepare Russian version by myself.</p>
 
+m4_include(`google.html')
+
 _HL2(`Subscribe to the blog:')
 
 <p><a href="http://yurichev.com/blog/rss.xml"><img src="rss_button.gif"></a></p>
