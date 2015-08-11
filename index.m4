@@ -13,6 +13,7 @@ _HL2(`Some of my writings:')
 <ul>
 <li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
 <li>My _HTML_LINK(`blog', `blog'), has some new articles.
+<li>_HTML_LINK(`writings/log_intro.pdf', `Introduction to logarithms').
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>_HTML_LINK(`writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
 <li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
