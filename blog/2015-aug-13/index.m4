@@ -13,7 +13,7 @@ I'll post some reverse engineering exercises here in blog.</p>
 I'll publish answer some days later...</p>
 
 _PRE_BEGIN
-0000000000000000 <f>:
+0000000000000000 &lt;f&gt;:
    0:   49 89 f8                mov    r8,rdi
    3:   53                      push   rbx
    4:   48 89 f7                mov    rdi,rsi
@@ -21,7 +21,7 @@ _PRE_BEGIN
    a:   4c 89 c6                mov    rsi,r8
    d:   48 31 d2                xor    rdx,rdx
 
-0000000000000010 <begin>:
+0000000000000010 &lt;begin&gt;:
   10:   48 ad                   lods   rax,QWORD PTR ds:[rsi]
   12:   48 f7 f3                div    rbx
   15:   48 ab                   stos   QWORD PTR es:[rdi],rax
