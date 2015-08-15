@@ -61,8 +61,8 @@ int main()
 <p class="spoiler">Why it works: DIV/IDIV instruction takes input 64+64-bit value in RDX:EAX registers pair, divides it by RBX (where divisor is),
 then places remainder in RDX and result in RAX. RAX is stored into the array containing result, but RDX is used at the next iteration as high part of the next
 chunk.
-Needless to say, LODS, STOS and LOOP instructions are very rare in compiler-generated code. Indeed, I copypasted it from Abrash's book.
-This is the sign that this piece was written manually.</p>
+Needless to say, LODS, STOS and LOOP instructions are almost never appeared in compiler-generated code.
+Indeed, I copypasted it from Abrash's book, and, apparently he wrote this piece manually (or took it from some other manually written code).</p>
 
 _HL2(`The next reverse engineering exercise (for x86, ARM, ARM64, MIPS)')
 
