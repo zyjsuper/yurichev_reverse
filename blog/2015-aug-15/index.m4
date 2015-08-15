@@ -67,7 +67,7 @@ _HL2(`The next reverse engineering exercise (for x86, ARM, ARM64, MIPS)')
 <p>Optimizing GCC 4.8.2 -m32:</p>
 
 _PRE_BEGIN
-00000000 <f>:
+00000000 &lt;f&gt;:
    0:   8b 44 24 04             mov    eax,DWORD PTR [esp+0x4]
    4:   0f c8                   bswap  eax
    6:   89 c2                   mov    edx,eax
@@ -94,7 +94,7 @@ _PRE_END
 <p>Optimizing GCC 4.9.3 (Linaro) for ARM64:</p>
 
 _PRE_BEGIN
-0000000000000000 <f>:
+0000000000000000 &lt;f&gt;:
    0:   5ac00800        rev     w0, w0
    4:   1200cc01        and     w1, w0, #0xf0f0f0f
    8:   1204cc00        and     w0, w0, #0xf0f0f0f0
