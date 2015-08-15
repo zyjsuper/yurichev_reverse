@@ -33,6 +33,12 @@ p.right
     text-align: right
 }
 
+p.spoiler 
+{
+    text-align: right
+    color: white
+}
+
 kbd 
 {
 	/* copypasted from stackoverflow */
