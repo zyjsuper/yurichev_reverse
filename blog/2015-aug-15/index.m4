@@ -29,7 +29,7 @@ uint64_t __attribute__ ((noinline)) long_div (uint64_t *input, uint64_t *result,
 	equivalent C version:
 
 	uint32_t remainder=0;
-	for (int i=0; i<4; i++)
+	for (int i=0; i<size; i++)
 	{
 		result[i]=(((uint64_t)remainder << 32) | (uint64_t)input[i]) / divisor;
 		remainder=input[i] % divisor;
