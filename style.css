@@ -12,7 +12,7 @@ A:active, A:hover
 {
     color: #0000FF;
 }
-pre
+pre.normal
 {
     font-family: monospace, sans-serif;
     border: 1px dashed #2f6fab;
