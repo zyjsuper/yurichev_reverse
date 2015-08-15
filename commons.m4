@@ -55,6 +55,6 @@ m4_define(`_GREY', `<font color="#808080">$1</font>')
 m4_define(`_BOOK_NOT_FINISHED', `$1')
 m4_define(`_HEADER_HL1', `_HEADER(`$1')_HL1(`$1')')
 
-m4_define(`_PRE_BEGIN',`<pre><span class="inner-pre" style="font-size: 13px">')
+m4_define(`_PRE_BEGIN',`<pre class="normal"><span class="inner-pre" style="font-size: 13px">')
 m4_define(`_PRE_END',`</pre>')
 

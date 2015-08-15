@@ -8,7 +8,7 @@ _HL2(`Solution for the exercise posted at 13 August')
 <p>Reddit discussion: _HTML_LINK_AS_IS(`https://www.reddit.com/r/ReverseEngineering/comments/3gtyk7/introduction_to_logarithms_yet_another_x86/').</p>
 <p>Spoiler warning! The text below has white color, select it using mouse to read the text:</p>
 
-<p style="color: white;">The code I used is partly copypasted from the 
+<p class="spoiler">The code I used is partly copypasted from the 
 <a href="http://www.jagregory.com/abrash-black-book/#full-32-bit-division" style="color: white;">Michael Abrash's book</a>
 and it's the function to divide long (which has $n \cdot 64 $ bits) value by 64-bit divisor.
 It returns long result and 64-bit remainder.
@@ -57,7 +57,7 @@ int main()
 </pre>
 </p>
 
-<p style="color: white;">Why it works: DIV/IDIV instruction takes input 64+64-bit value in RDX:EAX registers pair, divides it by RBX (where divisor is),
+<p class="spoiler">Why it works: DIV/IDIV instruction takes input 64+64-bit value in RDX:EAX registers pair, divides it by RBX (where divisor is),
 then places remainder in RDX and result in RAX. RAX is stored into the array containing result, but RDX is used at the next iteration as high part of the next
 chunk.
 Needless to say, LODS, STOS and LOOP instructions are very rare in compiler-generated code. Indeed, I copypasted it from Abrash's book.
