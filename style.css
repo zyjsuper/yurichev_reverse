@@ -30,13 +30,12 @@ pre.spoiler
 }
 p.right 
 {
-    text-align: right
+    text-align: right;
 }
 
 p.spoiler 
 {
-    text-align: right
-    color: white
+    color: white;
 }
 
 kbd 
