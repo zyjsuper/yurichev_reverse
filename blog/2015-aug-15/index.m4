@@ -9,7 +9,7 @@ _HL2(`Solution for the exercise posted at 13 August')
 <p>Spoiler warning! The text below has white color, select it using mouse to read the text:</p>
 
 <p class="spoiler">The code I used is partly copypasted from the 
-<a href="http://www.jagregory.com/abrash-black-book/#full-32-bit-division" style="color: white;">Michael Abrash's book</a>
+<a href="http://www.jagregory.com/abrash-black-book/#full-32-bit-division" class="spoiler">Michael Abrash's book</a>
 and it's the function to divide long (which has $n \cdot 64 $ bits) value by 64-bit divisor.
 It returns long result and 64-bit remainder.
 In my code below, it is used for dividing 256-bit value by 64-bit one.

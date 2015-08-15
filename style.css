@@ -12,6 +12,10 @@ A:active, A:hover
 {
     color: #0000FF;
 }
+A.spoiler
+{
+    color: white;
+}
 pre.normal
 {
     font-family: monospace, sans-serif;
