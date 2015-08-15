@@ -115,7 +115,7 @@ _PRE_BEGIN
   34:   d65f03c0        ret
 _PRE_END
 
-<p>Keil 5.05 (ARM mode):</p>
+<p>(ARM) Keil 5.05 (ARM mode):</p>
 
 _PRE_BEGIN
 f       PROC
@@ -144,7 +144,7 @@ f       PROC
         DCD      0x33333333
 _PRE_END
 
-<p>Keil 5.05 (Thumb mode):</p>
+<p>(ARM) Keil 5.05 (Thumb mode):</p>
 
 _PRE_BEGIN
 f       PROC
