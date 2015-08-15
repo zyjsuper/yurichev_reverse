@@ -28,4 +28,9 @@ clean:
 	rm blog/fortune/*.html
 	rm blog/llvm/*.html
 	rm blog/RSA/*.html
+	rm blog/modulo/*.html
+	rm blog/clique/*.html
+	rm blog/fuzzy_string/*.html
+	rm blog/2015-aug-13/*.html
+	rm blog/2015-aug-15/*.html
 
