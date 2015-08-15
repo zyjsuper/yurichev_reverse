@@ -16,7 +16,7 @@ In my code below, it is used for dividing 256-bit value by 64-bit one.
 </p>
 
 <p style="color: white;">
-<pre style="background-color: white; color: white;">
+<pre class="spoiler">
 #include &lt;stdio.h&gt;
 #include &lt;stdint.h&gt;
 #include &lt;inttypes.h&gt;
