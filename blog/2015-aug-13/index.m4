@@ -33,5 +33,8 @@ _PRE_END
 
 <p>I'll post more exercises soon...</p>
 
+<p>Update: Reddit discussion: _HTML_LINK_AS_IS(`https://www.reddit.com/r/ReverseEngineering/comments/3gtyk7/introduction_to_logarithms_yet_another_x86/').</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/src/blog/2015-aug-15/').</p>
+
 _BLOG_FOOTER()
 
