@@ -6,7 +6,7 @@ _HL2(`Solution for the exercise posted at 13 August')
 
 <p>Link to exercise: _HTML_LINK_AS_IS(`http://yurichev.com/blog/2015-aug-13/').</p>
 <p>Reddit discussion: _HTML_LINK_AS_IS(`https://www.reddit.com/r/ReverseEngineering/comments/3gtyk7/introduction_to_logarithms_yet_another_x86/').</p>
-<p>Spoiler warning! The text below has white color, select it using mouse to read the text:</p>
+<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A):</p>
 
 <p class="spoiler">The code I used is partly copypasted from the 
 <a href="http://www.jagregory.com/abrash-black-book/#full-32-bit-division" class="spoiler">Michael Abrash's book</a>
@@ -115,7 +115,7 @@ _PRE_BEGIN
   34:   d65f03c0        ret
 _PRE_END
 
-<p>(ARM) Keil 5.05 (ARM mode):</p>
+<p>(ARM) Optimizing Keil 5.05 (ARM mode):</p>
 
 _PRE_BEGIN
 f       PROC
@@ -144,7 +144,7 @@ f       PROC
         DCD      0x33333333
 _PRE_END
 
-<p>(ARM) Keil 5.05 (Thumb mode):</p>
+<p>(ARM) Optimizing Keil 5.05 (Thumb mode):</p>
 
 _PRE_BEGIN
 f       PROC
