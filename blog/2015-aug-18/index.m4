@@ -45,7 +45,7 @@ The function is used in Linux kernel mostly in drivers, here are examples:
 
 _HL2(`The next reverse engineering exercise (for x86, ARM, ARM64, MIPS)')
 
-<p>What this code does? The function has array of 64 32-bit integers, I removed it in each assembly code snippet.
+<p>What this code does? The function has array of 64 32-bit integers, I removed it in each assembly code snippet to save space.
 The array is:</p>
 
 _PRE_BEGIN
