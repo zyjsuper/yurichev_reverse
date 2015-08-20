@@ -19,5 +19,7 @@ _PRE_END
 
 <p>Good luck!</p>
 
+<p>Some of my other crackmes: _HTML_LINK_AS_IS(`http://crackmes.de/users/yonkie').</p>
+
 _BLOG_FOOTER()
 
