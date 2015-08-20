@@ -26,6 +26,8 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2015,8,20,0,0,0), "2015-aug-20", "Some parts of my Reverse Engineering book translated to Chinese.")
+
     post(f1,f2,datetime.datetime(2015,8,18,0,0,0), "2015-aug-18", "Solution for the exercise posted at 15 August; the next reverse engineering exercise (for x86, ARM, ARM64, MIPS)")
     post(f1,f2,datetime.datetime(2015,8,15,0,0,0), "2015-aug-15", "Solution for the exercise posted at 13 August; the next reverse engineering exercise (for x86, ARM, ARM64, MIPS)")
     post(f1,f2,datetime.datetime(2015,8,13,0,0,0), "2015-aug-13", "Introduction to logarithms; yet another x86 reverse engineering exercise")
