@@ -20,6 +20,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/2015-aug-15/index.html \
 	blog/2015-aug-18/index.html \
 	blog/2015-aug-20/index.html \
+	blog/crackme4/index.html \
 	blog/RSA/index.html
 
 all: default 
