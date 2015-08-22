@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2015,8,22,0,0,0), "de_bruijn", "De Bruijn sequences (solution for the exercise posted at 18-Aug-2015); leading/trailing zero bits counting.")
     post(f1,f2,datetime.datetime(2015,8,20,0,0,0), "crackme4", "Yet another crackme (or rather keygenme).")
     post(f1,f2,datetime.datetime(2015,8,20,0,0,0), "2015-aug-20", "Some parts of my Reverse Engineering book translated to Chinese.")
 
