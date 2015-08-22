@@ -41,7 +41,7 @@ This is so because De Bruijn sequences are cyclic.</p>
 
 _HL2(`Trailing zero bits counting')
 
-<p>In _HTML_LINK(`https://en.wikipedia.org/wiki/De_Bruijn_sequence',`Wikipedia article about De Bruijn sequences') we can read:</p>
+<p>In _HTML_LINK(`https://en.wikipedia.org/wiki/De_Bruijn_sequence',`Wikipedia article about De Bruijn sequences') we can find:</p>
 
 <blockquote>The symbols of a De Bruijn sequence written around a circular object (such as a wheel of a robot) can be used to identify its angle by examining the n consecutive symbols facing a fixed point.</blockquote>
 
