@@ -190,7 +190,7 @@ f:
         nop
 _PRE_END
 
-<p>I'll post solution couple of days later.</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/de_bruijn/').</p>
 
 _BLOG_FOOTER()
 
