@@ -7,7 +7,7 @@ _HL2(`Introduction')
 <p>Let's imagine there is a very simplified code lock accepting 2 digits, but it has no "enter" key, it just checks 2 last entered digits.
 Our task is to brute force each 2-digit combination.
 Naïve method is to try 00, 01, 02 ... 99.
-That require 3*100=300 key pressings.
+That require 2*100=200 key pressings.
 Will it be possible to reduce number of key pressings during brute-force?
 It is indeed so, with the help of De Bruijn sequences.
 We can generate them for the code lock, using Wolfram Mathematica:</p>
@@ -21,7 +21,7 @@ Out[]= {6, 8, 6, 5, 4, 3, 2, 1, 7, 8, 7, 1, 1, 0, 9, 0, 8, 0, 6, 6, \
 6, 7, 6, 4, 5, 9, 5, 8, 5, 6, 9}
 _PRE_END
 
-<p>The result has exactly 100 digits, which is 3 times less than our initial idea can offer.
+<p>The result has exactly 100 digits, which is 2 times less than our initial idea can offer.
 By scanning visually this 100-digits array, you'll find any number in 00..99 range.
 All numbers are overlapped with each other: second half of each number is also first half of the next number, etc.</p>
 
