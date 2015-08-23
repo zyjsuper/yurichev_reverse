@@ -8,90 +8,90 @@ _HEADER_HL1(`Reverse engineering exercise #5 (for x86, ARM, ARM64, MIPS)')
 
 _PRE_BEGIN
 &lt;f>:
- 	push   rbp
- 	mov    rbp,rsp
- 	mov    QWORD PTR [rbp-0x28],rdi
- 	mov    QWORD PTR [rbp-0x30],rsi
- 	mov    QWORD PTR [rbp-0x38],rdx
- 	mov    QWORD PTR [rbp-0x40],rcx
- 	mov    rax,QWORD PTR [rbp-0x40]
- 	cmp    rax,QWORD PTR [rbp-0x30]
- 	jbe    28 <f+0x28>
- 	mov    eax,0x0
- 	jmp    b5 <f+0xb5>
- 	mov    QWORD PTR [rbp-0x10],0x0
-
- 	jmp    98 <f+0x98>
- 	mov    DWORD PTR [rbp-0x14],0x0
- 	mov    QWORD PTR [rbp-0x8],0x0
-
- 	jmp    76 <f+0x76>
- 	mov    rax,QWORD PTR [rbp-0x8]
- 	mov    rdx,QWORD PTR [rbp-0x10]
- 	add    rdx,rax
- 	mov    rax,QWORD PTR [rbp-0x28]
- 	add    rax,rdx
- 	movzx  edx,BYTE PTR [rax]
- 	mov    rax,QWORD PTR [rbp-0x10]
- 	mov    rcx,QWORD PTR [rbp-0x38]
- 	add    rax,rcx
- 	movzx  eax,BYTE PTR [rax]
- 	cmp    dl,al
- 	je     71 <f+0x71>
- 	mov    DWORD PTR [rbp-0x14],0x1
- 	add    QWORD PTR [rbp-0x8],0x1
- 	mov    rax,QWORD PTR [rbp-0x8]
- 	cmp    rax,QWORD PTR [rbp-0x40]
- 	jb     43 <f+0x43>
- 	cmp    DWORD PTR [rbp-0x14],0x0
- 	jne    93 <f+0x93>
- 	mov    rax,QWORD PTR [rbp-0x10]
- 	mov    rdx,QWORD PTR [rbp-0x28]
- 	add    rax,rdx
- 	jmp    b5 <f+0xb5>
- 	add    QWORD PTR [rbp-0x10],0x1
- 	mov    rax,QWORD PTR [rbp-0x40]
- 	mov    rdx,QWORD PTR [rbp-0x30]
- 	sub    rdx,rax
- 	mov    rax,rdx
- 	add    rax,0x1
- 	cmp    rax,QWORD PTR [rbp-0x10]
- 	ja     32 <f+0x32>
- 	mov    eax,0x0
- 	pop    rbp
- 	ret    
+   0:	 	push   rbp
+   1:	 	mov    rbp,rsp
+   4:	 	mov    QWORD PTR [rbp-0x28],rdi
+   8:	 	mov    QWORD PTR [rbp-0x30],rsi
+   c:	 	mov    QWORD PTR [rbp-0x38],rdx
+  10:	 	mov    QWORD PTR [rbp-0x40],rcx
+  14:	 	mov    rax,QWORD PTR [rbp-0x40]
+  18:	 	cmp    rax,QWORD PTR [rbp-0x30]
+  1c:	 	jbe    28 <f+0x28>
+  1e:	 	mov    eax,0x0
+  23:	 	jmp    b5 <f+0xb5>
+  28:	 	mov    QWORD PTR [rbp-0x10],0x0
+  2f:	
+  30:	 	jmp    98 <f+0x98>
+  32:	 	mov    DWORD PTR [rbp-0x14],0x0
+  39:	 	mov    QWORD PTR [rbp-0x8],0x0
+  40:	
+  41:	 	jmp    76 <f+0x76>
+  43:	 	mov    rax,QWORD PTR [rbp-0x8]
+  47:	 	mov    rdx,QWORD PTR [rbp-0x10]
+  4b:	 	add    rdx,rax
+  4e:	 	mov    rax,QWORD PTR [rbp-0x28]
+  52:	 	add    rax,rdx
+  55:	 	movzx  edx,BYTE PTR [rax]
+  58:	 	mov    rax,QWORD PTR [rbp-0x10]
+  5c:	 	mov    rcx,QWORD PTR [rbp-0x38]
+  60:	 	add    rax,rcx
+  63:	 	movzx  eax,BYTE PTR [rax]
+  66:	 	cmp    dl,al
+  68:	 	je     71 <f+0x71>
+  6a:	 	mov    DWORD PTR [rbp-0x14],0x1
+  71:	 	add    QWORD PTR [rbp-0x8],0x1
+  76:	 	mov    rax,QWORD PTR [rbp-0x8]
+  7a:	 	cmp    rax,QWORD PTR [rbp-0x40]
+  7e:	 	jb     43 <f+0x43>
+  80:	 	cmp    DWORD PTR [rbp-0x14],0x0
+  84:	 	jne    93 <f+0x93>
+  86:	 	mov    rax,QWORD PTR [rbp-0x10]
+  8a:	 	mov    rdx,QWORD PTR [rbp-0x28]
+  8e:	 	add    rax,rdx
+  91:	 	jmp    b5 <f+0xb5>
+  93:	 	add    QWORD PTR [rbp-0x10],0x1
+  98:	 	mov    rax,QWORD PTR [rbp-0x40]
+  9c:	 	mov    rdx,QWORD PTR [rbp-0x30]
+  a0:	 	sub    rdx,rax
+  a3:	 	mov    rax,rdx
+  a6:	 	add    rax,0x1
+  aa:	 	cmp    rax,QWORD PTR [rbp-0x10]
+  ae:	 	ja     32 <f+0x32>
+  b0:	 	mov    eax,0x0
+  b5:	 	pop    rbp
+  b6:	 	ret    
 _PRE_END
 
 <p>Optimizing GCC 4.9.3 for ARM64:</p>
 
 _PRE_BEGIN
 &lt;f>:
-        cmp     x3, x1
-        b.hi    54 <f+0x54>
-        sub     x1, x1, x3
-        mov     x8, #0x0                        // #0
-        adds    x9, x1, #0x1
-        b.eq    54 <f+0x54>
-        cbz     x3, 5c <f+0x5c>
-        ldrb    w7, [x2,x8]
-        mov     x1, #0x0                        // #0
-        mov     w4, #0x0                        // #0
-        add     x6, x0, x8
-        ldrb    w5, [x6,x1]
-        add     x1, x1, #0x1
-        cmp     w5, w7
-        csinc   w4, w4, wzr, eq
-        cmp     x1, x3
-        b.ne    2c <f+0x2c>
-        cbz     w4, 60 <f+0x60>
-        add     x8, x8, #0x1
-        cmp     x8, x9
-        b.ne    18 <f+0x18>
-        mov     x0, #0x0                        // #0
-        ret
-        add     x6, x0, x8
-        mov     x0, x6
-        ret
+   0:           cmp     x3, x1
+   4:           b.hi    54 <f+0x54>
+   8:           sub     x1, x1, x3
+   c:           mov     x8, #0x0                        // #0
+  10:           adds    x9, x1, #0x1
+  14:           b.eq    54 <f+0x54>
+  18:           cbz     x3, 5c <f+0x5c>
+  1c:           ldrb    w7, [x2,x8]
+  20:           mov     x1, #0x0                        // #0
+  24:           mov     w4, #0x0                        // #0
+  28:           add     x6, x0, x8
+  2c:           ldrb    w5, [x6,x1]
+  30:           add     x1, x1, #0x1
+  34:           cmp     w5, w7
+  38:           csinc   w4, w4, wzr, eq
+  3c:           cmp     x1, x3
+  40:           b.ne    2c <f+0x2c>
+  44:           cbz     w4, 60 <f+0x60>
+  48:           add     x8, x8, #0x1
+  4c:           cmp     x8, x9
+  50:           b.ne    18 <f+0x18>
+  54:           mov     x0, #0x0                        // #0
+  58:           ret
+  5c:           add     x6, x0, x8
+  60:           mov     x0, x6
+  64:           ret
 _PRE_END
 
 <p>(ARM) Optimizing Keil 5.05 (ARM mode):</p>
