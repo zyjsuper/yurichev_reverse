@@ -202,7 +202,7 @@ accounts and friend each other.</p>
 <p>If to build a graph of all links between LiveJournal users, and find largest cliques, there will be prominent unusually large cliques of LiveJournal users, 
 up to ~1000.
 In real world, you would not easliy find a social group of ~1000 persons who keeps mutual links with each other 
-(there is interesting reading about it: _HTML_LINK(`https://en.wikipedia.org/w/index.php?title=Dunbar%27s_number',`Dunbar&rsquo;s number').</p>
+(there is interesting reading about it: _HTML_LINK(`https://en.wikipedia.org/w/index.php?title=Dunbar%27s_number',`Dunbar&rsquo;s number')).</p>
 
 <p>Well, spammers could lower this number, so each fake user would have 100-200 mutual friends instead of ~1000 (which is less suspicious), but still, 
 cliques were too perfect: each node connected to each other with very low

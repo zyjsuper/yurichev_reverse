@@ -32,7 +32,7 @@ In[]:= DeBruijnSequence[{0, 1}, 3]
 Out[]= {1, 0, 1, 0, 0, 0, 1, 1}
 _PRE_END
 
-<p>Sequence length is just 8 bits, but it has all numbers in 000..111 range.
+<p>Sequence length is just 8 bits, but it has all binary numbers in 000..111 range.
 You may visually spot 000 in the middle of sequence.
 111 is also present: two first bits of it at the end of sequence and the last bit is in the beginning.
 This is so because De Bruijn sequences are cyclic.</p>
@@ -313,7 +313,7 @@ It is slightly different: the table is twice bigger, and the function returns -1
 The magic number I found using just brute-force, so the readers will not be able to google it, for the sake of exercise.</p>
 
 <p>The code is tricky after all, and the moral of the exercise is that practicing reverse engineer sometimes may just observe input/outputs to understand
-code's behaviour instead of untangling it.</p>
+code's behaviour instead of diving into it.</p>
 
 _HL2(`Performance')
 
