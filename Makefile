@@ -24,6 +24,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/crackme4/index.html \
 	blog/de_bruijn/index.html \
 	blog/exercise5/index.html \
+	blog/encrypted_DB_case_1/index.html \
 	blog/RSA/index.html
 
 all: default 
