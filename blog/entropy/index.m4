@@ -340,6 +340,8 @@ so the GnuPG asking for some additional randomness from the user.</p>
 
 <hr>
 
-<p>Update: some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=9545276')</p>
+<p>Update: some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=9545276').
+Here is my article where I made attempt to calculate entropy of some unknown blocks:
+_HTML_LINK_AS_IS(`http://yurichev.com/blog/encrypted_DB_case_1/').</p>
 
 _BLOG_FOOTER()

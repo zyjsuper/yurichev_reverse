@@ -319,8 +319,9 @@ This leads to important property of CFB mode: data must not be padded, data of a
 can be encrypted and decrypted.</p>
 
 <p>Oh, that's why all encrypted blocks are not padded.
-And that's why AESDEC instruction is never called.
-Let's try to decrypt first block manually, using Python.
+And that's why AESDEC instruction is never called.</p>
+
+<p>Let's try to decrypt first block manually, using Python.
 CFB mode is also use IV (initialization vector), as a "seen" to "random generator".
 In our case, IV is the block which is encrypted at first stage:</p>
 
@@ -365,7 +366,8 @@ _PRE_BEGIN
 00000020: 66 66 66 9E 61 40 D4 07  06 01                    fff.a@....
 _PRE_END
 
-<p>Now this is something readable!</p>
+<p>Now this is something readable!
+And now we can see why there were so many equal bytes at the first decryption stage: because plaintext has so many zero bytes!</p>
 
 <p>Let's decrypt the second block:</p>
 
