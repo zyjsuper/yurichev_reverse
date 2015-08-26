@@ -223,9 +223,6 @@ $L5:
         nop
 _PRE_END
 
-<p>Stay tuned, solution will be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/2015-aug-26/').</p>
 
 _BLOG_FOOTER()
-
-
-
