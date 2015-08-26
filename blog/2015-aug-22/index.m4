@@ -142,7 +142,7 @@ f:
         srl     $2,$2,24 
 _PRE_END
 
-<p>I'll post solution soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/2015-aug-26/').</p>
 
 _BLOG_FOOTER()
 
