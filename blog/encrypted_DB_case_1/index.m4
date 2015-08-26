@@ -303,7 +303,7 @@ _HL2(`Cipher Feedback mode')
 In this mode, AES algorithms used not as encryption algorithm, but as a device which generates cryptographically secure random data.
 The actual encryption is happens using simple XOR operation.</p>
 
-<p>Here is encryption algorithm:</p>
+<p>Here is encryption algorithm (images are taken from Wikipedia):</p>
 
 <center><img src="http://yurichev.com/blog/encrypted_DB_case_1/601px-CFB_encryption.svg.png"></center>
 
