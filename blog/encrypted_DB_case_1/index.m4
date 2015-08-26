@@ -517,7 +517,7 @@ for month and day)?
 0x7DD is 2013, 0x7D5 is 2005, etc. Seems fine. This is a date.
 There are 8 more bytes.
 Judging by the fact this is database named "orders", maybe some kind of sum is present here?
-I made attempt to interpret it as IEEE 754 double and dump all values!</p>
+I made attempt to interpret it as double-precision IEEE 754 floating point and dump all values!</p>
 
 <p>Some are:</p>
 
@@ -585,7 +585,7 @@ _HTML_LINK(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog
 Or filtered: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/encrypted_DB_case_1/decrypted.short.txt',`decrypted.short.txt').
 Seems correct.</p>
 
-_HL2(`Noise')
+_HL2(`Noise at the end')
 
 <p>The only thing is that sometimes, tail is bigger:</p>
 
@@ -658,7 +658,7 @@ Good introduction book is _HTML_LINK_AS_IS(`https://www.schneier.com/books/appli
 Here is another: _HTML_LINK_AS_IS(`https://crypto.stanford.edu/~dabo/cryptobook/'),
 _HTML_LINK(`https://crypto.stanford.edu/~dabo/cryptobook/draft_0_2.pdf',`link to PDF').</p>
 
-<p>All "encrypted" database contents was artificially constructed for the sake of demonstation.
+<p>All "encrypted" database contents was artificially constructed by me for the sake of demonstation.
 I've got most popular USA names and surnames from there: _HTML_LINK_AS_IS(`http://stackoverflow.com/questions/1803628/raw-list-of-person-names'),
 and combined them randomly.
 Dates and sums are also generated randomly.</p>
