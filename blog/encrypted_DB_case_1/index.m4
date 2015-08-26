@@ -397,7 +397,7 @@ _PRE_BEGIN
 00000020: 66 40 D4 07 06 03                                 f@....
 _PRE_END
 
-<p>All blocks decrypted seems correctly instead of first 16 byte part.</p>
+<p>All blocks decrypted seems correctly except of first 16 byte part.</p>
 
 _HL2(`Initializing Vector')
 
