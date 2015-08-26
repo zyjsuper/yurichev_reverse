@@ -21,6 +21,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/2015-aug-18/index.html \
 	blog/2015-aug-20/index.html \
 	blog/2015-aug-22/index.html \
+	blog/2015-aug-26/index.html \
 	blog/crackme4/index.html \
 	blog/de_bruijn/index.html \
 	blog/exercise5/index.html \
