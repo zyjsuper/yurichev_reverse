@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2015,8,26,0,0,0), "exercise6", "Reverse engineering exercise #6 (for x86, ARM, ARM64, MIPS)")
     post(f1,f2,datetime.datetime(2015,8,26,0,0,0), "2015-aug-26", "Yet another compiler anomaly; two solutions for exercises posted these days")
     post(f1,f2,datetime.datetime(2015,8,26,0,0,0), "encrypted_DB_case_1", "Encrypted database case #1")
     post(f1,f2,datetime.datetime(2015,8,23,0,0,0), "exercise5", "Reverse engineering exercise #5 (for x86, ARM, ARM64, MIPS)")
