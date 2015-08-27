@@ -642,7 +642,7 @@ _PRE_END
 
 <p>The last 02 byte is copied from the previous plaintext buffer.</p>
 
-<p>It's possible if the buffer used while encrypted was global and/or wasn't cleared before
+<p>It's possible if the buffer used while encrypting was global and/or wasn't cleared before
 each encryption.
 The final buffer size value is also biased somehow, nevertheless, the bug left uncatched
 because it doesn't affect decrypting software, it's just ignores noise at the end.

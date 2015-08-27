@@ -310,7 +310,9 @@ _PRE_END
 
 <p>This piece of code I took _HTML_LINK(`http://stackoverflow.com/questions/7365562/de-bruijn-like-sequence-for-2n-1-how-is-it-constructed/7369288#7369288',`here').
 It is slightly different: the table is twice bigger, and the function returns -1 if input value is zero.
-The magic number I found using just brute-force, so the readers will not be able to google it, for the sake of exercise.</p>
+The magic number I found using just brute-force, so the readers will not be able to google it, for the sake of exercise.
+(By the way, I've got 12,665,720 magic numbers which can serve this purpose.
+This is about 0.294% of all 32-bit numbers.)</p>
 
 <p>The code is tricky after all, and the moral of the exercise is that practicing reverse engineer sometimes may just observe input/outputs to understand
 code's behaviour instead of diving into it.</p>
