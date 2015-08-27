@@ -53,7 +53,9 @@ _PRE_END
 <p>_HTML_LINK(`https://en.wikipedia.org/wiki/Variance',`Variance') is low. This mean the entropy values are not very different from each other.
 This is visible on graph:</p>
 
-<p>In[]:= ListPlot[Entropies]</p>
+_PRE_BEGIN
+In[]:= ListPlot[Entropies]
+_PRE_END
 
 <center><img src="http://yurichev.com/blog/encrypted_DB_case_1/entropy.png"></center>
 
@@ -70,6 +72,8 @@ In[]:= EntropiesT = Map[N[Entropy[2, #]] &, BaskervillesLines];
 
 In[]:= Variance[EntropiesT]
 Out[]= 2.73883
+
+In[]:= ListPlot[EntropiesT]
 _PRE_END
 
 <center><img src="http://yurichev.com/blog/encrypted_DB_case_1/conan_doyle.png"></center>
