@@ -322,7 +322,7 @@ can be encrypted and decrypted.</p>
 And that's why AESDEC instruction is never called.</p>
 
 <p>Let's try to decrypt first block manually, using Python.
-CFB mode is also use IV (initialization vector), as a "seen" to "random generator".
+CFB mode also use IV (initialization vector), as a "seed" to "random generator".
 In our case, IV is the block which is encrypted at first stage:</p>
 
 _PRE_BEGIN
