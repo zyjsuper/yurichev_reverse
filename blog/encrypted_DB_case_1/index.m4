@@ -666,5 +666,7 @@ Dates and sums are also generated randomly.</p>
 <p>Nevertheless, many other features I've observed in real-world software applications.
 This example is based on them.</p>
 
+<p>Discussion on HN: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=10128684').</p>
+
 _BLOG_FOOTER()
 
