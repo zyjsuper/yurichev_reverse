@@ -114,7 +114,7 @@ $L8:
         nop
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise7/')</p>
 
 <!-- надо будет потом дописать про "редкие" инструкции вроде SH (MIPS), STRH (ARM), etc -->
 
