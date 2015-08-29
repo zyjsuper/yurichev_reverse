@@ -26,6 +26,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/de_bruijn/index.html \
 	blog/exercise5/index.html \
 	blog/exercise6/index.html \
+	blog/exercise7/index.html \
 	blog/encrypted_DB_case_1/index.html \
 	blog/RSA/index.html
 
