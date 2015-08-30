@@ -438,6 +438,9 @@ _HTML_LINK(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog
 <p>The Python script used for this is: 
 _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/encrypted_DB_case_1/decrypt_blocks.py',`decrypt_blocks.py').</p>
 
+<p>Perhaps, author wanted each block encrypted differently, so he/she used OrderID as part of key.
+It would be also possible to make different AES key instead of IV.</p>
+
 <p>So now we know that IV only affects first block during decryption in CFB mode, this is
 feature of it.
 All other blocks can be decrypted without knowledge IV, but using the key.</p>
@@ -588,6 +591,8 @@ _PRE_END
 _HTML_LINK(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/encrypted_DB_case_1/decrypted.full.with_data.txt',`decrypted.full.with_data.txt').
 Or filtered: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/encrypted_DB_case_1/decrypted.short.txt',`decrypted.short.txt').
 Seems correct.</p>
+
+<p>This is some kind of OOP serialization, i.e., packing differently typed values into binary buffer for storing and/or transmitting.</p>
 
 _HL2(`Noise at the end')
 
