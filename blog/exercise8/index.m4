@@ -6,6 +6,7 @@ _HL2(`Reverse engineering exercise #8 (for x86, ARM, ARM64, MIPS)')
 
 <p>What this code does?
 This is one of the busiest algorithms under the hood, though, usually hidden from programmers.
+It implements one of the most popular algorithms in computer science.
 It features recursion and callback function.</p>
 
 <p>Optimizing GCC 4.8.2:</p>
