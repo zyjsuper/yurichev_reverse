@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2015,9, 4,0,0,0), "FAT12", "(Beginners level) packing 12-bit values into array using bit operations (x64, ARM/ARM64, MIPS)")
     post(f1,f2,datetime.datetime(2015,9, 1,0,0,0), "exercise8", "Reverse engineering exercise #8 (for x86, ARM, ARM64, MIPS); solution for exercise #7")
     post(f1,f2,datetime.datetime(2015,8,29,0,0,0), "exercise7", "Reverse engineering exercise #7 (for x86, ARM, ARM64, MIPS); solution for exercise #6")
     post(f1,f2,datetime.datetime(2015,8,26,0,0,0), "exercise6", "Reverse engineering exercise #6 (for x86, ARM, ARM64, MIPS)")
