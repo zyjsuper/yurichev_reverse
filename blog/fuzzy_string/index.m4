@@ -177,5 +177,9 @@ and surnames.</p>
 
 <p>There is also application is spam filtering, because spammers try to write some well-known word(s) in many different ways to circumvent spam filters.</p>
 
+_HL2(`Further reading')
+
+<p>Peter Norvig explains how to write spelling corrector as the one used by Google: _HTML_LINK_AS_IS(`http://norvig.com/spell-correct.html').</p>
+
 _BLOG_FOOTER()
 

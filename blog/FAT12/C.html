@@ -1,0 +1,93 @@
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>assert.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>define</span><span style='color:#004a43; '> ARRAY_SIZE </span><span style='color:#808030; '>(</span><span style='color:#004a43; '>0x1000</span><span style='color:#808030; '>/</span><span style='color:#004a43; '>2</span><span style='color:#808030; '>*</span><span style='color:#004a43; '>3</span><span style='color:#808030; '>)</span>
+uint8_t array<span style='color:#808030; '>[</span>ARRAY_SIZE<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// big enough array of triplets</span>
+
+<span style='color:#800000; font-weight:bold; '>unsigned</span> <span style='color:#800000; font-weight:bold; '>int</span> get_from_array <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>unsigned</span> <span style='color:#800000; font-weight:bold; '>int</span> idx<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#696969; '>// find right triplet in array:</span>
+	<span style='color:#800000; font-weight:bold; '>int</span> triplet<span style='color:#808030; '>=</span><span style='color:#808030; '>(</span>idx<span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>int</span> array_idx<span style='color:#808030; '>=</span>triplet<span style='color:#808030; '>*</span><span style='color:#008c00; '>3</span><span style='color:#800080; '>;</span>
+	<span style='color:#696969; '>//assert (array_idx&lt;ARRAY_SIZE);</span>
+	
+	<span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>idx<span style='color:#808030; '>&amp;</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#696969; '>// this is odd element</span>
+
+		<span style='color:#696969; '>// compose value using middle and rightmost bytes:</span>
+		<span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0xF</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span> <span style='color:#008c00; '>8</span><span style='color:#808030; '>)</span><span style='color:#808030; '>|</span>array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span>
+	<span style='color:#800000; font-weight:bold; '>else</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#696969; '>// this is even element</span>
+
+		<span style='color:#696969; '>// compose value using rightmost and middle bytes:</span>
+		<span style='color:#800000; font-weight:bold; '>return</span> array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>]</span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>4</span> <span style='color:#808030; '>|</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>4</span><span style='color:#808030; '>)</span><span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0xF</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>void</span> put_to_array <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>unsigned</span> <span style='color:#800000; font-weight:bold; '>int</span> idx<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>unsigned</span> <span style='color:#800000; font-weight:bold; '>int</span> val<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#696969; '>//assert (val&lt;=0xFFF);</span>
+
+	<span style='color:#696969; '>// find right triplet in array:</span>
+	<span style='color:#800000; font-weight:bold; '>int</span> triplet<span style='color:#808030; '>=</span><span style='color:#808030; '>(</span>idx<span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>int</span> array_idx<span style='color:#808030; '>=</span>triplet<span style='color:#808030; '>*</span><span style='color:#008c00; '>3</span><span style='color:#800080; '>;</span>
+	<span style='color:#696969; '>//assert (array_idx&lt;ARRAY_SIZE);</span>
+
+	<span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>idx<span style='color:#808030; '>&amp;</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#696969; '>// this is odd element</span>
+		<span style='color:#696969; '>// put value into middle and rightmost bytes:</span>
+	
+		<span style='color:#696969; '>// decompose value to be stored:</span>
+		uint8_t val_lowest_byte<span style='color:#808030; '>=</span>val<span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0xFF</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// isolate lowest 8 bits</span>
+		uint8_t val_highest_nibble<span style='color:#808030; '>=</span>val<span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>8</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// no need to apply &amp;0xF, we already know the val&lt;=0xFFF</span>
+
+		<span style='color:#696969; '>// clear low 4 bits in the middle byte:</span>
+		array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0xF0</span><span style='color:#800080; '>;</span>
+		
+		array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>|</span>val_highest_nibble<span style='color:#800080; '>;</span>
+		array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>val_lowest_byte<span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span>
+	<span style='color:#800000; font-weight:bold; '>else</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#696969; '>// this is even element</span>
+		<span style='color:#696969; '>// put value into leftmost and middle bytes:</span>
+
+		<span style='color:#696969; '>// decompose value to be stored:</span>
+		uint8_t val_highest_byte<span style='color:#808030; '>=</span>val<span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>4</span><span style='color:#800080; '>;</span>
+		uint8_t val_lowest_nibble<span style='color:#808030; '>=</span>val<span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0xF</span><span style='color:#800080; '>;</span>
+
+		array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>val_highest_byte<span style='color:#800080; '>;</span>
+
+		<span style='color:#696969; '>// clear high 4 bits in the middle byte:</span>
+		array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0xF</span><span style='color:#800080; '>;</span>
+		array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>array<span style='color:#808030; '>[</span>array_idx<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>|</span>val_lowest_nibble<span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>4</span><span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#800080; '>;</span>
+	
+	<span style='color:#696969; '>// test</span>
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span><span style='color:#008000; '>0x1000</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+	<span style='color:#800080; '>{</span>
+		put_to_array<span style='color:#808030; '>(</span>i<span style='color:#808030; '>,</span> i<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+	
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span><span style='color:#008000; '>0x1000</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+	<span style='color:#800080; '>{</span>
+		assert<span style='color:#808030; '>(</span>get_from_array<span style='color:#808030; '>(</span>i<span style='color:#808030; '>)</span><span style='color:#808030; '>=</span><span style='color:#808030; '>=</span>i<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+	<span style='color:#696969; '>//put_to_array(0x1000, 1); // will fail due to assert()</span>
+	
+	<span style='color:#696969; '>// print triplets:</span>
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>i<span style='color:#808030; '>&lt;</span><span style='color:#008000; '>0x1000</span><span style='color:#808030; '>/</span><span style='color:#008c00; '>2</span><span style='color:#800080; '>;</span>i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+		<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>0x</span><span style='color:#007997; '>%02X</span><span style='color:#007997; '>%02X</span><span style='color:#007997; '>%02X</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span>array<span style='color:#808030; '>[</span>i<span style='color:#808030; '>*</span><span style='color:#008c00; '>3</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>array<span style='color:#808030; '>[</span>i<span style='color:#808030; '>*</span><span style='color:#008c00; '>3</span><span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>array<span style='color:#808030; '>[</span>i<span style='color:#808030; '>*</span><span style='color:#008c00; '>3</span><span style='color:#808030; '>+</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>]</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
+

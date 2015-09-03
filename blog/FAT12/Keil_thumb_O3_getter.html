@@ -1,0 +1,65 @@
+<pre style='color:#000000;background:#ffffff;'>get_from_array <span style='color:#004a43; '>PROC</span>
+<span style='color:#696969; '>; R0 = idx</span>
+        <span style='color:#800000; font-weight:bold; '>PUSH</span>     <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>,</span>r5<span style='color:#808030; '>,</span>lr<span style='color:#808030; '>}</span>
+        LSRS     r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R1 = R0>>1 = idx>>1</span>
+<span style='color:#696969; '>; R1 is now number of triplet</span>
+        LSLS     r2<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R2 = R1&lt;&lt;1 = (R0>>1)&lt;&lt;1 = R0&amp;(~1) = idx&amp;(~1)</span>
+<span style='color:#696969; '>; the operation (x>>1)&lt;&lt;1 looks senseless, but it's intended to clear the lowest bit in x (or idx)</span>
+        LSLS     r5<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>31</span>
+<span style='color:#696969; '>; R5 = R0&lt;&lt;31 = idx&lt;&lt;31</span>
+<span style='color:#696969; '>; thus, R5 will contain 0x80000000 in case of even idx or zero if odd </span>
+        ADDS     r4<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r2
+<span style='color:#696969; '>; R4 = R1+R2 = idx>>1 + idx&amp;(~1) = offset of triplet begin (or offset of left byte)</span>
+<span style='color:#696969; '>; the expression looks tricky, but it's equal to multiplication by 1.5</span>
+        LSRS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R0 = R0>>1 = idx>>1</span>
+<span style='color:#696969; '>; load pointer to array:</span>
+        LDR      r3<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>array<span style='color:#808030; '>|</span>
+<span style='color:#696969; '>; R3 = offset of array table</span>
+        LSLS     r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R1 = R0&lt;&lt;1 = (idx>>1)&lt;&lt;1 = idx&amp;(~1)</span>
+        ADDS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+<span style='color:#696969; '>; R0 = idx>>1 + idx&amp;(~1) = idx*1.5 = offset of triple begin</span>
+        ADDS     r1<span style='color:#808030; '>,</span>r3<span style='color:#808030; '>,</span>r0
+<span style='color:#696969; '>; R1 = R3+R0 = offset of array + idx*1.5</span>
+<span style='color:#696969; '>; in other words, R1 now contains absolute address of triplet</span>
+<span style='color:#696969; '>; load middle byte (at address R1+1):</span>
+        LDRB     r2<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; R2 = middle byte</span>
+<span style='color:#696969; '>; finally check if the idx even or odd:</span>
+        <span style='color:#800000; font-weight:bold; '>CMP</span>      r5<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+<span style='color:#696969; '>; jump if even:</span>
+        BEQ      <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.92</span><span style='color:#808030; '>|</span>
+<span style='color:#696969; '>; idx is odd, go on:</span>
+        LSLS     r0<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>28</span>
+<span style='color:#696969; '>; R0 = R2&lt;&lt;28 = middle_byte&lt;&lt;28</span>
+<span style='color:#696969; '>; load right byte at R1+2:</span>
+        LDRB     r1<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>2</span><span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; R1 = right byte</span>
+        LSRS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>20</span>
+<span style='color:#696969; '>; R0 = R0>>20 = (R2&lt;&lt;28)>>20</span>
+<span style='color:#696969; '>; this is the same as R2&lt;&lt;8, but Keil compiler generates more complex code in order to drop all bits behind these 4</span>
+        B        <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.98</span><span style='color:#808030; '>|</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.92</span><span style='color:#808030; '>|</span>
+<span style='color:#696969; '>; idx is even, go on:</span>
+<span style='color:#696969; '>; load left byte. R3=array now and R4=address of it</span>
+        LDRB     r0<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r3<span style='color:#808030; '>,</span>r4<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; R0 = left byte</span>
+        LSLS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; R0 = left_byte&lt;&lt;4</span>
+<span style='color:#696969; '>; shift middle_byte in R2 4 bits right:</span>
+        LSRS     r1<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; R1=middle_byte>>4</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.98</span><span style='color:#808030; '>|</span>
+<span style='color:#696969; '>; function epilogue</span>
+<span style='color:#696969; '>; current R0 value is shifted left byte or part of middle byte</span>
+<span style='color:#696969; '>; R1 is shifted part of middle byte or right byte</span>
+<span style='color:#696969; '>; now merge values and leave merged result in R0:</span>
+        ORRS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+<span style='color:#696969; '>; R0 = R0|R1</span>
+        <span style='color:#800000; font-weight:bold; '>POP</span>      <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>,</span>r5<span style='color:#808030; '>,</span>pc<span style='color:#808030; '>}</span>
+        <span style='color:#004a43; '>ENDP</span>
+</pre>
+

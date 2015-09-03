@@ -1,0 +1,53 @@
+<pre style='color:#000000;background:#ffffff;'><span style='color:#808030; '>&lt;</span>get_from_array<span style='color:#808030; '>></span><span style='color:#808030; '>:</span>
+<span style='color:#696969; '>; W0 = idx</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;0:</span>           lsr     w2<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; W2 = W0>>1 = idx>>1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;4:</span>           <span style='color:#800000; font-weight:bold; '>lsl</span>     w1<span style='color:#808030; '>,</span> w2<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>2</span>
+<span style='color:#696969; '>; W1 = W2&lt;&lt;2 = (W0>>1)&lt;&lt;2 = (idx&amp;(~1))&lt;&lt;1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;8:</span>           <span style='color:#800000; font-weight:bold; '>sub</span>     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> w2
+<span style='color:#696969; '>; W1 = W1-W2 = (idx&amp;(~1))&lt;&lt;1 - idx>>1 = idx*1.5</span>
+<span style='color:#696969; '>; now test lowest bit of idx and jump if it is present.</span>
+<span style='color:#696969; '>; (ARM64 has single instruction for these operations: TBNZ (Test and Branch Not Zero)).</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;c:</span>           tbnz    w0<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>30</span> <span style='color:#808030; '>&lt;</span>get_from_array<span style='color:#808030; '>+</span><span style='color:#008000; '>0x30</span><span style='color:#808030; '>></span>
+
+<span style='color:#696969; '>; idx is even, go on:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;10:</span>           adrp    x2<span style='color:#808030; '>,</span> <span style='color:#004a43; '>page</span> of array
+<span style='color:#e34adc; '>&#xa0;&#xa0;14:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     w3<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x1</span>
+<span style='color:#696969; '>; W3 = W1+1 = idx*1.5 + 1, i.e., offset of middle byte</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;18:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     x2<span style='color:#808030; '>,</span> x2<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>offset</span> of array within <span style='color:#004a43; '>page</span>
+<span style='color:#696969; '>; load left byte at X2+W1 = array + idx*1.5 with sign-extension ("sxtw")</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;1c:</span>           ldrb    w0<span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x2<span style='color:#808030; '>,</span>w1<span style='color:#808030; '>,</span>sxtw<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; load middle byte at X2+W3 = array + idx*1.5 + 1 with sign-extension ("sxtw")</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;20:</span>           ldrb    w1<span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x2<span style='color:#808030; '>,</span>w3<span style='color:#808030; '>,</span>sxtw<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; W0 = left byte</span>
+<span style='color:#696969; '>; W1 = middle byte</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;24:</span>           <span style='color:#800000; font-weight:bold; '>lsl</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; W0 = W0&lt;&lt;4 = left_byte &lt;&lt; 4</span>
+<span style='color:#696969; '>; merge parts:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;28:</span>           orr     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> lsr #<span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; W0 = W0 | W1>>4 = left_byte &lt;&lt; 4 | middle_byte >> 4</span>
+<span style='color:#696969; '>; value in W0 is returned</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;2c:</span>           <span style='color:#800000; font-weight:bold; '>ret</span>
+
+<span style='color:#696969; '>; idx is odd, go on:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;30:</span>           adrp    x2<span style='color:#808030; '>,</span> <span style='color:#004a43; '>page</span> of array
+<span style='color:#e34adc; '>&#xa0;&#xa0;34:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     w0<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x1</span>
+<span style='color:#696969; '>; W0 = W1+1 = idx*1.5+1, i.e., offset of middle byte</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;38:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     x2<span style='color:#808030; '>,</span> x2<span style='color:#808030; '>,</span> address of array within <span style='color:#004a43; '>page</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;3c:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x2</span>
+<span style='color:#696969; '>; W1 = W1+2 = idx*1.5+2, i.e., offset of right byte</span>
+<span style='color:#696969; '>; load middle byte at X2+W0 = array+idx*1.5+1 with sign-extension ("sxtw")</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;40:</span>           ldrb    w0<span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x2<span style='color:#808030; '>,</span>w0<span style='color:#808030; '>,</span>sxtw<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; load right byte at X2+W1 = array+idx*1.5+2 with sign-extension ("sxtw")</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;44:</span>           ldrb    w1<span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x2<span style='color:#808030; '>,</span>w1<span style='color:#808030; '>,</span>sxtw<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; W0 = middle byte</span>
+<span style='color:#696969; '>; W1 = right byte</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;48:</span>           ubfiz   w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>8</span><span style='color:#808030; '>,</span> #<span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; W0 = middle_byte&lt;&lt;8</span>
+<span style='color:#696969; '>; now merge parts:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;4c:</span>           orr     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> w1
+<span style='color:#696969; '>; W0 = W0 | W1 = middle_byte&lt;&lt;8 | right_byte</span>
+<span style='color:#696969; '>; value in W0 is returned</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;50:</span>           <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
+

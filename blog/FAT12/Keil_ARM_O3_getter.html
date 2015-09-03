@@ -1,0 +1,44 @@
+<pre style='color:#000000;background:#ffffff;'>get_from_array <span style='color:#004a43; '>PROC</span>
+<span style='color:#696969; '>; R0 = idx</span>
+        LSR      r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R1 = R0>>1 = idx>>1</span>
+<span style='color:#696969; '>; check lowest bit in idx and set flags:</span>
+        TST      r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+        <span style='color:#800000; font-weight:bold; '>ADD</span>      r2<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R2 = R1+R1&lt;&lt;1 = R1+R1*2 = R1*3</span>
+<span style='color:#696969; '>; thatnks to shifting suffix, a single instruction in ARM mode can multiplicate by 3</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>array<span style='color:#808030; '>|</span>
+<span style='color:#696969; '>; R1 = address of array</span>
+        LSR      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R0 = R0>>1 = idx>>1</span>
+        <span style='color:#800000; font-weight:bold; '>ADD</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; R0 = R0+R0&lt;&lt;1 = R0+R0*2 = R0*3 = (idx>>1)*3 = idx*1.5</span>
+        <span style='color:#800000; font-weight:bold; '>ADD</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+<span style='color:#696969; '>; R0 = R0+R1 = array + idx*1.5, this is absolute address of triplet</span>
+<span style='color:#696969; '>; load middle byte at R0+1:</span>
+        LDRB     r3<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; R3 = middle byte</span>
+
+<span style='color:#696969; '>; the following 3 instructions executed if index is odd, otherwise all of them are skipped:</span>
+<span style='color:#696969; '>; load right byte at R0+2:</span>
+        LDRBNE   r0<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>2</span><span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; R0 = right byte</span>
+        ANDNE    r1<span style='color:#808030; '>,</span>r3<span style='color:#808030; '>,</span>#<span style='color:#008000; '>0xf</span>
+<span style='color:#696969; '>; R1 = R3&amp;0xF = middle_byte&amp;0xF</span>
+        ORRNE    r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>8</span>
+<span style='color:#696969; '>; R0 = R0|(R1&lt;&lt;8) = right_byte | (middle_byte&amp;0xF)&lt;&lt;8</span>
+<span style='color:#696969; '>; this is the result returned</span>
+
+<span style='color:#696969; '>; the following 3 instructions executed if index is even, otherwise all of them are skipped:</span>
+<span style='color:#696969; '>; load at R1+R2 = array + (idx>>1)*3 = array + idx*1.5</span>
+        LDRBEQ   r0<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r1<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; R0 = left byte</span>
+        LSLEQ    r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; R0 = R0&lt;&lt;4 = left_byte &lt;&lt; 4</span>
+        ORREQ    r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r3<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; R0 = R0 | R3>>4 = left_byte &lt;&lt; 4 | middle_byte >> 4</span>
+<span style='color:#696969; '>; this is the result returned</span>
+        <span style='color:#000080; '>BX</span>       lr
+        <span style='color:#004a43; '>ENDP</span>
+</pre>
+
