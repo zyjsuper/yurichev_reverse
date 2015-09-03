@@ -29,19 +29,21 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/exercise7/index.html \
 	blog/exercise8/index.html \
 	blog/encrypted_DB_case_1/index.html \
+	blog/FAT12/index.html \
 	blog/RSA/index.html
 
 all: default 
-clean: 
-	rm *.html
-	rm blog/*.html
-	rm blog/entropy/*.html
-	rm blog/fortune/*.html
-	rm blog/llvm/*.html
-	rm blog/RSA/*.html
-	rm blog/modulo/*.html
-	rm blog/clique/*.html
-	rm blog/fuzzy_string/*.html
-	rm blog/2015-aug-13/*.html
-	rm blog/2015-aug-15/*.html
+#I've too many HTMLs!
+#clean: 
+#	rm *.html
+#	rm blog/*.html
+#	rm blog/entropy/*.html
+#	rm blog/fortune/*.html
+#	rm blog/llvm/*.html
+#	rm blog/RSA/*.html
+#	rm blog/modulo/*.html
+#	rm blog/clique/*.html
+#	rm blog/fuzzy_string/*.html
+#	rm blog/2015-aug-13/*.html
+#	rm blog/2015-aug-15/*.html
 

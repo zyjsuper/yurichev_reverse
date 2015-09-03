@@ -1,0 +1,60 @@
+<pre style='color:#000000;background:#ffffff;'><span style='color:#e34adc; '>get_from_array:</span>
+<span style='color:#696969; '>; $4 = idx</span>
+        srl     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; $2 = $4>>1 = idx>>1</span>
+        lui     <span style='color:#008000; '>$28</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span>hi<span style='color:#808030; '>(</span>__gnu_local_gp<span style='color:#808030; '>)</span>
+        sll     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; $3 = $2&lt;&lt;1 = (idx>>1)&lt;&lt;1 = idx&amp;(~1)</span>
+        andi    <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x1</span>
+<span style='color:#696969; '>; $4 = $4&amp;1 = idx&amp;1</span>
+        addiu   <span style='color:#008000; '>$28</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$28</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span>lo<span style='color:#808030; '>(</span>__gnu_local_gp<span style='color:#808030; '>)</span>
+
+<span style='color:#696969; '>; jump if $4 (idx&amp;1) is not zero (if idx is odd):</span>
+        bne     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$0</span><span style='color:#808030; '>,</span>$L6
+<span style='color:#696969; '>; $2 = $3+$2 = idx>>1 + idx&amp;(~1) = idx*1.5</span>
+	addu    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span> <span style='color:#696969; '>; branch delay slot - this instruction executed before BNE</span>
+
+<span style='color:#696969; '>; idx is even, go on:</span>
+        lw      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span>got<span style='color:#808030; '>(</span>array<span style='color:#808030; '>)</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$28</span><span style='color:#808030; '>)</span>
+<span style='color:#696969; '>; $3 = array</span>
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+        addu    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+<span style='color:#696969; '>; $2 = $3+$2 = array + idx*1.5</span>
+<span style='color:#696969; '>; load byte at $2+0 = array + idx*1.5 (left byte):</span>
+        lbu     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>)</span>
+<span style='color:#696969; '>; $3 = left byte</span>
+<span style='color:#696969; '>; load byte at $2+1 = array + idx*1.5+1 (middle byte):</span>
+        lbu     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>)</span>
+<span style='color:#696969; '>; $2 = middle byte</span>
+        sll     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; $3 = $3&lt;&lt;4 = left_byte&lt;&lt;4</span>
+        srl     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; $2 = $2>>4 = middle_byte>>4</span>
+        j       <span style='color:#008000; '>$31</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span> <span style='color:#696969; '>; branch delay slot - this instruction executed before J</span>
+<span style='color:#696969; '>; $2 = $2|$3 = middle_byte>>4 | left_byte&lt;&lt;4</span>
+<span style='color:#696969; '>; $2=returned result</span>
+
+<span style='color:#e34adc; '>$L6:</span>
+<span style='color:#696969; '>; idx is odd, go on:</span>
+        lw      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span>got<span style='color:#808030; '>(</span>array<span style='color:#808030; '>)</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$28</span><span style='color:#808030; '>)</span>
+<span style='color:#696969; '>; $3 = array</span>
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+        addu    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+<span style='color:#696969; '>; $2 = $3+$2 = array + idx*1.5</span>
+<span style='color:#696969; '>; load byte at $2+1 = array + idx*1.5 + 1 (middle byte)</span>
+        lbu     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>)</span>
+<span style='color:#696969; '>; $4 = middle byte</span>
+<span style='color:#696969; '>; load byte at $2+1 = array + idx*1.5 + 2 (right byte)</span>
+        lbu     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>)</span>
+<span style='color:#696969; '>; $3 = right byte</span>
+        andi    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xf</span>
+<span style='color:#696969; '>; $2 = $4&amp;0xF = middle_byte&amp;0xF</span>
+        sll     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>8</span>
+<span style='color:#696969; '>; $2 = $2&lt;&lt;8 = middle_byte&amp;0xF &lt;&lt; 8</span>
+        j       <span style='color:#008000; '>$31</span>        
+	<span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span> <span style='color:#696969; '>; branch delay slot - this instruction executed before J</span>
+<span style='color:#696969; '>; $2 = $2|$3 = middle_byte&amp;0xF &lt;&lt; 8 | right byte</span>
+<span style='color:#696969; '>; $2=returned result</span>
+</pre>
+

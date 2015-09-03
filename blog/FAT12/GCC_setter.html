@@ -1,0 +1,65 @@
+<pre style='color:#000000;background:#ffffff;'><span style='color:#e34adc; '>put_to_array:</span>
+<span style='color:#696969; '>; EDI=idx</span>
+<span style='color:#696969; '>; ESI=val</span>
+<span style='color:#696969; '>; copy idx to EAX:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edi</span>
+<span style='color:#696969; '>; calculate idx>>1 and put it to EAX:</span>
+        <span style='color:#800000; font-weight:bold; '>shr</span>     <span style='color:#000080; '>eax</span>
+<span style='color:#696969; '>; isolate lowest bit in idx:</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#000080; '>edi</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; calculate (idx>>2)*3 and put it to EAX:</span>
+        <span style='color:#800000; font-weight:bold; '>lea</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>rax<span style='color:#808030; '>+</span>rax<span style='color:#808030; '>*</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; jump if index is odd (NE is the same as NZ (Not Zero)):</span>
+        <span style='color:#800000; font-weight:bold; '>jne</span>     <span style='color:#e34adc; '>.L5</span>
+
+<span style='color:#696969; '>; this is even element, go on</span>
+<span style='color:#696969; '>; sign-extend address of triplet in EAX to RDX:</span>
+        <span style='color:#800000; font-weight:bold; '>movsx</span>   rdx<span style='color:#808030; '>,</span> <span style='color:#000080; '>eax</span>
+<span style='color:#696969; '>; copy val value to ECX:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>ecx</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>esi</span>
+<span style='color:#696969; '>; calculate address of middle byte:</span>
+        <span style='color:#800000; font-weight:bold; '>add</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span>
+<span style='color:#696969; '>; sign-extend address in EAX to RDX:</span>
+        cdqe
+<span style='color:#696969; '>; prepare left byte in ECX by shifting it:</span>
+        <span style='color:#800000; font-weight:bold; '>shr</span>     <span style='color:#000080; '>ecx</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; prepare 4 bits for middle byte:</span>
+        <span style='color:#bb7977; font-weight:bold; '>sal</span>     <span style='color:#000080; '>esi</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span>
+<span style='color:#696969; '>; put left byte:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#800000; font-weight:bold; '>BYTE</span> <span style='color:#800000; font-weight:bold; '>PTR</span> array<span style='color:#808030; '>[</span>rdx<span style='color:#808030; '>]</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>cl</span>
+<span style='color:#696969; '>; load middle byte (its address still in RAX):</span>
+        <span style='color:#800000; font-weight:bold; '>movzx</span>   <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>BYTE</span> <span style='color:#800000; font-weight:bold; '>PTR</span> array<span style='color:#808030; '>[</span>rax<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; drop high 4 bits:</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>15</span> <span style='color:#696969; '>; 15=0xF</span>
+<span style='color:#696969; '>; merge our data and low 4 bits which were there before:</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#000080; '>esi</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edx</span>
+<span style='color:#696969; '>; put middle byte back:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#800000; font-weight:bold; '>BYTE</span> <span style='color:#800000; font-weight:bold; '>PTR</span> array<span style='color:#808030; '>[</span>rax<span style='color:#808030; '>]</span><span style='color:#808030; '>,</span> sil
+        <span style='color:#800000; font-weight:bold; '>ret</span>
+<span style='color:#e34adc; '>.L5:</span>
+<span style='color:#696969; '>; this is odd element, go on</span>
+<span style='color:#696969; '>; calculate address of middle byte and put it to ECX:</span>
+        <span style='color:#800000; font-weight:bold; '>lea</span>     <span style='color:#000080; '>ecx</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>rax<span style='color:#808030; '>+</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; copy val value from ESI to EDI:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>edi</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>esi</span>
+<span style='color:#696969; '>; calculate address of right byte:</span>
+        <span style='color:#800000; font-weight:bold; '>add</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span>
+<span style='color:#696969; '>; get high 4 bits of input value by shifting it 8 bits right:</span>
+        <span style='color:#800000; font-weight:bold; '>shr</span>     <span style='color:#000080; '>edi</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>8</span>
+<span style='color:#696969; '>; sign-extend address in EAX into RAX:</span>
+        cdqe
+<span style='color:#696969; '>; sign-extend address of middle byte in ECX to RCX:</span>
+        <span style='color:#800000; font-weight:bold; '>movsx</span>   rcx<span style='color:#808030; '>,</span> <span style='color:#000080; '>ecx</span>
+<span style='color:#696969; '>; load middle byte into EDX:</span>
+        <span style='color:#800000; font-weight:bold; '>movzx</span>   <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>BYTE</span> <span style='color:#800000; font-weight:bold; '>PTR</span> array<span style='color:#808030; '>[</span>rcx<span style='color:#808030; '>]</span>
+<span style='color:#696969; '>; drop low 4 bits in middle byte:</span>
+	<span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>-16</span> <span style='color:#696969; '>; -16=0xF0</span>
+<span style='color:#696969; '>; merge data from input val with what was in middle byte before:</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edi</span>
+<span style='color:#696969; '>; store middle byte:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#800000; font-weight:bold; '>BYTE</span> <span style='color:#800000; font-weight:bold; '>PTR</span> array<span style='color:#808030; '>[</span>rcx<span style='color:#808030; '>]</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>dl</span>
+<span style='color:#696969; '>; store right byte. val is still in ESI and SIL is a part of ESI register which has lowest 8 bits:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#800000; font-weight:bold; '>BYTE</span> <span style='color:#800000; font-weight:bold; '>PTR</span> array<span style='color:#808030; '>[</span>rax<span style='color:#808030; '>]</span><span style='color:#808030; '>,</span> sil
+        <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
+
