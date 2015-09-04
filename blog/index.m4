@@ -1,12 +1,8 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`My new blog')
+_HEADER_HL1(`My blog')
 
 <p>Main topics are reverse engineering, programming, math...</p>
-
-<p>I stepped aside from Drupal since it requires a lot of maintenance. 
-On the other hand, web1.0 + m4 + git + rsync requires much less maintenance, if at all.
-My old blog is still accessible at its old address: _HTML_LINK_AS_IS(`http://blog.yurichev.com')</p>
 
 _HL2(`The posts:')
 
@@ -38,6 +34,13 @@ Or send an empty email to: _HTML_LINK(`mailto:yurichev+subscribe@googlegroups.co
 <form METHOD=POST action="send_email.php">
 <p>Enter email for subscription:  <input type="text" name="email"><input type="submit" value="Submit"></p>
 </form> 
+
+_HL2(`Old blog')
+
+<p>I stepped aside from Drupal since it requires a lot of maintenance. 
+On the other hand, web1.0 + m4 + git + rsync requires much less maintenance, if at all.
+My old blog is still accessible at its old address: _HTML_LINK_AS_IS(`http://blog.yurichev.com')</p>
+
 
 _FOOTER()
 

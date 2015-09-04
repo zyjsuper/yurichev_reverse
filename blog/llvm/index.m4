@@ -18,6 +18,7 @@ This is <i>(((x & y) * -2) + (x + y))</i>, which is, hard to believe, behaves ju
 
 <p>So here we go, let's open <i>lib/Transforms/Obfuscation/Substitution.cpp</i> file and add this:</p>
 
+<!--
 _PRE_BEGIN
 // Implementation of a = (((x & y) * -2) + (x + y))
 void Substitution::xorSubstitutionAha(BinaryOperator *bo) {
@@ -48,6 +49,37 @@ void Substitution::xorSubstitutionAha(BinaryOperator *bo) {
   bo->replaceAllUsesWith(op);
 }
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// Implementation of a = (((x &amp; y) * -2) + (x + y))</span>
+<span style='color:#800000; font-weight:bold; '>void</span> Substitution<span style='color:#800080; '>::</span>xorSubstitutionAha<span style='color:#808030; '>(</span>BinaryOperator <span style='color:#808030; '>*</span>bo<span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+  Type <span style='color:#808030; '>*</span>ty <span style='color:#808030; '>=</span> bo<span style='color:#808030; '>-</span><span style='color:#808030; '>></span>getType<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+  <span style='color:#696969; '>// get operands</span>
+  Value <span style='color:#808030; '>*</span>x <span style='color:#808030; '>=</span> bo<span style='color:#808030; '>-</span><span style='color:#808030; '>></span>getOperand<span style='color:#808030; '>(</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+  Value <span style='color:#808030; '>*</span>y <span style='color:#808030; '>=</span> bo<span style='color:#808030; '>-</span><span style='color:#808030; '>></span>getOperand<span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+  ConstantInt <span style='color:#808030; '>*</span>co <span style='color:#808030; '>=</span> <span style='color:#808030; '>(</span>ConstantInt <span style='color:#808030; '>*</span><span style='color:#808030; '>)</span>ConstantInt<span style='color:#800080; '>::</span>get<span style='color:#808030; '>(</span>ty<span style='color:#808030; '>,</span> <span style='color:#808030; '>-</span><span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>true</span> <span style='color:#696969; '>/* isSigned */</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// -2</span>
+
+  <span style='color:#696969; '>// first half of expression: (x &amp; y) * -2</span>
+  BinaryOperator <span style='color:#808030; '>*</span>op1 <span style='color:#808030; '>=</span> BinaryOperator<span style='color:#800080; '>::</span>Create<span style='color:#808030; '>(</span>Instruction<span style='color:#800080; '>::</span>Mul<span style='color:#808030; '>,</span> 
+					       BinaryOperator<span style='color:#800080; '>::</span>Create<span style='color:#808030; '>(</span>Instruction<span style='color:#800080; '>::</span>And<span style='color:#808030; '>,</span> y<span style='color:#808030; '>,</span> x<span style='color:#808030; '>,</span> <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> bo<span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> 
+					       co<span style='color:#808030; '>,</span> <span style='color:#696969; '>// -2</span>
+					       <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> bo<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+  <span style='color:#696969; '>// second half of expression: x + y</span>
+  BinaryOperator <span style='color:#808030; '>*</span>op2 <span style='color:#808030; '>=</span> BinaryOperator<span style='color:#800080; '>::</span>Create<span style='color:#808030; '>(</span>Instruction<span style='color:#800080; '>::</span>Add<span style='color:#808030; '>,</span>
+					       x<span style='color:#808030; '>,</span>
+					       y<span style='color:#808030; '>,</span>
+					       <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> bo<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+  <span style='color:#696969; '>// sum up both halves</span>
+  BinaryOperator <span style='color:#808030; '>*</span>op <span style='color:#808030; '>=</span> BinaryOperator<span style='color:#800080; '>::</span>Create<span style='color:#808030; '>(</span>Instruction<span style='color:#800080; '>::</span>Add<span style='color:#808030; '>,</span>
+					       op1<span style='color:#808030; '>,</span>
+					       op2<span style='color:#808030; '>,</span>
+					       <span style='color:#800000; '>"</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> bo<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+  bo<span style='color:#808030; '>-</span><span style='color:#808030; '>></span>replaceAllUsesWith<span style='color:#808030; '>(</span>op<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
 
 <p>The function takes expression in form <i>x^y</i> on input and returns its transformed version.</p>
 
@@ -144,6 +176,7 @@ I disabled them temporarily and now I'll try to test what I did.</p>
 
 <p>test.c:</p>
 
+<!--
 _PRE_BEGIN
 #include <stdio.h>
 
@@ -158,6 +191,20 @@ int main()
 	printf ("%x\n", test_XOR (test_XOR (0x12345678, C), C));
 };
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> test_XOR<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> a<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>int</span> b<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#800000; font-weight:bold; '>return</span> a<span style='color:#808030; '>^</span>b<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>define</span><span style='color:#004a43; '> C 0xBADF00D</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%x</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> test_XOR <span style='color:#808030; '>(</span>test_XOR <span style='color:#808030; '>(</span><span style='color:#008000; '>0x12345678</span><span style='color:#808030; '>,</span> C<span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> C<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 _PRE_BEGIN
 $ bin/clang test.c -c -o test -mllvm -sub
@@ -193,6 +240,7 @@ I had some problems with compiling, and here is _HTML_LINK(`https://github.com/y
 
 <p>Interestingly, o-LLVM under Cygwin generates slightly different code:</p>
 
+<!--
 _PRE_BEGIN
 sub_1004010E0   proc near
 
@@ -216,6 +264,29 @@ var_4           = dword ptr -4
                 retn
 sub_1004010E0   endp
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'>sub_<span style='color:#008c00; '>1004010</span><span style='color:#006600; '>E0</span>   <span style='color:#004a43; '>proc</span> <span style='color:#800000; font-weight:bold; '>near</span>
+
+var_<span style='color:#008c00; '>8</span>           <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>dword</span> <span style='color:#800000; font-weight:bold; '>ptr</span> <span style='color:#008c00; '>-8</span>
+var_<span style='color:#008c00; '>4</span>           <span style='color:#808030; '>=</span> <span style='color:#800000; font-weight:bold; '>dword</span> <span style='color:#800000; font-weight:bold; '>ptr</span> <span style='color:#008c00; '>-4</span>
+
+                <span style='color:#800000; font-weight:bold; '>push</span>    rbp
+                <span style='color:#800000; font-weight:bold; '>mov</span>     rbp<span style='color:#808030; '>,</span> rsp
+                <span style='color:#800000; font-weight:bold; '>push</span>    rax
+                <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#808030; '>[</span>rbp<span style='color:#808030; '>+</span>var_<span style='color:#008c00; '>4</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>ecx</span>
+                <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#808030; '>[</span>rbp<span style='color:#808030; '>+</span>var_<span style='color:#008c00; '>8</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edx</span>
+                <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>ecx</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>rbp<span style='color:#808030; '>+</span>var_<span style='color:#008c00; '>4</span><span style='color:#808030; '>]</span>
+                <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edx</span>
+                <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>ecx</span>
+                <span style='color:#800000; font-weight:bold; '>add</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>eax</span>
+                <span style='color:#800000; font-weight:bold; '>add</span>     <span style='color:#000080; '>ecx</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edx</span>
+                <span style='color:#800000; font-weight:bold; '>sub</span>     <span style='color:#000080; '>ecx</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>eax</span>
+                <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>ecx</span>
+                <span style='color:#800000; font-weight:bold; '>add</span>     rsp<span style='color:#808030; '>,</span> <span style='color:#008c00; '>8</span>
+                <span style='color:#800000; font-weight:bold; '>pop</span>     rbp
+                <span style='color:#800000; font-weight:bold; '>retn</span>
+sub_<span style='color:#008c00; '>1004010</span><span style='color:#006600; '>E0</span>   <span style='color:#004a43; '>endp</span>
+</pre>
 
 <p>There is no <i>imul</i> instruction and there are no -2 constant.
 The resulting expression is reshuffled: <i>y + x - 2 * (x & y)</i>, but it has the very same effect as original one.
@@ -341,18 +412,27 @@ They are used in LLVM extensively to simplify expressions.</p>
 
 <p>For example:</p>
 
+<!--
 _PRE_BEGIN
   // (X >> A) << A -> X
   Value *X;
   if (match(Op0, m_Exact(m_Shr(m_Value(X), m_Specific(Op1)))))
     return X;
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// (X >> A) &lt;&lt; A -> X</span>
+  Value <span style='color:#808030; '>*</span>X<span style='color:#800080; '>;</span>
+  <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>match<span style='color:#808030; '>(</span>Op0<span style='color:#808030; '>,</span> m_Exact<span style='color:#808030; '>(</span>m_Shr<span style='color:#808030; '>(</span>m_Value<span style='color:#808030; '>(</span>X<span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> m_Specific<span style='color:#808030; '>(</span>Op1<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+    <span style='color:#800000; font-weight:bold; '>return</span> X<span style='color:#800080; '>;</span>
+</pre>
+
 ( _HTML_LINK(`https://github.com/llvm-mirror/llvm/blob/f23c6af13d9c4a4920a935de303140cc83b2bbaa/lib/Analysis/InstructionSimplify.cpp#L1397',`lib/Analysis/InstructionSimplify.cpp') )
 
 <p>In this example, <i>match()</i> sets <i>X</i> so it will point to the sub-expression and it will be returned as simplified expression.</p>
 
 <p>Another cool example is detecting and replacing the whole expression into BSWAP instruction:</p>
 
+<!--
 _PRE_BEGIN
   // (A | B) | C  and  A | (B | C)                  -> bswap if possible.
   // (A >> B) | (C << D)  and  (A << B) | (B >> C)  -> bswap if possible.
@@ -363,6 +443,17 @@ _PRE_BEGIN
     if (Instruction *BSwap = MatchBSwap(I))
       return BSwap;
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>// (A | B) | C  and  A | (B | C)                  -> bswap if possible.</span>
+  <span style='color:#696969; '>// (A >> B) | (C &lt;&lt; D)  and  (A &lt;&lt; B) | (B >> C)  -> bswap if possible.</span>
+  <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>match<span style='color:#808030; '>(</span>Op0<span style='color:#808030; '>,</span> m_Or<span style='color:#808030; '>(</span>m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>|</span><span style='color:#808030; '>|</span>
+      match<span style='color:#808030; '>(</span>Op1<span style='color:#808030; '>,</span> m_Or<span style='color:#808030; '>(</span>m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>|</span><span style='color:#808030; '>|</span>
+      <span style='color:#808030; '>(</span>match<span style='color:#808030; '>(</span>Op0<span style='color:#808030; '>,</span> m_LogicalShift<span style='color:#808030; '>(</span>m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;</span><span style='color:#808030; '>&amp;</span>
+       match<span style='color:#808030; '>(</span>Op1<span style='color:#808030; '>,</span> m_LogicalShift<span style='color:#808030; '>(</span>m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> m_Value<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+    <span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>Instruction <span style='color:#808030; '>*</span>BSwap <span style='color:#808030; '>=</span> MatchBSwap<span style='color:#808030; '>(</span>I<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+      <span style='color:#800000; font-weight:bold; '>return</span> BSwap<span style='color:#800080; '>;</span>
+</pre>
+
 ( _HTML_LINK(`https://github.com/llvm-mirror/llvm/blob/e027d74733de7dc086c9d2190d14884e9240ce89/lib/Transforms/InstCombine/InstCombineAndOrXor.cpp#L2200',`lib/Transforms/InstCombine/InstCombineAndOrXor.cpp') )
 
 <p><i>match()</i> function internals is surprisingly simple.</p>

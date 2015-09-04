@@ -11,8 +11,9 @@ It features recursion and callback function.</p>
 
 <p>Optimizing GCC 4.8.2:</p>
 
+<!--
 _PRE_BEGIN
-&lt;f>:
+<f>:
    0:       push   r12
    2:       test   rsi,rsi
    5:       mov    r12,rdi
@@ -52,11 +53,53 @@ _PRE_BEGIN
   5b:       pop    r12
   5d:       ret
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>></span><span style='color:#808030; '>:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;0:</span>       <span style='color:#800000; font-weight:bold; '>push</span>   r1<span style='color:#008c00; '>2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;2:</span>       <span style='color:#800000; font-weight:bold; '>test</span>   rsi<span style='color:#808030; '>,</span>rsi
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;5:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    r1<span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span>rdi
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;8:</span>       <span style='color:#800000; font-weight:bold; '>push</span>   rbp
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;9:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rbp<span style='color:#808030; '>,</span>rdx
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;c:</span>       <span style='color:#800000; font-weight:bold; '>push</span>   rbx
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;d:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rbx<span style='color:#808030; '>,</span>rsi
+<span style='color:#e34adc; '>&#xa0;&#xa0;10:</span>       <span style='color:#800000; font-weight:bold; '>je</span>     <span style='color:#e34adc; '>32</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x32</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;12:</span>       <span style='color:#800000; font-weight:bold; '>nop</span>    <span style='color:#800000; font-weight:bold; '>WORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span>rax<span style='color:#808030; '>+</span>rax<span style='color:#808030; '>*</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>+</span><span style='color:#008000; '>0x0</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;18:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rsi<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>QWORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span>rbx<span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;1b:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rdi<span style='color:#808030; '>,</span>rbp
+<span style='color:#e34adc; '>&#xa0;&#xa0;1e:</span>       <span style='color:#800000; font-weight:bold; '>call</span>   <span style='color:#e34adc; '>r12</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;21:</span>       <span style='color:#800000; font-weight:bold; '>test</span>   <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;23:</span>       <span style='color:#800000; font-weight:bold; '>je</span>     <span style='color:#e34adc; '>56</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x56</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;25:</span>       <span style='color:#800000; font-weight:bold; '>js</span>     <span style='color:#e34adc; '>40</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x40</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;27:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rbx<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>QWORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span>rbx<span style='color:#808030; '>+</span><span style='color:#008000; '>0x18</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;2b:</span>       <span style='color:#800000; font-weight:bold; '>test</span>   rbx<span style='color:#808030; '>,</span>rbx
+<span style='color:#e34adc; '>&#xa0;&#xa0;2e:</span>       <span style='color:#800000; font-weight:bold; '>xchg</span>   <span style='color:#000080; '>ax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>ax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;30:</span>       <span style='color:#800000; font-weight:bold; '>jne</span>    <span style='color:#e34adc; '>18</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x18</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;32:</span>       <span style='color:#800000; font-weight:bold; '>pop</span>    rbx
+<span style='color:#e34adc; '>&#xa0;&#xa0;33:</span>       <span style='color:#800000; font-weight:bold; '>pop</span>    rbp
+<span style='color:#e34adc; '>&#xa0;&#xa0;34:</span>       <span style='color:#800000; font-weight:bold; '>xor</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;36:</span>       <span style='color:#800000; font-weight:bold; '>pop</span>    r1<span style='color:#008c00; '>2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;38:</span>       <span style='color:#800000; font-weight:bold; '>ret</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;39:</span>       <span style='color:#800000; font-weight:bold; '>nop</span>    <span style='color:#800000; font-weight:bold; '>DWORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span>rax<span style='color:#808030; '>+</span><span style='color:#008000; '>0x0</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;40:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rbx<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>QWORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span>rbx<span style='color:#808030; '>+</span><span style='color:#008000; '>0x10</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;44:</span>       <span style='color:#800000; font-weight:bold; '>test</span>   rbx<span style='color:#808030; '>,</span>rbx
+<span style='color:#e34adc; '>&#xa0;&#xa0;47:</span>       <span style='color:#800000; font-weight:bold; '>je</span>     <span style='color:#e34adc; '>32</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x32</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;49:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rsi<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>QWORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span>rbx<span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;4c:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rdi<span style='color:#808030; '>,</span>rbp
+<span style='color:#e34adc; '>&#xa0;&#xa0;4f:</span>       <span style='color:#800000; font-weight:bold; '>call</span>   <span style='color:#e34adc; '>r12</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;52:</span>       <span style='color:#800000; font-weight:bold; '>test</span>   <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;54:</span>       <span style='color:#800000; font-weight:bold; '>jne</span>    <span style='color:#e34adc; '>25</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x25</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;56:</span>       <span style='color:#800000; font-weight:bold; '>mov</span>    rax<span style='color:#808030; '>,</span>rbx
+<span style='color:#e34adc; '>&#xa0;&#xa0;59:</span>       <span style='color:#800000; font-weight:bold; '>pop</span>    rbx
+<span style='color:#e34adc; '>&#xa0;&#xa0;5a:</span>       <span style='color:#800000; font-weight:bold; '>pop</span>    rbp
+<span style='color:#e34adc; '>&#xa0;&#xa0;5b:</span>       <span style='color:#800000; font-weight:bold; '>pop</span>    r1<span style='color:#008c00; '>2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;5d:</span>       <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 
 <p>Optimizing GCC 4.9.3 for ARM64:</p>
 
+<!--
 _PRE_BEGIN
-&lt;f>:
+<f>:
    0:           stp     x29, x30, [sp,#-48]!
    4:           mov     x29, sp
    8:           stp     x19, x20, [sp,#16]
@@ -91,9 +134,46 @@ _PRE_BEGIN
   7c:           ldp     x29, x30, [sp],#48
   80:           ret
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>></span><span style='color:#808030; '>:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;0:</span>           stp     x2<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> x3<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>-48</span><span style='color:#808030; '>]</span><span style='color:#808030; '>!</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;4:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x2<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>sp</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;8:</span>           stp     x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> x2<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>16</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;c:</span>           <span style='color:#800000; font-weight:bold; '>str</span>     x2<span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>32</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;10:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> x1
+<span style='color:#e34adc; '>&#xa0;&#xa0;14:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x2<span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> x0
+<span style='color:#e34adc; '>&#xa0;&#xa0;18:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x2<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> x2
+<span style='color:#e34adc; '>&#xa0;&#xa0;1c:</span>           cbz     x1<span style='color:#808030; '>,</span> <span style='color:#008c00; '>40</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x40</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;20:</span>           ldr     x1<span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;24:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x0<span style='color:#808030; '>,</span> x2<span style='color:#008c00; '>0</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;28:</span>           blr     x2<span style='color:#008c00; '>1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;2c:</span>           <span style='color:#800000; font-weight:bold; '>cmp</span>     w0<span style='color:#808030; '>,</span> wzr
+<span style='color:#e34adc; '>&#xa0;&#xa0;30:</span>           b.<span style='color:#004a43; '>eq</span>    <span style='color:#008c00; '>70</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x70</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;34:</span>           b.<span style='color:#004a43; '>lt</span>    <span style='color:#008c00; '>54</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x54</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;38:</span>           ldr     x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>24</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;3c:</span>           cbnz    x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>20</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x20</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;40:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x0</span>                        <span style='color:#808030; '>/</span><span style='color:#808030; '>/</span> #<span style='color:#008c00; '>0</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;44:</span>           ldr     x2<span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>32</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;48:</span>           ldp     x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> x2<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>16</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;4c:</span>           ldp     x2<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> x3<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>48</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;50:</span>           <span style='color:#800000; font-weight:bold; '>ret</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;54:</span>           ldr     x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>16</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;58:</span>           cbz     x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>40</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x40</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;5c:</span>           ldr     x1<span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span>x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;60:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x0<span style='color:#808030; '>,</span> x2<span style='color:#008c00; '>0</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;64:</span>           blr     x2<span style='color:#008c00; '>1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;68:</span>           <span style='color:#800000; font-weight:bold; '>cmp</span>     w0<span style='color:#808030; '>,</span> wzr
+<span style='color:#e34adc; '>&#xa0;&#xa0;6c:</span>           b.<span style='color:#004a43; '>ne</span>    <span style='color:#008c00; '>34</span> <span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>+</span><span style='color:#008000; '>0x34</span><span style='color:#808030; '>></span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;70:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     x0<span style='color:#808030; '>,</span> x1<span style='color:#008c00; '>9</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;74:</span>           ldr     x2<span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>32</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;78:</span>           ldp     x1<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> x2<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>16</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;7c:</span>           ldp     x2<span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span> x3<span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>sp</span><span style='color:#808030; '>]</span><span style='color:#808030; '>,</span>#<span style='color:#008c00; '>48</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;80:</span>           <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 
 <p>(ARM) Optimizing Keil 5.05 (ARM mode):</p>
 
+<!--
 _PRE_BEGIN
 f PROC
         PUSH     {r4-r6,lr}
@@ -120,9 +200,36 @@ f PROC
         POP      {r4-r6,pc}
         ENDP
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'>f <span style='color:#004a43; '>PROC</span>
+        <span style='color:#800000; font-weight:bold; '>PUSH</span>     <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>-</span>r6<span style='color:#808030; '>,</span>lr<span style='color:#808030; '>}</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.4</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r4<span style='color:#808030; '>,</span>r1
+        <span style='color:#800000; font-weight:bold; '>MOV</span>      r5<span style='color:#808030; '>,</span>r0
+        <span style='color:#800000; font-weight:bold; '>MOV</span>      r6<span style='color:#808030; '>,</span>r2
+        BEQ      <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.72</span><span style='color:#808030; '>|</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r4<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span>
+        <span style='color:#800000; font-weight:bold; '>MOV</span>      r0<span style='color:#808030; '>,</span>r2
+        <span style='color:#800000; font-weight:bold; '>MOV</span>      lr<span style='color:#808030; '>,</span>pc
+        <span style='color:#000080; '>BX</span>       r5
+        <span style='color:#800000; font-weight:bold; '>CMP</span>      r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+        LDRGT    r1<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r4<span style='color:#808030; '>,</span>#<span style='color:#008000; '>0xc</span><span style='color:#808030; '>]</span>
+        LDRLT    r1<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r4<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>8</span><span style='color:#808030; '>]</span>
+        MOVEQ    r0<span style='color:#808030; '>,</span>r4
+        POPEQ    <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>-</span>r6<span style='color:#808030; '>,</span>pc<span style='color:#808030; '>}</span>
+        <span style='color:#800000; font-weight:bold; '>CMP</span>      r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+        MOVNE    r2<span style='color:#808030; '>,</span>r6
+        MOVNE    r0<span style='color:#808030; '>,</span>r5
+        BNE      <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.4</span><span style='color:#808030; '>|</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.72</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>MOV</span>      r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+        <span style='color:#800000; font-weight:bold; '>POP</span>      <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>-</span>r6<span style='color:#808030; '>,</span>pc<span style='color:#808030; '>}</span>
+        <span style='color:#004a43; '>ENDP</span>
+</pre>
 
 <p>(ARM) Optimizing Keil 5.05 (Thumb mode):</p>
 
+<!--
 _PRE_BEGIN
 f PROC
         PUSH     {r4-r6,lr}
@@ -161,9 +268,48 @@ __ARM_common_call_via_r5_thumb PROC
         BX       r5
         ENDP
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'>f <span style='color:#004a43; '>PROC</span>
+        <span style='color:#800000; font-weight:bold; '>PUSH</span>     <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>-</span>r6<span style='color:#808030; '>,</span>lr<span style='color:#808030; '>}</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.2</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r4<span style='color:#808030; '>,</span>r1
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r5<span style='color:#808030; '>,</span>r0
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r6<span style='color:#808030; '>,</span>r2
+        <span style='color:#800000; font-weight:bold; '>CMP</span>      r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+        BEQ      <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.46</span><span style='color:#808030; '>|</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r4<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span><span style='color:#808030; '>]</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r0<span style='color:#808030; '>,</span>r2
+        <span style='color:#000080; '>BL</span>       __ARM_common_call_via_r5_thumb
+        <span style='color:#800000; font-weight:bold; '>CMP</span>      r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+        BEQ      <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.30</span><span style='color:#808030; '>|</span>
+        BGE      <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.40</span><span style='color:#808030; '>|</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r4<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>8</span><span style='color:#808030; '>]</span>
+        B        <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.42</span><span style='color:#808030; '>|</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.30</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r0<span style='color:#808030; '>,</span>r4
+        <span style='color:#800000; font-weight:bold; '>POP</span>      <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>-</span>r6<span style='color:#808030; '>,</span>pc<span style='color:#808030; '>}</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.34</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r2<span style='color:#808030; '>,</span>r6
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r0<span style='color:#808030; '>,</span>r5
+        B        <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.2</span><span style='color:#808030; '>|</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.40</span><span style='color:#808030; '>|</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>[</span>r4<span style='color:#808030; '>,</span>#<span style='color:#008000; '>0xc</span><span style='color:#808030; '>]</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.42</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>CMP</span>      r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+        BNE      <span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.34</span><span style='color:#808030; '>|</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.46</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>0</span>
+        <span style='color:#800000; font-weight:bold; '>POP</span>      <span style='color:#808030; '>{</span>r4<span style='color:#808030; '>-</span>r6<span style='color:#808030; '>,</span>pc<span style='color:#808030; '>}</span>
+        <span style='color:#004a43; '>ENDP</span>
+
+__ARM_common_call_via_r5_thumb <span style='color:#004a43; '>PROC</span>
+        <span style='color:#000080; '>BX</span>       r5
+        <span style='color:#004a43; '>ENDP</span>
+</pre>
 
 <p>Optimizing GCC 4.4.5 for MIPS:</p>
 
+<!--
 _PRE_BEGIN
 f:
         addiu   $sp,$sp,-40
@@ -206,8 +352,52 @@ $L10:
         b       $L2
         nop
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#e34adc; '>f:</span>
+        addiu   $<span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>-40</span>
+        sw      <span style='color:#008000; '>$18</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>32</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        sw      <span style='color:#008000; '>$17</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>28</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        sw      <span style='color:#008000; '>$16</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>24</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        sw      <span style='color:#008000; '>$31</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>36</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        move    <span style='color:#008000; '>$16</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$5</span>
+        move    <span style='color:#008000; '>$17</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span>
+        beq     <span style='color:#008000; '>$5</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$0</span><span style='color:#808030; '>,</span>$L2
+        move    <span style='color:#008000; '>$18</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$6</span>
+
+<span style='color:#e34adc; '>$L8:</span>
+        lw      <span style='color:#008000; '>$5</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>0</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$16</span><span style='color:#808030; '>)</span>
+        move    <span style='color:#008000; '>$25</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$17</span>
+        jalr    <span style='color:#008000; '>$25</span>
+        move    <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$18</span>
+        beq     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$0</span><span style='color:#808030; '>,</span>$L2
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+        bltz    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span>$L1<span style='color:#008c00; '>0</span>
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+        lw      <span style='color:#008000; '>$16</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>12</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$16</span><span style='color:#808030; '>)</span>
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+        bne     <span style='color:#008000; '>$16</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$0</span><span style='color:#808030; '>,</span>$L8
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+<span style='color:#e34adc; '>$L2:</span>
+        lw      <span style='color:#008000; '>$31</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>36</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        move    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$16</span>
+        lw      <span style='color:#008000; '>$18</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>32</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        lw      <span style='color:#008000; '>$17</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>28</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        lw      <span style='color:#008000; '>$16</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>24</span><span style='color:#808030; '>(</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>)</span>
+        j       <span style='color:#008000; '>$31</span>
+        addiu   $<span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>40</span>
+
+<span style='color:#e34adc; '>$L10:</span>
+        lw      <span style='color:#008000; '>$16</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>8</span><span style='color:#808030; '>(</span><span style='color:#008000; '>$16</span><span style='color:#808030; '>)</span>
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+        bne     <span style='color:#008000; '>$16</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$0</span><span style='color:#808030; '>,</span>$L8
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+        b       $L2
+        <span style='color:#800000; font-weight:bold; '>nop</span>
+</pre>
 
 <p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise9/')</p>
+
+_EXERCISE_FOOTER()
 
 _HL2(`Reverse engineering exercise #7')
 

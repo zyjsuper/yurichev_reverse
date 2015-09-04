@@ -293,7 +293,7 @@ $L3:
 
 <p>Solution is to be posted soon...</p>
 
-<p>Other exercises like this are available in my _HTML_LINK(`http://yurichev.com/blog/',`blog') and _HTML_LINK(`http://beginners.re/',`my book').</p>
+_EXERCISE_FOOTER()
 
 _HL2(`Reverse engineering exercise #8')
 

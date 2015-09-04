@@ -70,53 +70,97 @@ _HL2(`The next reverse engineering exercise (for x86, ARM, ARM64, MIPS)')
 
 <p>Optimizing GCC 4.8.2 -m32:</p>
 
+<!--
 _PRE_BEGIN
-00000000 &lt;f&gt;:
-   0:   8b 44 24 04             mov    eax,DWORD PTR [esp+0x4]
-   4:   0f c8                   bswap  eax
-   6:   89 c2                   mov    edx,eax
-   8:   25 0f 0f 0f 0f          and    eax,0xf0f0f0f
-   d:   81 e2 f0 f0 f0 f0       and    edx,0xf0f0f0f0
-  13:   c1 ea 04                shr    edx,0x4
-  16:   c1 e0 04                shl    eax,0x4
-  19:   09 d0                   or     eax,edx
-  1b:   89 c2                   mov    edx,eax
-  1d:   25 33 33 33 33          and    eax,0x33333333
-  22:   81 e2 cc cc cc cc       and    edx,0xcccccccc
-  28:   c1 ea 02                shr    edx,0x2
-  2b:   c1 e0 02                shl    eax,0x2
-  2e:   09 d0                   or     eax,edx
-  30:   89 c2                   mov    edx,eax
-  32:   25 55 55 55 55          and    eax,0x55555555
-  37:   81 e2 aa aa aa aa       and    edx,0xaaaaaaaa
-  3d:   01 c0                   add    eax,eax
-  3f:   d1 ea                   shr    edx,1
-  41:   09 d0                   or     eax,edx
-  43:   c3                      ret
+<f>:
+   0:          mov    eax,DWORD PTR [esp+0x4]
+   4:          bswap  eax
+   6:          mov    edx,eax
+   8:          and    eax,0xf0f0f0f
+   d:          and    edx,0xf0f0f0f0
+  13:          shr    edx,0x4
+  16:          shl    eax,0x4
+  19:          or     eax,edx
+  1b:          mov    edx,eax
+  1d:          and    eax,0x33333333
+  22:          and    edx,0xcccccccc
+  28:          shr    edx,0x2
+  2b:          shl    eax,0x2
+  2e:          or     eax,edx
+  30:          mov    edx,eax
+  32:          and    eax,0x55555555
+  37:          and    edx,0xaaaaaaaa
+  3d:          add    eax,eax
+  3f:          shr    edx,1
+  41:          or     eax,edx
+  43:          ret
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#008c00; '>0</span><span style='color:#808030; '>:</span>          <span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>DWORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>esp</span><span style='color:#808030; '>+</span><span style='color:#008000; '>0x4</span><span style='color:#808030; '>]</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;4:</span>          <span style='color:#800000; font-weight:bold; '>bswap</span>  <span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;6:</span>          <span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;8:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xf0f0f0f</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;d:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xf0f0f0f0</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;13:</span>          <span style='color:#800000; font-weight:bold; '>shr</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x4</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;16:</span>          <span style='color:#800000; font-weight:bold; '>shl</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x4</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;19:</span>          <span style='color:#800000; font-weight:bold; '>or</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edx</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;1b:</span>          <span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;1d:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x33333333</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;22:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xcccccccc</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;28:</span>          <span style='color:#800000; font-weight:bold; '>shr</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;2b:</span>          <span style='color:#800000; font-weight:bold; '>shl</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;2e:</span>          <span style='color:#800000; font-weight:bold; '>or</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edx</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;30:</span>          <span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;32:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x55555555</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;37:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xaaaaaaaa</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;3d:</span>          <span style='color:#800000; font-weight:bold; '>add</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;3f:</span>          <span style='color:#800000; font-weight:bold; '>shr</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;41:</span>          <span style='color:#800000; font-weight:bold; '>or</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edx</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;43:</span>          <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 
 <p>Optimizing GCC 4.9.3 (Linaro) for ARM64:</p>
 
+<!--
 _PRE_BEGIN
-0000000000000000 &lt;f&gt;:
-   0:   5ac00800        rev     w0, w0
-   4:   1200cc01        and     w1, w0, #0xf0f0f0f
-   8:   1204cc00        and     w0, w0, #0xf0f0f0f0
-   c:   531c6c21        lsl     w1, w1, #4
-  10:   2a401020        orr     w0, w1, w0, lsr #4
-  14:   1200e401        and     w1, w0, #0x33333333
-  18:   1202e400        and     w0, w0, #0xcccccccc
-  1c:   531e7421        lsl     w1, w1, #2
-  20:   2a400821        orr     w1, w1, w0, lsr #2
-  24:   1201f020        and     w0, w1, #0xaaaaaaaa
-  28:   1200f021        and     w1, w1, #0x55555555
-  2c:   0b010021        add     w1, w1, w1
-  30:   2a400420        orr     w0, w1, w0, lsr #1
-  34:   d65f03c0        ret
+<f>:
+   0:           rev     w0, w0
+   4:           and     w1, w0, #0xf0f0f0f
+   8:           and     w0, w0, #0xf0f0f0f0
+   c:           lsl     w1, w1, #4
+  10:           orr     w0, w1, w0, lsr #4
+  14:           and     w1, w0, #0x33333333
+  18:           and     w0, w0, #0xcccccccc
+  1c:           lsl     w1, w1, #2
+  20:           orr     w1, w1, w0, lsr #2
+  24:           and     w0, w1, #0xaaaaaaaa
+  28:           and     w1, w1, #0x55555555
+  2c:           add     w1, w1, w1
+  30:           orr     w0, w1, w0, lsr #1
+  34:           ret
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>></span><span style='color:#808030; '>:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;0:</span>           rev     w0<span style='color:#808030; '>,</span> w0
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;4:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w1<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0xf0f0f0f</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;8:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0xf0f0f0f0</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;c:</span>           <span style='color:#800000; font-weight:bold; '>lsl</span>     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>4</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;10:</span>           orr     w0<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> lsr #<span style='color:#008c00; '>4</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;14:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w1<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x33333333</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;18:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0xcccccccc</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;1c:</span>           <span style='color:#800000; font-weight:bold; '>lsl</span>     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;20:</span>           orr     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> lsr #<span style='color:#008c00; '>2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;24:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w0<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0xaaaaaaaa</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;28:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x55555555</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;2c:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> w1
+<span style='color:#e34adc; '>&#xa0;&#xa0;30:</span>           orr     w0<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> lsr #<span style='color:#008c00; '>1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;34:</span>           <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 
 <p>(ARM) Optimizing Keil 5.05 (ARM mode):</p>
 
+<!--
 _PRE_BEGIN
 f       PROC
         ROR      r0,r0,#16
@@ -143,9 +187,37 @@ f       PROC
 |L0.128|
         DCD      0x33333333
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'>f       <span style='color:#004a43; '>PROC</span>
+        <span style='color:#800000; font-weight:bold; '>ROR</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>16</span>
+        MVN      r1<span style='color:#808030; '>,</span>#<span style='color:#008000; '>0xff00</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>8</span>
+        BIC      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008000; '>0xff00</span>
+        ORR      r0<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>8</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.124</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r2<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>4</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.128</span><span style='color:#808030; '>|</span>
+        ORR      r0<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>4</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r2<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>2</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        ORR      r0<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>2</span>
+        EOR      r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>1</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r2<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>1</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        ORR      r0<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>1</span>
+        <span style='color:#000080; '>BX</span>       lr
+        <span style='color:#004a43; '>ENDP</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.124</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0xff0f0f0f</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.128</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x33333333</span>
+</pre>
 
 <p>(ARM) Optimizing Keil 5.05 (Thumb mode):</p>
 
+<!--
 _PRE_BEGIN
 f       PROC
         MOVS     r1,#0x10
@@ -185,17 +257,52 @@ f       PROC
 |L0.100|
         DCD      0x55555555
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'>f       <span style='color:#004a43; '>PROC</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r1<span style='color:#808030; '>,</span>#<span style='color:#008000; '>0x10</span>
+        RORS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        LDR      r2<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.88</span><span style='color:#808030; '>|</span>
+        LSRS     r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>8</span>
+        ANDS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r2
+        ANDS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r2
+        LSLS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>8</span>
+        LDR      r2<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.92</span><span style='color:#808030; '>|</span>
+        ORRS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0
+        LSRS     r0<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>4</span>
+        ANDS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r2
+        ANDS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r2
+        LSLS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>4</span>
+        LDR      r2<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.96</span><span style='color:#808030; '>|</span>
+        ORRS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        LSRS     r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>2</span>
+        ANDS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r2
+        ANDS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r2
+        LSLS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>2</span>
+        LDR      r2<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.100</span><span style='color:#808030; '>|</span>
+        ORRS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0
+        LSRS     r0<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+        ANDS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r2
+        ANDS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r2
+        LSLS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+        ORRS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        <span style='color:#000080; '>BX</span>       lr
+        <span style='color:#004a43; '>ENDP</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.88</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x00ff00ff</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.92</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x0f0f0f0f</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.96</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x33333333</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.100</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x55555555</span>
+</pre>
 
 <p>Optimizing GCC 4.4.5 MIPS:</p>
 
+<!--
 _PRE_BEGIN
 f:
-        .frame  $sp,0,$31               # vars= 0, regs= 0/0, args= 0, gp= 0
-        .mask   0x00000000,0
-        .fmask  0x00000000,0
-        .set    noreorder
-        .set    nomacro
-
         sll     $2,$4,16
         srl     $4,$4,16
         or      $2,$2,$4
@@ -237,8 +344,54 @@ f:
         j       $31
         or      $2,$2,$3
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#e34adc; '>f:</span>
+        sll     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>16</span>
+        srl     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>16</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span>
+        li      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>-16777216</span>                    # <span style='color:#008000; '>0xffffffffff000000</span>
+        li      <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>16711680</span>                     # <span style='color:#008000; '>0xff0000</span>
+        ori     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xff00</span>
+        ori     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xff</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        srl     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>8</span>
+        sll     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>8</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        li      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>-252706816</span>                   # <span style='color:#008000; '>0xfffffffff0f00000</span>
+        li      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>252641280</span>                    # <span style='color:#008000; '>0xf0f0000</span>
+        ori     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xf0f0</span>
+        ori     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xf0f</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        srl     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>4</span>
+        sll     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>4</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span>
+        li      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>858980352</span>                    # <span style='color:#008000; '>0x33330000</span>
+        li      <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>-859045888</span>                   # <span style='color:#008000; '>0xffffffffcccc0000</span>
+        ori     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xcccc</span>
+        ori     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x3333</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span>
+        srl     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>2</span>
+        sll     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>2</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        li      <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>-1431699456</span>                  # <span style='color:#008000; '>0xffffffffaaaa0000</span>
+        li      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1431633920</span>                   # <span style='color:#008000; '>0x55550000</span>
+        ori     <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xaaaa</span>
+        ori     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x5555</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span>
+        srl     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span>
+        sll     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span>
+        j       <span style='color:#008000; '>$31</span>
+        <span style='color:#800000; font-weight:bold; '>or</span>      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+</pre>
 
 <p>I'll post solution couple of days later.</p>
+
+_EXERCISE_FOOTER()
 
 _BLOG_FOOTER()
 
