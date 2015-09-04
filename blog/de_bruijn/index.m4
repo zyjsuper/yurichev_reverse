@@ -90,9 +90,10 @@ _PRE_END
 <p>Using this table, it's easy to build "magic" table.
 OK, now working C example:</p>
 
+<!--
 _PRE_BEGIN
-#include &lt;stdint.h>
-#include &lt;stdio.h>
+#include <stdint.h>
+#include <stdio.h>
 
 int magic_tbl[32];
 
@@ -107,16 +108,43 @@ int main()
 {
 	// construct magic table
 	// may be omitted in production code
-	for (int i=0; i&lt;32; i++)
-		magic_tbl[(0xe6bec520/(1&lt;&lt;i)) & 0x1F]=i;
+	for (int i=0; i<32; i++)
+		magic_tbl[(0xe6bec520/(1<<i)) & 0x1F]=i;
 
 	// test
-	for (int i=0; i&lt;32; i++)
+	for (int i=0; i<32; i++)
 	{
-		printf ("input=0x%x, result=%d\n", 1&lt;&lt;i, bitpos (1&lt;&lti));
+		printf ("input=0x%x, result=%d\n", 1<<i, bitpos (1<<i));
 	};
 };
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> magic_tbl<span style='color:#808030; '>[</span><span style='color:#008c00; '>32</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// returns single bit position counting from LSB</span>
+<span style='color:#696969; '>// not working for i==0</span>
+<span style='color:#800000; font-weight:bold; '>int</span> bitpos <span style='color:#808030; '>(</span>uint32_t i<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#800000; font-weight:bold; '>return</span> magic_tbl<span style='color:#808030; '>[</span><span style='color:#808030; '>(</span><span style='color:#008000; '>0xe6bec520</span><span style='color:#808030; '>/</span>i<span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;</span> <span style='color:#008000; '>0x1F</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#696969; '>// construct magic table</span>
+	<span style='color:#696969; '>// may be omitted in production code</span>
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>32</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+		magic_tbl<span style='color:#808030; '>[</span><span style='color:#808030; '>(</span><span style='color:#008000; '>0xe6bec520</span><span style='color:#808030; '>/</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span>i<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;</span> <span style='color:#008000; '>0x1F</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>i<span style='color:#800080; '>;</span>
+
+	<span style='color:#696969; '>// test</span>
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>32</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+	<span style='color:#800080; '>{</span>
+		<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>input=0x</span><span style='color:#007997; '>%x</span><span style='color:#0000e6; '>, result=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span>i<span style='color:#808030; '>,</span> bitpos <span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span>i<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>Here we feed our bitpos() function with numbers in 0..0x80000000 range and we got:</p>
 
@@ -171,9 +199,10 @@ For example, let's take 0xF0. -0xF0 is 0x10 or 0xFFFFFF10. ANDing 0xF0 and 0xFFF
 
 <p>Let's modify our algorithm to support true trailing zero bits count:</p>
 
+<!--
 _PRE_BEGIN
-#include &lt;stdint.h>
-#include &lt;stdio.h>
+#include <stdint.h>
+#include <stdio.h>
 
 int magic_tbl[32];
 
@@ -188,14 +217,39 @@ int main()
 {
 	// construct magic table
 	// may be omitted in production code
-	for (int i=0; i&lt;<32; i++)
-		magic_tbl[(0xe6bec520/(1&lt;&lt;i)) & 0x1F]=i;
+	for (int i=0; i<32; i++)
+		magic_tbl[(0xe6bec520/(1<<i)) & 0x1F]=i;
 
 	// test:
 	printf ("%d\n", tzcnt (0xFFFF0000));
 	printf ("%d\n", tzcnt (0xFFFF0010));
 };
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> magic_tbl<span style='color:#808030; '>[</span><span style='color:#008c00; '>32</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// not working for i==0</span>
+<span style='color:#800000; font-weight:bold; '>int</span> tzcnt <span style='color:#808030; '>(</span>uint32_t i<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	uint32_t a<span style='color:#808030; '>=</span>i <span style='color:#808030; '>&amp;</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>-</span>i<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>return</span> magic_tbl<span style='color:#808030; '>[</span><span style='color:#808030; '>(</span><span style='color:#008000; '>0xe6bec520</span><span style='color:#808030; '>/</span>a<span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;</span> <span style='color:#008000; '>0x1F</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#696969; '>// construct magic table</span>
+	<span style='color:#696969; '>// may be omitted in production code</span>
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>32</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+		magic_tbl<span style='color:#808030; '>[</span><span style='color:#808030; '>(</span><span style='color:#008000; '>0xe6bec520</span><span style='color:#808030; '>/</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span>i<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;</span> <span style='color:#008000; '>0x1F</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>i<span style='color:#800080; '>;</span>
+
+	<span style='color:#696969; '>// test:</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> tzcnt <span style='color:#808030; '>(</span><span style='color:#008000; '>0xFFFF0000</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> tzcnt <span style='color:#808030; '>(</span><span style='color:#008000; '>0xFFFF0010</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>It works!</p>
 
@@ -240,9 +294,10 @@ be stored at the high 5 bits of the result.</p>
 <p>De Bruijn sequence is not broken after 5 lowest bits dropped, because these zero bits are "relocated" to the start of the sequence.
 Sequence is cyclic after all.</p>
 
+<!--
 _PRE_BEGIN
-#include &lt;stdint.h>
-#include &lt;stdio.h>
+#include <stdint.h>
+#include <stdio.h>
 
 int magic_tbl[32];
 
@@ -259,26 +314,61 @@ int main()
 	// construct magic table
 	// may be omitted in production code
 	for (int i=0; i<32; i++)
-		magic_tbl[(0x735f629&lt;&lt;i >>27) & 0x1F]=i;
+		magic_tbl[(0x735f629<<i >>27) & 0x1F]=i;
 	
 	// test:
 	printf ("%d\n", tzcnt (0xFFFF0000));
 	printf ("%d\n", tzcnt (0xFFFF0010));
 };
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> magic_tbl<span style='color:#808030; '>[</span><span style='color:#008c00; '>32</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+
+<span style='color:#696969; '>// not working for i==0</span>
+<span style='color:#800000; font-weight:bold; '>int</span> tzcnt <span style='color:#808030; '>(</span>uint32_t i<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	uint32_t a<span style='color:#808030; '>=</span>i <span style='color:#808030; '>&amp;</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>-</span>i<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#696969; '>// 5 bits we need are stored in 31..27 bits of product, shift and isolate them after multiplication:</span>
+	<span style='color:#800000; font-weight:bold; '>return</span> magic_tbl<span style='color:#808030; '>[</span><span style='color:#808030; '>(</span><span style='color:#808030; '>(</span><span style='color:#008000; '>0x735f629</span><span style='color:#808030; '>*</span>a<span style='color:#808030; '>)</span><span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>27</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;</span> <span style='color:#008000; '>0x1F</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#696969; '>// construct magic table</span>
+	<span style='color:#696969; '>// may be omitted in production code</span>
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>32</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+		magic_tbl<span style='color:#808030; '>[</span><span style='color:#808030; '>(</span><span style='color:#008000; '>0x735f629</span><span style='color:#808030; '>&lt;</span><span style='color:#808030; '>&lt;</span>i <span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>27</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>&amp;</span> <span style='color:#008000; '>0x1F</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>i<span style='color:#800080; '>;</span>
+	
+	<span style='color:#696969; '>// test:</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> tzcnt <span style='color:#808030; '>(</span><span style='color:#008000; '>0xFFFF0000</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> tzcnt <span style='color:#808030; '>(</span><span style='color:#008000; '>0xFFFF0010</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 _HL2(`Leading zero bits counting')
 
 <p>This is almost the same task, but most significant bit must be isolated instead of lowest.
 This is typical algorithm for 32-bit integer values:</p>
 
+<!--
 _PRE_BEGIN
-    x |= x >> 1;
-    x |= x >> 2;
-    x |= x >> 4;
-    x |= x >> 8;
-    x |= x >> 16;
+x |= x >> 1;
+x |= x >> 2;
+x |= x >> 4;
+x |= x >> 8;
+x |= x >> 16;
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'>x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span>
+x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>2</span><span style='color:#800080; '>;</span>
+x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>4</span><span style='color:#800080; '>;</span>
+x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>8</span><span style='color:#800080; '>;</span>
+x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>16</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>For example, 0x100 becomes 0x1ff, 0x1000 becomes 0x1fff, 0x20000 becomes 0x3ffff, 0x12340000 becomes 0x1fffffff.
 It works because all 1 bits are gradually propagated towards the lowest bit in 32-bit number,
@@ -289,6 +379,7 @@ these numbers are very close to each other, so there are no error.</p>
 
 <p>This example I used in my reverse engineering exercise from 15-Aug-2015: _HTML_LINK_AS_IS(`http://yurichev.com/blog/2015-aug-18/').</p>
 
+<!--
 _PRE_BEGIN
 int v[64]=
 	{ -1,31, 8,30, -1, 7,-1,-1, 29,-1,26, 6, -1,-1, 2,-1,
@@ -307,6 +398,24 @@ int LZCNT(uint32_t x)
     return v[x >> 26];
 }
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>int</span> v<span style='color:#808030; '>[</span><span style='color:#008c00; '>64</span><span style='color:#808030; '>]</span><span style='color:#808030; '>=</span>
+	<span style='color:#800080; '>{</span> <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>31</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>8</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>30</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>7</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>29</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>26</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>6</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>2</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span>
+	  <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>28</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>19</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>25</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>5</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>17</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>23</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>14</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span>
+	   <span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>27</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>3</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>20</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>18</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>24</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>15</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>10</span><span style='color:#808030; '>,</span>
+	  <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>4</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>21</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>16</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>11</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>22</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>12</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>13</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>0</span><span style='color:#808030; '>,</span><span style='color:#808030; '>-</span><span style='color:#008c00; '>1</span> <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> LZCNT<span style='color:#808030; '>(</span>uint32_t x<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+    x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>1</span><span style='color:#800080; '>;</span>
+    x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>2</span><span style='color:#800080; '>;</span>
+    x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>4</span><span style='color:#800080; '>;</span>
+    x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>8</span><span style='color:#800080; '>;</span>
+    x <span style='color:#808030; '>|</span><span style='color:#808030; '>=</span> x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>16</span><span style='color:#800080; '>;</span>
+    x <span style='color:#808030; '>*</span><span style='color:#808030; '>=</span> <span style='color:#008000; '>0x4badf0d</span><span style='color:#800080; '>;</span>
+    <span style='color:#800000; font-weight:bold; '>return</span> v<span style='color:#808030; '>[</span>x <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>26</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
 
 <p>This piece of code I took _HTML_LINK(`http://stackoverflow.com/questions/7365562/de-bruijn-like-sequence-for-2n-1-how-is-it-constructed/7369288#7369288',`here').
 It is slightly different: the table is twice bigger, and the function returns -1 if input value is zero.

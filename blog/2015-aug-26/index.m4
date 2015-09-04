@@ -6,18 +6,31 @@ _HL2(`Yet another compiler anomaly to my collection')
 
 <p>Just found in some old code:</p>
 
+<!--
 _PRE_BEGIN
-.text:10004096                 fabs
-.text:10004098                 fild    [esp+50h+var_34]
-.text:1000409C                 fabs
-.text:1000409E                 fxch    st(1) ; first instruction
-.text:100040A0                 fxch    st(1) ; second instruction
-.text:100040A2                 faddp   st(1), st
-.text:100040A4                 fcomp   [esp+50h+var_3C]
-.text:100040A8                 fnstsw  ax
-.text:100040AA                 test    ah, 41h
-.text:100040AD                 jz      short loc_100040B7
+                 fabs
+                 fild    [esp+50h+var_34]
+                 fabs
+                 fxch    st(1) ; first instruction
+                 fxch    st(1) ; second instruction
+                 faddp   st(1), st
+                 fcomp   [esp+50h+var_3C]
+                 fnstsw  ax
+                 test    ah, 41h
+                 jz      short loc_100040B7
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>fabs</span>
+                 <span style='color:#800000; font-weight:bold; '>fild</span>    <span style='color:#808030; '>[</span><span style='color:#000080; '>esp</span><span style='color:#808030; '>+</span><span style='color:#008000; '>50h</span><span style='color:#808030; '>+</span>var_<span style='color:#008c00; '>34</span><span style='color:#808030; '>]</span>
+                 <span style='color:#800000; font-weight:bold; '>fabs</span>
+                 <span style='color:#800000; font-weight:bold; '>fxch</span>    <span style='color:#000080; '>st</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span> <span style='color:#696969; '>; first instruction</span>
+                 <span style='color:#800000; font-weight:bold; '>fxch</span>    <span style='color:#000080; '>st</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span> <span style='color:#696969; '>; second instruction</span>
+                 <span style='color:#800000; font-weight:bold; '>faddp</span>   <span style='color:#000080; '>st</span><span style='color:#808030; '>(</span><span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>st</span>
+                 <span style='color:#800000; font-weight:bold; '>fcomp</span>   <span style='color:#808030; '>[</span><span style='color:#000080; '>esp</span><span style='color:#808030; '>+</span><span style='color:#008000; '>50h</span><span style='color:#808030; '>+</span>var_3C<span style='color:#808030; '>]</span>
+                 <span style='color:#800000; font-weight:bold; '>fnstsw</span>  <span style='color:#000080; '>ax</span>
+                 <span style='color:#800000; font-weight:bold; '>test</span>    <span style='color:#000080; '>ah</span><span style='color:#808030; '>,</span> <span style='color:#008000; '>41h</span>
+                 <span style='color:#800000; font-weight:bold; '>jz</span><span style='color:#800000; font-weight:bold; '>      short</span> <span style='color:#e34adc; '>loc_100040B7</span>
+</pre>
 
 <p>The firsst FXCH instruction swaps ST(0) and ST(1), the second do the same, so both do nothing.
 This is a program uses MFC42.dll, so it could be MSVC 6.0, 5.0 or maybe even MSVC 4.2 from 1990s.</p>

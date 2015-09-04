@@ -8,47 +8,87 @@ _HEADER_HL1(`22-Aug-2015: The next reverse engineering exercise (for x86, ARM, A
  
 <p>Optimizing GCC 4.8.2:</p>
 
+<!--
 _PRE_BEGIN
-0000000000000000 <f>:
-   0:   89 fa                   mov    edx,edi
-   2:   d1 ea                   shr    edx,1
-   4:   81 e2 55 55 55 55       and    edx,0x55555555
-   a:   29 d7                   sub    edi,edx
-   c:   89 f8                   mov    eax,edi
-   e:   c1 ef 02                shr    edi,0x2
-  11:   25 33 33 33 33          and    eax,0x33333333
-  16:   81 e7 33 33 33 33       and    edi,0x33333333
-  1c:   01 c7                   add    edi,eax
-  1e:   89 f8                   mov    eax,edi
-  20:   c1 e8 04                shr    eax,0x4
-  23:   01 f8                   add    eax,edi
-  25:   25 0f 0f 0f 0f          and    eax,0xf0f0f0f
-  2a:   69 c0 01 01 01 01       imul   eax,eax,0x1010101
-  30:   c1 e8 18                shr    eax,0x18
-  33:   c3                      ret
+<f>:
+   0:          mov    edx,edi
+   2:          shr    edx,1
+   4:          and    edx,0x55555555
+   a:          sub    edi,edx
+   c:          mov    eax,edi
+   e:          shr    edi,0x2
+  11:          and    eax,0x33333333
+  16:          and    edi,0x33333333
+  1c:          add    edi,eax
+  1e:          mov    eax,edi
+  20:          shr    eax,0x4
+  23:          add    eax,edi
+  25:          and    eax,0xf0f0f0f
+  2a:          imul   eax,eax,0x1010101
+  30:          shr    eax,0x18
+  33:          ret
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>></span><span style='color:#808030; '>:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;0:</span>          <span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edi</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;2:</span>          <span style='color:#800000; font-weight:bold; '>shr</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;4:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x55555555</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;a:</span>          <span style='color:#800000; font-weight:bold; '>sub</span>    <span style='color:#000080; '>edi</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edx</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;c:</span>          <span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edi</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;e:</span>          <span style='color:#800000; font-weight:bold; '>shr</span>    <span style='color:#000080; '>edi</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;11:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x33333333</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;16:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>edi</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x33333333</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;1c:</span>          <span style='color:#800000; font-weight:bold; '>add</span>    <span style='color:#000080; '>edi</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;1e:</span>          <span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edi</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;20:</span>          <span style='color:#800000; font-weight:bold; '>shr</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x4</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;23:</span>          <span style='color:#800000; font-weight:bold; '>add</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>edi</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;25:</span>          <span style='color:#800000; font-weight:bold; '>and</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xf0f0f0f</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;2a:</span>          <span style='color:#800000; font-weight:bold; '>imul</span>   <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x1010101</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;30:</span>          <span style='color:#800000; font-weight:bold; '>shr</span>    <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x18</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;33:</span>          <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 
 <p>Optimizing GCC 4.9.3 for ARM64:</p>
 
+<!--
 _PRE_BEGIN
-0000000000000000 <f>:
-   0:   53017c01        lsr     w1, w0, #1
-   4:   1200f021        and     w1, w1, #0x55555555
-   8:   4b010000        sub     w0, w0, w1
-   c:   1200e401        and     w1, w0, #0x33333333
-  10:   53027c00        lsr     w0, w0, #2
-  14:   1200e400        and     w0, w0, #0x33333333
-  18:   0b010000        add     w0, w0, w1
-  1c:   3200c3e1        mov     w1, #0x1010101                  // #16843009
-  20:   0b401000        add     w0, w0, w0, lsr #4
-  24:   1200cc00        and     w0, w0, #0xf0f0f0f
-  28:   1b017c00        mul     w0, w0, w1
-  2c:   53187c00        lsr     w0, w0, #24
-  30:   d65f03c0        ret
+<f>:
+   0:           lsr     w1, w0, #1
+   4:           and     w1, w1, #0x55555555
+   8:           sub     w0, w0, w1
+   c:           and     w1, w0, #0x33333333
+  10:           lsr     w0, w0, #2
+  14:           and     w0, w0, #0x33333333
+  18:           add     w0, w0, w1
+  1c:           mov     w1, #0x1010101                  // #16843009
+  20:           add     w0, w0, w0, lsr #4
+  24:           and     w0, w0, #0xf0f0f0f
+  28:           mul     w0, w0, w1
+  2c:           lsr     w0, w0, #24
+  30:           ret
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#808030; '>&lt;</span>f<span style='color:#808030; '>></span><span style='color:#808030; '>:</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;0:</span>           lsr     w1<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>1</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;4:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w1<span style='color:#808030; '>,</span> w1<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x55555555</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;8:</span>           <span style='color:#800000; font-weight:bold; '>sub</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> w1
+<span style='color:#e34adc; '>&#xa0;&#xa0;&#xa0;c:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w1<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x33333333</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;10:</span>           lsr     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>2</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;14:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x33333333</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;18:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> w1
+<span style='color:#e34adc; '>&#xa0;&#xa0;1c:</span>           <span style='color:#800000; font-weight:bold; '>mov</span>     w1<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0x1010101</span>                  <span style='color:#808030; '>/</span><span style='color:#808030; '>/</span> #<span style='color:#008c00; '>16843009</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;20:</span>           <span style='color:#800000; font-weight:bold; '>add</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> lsr #<span style='color:#008c00; '>4</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;24:</span>           <span style='color:#800000; font-weight:bold; '>and</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008000; '>0xf0f0f0f</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;28:</span>           <span style='color:#800000; font-weight:bold; '>mul</span>     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> w1
+<span style='color:#e34adc; '>&#xa0;&#xa0;2c:</span>           lsr     w0<span style='color:#808030; '>,</span> w0<span style='color:#808030; '>,</span> #<span style='color:#008c00; '>24</span>
+<span style='color:#e34adc; '>&#xa0;&#xa0;30:</span>           <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 
 <p>(ARM) Optimizing Keil 5.05 (ARM mode):</p>
 
+<!--
 _PRE_BEGIN
 f PROC
         LDR      r1,|L0.148|
@@ -74,9 +114,35 @@ f PROC
 |L0.156|
         DCD      0x0f0f0f0f
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'>f <span style='color:#004a43; '>PROC</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.148</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>1</span>
+        <span style='color:#800000; font-weight:bold; '>SUB</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.152</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r2<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r0<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>2</span>
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.156</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>ADD</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r2
+        <span style='color:#800000; font-weight:bold; '>ADD</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>LSR #<span style='color:#008c00; '>4</span>
+        <span style='color:#800000; font-weight:bold; '>AND</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        <span style='color:#800000; font-weight:bold; '>ADD</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>16</span>
+        <span style='color:#800000; font-weight:bold; '>ADD</span>      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span><span style='color:#800000; font-weight:bold; '>LSL</span> #<span style='color:#008c00; '>8</span>
+        LSR      r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>24</span>
+        <span style='color:#000080; '>BX</span>       lr
+        <span style='color:#004a43; '>ENDP</span>
+
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.148</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x55555555</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.152</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x33333333</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.156</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x0f0f0f0f</span>
+</pre>
 
 <p>(ARM) Optimizing Keil 5.05 (Thumb mode):</p>
 
+<!--
 _PRE_BEGIN
 f PROC
         LSRS     r1,r0,#1
@@ -108,16 +174,44 @@ f PROC
 |L0.112|
         DCD      0x01010101
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'>f <span style='color:#004a43; '>PROC</span>
+        LSRS     r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>1</span>
+        LDR      r2<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.100</span><span style='color:#808030; '>|</span>
+        ANDS     r1<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r2
+        SUBS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.104</span><span style='color:#808030; '>|</span>
+        <span style='color:#800000; font-weight:bold; '>MOVS</span>     r2<span style='color:#808030; '>,</span>r0
+        LSRS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>2</span>
+        ANDS     r2<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>,</span>r1
+        ANDS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        ADDS     r0<span style='color:#808030; '>,</span>r2<span style='color:#808030; '>,</span>r0
+        LSRS     r1<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>4</span>
+        ADDS     r0<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.108</span><span style='color:#808030; '>|</span>
+        ANDS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>r1
+        LDR      r1<span style='color:#808030; '>,</span><span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.112</span><span style='color:#808030; '>|</span>
+        MULS     r0<span style='color:#808030; '>,</span>r1<span style='color:#808030; '>,</span>r0
+        LSRS     r0<span style='color:#808030; '>,</span>r0<span style='color:#808030; '>,</span>#<span style='color:#008c00; '>24</span>
+        <span style='color:#000080; '>BX</span>       lr
+        <span style='color:#004a43; '>ENDP</span>
+
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.100</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x55555555</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.104</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x33333333</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.108</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x0f0f0f0f</span>
+<span style='color:#808030; '>|</span>L0<span style='color:#008c00; '>.112</span><span style='color:#808030; '>|</span>
+        DCD      <span style='color:#008000; '>0x01010101</span>
+</pre>
 
 <p>Optimizing GCC 4.4.5 for MIPS:</p>
 
+<!--
 _PRE_BEGIN
 f:
-        .frame  $sp,0,$31               # vars= 0, regs= 0/0, args= 0, gp= 0
-        .mask   0x00000000,0
-        .fmask  0x00000000,0
-        .set    noreorder
-        .set    nomacro
         li      $2,1431633920                   # 0x55550000
         srl     $3,$4,1
         ori     $2,$2,0x5555
@@ -141,8 +235,35 @@ f:
         j       $31
         srl     $2,$2,24 
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#e34adc; '>f:</span>
+        li      <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1431633920</span>                   # <span style='color:#008000; '>0x55550000</span>
+        srl     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>1</span>
+        ori     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x5555</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        subu    <span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        li      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>858980352</span>                    # <span style='color:#008000; '>0x33330000</span>
+        ori     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0x3333</span>
+        srl     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>2</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$4</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        addu    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        srl     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>4</span>
+        addu    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        li      <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>252641280</span>                    # <span style='color:#008000; '>0xf0f0000</span>
+        ori     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>0xf0f</span>
+        <span style='color:#800000; font-weight:bold; '>and</span>     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        sll     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>8</span>
+        addu    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span>
+        sll     <span style='color:#008000; '>$3</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>16</span>
+        addu    <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$3</span>
+        j       <span style='color:#008000; '>$31</span>
+        srl     <span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008000; '>$2</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>24</span>
+</pre>
 
 <p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/2015-aug-26/').</p>
+
+_EXERCISE_FOOTER()
 
 _BLOG_FOOTER()
 

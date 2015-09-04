@@ -6,17 +6,27 @@ _HEADER_HL1(`13-Jun-2015: Modular arithmetic + division by multiplication + reve
 
 <p>Here is an example:</p>
 
+<!--
 _PRE_BEGIN
-#include &lt;stdint.h&gt;
+#include <stdint.h>
 
 uint32_t divide_by_9 (uint32_t a)
 {
         return a/9;
 };
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+
+uint32_t divide_by_9 <span style='color:#808030; '>(</span>uint32_t a<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>return</span> a<span style='color:#808030; '>/</span><span style='color:#008c00; '>9</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>Optimizing GCC 4.8.2 does this:</p>
 
+<!--
 _PRE_BEGIN
 divide_by_9:
         mov     edx, 954437177
@@ -26,17 +36,36 @@ divide_by_9:
         mov     eax, edx
         ret
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#e34adc; '>divide_by_9:</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>954437177</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edx</span>
+        <span style='color:#800000; font-weight:bold; '>mul</span>     <span style='color:#800000; font-weight:bold; '>DWORD</span> <span style='color:#800000; font-weight:bold; '>PTR</span> <span style='color:#808030; '>[</span><span style='color:#000080; '>esp</span><span style='color:#808030; '>+</span><span style='color:#008c00; '>4</span><span style='color:#808030; '>]</span>
+        <span style='color:#800000; font-weight:bold; '>shr</span>     <span style='color:#000080; '>edx</span>
+        <span style='color:#800000; font-weight:bold; '>mov</span>     <span style='color:#000080; '>eax</span><span style='color:#808030; '>,</span> <span style='color:#000080; '>edx</span>
+        <span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 
 <p>The following code can be rewritten into C/C++:</p>
 
+<!--
 _PRE_BEGIN
-#include &lt;stdint.h&gt;
+#include <stdint.h>
 
 uint32_t divide_by_9_v2 (uint32_t a)
 {
-        return ((uint64_t)a * (uint64_t)954437177)) >> 33; // 954437177 = 0x38e38e39
+        return ((uint64_t)a * (uint64_t)954437177) >> 33; // 954437177 = 0x38e38e39
 };
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+
+uint32_t divide_by_9_v2 <span style='color:#808030; '>(</span>uint32_t a<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+        <span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>uint64_t<span style='color:#808030; '>)</span>a <span style='color:#808030; '>*</span> <span style='color:#808030; '>(</span>uint64_t<span style='color:#808030; '>)</span><span style='color:#008c00; '>954437177</span><span style='color:#808030; '>)</span> <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>33</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// 954437177 = 0x38e38e39</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>And it works: you can compile it and check it.
 Let's see, how.</p>
@@ -112,6 +141,7 @@ That helps sometimes.</p>
 <p>For example, you need a some kind of wrapping counter variable which always should be in 0..16 range. What you do?
 Programmers often write this:</p>
 
+<!--
 _PRE_BEGIN
 int counter=0;
 ...
@@ -119,18 +149,33 @@ counter++;
 if (counter==16)
     counter=0;
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>int</span> counter<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span>
+counter<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+<span style='color:#800000; font-weight:bold; '>if</span> <span style='color:#808030; '>(</span>counter<span style='color:#808030; '>=</span><span style='color:#808030; '>=</span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span>
+    counter<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>But here is a version without conditional branching:</p>
 
+<!--
 _PRE_BEGIN
 int counter=0;
 ...
 counter++;
 counter=counter&0xF;
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>int</span> counter<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+<span style='color:#808030; '>.</span><span style='color:#808030; '>.</span><span style='color:#808030; '>.</span>
+counter<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+counter<span style='color:#808030; '>=</span>counter<span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0xF</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>As an example, this I found in the git source code:</p>
 
+<!--
 _PRE_BEGIN
 char *sha1_to_hex(const unsigned char *sha1)
 {
@@ -150,6 +195,25 @@ char *sha1_to_hex(const unsigned char *sha1)
 	return buffer;
 }
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>char</span> <span style='color:#808030; '>*</span>sha1_to_hex<span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>const</span> <span style='color:#800000; font-weight:bold; '>unsigned</span> <span style='color:#800000; font-weight:bold; '>char</span> <span style='color:#808030; '>*</span>sha1<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#800000; font-weight:bold; '>int</span> bufno<span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#800000; font-weight:bold; '>char</span> hexbuffer<span style='color:#808030; '>[</span><span style='color:#008c00; '>4</span><span style='color:#808030; '>]</span><span style='color:#808030; '>[</span>GIT_SHA1_HEXSZ <span style='color:#808030; '>+</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>static</span> <span style='color:#800000; font-weight:bold; '>const</span> <span style='color:#800000; font-weight:bold; '>char</span> hex<span style='color:#808030; '>[</span><span style='color:#808030; '>]</span> <span style='color:#808030; '>=</span> <span style='color:#800000; '>"</span><span style='color:#0000e6; '>0123456789abcdef</span><span style='color:#800000; '>"</span><span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>char</span> <span style='color:#808030; '>*</span>buffer <span style='color:#808030; '>=</span> hexbuffer<span style='color:#808030; '>[</span><span style='color:#008c00; '>3</span> <span style='color:#808030; '>&amp;</span> <span style='color:#808030; '>+</span><span style='color:#808030; '>+</span>bufno<span style='color:#808030; '>]</span><span style='color:#808030; '>,</span> <span style='color:#808030; '>*</span>buf <span style='color:#808030; '>=</span> buffer<span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#800080; '>;</span>
+
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>i <span style='color:#808030; '>=</span> <span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i <span style='color:#808030; '>&lt;</span> GIT_SHA1_RAWSZ<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span> <span style='color:#800080; '>{</span>
+		<span style='color:#800000; font-weight:bold; '>unsigned</span> <span style='color:#800000; font-weight:bold; '>int</span> val <span style='color:#808030; '>=</span> <span style='color:#808030; '>*</span>sha1<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#800080; '>;</span>
+		<span style='color:#808030; '>*</span>buf<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span> <span style='color:#808030; '>=</span> hex<span style='color:#808030; '>[</span>val <span style='color:#808030; '>></span><span style='color:#808030; '>></span> <span style='color:#008c00; '>4</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+		<span style='color:#808030; '>*</span>buf<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span> <span style='color:#808030; '>=</span> hex<span style='color:#808030; '>[</span>val <span style='color:#808030; '>&amp;</span> <span style='color:#008000; '>0xf</span><span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+	<span style='color:#800080; '>}</span>
+	<span style='color:#808030; '>*</span>buf <span style='color:#808030; '>=</span> <span style='color:#0000e6; '>'\0'</span><span style='color:#800080; '>;</span>
+
+	<span style='color:#800000; font-weight:bold; '>return</span> buffer<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span>
+</pre>
 
 ( _HTML_LINK_AS_IS(`https://github.com/git/git/blob/aa1c6fdf478c023180e5ca5f1658b00a72592dc6/hex.c') )
 
@@ -377,6 +441,7 @@ should be _HTML_LINK(`http://en.wikipedia.org/wiki/Coprime_integers',`coprime') 
 9 is coprime to $2^{32}$, so is 7, but not 10.
 But if you try to compile $\frac{x}{10}$ code, GCC can do it as well:</p>
 
+<!--
 _PRE_BEGIN
 push   %ebp
 mov    %esp,%ebp
@@ -388,7 +453,18 @@ shr    $0x3,%eax
 pop    %ebp
 ret    
 _PRE_END
+-->
 
+<pre style='color:#000000;background:#ffffff;'><span style='color:#800000; font-weight:bold; '>push</span>   <span style='color:#808030; '>%</span><span style='color:#000080; '>ebp</span>
+<span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#808030; '>%</span><span style='color:#000080; '>esp</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span><span style='color:#000080; '>ebp</span>
+<span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#008000; '>0x8</span><span style='color:#808030; '>(</span><span style='color:#808030; '>%</span><span style='color:#000080; '>ebp</span><span style='color:#808030; '>)</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span><span style='color:#000080; '>eax</span>
+<span style='color:#800000; font-weight:bold; '>mov</span>    $<span style='color:#008000; '>0xcccccccd</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span><span style='color:#000080; '>edx</span>
+<span style='color:#800000; font-weight:bold; '>mul</span>    <span style='color:#808030; '>%</span><span style='color:#000080; '>edx</span>
+<span style='color:#800000; font-weight:bold; '>mov</span>    <span style='color:#808030; '>%</span><span style='color:#000080; '>edx</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span><span style='color:#000080; '>eax</span>
+<span style='color:#800000; font-weight:bold; '>shr</span>    $<span style='color:#008000; '>0x3</span><span style='color:#808030; '>,</span><span style='color:#808030; '>%</span><span style='color:#000080; '>eax</span>
+<span style='color:#800000; font-weight:bold; '>pop</span>    <span style='color:#808030; '>%</span><span style='color:#000080; '>ebp</span>
+<span style='color:#800000; font-weight:bold; '>ret</span>
+</pre>
 <p>The reason it works is because division by 5 is actually happens here (and 5 is coprime to $2^{32}$), and then the final result is divided by 2
 (so there is 3 instead of 2 in the SHR instruction).</p>
 
@@ -397,6 +473,7 @@ _HL2(`Reversible linear congruential generator')
 <p><acronym title="Linear congruential generator">LCG</acronym> is very simple: just multiply seed by some value, add another one and here is a new random number.
 Here is how it is implemented in MSVC (the source code is not original one and is reconstructed by me):</p>
 
+<!--
 _PRE_BEGIN
 uint32_t state;
 
@@ -406,6 +483,15 @@ uint32_t rand()
 	return (state>>16)&0x7FFF;
 };
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'>uint32_t state<span style='color:#800080; '>;</span>
+
+uint32_t <span style='color:#603000; '>rand</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	state<span style='color:#808030; '>=</span>state<span style='color:#808030; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#808030; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#800080; '>;</span>
+	<span style='color:#800000; font-weight:bold; '>return</span> <span style='color:#808030; '>(</span>state<span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#808030; '>&amp;</span><span style='color:#008000; '>0x7FFF</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>The last bit shift is attempt to compensate LCG weakness and we may ignore it so far.
 Will it be possible to make an inverse function to rand(), which can reverse state back?
@@ -414,9 +500,10 @@ store infinitely big numbers, then, although state is increasing rapidly, it wou
 But <i>state</i> isn't BigInt/BigNum, it's 32-bit variable, and summing operation is easily reversible on it (just subtract 2531011 at each step).
 As we may know now, multiplication is also reversible: just multiply the state by modular multiplicative inverse of 214013!</p>
 
+<!--
 _PRE_BEGIN
-#include &lt;stdio.h&gt;
-#include &lt;stdint.h&gt;
+#include <stdio.h>
+#include <stdint.h>
 
 uint32_t state;
 
@@ -451,6 +538,43 @@ int main()
 	printf ("state=%d\n", state);
 };
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+
+uint32_t state<span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>void</span> next_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	state<span style='color:#808030; '>=</span>state<span style='color:#808030; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#808030; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>void</span> prev_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	state<span style='color:#808030; '>=</span>state<span style='color:#808030; '>-</span><span style='color:#008c00; '>2531011</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// reverse summing operation</span>
+	state<span style='color:#808030; '>=</span>state<span style='color:#808030; '>*</span><span style='color:#008c00; '>3115528533</span><span style='color:#800080; '>;</span> <span style='color:#696969; '>// reverse multiply operation. 3115528533 is modular inverse of 214013 in 2^32.</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	state<span style='color:#808030; '>=</span><span style='color:#008c00; '>12345</span><span style='color:#800080; '>;</span>
+	
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>state=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> state<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	next_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>state=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> state<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	next_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>state=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> state<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	next_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>state=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> state<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+	prev_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>state=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> state<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	prev_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>state=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> state<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	prev_state<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+	<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#0000e6; '>state=</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> state<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>Wow, that works!</p>
 
@@ -477,10 +601,11 @@ We would define all relations between LCG states in term of Z3 SMT solver.
 (I first made attempt to do it using _HTML_LINK(`https://reference.wolfram.com/language/ref/FindInstance.html',`FindInstance') in Mathematica, but failed, perhaps, made a mistake somewhere).
 Here is a test progam:</p>
 
+<!--
 _PRE_BEGIN
-#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;time.h&gt;
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>
 
 int main()
 {
@@ -492,6 +617,21 @@ int main()
 		printf ("%d\n", rand()%100);
 };
 _PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdlib.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>time.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	<span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#800080; '>;</span>
+
+	<span style='color:#603000; '>srand</span><span style='color:#808030; '>(</span><span style='color:#603000; '>time</span><span style='color:#808030; '>(</span><span style='color:#7d0045; '>NULL</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span>i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span><span style='color:#008c00; '>10</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+		<span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> <span style='color:#603000; '>rand</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>%</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
 
 <p>It is intended to print 10 pseudorandom numbers in 0..99 range.
 So it does:</p>
@@ -529,6 +669,7 @@ _PRE_END
 <p>This is very simple LCG, but the result is not clipped state, but it's rather shifted by 16 bits.
 Let's define LCG in Z3:</p>
 
+<!--
 _PRE_BEGIN
 #!/usr/bin/python
 from z3 import *
@@ -572,6 +713,50 @@ s.add(output_next==URem((state10>>16)&0x7FFF,100))
 print(s.check())
 print(s.model())
 _PRE_END
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#696969; '>#!/usr/bin/python</span>
+<span style='color:#800000; font-weight:bold; '>from</span> z3 <span style='color:#800000; font-weight:bold; '>import</span> <span style='color:#44aadd; '>*</span>
+
+output_prev <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'output_prev'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state1 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state1'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state2 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state2'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state3 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state3'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state4 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state4'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state5 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state5'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state6 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state6'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state7 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state7'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state8 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state8'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state9 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state9'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+state10 <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'state10'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+output_next <span style='color:#808030; '>=</span> BitVec<span style='color:#808030; '>(</span><span style='color:#0000e6; '>'output_next'</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>32</span><span style='color:#808030; '>)</span>
+
+s <span style='color:#808030; '>=</span> Solver<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state2 <span style='color:#44aadd; '>==</span> state1<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state3 <span style='color:#44aadd; '>==</span> state2<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state4 <span style='color:#44aadd; '>==</span> state3<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state5 <span style='color:#44aadd; '>==</span> state4<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state6 <span style='color:#44aadd; '>==</span> state5<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state7 <span style='color:#44aadd; '>==</span> state6<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state8 <span style='color:#44aadd; '>==</span> state7<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state9 <span style='color:#44aadd; '>==</span> state8<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>state10 <span style='color:#44aadd; '>==</span> state9<span style='color:#44aadd; '>*</span><span style='color:#008c00; '>214013</span><span style='color:#44aadd; '>+</span><span style='color:#008c00; '>2531011</span><span style='color:#808030; '>)</span>
+
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>output_prev<span style='color:#44aadd; '>==</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state1<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state2<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>29</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state3<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>74</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state4<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>95</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state5<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>98</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state6<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>40</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state7<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>23</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state8<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>58</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state9<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>==</span><span style='color:#008c00; '>61</span><span style='color:#808030; '>)</span>
+s<span style='color:#808030; '>.</span>add<span style='color:#808030; '>(</span>output_next<span style='color:#44aadd; '>==</span>URem<span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>state10<span style='color:#44aadd; '>>></span><span style='color:#008c00; '>16</span><span style='color:#808030; '>)</span><span style='color:#44aadd; '>&amp;</span><span style='color:#008c00; '>0x7FFF</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+
+<span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span>s<span style='color:#808030; '>.</span>check<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+<span style='color:#800000; font-weight:bold; '>print</span><span style='color:#808030; '>(</span>s<span style='color:#808030; '>.</span>model<span style='color:#808030; '>(</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+</pre>
 
 <p>URem states for <i>unsigned remainder</i>.
 It works for some time and gave us correct result!</p>
