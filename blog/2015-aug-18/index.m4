@@ -5,7 +5,8 @@ _HEADER_HL1(`18-Aug-2015: Solution for the exercise posted at 15 August; the nex
 _HL2(`Solution for the exercise posted at 13 August')
 
 <p>Link to exercise: _HTML_LINK_AS_IS(`http://yurichev.com/blog/2015-aug-15/').</p>
-<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A):</p>
+
+_EXERCISE_SPOILER_WARNING()
 
 <p class="spoiler">The code I used here is copypasted from the Linux kernel <a href=https://github.com/torvalds/linux/blob/de182468d1bb726198abaab315820542425270b7/include/linux/bitrev.h" class="spoiler">(from there)</a> and is used to reverse order of bits in 32-bit value.
 While naïve method to solve this is to make a loop and toggle bits, this algorithm is better, because it hasn't conditional branches,

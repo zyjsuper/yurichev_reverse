@@ -399,11 +399,11 @@ _PRE_END
 
 _EXERCISE_FOOTER()
 
-_HL2(`Reverse engineering exercise #7')
+_HL2(`Solution for reverse engineering exercise #7')
 
 _HTML_LINK(`http://yurichev.com/blog/exercise7/',`(Link to exercise)')
 
-<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A):</p>
+_EXERCISE_SPOILER_WARNING();
 
 <p class="spoiler">The function just makes all characters in input string lowercase:</p>
 

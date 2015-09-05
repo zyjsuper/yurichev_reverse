@@ -35,6 +35,7 @@ m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`http://yurichev.com',`back to the ma
 </html>')
 
 m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _HTML_LINK(`http://yurichev.com/blog/',`blog') and _HTML_LINK(`http://beginners.re/',`my book').</p>')
+m4_define(`_EXERCISE_SPOILER_WARNING',`<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A).</p>')
 
 m4_define(`_BLOG_FOOTER',`<hr>
 <p>Interested in articles like this? Subscribe to my _HTML_LINK(`http://yurichev.com/blog/index.html',`blog') and/or twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev') and/or _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>

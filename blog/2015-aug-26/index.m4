@@ -47,7 +47,7 @@ _HL2(`Solution for the reverse engineering exercise posted at 22-Aug-2015')
 
 _HTML_LINK(`http://yurichev.com/blog/2015-aug-22/',`Link to exercise')
 
-<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A):</p>
+_EXERCISE_SPOILER_WARNING()
 
 <p class="spoiler">The function counts bits set to 1. Also called as "population count" or 
 <a href="https://en.wikipedia.org/wiki/Hamming_weight" class="spoiler">Hamming weight</a>.
@@ -77,7 +77,7 @@ _HL2(`Solution for the reverse engineering exercise #5 posted at 23-Aug-2015')
 
 _HTML_LINK(`http://yurichev.com/blog/exercise5/',`Link to exercise')
 
-<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A):</p>
+_EXERCISE_SPOILER_WARNING()
 
 <p class="spoiler">
 The function is actually finds for a block inside another block and is called memmem().

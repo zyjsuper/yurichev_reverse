@@ -291,15 +291,15 @@ $L3:
         addiu   $<span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span>$<span style='color:#000080; '>sp</span><span style='color:#808030; '>,</span><span style='color:#008c00; '>32</span>
 </pre>
 
-<p>Solution is to be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise10/')</p>
 
 _EXERCISE_FOOTER()
 
-_HL2(`Reverse engineering exercise #8')
+_HL2(`Solution for reverse engineering exercise #8')
 
 _HTML_LINK(`http://yurichev.com/blog/exercise8/',`(Link to exercise)')
 
-<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A):</p>
+_EXERCISE_SPOILER_WARNING()
 
 <p class="spoiler">The function is searching for right node in <a href="https://en.wikipedia.org/wiki/Binary_tree" class="spoiler">binary tree</a>.
 Binary trees are used almost everywhere: if you use std::map or std::set in C++, it's binary tree under the hood.
