@@ -222,11 +222,11 @@ _PRE_END
 
 _EXERCISE_FOOTER()
 
-_HL2(`Reverse engineering exercise #6')
+_HL2(`Solution for reverse engineering exercise #6')
 
 _HTML_LINK(`http://yurichev.com/blog/exercise6/',`(Link to exercise)')
 
-<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A):</p>
+_EXERCISE_SPOILER_WARNING()
 
 <p class="spoiler">The function converts Latin-1 (AKA ISO/IEC 8859-1) string to UTF-16.
 In other words, it just interleaves all input bytes by zero byte.</p>
