@@ -31,7 +31,7 @@ Local variables are declared with <i>auto</i> keyword.</p>
 
 _HL3(`Strings handling in B')
 
-<p>Strings handling in B are tricky, since B has no idea of bytes.
+<p>String handling in B is tricky, since B has no idea of bytes.
 So each 4 characters are packed into one register (or word).
 "Hello world" program is then (if I correct, I have no B compiler):</p>
 
