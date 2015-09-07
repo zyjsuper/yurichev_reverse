@@ -67,9 +67,8 @@ C was developed to overcome limits of typeless variables, first to make string h
 
 _HL2(`B&rsquo;s heritage in C')
 
-<p>Amusingly, latest GCC still can compile B code:</p>
-
-<p>I tried this and GCC compiled in, treating all types as <i>int</i>:</p>
+<p>Amusingly, latest GCC still can compile B code.
+I tried this and GCC compiled in, treating all types as <i>int</i>:</p>
 
 _PRE_BEGIN
 f(a, b, c)
