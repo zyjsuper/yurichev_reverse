@@ -88,13 +88,14 @@ f1(a, b, c)
 };
 _PRE_END
 
-<p>It was an oddity to C learners in past, no one can understand <i>auto</i> keyword.
+<p>It was an oddity to C learners in past, no one could understand <i>auto</i> keyword.
 C textbooks are also omitted explanations.
 But it seems, it's just heritage of B. GCC treats <i>auto</i> just as <i>int</i>.</p>
 
 <p>Why B has <i>auto</i> keyword? Well, if to replace <i>auto</i> to <i>static</i>,
 the variable will be declared as global variable instead of to be placed in the stack.
-This is still true for latest C/C++ standards as well.</p>
+This is still true for latest C/C++ standards as well.
+So <i>auto</i> means that these variables are to be placed in the stack.</p>
 
 <p>Apparently, all this stuff were in C to ease porting from B source code?
 Or C was just <i>typed B</i> at the time, like <i>C++ is C with classes</i>?</p>
