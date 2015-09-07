@@ -31,7 +31,7 @@ Local variables are declared with <i>auto</i> keyword.</p>
 
 _HL3(`Strings handling in B')
 
-<p>Strings handling in B are tricky, since B has no idea of bytes.
+<p>String handling in B is tricky, since B has no idea of bytes.
 So each 4 characters are packed into one register (or word).
 "Hello world" program is then (if I correct, I have no B compiler):</p>
 
@@ -67,9 +67,8 @@ C was developed to overcome limits of typeless variables, first to make string h
 
 _HL2(`B&rsquo;s heritage in C')
 
-<p>Amusingly, latest GCC still can compile B code:</p>
-
-<p>I tried this and GCC compiled in, treating all types as <i>int</i>:</p>
+<p>Amusingly, latest GCC still can compile B code.
+I tried this and GCC compiled in, treating all types as <i>int</i>:</p>
 
 _PRE_BEGIN
 f(a, b, c)
