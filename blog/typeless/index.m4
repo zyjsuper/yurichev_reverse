@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Typeless programming languages (BCPL, B), C evolution and decompiling')
+_HEADER_HL1(`Typeless programming languages (BCPL, B), C evolution and decompilation')
 
 _HL2(`DCC decompiler by Cristina Cifuentes')
 
