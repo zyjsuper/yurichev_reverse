@@ -68,6 +68,8 @@ Local variables are declared with <i>auto</i> keyword.</p>
 
 <p>All arguments and variables has just one possible type -- CPU register or <i>word</i> in old computers environment, or <i>int</i> in C lingo.</p>
 
+<p>As far as I right, UNIX v2 used B language.</p>
+
 _HL3(`Strings handling in B')
 
 <p>String handling in B is tricky, since B has no idea of bytes.
@@ -149,7 +151,7 @@ _PRE_END
 
 _HL2(`K&R C syntax')
 
-<p>Sometimes, in very ancient C code, we can find a function definitions, where argument types are enumerated after the first line:</p>
+<p>Sometimes, in ancient C code, we can find a function definitions, where argument types are enumerated after the first line:</p>
 
 _PRE_BEGIN
 f2(a, b, c)
@@ -183,7 +185,7 @@ The Hungarian notation was developed to help programmers avoid inadvertent type 
 
 ( _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/BCPL') )
 
-<p>Well, maybe not in this form, but you've got the idea: variable (and function) name can also encode its data type.</p>
+<p>Well, maybe not in this precise form, but you've got the idea: variable (and function) name can also encode its data type.</p>
 
 _HL3(`Hungarian notation in typed languages (C/C++)')
 
@@ -194,7 +196,7 @@ _HL2(`Can B still be used today?')
 
 <p>The B language is even simpler than C. Maybe it can be still used on cheap CPUs with no byte-level instructions?</p>
 
-<p>Maybe it can be used for teaching: many toy-level compiler writers first start at typeless compilers.</p>
+<p>Maybe it can be used for teaching: many toy-level compiler writers first start at typeless C-like compilers.</p>
 
 <p>Decompiler writers are also start here, at typeless C-like languages.</p>
 
