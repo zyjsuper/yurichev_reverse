@@ -68,7 +68,7 @@ Local variables are declared with <i>auto</i> keyword.</p>
 
 <p>All arguments and variables has just one possible type -- CPU register or <i>word</i> in old computers environment, or <i>int</i> in C lingo.</p>
 
-<p>As far as I right, UNIX v2 used B language.</p>
+<p>As far as I right, B language was used in UNIX v2.</p>
 
 _HL3(`Strings handling in B')
 
