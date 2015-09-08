@@ -5,8 +5,47 @@ _HEADER_HL1(`Typeless programming languages (BCPL, B), C evolution and decompila
 _HL2(`DCC decompiler by Cristina Cifuentes')
 
 <p>The early _HTML_LINK(`http://www.program-transformation.org/Transform/DccDecompiler',`DCC decompiler') 
-by Cristina Cifuentes produces results in C-like code in the files with .B extension.
-Perhaps, she kept in mind B programming language?</p>
+by Cristina Cifuentes produces results in C-like code in the files with .B extension.</p>
+
+<p>Here is example:</p>
+
+_PRE_BEGIN
+/*
+ * Input file   : STRLEN.EXE
+ * File type    : EXE
+ */
+#include "dcc.h"
+
+
+void proc_1 (int arg0)
+/* Takes 2 bytes of parameters.
+ * High-level language prologue code.
+ * C calling convention.
+ */
+{
+int loc1;
+
+    loc1 = 0;
+    arg0 = (arg0 + 1);
+
+    while ((*arg0 != 0)) {
+        loc1 = (loc1 + 1);
+        arg0 = (arg0 + 1);
+    }   /* end of while */
+}
+
+
+void main ()
+/* Takes no parameters.
+ */
+{
+int loc1;
+    loc1 = 404;
+    proc_1 (loc1);
+}
+_PRE_END
+
+<p>Perhaps, she kept in mind B programming language?</p>
 
 _HL2(`B programming language')
 
