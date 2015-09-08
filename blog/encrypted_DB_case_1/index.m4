@@ -670,7 +670,7 @@ _HTML_LINK(`https://crypto.stanford.edu/~dabo/cryptobook/draft_0_2.pdf',`link to
 <p>All "encrypted" database contents was artificially constructed by me for the sake of demonstation.
 I've got most popular USA names and surnames from there: _HTML_LINK_AS_IS(`http://stackoverflow.com/questions/1803628/raw-list-of-person-names'),
 and combined them randomly.
-Dates and sums are also generated randomly.</p>
+Dates and sums were also generated randomly.</p>
 
 <p>All files used in this article are here: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/encrypted_DB_case_1').</p>
 
