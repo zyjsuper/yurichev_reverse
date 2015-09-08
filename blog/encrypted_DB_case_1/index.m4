@@ -674,7 +674,7 @@ Dates and sums were also generated randomly.</p>
 
 <p>All files used in this article are here: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/encrypted_DB_case_1').</p>
 
-<p>Nevertheless, many other features I've observed in real-world software applications.
+<p>Nevertheless, many features like these I've observed in real-world software applications.
 This example is based on them.</p>
 
 <p>Discussion on HN: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=10128684').</p>
