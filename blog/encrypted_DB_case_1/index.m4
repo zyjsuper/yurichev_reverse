@@ -605,7 +605,7 @@ _PRE_BEGIN
 OrderID= 172 name= THERESE TUTTLE sum= 152.95 date= 2004 / 7 / 26
 _PRE_END
 
-<p>(<b>00 07 07 19</b> bytes are not used and ballast).</p>
+<p>(<b>00 07 07 19</b> bytes are not used and is ballast).</p>
 
 _PRE_BEGIN
 00000000: 0C 00 FF FE 4D 00 45 00  4C 00 41 00 4E 00 49 00  ....M.E.L.A.N.I.
@@ -671,6 +671,8 @@ _HTML_LINK(`https://crypto.stanford.edu/~dabo/cryptobook/draft_0_2.pdf',`link to
 I've got most popular USA names and surnames from there: _HTML_LINK_AS_IS(`http://stackoverflow.com/questions/1803628/raw-list-of-person-names'),
 and combined them randomly.
 Dates and sums are also generated randomly.</p>
+
+<p>All files used in this article are here: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/encrypted_DB_case_1').</p>
 
 <p>Nevertheless, many other features I've observed in real-world software applications.
 This example is based on them.</p>
