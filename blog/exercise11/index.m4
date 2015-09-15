@@ -454,7 +454,7 @@ $L15:
 
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise12/')</p>
 
 _EXERCISE_FOOTER()
 
