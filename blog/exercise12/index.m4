@@ -56,7 +56,8 @@ main:
         call    exit
 _PRE_END
 
-<p>Executable file is also available for download: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/exercise12/binary/e12?raw=true',`here')</p>
+<p>Executable file is also available for download: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/exercise12/binary/e12?raw=true',`here').
+Don't forget to set executable flag: <b>chmod +x e12</b>.</p>
 
 <p>Solution is to be posted soon...</p>
 
