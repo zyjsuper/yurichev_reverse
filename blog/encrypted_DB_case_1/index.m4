@@ -679,5 +679,14 @@ This example is based on them.</p>
 
 <p>Discussion on HN: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=10128684').</p>
 
+_HL2(`Post Scriptum: brute-forcing IV')
+
+<p>The case you saw is artificially constructed, but based on some real applications I've observed.
+When I've been working on one of such real applications, 
+I first noticed that Initializing Vector (IV) is generating using some 32-bit number, I wasn't able to find a link between this value and OrderID.
+So I prepared to use brute-force, which is indeed possible here.
+It's not a problem to enumerate all 32-bit values and try each IV based on each.
+Then you decrypt 16-byte block and check for zero bytes, which are always at fixed places.</p>
+
 _BLOG_FOOTER()
 

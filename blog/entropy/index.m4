@@ -21,7 +21,7 @@ levels of abstractions.
 If to consider data shuffling as moving data between levels of abstractions, this is also part of switching.</p>
 
 <p>Data compressors and encryptors tend to produce very high entropy results.
-Good perudorandom number generators also produce data which cannot be compressed 
+Good pseudorandom number generators also produce data which cannot be compressed 
 (it is possible to measure their quality by this sign).</p>
 
 <p>So, in other words, entropy is a measure which can help to probe unknown data block.
