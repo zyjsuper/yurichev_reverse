@@ -31,6 +31,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/exercise10/index.html \
 	blog/exercise11/index.html \
 	blog/exercise12/index.html \
+	blog/exercise13/index.html \
 	blog/encrypted_DB_case_1/index.html \
 	blog/FAT12/index.html \
 	blog/typeless/index.html \
