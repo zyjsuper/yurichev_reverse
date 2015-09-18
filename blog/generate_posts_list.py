@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2015,9,18,0,0,0), "exercise13","Reverse engineering exercise #13 (for x86 SSE2); solution for exercise #12")
     post(f1,f2,datetime.datetime(2015,9,15,0,0,0), "exercise12","Reverse engineering exercise #12 (for x86); solution for exercise #11")
     post(f1,f2,datetime.datetime(2015,9, 8,0,0,0), "typeless","Typeless programming languages (BCPL, B), C evolution and decompiling")
     post(f1,f2,datetime.datetime(2015,9, 7,0,0,0), "exercise11","Reverse engineering exercise #11 (for x86, ARM, ARM64, MIPS); solution for exercise #10")
