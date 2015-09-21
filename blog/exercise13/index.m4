@@ -22,7 +22,7 @@ f:
 	rep ret
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise14/')</p>
 
 _EXERCISE_FOOTER()
 
