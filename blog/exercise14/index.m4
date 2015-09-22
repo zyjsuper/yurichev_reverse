@@ -69,7 +69,7 @@ _PRE_BEGIN
         29: ireturn
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise15/')</p>
 
 _EXERCISE_FOOTER()
 
