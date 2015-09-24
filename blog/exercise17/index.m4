@@ -5,8 +5,8 @@ _HEADER_HL1(`Reverse engineering exercise #17 (for x64); solution for exercise #
 _HL2(`Reverse engineering exercise #17 (for x64)')
 
 <p>
-This is quite esoteric piece of code, but nonetheless, the thing it does is very mundane.
-The function has 4 arguments and returns one.
+This is quite esoteric piece of code, but nonetheless, the task it does is very mundane and well-known to anyone.
+The function has 4 64-bit arguments and returns also 64-bit one.
 What it does?
 </p>
 
