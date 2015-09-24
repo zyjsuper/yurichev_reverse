@@ -74,7 +74,7 @@ f:                                      # @f
 
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise17/')</p>
 
 _EXERCISE_FOOTER()
 
@@ -91,11 +91,11 @@ because this can be faster than calling another function (memset()).
 If you'll increase 256 to 512, clang 4.3 will generate call to memset() instead.</p>
 
 <pre class="spoiler">
-#include <stdint.h>
+#include &lt;stdint.h>
 
 void f(uint8_t *a)
 {
-	for (int i=0; i<256; i++)
+	for (int i=0; i&lt;256; i++)
 		a[i]=0;
 };
 </pre>
