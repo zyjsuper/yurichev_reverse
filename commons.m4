@@ -51,10 +51,12 @@ m4_include(`disqus.inc')
 </body>
 </html>')
 
+m4_define(`_BLOG_FOOTER_GITHUB', `<hr><p>This open sourced site and this page in particular is <a href="https://github.com/dennis714/yurichev.com/blob/master/blog/$1/index.m4">hosted on GitHub</a>. Patches, suggestions and comments are welcome.</p>')
+
 m4_define(`_HL1', `<h2>$1</h2>')
-m4_define(`_HL2', `<h3>$1</h3>')
-m4_define(`_HL3', `<h4>$1</h4>')
-m4_define(`_HL4', `<h5>$1</h5>')
+m4_define(`_HL2', `<a class="hl_link" name="$1" href="#$1"><h3>$1</h3></a>')
+m4_define(`_HL3', `<a class="hl_link" name="$1" href="#$1"><h4>$1</h4></a>')
+m4_define(`_HL4', `<a class="hl_link" name="$1" href="#$1"><h5>$1</h4></a>')
 m4_define(`_GREY', `<font color="#808080">$1</font>')
 m4_define(`_BOOK_NOT_FINISHED', `$1')
 m4_define(`_HEADER_HL1', `_HEADER(`$1')_HL1(`$1')')

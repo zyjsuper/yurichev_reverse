@@ -215,5 +215,7 @@ I also submitted the same equation to the website later, using my VPN and even T
 Indeed, many website users may submit same LaTeX input, why to render it again each time?
 Supposedly, this website author(s) also does some hashing.</p>
 
+_BLOG_FOOTER_GITHUB(`CAS')
+
 _BLOG_FOOTER()
 
