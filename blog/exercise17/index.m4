@@ -42,24 +42,45 @@ _HL2(`Solution for reverse engineering exercise #16')
 
 _HTML_LINK(`http://yurichev.com/blog/exercise16',`(Link to exercise)')
 
-_EXERCISE_SPOILER_WARNING()
+m4_include(`spoiler_show.inc')
 
-<p class="spoiler">The code just summing up all bytes in input buffer, but LLVM have done a great job in optimizing it into SSE2 code.</p>
+<div id="example" class="hidden">
 
-<pre class="spoiler">
-#include &lt;stdint.h>
-#include &lt;stdio.h>
+<p>The code just summing up all bytes in input buffer, but LLVM have done a great job in optimizing it into SSE2 code.</p>
+
+<!-- <pre class="spoiler">
+#include <stdint.h>
+#include <stdio.h>
 
 // just sum up all bytes
 uint64_t f (uint8_t *src, size_t s)
 {
 	uint64_t rt=0;
 
-	for (int i=0; i&lt;s; i++)
+	for (int i=0; i<s; i++)
 		rt+=src[i];
 
 	return rt;
 };
 </pre>
+-->
+
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdint.h</span><span style='color:#800000; '>></span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#696969; '>// just sum up all bytes</span>
+uint64_t f <span style='color:#808030; '>(</span>uint8_t <span style='color:#808030; '>*</span>src<span style='color:#808030; '>,</span> <span style='color:#603000; '>size_t</span> s<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+	uint64_t rt<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span>
+
+	<span style='color:#800000; font-weight:bold; '>for</span> <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> i<span style='color:#808030; '>=</span><span style='color:#008c00; '>0</span><span style='color:#800080; '>;</span> i<span style='color:#808030; '>&lt;</span>s<span style='color:#800080; '>;</span> i<span style='color:#808030; '>+</span><span style='color:#808030; '>+</span><span style='color:#808030; '>)</span>
+		rt<span style='color:#808030; '>+</span><span style='color:#808030; '>=</span>src<span style='color:#808030; '>[</span>i<span style='color:#808030; '>]</span><span style='color:#800080; '>;</span>
+
+	<span style='color:#800000; font-weight:bold; '>return</span> rt<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+</pre>
+
+m4_include(`spoiler_hide.inc')
+</div>
 
 _BLOG_FOOTER()
