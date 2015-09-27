@@ -26,8 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
-    post(f1,f2,datetime.datetime(2015,9,28,0,0,0), "exercise19","Reverse engineering exercise #19 (for x64, ARM, ARM64, MIPS); solution for exercise #18
-")
+    post(f1,f2,datetime.datetime(2015,9,28,0,0,0), "exercise19","Reverse engineering exercise #19 (for x64, ARM, ARM64, MIPS); solution for exercise #18")
     post(f1,f2,datetime.datetime(2015,9,27,0,0,0), "git","Some of git internals")
     post(f1,f2,datetime.datetime(2015,9,27,0,0,0), "CAS","Content-addressable storage")
     post(f1,f2,datetime.datetime(2015,9,26,0,0,0), "exercise18","Reverse engineering exercise #18 (for x64, ARM64); solution for exercise #17")
