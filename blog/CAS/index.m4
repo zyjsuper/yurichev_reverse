@@ -151,7 +151,7 @@ This is efficient salvation from data duplication.</p>
 The single file can be referenced from many file trees, but stored only once.
 File (or object) comparison is extremely fast: just compare its IDs.</p>
 
-<p>More on git: _HTML_LINK(`http://yurichev.com/blog/git').</p>
+<p>More on git: _HTML_LINK_AS_IS(`http://yurichev.com/blog/git').</p>
 
 _HL2(`Mathematical equations in Wikipedia articles')
 
