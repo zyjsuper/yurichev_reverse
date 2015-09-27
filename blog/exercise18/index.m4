@@ -210,7 +210,7 @@ _HL2(`Solution for reverse engineering exercise #17')
 
 _HTML_LINK(`http://yurichev.com/blog/exercise17',`(Link to exercise)')
 
-<p><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">Spoiler warning! Click to see solution.</a></p>
+m4_include(`spoiler_show.inc')
 
 <div id="example" class="hidden">
 
@@ -278,7 +278,7 @@ _PRE_END
 <span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
 </pre>
 
-<p><a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">Hide solution.</a></p>
+m4_include(`spoiler_hide.inc')
 </div>
 
 _BLOG_FOOTER()
