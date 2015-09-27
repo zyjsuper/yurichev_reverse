@@ -16,6 +16,27 @@ A.spoiler
 {
     color: white;
 }
+
+A.hl_link:link {
+    text-decoration: none;
+    color: black;
+}
+
+A.hl_link:visited {
+    text-decoration: none;
+    color: black;
+}
+
+A.hl_link:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+A.hl_link:active {
+    text-decoration: underline;
+    color: black;
+}
+
 pre.normal
 {
     font-family: monospace, sans-serif;
