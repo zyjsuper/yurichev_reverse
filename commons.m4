@@ -12,6 +12,7 @@ m4_define(`_HEADER',`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//E
 _MAKE_TITLE(`$1')
 <link rel="stylesheet" href="http://yurichev.com/style.css">
 <script src="http://yurichev.com/multilang.js" type="text/javascript"></script>
+<script src="http://yurichev.com/showhide.js" type="text/javascript"></script>
 <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
