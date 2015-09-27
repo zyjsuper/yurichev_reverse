@@ -210,15 +210,17 @@ _HL2(`Solution for reverse engineering exercise #17')
 
 _HTML_LINK(`http://yurichev.com/blog/exercise17',`(Link to exercise)')
 
-_EXERCISE_SPOILER_WARNING()
+<p><a href="#" id="example-show" class="showLink" onclick="showHide('example');return false;">Spoiler warning! Click to see solution.</a></p>
 
-<p class="spoiler">The code just picks minimal value out of 4 inputs.
+<div id="example" class="hidden">
+
+<p>The code just picks minimal value out of 4 inputs.
 The code is tricky: I've used branchless min() and max() functions and sorting network 
 (which can sort values in branchless manner as well).
 </p>
-
-<pre class="spoiler">
-#include &lt;stdio.h>
+<!--
+_PRE_BEGIN
+#include <stdio.h>
 
 #define WORDBITS 64
 // branchless functions, copypasted from http://aggregate.org/MAGIC/#Integer%20Minimum%20or%20Maximum
@@ -245,6 +247,38 @@ int main()
         printf ("%d\n", f (123, 456, 9,   100));
         printf ("%d\n", f (123, 45,  78,  10));
 };
+_PRE_END
+-->
+<pre style='color:#000000;background:#ffffff;'><span style='color:#004a43; '>#</span><span style='color:#004a43; '>include </span><span style='color:#800000; '>&lt;</span><span style='color:#40015a; '>stdio.h</span><span style='color:#800000; '>></span>
+
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>define</span><span style='color:#004a43; '> WORDBITS 64</span>
+<span style='color:#696969; '>// branchless functions, copypasted from </span><span style='color:#5555dd; '>http://aggregate.org/MAGIC/#Integer%20Minimum%20or%20Maximum</span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>define</span><span style='color:#004a43; '> MIN</span><span style='color:#808030; '>(</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>,</span><span style='color:#004a43; '>y</span><span style='color:#808030; '>)</span><span style='color:#004a43; '> </span><span style='color:#808030; '>(</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>+</span><span style='color:#808030; '>(</span><span style='color:#808030; '>(</span><span style='color:#808030; '>(</span><span style='color:#004a43; '>y</span><span style='color:#808030; '>-</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>)</span><span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#808030; '>(</span><span style='color:#004a43; '>WORDBITS</span><span style='color:#808030; '>-</span><span style='color:#004a43; '>1</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>&amp;</span><span style='color:#808030; '>(</span><span style='color:#004a43; '>y</span><span style='color:#808030; '>-</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+<span style='color:#004a43; '>#</span><span style='color:#004a43; '>define</span><span style='color:#004a43; '> MAX</span><span style='color:#808030; '>(</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>,</span><span style='color:#004a43; '>y</span><span style='color:#808030; '>)</span><span style='color:#004a43; '> </span><span style='color:#808030; '>(</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>-</span><span style='color:#808030; '>(</span><span style='color:#808030; '>(</span><span style='color:#808030; '>(</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>-</span><span style='color:#004a43; '>y</span><span style='color:#808030; '>)</span><span style='color:#808030; '>></span><span style='color:#808030; '>></span><span style='color:#808030; '>(</span><span style='color:#004a43; '>WORDBITS</span><span style='color:#808030; '>-</span><span style='color:#004a43; '>1</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>&amp;</span><span style='color:#808030; '>(</span><span style='color:#004a43; '>x</span><span style='color:#808030; '>-</span><span style='color:#004a43; '>y</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span>
+
+<span style='color:#696969; '>// find minimal value</span>
+<span style='color:#800000; font-weight:bold; '>int</span> __attribute__ <span style='color:#808030; '>(</span><span style='color:#808030; '>(</span>noinline<span style='color:#808030; '>)</span><span style='color:#808030; '>)</span> f <span style='color:#808030; '>(</span><span style='color:#800000; font-weight:bold; '>int</span> a<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>int</span> b<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>int</span> c<span style='color:#808030; '>,</span> <span style='color:#800000; font-weight:bold; '>int</span> d<span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+        <span style='color:#696969; '>// taken from </span><span style='color:#5555dd; '>https://en.wikipedia.org/wiki/Sorting_network</span>
+        <span style='color:#696969; '>// </span><span style='color:#5555dd; '>https://en.wikipedia.org/wiki/File:SimpleSortingNetwork2.svg</span>
+        <span style='color:#696969; '>//</span>
+        b<span style='color:#808030; '>=</span>MIN<span style='color:#808030; '>(</span>b<span style='color:#808030; '>,</span>d<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span> d<span style='color:#808030; '>=</span>MAX<span style='color:#808030; '>(</span>b<span style='color:#808030; '>,</span>d<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        a<span style='color:#808030; '>=</span>MIN<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span>c<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span> c<span style='color:#808030; '>=</span>MAX<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span>c<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        a<span style='color:#808030; '>=</span>MIN<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span>b<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span> b<span style='color:#808030; '>=</span>MAX<span style='color:#808030; '>(</span>a<span style='color:#808030; '>,</span>b<span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+
+        <span style='color:#800000; font-weight:bold; '>return</span> a<span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
+
+<span style='color:#800000; font-weight:bold; '>int</span> <span style='color:#400000; '>main</span><span style='color:#808030; '>(</span><span style='color:#808030; '>)</span>
+<span style='color:#800080; '>{</span>
+        <span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> f <span style='color:#808030; '>(</span><span style='color:#008c00; '>123</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>456</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>789</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>1000</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        <span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> f <span style='color:#808030; '>(</span><span style='color:#008c00; '>123</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>456</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>999</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>1</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        <span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> f <span style='color:#808030; '>(</span><span style='color:#008c00; '>123</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>456</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>9</span><span style='color:#808030; '>,</span>   <span style='color:#008c00; '>100</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+        <span style='color:#603000; '>printf</span> <span style='color:#808030; '>(</span><span style='color:#800000; '>"</span><span style='color:#007997; '>%d</span><span style='color:#0f69ff; '>\n</span><span style='color:#800000; '>"</span><span style='color:#808030; '>,</span> f <span style='color:#808030; '>(</span><span style='color:#008c00; '>123</span><span style='color:#808030; '>,</span> <span style='color:#008c00; '>45</span><span style='color:#808030; '>,</span>  <span style='color:#008c00; '>78</span><span style='color:#808030; '>,</span>  <span style='color:#008c00; '>10</span><span style='color:#808030; '>)</span><span style='color:#808030; '>)</span><span style='color:#800080; '>;</span>
+<span style='color:#800080; '>}</span><span style='color:#800080; '>;</span>
 </pre>
+
+<p><a href="#" id="example-hide" class="hideLink" onclick="showHide('example');return false;">Hide solution.</a></p>
+</div>
 
 _BLOG_FOOTER()
