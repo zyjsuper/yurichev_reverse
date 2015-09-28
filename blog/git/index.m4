@@ -985,6 +985,8 @@ _HL2(`git as versioning file system.')
 <p>This is why git is often called _HTML_LINK(`https://en.wikipedia.org/wiki/Versioning_file_system',`versioning FS'):
 besides the fact git stores each version of each file, it also stores the whole file tree at each moment of time.</p>
 
+<p>Some discussion: _HTML_LINK_AS_IS(`https://www.reddit.com/r/git/comments/3ml4qj/some_of_git_internals/').</p>
+
 _BLOG_FOOTER_GITHUB(`git')
 
 _BLOG_FOOTER()
