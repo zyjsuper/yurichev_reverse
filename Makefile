@@ -38,6 +38,11 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/exercise17/index.html \
 	blog/exercise18/index.html \
 	blog/exercise19/index.html \
+	blog/exercise20/index.html \
+	blog/exercise21/index.html \
+	blog/exercise22/index.html \
+	blog/exercise23/index.html \
+	blog/exercise24/index.html \
 	blog/CAS/index.html \
 	blog/git/index.html \
 	blog/encrypted_DB_case_1/index.html \
