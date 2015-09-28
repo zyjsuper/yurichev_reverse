@@ -974,7 +974,7 @@ It's also possible in git, and "git fsck" does cleanup: the utility forms a grap
 
 _HL2(`Git packfiles')
 
-<p>Keep each object in each file under .git subdirectory is good for 1) demonstration, like this one; 2) faster access to objects.
+<p>Keeping each object in each file under .git subdirectory is good for 1) demonstration, like this one; 2) faster access to objects.
 But more economical way of keeping records is to store objects in compressed "pack files".
 The objects there are addressed in the same way, but stored in the single file 
 (like _HTML_LINK(`https://en.wikipedia.org/wiki/Doom_WAD',`WAD file in DOOM game') or PAK file in Quake game).
