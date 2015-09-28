@@ -469,7 +469,7 @@ $L18:
         addu    $16,$16,$3
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise20/')</p>
 
 _EXERCISE_FOOTER()
 
