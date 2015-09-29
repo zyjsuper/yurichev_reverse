@@ -108,8 +108,7 @@ $LC0:
         .word   805306368
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
-<!-- <p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise21/')</p> -->
+<p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise21/')</p>
 
 _EXERCISE_FOOTER()
 
