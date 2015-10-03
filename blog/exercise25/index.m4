@@ -36,23 +36,6 @@ _PRE_END
 <p>Solution is to be posted soon...</p>
 <!-- <p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise../')</p> -->
 
-_EXERCISE_FOOTER()
-
-_HL2(`Solution for reverse engineering exercise #24')
-
-_HTML_LINK(`http://yurichev.com/blog/exercise24',`(Link to exercise)')
-
-m4_include(`spoiler_show.inc')
-
-<div id="example" class="hidden">
-
-<p>
-The source code: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise25/files/calc.c').
-</p>
-
-m4_include(`spoiler_hide.inc')
-</div>
-
 _BLOG_FOOTER_GITHUB(`exercise25')
 
 _BLOG_FOOTER()
