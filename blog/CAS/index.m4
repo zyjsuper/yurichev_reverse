@@ -85,7 +85,7 @@ If you plan to modify vast majority of your strings, or you work mostly with uni
 _HL3(`Symbols in LISP')
 
 <p>Symbol in LISP has a name and also attached function or variable to it.
-LISPers use symbols heavily without anything attached to it, this is somewhat like enumerations in C.
+LISPers use symbols heavily without anything attached to it, this is somewhat like enumerations/constants/macros in C.
 You may define <b>'red</b>, <b>'green</b>, <b>'blue</b> symbols without any numerical value attached to them, and then compare these symbols with each other.
 Each symbol has unique address, like string in string interning.</p>
 
@@ -214,6 +214,8 @@ _PRE_END
 I also submitted the same equation to the website later, using my VPN and even Tor, the output PNG file had the same URL.
 Indeed, many website users may submit same LaTeX input, why to render it again each time?
 Supposedly, this website author(s) also does some hashing.</p>
+
+<p>UPD: Discussion on HN: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=10391347').</p>
 
 _BLOG_FOOTER_GITHUB(`CAS')
 

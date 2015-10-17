@@ -181,8 +181,9 @@ f:
         ret
 _PRE_END
 
-<p>Solution is to be posted soon...</p>
-<!-- <p>Solution: _HTML_LINK_AS_IS(`http://yurichev.com/blog/exercise24/')</p> -->
+<p>Solution is to be posted in future...</p>
+
+_EXERCISE_FOOTER()
 
 _BLOG_FOOTER_GITHUB(`exercise23')
 
