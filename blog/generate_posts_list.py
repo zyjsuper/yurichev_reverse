@@ -26,6 +26,9 @@ def main():
 
     f2.write ("<table>\n")
 
+    #post(f1,f2,datetime.datetime(2015,?,?,0,0,0), "exercise28","")
+    #post(f1,f2,datetime.datetime(2015,?,?,0,0,0), "exercise27","")
+    #post(f1,f2,datetime.datetime(2015,?,?,0,0,0), "exercise26","")
     #post(f1,f2,datetime.datetime(2015,?,?,0,0,0), "exercise25","")
     #post(f1,f2,datetime.datetime(2015,?,?,0,0,0), "exercise24","Reverse engineering exercise #24 (for x64, ARM, MIPS); solution for exercise #23")
     post(f1,f2,datetime.datetime(2015,10, 4,0,0,0), "exercise23","Reverse engineering exercise #23 (for x64, ARM, ARM64, MIPS)")

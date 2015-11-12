@@ -8,6 +8,8 @@ _HL1(`Contacts:')
 
 <p>_HTML_LINK(`pgp.html', `My PGP public key').</p>
 
+<p>My _HTML_LINK(`https://bitmessage.org/',`BitMessage ID'): <b>BM-2cUyrfGUDyjuUHyzAA63kq5NHAB2zMo4Q2</b></p>
+
 <p>Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
 <p>Skype: dennis.yurichev (I'm not often online)</p>
