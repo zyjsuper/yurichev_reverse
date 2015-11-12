@@ -49,7 +49,8 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/encrypted_DB_case_1/index.html \
 	blog/FAT12/index.html \
 	blog/typeless/index.html \
-	blog/RSA/index.html
+	blog/RSA/index.html \
+	blog/challenges.re/index.html
 
 all: default 
 #I've too many HTMLs!
