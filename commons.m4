@@ -31,7 +31,6 @@ m4_define(`_MULTILANG_SWITCH',`<h5>
 
 
 m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`http://yurichev.com',`back to the main page')]</p>
-<h5>The page last updated on m4_esyscmd(date -r m4___file__ +"%d-%B-%Y")</h5>
 </body>
 </html>')
 
