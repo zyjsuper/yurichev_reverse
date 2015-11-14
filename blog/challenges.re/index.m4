@@ -12,5 +12,13 @@ _HTML_LINK(`http://cryptopals.com/',`"the matasano crypto challenges"').</p>
 
 <p>Stay tuned, more exercises is to be added...</p>
 
-_FOOTER()
+<p>
+Some discussion:
+_HTML_LINK(`https://news.ycombinator.com/item?id=10557567',`hacker news');
+_HTML_LINK(`https://www.reddit.com/domain/challenges.re',`reddit');
+_HTML_LINK(`http://re.jecool.net/forum/index.php?topic=796.msg5711;boardseen',`Czech forum').
+</p>
+
+_BLOG_FOOTER()
+
 
