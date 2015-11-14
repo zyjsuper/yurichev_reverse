@@ -15,6 +15,8 @@ Just ask me, I will prepare Russian version by myself.</p>
 
 <p>Some of my other writings are: _HTML_LINK(`http://beginners.re/',`"Reverse Engineering for Beginners" free book'), _HTML_LINK_AS_IS(`http://yurichev.com/writings/').</p>
 
+<p>All reverse engineering exercises are moved to separate website: _HTML_LINK_AS_IS(`http://challenges.re/').</p>
+
 m4_include(`google.html')
 
 _HL2(`Subscribe to the blog:')
