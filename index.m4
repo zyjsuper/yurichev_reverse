@@ -8,6 +8,8 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
+_HTML_LINK(`services.html',`<font color="red"><h3>My services</h3></font>')
+
 _HL2(`Some of my writings:')
 
 <ul>

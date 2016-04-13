@@ -6,7 +6,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	dongles.html copyfile.html retrocomputing.html oracle_tables.html \
 	tracer-en.html tracer-ru.html PE_add_imports.html \
 	PE_patcher.html PE_search_str_refs.html \
-	mailing_lists.html contacts.html cvt2sparse.html \
+	mailing_lists.html contacts.html cvt2sparse.html services.html \
 	blog/posts.html \
 	blog/index.html \
 	blog/fortune/index.html \
@@ -16,34 +16,8 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/clique/index.html \
 	blog/fuzzy_string/index.html \
 	blog/2015-aug-13/index.html \
-	blog/2015-aug-15/index.html \
-	blog/2015-aug-18/index.html \
 	blog/2015-aug-20/index.html \
-	blog/2015-aug-22/index.html \
-	blog/2015-aug-26/index.html \
-	blog/crackme4/index.html \
 	blog/de_bruijn/index.html \
-	blog/exercise5/index.html \
-	blog/exercise6/index.html \
-	blog/exercise7/index.html \
-	blog/exercise8/index.html \
-	blog/exercise9/index.html \
-	blog/exercise10/index.html \
-	blog/exercise11/index.html \
-	blog/exercise12/index.html \
-	blog/exercise13/index.html \
-	blog/exercise14/index.html \
-	blog/exercise15/index.html \
-	blog/exercise16/index.html \
-	blog/exercise17/index.html \
-	blog/exercise18/index.html \
-	blog/exercise19/index.html \
-	blog/exercise20/index.html \
-	blog/exercise21/index.html \
-	blog/exercise22/index.html \
-	blog/exercise23/index.html \
-	blog/exercise24/index.html \
-	blog/exercise25/index.html \
 	blog/CAS/index.html \
 	blog/git/index.html \
 	blog/encrypted_DB_case_1/index.html \
