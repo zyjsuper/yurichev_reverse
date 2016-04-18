@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2016, 4,19,0,0,0), "lzhuf","Bug in LZHuf.c by Haruyasu Yoshizaki")
     post(f1,f2,datetime.datetime(2015,11,12,0,0,0), "challenges.re","My new website about reverse engineering challenges/exercises/problems/tasks: challenges.re")
     post(f1,f2,datetime.datetime(2015, 9,27,0,0,0), "git","Some of git internals")
     post(f1,f2,datetime.datetime(2015, 9,27,0,0,0), "CAS","Content-addressable storage")

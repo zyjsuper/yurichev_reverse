@@ -35,7 +35,7 @@ Now we can fix a bug (to set <i>unsigned short</i> type instead of <i>unsigned</
 <p>Probably (I'm not sure) this is a way to crash unfixed LZHuf.c program on a 32-bit or 64-bit system, just feed this file to it.
 Unfixed LZHuf.c version has <i>unsigned</i> type for <i>freq[]</i> array, fixed has <i>unsigned short</i> type for it.</p>
 
-<p>For example, this one is unfixed: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/tyll/tinyos-2.x-contrib/89a1419cb84ccf0747f95cdea2423a18e4fb13a7/eon/eon/src/util/lzss-c/lzhuf.c')</p>
+<p>For example, this one is unfixed, but still very popular: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/tyll/tinyos-2.x-contrib/89a1419cb84ccf0747f95cdea2423a18e4fb13a7/eon/eon/src/util/lzss-c/lzhuf.c')</p>
 
 <p>This one is fixed: _HTML_LINK_AS_IS(`https://github.com/msmiley/lzh/blob/9ed1946a3f6c7d124ee90c3a1fd4123b7418be57/src/lzh.c')</p>
 
