@@ -42,9 +42,9 @@ Unfixed LZHuf.c version has <i>unsigned</i> type for <i>freq[]</i> array, fixed 
 <p>Crash happens in DecodePosition() function, when it attempts to read beyond <i>d_code[]</i> array.
 Perhaps, someone else may check this and analyze further.</p>
 
-<p>File I used as a plain text: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/plain.txt').</p>
+<p>File I used as a plain text (~178KiB): _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/plain.txt').</p>
 
-<p>Compressed file which crashes unfixed LZHuf.c: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/compressed.dat').</p>
+<p>Compressed file which crashes unfixed LZHuf.c (~45KiB): _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/compressed.dat').</p>
 
 <p>Unfixed LZHuf.c I used: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/lzhuf.c').</p>
 
