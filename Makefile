@@ -24,6 +24,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/FAT12/index.html \
 	blog/typeless/index.html \
 	blog/RSA/index.html \
+	blog/lzhuf/index.html \
 	blog/challenges.re/index.html
 
 all: default 
