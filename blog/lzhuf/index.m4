@@ -46,7 +46,7 @@ Perhaps, someone else may check this and analyze further.</p>
 
 <p>Compressed file which crashes unfixed LZHuf.c: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/compressed.dat').</p>
 
-<p>Unfixed LZHuf.c: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/lzhuf.c').</p>
+<p>Unfixed LZHuf.c I used: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/lzhuf/files/lzhuf.c').</p>
 
 _BLOG_FOOTER_GITHUB(`lzhuf')
 
