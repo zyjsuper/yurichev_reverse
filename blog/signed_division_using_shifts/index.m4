@@ -13,7 +13,7 @@ This is SAR in x86.</p>
 
 <p>Interesting to know, there is no special instruction for arithmetical shift left, because it works just as logical shift left.
 So, SAL and SHL instructions in x86 are mapped to the same opcode.
-Many disassemblers even don't know about SAL instruction and decode this opcode as SHL.</p>
+Many disassemblers don't even know about SAL instruction and decode this opcode as SHL.</p>
 
 <p>Hence, arithmetical shift right is used for signed numbers.
 For example, if you shift -4 (11111100b) by 1 bit right, logical shift right operation will produce 01111110b, which is 126.
