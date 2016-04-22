@@ -14,7 +14,7 @@ For example, if you shift -4 (11111100b) by 1 bit right, logical shift right ope
 Arithmetical shift right will produce 11111110b, which is -2.
 So far so good.</p>
 
-<p>What if we need to divide -5 by 2? This is 2.5 in, but just 2 in integer arithmetic.
+<p>What if we need to divide -5 by 2? This is 2.5, but just 2 in integer arithmetic.
 -5 is 11111011b, shifting this value by 1 bit right, we'll get 11111101b, which is -3.
 This is slightly incorrect.</p>
 
