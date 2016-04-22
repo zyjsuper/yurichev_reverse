@@ -15,7 +15,7 @@ Arithmetical shift right will produce 11111110b, which is -2.
 So far so good.</p>
 
 <p>What if we need to divide -5 by 2? This is -2.5, or just -2 in integer arithmetic.
--5 is 11111011b, shifting this value by 1 bit right, we'll get 11111101b, which is -3.
+-5 is 11111011b, by shifting this value by 1 bit right, we'll get 11111101b, which is -3.
 This is slightly incorrect.</p>
 
 <p>Another example: $-\frac{1}{2}=-0.5$ or just 0 in integer arithmetic.
