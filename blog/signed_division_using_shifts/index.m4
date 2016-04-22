@@ -5,7 +5,7 @@ _HEADER_HL1(`22-Apr-2016: Signed division using shifts')
 <p>Unsigned division by $2^n$ numbers is easy, just use bit shift right by $n$.
 Signed division by $2^n$ is easy as well, but some correction needs to be done before or after shift opeartion.</p>
 
-<p>First, most CPU architectures supports two right shift operations: logical and arithmetical.
+<p>First, most CPU architectures support two right shift operations: logical and arithmetical.
 During logical shift right, free bit(s) at left are set to zero bit(s).
 This is SHR in x86.
 During arithmetical shift right, free bit(s) at left are set equal to the bit which was at the same place.
