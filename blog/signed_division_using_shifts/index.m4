@@ -12,7 +12,8 @@ During arithmetical shift right, free bit(s) at left are set equal to the bit wh
 This is SAR in x86.</p>
 
 <p>Interesting to know, there is no special instruction for arithmetical shift left, because it works just as logical shift left.
-So, SAL and SHL instructions in x86 are mapped to the same opcode.</p>
+So, SAL and SHL instructions in x86 are mapped to the same opcode.
+Many disassemblers even don't know about SAL instruction and decode this opcode as SHL.</p>
 
 <p>Hence, arithmetical shift right is used for signed numbers.
 For example, if you shift -4 (11111100b) by 1 bit right, logical shift right operation will produce 01111110b, which is 126.
@@ -127,7 +128,9 @@ _PRE_BEGIN
 _PRE_END
 
 <p>Summary: $2^n-1$ must be added to input value before arithmetical shift, or 1 must be added to the final result after shift.
-Both operations are equivalent to each other, so compiler developers may choose what is more suitable to them.</p>
+Both operations are equivalent to each other, so compiler developers may choose what is more suitable to them.
+From the reverse engineer's point of view, this correction is a clear evidence that the value has signed type.
+</p>
 
 _BLOG_FOOTER_GITHUB(`signed_division_using_shifts')
 
