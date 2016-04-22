@@ -108,25 +108,26 @@ read _HTML_LINK(`http://yurichev.com/blog/modulo/',`here') about multiplicative 
 And sometimes, additional shifting is used after multiplication.
 For example, when GCC optimizes $\frac{x}{10}$, it can't find multiplicative inverse for 10, because diophantine equation has no solutions.
 So it generates code for $\frac{x}{5}$ and then adds arithmetical shift right operation by 1 bit, to divide the result by 2.
-Of course, this is only valid for signed integers.</p>
+Of course, this is true only for signed integers.</p>
 
 <p>So here is division by 10 by GCC 4.8:</p>
 
 _PRE_BEGIN
 	mov	eax, edi
 	mov	edx, 1717986919 ; magic number
-	sar	edi, 31         ; isolate leftmost bit
-	imul	edx             ; multiplication by magic number, do x/5
-	sar	edx, 2          ; do (x/5)/2
+	sar	edi, 31         ; isolate leftmost bit (which reflects sign)
+	imul	edx             ; multiplication by magic number (calculate x/5)
+	sar	edx, 2          ; now calculate (x/5)/2
 
-        ; subtract -1 (or add 1) if the input value was negative.
+        ; subtract -1 (or add 1) if the input value is negative.
 	; do nothing otherwise:
 	sub	edx, edi        
 	mov	eax, edx
 	ret
 _PRE_END
 
-<p>Summary: $2^n-1$ must be added to input value before arithmetical shift, or 1 must be added to the final result after shift.</p>
+<p>Summary: $2^n-1$ must be added to input value before arithmetical shift, or 1 must be added to the final result after shift.
+Both operations are equivalent to each other, so compiler developers may choose what is more suitable to them.</p>
 
 _BLOG_FOOTER_GITHUB(`signed_division_using_shifts')
 
