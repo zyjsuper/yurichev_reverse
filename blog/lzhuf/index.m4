@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Bug in LZHuf.c by Haruyasu Yoshizaki')
+_HEADER_HL1(`19-Apr-2016: Bug in LZHuf.c by Haruyasu Yoshizaki')
 
 <p>There is a highly popular LZHuf compressor/decompressor written by Haruyasu Yoshizaki as early as in 1988.</p>
 
