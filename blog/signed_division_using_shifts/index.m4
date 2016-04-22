@@ -3,7 +3,7 @@ m4_include(`commons.m4')
 _HEADER_HL1(`22-Apr-2016: Signed division using shifts')
 
 <p>Unsigned division by $2^n$ numbers is easy, just use bit shift right by $n$.
-Signed division by $2^n$ is easy as well, but some correction needs to be done after shift.</p>
+Signed division by $2^n$ is easy as well, but some correction needs to be done before or after shift opeartion.</p>
 
 <p>First, most CPU architectures supports two right shift operations: logical and arithmetical.
 During logical shift right, free bit(s) at left are set to zero bit(s).
@@ -16,8 +16,13 @@ So far so good.</p>
 
 <p>What if we need to divide -5 by 2? This is 2.5 in, but just 2 in integer arithmetic.
 -5 is 11111011b, shifting this value by 1 bit right, we'll get 11111101b, which is -3.
-This is slightly incorrect.
-One solution is to add 1 to the input value if it's negative.</p>
+This is slightly incorrect.</p>
+
+<p>Another example: $\frac{-1}{2}=0.5$ or just 0 in integer arithmetic.
+But -1 is 11111111b, and 11111111b >> 1 = 11111111b, which is -1 again.
+This is also incorrect.</p>
+
+<p>One solution is to add 1 to the input value if it's negative.</p>
 
 <p>That is why, if we compile "x/2" expression, where x is <i>signed int</i>, GCC 4.8 will produce something like that:</p>
 
@@ -96,9 +101,9 @@ _PRE_END
 <p>Also, such correction code is used often when division is replaced by multiplication by "magic numbers": 
 read _HTML_LINK(`http://yurichev.com/blog/modulo/',`here') about multiplicative inverse.
 And sometimes, additional shifting is used after multiplication.
-For example, when GCC optimizes $\frac{x}{10}$, it can't find multiplicative inverse for 10, because diophantine equation has to solutions.
+For example, when GCC optimizes $\frac{x}{10}$, it can't find multiplicative inverse for 10, because diophantine equation has no solutions.
 So it generates code for $\frac{x}{5}$ and then adds arithmetical shift right operation by 1 bit, to divide the result by 2.
-Of course, this is valid only for signed integers.</p>
+Of course, this is only valid for signed integers.</p>
 
 <p>So here is division by 10 by GCC 4.8:</p>
 
@@ -115,6 +120,8 @@ _PRE_BEGIN
 	mov	eax, edx
 	ret
 _PRE_END
+
+<p>Summary: $2^n-1$ must be added to input value before arithmetical shift, or 1 must be added to the final result after shift.</p>
 
 _BLOG_FOOTER_GITHUB(`signed_division_using_shifts')
 
