@@ -7,7 +7,12 @@ Signed division by $2^n$ is easy as well, but some correction needs to be done b
 
 <p>First, most CPU architectures supports two right shift operations: logical and arithmetical.
 During logical shift right, free bit(s) at left are set to zero bit(s).
-During arithmetical shift right, free bit(s) at left are set equal to the bit which was at the same place.</p>
+This is SHR in x86.
+During arithmetical shift right, free bit(s) at left are set equal to the bit which was at the same place.
+This is SAR in x86.</p>
+
+<p>Interesting to know, there is no special instruction for arithmetical shift left, because it works just as logical shift left.
+So, SAL and SHL instructions in x86 are mapped to the same opcode.</p>
 
 <p>Hence, arithmetical shift right is used for signed numbers.
 For example, if you shift -4 (11111100b) by 1 bit right, logical shift right operation will produce 01111110b, which is 126.
