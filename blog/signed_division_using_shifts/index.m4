@@ -18,7 +18,7 @@ So far so good.</p>
 -5 is 11111011b, shifting this value by 1 bit right, we'll get 11111101b, which is -3.
 This is slightly incorrect.</p>
 
-<p>Another example: $\frac{-1}{2}=0.5$ or just 0 in integer arithmetic.
+<p>Another example: $-\frac{1}{2}=-0.5$ or just 0 in integer arithmetic.
 But -1 is 11111111b, and 11111111b >> 1 = 11111111b, which is -1 again.
 This is also incorrect.</p>
 
