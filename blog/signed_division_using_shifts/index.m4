@@ -9,6 +9,7 @@ Signed division by $2^n$ is easy as well, but some correction needs to be done b
 During logical shift right, free bit(s) at left are set to zero bit(s).
 This is SHR in x86.
 During arithmetical shift right, free bit(s) at left are set equal to the bit which was at the same place.
+Thus, it preserves sign bit while shifting.
 This is SAR in x86.</p>
 
 <p>Interesting to know, there is no special instruction for arithmetical shift left, because it works just as logical shift left.
