@@ -6,7 +6,7 @@ _HEADER_HL1(`6-Feb-2010: Oracle RDBMS internal self-testing features')
 
 <p>Got this list from 11g (Linux)...</p>
 
-<pre>
+_PRE_BEGIN
 cat oraus.msg | grep simulate
 
 10059, 00000, "simulate error in logfile create/clear"
@@ -61,7 +61,7 @@ number
 30011, 00000, "Error simulated: psite=%s, ptype=%s"
 33271, 00000, "simulated paging error"
 //            and testing phase, to simulate memory pressure conditions.
-</pre>
+_PRE_END
 
 _BLOG_FOOTER_GITHUB(`43')
 

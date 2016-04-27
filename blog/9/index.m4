@@ -21,9 +21,9 @@ Please note: detaching is not working in Windows 2000, so all utility can do is 
 
 <p>If Oracle RDBMS version 11.1.0.6.0 is used, Oracle internal process name will be visible also at each SQL statement. Otherwise, only win32 thread ID will be visible. Windows thread ID can be converted to Oracle process name using this query:</p>
 
-<pre>
-"select spid, program from gv$process;"
-</pre>
+_PRE_BEGIN
+select spid, program from gv$process;
+_PRE_END
 
 <p>Utility is not intended to use on production servers. But if someone consciously willing to use it, one should backup database. Utility cannot be stable yet, at this level of development.</p>
 

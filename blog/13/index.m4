@@ -6,7 +6,7 @@ _HEADER_HL1(`2-Oct-2008: SYS_OP_*')
 
 <p>These are SYS_OP_* functions which I able to find in 11.1.0.7.0, however, I do not have any clue about what each does.</p>
 
-<pre>
+_PRE_BEGIN
 SYS_OP_ALEXPCOL
 SYS_OP_ATG
 SYS_OP_BL2R
@@ -66,7 +66,7 @@ SYS_OP_XPTHATG
 SYS_OP_XPTHIDX
 SYS_OP_XPTHOP
 SYS_OP_XTXT2SQLT
-</pre>
+_PRE_END
 
 _BLOG_FOOTER_GITHUB(`13')
 

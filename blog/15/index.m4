@@ -10,7 +10,7 @@ _HEADER_HL1(`7-Jan-2009: "CHANGE USER" OPI call')
 <p>All we need is to convert service handle to "hst" value needed by upicui() - using internal function kpusvc2hst() - and then call upicui().</p>
 <p>This code snippet was successfully tried under win32 10.2 and 11. Change SID, USERNAME, PASSWORD and USERNAME2 before compiling.</p>
 
-<pre>
+_PRE_BEGIN
 #include &lt;stdio.h&gt;
 #include &lt;assert.h&gt;
 #include &lt;string.h&gt;
@@ -87,7 +87,7 @@ void main(int argc, char * argv[])
 
   printf ("%s\n", buf);
 };
-</pre>
+_PRE_END
 
 <p>Update:
 How to do the same in Linux:

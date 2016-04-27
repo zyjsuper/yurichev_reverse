@@ -5,7 +5,8 @@ _HEADER_HL1(`25-Sep-2008: "Basics of C within the Oracle kernel."')
 <p>Very interesting text of unknown origin appeared on <a href="http://www.oraclefans.cn/forum/showtopic.jsp?rootid=3530&CPages=1">some forum</a>, named "Basics of C within the Oracle kernel."</p>
 <p>It contains also code snippets from ksl.h and ksl.c. </p>
 
-<pre>Basics of C within the Oracle kernel.
+_PRE_BEGIN
+Basics of C within the Oracle kernel.
           
 
 C is a function based language and as with most languages is composed of
@@ -1627,7 +1628,7 @@ typedef void (*lgenfp_t)(/*_ void _*/);
 
 
 #endif
-</pre>
+_PRE_END
 
 _BLOG_FOOTER_GITHUB(`11')
 

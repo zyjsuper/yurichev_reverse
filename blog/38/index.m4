@@ -8,11 +8,11 @@ _HEADER_HL1(`22-Jan-2010: CVE-2010-0071')
 
 <p><a href="http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2010-0071.py_.txt">Here is PoC</a> (Python script). It is not full exploit, what it do is: while running on 11.1.0.7.0 win32, nsglvcrt() Listener function attempt to allocate huge memory block and copy *something* to it.</p>
 
-<pre>
+_PRE_BEGIN
 TID=3052|(1) MSVCR71.dll!malloc (0x4222fc5) (called from 0x438631 (TNSLSNR.EXE!nsglvcrt+0x95))
 TID=3052|(1) MSVCR71.dll!malloc -> 0x2530020
 TID=3052|(0) TNSLSNR.EXE!__intel_fast_memcpy (0x2530020, 0, 0x4222fc4) (called from 0x438647 (TNSLSNR.EXE!nsglvcrt+0xab))
-</pre>
+_PRE_END
 
 <p>(addresses are for TNS Listener 11.1.0.7.0 win32 unpatched)</p>
 <p>If I correct, nsglvcrt() function is involved in new service creation.</p>

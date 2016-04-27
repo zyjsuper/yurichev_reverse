@@ -33,10 +33,10 @@ And wait up to for one hour.</p>
 <p>If I'm correct, this is a heap corruption problems.
 We can see this in traces:</p>
 
-<pre>
+_PRE_BEGIN
 "***** Internal heap ERROR kghfrh:ds addr=07AD0004 ds=0C2973E8 *****"
 Heap corruption detected while KGH memory freeing.
-</pre>
+_PRE_END
 
 <p>After, as in any software with a lot of allocated memory chunks and broken memory allocating structures, Oracle instance is becoming insance. It may write in "incident" folder reports about very strange things.</p>
 

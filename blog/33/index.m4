@@ -17,15 +17,21 @@ I prepared lists of events checked in some major Oracle RDBMS versions.</p>
 
 <p>How I did it: just disassembled by IDA all .o files from libserver10.a or libserver11.a:</p>
 
-<pre>idaw -B [each_file]</pre>
+_PRE_BEGIN
+idaw -B [each_file]
+_PRE_END
 
 <p>Then:</p>
 
-<pre>cat *.asm | grep -B 1 ksdpec | grep push | sort | uniq > _events</pre>
+_PRE_BEGIN
+cat *.asm | grep -B 1 ksdpec | grep push | sort | uniq > _events
+_PRE_END
 
 <p>... or for 11g:</p>
 
-<pre>cat *.asm | grep -B 1 dbkdChkEventRdbmsErr | grep push | sort | uniq > _events</pre>
+_PRE_BEGIN
+cat *.asm | grep -B 1 dbkdChkEventRdbmsErr | grep push | sort | uniq > _events
+_PRE_END
 
 _BLOG_FOOTER_GITHUB(`33')
 

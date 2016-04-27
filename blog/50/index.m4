@@ -6,10 +6,10 @@ _HEADER_HL1(`7-Jul-2010: About Oracle PL/SQL undocumented "interface" pragma.')
 
 <p>Sometimes, in PL/SQL libraries comes with Oracle RBMS, wrapped or not, we can see such statement (dbmsstdx.sql):</p>
 
-<pre>
+_PRE_BEGIN
   function updating  return boolean;
     pragma interface (C, updating);
-</pre>
+_PRE_END
 
 <p>This is in fact a gateway to internal Oracle functions.
 But how can we find what function exactly is called?</p>

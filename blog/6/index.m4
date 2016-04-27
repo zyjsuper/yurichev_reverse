@@ -8,7 +8,8 @@ _HEADER_HL1(`13-Jul-2008: malloc() comments')
 <p>Also, in case of memory leakage, it is possible to see, what memory were not freed.</p>
 <p>In Oracle RDBMS, if memory is allocated in <a href="http://download.oracle.com/docs/cd/B19306_01/server.102/b14220/memory.htm">SGA</a> area, statistics can be seen using <a href="http://download.oracle.com/docs/cd/B19306_01/server.102/b14237/dynviews_2106.htm">V$SGASTAT</a> view.</p>
 <p>For example:</p>
-<pre>
+
+_PRE_BEGIN
 SQL> select * from v$sgastat order by bytes desc;
 
 POOL         NAME                            BYTES
@@ -38,7 +39,7 @@ shared pool  KTI-UNDO                      1235304
 shared pool  private strands               1198080
 shared pool  KSXR receive buffers          1034000
 shared pool  KQR M PO                       979968
-</pre>
+_PRE_END
 
 <p>Update:
 Windows NT has something similar: <a href="http://msdn.microsoft.com/en-us/library/ms796989.aspx">ExAllocatePoolWithTag</a></p>
