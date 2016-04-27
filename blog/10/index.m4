@@ -6,7 +6,7 @@ _HEADER_HL1(`4-Sep-2008: Oracle internals')
 <p>After, I fetched essentials from each one: which functions are in each object file are present, which other functions they may call and possible arguments list.</p>
 <p>Here is a short example of what I got:</p>
 
-<pre>
+_PRE_BEGIN
 * Function krvsats
 
 May call krvsarts ()
@@ -29,14 +29,14 @@ May call krvuam (?, ?, 1, 0x58, ?, "krvslctx")
 May call krvsle (?, ?, 0x3EEF, ...)
 May call kghalp (ds:ksmgpp_, offset ksmsgh_, 0x330, 1, 0, "krvsats: krvslsv")
 May call kslhclt (offset krvsvl_)
-</pre>
+_PRE_END
 
 <p>Here we can easily see a list of functions which krvsats() may call and its arguments.</p>
 <p>Throughout all that files, we can see how Oracle RDBMS checks for turned on trace events (using function ksdpec()), how it raise ORA- errors (using functions ksesic*, ksesec*, etc), how it write to trace logs (using functions ksdwrf(), ksdwra()), and how it allocate memory marked with comment (functions ksmals(), kghalf(), kghalo(), etc), and how it prepare many internal SQL statements for internal execution (functions rpisplu(), kprbprs(), opiprs(), OCIStmtPrepare(), etc).</p>
 
 <p>Excerpts from opiodr() function, which is one of central point of Oracle OPI call dispatcher (see full file <a href="http://yurichev.com/non-wiki-files/blog/oracle-10.2.0.4-linux/opiodr.txt">here</a>):</p>
 
-<pre>
+_PRE_BEGIN
 May call ksesec0 (0x0C29)
 May call ksesec0 (0x3F4)
 May call ksesec0 (0x3E9)
@@ -49,7 +49,7 @@ May call kgeasnmierr (ds:ksmgpp_, ds:ksefac_, "opiodr-fma", 0)
 
 May call ksdwrf ("OPI CALL: type=%2d argc=%2d cursor=%3d name=%s\n")
 May call ksdpec (0x2743)
-</pre>
+_PRE_END
 
 <p>First three calls are errors signalling: ORA-3113 ("end-of-file on communication channel"), ORA-1012 ("not logged on"), ORA-1001 ("invalid cursor"), etc.</p>
 

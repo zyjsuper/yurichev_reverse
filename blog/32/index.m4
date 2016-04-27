@@ -2,13 +2,15 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`24-Dec-2009: Radiohead lyrics in Oracle RDBMS code')
 
-<pre>strings oracle.exe | grep radiohead</pre>
+_PRE_BEGIN
+strings oracle.exe | grep radiohead
+_PRE_END
 
 <p>Starting at least at 10.2.0.1, function kfasSelfTest_update() (located in kfas.o) use <a href="http://en.wikipedia.org/wiki/Creep_(Radiohead_song)">Radiohead</a> lyrics to test... something related to ASM probably.</p>
 
 <p>Schematic pseudocode:</p>
 
-<pre>
+_PRE_BEGIN
 #define STRING "I'm a creep, I'm a winner, what the hell am I doing here.I don't belong here - radiohead"
 
 kfasSelfTest_update()
@@ -28,7 +30,7 @@ kfasSelfTest_update()
 	kfasClose (...);
 	return 1;
 };
-</pre>
+_PRE_END
 
 <p>Update:
 Lyrics is seems <a href="http://groups.google.com/group/comp.databases.oracle.server/browse_thread/thread/bfb6bb7e27cfd35a">not correct</a>...</p>

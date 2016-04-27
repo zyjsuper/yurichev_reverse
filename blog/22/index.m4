@@ -10,25 +10,35 @@ _HEADER_HL1(`21-May-2009: Generic tracer')
 
 <p>Memory allocations and deallocations:</p>
 
-<pre>gt.exe -a:oracle.exe bpf=.*!_kghalf,args:6 bpf=.*!_kghfrf,args:4</pre>
+_PRE_BEGIN
+gt.exe -a:oracle.exe bpf=.*!_kghalf,args:6 bpf=.*!_kghfrf,args:4
+_PRE_END
 
 <p>Dump calling stack before each call:</p>
 
-<pre>gt.exe -a:oracle.exe -s bpf=.*!_kghalf,args:6 bpf=.*!_kghfrf,args:4</pre>
+_PRE_BEGIN
+gt.exe -a:oracle.exe -s bpf=.*!_kghalf,args:6 bpf=.*!_kghfrf,args:4
+_PRE_END
 
 <p>gt tool can easily supersede my old "Oracle SPY" utility ( _HTML_LINK_AS_IS(`http://blogs.conus.info/node/9') ):</p>
 <p>For 11g:</p>
 
-<pre>gt.exe -a:oracle.exe bpf=oracle.exe!_rpisplu,args:8 bpf=oracle.exe!_kprbprs,args:7 bpf=oracle.exe!_opiprs,args:6 bpf=oraclient11.dll!_OCIStmtPrepare,args:6</pre>
+_PRE_BEGIN
+gt.exe -a:oracle.exe bpf=oracle.exe!_rpisplu,args:8 bpf=oracle.exe!_kprbprs,args:7 bpf=oracle.exe!_opiprs,args:6 bpf=oraclient11.dll!_OCIStmtPrepare,args:6
+_PRE_END
 
 <p>For 10gR2:</p>
 
-<pre>gt.exe -a:oracle.exe bpf=oracle.exe!_rpisplu,args:7 bpf=oracle.exe!_kprbprs,args:7 bpf=oracle.exe!_opiprs,args:6 bpf=oraclient10.dll!_OCIStmtPrepare,args:6</pre>
+_PRE_BEGIN
+gt.exe -a:oracle.exe bpf=oracle.exe!_rpisplu,args:7 bpf=oracle.exe!_kprbprs,args:7 bpf=oracle.exe!_opiprs,args:6 bpf=oraclient10.dll!_OCIStmtPrepare,args:6
+_PRE_END
 
 <p>gt can also supersede my old "Oracle SPY Events" uility ( _HTML_LINK_AS_IS(`http://blogs.conus.info/node/14') ).</p>
 <p>Unfortunately, this works only for 10gR2:</p>
 
-<pre>gt.exe -a:oracle.exe bpf=oracle.exe!_ksdpec,args:1 bpf=oracle.exe!_ss_wrtf,args:3</pre>
+_PRE_BEGIN
+gt.exe -a:oracle.exe bpf=oracle.exe!_ksdpec,args:1 bpf=oracle.exe!_ss_wrtf,args:3
+_PRE_END
 
 <p>Please note that all printed arguments are in hexadecimal form.</p>
 

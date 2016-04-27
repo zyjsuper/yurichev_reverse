@@ -11,9 +11,9 @@ _HEADER_HL1(`4-Nov-2008: Oracle SPY Events')
 
 <p>Trace event may be turning on by issuing command like that:</p>
 
-<pre>
+_PRE_BEGIN
 ALTER SYSTEM SET EVENTS '10051 trace name context forever, level 255';
-</pre>
+_PRE_END
 
 <p>It assign value of 255 to event number 10051.</p>
 
@@ -27,7 +27,7 @@ ALTER SYSTEM SET EVENTS '10051 trace name context forever, level 255';
 
 <p>For example, these events are checked while user SCOTT log into 10.2.0.4:</p>
 
-<pre>
+_PRE_BEGIN
 10005 10029 10031 10032 10039 10046 10051 10053 10060 10072 10074 10075
 10076 10078 10079 10089 10091 10092 10093 10103 10105 10106 10107 10108
 10109 10110 10111 10112 10114 10115 10116 10121 10122 10125 10128 10131 
@@ -43,11 +43,11 @@ ALTER SYSTEM SET EVENTS '10051 trace name context forever, level 255';
 30068 32410 32761 32762 38007 38009 38039 38044 38049 38052 38055 38057
 38058 38067 38069 38074 38077 38078 38079 38081 38083 38084 38085 38087
 41097 41098 41099 43810 44446 906 1403
-</pre>
+_PRE_END
 
 <p>These events are checked while user SCOTT issuing "select * from v$version" SQL statement:</p>
 
-<pre>
+_PRE_BEGIN
 10031 10032 10039 10046 10051 10053 10060 10075 10076 10078 10089 10091
 10092 10093 10103 10105 10106 10107 10108 10109 10110 10111 10112 10114
 10115 10116 10121 10122 10125 10128 10132 10134 10144 10156 10157 10158
@@ -58,25 +58,25 @@ ALTER SYSTEM SET EVENTS '10051 trace name context forever, level 255';
 10740 10809 10830 22299 22815 22821 22822 22824 22827 22829 30047 30068
 38001 38007 38009 38039 38049 38055 38058 38069 38077 38078 38079 38081
 38083 38084 38085 38087 43810 906
-</pre>
+_PRE_END
 
 <p>So, when utility intercepts call to ksdpec() function, it writes to log and console something like:</p>
 
-<pre>
+_PRE_BEGIN
 [2008-11-04 09:18:20:205] [0x0908 / 2312] ksdpec (10319) -> 0
 [2008-11-04 09:18:20:299] [0x0908 / 2312] ksdpec (10501) -> 0
 [2008-11-04 09:18:20:346] [0x0908 / 2312] ksdpec (10509) -> 0
 [2008-11-04 09:18:20:408] [0x0908 / 2312] ksdpec (10809) -> 0
 [2008-11-04 09:18:20:455] [0x0908 / 2312] ksdpec (10809) -> 0
-</pre>
+_PRE_END
 
 <p>It is date, time, Oracle thread ID in hexadecimal and decimal form, event number checked and what this function is returned, e.g., value assigned to this event.</p>
 
 <p>Windows thread ID can be converted to Oracle process name using this query:</p>
 
-<pre>
+_PRE_BEGIN
 select spid, program from gv$process;
-</pre>
+_PRE_END
 
 <p>Utility is also intercept ss_wrtf() function which is involved in all trace file storing.</p>
 
@@ -84,7 +84,7 @@ select spid, program from gv$process;
 
 <p>Now we can try to see, which one, for example:</p>
 
-<pre>
+_PRE_BEGIN
 ksdpec (10051) -> 255
 ss_wrtf: [*** 2008-11-04 10:15:03.174]
 ss_wrtf: [OPI CALL: type=107 argc= 3 cursor=  0 name=SES OPS (80)]
@@ -94,7 +94,7 @@ ksdpec (10046) -> 0
 ksdpec (10046) -> 0
 ksdpec (10051) -> 255
 ss_wrtf: [OPI CALL: type=94 argc=23 cursor=  0 name=V8 Bundled Exec]
-</pre>
+_PRE_END
 
 <p>It is not stable solution, though. But often, it is so: trace file updated just after trace event checked.</p>
 
@@ -108,9 +108,9 @@ Please note: detaching is not working in Windows 2000, so all utility can do is 
 
 <p>We need to turn on at least one (any) trace event, this is enough:</p>
 
-<pre>
+_PRE_BEGIN
 ALTER SYSTEM SET EVENTS '10051 trace name context forever, level 255';
-</pre>
+_PRE_END
 
 <p>After that, Oracle RDBMS will check any trace event.</p>
 

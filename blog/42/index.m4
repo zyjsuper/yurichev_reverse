@@ -33,7 +33,7 @@ _HEADER_HL1(`30-Jan-2010: Random Oracle hosts statistics')
 
 <p>Full statistics: number is percentage and listener version reply.</p>
 
-<pre>
+_PRE_BEGIN
 21.22 TNSLSNR for Linux: Version 10.2.0.1.0 - Production
 19.50 TNSLSNR for 32-bit Windows: Version 10.2.0.1.0 - Production
 9.56 TNSLSNR for 32-bit Windows: Version 9.2.0.1.0 - Production
@@ -107,7 +107,7 @@ _HEADER_HL1(`30-Jan-2010: Random Oracle hosts statistics')
 0.19 TNSLSNR for Solaris: Version 9.0.1.0.0 - Production
 0.19 TNSLSNR for Solaris: Version 9.2.0.7.0 - Production
 0.19 TNSLSNR for Solaris: Version 9.2.0.8.0 - Production
-</pre>
+_PRE_END
 
 _BLOG_FOOTER_GITHUB(`42')
 

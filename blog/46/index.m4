@@ -4,23 +4,23 @@ _HEADER_HL1(`24-May-2010: PEEKs and POKEs in Windows x64?')
 
 <p>This kernel/driver-level Windows NT code:</p>
 
-<pre>
+_PRE_BEGIN
 void huh()
 {
 	LARGE_INTEGER a;
 	KeQueryTickCount(&a);
 	DbgPrint ("%d", a.QuadPart);
 };
-</pre>
+_PRE_END
 
 <p>... is now translated in Windows 2003 DDK x64 environment into:</p>
 
-<pre>
+_PRE_BEGIN
                  mov     rdx, 0FFFFF78000000320h
                  lea     rcx, Format     ; "%d"
                  mov     rdx, [rdx]
                  call    DbgPrint_0
-</pre>
+_PRE_END
 
 <p>Wow, some variable's address (KeTickCount) is now hardcoded just into driver's code during compilation.</p>
 

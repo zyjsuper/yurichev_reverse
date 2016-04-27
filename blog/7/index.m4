@@ -7,12 +7,15 @@ _HEADER_HL1(`13-Jul-2008: Network trace in Oracle RDBMS')
 <p>Usually, software developer with common sense makes trace writer function checking current debug level and let this tracer writer decide if to write any information to file. In this case his code is relatively clean and clear.</p>
 <p>Oracle RDBMS developers make decision about this before trace writer function called, so code may looks like: </p>
 
-<pre>if (trace_is_enabled) write_to_trace (current_function_name, trace_level, message);</pre>
+_PRE_BEGIN
+if (trace_is_enabled) write_to_trace (current_function_name, trace_level, message);
+_PRE_END
 
 <p>Most likely, this code is actually written using <a href="http://en.wikipedia.org/wiki/C_preprocessor#Macro_definition_and_expansion">#define macros</a>.</p>
 <p>At least, Oracle 8.1.5 win32 installation contain <i>C:\Oracle\Ora81\NETWORK\TNSAPI\SRC\</i> folder where <i>TNSAPI.C</i> file may be found: it contain some trace writer calls using macros, although, I cannot found there a macros definition.</p>
 <p>For example:</p>
-<pre>
+
+_PRE_BEGIN
     /* enable the tracing */
     {
 	NLTRDEFINE("tnsopen", npd, NLDTTNSAPI, NLDTTDUMMY, NLDTTDUMMY);
@@ -24,7 +27,8 @@ _HEADER_HL1(`13-Jul-2008: Network trace in Oracle RDBMS')
 		    NLTRUSR((NLTRTRC, "Name is %s.\n", hdl->service_tnshdl));
 ...
 	NLTREXIT();
-</pre>
+_PRE_END
+
 <p>So, in this case, code is not so clear, but here we can see time economy at the place of trace writer function prolog and epilog. 
 Not a bad idea at all.</p>
 

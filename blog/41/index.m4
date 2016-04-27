@@ -17,7 +17,9 @@ Bonuses of this method are: 1) it is extremely simple to see a statistics, who a
 
 <p>While trying to understand some piece of code like:</p>
 
-<pre>if (*(*(*(arg_0+0x123)+0xABC)+0x678)==constant) do_something()</pre>
+_PRE_BEGIN
+if (*(*(*(arg_0+0x123)+0xABC)+0x678)==constant) do_something()
+_PRE_END
 
 <p>... we can see here that arg_0 is actually pointer to some structure which holds another structure inside of it which is, in turn, hold another. It is thrice nested structure.</p>
 

