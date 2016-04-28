@@ -9,7 +9,6 @@ _HEADER_HL1(`8-Aug-2014: "Reverse Engineering for Beginners" free book news')
 <p>For Oracle hardcore geeks there are also two examples added: reverse engineering of simple proprietary binary files (.SYM and .MSB files: page 655 in English version).</p>
 <p>Just took a fancy domain for website dedicated to the book: _HTML_LINK_AS_IS(`http://beginners.re/')</p>
 <p>There are also supporting forum, almost silent yet: _HTML_LINK_AS_IS(`http://forum.yurichev.com/')</p>
-<p>Oh, and please donate. The book is free and well be so: _HTML_LINK_AS_IS(`http://beginners.re/donate.html')</p>
 <p>And please do not hesitate to correct my mistakes, my English language is still horrible.</p>
 
 _BLOG_FOOTER_GITHUB(`83')

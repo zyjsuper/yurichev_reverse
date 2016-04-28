@@ -7,8 +7,6 @@ This can be interesting for computer programmers in general, not just to reverse
 
 <p>Another my article about it Z3 SMT-solver: _HTML_LINK_AS_IS(`http://yurichev.com/writings/z3_rockey.pdf')</p>
 
-<p>If you want to read more like this, please donate! :-) _HTML_LINK_AS_IS(`http://yurichev.com/donate.html')</p>
-
 <p>Please also do not hesitate writing me any comments, I really need feedback!</p>
 
 _BLOG_FOOTER_GITHUB(`81')
