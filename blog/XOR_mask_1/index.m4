@@ -293,6 +293,8 @@ Maybe our key is still incorrect?</p>
 we can notice that uppercase and lowercase letter's ASCII codes are differ in just one bit (6th bit starting at 1st, 100000b).
 This bit in decimal form is 32... 32? But 32 is ASCII code for space!</p>
 
+<p>Indeed, one can switch case just by XOR-ing ASCII character code with 32.</p>
+
 <p>It is possible that the empty lacunas in the file are not zero bytes, but rather spaces?
 Let's modify XOR key one more time (I'll XOR each byte of key by 32):</p>
 
