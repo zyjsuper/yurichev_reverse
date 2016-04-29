@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`29-Apr-2016: Simple encryption using XOR mask')
 
-<p>I've found an ancient interactive fiction game while diving deep into if-archive (_HTML_LINK_AS_IS(`http://www.ifarchive.org/')):</p>
+<p>I've found an old interactive fiction game while diving deep into <i>if-archive</i> (_HTML_LINK_AS_IS(`http://www.ifarchive.org/')):</p>
 
 _PRE_BEGIN
 The New Castle v3.5 - Text/Adventure Game
@@ -72,7 +72,7 @@ I'll split input file by 81-byte blocks and then I'll use _HTML_LINK(`https://re
 Tally's output is not sorted, so I also add Sort[] function to sort it by number of occurrences in descending order.</p>
 
 _PRE_BEGIN
-input = BinaryReadList["/home/dennis/P/RE-book/decrypt_dat_file/castle.dbf"];
+input = BinaryReadList["/home/dennis/.../castle.dbf"];
 
 blocks = Partition[input, 81];
 
@@ -220,6 +220,16 @@ It seems that our assumption about key was correct (at least partially).
 This means that the most occurred 81-block in the file can be found at places of lacunas of zero bytes or something like that.</p>
 
 <p>Let's try to decrypt the whole file:</p>
+
+_PRE_BEGIN
+DecryptBlock[blk_] := BitXor[key, blk]
+
+decrypted = Map[DecryptBlock[#] &, blocks];
+
+BinaryWrite["/home/dennis/.../tmp", Flatten[decrypted]]
+
+Close["/home/dennis/.../tmp"]
+_PRE_END
 
 <center><img src="http://yurichev.com/blog/XOR_mask_1/files/mc_decrypted1.png"></center>
 
