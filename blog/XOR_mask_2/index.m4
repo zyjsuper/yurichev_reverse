@@ -343,9 +343,10 @@ _HTML_LINK_AS_IS(`http://odur.let.rug.nl/~vannoord/TextCat/textcat.pdf',`N-Gram-
 _HTML_LINK_AS_IS(`http://code.activestate.com/recipes/326576/').
 Interestingly enough, trigrams detection can be used when you decrypt a ciphertext gradually, like in this example (you just need to test 3 adjacent decrypted characters).
 
-<li>For non-Latin writing systems encoded in UTF-8, things may be easier. For example, Russian text encoded in UTF-8 has each byte interleaved with 4 as byte.
+<li>For non-Latin writing systems encoded in UTF-8, things may be easier. For example, Russian text encoded in UTF-8 has each byte interleaved with 0xD0/0xD1 byte.
 It is because Cyrillic characters are placed in _HTML_LINK(`https://en.wikipedia.org/wiki/Cyrillic_%28Unicode_block%29',`4th block of Unicode').
 Other writing systems has their own blocks.
+See also: _HTML_LINK_AS_IS(`http://beginners.re/22-Apr-2016/RE4B-EN.pdf#page=652&zoom=auto,-107,20').
 </ul>
 
 _BLOG_FOOTER_GITHUB(`XOR_mask_2')
