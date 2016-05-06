@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2016, 5, 6,0,0,0), "args_stat","Function arguments statistics")
     post(f1,f2,datetime.datetime(2016, 5, 3,0,0,0), "XOR_mask_2","Simple encryption using XOR mask, part II")
     post(f1,f2,datetime.datetime(2016, 4,29,0,0,0), "XOR_mask_1","Simple encryption using XOR mask")
     post(f1,f2,datetime.datetime(2016, 4,22,0,0,0), "signed_division_using_shifts","Signed division using shifts")

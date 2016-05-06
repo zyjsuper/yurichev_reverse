@@ -101,6 +101,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/84/index.html \
 	blog/85/index.html \
 	blog/86/index.html \
+	blog/args_stat/index.html \
 	blog/XOR_mask_1/index.html \
 	blog/XOR_mask_2/index.html \
 	blog/challenges.re/index.html
