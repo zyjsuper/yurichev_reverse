@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys, hexdump, array, string, operator
 
 KEY_LEN=16

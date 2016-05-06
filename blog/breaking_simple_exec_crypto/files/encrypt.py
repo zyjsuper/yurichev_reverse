@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys, hexdump, array
 
 def xor_strings(s,t):

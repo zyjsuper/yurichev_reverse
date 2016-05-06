@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys, hexdump, array, string
 
 KEY_LEN=17
