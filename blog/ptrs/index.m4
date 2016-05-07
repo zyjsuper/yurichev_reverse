@@ -198,7 +198,8 @@ _PRE_END
 
 <p>(I have also removed all insignificant GCC directives).</p>
 
-<p>No difference: C/C++ pointers are essentially addresses, but supplied with type informationm, in order to prevent possible mistakes at the time of compilation.</p>
+<p>No difference: C/C++ pointers are essentially addresses, but supplied with type informationm, in order to prevent possible mistakes at the time of compilation.
+Types are not checked during runtime - it would be huge (and unneeded) overhead.</p>
 
 _BLOG_FOOTER_GITHUB(`ptrs')
 
