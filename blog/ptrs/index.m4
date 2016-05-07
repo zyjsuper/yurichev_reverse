@@ -9,10 +9,11 @@ Pointer variable is supplied with a type of the value to which pointer points.
 So then compiler will able to check bugs in compilation time.</p>
 
 <p>To be pedantic, data typing in programming languages is all about preventing bugs.
-It's possible to use maybe two of data types like <i>int</i> (or <i>int64</i>) and byte - this is what is available to assembly language programmers.
-It's just very hard task to write big and practical assembly programs without nasty bug. Any small typo can lead to hard-to-find bugs there.</p>
+It's possible to use maybe two of data types like <i>int</i> (or <i>int64</i>) and byte - these are the only types which are available to assembly language programmers.
+It's just very hard task to write big and practical assembly programs without nasty bug.
+Any small typo can lead to hard-to-find bugs there.</p>
 
-<p>Data type information is absent in a compiled code (and this is one of main problems to decompilers), and I can demonstrate this:</p>
+<p>Data type information is absent in a compiled code (and this is one of the main problems for decompilers), and I can demonstrate this:</p>
 
 <p>This is what sane C/C++ programmer can write:</p>
 
