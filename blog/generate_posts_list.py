@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2016, 5, 8,0,0,0), "ptrs","C/C++ pointers: yet another short example")
     post(f1,f2,datetime.datetime(2016, 5, 6,0,0,0), "breaking_simple_exec_crypto","Breaking simple executable cryptor")
     post(f1,f2,datetime.datetime(2016, 5, 6,0,0,0), "args_stat","Function arguments statistics")
     post(f1,f2,datetime.datetime(2016, 5, 3,0,0,0), "XOR_mask_2","Simple encryption using XOR mask, part II")
