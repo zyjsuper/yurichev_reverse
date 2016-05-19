@@ -8,10 +8,10 @@ _HEADER_HL1(`8-May-2016: C/C++ pointers: yet another short example')
 Pointer variable is supplied with a type of the value to which pointer points.
 So then compiler will able to check bugs in compilation time.</p>
 
-<p>To be pedantic, data typing in programming languages is all about preventing bugs.
+<p>To be pedantic, data typing in programming languages is all about preventing bugs and self-documentation.
 It's possible to use maybe two of data types like <i>int</i> (or <i>int64</i>) and byte - these are the only types which are available to assembly language programmers.
-It's just very hard task to write big and practical assembly programs without nasty bug.
-Any small typo can lead to hard-to-find bugs there.</p>
+But it's just very hard task to write big and practical assembly programs without nasty bugs.
+Any small typo can lead to hard-to-find bug.</p>
 
 <p>Data type information is absent in a compiled code (and this is one of the main problems for decompilers), and I can demonstrate this:</p>
 
@@ -198,7 +198,7 @@ _PRE_END
 
 <p>(I have also removed all insignificant GCC directives).</p>
 
-<p>No difference: C/C++ pointers are essentially addresses, but supplied with type informationm, in order to prevent possible mistakes at the time of compilation.
+<p>No difference: C/C++ pointers are essentially addresses, but supplied with type information, in order to prevent possible mistakes at the time of compilation.
 Types are not checked during runtime - it would be huge (and unneeded) overhead.</p>
 
 _BLOG_FOOTER_GITHUB(`ptrs')
