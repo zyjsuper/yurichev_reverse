@@ -41,7 +41,7 @@ _memcpy	ENDP
 _PRE_END
 
 <p>
-This is weird, because how humans are work with two pointers? They store two addresses in two registers or two memory cells.
+This is weird, because how humans work with two pointers? They store two addresses in two registers or two memory cells.
 MSVC compiler in this case stores two pointers as one pointer (<b>sliding dst</b> in EAX) and difference between <b>src</b> and <b>dst</b> pointers (left unchanged over the span of loop body execution in ESI).
 When it needs to load a byte from <b>src</b>, it loads it at <b>diff + sliding dst</b> and stores byte at just <b>sliding dst</b>.
 </p>
@@ -69,7 +69,7 @@ _f2	ENDP
 _PRE_END
 
 <p>... and it works as efficient as the <i>optimized</i> version on my Intel Xeon E31220 @ 3.10GHz.
-Maybe, this optimization was targeted some x86 CPUs of 1990s era, since this trick is used at least by ancient MS VC 6.0?</p>
+Maybe, this optimization was targeted some older x86 CPUs of 1990s era, since this trick is used at least by ancient MS VC 6.0?</p>
 
 <p>Any idea?</p>
 
