@@ -105,6 +105,16 @@ _PRE_END
 
 <p>... it can be safely rewritten to "v0=v14/2".</p>
 
+<p>Hex-Rays 6.8 can also handle signed division by 4 like that:</p>
+
+_PRE_BEGIN
+result = ((BYTE4(v25) & 3) + (signed int)v25) >> 2;
+_PRE_END
+
+<p>... can be rewritten to "v25 / 4"</p>
+
+<hr>
+
 <p>Also, such correction code is used often when division is replaced by multiplication by "magic numbers": 
 read _HTML_LINK(`http://yurichev.com/blog/modulo/',`here') about multiplicative inverse.
 And sometimes, additional shifting is used after multiplication.
