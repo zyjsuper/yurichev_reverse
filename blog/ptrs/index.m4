@@ -201,6 +201,8 @@ _PRE_END
 <p>No difference: C/C++ pointers are essentially addresses, but supplied with type information, in order to prevent possible mistakes at the time of compilation.
 Types are not checked during runtime - it would be huge (and unneeded) overhead.</p>
 
+<p>Part II: _HTML_LINK_AS_IS(`http://yurichev.com/blog/ptrs2').</p>
+
 _BLOG_FOOTER_GITHUB(`ptrs')
 
 _BLOG_FOOTER()
