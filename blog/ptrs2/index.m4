@@ -47,7 +47,7 @@ Pointer is a variable which can store anything, like usual variable.
 </p>
 
 <p>By the way, it's well-known hack to abuse pointers a little called <i>tagged pointers</i>.
-In short, if all your pointers points to blocks of memory with size of, let's say, 16 bytes, 4 lowest bits of pointer is always zero bits and this space
+In short, if all your pointers points to blocks of memory with size of, let's say, 16 bytes (or it is always aligned on 16-byte boundary), 4 lowest bits of pointer is always zero bits and this space
 can be used somehow.
 It's very popular in LISP compilers and interpreters.
 Read more about it: _HTML_LINK_AS_IS(`http://yurichev.com/writings/C-notes-en.pdf#page=20&zoom=auto,-107,595').</p>
