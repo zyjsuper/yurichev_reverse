@@ -11,32 +11,32 @@ _PRE_BEGIN
 #include <stdio.h>
 #include <stdint.h>
 
-uint64_t product1 (uint64_t a, uint64_t b)
+uint64_t multiply1 (uint64_t a, uint64_t b)
 {
 	return a*b;
 };
 
-uint64_t* product2 (uint64_t *a, uint64_t *b)
+uint64_t* multiply2 (uint64_t *a, uint64_t *b)
 {
 	return (uint64_t*)((uint64_t)a*(uint64_t)b);
 };
 
 int main()
 {
-	printf ("%d\n", product1(123, 456));
-	printf ("%d\n", (uint64_t)product2((uint64_t*)123, (uint64_t*)456));
+	printf ("%d\n", multiply1(123, 456));
+	printf ("%d\n", (uint64_t)multiply2((uint64_t*)123, (uint64_t*)456));
 };
 _PRE_END
 
-<p>It works smoothly and GCC 4.8.4 compiles both product1() and product2() functions identically!</p>
+<p>It works smoothly and GCC 4.8.4 compiles both multiply1() and multiply2() functions identically!</p>
 
 _PRE_BEGIN
-product1:
+multiply1:
 	mov	rax, rdi
 	imul	rax, rsi
 	ret
 
-product2:
+multiply2:
 	mov	rax, rdi
 	imul	rax, rsi
 	ret
@@ -51,6 +51,11 @@ In short, if all your pointers points to blocks of memory with size of, let's sa
 can be used somehow.
 It's very popular in LISP compilers and interpreters.
 Read more about it: _HTML_LINK_AS_IS(`http://yurichev.com/writings/C-notes-en.pdf#page=20&zoom=auto,-107,595').</p>
+
+<p>
+Update (23-May-2016) Slava "Avid" Kazakov has asked, why signed <i>imul</i> instruction is used while pointer has type <i>uint64_t</i>?
+Any idea?
+</p>
 
 _BLOG_FOOTER_GITHUB(`ptrs2')
 
