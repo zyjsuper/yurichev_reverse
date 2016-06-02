@@ -103,6 +103,7 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/86/index.html \
 	blog/ptrs/index.html \
 	blog/ptrs2/index.html \
+	blog/ptrs3/index.html \
 	blog/args_stat/index.html \
 	blog/XOR_mask_1/index.html \
 	blog/breaking_simple_exec_crypto/index.html \
