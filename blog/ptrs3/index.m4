@@ -229,7 +229,7 @@ Probably, <i>FindResource()</i> function in past had <i>SHORT</i> types for its 
 but older code should also work? I'm not sure, but that's possible.
 </p>
 
-<p>Not here is my short distilled example:</p>
+<p>Now here is my short distilled example:</p>
 
 _PRE_BEGIN
 #include <stdio.h>
