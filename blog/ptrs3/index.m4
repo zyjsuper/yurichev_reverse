@@ -232,8 +232,8 @@ but older code should also work? I'm not sure, but that's possible.
 <p>Now here is my short distilled example:</p>
 
 _PRE_BEGIN
-#include <stdio.h>
-#include <stdint.h>
+#include &lt;stdio.h>
+#include &lt;stdint.h>
 
 void f(char* a)
 {
