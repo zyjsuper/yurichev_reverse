@@ -13,7 +13,7 @@ Early Windows versions allowed to address resources only by IDs, but then Micros
 
 <p>So then it would be possible to pass ID or string to 
 _HTML_LINK(`https://msdn.microsoft.com/en-us/library/windows/desktop/ms648042%28v=vs.85%29.aspx',`FindResource()') function.
-Which is defined like this:</p>
+Which is declared like this:</p>
 
 _PRE_BEGIN
 HRSRC WINAPI FindResource(
@@ -73,7 +73,7 @@ FindResourceA(
 ...
 _PRE_END
 
-<p>Let's proceed to <i>BaseDllMapResourceIdA</i> in the same source file:</p>
+<p>Let's proceed to <i>BaseDllMapResourceIdA()</i> in the same source file:</p>
 
 _PRE_BEGIN
 ULONG
@@ -251,6 +251,60 @@ int main()
 _PRE_END
 
 <p>It works!</p>
+
+<hr>
+
+<p>As it has been noted in _HTML_LINK(`https://news.ycombinator.com/item?id=11823647',`comments on Hacker News'), Linux kernel also has something like that.</p>
+
+<p>For example, this function can return both error code and pointer:</p>
+
+_PRE_BEGIN
+struct kernfs_node *kernfs_create_link(struct kernfs_node *parent,
+				       const char *name,
+				       struct kernfs_node *target)
+{
+	struct kernfs_node *kn;
+	int error;
+
+	kn = kernfs_new_node(parent, name, S_IFLNK|S_IRWXUGO, KERNFS_LINK);
+	if (!kn)
+		return ERR_PTR(-ENOMEM);
+
+	if (kernfs_ns_enabled(parent))
+		kn->ns = target->ns;
+	kn->symlink.target_kn = target;
+	kernfs_get(target);	/* ref owned by symlink */
+
+	error = kernfs_add_one(kn);
+	if (!error)
+		return kn;
+
+	kernfs_put(kn);
+	return ERR_PTR(error);
+}
+_PRE_END
+
+<p>( _HTML_LINK_AS_IS(`https://github.com/torvalds/linux/blob/fceef393a538134f03b778c5d2519e670269342f/fs/kernfs/symlink.c#L25') )</p>
+
+
+<p>ERR_PTR is a macro to cast integer to pointer:</p>
+
+_PRE_BEGIN
+static inline void * __must_check ERR_PTR(long error)
+{
+	return (void *) error;
+}
+_PRE_END
+
+<p>( _HTML_LINK_AS_IS(`https://github.com/torvalds/linux/blob/61d0b5a4b2777dcf5daef245e212b3c1fa8091ca/tools/virtio/linux/err.h') )</p>
+
+<p>This header file also has a macro helper to distinguish error code from pointer:</p>
+
+_PRE_BEGIN
+#define IS_ERR_VALUE(x) unlikely((x) >= (unsigned long)-MAX_ERRNO)
+_PRE_END
+
+<p>This mean, errors are the "pointers" which are very close to -1 and, hopefully, there are no valid addresses there.</p>
 
 _BLOG_FOOTER_GITHUB(`ptrs3')
 
