@@ -306,8 +306,8 @@ _PRE_END
 
 <p>This mean, errors are the "pointers" which are very close to -1 and, hopefully, there are no valid addresses there.</p>
 
-<p>Much more popular solution is to return NULL and pass error code via additional argument.
-Linux authors don't do that, but everyone who use these functions must always keep in mind that returning pointer
+<p>Much more popular solution is to return NULL in case of error and to pass error code via additional argument.
+Linux kernel authors don't do that, but everyone who use these functions must always keep in mind that returning pointer
 must always be checked with IS_ERR_VALUE before dereferencing.</p>
 
 _BLOG_FOOTER_GITHUB(`ptrs3')
