@@ -254,7 +254,8 @@ _PRE_END
 
 <hr>
 
-<p>As it has been noted in _HTML_LINK(`https://news.ycombinator.com/item?id=11823647',`comments on Hacker News'), Linux kernel also has something like that.</p>
+<p><b>UPDATE.</b>
+As it has been noted in _HTML_LINK(`https://news.ycombinator.com/item?id=11823647',`comments on Hacker News'), Linux kernel also has something like that.</p>
 
 <p>For example, this function can return both error code and pointer:</p>
 
