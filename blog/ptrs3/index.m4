@@ -304,7 +304,8 @@ _PRE_BEGIN
 #define IS_ERR_VALUE(x) unlikely((x) >= (unsigned long)-MAX_ERRNO)
 _PRE_END
 
-<p>This mean, errors are the "pointers" which are very close to -1 and, hopefully, there are no valid addresses there.</p>
+<p>This mean, errors are the "pointers" which are very close to -1 and, hopefully, there are no valid addresses there in kernel memory area 
+(addresses like 0xFFFFFFFFFFFFFFFF, 0xFFFFFFFFFFFFFFFE, 0xFFFFFFFFFFFFFFFD, etc).</p>
 
 <p>Much more popular solution is to return NULL in case of error and to pass error code via additional argument.
 Linux kernel authors don't do that, but everyone who use these functions must always keep in mind that returning pointer
