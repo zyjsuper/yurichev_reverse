@@ -310,6 +310,19 @@ _PRE_END
 Linux kernel authors don't do that, but everyone who use these functions must always keep in mind that returning pointer
 must always be checked with IS_ERR_VALUE before dereferencing.</p>
 
+For example:
+
+_PRE_BEGIN
+	fman->cam_offset = fman_muram_alloc(fman->muram, fman->cam_size);
+	if (IS_ERR_VALUE(fman->cam_offset)) {
+		dev_err(fman->dev, "%s: MURAM alloc for DMA CAM failed\n",
+			__func__);
+		return -ENOMEM;
+	}
+_PRE_END
+
+<p>( _HTML_LINK_AS_IS(`https://github.com/torvalds/linux/blob/aa00edc1287a693eadc7bc67a3d73555d969b35d/drivers/net/ethernet/freescale/fman/fman.c#L826') )</p>
+
 _BLOG_FOOTER_GITHUB(`ptrs3')
 
 _BLOG_FOOTER()
