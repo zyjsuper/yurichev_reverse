@@ -8,8 +8,8 @@ _HEADER_HL1(`22-May-2016: C/C++ pointers: yet another abuse')
 Here is an example on how to pass values in pointers:</p>
 
 _PRE_BEGIN
-#include <stdio.h>
-#include <stdint.h>
+#include &lt;stdio.h>
+#include &lt;stdint.h>
 
 uint64_t multiply1 (uint64_t a, uint64_t b)
 {
