@@ -42,10 +42,10 @@ m4_define(`_BLOG_FOOTER',`<hr>
 <p>&rarr; [_HTML_LINK(`http://yurichev.com/blog/index.html',`list of blog posts')]</p>
 <p><h5>The page last updated on m4_esyscmd(date -r m4___file__ +"%d-%B-%Y")</h5></p>
 
-<span class="st_twitter" displayText="Tweet"></span>
-<span class="st_facebook" displayText="Facebook"></span>
+<!-- <span class="st_twitter" displayText="Tweet"></span>
+<span class="st_facebook" displayText="Facebook"></span> -->
 
-m4_include(`disqus.inc')
+<!-- m4_include(`disqus.inc') -->
 
 </body>
 </html>')

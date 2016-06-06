@@ -1,7 +1,7 @@
 .SUFFIXES: .m4 .html
 .m4.html:
 	m4 -P $*.m4 >$*.html
-default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html ddff.html \
+HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html ddff.html \
 	cordbg.html wget.html \
 	dongles.html copyfile.html retrocomputing.html oracle_tables.html \
 	tracer-en.html tracer-ru.html PE_add_imports.html \
@@ -106,22 +106,17 @@ default: index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.html
 	blog/ptrs3/index.html \
 	blog/args_stat/index.html \
 	blog/XOR_mask_1/index.html \
+	blog/XOR_mask_2/index.html \
 	blog/breaking_simple_exec_crypto/index.html \
 	blog/weird_loop_optimization/index.html \
 	blog/challenges.re/index.html
 
-all: default 
-#I've too many HTMLs!
-#clean: 
-#	rm *.html
-#	rm blog/*.html
-#	rm blog/entropy/*.html
-#	rm blog/fortune/*.html
-#	rm blog/llvm/*.html
-#	rm blog/RSA/*.html
-#	rm blog/modulo/*.html
-#	rm blog/clique/*.html
-#	rm blog/fuzzy_string/*.html
-#	rm blog/2015-aug-13/*.html
-#	rm blog/2015-aug-15/*.html
+all: $(HTML_FILES)
+
+blog/posts.html:
+	cd blog; python generate_posts_list.py; cd ..
+
+clean: 
+	rm $(HTML_FILES)
+	rm blog/rss.xml
 
