@@ -33,9 +33,5 @@ _HL3(`Mailing list')
 _HTML_LINK(`https://groups.google.com/forum/#!forum/yurichev/join', `Click here to join').
 Or send an empty email to: _HTML_LINK(`mailto:yurichev+subscribe@googlegroups.com',`yurichev+subscribe@googlegroups.com')</p>
 
-<form METHOD=POST action="send_email.php">
-<p>Enter email for subscription:  <input type="text" name="email"><input type="submit" value="Submit"></p>
-</form> 
-
 _FOOTER()
 
