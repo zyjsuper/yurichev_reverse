@@ -325,6 +325,7 @@ _PRE_END
 
 <p>( _HTML_LINK_AS_IS(`https://github.com/torvalds/linux/blob/aa00edc1287a693eadc7bc67a3d73555d969b35d/drivers/net/ethernet/freescale/fman/fman.c#L826') )</p>
 
+<hr>
 <p>My other blog posts about C/C++ pointers: [
 _HTML_LINK(`http://yurichev.com/blog/ptrs',`1') |
 _HTML_LINK(`http://yurichev.com/blog/ptrs2',`2') |

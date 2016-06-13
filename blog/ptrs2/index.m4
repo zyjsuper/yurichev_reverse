@@ -57,6 +57,7 @@ Update (23-May-2016) Slava "Avid" Kazakov has asked, why signed <i>imul</i> inst
 Any idea?
 </p>
 
+<hr>
 <p>My other blog posts about C/C++ pointers: [
 _HTML_LINK(`http://yurichev.com/blog/ptrs',`1') |
 _HTML_LINK(`http://yurichev.com/blog/ptrs2',`2') |
