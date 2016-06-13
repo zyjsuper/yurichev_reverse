@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2016, 6,13,0,0,0), "ptrs4","C/C++ pointers: null pointers")
     post(f1,f2,datetime.datetime(2016, 6, 2,0,0,0), "ptrs3","C/C++ pointers: pointers abuse in Windows kernel")
     post(f1,f2,datetime.datetime(2016, 5,22,0,0,0), "ptrs2","C/C++ pointers: yet another abuse")
     post(f1,f2,datetime.datetime(2016, 5,19,0,0,0), "weird_loop_optimization","Weird loop optimization")
