@@ -29,7 +29,9 @@ _PRE_END
 
 <p>Hard to believe, but it works, with error upon exit, though:</p>
 
+<center>
 <img src="http://yurichev.com/blog/ptrs4/tc30.png">
+</center>
 
 <p>Let's dig deeper into the source code of CRT (C runtime) of Borland C++ 3.1, file c0.asm:</p>
 
@@ -184,7 +186,7 @@ int main()
 };
 _PRE_END
 
-<p>The result is 0x7578feae and doesn't changing after several times I run it, perhaps because ASLR has not been enabled (result would be different in that case).</p>
+<p>The result is 0x7578feae and doesn't changing after several times I run it, perhaps because ASLR was not enabled (result would be different in that case).</p>
 
 <p>Let's call MessageBoxA by address:</p>
 
@@ -249,6 +251,7 @@ scratch.
 
 <p>And of course, this code will crash on *NIX or Windows because of memory protection and even in absence of protection, there are no code at address 0.</p>
 
+<hr>
 <p>My other blog posts about C/C++ pointers: [
 _HTML_LINK(`http://yurichev.com/blog/ptrs',`1') |
 _HTML_LINK(`http://yurichev.com/blog/ptrs2',`2') |
