@@ -193,7 +193,10 @@ int main()
 };
 _PRE_END
 
-<p>The result is 0x7578feae and doesn't changing after several times I run it, perhaps because ASLR was not enabled (result would be different in that case).</p>
+<p>The result is 0x7578feae and doesn't changing after several times I run it,
+because user32.dll (where MessageBoxA function resides) is always loads at the same address.
+And also because ASLR is not enabled (result would be different each time in that case).
+</p>
 
 <p>Let's call MessageBoxA by address:</p>
 
@@ -235,12 +238,12 @@ _PRE_END
 <p>Who will need to call a function at address 0?
 This is portable way to jump at zero address.
 Many low-cost cheap microcontrollers also have no memory protection or MMU and after reset, they start to execute code at address 0, where some kind of initialization
-code is stored
+code is stored.
 So jumping to address 0 is a way to reset itself.
 One could use inline assembly, but if it's not possible, this is portable method.
 </p>
 
-<p>It even compiles by my GCC 4.8.4 on Linux x64 correctly:
+<p>It even compiles correctly by my GCC 4.8.4 on Linux x64:
 </p>
 
 _PRE_BEGIN
