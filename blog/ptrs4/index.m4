@@ -170,6 +170,13 @@ You may probably have some crazy environment where you need to allocate memory b
 Some kind of magic number? Maybe -1? Or maybe additional bit?
 </p>
 
+In Wikipedia we may find this:
+
+<blockquote>
+In fact, quite contrary to the zero page's original preferential use, some modern operating systems such as FreeBSD, Linux and Microsoft Windows[2] actually make the zero page inaccessible to trap uses of NULL pointers. 
+</blockquote>
+<p>( _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Zero_page') )</p>
+
 _HL2(`Pointer to function')
 
 <p>It's possible to call function by its address.
