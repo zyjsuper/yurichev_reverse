@@ -258,6 +258,8 @@ scratch.
 
 <p>And of course, this code will crash on *NIX or Windows because of memory protection and even in absence of protection, there are no code at address 0.</p>
 
+<p>GCC even has non-standard extension, allowing to jump to a specific address rather than call a function there: _HTML_LINK_AS_IS(`http://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html').</p>
+
 <hr>
 <p>My other blog posts about C/C++ pointers: [
 _HTML_LINK(`http://yurichev.com/blog/ptrs',`1') |
