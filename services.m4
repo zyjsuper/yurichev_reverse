@@ -19,7 +19,7 @@ _HL2(`Dongles')
 In general, it is somewhat unlawful to break software protection, so I can do this only if these conditions are met:
 
 <ul>
-<li> software company who developed the software product is not to be exist anymore to my best knowledge;
+<li> software company who developed the software product does not exist anymore to my best knowledge;
 <li> the software product is older than 10 years;
 <li> you have a dongle to read information from it. In other words, I can only help to those who still uses some very old software, completely satisfied with it, but afraid of dongle electrical breakage and there are no company who can still sell the dongle replacement.
 </ul>
