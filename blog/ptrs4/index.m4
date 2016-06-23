@@ -125,6 +125,11 @@ _PRE_END
 
 <p>This program works without error message upon exit.</p>
 
+<hr>
+
+<p>Though method to warn about null pointer assignment is relevant for MS-DOS,
+it's probably can be still used in low-cost microcontrollers without memory protection and/or MMU.</p>
+
 _HL2(`Why would anyone write at address 0?')
 
 <p>But why would sane programmer write a code which writes something at address 0?
