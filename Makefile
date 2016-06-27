@@ -110,6 +110,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	blog/XOR_mask_2/index.html \
 	blog/breaking_simple_exec_crypto/index.html \
 	blog/weird_loop_optimization/index.html \
+	blog/bitcoin_miner/index.html \
 	blog/challenges.re/index.html
 
 all: $(HTML_FILES)
