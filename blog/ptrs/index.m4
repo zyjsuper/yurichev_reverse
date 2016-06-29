@@ -206,7 +206,9 @@ Types are not checked during runtime - it would be huge (and unneeded) overhead.
 _HTML_LINK(`http://yurichev.com/blog/ptrs',`1') |
 _HTML_LINK(`http://yurichev.com/blog/ptrs2',`2') |
 _HTML_LINK(`http://yurichev.com/blog/ptrs3',`3') |
-_HTML_LINK(`http://yurichev.com/blog/ptrs4',`4') ]</p>
+_HTML_LINK(`http://yurichev.com/blog/ptrs4',`4') |
+_HTML_LINK(`http://yurichev.com/blog/ptrs5',`5') ]
+</p>
 
 _BLOG_FOOTER_GITHUB(`ptrs')
 
