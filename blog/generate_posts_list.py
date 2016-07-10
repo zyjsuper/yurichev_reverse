@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2016, 7,10,0,0,0), "loop_optimization","Another loop optimization")
     post(f1,f2,datetime.datetime(2016, 6,29,0,0,0), "ptrs5","C/C++ pointers: array as function argument")
     post(f1,f2,datetime.datetime(2016, 6,27,0,0,0), "bitcoin_miner","Overclocking Cointerra Bitcoin miner")
     post(f1,f2,datetime.datetime(2016, 6,13,0,0,0), "ptrs4","C/C++ pointers: null pointers")
