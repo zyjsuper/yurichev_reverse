@@ -5,7 +5,7 @@ _HEADER_HL1(`(Beginners level) packing 12-bit values into array using bit operat
 _HL2(`Introduction')
 
 <p>File Allocation Table (FAT) was a widely popular filesystem.
-Hard to believe, but it's still used on flash drivers, perhaps, for the reason of compatibility.
+Hard to believe, but it's still used on flash drives, perhaps, for the reason of simplicity and compatibility.
 The FAT table itself is array of elements, each of which points to the next cluster number of a file 
 (FAT supports files scattered across the whole disk).
 That implies that maximum of each element is maximum number of clusters on the disk.

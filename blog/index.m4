@@ -15,6 +15,8 @@ Just ask me, I will prepare Russian version by myself.</p>
 
 <p>All reverse engineering exercises are moved to separate website: _HTML_LINK_AS_IS(`http://challenges.re/').</p>
 
+<p>There are also some _HTML_LINK(`https://github.com/dennis714/random_notes/',`random notes') at GitHub.</p>
+
 m4_include(`google.html')
 
 _HL2(`Subscribe to the blog:')
