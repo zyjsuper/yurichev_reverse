@@ -27,13 +27,14 @@ def main():
     f2.write ("<table>\n")
 
     post(f1,f2,datetime.datetime(2016, 7,10,0,0,0), "loop_optimization","Another loop optimization")
-    post(f1,f2,datetime.datetime(2016, 6,29,0,0,0), "ptrs5","C/C++ pointers: array as function argument")
+    post(f1,f2,datetime.datetime(2016, 6,29,0,0,0), "ptrs5","C/C++ pointers: array as function argument") #
     post(f1,f2,datetime.datetime(2016, 6,27,0,0,0), "bitcoin_miner","Overclocking Cointerra Bitcoin miner")
-    post(f1,f2,datetime.datetime(2016, 6,13,0,0,0), "ptrs4","C/C++ pointers: null pointers")
-    post(f1,f2,datetime.datetime(2016, 6, 2,0,0,0), "ptrs3","C/C++ pointers: pointers abuse in Windows kernel")
-    post(f1,f2,datetime.datetime(2016, 5,22,0,0,0), "ptrs2","C/C++ pointers: yet another abuse")
+    post(f1,f2,datetime.datetime(2016, 6,13,0,0,0), "ptrs4","C/C++ pointers: null pointers") #
+    post(f1,f2,datetime.datetime(2016, 6, 2,0,0,0), "ptrs3","C/C++ pointers: pointers abuse in Windows kernel") #
+    post(f1,f2,datetime.datetime(2016, 5,22,0,0,0), "ptrs2","C/C++ pointers: yet another abuse") #
     post(f1,f2,datetime.datetime(2016, 5,19,0,0,0), "weird_loop_optimization","Weird loop optimization")
-    post(f1,f2,datetime.datetime(2016, 5, 8,0,0,0), "ptrs","C/C++ pointers: yet another short example")
+    post(f1,f2,datetime.datetime(2016, 5, 8,0,0,0), "ptrs","C/C++ pointers: yet another short example") #
+
     post(f1,f2,datetime.datetime(2016, 5, 6,0,0,0), "breaking_simple_exec_crypto","Breaking simple executable cryptor")
     post(f1,f2,datetime.datetime(2016, 5, 6,0,0,0), "args_stat","Function arguments statistics")
     post(f1,f2,datetime.datetime(2016, 5, 3,0,0,0), "XOR_mask_2","Simple encryption using XOR mask, part II")
