@@ -8,6 +8,11 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
+<p>
+As of 2013-2016 I mostly known for 
+_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
+</p>
+
 _HTML_LINK(`services.html',`<font color="red"><h3>My services</h3></font>')
 
 _HL2(`Some of my writings:')
