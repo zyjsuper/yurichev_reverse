@@ -45,9 +45,9 @@ def main():
     post(f1,f2,datetime.datetime(2015, 9,27,0,0,0), "git","Some of git internals")
     post(f1,f2,datetime.datetime(2015, 9,27,0,0,0), "CAS","Content-addressable storage")
     post(f1,f2,datetime.datetime(2015, 9, 8,0,0,0), "typeless","Typeless programming languages (BCPL, B), C evolution and decompiling")
-    post(f1,f2,datetime.datetime(2015, 9, 4,0,0,0), "FAT12", "(Beginners level) packing 12-bit values into array using bit operations (x64, ARM/ARM64, MIPS)")
+    post(f1,f2,datetime.datetime(2015, 9, 4,0,0,0), "FAT12", "(Beginners level) packing 12-bit values into array using bit operations (x64, ARM/ARM64, MIPS)") #
     post(f1,f2,datetime.datetime(2015, 8,26,0,0,0), "2015-aug-26", "Yet another compiler anomaly")
-    post(f1,f2,datetime.datetime(2015, 8,26,0,0,0), "encrypted_DB_case_1", "Encrypted database case #1")
+    post(f1,f2,datetime.datetime(2015, 8,26,0,0,0), "encrypted_DB_case_1", "Encrypted database case #1") #
     post(f1,f2,datetime.datetime(2015, 8,22,0,0,0), "de_bruijn", "De Bruijn sequences (solution for the exercise posted at 18-Aug-2015); leading/trailing zero bits counting.")
     post(f1,f2,datetime.datetime(2015, 8,20,0,0,0), "2015-aug-20", "Some parts of my Reverse Engineering book translated to Chinese.")
 
@@ -57,8 +57,8 @@ def main():
     post(f1,f2,datetime.datetime(2015, 7, 9,0,0,0), "RSA", "How RSA works")
     post(f1,f2,datetime.datetime(2015, 6,13,0,0,0), "modulo", "Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3")
     post(f1,f2,datetime.datetime(2015, 5,16,0,0,0), "llvm", "Tweaking LLVM Obfuscator + quick look into some of LLVM internals")
-    post(f1,f2,datetime.datetime(2015, 5,13,0,0,0), "entropy", "(Beginners level) Analyzing unknown binary files using information entropy")
-    post(f1,f2,datetime.datetime(2015, 4,25,0,0,0), "fortune", "(Beginners level) reverse engineering of simple fortune program indexing file")
+    post(f1,f2,datetime.datetime(2015, 5,13,0,0,0), "entropy", "(Beginners level) Analyzing unknown binary files using information entropy") #
+    post(f1,f2,datetime.datetime(2015, 4,25,0,0,0), "fortune", "(Beginners level) reverse engineering of simple fortune program indexing file") #
     post(f1,f2,datetime.datetime(2015, 4,20,0,0,0), "86", "Using Z3 theorem prover to prove equivalence of some bizarre alternative to XOR operation.")
     post(f1,f2,datetime.datetime(2015, 1,21,0,0,0), "85", "Korean publication of \"Reverse Engineering for Beginners\" book is available for pre-order!")
     post(f1,f2,datetime.datetime(2014, 8,29,0,0,0), "84", "Publishers?")
