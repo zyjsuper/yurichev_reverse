@@ -118,7 +118,7 @@ _PRE_END
 
 <p>Source code was initially compiled by MSVC 2008.</p>
 
-<p><a href="http://yurichev.com/non-wiki-files/blog/2008-ospy/ospy_events.zip">Download utility and source code.</a></p>
+<p><a href="//yurichev.com/non-wiki-files/blog/2008-ospy/ospy_events.zip">Download utility and source code.</a></p>
 
 <p>Update: this utility was superseded by <a href="http://conus.info/gt/">generic tracer</a>.</p>
 

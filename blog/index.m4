@@ -11,9 +11,9 @@ m4_include(`blog/posts.html')
 <p>Feel free to translate them to other languages, except Russian, please!
 Just ask me, I will prepare Russian version by myself.</p>
 
-<p>Some of my other writings are: _HTML_LINK(`http://beginners.re/',`"Reverse Engineering for Beginners" free book'), _HTML_LINK_AS_IS(`http://yurichev.com/writings/').</p>
+<p>Some of my other writings are: _HTML_LINK(`//beginners.re/',`"Reverse Engineering for Beginners" free book'), _HTML_LINK_AS_IS(`//yurichev.com/writings/').</p>
 
-<p>All reverse engineering exercises are moved to separate website: _HTML_LINK_AS_IS(`http://challenges.re/').</p>
+<p>All reverse engineering exercises are moved to separate website: _HTML_LINK_AS_IS(`//challenges.re/').</p>
 
 <p>There are also some _HTML_LINK(`https://github.com/dennis714/random_notes/',`random notes') at GitHub.</p>
 
@@ -21,9 +21,9 @@ m4_include(`google.html')
 
 _HL2(`Subscribe to the blog:')
 
-<p><a href="http://yurichev.com/blog/rss.xml"><img src="rss_button.gif"></a></p>
+<p><a href="//yurichev.com/blog/rss.xml"><img src="rss_button.gif"></a></p>
 
-<p>Here is usual _HTML_LINK(`http://yurichev.com/blog/rss.xml',`RSS') link.
+<p>Here is usual _HTML_LINK(`//yurichev.com/blog/rss.xml',`RSS') link.
 Popular RSS reader choices include _HTML_LINK(`https://feedly.com/',`feedly') (web reader) and 
 _HTML_LINK(`https://www.mozilla.org/en-US/thunderbird/',`Thunderbird') (local reader).</p>
 

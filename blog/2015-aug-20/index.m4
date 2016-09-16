@@ -16,7 +16,7 @@ _HEADER_HL1(`20-Aug-2015: Some parts of my Reverse Engineering book translated t
 
 <p>And: _HTML_LINK_AS_IS(`http://zhuanlan.zhihu.com/wooyun/19810488').</p>
 
-<p>The English and Russian texts are always here: _HTML_LINK_AS_IS(`http://beginners.re/').</p>
+<p>The English and Russian texts are always here: _HTML_LINK_AS_IS(`//beginners.re/').</p>
 
 _BLOG_FOOTER()
 

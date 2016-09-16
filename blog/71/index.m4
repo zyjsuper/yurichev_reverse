@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`14-Aug-2012: Finding unknown algorithm using only input/output pairs and Z3 SMT solver')
 
-<p>Text is moved into: _HTML_LINK_AS_IS(`http://yurichev.com/writings/z3_rockey.pdf')</p>
+<p>Text is moved into: _HTML_LINK_AS_IS(`//yurichev.com/writings/z3_rockey.pdf')</p>
 
 <p>Update: as seen on reddit:</p>
 

@@ -14,15 +14,15 @@ Shareware from Software Customization.
 Software Customization [ASP] Version 3.5 Feb. 2000
 _PRE_END
 
-<p>It's downloadable _HTML_LINK(`http://yurichev.com/blog/XOR_mask_1/files/newcastle.tgz',`here').</p>
+<p>It's downloadable _HTML_LINK(`//yurichev.com/blog/XOR_mask_1/files/newcastle.tgz',`here').</p>
 
 <p>There is a file inside (named <i>castle.dbf</i>) which is clearly encrypted, but not by a real crypto algorithm, nor it's compressed, this is something rather simpler.
-I wouldn't even measure _HTML_LINK(`http://yurichev.com/blog/entropy/',`entropy level') of the file.
+I wouldn't even measure _HTML_LINK(`//yurichev.com/blog/entropy/',`entropy level') of the file.
 Here is how it looks like in midnight commander:</p>
 
-<center><img src="http://yurichev.com/blog/XOR_mask_1/files/mc_encrypted.png"></center>
+<center><img src="//yurichev.com/blog/XOR_mask_1/files/mc_encrypted.png"></center>
 
-<p>The encrypted file can be downloaded _HTML_LINK(`http://yurichev.com/blog/XOR_mask_1/files/castle.dbf',`here').</p>
+<p>The encrypted file can be downloaded _HTML_LINK(`//yurichev.com/blog/XOR_mask_1/files/castle.dbf',`here').</p>
 
 <p>Will it be possible to decrypt it without accessing to the program, using just this file?</p>
 
@@ -231,7 +231,7 @@ BinaryWrite["/home/dennis/.../tmp", Flatten[decrypted]]
 Close["/home/dennis/.../tmp"]
 _PRE_END
 
-<center><img src="http://yurichev.com/blog/XOR_mask_1/files/mc_decrypted1.png"></center>
+<center><img src="//yurichev.com/blog/XOR_mask_1/files/mc_decrypted1.png"></center>
 
 <p>Looks like some kind of English phrases for some game, but something wrong.
 First of all, cases are inverted: phrases and some words are started with lowercase characters, while other characters are in upper case.
@@ -282,7 +282,7 @@ _PRE_END
 
 <p>... and decrypt the whole file again.</p>
 
-<center><img src="http://yurichev.com/blog/XOR_mask_1/files/mc_decrypted2.png"></center>
+<center><img src="//yurichev.com/blog/XOR_mask_1/files/mc_decrypted2.png"></center>
 
 <p>Wow, now the grammar is correct, all phrases started with correct letters.
 But still, case inversion is suspicious.
@@ -313,9 +313,9 @@ _PRE_END
 
 <p>Let's decrypt the input file again:</p>
 
-<center><img src="http://yurichev.com/blog/XOR_mask_1/files/mc_decrypted.png"></center>
+<center><img src="//yurichev.com/blog/XOR_mask_1/files/mc_decrypted.png"></center>
 
-<p>(Decrypted file is available _HTML_LINK(`http://yurichev.com/blog/XOR_mask_1/files/decrypted.dat',`here'))</p>
+<p>(Decrypted file is available _HTML_LINK(`//yurichev.com/blog/XOR_mask_1/files/decrypted.dat',`here'))</p>
 
 <p>This is undoubtfully a correct source file.
 Oh, and we see numbers at the start of each block. Probably this is source of our errorneous XOR key.
@@ -327,11 +327,11 @@ Other highly occurred 81-byte blocks are also space-filled blocks, but with diff
 
 <p>That's all! Now we can write utility to encrypt the file back, and maybe modify it before.</p>
 
-<p>Mathematica notebook file is downloadable _HTML_LINK(`http://yurichev.com/blog/XOR_mask_1/files/XOR_mask_1.nb',`here').</p>
+<p>Mathematica notebook file is downloadable _HTML_LINK(`//yurichev.com/blog/XOR_mask_1/files/XOR_mask_1.nb',`here').</p>
 
 <p>Summary: XOR encryption like that is not robust at all. It has been intended by game's developer(s), probably, just to prevent gamer(s) to peek into internals of game, nothing else. Still, encryption like that is extremely popular due to its simplicity and many reverse engineers are usually familiar with it.</p>
 
-<p>Here are also couple of examples of simple XOR encryption in my book: _HTML_LINK_AS_IS(`http://beginners.re/22-Apr-2016/RE4B-EN.pdf#page=846&zoom=auto,-107,816').</p>
+<p>Here are also couple of examples of simple XOR encryption in my book: _HTML_LINK_AS_IS(`//beginners.re/22-Apr-2016/RE4B-EN.pdf#page=846&zoom=auto,-107,816').</p>
 
 _BLOG_FOOTER_GITHUB(`XOR_mask_1')
 

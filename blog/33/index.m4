@@ -6,11 +6,11 @@ _HEADER_HL1(`24-Dec-2009: Events checked in some major Oracle RDBMS versions')
 I prepared lists of events checked in some major Oracle RDBMS versions.</p>
 
 <ul>
-<li><a href="http://yurichev.com/non-wiki-files/blog/events/10.2.0.1_linux86_events.txt">10.2.0.1 Linux x86</a>
-<li><a href="http://yurichev.com/non-wiki-files/blog/events/10.2.0.4_linux86_events.txt">10.2.0.4 Linux x86</a>
-<li><a href="http://yurichev.com/non-wiki-files/blog/events/11.1.0.6.0_linux86_events.txt">11.1.0.6.0 Linux x86</a>
-<li><a href="http://yurichev.com/non-wiki-files/blog/events/11.1.0.7.0_linux86_events.txt">11.1.0.7.0 Linux x86</a>
-<li><a href="http://yurichev.com/non-wiki-files/blog/events/11.2.0.1.0_linux86_events.txt">11.2.0.1.0 Linux x86</a>
+<li><a href="//yurichev.com/non-wiki-files/blog/events/10.2.0.1_linux86_events.txt">10.2.0.1 Linux x86</a>
+<li><a href="//yurichev.com/non-wiki-files/blog/events/10.2.0.4_linux86_events.txt">10.2.0.4 Linux x86</a>
+<li><a href="//yurichev.com/non-wiki-files/blog/events/11.1.0.6.0_linux86_events.txt">11.1.0.6.0 Linux x86</a>
+<li><a href="//yurichev.com/non-wiki-files/blog/events/11.1.0.7.0_linux86_events.txt">11.1.0.7.0 Linux x86</a>
+<li><a href="//yurichev.com/non-wiki-files/blog/events/11.2.0.1.0_linux86_events.txt">11.2.0.1.0 Linux x86</a>
 </ul>
 
 <p>Remember, something may be missing there.</p>

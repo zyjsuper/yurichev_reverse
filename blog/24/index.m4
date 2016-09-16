@@ -42,7 +42,7 @@ _PRE_END
 
 <p>If I'm correct (I may not) this problem is related to nsdisc() function in network layer. Oracle instance closes connection uses this function. It frees some memory, but the same chunk of memory is used again for another connection.</p>
 
-<p><a href="http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1019.zip">Download PoC and source code.</a></p>
+<p><a href="//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1019.zip">Download PoC and source code.</a></p>
 
 _BLOG_FOOTER_GITHUB(`24')
 

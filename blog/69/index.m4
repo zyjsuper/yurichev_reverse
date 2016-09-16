@@ -6,7 +6,7 @@ _HEADER_HL1(`17-Jul-2012: CVE-2012-0072 PoC (fixed in CPUjan2012)')
 
 <p>Was reported via McAfee and found using fuzzing...</p>
 
-<p>_HTML_LINK_AS_IS(`http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2012-0072.py_.txt')</p>
+<p>_HTML_LINK_AS_IS(`//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2012-0072.py_.txt')</p>
 
 _BLOG_FOOTER_GITHUB(`69')
 

@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`15-Oct-2013: New tracer features for software testing')
 
-<p>For my software testers friends I added two features to my <a href="http://yurichev.com/tracer-en.html">tracer</a>.</p>
+<p>For my software testers friends I added two features to my <a href="//yurichev.com/tracer-en.html">tracer</a>.</p>
 
 <p>* Pause</p>
 

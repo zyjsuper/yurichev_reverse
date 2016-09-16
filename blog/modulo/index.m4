@@ -95,7 +95,7 @@ parts.</p>
 
 <p>Now let's recall old mechanical counters which were widespread in pre-digital era:</p>
 
-<center><img src="http://yurichev.com/blog/modulo/counter.jpg" alt="The picture was stolen from http://www.featurepics.com/ - sorry for it!"></center>
+<center><img src="//yurichev.com/blog/modulo/counter.jpg" alt="The picture was stolen from http://www.featurepics.com/ - sorry for it!"></center>
 
 <p>This counter has 6 wheels, so it can count from 0 to $10^{6}-1$ or 999999.
 When you have 999999 and you increase the counter, it will resetting to 000000 - this situation is usually understood by engineers and computer programmers as overflow.
@@ -790,6 +790,6 @@ Imagine if such token would implement LCG -- it would be much easier to break!</
 _HL2(`RSA')
 
 <p>Modular arithmetic is also used in RSA algorithm in its core.
-I've written an article about it: _HTML_LINK_AS_IS(`http://yurichev.com/blog/RSA/').</p>
+I've written an article about it: _HTML_LINK_AS_IS(`//yurichev.com/blog/RSA/').</p>
 
 _BLOG_FOOTER()

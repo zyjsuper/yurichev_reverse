@@ -377,7 +377,7 @@ while zero bits at the left of most significant 1 bit are not touched.</p>
 <p>It's possible to add 1 to resulting number, so it will becomes 0x2000 or 0x20000000, but in fact, since multiplication by magic number is used,
 these numbers are very close to each other, so there are no error.</p>
 
-<p>This example I used in my reverse engineering exercise from 15-Aug-2015: _HTML_LINK_AS_IS(`http://yurichev.com/blog/2015-aug-18/').</p>
+<p>This example I used in my reverse engineering exercise from 15-Aug-2015: _HTML_LINK_AS_IS(`//yurichev.com/blog/2015-aug-18/').</p>
 
 <!--
 _PRE_BEGIN
@@ -436,7 +436,7 @@ Nevertheless, these algorithms can be still used on cheaper RISC CPUs without sp
 _HL2(`Applications')
 
 <p>Number of leading zero bits is binary logarithm of value. My article about logarithms including binary:
-_HTML_LINK_AS_IS(`http://yurichev.com/writings/log_intro.pdf').</p>
+_HTML_LINK_AS_IS(`//yurichev.com/writings/log_intro.pdf').</p>
 
 <p>These algorithms are also extensively used in chess engines programming, where each piece is represented as 64-bit bitmask (chess board has 64 squares):
 _HTML_LINK_AS_IS(`http://chessprogramming.wikispaces.com/BitScan').</p>

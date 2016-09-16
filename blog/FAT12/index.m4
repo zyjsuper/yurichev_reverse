@@ -347,7 +347,7 @@ you may consider tightly-packed array in the manner it's done in FAT12 table.</p
 
 _HL2(`Further reading')
 
-<p>More examples like this (for x86/x64/ARM/ARM64 and MIPS) can be found in my book: _HTML_LINK_AS_IS(`http://beginners.re/').</p>
+<p>More examples like this (for x86/x64/ARM/ARM64 and MIPS) can be found in my book: _HTML_LINK_AS_IS(`//beginners.re/').</p>
 
 _BLOG_FOOTER()
 

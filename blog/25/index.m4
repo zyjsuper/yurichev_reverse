@@ -45,8 +45,8 @@ _PRE_END
 <p>After that, Oracle 11g instance will be spinning to 100% CPU and heap corruption problem should be raised.</p>
 
 <p>Download:</p>
-<p><a href="http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1963/tcp_fwd_0.zip">TCP forwarder with source code.</a></p>
-<p><a href="http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1963/version_10g.zip">Simple program asking for version, to be running on 10.2 client.</a></p>
+<p><a href="//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1963/tcp_fwd_0.zip">TCP forwarder with source code.</a></p>
+<p><a href="//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1963/version_10g.zip">Simple program asking for version, to be running on 10.2 client.</a></p>
 
 _BLOG_FOOTER_GITHUB(`25')
 

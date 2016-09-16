@@ -2,9 +2,9 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`27-Jun-2016: Overclocking Cointerra Bitcoin miner')
 
-<p>There was Cointerra Bitcoin miner, looking like _HTML_LINK(`http://yurichev.com/blog/bitcoin_miner/files/board.jpg',`that').</p>
+<p>There was Cointerra Bitcoin miner, looking like _HTML_LINK(`//yurichev.com/blog/bitcoin_miner/files/board.jpg',`that').</p>
 
-<p>And there was also (possibly leaked) _HTML_LINK(`http://yurichev.com/blog/bitcoin_miner/files/cointool-overclock',`utility') which can set clock rate for the board.
+<p>And there was also (possibly leaked) _HTML_LINK(`//yurichev.com/blog/bitcoin_miner/files/cointool-overclock',`utility') which can set clock rate for the board.
 It runs on additional BeagleBone Linux ARM board (small board at bottom of the picture).</p>
 
 <p>And I was asked, is it possible to hack this utility to see, which frequency can be set and which are not. And it is possible to tweak it?</p>

@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`15-Jan-2010: More information about CVE-2009-1979 (CPUoct2009)')
 
-<p>For those who want to research more about CVE-2009-1979 (<a href="http://www.oracle.com/technology/deploy/security/critical-patch-updates/cpuoct2009.html">CPUoct2009</a>) buffer overflow vulnerability, <a href="http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1979.py_.txt">here is simple Python script</a> to hit memcpy() inside of kpoauth() function, which result buffer overflow.</p>
+<p>For those who want to research more about CVE-2009-1979 (<a href="http://www.oracle.com/technology/deploy/security/critical-patch-updates/cpuoct2009.html">CPUoct2009</a>) buffer overflow vulnerability, <a href="//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1979.py_.txt">here is simple Python script</a> to hit memcpy() inside of kpoauth() function, which result buffer overflow.</p>
 
 <p>This script attempt to login into Oracle RDBMS by sending two DTYAUTH packets. First call kpogsk() function ("generate session key") (OPI call 0x76) and second call kpoauth() function (OPI call 0x73) (which check AUTH_SESSKEY and AUTH_PASSWORD from client). This script attempt to send string consisted of 200 'x' symbols as AUTH_SESSKEY value.</p>
 
