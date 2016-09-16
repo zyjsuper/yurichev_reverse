@@ -10,10 +10,9 @@ m4_define(`_HEADER',`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//E
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <meta name="author" content="Dennis Yurichev">
 _MAKE_TITLE(`$1')
-<link rel="stylesheet" href="http://yurichev.com/style.css">
-<script src="http://yurichev.com/multilang.js" type="text/javascript"></script>
-<script src="http://yurichev.com/showhide.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<link rel="stylesheet" href="//yurichev.com/style.css">
+<script src="//yurichev.com/multilang.js" type="text/javascript"></script>
+<script src="//yurichev.com/showhide.js" type="text/javascript"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
@@ -30,16 +29,16 @@ m4_define(`_MULTILANG_SWITCH',`<h5>
 </h5>')
 
 
-m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`http://yurichev.com',`back to the main page')]</p>
+m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`//yurichev.com',`back to the main page')]</p>
 </body>
 </html>')
 
-m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _HTML_LINK(`http://yurichev.com/blog/',`blog') and _HTML_LINK(`http://beginners.re/',`my book').</p>')
+m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _HTML_LINK(`//yurichev.com/blog/',`blog') and _HTML_LINK(`http://beginners.re/',`my book').</p>')
 m4_define(`_EXERCISE_SPOILER_WARNING',`<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A).</p>')
 
 m4_define(`_BLOG_FOOTER',`<hr>
-<p>Interested in articles like this? Subscribe to my _HTML_LINK(`http://yurichev.com/blog/index.html',`blog') and/or twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev') and/or _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>
-<p>&rarr; [_HTML_LINK(`http://yurichev.com/blog/index.html',`list of blog posts')]</p>
+<p>Interested in articles like this? Subscribe to my _HTML_LINK(`//yurichev.com/blog/index.html',`blog') and/or twitter: _HTML_LINK(`https://twitter.com/yurichev',`@yurichev') and/or _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>
+<p>&rarr; [_HTML_LINK(`//yurichev.com/blog/index.html',`list of blog posts')]</p>
 <p><h5>The page last updated on m4_esyscmd(date -r m4___file__ +"%d-%B-%Y")</h5></p>
 
 <!-- <span class="st_twitter" displayText="Tweet"></span>
