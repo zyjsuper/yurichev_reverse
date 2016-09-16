@@ -7,7 +7,7 @@ For <a href="http://www.freelists.org/post/oracle-l/How-can-I-debug-NO-ASM-disk-
 
 <p><a href="http://conus.info/utils/oracle_msb/oracle_msb.zip">Download win32 binary + source code</a>.</p>
 
-<p>I also added a section to my <a href="http://beginners.re/">"Reverse Engineering for Beginners" book</a> about file format details.</p>
+<p>I also added a section to my <a href="//beginners.re/">"Reverse Engineering for Beginners" book</a> about file format details.</p>
 
 _BLOG_FOOTER_GITHUB(`57')
 

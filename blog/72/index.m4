@@ -8,9 +8,9 @@ _HEADER_HL1(`15-Mar-2013: Quick introduction to reverse engineering for beginner
 
 <p>It's yet unfull and contain a lot of incorrect clauses and mistakes.</p>
 
-<p>"Quick introduction to reverse engineering for beginners": _HTML_LINK_AS_IS(`http://yurichev.com/writings/RE_for_beginners-en.pdf')</p>
+<p>"Quick introduction to reverse engineering for beginners": _HTML_LINK_AS_IS(`//yurichev.com/writings/RE_for_beginners-en.pdf')</p>
 
-<p>"Краткое введение в reverse engineering для начинающих": _HTML_LINK_AS_IS(`http://yurichev.com/writings/RE_for_beginners-ru.pdf')</p>
+<p>"Краткое введение в reverse engineering для начинающих": _HTML_LINK_AS_IS(`//yurichev.com/writings/RE_for_beginners-ru.pdf')</p>
 
 <p>Do not hesitate to send me any corrections, please! Here is also books's source code (LaTeX): _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners')</p>
 

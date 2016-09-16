@@ -6,8 +6,8 @@ _HEADER_HL1(`17-Jul-2012: CVE-2010-0911 PoC (fixed in CPUjul2010)')
 
 <p>Was reported via Sentrigo (now part of McAfee) and found using fuzzing...</p>
 
-<p>_HTML_LINK_AS_IS(`http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2010-0911-%231.py_.txt')</p>
-<p>_HTML_LINK_AS_IS(`http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2010-0911-%232.py_.txt')</p>
+<p>_HTML_LINK_AS_IS(`//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2010-0911-%231.py_.txt')</p>
+<p>_HTML_LINK_AS_IS(`//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2010-0911-%232.py_.txt')</p>
 
 _BLOG_FOOTER_GITHUB(`68')
 

@@ -23,7 +23,7 @@ _PRE_END
 <p>_HTML_LINK(`https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Propagating_Cipher_Block_Chaining_.28PCBC.29',`Propagating Cipher Block Chaining (PCBC)')
 is also used, here is how it works (image is taken from Wikipedia article):</p>
 
-<center><img src="http://yurichev.com/blog/breaking_simple_exec_crypto/601px-PCBC_encryption.svg.png"></center>
+<center><img src="//yurichev.com/blog/breaking_simple_exec_crypto/601px-PCBC_encryption.svg.png"></center>
 
 <p>The problem is that it's too boring to recover IV (Initialization Vector) each time.
 Brute-force is also not an option, because IV is too long (16 bytes).
@@ -90,10 +90,10 @@ _PRE_END
 <p>So far so good. Now we need to try various 16-byte keys, decrypt executable section and measure how often 00, FF ad 8B bytes are occurred.
 Let's also keep in sight how PCBC decryption works:</p>
 
-<center><img src="http://yurichev.com/blog/breaking_simple_exec_crypto/640px-PCBC_decryption.svg.png"></center>
+<center><img src="//yurichev.com/blog/breaking_simple_exec_crypto/640px-PCBC_decryption.svg.png"></center>
 
 <p>The good news is that we don't really need to decrypt whole piece of data, but only slice by slice, this is exactly how I did in my previous example:
-_HTML_LINK_AS_IS(`http://yurichev.com/blog/XOR_mask_2/').</p>
+_HTML_LINK_AS_IS(`//yurichev.com/blog/XOR_mask_2/').</p>
 
 <p>Now I'm trying all possible bytes (0..255) for each byte in key and just pick the byte producing maximal amount of 00/FF/8B bytes in a decrypted slice:</p>
 
@@ -291,11 +291,11 @@ There are other ideas on how to measure correctness of decrypted/decompressed x8
 <ul>
 <li>Many modern compilers aligns functions on 0x10 border.
 So the space left before is filled with NOPs (0x90) or other NOP instructions with known opcodes:
-_HTML_LINK_AS_IS(`http://beginners.re/22-Apr-2016/RE4B-EN.pdf#page=876&zoom=auto,-107,683').
+_HTML_LINK_AS_IS(`//beginners.re/22-Apr-2016/RE4B-EN.pdf#page=876&zoom=auto,-107,683').
 
 <li>Probably, the most frequent pattern in any assembly language is function call: <i>PUSH chain / CALL / ADD ESP, X</i>.
 This sequence can easily detected and found.
-I've even gathered statistics about average number of function arguments: _HTML_LINK_AS_IS(`http://yurichev.com/blog/args_stat/') 
+I've even gathered statistics about average number of function arguments: _HTML_LINK_AS_IS(`//yurichev.com/blog/args_stat/') 
 (hence, this is average lenght of PUSH chain).
 
 </ul>

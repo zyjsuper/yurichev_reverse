@@ -37,7 +37,7 @@ _PRE_END
 
 <p>I run my tool attached to Oracle process. I type "CREATE TABLE something" in sqlplus and ctcpre1() function was called. Here is graph rendered in GraphViz.</p>
 
-<p><a href="http://yurichev.com/non-wiki-files/blog/gt_oracle.exe!_ctcpre1_arg0.png"><img src="http://yurichev.com/non-wiki-files/blog/gt_oracle.exe!_ctcpre1_arg0_thumb.png"></a></p>
+<p><a href="//yurichev.com/non-wiki-files/blog/gt_oracle.exe!_ctcpre1_arg0.png"><img src="http://yurichev.com/non-wiki-files/blog/gt_oracle.exe!_ctcpre1_arg0_thumb.png"></a></p>
 
 <p>(click on picture to see large version)</p>
 

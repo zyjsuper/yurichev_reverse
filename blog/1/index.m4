@@ -13,7 +13,7 @@ On Solaris 10 (I tested 10.2.0.1 x64) this is value returned by <a href="http://
 
 <p>... they probably not covering all OS-es.</p>
 
-<p>Update: The story about how did I find it, I added to my "Quick introduction to reverse engineering for beginners" book: _HTML_LINK_AS_IS(`http://yurichev.com/RE-book.html')</p>
+<p>Update: The story about how did I find it, I added to my "Quick introduction to reverse engineering for beginners" book: _HTML_LINK_AS_IS(`//yurichev.com/RE-book.html')</p>
 
 _BLOG_FOOTER_GITHUB(`1')
 

@@ -335,7 +335,7 @@ _HL2(`The files')
 <p>For the sake of demonstration, I still didn't take a look in <i>fortune</i> source code.
 If you want to try to understand meaning of other values in index file header, you may try to achieve it without looking into source code as well.
 Files I took from Ubuntu Linux 14.04 are here:
-<a href="http://beginners.re/examples/fortune/">http://beginners.re/examples/fortune/</a>, hacked files are also here.</p>
+<a href="//beginners.re/examples/fortune/">http://beginners.re/examples/fortune/</a>, hacked files are also here.</p>
 
 <p>Oh, and I took the files from x64 version of Ubuntu, but array elements are still has size of 32 bit.
 It is because <i>fortune</i> text files are probably never exceeds 4GB size.

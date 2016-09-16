@@ -28,7 +28,7 @@ community =
   VertexLabels -> "Name"]
 _PRE_END
 
-<p><center><img src="http://yurichev.com/blog/clique/graph1.png"></center></p>
+<p><center><img src="//yurichev.com/blog/clique/graph1.png"></center></p>
 
 <p>Let's try to find largest clique:</p>
 
@@ -44,7 +44,7 @@ _PRE_BEGIN
 HighlightGraph[community, clique]
 _PRE_END
 
-<p><center><img src="http://yurichev.com/blog/clique/graph2.png"></center></p>
+<p><center><img src="//yurichev.com/blog/clique/graph2.png"></center></p>
 
 _HL2(`Social graph: IRC network')
 
@@ -122,7 +122,7 @@ _PRE_END
 
 <p>The resulting graph is:</p>
 
-<center><img src="http://yurichev.com/blog/clique/IRC_g2.png"></center>
+<center><img src="//yurichev.com/blog/clique/IRC_g2.png"></center>
 
 <p>There some artifacts (at the bottom) which can be ignored so far, I think.
 There is prominent centers: one huge and two others are smaller.
@@ -137,20 +137,20 @@ c2 = FindGraphCommunities[g2];
 HighlightGraph[g2, Map[Subgraph[g2, #] &, c2]]
 _PRE_END
 
-<center><img src="http://yurichev.com/blog/clique/IRC_c2.png"></center>
+<center><img src="//yurichev.com/blog/clique/IRC_c2.png"></center>
 
 <p>Hard to say if Mathematica right, but this is what it did.</p>
 
 <p>Now let's take the whole graph of all IRC interactions starting at year 2004 till the summer of 2015.
 The graph is much bigger:</p>
 
-<center><img src="http://yurichev.com/blog/clique/IRC_g1.png"></center>
+<center><img src="//yurichev.com/blog/clique/IRC_g1.png"></center>
 
 <p>There are more artifacts.</p>
 
 <p>Let's apply Mathematica's method to find communities:</p>
 
-<center><img src="http://yurichev.com/blog/clique/IRC_c1.png"></center>
+<center><img src="//yurichev.com/blog/clique/IRC_c1.png"></center>
 
 <p>Is it right? Maybe. Needless to say, since timespan is so long (at least 10 years), we can belive that some communities which may exists in 2004-2006 may be
 extinct in 2014-2015 (people got older, lost their interest in Ubuntu Linux, etc), but they all are visible on this graph.</p>

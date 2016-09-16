@@ -23,7 +23,7 @@ _HEADER_HL1(`31-Oct-2010: Adding old dongle support to DosBox')
 
 <p>... then just grep LOGCPU.TXT for 6669: value from dongle is probably compared with some other constant, however, it is not rule, things may be much more complex.</p>
 
-<p>Read more about dongle emulation: _HTML_LINK_AS_IS(`http://yurichev.com/dongles.html')</p>
+<p>Read more about dongle emulation: _HTML_LINK_AS_IS(`//yurichev.com/dongles.html')</p>
 
 _BLOG_FOOTER_GITHUB(`56')
 

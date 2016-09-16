@@ -4,7 +4,7 @@ _HEADER_HL1(`23-Jul-2015: Fuzzy string matching + simplest possible spellcheckin
 
 <p>Almost all Internet users sometimes typing so fast and see something like this:</p>
 
-<center><img src="http://yurichev.com/blog/fuzzy_string/google_typo.png" class="ImageBorder"></center>
+<center><img src="//yurichev.com/blog/fuzzy_string/google_typo.png" class="ImageBorder"></center>
 
 <p>Google (and any other search engine) detect typos and misspellings with the help of information that input word ("infr<b>u</b>structure") is really rare
 (according to their database) and it can be transformed to a very popular word ("infr<b>a</b>structure", again, in their database) using just single editing operation.</p>

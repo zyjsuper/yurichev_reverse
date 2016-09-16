@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`12-Mar-2010: SAP')
 
-<p>(<a href="http://yurichev.com/non-wiki-files/blog/SAP/sniffing_diag.pdf">A paper about SAP plain-text passwords in network packets</a>).</p>
+<p>(<a href="//yurichev.com/non-wiki-files/blog/SAP/sniffing_diag.pdf">A paper about SAP plain-text passwords in network packets</a>).</p>
 
 <p>From this paper I got information that, by default, all network packets between SAP server and SAPGUI are not encrypted, rather compressed. SAPGUI also contain an option (TDW_NOCOMPRESS) to turn compression off, then we can use wireshark to see user's plain-text password.</p>
 

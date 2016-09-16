@@ -19,7 +19,7 @@ user32.dll, d3d11.dll, mshtml.dll, msxml6.dll, sqlncli11.dll, wininet.dll, mfc12
 <li>7 arguments: ~1%
 </ul>
 
-<center><img src="http://yurichev.com/blog/args_stat/piechart.png"></center>
+<center><img src="//yurichev.com/blog/args_stat/piechart.png"></center>
 
 <p>This is heavily dependent on programming style and may be very different for other software products.</p>
 

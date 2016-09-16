@@ -18,7 +18,7 @@ _MAKE_TITLE(`$1')
     tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
   });
 </script>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
 </head>
 <body>')
 
@@ -33,7 +33,7 @@ m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`//yurichev.com',`back to the main pa
 </body>
 </html>')
 
-m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _HTML_LINK(`//yurichev.com/blog/',`blog') and _HTML_LINK(`http://beginners.re/',`my book').</p>')
+m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _HTML_LINK(`//yurichev.com/blog/',`blog') and _HTML_LINK(`https://beginners.re/',`my book').</p>')
 m4_define(`_EXERCISE_SPOILER_WARNING',`<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A).</p>')
 
 m4_define(`_BLOG_FOOTER',`<hr>

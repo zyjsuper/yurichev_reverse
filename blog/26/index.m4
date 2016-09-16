@@ -26,7 +26,7 @@ On other side, server's heavy load may be very helpful environment for this.</p>
 <p>If I'm correct (I may not) this problem is related to nsdisc() function in network layer. Listener closes connection using this function. It frees
 some memory, but the same chunk of memory is used again for next connection.</p>
 
-<p><a href="http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1970.zip">Download source code + win32 executable.</a></p>
+<p><a href="//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1970.zip">Download source code + win32 executable.</a></p>
 
 _BLOG_FOOTER_GITHUB(`26')
 

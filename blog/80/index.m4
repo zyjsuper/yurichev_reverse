@@ -8,9 +8,9 @@ There are also example of OpenMP internals (which also could be interesting for 
 
 <p>Full list of changes: _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/blob/master/ChangeLog')</p>
 
-<p>English version, as usual, here: _HTML_LINK_AS_IS(`http://yurichev.com/writings/RE_for_beginners-en.pdf')</p>
+<p>English version, as usual, here: _HTML_LINK_AS_IS(`//yurichev.com/writings/RE_for_beginners-en.pdf')</p>
 
-<p>And Russian version: _HTML_LINK_AS_IS(`http://yurichev.com/writings/RE_for_beginners-ru.pdf')</p>
+<p>And Russian version: _HTML_LINK_AS_IS(`//yurichev.com/writings/RE_for_beginners-ru.pdf')</p>
 
 _BLOG_FOOTER_GITHUB(`80')
 

@@ -258,7 +258,7 @@ _PRE_END
 <p>This is the new "tree" object for "src" subdirectory, it has copied file.
 But what is important: IDs are the same!
 Because they have the same contents, so git hadn't added another copy of file!
-git is content-addressable storage, about which you can read more here: _HTML_LINK_AS_IS(`http://yurichev.com/blog/CAS').</p>
+git is content-addressable storage, about which you can read more here: _HTML_LINK_AS_IS(`//yurichev.com/blog/CAS').</p>
 
 <p>The "tree" is different, however, so this new object is created.
 Older "tree" version of this directory is still present and always be.</p>

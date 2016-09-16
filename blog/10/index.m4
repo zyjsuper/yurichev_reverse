@@ -34,7 +34,7 @@ _PRE_END
 <p>Here we can easily see a list of functions which krvsats() may call and its arguments.</p>
 <p>Throughout all that files, we can see how Oracle RDBMS checks for turned on trace events (using function ksdpec()), how it raise ORA- errors (using functions ksesic*, ksesec*, etc), how it write to trace logs (using functions ksdwrf(), ksdwra()), and how it allocate memory marked with comment (functions ksmals(), kghalf(), kghalo(), etc), and how it prepare many internal SQL statements for internal execution (functions rpisplu(), kprbprs(), opiprs(), OCIStmtPrepare(), etc).</p>
 
-<p>Excerpts from opiodr() function, which is one of central point of Oracle OPI call dispatcher (see full file <a href="http://yurichev.com/non-wiki-files/blog/oracle-10.2.0.4-linux/opiodr.txt">here</a>):</p>
+<p>Excerpts from opiodr() function, which is one of central point of Oracle OPI call dispatcher (see full file <a href="//yurichev.com/non-wiki-files/blog/oracle-10.2.0.4-linux/opiodr.txt">here</a>):</p>
 
 _PRE_BEGIN
 May call ksesec0 (0x0C29)
@@ -59,9 +59,9 @@ _PRE_END
 
 <p>Happy hacking!</p>
 
-<p><a href="http://yurichev.com/non-wiki-files/blog/oracle-10.2.0.4-linux.zip">All files in one archive for 10.2.0.4 (1679 files, 3.5M)</a> and for <a href="http://yurichev.com/non-wiki-files/blog/oracle-11.1.0.7.0-linux.zip">11.1.0.7.0</a>.</p>
+<p><a href="//yurichev.com/non-wiki-files/blog/oracle-10.2.0.4-linux.zip">All files in one archive for 10.2.0.4 (1679 files, 3.5M)</a> and for <a href="http://yurichev.com/non-wiki-files/blog/oracle-11.1.0.7.0-linux.zip">11.1.0.7.0</a>.</p>
 
-<p><a href="http://yurichev.com/non-wiki-files/blog/oracle-10.2.0.4-linux/">All 1679 files separately for 10.2.0.4</a> and for <a href="http://yurichev.com/non-wiki-files/blog/oracle-11.1.0.7.0-linux/">11.1.0.7.0</a>.</p>
+<p><a href="//yurichev.com/non-wiki-files/blog/oracle-10.2.0.4-linux/">All 1679 files separately for 10.2.0.4</a> and for <a href="http://yurichev.com/non-wiki-files/blog/oracle-11.1.0.7.0-linux/">11.1.0.7.0</a>.</p>
 
 <p>Using some text reformatting, it is possible to add <a href="http://en.wikipedia.org/wiki/Wikipedia:How_to_edit_a_page">wiki-markup</a> to all these text files and import it to some wiki software (I prefer <a href="http://en.wikipedia.org/wiki/MediaWiki">MediaWiki</a>).</p>
 <p>Then, it is possible to use simple navigation: e.g., opening web-browser on a page dedicated to some function, using "<a href="http://en.wikipedia.org/wiki/Help:What_links_here">what links here</a>" feature, to see then which functions may call this one. Or, to see, which functions may raise some specific error. And so on.</p>

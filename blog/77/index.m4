@@ -11,11 +11,11 @@ I suppose, many other Oracle specialists use VMware machines with a lot of Oracl
 
 <p>More about them: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Sparse_file')</p>
 
-<p>Compiled executable file: _HTML_LINK_AS_IS(`http://yurichev.com/utils/cvt2sparse.exe')</p>
+<p>Compiled executable file: _HTML_LINK_AS_IS(`//yurichev.com/utils/cvt2sparse.exe')</p>
 
 <p>That is how it looks after converting:</p>
 
-<img src="http://yurichev.com/cvt2sparse.png">
+<img src="//yurichev.com/cvt2sparse.png">
 
 <p>This one-liner is to be run inside of *NIX virtual machine to write zeroes to unused parts of file system:</p>
 

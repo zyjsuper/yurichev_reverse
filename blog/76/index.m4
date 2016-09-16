@@ -22,7 +22,7 @@ usage: fname DLL_name sym_name sym_ordinal func_address
 for example: winword.exe mydll.dll MyFunction 1 0x401122
 _PRE_END
 
-<p>_HTML_LINK_AS_IS(`http://yurichev.com/PE_add_import.html')</p>
+<p>_HTML_LINK_AS_IS(`//yurichev.com/PE_add_import.html')</p>
 
 _BLOG_FOOTER_GITHUB(`76')
 

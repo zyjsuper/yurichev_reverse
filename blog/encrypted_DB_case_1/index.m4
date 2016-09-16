@@ -35,7 +35,7 @@ plus (+) and slash (/) symbols.
 There can be 1 or 2 padding symbols (=), but they are never occurred in the middle of string.
 Keeping in mind these base64 properties, it's very easy to recognize them.</p>
 
-<p>Let's decode them and calculate entropies (_HTML_LINK(`http://yurichev.com/blog/entropy/',`my article about it')) of these blocks in Wolfram Mathematica:</p>
+<p>Let's decode them and calculate entropies (_HTML_LINK(`//yurichev.com/blog/entropy/',`my article about it')) of these blocks in Wolfram Mathematica:</p>
 
 _PRE_BEGIN
 In[]:= ListOfBase64Strings = 
@@ -57,7 +57,7 @@ _PRE_BEGIN
 In[]:= ListPlot[Entropies]
 _PRE_END
 
-<center><img src="http://yurichev.com/blog/encrypted_DB_case_1/entropy.png"></center>
+<center><img src="//yurichev.com/blog/encrypted_DB_case_1/entropy.png"></center>
 
 <p>Most valuess are between 5.0 and 5.4.
 This is a sign that the data is compressed and/or encrypted.</p>
@@ -76,7 +76,7 @@ Out[]= 2.73883
 In[]:= ListPlot[EntropiesT]
 _PRE_END
 
-<center><img src="http://yurichev.com/blog/encrypted_DB_case_1/conan_doyle.png"></center>
+<center><img src="//yurichev.com/blog/encrypted_DB_case_1/conan_doyle.png"></center>
 
 <p>Most values are gathered around value of 4, but there are also values which are smaller,
 and they are influenced final variance value.</p>
@@ -139,7 +139,7 @@ _PRE_BEGIN
 ListPlot[Counts[Map[StringLength[#] &, BinaryStrings]]]
 _PRE_END
 
-<center><img src="http://yurichev.com/blog/encrypted_DB_case_1/lengths.png"></center>
+<center><img src="//yurichev.com/blog/encrypted_DB_case_1/lengths.png"></center>
 
 <p>So, most blocks has size between ~36 and ~48.
 There is also another thing to notice: all block sizes are even.
@@ -165,7 +165,7 @@ For example, here:
 _HTML_LINK(`https://github.com/mmoss/cryptopp/blob/2772f7b57182b31a41659b48d5f35a7b6cedd34d/src/rijndael.cpp#L1034',`1'),
 _HTML_LINK(`https://github.com/mmoss/cryptopp/blob/2772f7b57182b31a41659b48d5f35a7b6cedd34d/src/rijndael.cpp#L1000',`2').
 To my surprise, during decryption, AESENC is executed, while AESDEC is not 
-(I just checked with my _HTML_LINK(`http://yurichev.com/tracer-en.html',`tracer utility'), but any debugger can be used).
+(I just checked with my _HTML_LINK(`//yurichev.com/tracer-en.html',`tracer utility'), but any debugger can be used).
 I checked, if my CPU really supports AES instructions. Some Intel i3 CPUs are not.
 And if not, CryptoPP library falling back to AES functions implemented in old way:
 _HTML_LINK_AS_IS(`https://github.com/mmoss/cryptopp/blob/2772f7b57182b31a41659b48d5f35a7b6cedd34d/src/rijndael.cpp#L355').
@@ -309,11 +309,11 @@ The actual encryption is happens using simple XOR operation.</p>
 
 <p>Here is encryption algorithm (images are taken from Wikipedia):</p>
 
-<center><img src="http://yurichev.com/blog/encrypted_DB_case_1/601px-CFB_encryption.svg.png"></center>
+<center><img src="//yurichev.com/blog/encrypted_DB_case_1/601px-CFB_encryption.svg.png"></center>
 
 <p>And decryption:</p>
 
-<center><img src="http://yurichev.com/blog/encrypted_DB_case_1/601px-CFB_decryption.svg.png"></center>
+<center><img src="//yurichev.com/blog/encrypted_DB_case_1/601px-CFB_decryption.svg.png"></center>
 
 <p>Now let's see: AES encryption operation generates 16 bytes (or 128 bits) or "random" data
 to be used while XOR-ing, who forces us to use all 16 bytes?
@@ -409,7 +409,7 @@ _HL2(`Initializing Vector')
 
 <p>Let's back to CFB decryption algorithm again:</p>
 
-<center><img src="http://yurichev.com/blog/encrypted_DB_case_1/601px-CFB_decryption.svg.png"></center>
+<center><img src="//yurichev.com/blog/encrypted_DB_case_1/601px-CFB_decryption.svg.png"></center>
 
 <p>We can see that IV can affect to first block decryption operation, but not the second,
 because the second stage used ciphertext from the first stage, and in case of decryption,

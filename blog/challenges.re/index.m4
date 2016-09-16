@@ -3,7 +3,7 @@ m4_include(`commons.m4')
 _HEADER_HL1(`My new website about reverse engineering challenges/exercises/problems/tasks: challenges.re')
 
 <p>
-I've collected all my reverse engineering challenges/exercises/problems/tasks at the stand-alone website: _HTML_LINK_AS_IS(`http://challenges.re/').
+I've collected all my reverse engineering challenges/exercises/problems/tasks at the stand-alone website: _HTML_LINK_AS_IS(`//challenges.re/').
 73 so far.
 </p>
 

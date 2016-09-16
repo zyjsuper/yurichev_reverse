@@ -106,8 +106,8 @@ Probably, the problem lies in TTC datatypes handling.</p>
 
 <p>Downloads (both source codes + executables):</p>
 
-<p>_HTML_LINK_AS_IS(`http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1020/tcp_fwd.zip')</p>
-<p>_HTML_LINK_AS_IS(`http://yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1020/version_11g.zip')</p>
+<p>_HTML_LINK_AS_IS(`//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1020/tcp_fwd.zip')</p>
+<p>_HTML_LINK_AS_IS(`//yurichev.com/non-wiki-files/blog/exploits/oracle/CVE-2009-1020/version_11g.zip')</p>
 
 _BLOG_FOOTER_GITHUB(`23')
 

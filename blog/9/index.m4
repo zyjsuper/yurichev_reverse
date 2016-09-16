@@ -33,12 +33,12 @@ _PRE_END
 
 <ul>
 <li>STARTUP_ospy.log: instance service startup
-<li><a href="http://yurichev.com/non-wiki-files/blog/2008-ospy/SCOTT_LOGON_ospy.log">SCOTT_LOGON_ospy.log</a>: user SCOTT logon.
-<li><a href="http://yurichev.com/non-wiki-files/blog/2008-ospy/VERSION_ospy.log">VERSION_ospy.log</a>: during "select * from v$version" query.
+<li><a href="//yurichev.com/non-wiki-files/blog/2008-ospy/SCOTT_LOGON_ospy.log">SCOTT_LOGON_ospy.log</a>: user SCOTT logon.
+<li><a href="//yurichev.com/non-wiki-files/blog/2008-ospy/VERSION_ospy.log">VERSION_ospy.log</a>: during "select * from v$version" query.
 <li>SHUTDOWN_ospy.log: instance shutdown.
 </ul>
 
-<p><a href="http://yurichev.com/non-wiki-files/blog/2008-ospy/ospy.zip">Download</a></p>
+<p><a href="//yurichev.com/non-wiki-files/blog/2008-ospy/ospy.zip">Download</a></p>
 
 <p>Update: this utility was superseded by <a href="http://conus.info/gt/">generic tracer</a>.</p>
 

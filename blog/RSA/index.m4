@@ -251,7 +251,7 @@ For example, $\frac{130}{14}$ is $\frac{65}{7}$ after reduction (or simplificati
 <p>One application of coprime numbers in engineering is to make number of cogs on cogwheel and number of chain elements on chain to be coprimes.
 Let's imagine bike cogwheels and chain:</p>
 
-<center><img src="http://yurichev.com/blog/RSA/CHAINPUL.gif" alt="The picture was taken from www.mechanical-toys.com"></center>
+<center><img src="//yurichev.com/blog/RSA/CHAINPUL.gif" alt="The picture was taken from www.mechanical-toys.com"></center>
 
 <p>If you choose 5 as number of cogs on one of cogwhell and you have 10 or 15 or 20 chain elements, each cog on cogwheel will meet some set of the same chain elements.
 For example, if there are 5 cogs on cogwheel and 20 chain elements, each cog will meet only 4 chain elements and vice versa: 
@@ -278,7 +278,7 @@ _HL2(`Modular arithmetic')
 
 <p>... is also used in RSA in its core.</p>
 
-<p>I've written _HTML_LINK(`http://yurichev.com/blog/modulo/',`the article about it').
+<p>I've written _HTML_LINK(`//yurichev.com/blog/modulo/',`the article about it').
 The only difference is that I used CPU reigsters in the article which leads to modulo base like $2^{32}$ or $2^{64}$,
 while modulo bases in RSA are very large semiprimes.</p>
 
@@ -382,7 +382,7 @@ Out[]= 3696
 _PRE_END
 
 <p>Now we calculating decrypting exponent using multiplicative modulo inverse 
-(multiplicative inverse was also described in _HTML_LINK(`http://yurichev.com/blog/modulo/',`my previous article')) ($e^{-1} \pmod{totient=(p-q)(q-1)}$):</p>
+(multiplicative inverse was also described in _HTML_LINK(`//yurichev.com/blog/modulo/',`my previous article')) ($e^{-1} \pmod{totient=(p-q)(q-1)}$):</p>
 
 _PRE_BEGIN
 In[]:= d = PowerMod[e, -1, totient]
@@ -468,7 +468,7 @@ _HL2(`Difference between my simplified example and a real RSA algorithm')
 This is not very efficient, to calculate totient and decrypting exponent each time.
 So in practice, a public key is $n$ and $e$, and a secret key is at least $n$ and $d$, and $d$ is stored in secret key precomputed.</p>
 
-<p>For example, here is _HTML_LINK(`http://yurichev.com/pgp.html',`my PGP public key'):</p>
+<p>For example, here is _HTML_LINK(`//yurichev.com/pgp.html',`my PGP public key'):</p>
 
 _PRE_BEGIN
 dennis@...:~$ gpg --export-options export-reset-subkey-passwd --export-secret-subkeys 0x3B262349\! | pgpdump 

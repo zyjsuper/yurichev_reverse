@@ -30,7 +30,7 @@ Exotic computer architectures (like MIPS, DEC Alpha, PowerPC) accepted as well.<
 <p>Examples of my work you may find here:</p>
 
 <ul>
-<li> _HTML_LINK(`http://beginners.re/12-Apr-2016/RE4B-EN.pdf#page=752&zoom=auto,-107,806',`My book devoted to reverse engineering, part about copy-protection dongles')
+<li> _HTML_LINK(`//beginners.re/12-Apr-2016/RE4B-EN.pdf#page=752&zoom=auto,-107,806',`My book devoted to reverse engineering, part about copy-protection dongles')
 <li> _HTML_LINK(`http://yurichev.com/writings/z3_rockey.pdf',`Finding unknown algorithm using only input/output pairs and Z3 SMT solver') article
 <li> _HTML_LINK(`http://blog.yurichev.com/node/56', `About MicroPhar (93c46-baseed dongle) emulation in DosBox.')
 <li> _HTML_LINK(`http://conus.info/dongle/src/microph.asm', `Source code of DOS MicroPhar emulator using EMM386 I/O interception API')

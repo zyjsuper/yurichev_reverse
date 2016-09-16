@@ -4,11 +4,11 @@ _HEADER_HL1(`3-May-2016: Simple encryption using XOR mask, part II')
 
 <p>I've got another encrypted file, which is clearly encrypted by something simple, like XOR-ing:</p>
 
-<center><img src="http://yurichev.com/blog/XOR_mask_2/files/cipher.png"></center>
+<center><img src="//yurichev.com/blog/XOR_mask_2/files/cipher.png"></center>
 
 <p>The encrypted file can be downloaded _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_mask_2/files/cipher.txt',`here').</p>
 
-<p>ent Linux utility reports about ~7.5 bits per byte, and this is high level of _HTML_LINK(`http://yurichev.com/blog/entropy/',`entropy'),
+<p>ent Linux utility reports about ~7.5 bits per byte, and this is high level of _HTML_LINK(`//yurichev.com/blog/entropy/',`entropy'),
 close to compressed or properly encrypted file.
 But still, we clearly see some pattern, there are some blocks with size of 17 bytes, hence, you see some kind of ladder, shifting by 1 byte at each 16-byte line.</p>
 
@@ -16,7 +16,7 @@ But still, we clearly see some pattern, there are some blocks with size of 17 by
 
 <p>Now let's assume that this piece of text is encrypted by simple XOR-ing with 17-byte key.</p>
 
-<p>I tried to find some repeating 17-byte blocks in Mathematica, like I did before in _HTML_LINK(`http://yurichev.com/blog/XOR_mask_1/',`my previous example'):</p>
+<p>I tried to find some repeating 17-byte blocks in Mathematica, like I did before in _HTML_LINK(`//yurichev.com/blog/XOR_mask_1/',`my previous example'):</p>
 
 _PRE_BEGIN
 In[]:=input = BinaryReadList["/home/dennis/tmp/cipher.txt"];
@@ -346,7 +346,7 @@ Interestingly enough, trigrams detection can be used when you decrypt a cipherte
 <li>For non-Latin writing systems encoded in UTF-8, things may be easier. For example, Russian text encoded in UTF-8 has each byte interleaved with 0xD0/0xD1 byte.
 It is because Cyrillic characters are placed in _HTML_LINK(`https://en.wikipedia.org/wiki/Cyrillic_%28Unicode_block%29',`4th block of Unicode').
 Other writing systems has their own blocks.
-See also: _HTML_LINK_AS_IS(`http://beginners.re/22-Apr-2016/RE4B-EN.pdf#page=652&zoom=auto,-107,20').
+See also: _HTML_LINK_AS_IS(`//beginners.re/22-Apr-2016/RE4B-EN.pdf#page=652&zoom=auto,-107,20').
 </ul>
 
 _BLOG_FOOTER_GITHUB(`XOR_mask_2')

@@ -22,7 +22,7 @@ SS:2C6E CF:0 ZF:0 SF:0 OF:0 AF:0 PF:0 IF:1
 _PRE_END
 
 <p>What we got is relatively big text file (can be as big as couple of gigabytes), which can be easily parsed with <a href="http://en.wikipedia.org/wiki/Grep">grep</a>, <a href="http://en.wikipedia.org/wiki/Sed">sed</a>, <a href="http://en.wikipedia.org/wiki/AWK">AWK</a> or whatever you like.
-Let's get back to real-world task. I have a very old DOS program that requires access to very old piece of hardware, such as <a href="http://yurichev.com/index.php?title=Dongles">copy-protection dongle</a>, and we need to get rid of it. Back to DOS days, these dongles were connected to LPT printer port. So what we know is that our DOS program is accessing it at least via port 0x378. 
+Let's get back to real-world task. I have a very old DOS program that requires access to very old piece of hardware, such as <a href="//yurichev.com/index.php?title=Dongles">copy-protection dongle</a>, and we need to get rid of it. Back to DOS days, these dongles were connected to LPT printer port. So what we know is that our DOS program is accessing it at least via port 0x378. 
 Let's run our program in DosBox without dongle and take all "out dx,al" instructions (writes to port) where EDX register state is port number 0x378.</p>
 
 _PRE_BEGIN

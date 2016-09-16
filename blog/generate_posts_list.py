@@ -3,7 +3,7 @@ import datetime, time, email.utils
 
 def post(f_rss, f_html, TS, URL, title):
 
-    full_URL="http://yurichev.com/blog/"+URL+"/"
+    full_URL="//yurichev.com/blog/"+URL+"/"
     
     f_rss.write("    <item>\n")
     f_rss.write("      <title>"+title+"</title> \n")
@@ -21,7 +21,7 @@ def main():
     f1.write ("<rss version=\"2.0\">\n")
     f1.write ("  <channel> \n")
     f1.write ("    <title>Dennis Yurichev</title> \n")
-    f1.write ("    <link>http://yurichev.com/blog/</link> \n")
+    f1.write ("    <link>//yurichev.com/blog/</link> \n")
     f1.write ("    <description>by Dennis Yurichev</description>\n")
 
     f2.write ("<table>\n")

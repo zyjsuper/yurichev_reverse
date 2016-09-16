@@ -267,8 +267,8 @@ in executable code (which has high entropy as well), but I didn't tried this by 
 
 _HL2(`Links')
 
-<p>Binary files used while writing: _HTML_LINK_AS_IS(`http://yurichev.com/blog/entropy/files/').
-Wolfram Mathematica notebook file: _HTML_LINK_AS_IS(`http://yurichev.com/blog/entropy/files/binary_file_entropy.nb') 
+<p>Binary files used while writing: _HTML_LINK_AS_IS(`//yurichev.com/blog/entropy/files/').
+Wolfram Mathematica notebook file: _HTML_LINK_AS_IS(`//yurichev.com/blog/entropy/files/binary_file_entropy.nb') 
 (all cells must be evaluated to start things working).</p>
 
 <p>There is a great (and more complex) online entropy visualizer made by Aldo Cortesi, 
@@ -287,7 +287,7 @@ _HTML_LINK(`http://corte.si/posts/visualisation/binvis/index.html',`3').</p>
 _HL2(`A word about primitive encryption like XORing.')
 
 <p>It's interesting that simple XOR encryption doesn't affect entropy of data.
-I've shown this in "Norton Guide" example in my book (_HTML_LINK(`http://beginners.re/',`"Reverse Engineering for Beginners" free book')).
+I've shown this in "Norton Guide" example in my book (_HTML_LINK(`//beginners.re/',`"Reverse Engineering for Beginners" free book')).
 (The page about XOR encryption is also accessible in LaTeX form: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/ff/XOR/ng/main.tex',`link').</p>
 
 <p>Generalizing: encryption by substitution cipher also doesn't affect entropy of data (and XOR can be viewed as substitution cipher).
@@ -342,6 +342,6 @@ so the GnuPG asking for some additional randomness from the user.</p>
 
 <p>Update: some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=9545276').
 Here is my article where I made attempt to calculate entropy of some unknown blocks:
-_HTML_LINK_AS_IS(`http://yurichev.com/blog/encrypted_DB_case_1/').</p>
+_HTML_LINK_AS_IS(`//yurichev.com/blog/encrypted_DB_case_1/').</p>
 
 _BLOG_FOOTER()
