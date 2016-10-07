@@ -42,7 +42,6 @@ _HL2(`Blogs, etc')
 <li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account (#1)');
 _HTML_LINK(`http://go.yurichev.com/45004', `Another GitHub account (#2)')
 <li>_HTML_LINK(`http://go.yurichev.com/45005',`Weibo account')
-<li>My account at _HTML_LINK(`https://www.chess.com/members/view/DY1979',`chess.com') and _HTML_LINK(`http://en.lichess.org/@/DY1979',`lichess.org'). Challenge me if you want to.
 </ul>
 
 _HL2(`Oracle RDBMS stuff:')
