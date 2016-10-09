@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`22-May-2016: C/C++ pointers: yet another abuse')
 
+_COPYPASTED1()
+
 <p>(For those who have a hard time in understanding C/C++ pointers).</p>
 
 <p>Let's continue to abuse C/C++ language traditions and sane programming style (first part _HTML_LINK(`http://yurichev.com/blog/ptrs/',`here')).

@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`10-Jul-2016: Another loop optimization')
 
+_COPYPASTED1()
+
 <p>If you process all elements of some array which happens to be located in global memory, compiler can optimize it.
 For example, let's calculate a sum of all elements of array of 128 int's:</p>
 

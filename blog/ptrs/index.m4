@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`8-May-2016: C/C++ pointers: yet another short example')
 
+_COPYPASTED1()
+
 <p>(For those who have a hard time in understanding C/C++ pointers).</p>
 
 <p>Pointer is just an address in memory. But why we write "char* string" instead of something like "address string"?

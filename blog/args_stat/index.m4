@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`6-May-2016: Function arguments statistics')
 
+_COPYPASTED1()
+
 <p>I've always been interesting in what is average number of function arguments.</p>
 
 <p>Just analysed many Windows 7 32-bit DLLs (crypt32.dll, mfc71.dll, msvcr100.dll, shell32.dll, 

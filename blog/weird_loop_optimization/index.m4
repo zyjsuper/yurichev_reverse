@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`19-May-2016: Weird loop optimization')
 
+_COPYPASTED1()
+
 <p>This is a simplest ever memcpy() function implementation:</p>
 
 _PRE_BEGIN

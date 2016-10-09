@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Encrypted database case #1')
 
+_COPYPASTED1()
+
 _HL2(`Base64 and entropy')
 
 <p>I've got the XML file containing some encrypted data.

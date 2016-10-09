@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`29-Apr-2016: Simple encryption using XOR mask')
 
+_COPYPASTED1()
+
 <p>I've found an old interactive fiction game while diving deep into <i>if-archive</i> (_HTML_LINK_AS_IS(`http://www.ifarchive.org/')):</p>
 
 _PRE_BEGIN
