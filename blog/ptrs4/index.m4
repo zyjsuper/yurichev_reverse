@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`13-Jun-2016: C/C++ pointers: null pointers')
 
+_COPYPASTED1()
+
 <p>(For those who have a hard time in understanding C/C++ pointers).</p>
 
 _HL2(`"Null pointer assignment" error of MS-DOS era')

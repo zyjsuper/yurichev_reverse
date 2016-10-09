@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Yet another compiler anomaly')
 
+_COPYPASTED1()
+
 <p>Just found in some old code:</p>
 
 <!--

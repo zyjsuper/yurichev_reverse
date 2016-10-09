@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`2-Jun-2016: C/C++ pointers: pointers abuse in Windows kernel')
 
+_COPYPASTED1()
+
 <p>(For those who have a hard time in understanding C/C++ pointers).</p>
 
 <p>

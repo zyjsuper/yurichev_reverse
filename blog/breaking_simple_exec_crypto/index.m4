@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`6-May-2016: Breaking simple executable cryptor')
 
+_COPYPASTED1()
+
 <p>I've got an executable file which is encrypted by relatively simple encryption.
 _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/cipher.bin',`Here is it') (only executable section is left).</p>
 

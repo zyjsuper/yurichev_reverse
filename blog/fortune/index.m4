@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`25-Apr-2015: (Beginners level) reverse engineering of simple <i>fortune</i> program indexing file.')
 
+_COPYPASTED1()
+
 <p><i>fortune</i> is <a href="http://en.wikipedia.org/wiki/Fortune_%28Unix%29">well-known UNIX program</a> which shows random phrase from a collection.
 Some geeks are often set up their system in such way, so <i>fortune</i> can be called after logging on.
 <i>fortune</i> takes phrases from the text files laying in <i>/usr/share/games/fortunes</i> (as of Ubuntu Linux).

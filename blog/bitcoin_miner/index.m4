@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`27-Jun-2016: Overclocking Cointerra Bitcoin miner')
 
+_COPYPASTED1()
+
 <p>There was Cointerra Bitcoin miner, looking like _HTML_LINK(`//yurichev.com/blog/bitcoin_miner/files/board.jpg',`that').</p>
 
 <p>And there was also (possibly leaked) _HTML_LINK(`//yurichev.com/blog/bitcoin_miner/files/cointool-overclock',`utility') which can set clock rate for the board.

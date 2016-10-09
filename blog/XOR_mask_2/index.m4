@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`3-May-2016: Simple encryption using XOR mask, part II')
 
+_COPYPASTED1()
+
 <p>I've got another encrypted file, which is clearly encrypted by something simple, like XOR-ing:</p>
 
 <center><img src="//yurichev.com/blog/XOR_mask_2/files/cipher.png"></center>

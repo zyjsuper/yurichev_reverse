@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`29-Jun-2016: C/C++ pointers: array as function argument')
 
+_COPYPASTED1()
+
 <p>(For those who have a hard time in understanding C/C++ pointers).</p>
 
 <p>Someone may ask, what is the difference between declaring function argument type as array instead of pointer?</p>

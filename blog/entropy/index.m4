@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`13-May-2015: (Beginners level) Analyzing unknown binary files using information entropy.')
 
+_COPYPASTED1()
+
 <p>For the sake of simplification, I would say, information entropy is a measure, how tightly some piece of data can be compressed.
 For example, it is usually not possible to compress already compressed archive file, so it has high entropy.
 On the other hand, one megabyte of zero bytes can be compressed to a tiny output file.

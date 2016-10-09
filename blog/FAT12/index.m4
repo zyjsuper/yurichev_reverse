@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`(Beginners level) packing 12-bit values into array using bit operations (x64, ARM/ARM64, MIPS)')
 
+_COPYPASTED1()
+
 _HL2(`Introduction')
 
 <p>File Allocation Table (FAT) was a widely popular filesystem.
