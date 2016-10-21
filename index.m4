@@ -107,5 +107,9 @@ _HL2(`Contacts')
 
 _HTML_LINK(`contacts.html', `Contacts').
 
+_HL2(`Private area')
+
+_HTML_LINK(`mail',`Login into @yurichev.com email interface')
+
 _FOOTER()
 
