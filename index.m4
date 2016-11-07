@@ -105,7 +105,24 @@ m4_include(`google.html')
 
 _HL2(`Contacts')
 
-_HTML_LINK(`contacts.html', `Contacts').
+<p>E-Mail: <b>dennis(a)yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
+Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
+
+<p>My _HTML_LINK(`https://bitmessage.org/',`BitMessage ID'): <b>BM-2cUyrfGUDyjuUHyzAA63kq5NHAB2zMo4Q2</b></p>
+
+<p>Phone: +380-67-9647038, skype: dennis.yurichev (I'm not often online)</p>
+
+<p>My _HTML_LINK(`http://twitter.com/yurichev',`twitter') and _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>
+
+_HL3(`Snail mail')
+
+_PRE_BEGIN
+ Dennis Yurichev
+ P.O. box 10
+ Kyiv
+ 04071
+ Ukraine
+_PRE_END
 
 _HL2(`Private area')
 
