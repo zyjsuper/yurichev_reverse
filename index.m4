@@ -110,7 +110,7 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 
 <p>My _HTML_LINK(`https://bitmessage.org/',`BitMessage ID'): <b>BM-2cUyrfGUDyjuUHyzAA63kq5NHAB2zMo4Q2</b></p>
 
-<p>Phone: +380-67-9647038, skype: dennis.yurichev (I'm not often online)</p>
+<p>Phone: +380-95-9487491, skype: dennis.yurichev (I'm not often online)</p>
 
 <p>My _HTML_LINK(`http://twitter.com/yurichev',`twitter') and _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>
 
