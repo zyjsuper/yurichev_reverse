@@ -112,7 +112,12 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 
 <p>Phone: +380-95-9487491, skype: dennis.yurichev (I'm not often online)</p>
 
-<p>My _HTML_LINK(`http://twitter.com/yurichev',`twitter') and _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook').</p>
+<p>
+My _HTML_LINK(`http://twitter.com/yurichev',`twitter'),
+_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook'),
+_HTML_LINK(`https://ua.linkedin.com/in/dennis-yurichev-5a8368132',`linkedin'),
+_HTML_LINK(`https://telegram.me/yurichev',`telegram: @yurichev').
+</p>
 
 _HL3(`Snail mail')
 
