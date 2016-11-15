@@ -117,6 +117,7 @@ My _HTML_LINK(`http://twitter.com/yurichev',`twitter'),
 _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook'),
 _HTML_LINK(`https://ua.linkedin.com/in/dennis-yurichev-5a8368132',`linkedin'),
 _HTML_LINK(`https://telegram.me/yurichev',`telegram: @yurichev').
+My channel in telegram: _HTML_LINK(`https://telegram.me/yurichev_news',`yurichev_news').
 </p>
 
 _HL3(`Snail mail')
