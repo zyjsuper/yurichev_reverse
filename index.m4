@@ -21,6 +21,7 @@ _HL2(`Some of my writings:')
 <li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
 <li>My _HTML_LINK(`blog', `blog'), has some new articles.
 <li>_HTML_LINK(`https://github.com/dennis714/random_notes/',`Random notes') at GitHub.
+<li>_HTML_LINK(`writings/toy_decompiler.pdf', `Toy decompiler for x86-64').
 <li>_HTML_LINK(`writings/log_intro.pdf', `Introduction to logarithms').
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>_HTML_LINK(`writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
