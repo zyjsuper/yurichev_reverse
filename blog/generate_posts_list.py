@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
     
+    post(f1,f2,datetime.datetime(2016,12, 5,0,0,0), "farsi","\"Reverse Engineering for Beginners\" book in Farsi (Persian language)")
     post(f1,f2,datetime.datetime(2016,12, 5,0,0,0), "toy_decompiler","Toy decompiler for x86-64 written in Python")
     post(f1,f2,datetime.datetime(2016, 7,10,0,0,0), "loop_optimization","Another loop optimization") #
     post(f1,f2,datetime.datetime(2016, 6,29,0,0,0), "ptrs5","C/C++ pointers: array as function argument") #
