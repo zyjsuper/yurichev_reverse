@@ -46,10 +46,11 @@ Terje Rypdal - Descendre
 Theatre of Tragedy - Velvet Darkness They Fear
 Tiamat - Wildhoney
 Tristania - Beyond the Veil, World of glass, Widow's weeds
-Univers Zero - 1313, Uzed, Hereise, Ceux du Dehors, The Hard Quest,
-Crawling wind
+Univers Zero - 1313, Uzed, Hereise, Ceux du Dehors, The Hard Quest, Crawling wind
 Volapuk - Polyglot, le feu de tigre
 </pre>
+
+<li>_HTML_LINK(`https://commons.wikimedia.org/wiki/File:Blue_iPod_Nano.jpg',`iPod Nano 2nd gen.'), малиновый!
 
 <li>Модем 3COM OfficeConnect.
 
