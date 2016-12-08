@@ -3,7 +3,7 @@ import datetime, time, email.utils
 
 def post(f_rss, f_html, TS, URL, title):
 
-    full_URL="//yurichev.com/blog/"+URL+"/"
+    full_URL="https://yurichev.com/blog/"+URL+"/"
     
     f_rss.write("    <item>\n")
     f_rss.write("      <title>"+title+"</title> \n")
@@ -21,11 +21,13 @@ def main():
     f1.write ("<rss version=\"2.0\">\n")
     f1.write ("  <channel> \n")
     f1.write ("    <title>Dennis Yurichev</title> \n")
-    f1.write ("    <link>//yurichev.com/blog/</link> \n")
+    f1.write ("    <link>https://yurichev.com/blog/</link> \n")
     f1.write ("    <description>by Dennis Yurichev</description>\n")
 
     f2.write ("<table>\n")
-
+    
+    post(f1,f2,datetime.datetime(2016,12, 5,0,0,0), "farsi","\"Reverse Engineering for Beginners\" book in Farsi (Persian language)")
+    post(f1,f2,datetime.datetime(2016,12, 5,0,0,0), "toy_decompiler","Toy decompiler for x86-64 written in Python")
     post(f1,f2,datetime.datetime(2016, 7,10,0,0,0), "loop_optimization","Another loop optimization") #
     post(f1,f2,datetime.datetime(2016, 6,29,0,0,0), "ptrs5","C/C++ pointers: array as function argument") #
     post(f1,f2,datetime.datetime(2016, 6,27,0,0,0), "bitcoin_miner","Overclocking Cointerra Bitcoin miner") #
