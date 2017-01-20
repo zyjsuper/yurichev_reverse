@@ -4,8 +4,6 @@ _HEADER(`index')
 
 _HL1(`Dennis Yurichev / Денис Юричев')
 
-<!-- <p><h5>My surname in IPA form: [yʊritʃev]</h5></p> -->
-
 _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
 
 <p>
@@ -37,12 +35,10 @@ _HL2(`Vulnerabilities I found:')
 _HL2(`Blogs, etc')
 
 <ul>
-<li>Some kind of tech _HTML_LINK(`blog', `blog here'), _HTML_LINK(`http://go.yurichev.com/45002', `and here is old one, Drupal-based').
-<li>_HTML_LINK(`http://twitter.com/yurichev',`twitter').
+<li>Some kind of tech _HTML_LINK(`http://yurichev.com/blog', `blog here').
 <li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
 <li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account (#1)');
 _HTML_LINK(`http://go.yurichev.com/45004', `Another GitHub account (#2)')
-<li>_HTML_LINK(`http://go.yurichev.com/45005',`Weibo account')
 </ul>
 
 _HL2(`Oracle RDBMS stuff:')
