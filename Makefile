@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/SAP/index.html \
 	blog/pgm_synth/index.html \
 	blog/farsi/index.html \
 	blog/toy_decompiler/index.html \
