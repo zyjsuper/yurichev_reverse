@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 seed=11223344
 
 def rand():

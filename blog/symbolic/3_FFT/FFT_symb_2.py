@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from cmath import exp,pi
 
 class Expr:

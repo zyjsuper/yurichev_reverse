@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 class Expr:
     def __init__(self,s,i):
         self.s=s

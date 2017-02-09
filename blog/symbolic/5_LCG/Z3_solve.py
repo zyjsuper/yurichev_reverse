@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from z3 import *
 
 s=Solver()
