@@ -317,9 +317,10 @@ or something like that.</p>
 
 <p>KLEE (or similar tool) tries to find path to each basic block and produces "ideal" unit test.
 Hence, KLEE can find a path into the block which crashes everything, or reporting about correctness of the input
-key/license, etc.</p>
+key/license, etc.
+Surprisingly, KLEE can find backdoors in the very same manner.</p>
 
-<p>Surprisingly, KLEE can find backdoors in the very same manner.</p>
+<p>KLEE is also called "KLEE Symbolic Virtual Machine" -- by that its creators mean that the KLEE is VM which executes a code symbolically rather than numerically.<p>
 
 _HL2(`Division by zero')
 
@@ -378,6 +379,9 @@ But reality is always much harsher, so all this shouldn't be taken as silver bul
 <p>More Z3 and KLEE examples: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 
 <p>The files used in this blog post: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/symbolic').</p>
+
+<p>As you noticed in my simple examples, expression is represented as a plain string, for the sake of simplicity.
+Advanced symbolic execution engines uses AST (Abstract Syntax Trees), which are much better and efficient.</p>
 
 _BLOG_FOOTER()
 
