@@ -143,7 +143,7 @@ _HL2(`Cyclic redundancy check')
 
 <p>I've always been wondering, which input bit affects which bit in the final CRC32 value.</p>
 
-<p>From CRC theory (good and concise introduction: _HTML_LINK_AS_IS(`http://www.hackersdelight.org/crc.pdf')) we know that
+<p>From CRC theory (good and concise introduction: _HTML_LINK_AS_IS(`http://web.archive.org/web/20161220015646/http://www.hackersdelight.org/crc.pdf')) we know that
 CRC is shifting register with taps.</p>
 
 <p>We will track each bit rather than byte or word, which is highly inefficient, but serves our purpose better:</p>
