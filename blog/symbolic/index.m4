@@ -382,7 +382,8 @@ But reality is always much harsher, so all this shouldn't be taken as silver bul
 
 <p>As you noticed in my simple examples, expression is represented as a plain string, for the sake of simplicity.
 Advanced symbolic execution engines uses AST (Abstract Syntax Trees), which are much better and efficient.
-AST in its simplest form is used in my toy decompiler: _HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf').</p>
+AST in its simplest form is used in my toy decompiler: _HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf').
+The toy decompiler can be used as simple symbolic engine as well, just feed all the instructions to it and it will track contents of each register.</p>
 
 _BLOG_FOOTER()
 
