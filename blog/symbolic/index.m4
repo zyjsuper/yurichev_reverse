@@ -323,7 +323,7 @@ key/license, etc.</p>
 
 _HL2(`Division by zero')
 
-<p>If division by zero is unwrapped and exception isn't catched, it can crash process.</p>
+<p>If division by zero is unwrapped and exception isn't caught, it can crash process.</p>
 
 <p>Let's calculate simple expression $\frac{x}{2y + 4z - 12}$.
 We can add a warning into __div__ method:</p>
@@ -332,7 +332,7 @@ _PRE_BEGIN
 m4_include(`blog/symbolic/7_div/1.py')
 _PRE_END
 
-<p>... so it will report about dangerous thing:</p>
+<p>... so it will report about dangerous condition:</p>
 
 _PRE_BEGIN
 warning: division by zero if (((y*2)+(z*4))-12)==0
@@ -364,7 +364,7 @@ Obviously, it wouldn't work correctly without it.</p>
 Both will be printed finally.
 But whenever values are to be compared, only numerical parts will be used.</p>
 
-<p>Results:</p>
+<p>Result:</p>
 
 _PRE_BEGIN
 m4_include(`blog/symbolic/8_sorting/result.txt')
