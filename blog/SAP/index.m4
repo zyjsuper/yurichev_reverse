@@ -5,7 +5,7 @@ _HEADER_HL1(`7-Feb-2017: SAP cluster table unpacker')
 <p>SAP has a special <i>cluster tables</i> located in SAPSR3.RFBLG table (as of Oracle RDBMS), which contains compressed blob data
 for tables like BSEG, BSET, BSEC, BSED, etc.</p>
 
-<p>There is a rumour that at some distant point of history, Oracle didn't have support for >256 columns, but SAP needed more (>300), so they packed all columns
+<p>There is a speculation that at some distant point of history, Oracle RDBMS didn't have support for >256 columns, but SAP needed more (>300), so they packed all columns
 into compressed blob.</p>
 
 <p>I've just written an utility to unpack these tables, here are first ~60 columns (empty columns are suppressed) for demo IDES database:</p>
@@ -56,8 +56,6 @@ _PRE_END
 <p>Full IDES dump: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/results.rar').</p>
 
 <p>Anyone interesting in buying such utility? Please contact me then: <b>dennis(a)yurichev.com</b>.</p>
-
-_BLOG_FOOTER_GITHUB(`SAP')
 
 _BLOG_FOOTER()
 
