@@ -152,14 +152,14 @@ _PRE_BEGIN
 m4_include(`blog/symbolic/4_CRC/1.py')
 _PRE_END
 
-<p>This is expression for each CRC32 bit for 1-byte buffer:</p>
+<p>Here are expressions for each CRC32 bit for 1-byte buffer:</p>
 
 _PRE_BEGIN
 m4_include(`blog/symbolic/4_CRC/1byte.txt')
 _PRE_END
 
 <p>For larger buffer, expressions gets increasing exponentially.
-This is 1st bit of state for 4-byte buffer:</p>
+This is 0th bit of the final state for 4-byte buffer:</p>
 
 _PRE_BEGIN
 state 0=((((((((((((((in_0_0^1)^(in_0_1^1))^(in_0_2^1))^(in_0_4^1))^(in_0_5^1))^(in_0_7^(1^(in_0_1^1))))^(in_1_0^(1^(in_0_2^1))))^
@@ -177,16 +177,16 @@ state 0=((((((((((((((in_0_0^1)^(in_0_1^1))^(in_0_2^1))^(in_0_4^1))^(in_0_5^1))^
 1))))^(in_1_3^(((1^(in_0_1^1))^(in_0_2^1))^(in_0_5^1))))^(in_1_6^(((1^(in_0_4^1))^(in_0_5^1))^(in_1_0^(1^(in_0_2^1))))))))))
 _PRE_END
 
-<p>Expression for the 1st bit of state for 8-byte buffer occupies ~350KiB, which is, of course, can be reduced
-significantly (because this expression is basically XOR tree), but you can feel the weight.</p>
+<p>Expression for the 0th bit of the final state for 8-byte buffer has length of ~350KiB, which is, of course, can be reduced
+significantly (because this expression is basically XOR tree), but you can feel the weight of it.</p>
 
 <p>Now we can process this expressions somehow to get a smaller picture on what is affecting what.
 Let's say, if we can find "in_2_3" substring in expression, this means that 3rd bit of 2nd byte of input
 affects this expression.
 But even more than that: since this is XOR tree (i.e., expression consisting only of XOR operations),
 if some input variable is occurring twice, it's annihilated, since $x \oplus x=0$.
-More than that: if some vairables occurred even number of times, it's annihilated, but left if it's occurred
-odd number of times.
+More than that: if some vairables occurred even number of times (2, 4, 8, etc), it's annihilated, but left if it's occurred
+odd number of times (1, 3, 5, etc).
 </p>
 
 _PRE_BEGIN
@@ -259,6 +259,8 @@ _HL2(`Path constraint')
 <p>How to get weekday from UNIX timestamp?</p>
 
 _PRE_BEGIN
+#!/usr/bin/env python
+
 input=...
 SECS_DAY=24*60*60
 dayno = input / SECS_DAY
