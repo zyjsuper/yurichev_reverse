@@ -381,7 +381,8 @@ But reality is always much harsher, so all this shouldn't be taken as silver bul
 <p>The files used in this blog post: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/symbolic').</p>
 
 <p>As you noticed in my simple examples, expression is represented as a plain string, for the sake of simplicity.
-Advanced symbolic execution engines uses AST (Abstract Syntax Trees), which are much better and efficient.</p>
+Advanced symbolic execution engines uses AST (Abstract Syntax Trees), which are much better and efficient.
+AST in its simplest form is used in my toy decompiler: _HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf').</p>
 
 _BLOG_FOOTER()
 
