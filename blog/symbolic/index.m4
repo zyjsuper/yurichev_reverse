@@ -60,7 +60,7 @@ shr     edx, 8
 or      eax, edx
 _PRE_END
 
-<p>In fact, many reverse engineers play shell game a lot, keeping track of is stored where, at each point of time.</p>
+<p>In fact, many reverse engineers play shell game a lot, keeping track of what is stored where, at each point of time.</p>
 
 <img src="https://yurichev.com/blog/symbolic/2_assembly/718px-Conjurer_Bosch.jpg">
 
