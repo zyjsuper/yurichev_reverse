@@ -60,7 +60,7 @@ shr     edx, 8
 or      eax, edx
 _PRE_END
 
-<p>In fact, many reverse engineers play shell game a lot, keeping in mind what is stored where.</p>
+<p>In fact, many reverse engineers play shell game a lot, keeping track of is stored where, at each point of time.</p>
 
 <img src="https://yurichev.com/blog/symbolic/2_assembly/718px-Conjurer_Bosch.jpg">
 
@@ -80,9 +80,8 @@ _PRE_BEGIN
 ((((initial_ECX&65280)|(initial_ECX<<16))<<8)|(((initial_ECX&16711680)|(initial_ECX>>16))>>8))
 _PRE_END
 
-<p>Now this is something easier readable, however, a bit LISPy at first sight.</p>
-
-<p>This is a function which change endianness in 32-bit word.</p>
+<p>Now this is something more readable, however, a bit LISPy at first sight.
+In fact, this is a function which change endianness in 32-bit word.</p>
 
 <p>By the way, my Toy Decompiler can do this job as well, but operates on AST (Abstract Syntax Trees) instead
 of plain strings: _HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf').</p>
@@ -310,6 +309,7 @@ Several tools has "path" in their names, like "pathgrind", etc.</p>
 <p>Like the shell game, this task is also often encounters in practice.
 You can see that something dangerous can be executed inside some basic block and you're trying to deduce,
 what input values can cause execution of it.
+It may be buffer overflow, etc.
 Input values are sometimes also called "inputs of death".</p>
 
 <p>Many crackmes are solved in this way, all you need is find a path into block which prints "key is correct"
@@ -374,7 +374,7 @@ _PRE_END
 _HL2(`Conclusion')
 
 <p>For the sake of demonstration, I made things as simple as possible.
-But reality is always much harsher, so all this shouldn't be taken as silver bullet.</p>
+But reality is always much harsher, so all this shouldn't be taken as a silver bullet.</p>
 
 <p>More Z3 and KLEE examples: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 
