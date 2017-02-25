@@ -231,7 +231,7 @@ m4_include(`blog/symbolic/5_LCG/1.txt')
 _PRE_END
 
 <p>Now if we once got several values from this PRNG, like 4583, 16304, 14440, 32315, 28670, 12568..., how would we
-deduce initial seed?
+recover the initial seed?
 The problem in fact is solving a system of equations:</p>
 
 _PRE_BEGIN
@@ -352,7 +352,7 @@ _PRE_END
 _HL2(`Merge sort')
 
 <p>How merge sort works?
-I have copypasted Python code from rosettacode.com intact:</p>
+I have copypasted Python code from rosettacode.com almost intact:</p>
 
 _PRE_BEGIN
 m4_include(`blog/symbolic/8_sorting/1.py')
@@ -374,7 +374,7 @@ _PRE_END
 _HL2(`Conclusion')
 
 <p>For the sake of demonstration, I made things as simple as possible.
-But reality is always much harsher, so all this shouldn't be taken as a silver bullet.</p>
+But reality is always harsh and inconvenientinconvenient, so all this shouldn't be taken as a silver bullet.</p>
 
 <p>More Z3 and KLEE examples: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 

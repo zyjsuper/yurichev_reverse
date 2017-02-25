@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 2,25,0,0,0), "compress","Text strings right in the middle of compressed data")
     post(f1,f2,datetime.datetime(2017, 2, 9,0,0,0), "symbolic","Symbolic execution")
     post(f1,f2,datetime.datetime(2017, 2, 7,0,0,0), "SAP","SAP cluster table unpacker")
     post(f1,f2,datetime.datetime(2017, 1,15,0,0,0), "pgm_synth","Simple program synthesis using Z3 SMT-solver")
