@@ -38,7 +38,7 @@ xxd -g 1 -seek 0x4d03f -l 0x30 patch-4.6-rc4.gz
 0004d05f: cd 76 55 74 2b cb d5 af 7a 35 56 d7 5e 07 5a 67  .vUt+...z5V.^.Zg
 _PRE_END
 
-<p>Compressed source code has _HTML_LINK(`http://qrzcq.com/call/UU1CC',`my friend')'s hamradio callsign _HTML_LINK(`http://www.dxwatch.com/qrz/UU1CC',`UU1CC') (not Russian hacker, though):</p>
+<p>Compressed source code has _HTML_LINK(`http://qrzcq.com/call/UU1CC',`my friend')'s hamradio callsign _HTML_LINK(`http://www.dxwatch.com/qrz/UU1CC',`UU1CC') (not a Russian hacker, though):</p>
 
 _PRE_BEGIN
 wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.62.tar.xz
