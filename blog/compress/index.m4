@@ -38,7 +38,7 @@ xxd -g 1 -seek 0x4d03f -l 0x30 patch-4.6-rc4.gz
 0004d05f: cd 76 55 74 2b cb d5 af 7a 35 56 d7 5e 07 5a 67  .vUt+...z5V.^.Zg
 _PRE_END
 
-<p>Compressed source code has _HTML_LINK(`http://qrzcq.com/call/UU1CC',`my friend')'s hamradio callsign _HTML_LINK(`http://www.dxwatch.com/qrz/UU1CC',`UU1CC'):</p>
+<p>Compressed source code has _HTML_LINK(`http://qrzcq.com/call/UU1CC',`my friend')'s hamradio callsign _HTML_LINK(`http://www.dxwatch.com/qrz/UU1CC',`UU1CC') (not Russian hacker, though):</p>
 
 _PRE_BEGIN
 wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.62.tar.xz
@@ -89,7 +89,8 @@ and some other points, 10 tails. Again, no one will tell you, when.</p>
 <p>Compressed data also can be treated as random stream, so we can use the same mathematics to determine probabilities, etc.</p>
 
 <p>Moral of the story: whenever you search for some patterns, you can find it in the middle of compressed blob, but that means nothing else then coincidence.
-In philosophical sense, this is a case of _HTML_LINK(`https://en.wikipedia.org/wiki/Selection_bias',`selection')/_HTML_LINK(`https://en.wikipedia.org/wiki/Confirmation_bias',`confirmation bias'): you find what you search for.</p>
+In philosophical sense, this is a case of _HTML_LINK(`https://en.wikipedia.org/wiki/Selection_bias',`selection')/_HTML_LINK(`https://en.wikipedia.org/wiki/Confirmation_bias',`confirmation bias'): you find what you search for
+(_HTML_LINK(`https://en.wikipedia.org/wiki/The_Library_of_Babel',`The Library of Babel') in micro sense).</p>
 
 _BLOG_FOOTER()
 
