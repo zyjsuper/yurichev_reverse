@@ -14,7 +14,7 @@ xxd -g 1 -seek 0x6725320 -l 0x30 linux-3.9.2.tar.gz
 06725340: 30 15 b7 90 f9 23 c5 28 42 92 19 5e 7a 02 73 72  0....#.(B..^z.sr
 _PRE_END
 
-<p>Russian hackers obviously has world domination plan, but the kernel is a bit old, oh wait, this one is newer:</p>
+<p>Russian hackers obviously have world domination plan, but the kernel is a bit old, oh wait, this one is newer:</p>
 
 _PRE_BEGIN
 wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.38.tar.xz
