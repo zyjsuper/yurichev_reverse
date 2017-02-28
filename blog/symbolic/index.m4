@@ -304,7 +304,10 @@ _PRE_END
 
 <p>This is also called "path constraint", i.e., what constraint must be satisified to execute the path into
 specific block?
-Several tools has "path" in their names, like "pathgrind", etc.</p>
+Several tools has "path" in their names, like
+"pathgrind", 
+_HTML_LINK(`http://babelfish.arc.nasa.gov/trac/jpf/wiki/projects/jpf-symbc',`Symbolic PathFinder'),
+etc.</p>
 
 <p>Like the shell game, this task is also often encounters in practice.
 You can see that something dangerous can be executed inside some basic block and you're trying to deduce,
@@ -315,7 +318,25 @@ Input values are sometimes also called "inputs of death".</p>
 <p>Many crackmes are solved in this way, all you need is find a path into block which prints "key is correct"
 or something like that.</p>
 
-<p>KLEE (or similar tool) tries to find path to each basic block and produces "ideal" unit test.
+<p>We can extend this tiny example:</p>
+
+_PRE_BEGIN
+input=...
+SECS_DAY=24*60*60
+dayno = input / SECS_DAY
+wday = (dayno + 4) % 7
+print wday
+if wday==5:
+    print "Thanks God, it's Friday!"
+else:
+    print "Got to wait a little"
+_PRE_END
+
+<p>Now we have two blocks: for the first we should solve this equation: (((input/86400)+4)%7)==5.
+But for the second we should solve inverted equation: (((input/86400)+4)%7)!=5.
+By solving these equations, we will find two paths into both blocks.</p>
+
+<p>KLEE (or similar tool) tries to find path to each [basic] block and produces "ideal" unit test.
 Hence, KLEE can find a path into the block which crashes everything, or reporting about correctness of the input
 key/license, etc.
 Surprisingly, KLEE can find backdoors in the very same manner.</p>
@@ -371,10 +392,20 @@ _PRE_BEGIN
 m4_include(`blog/symbolic/8_sorting/result.txt')
 _PRE_END
 
+_HL2(`Extending Expr class')
+
+<p>
+This is somewhat senseless, nevertheless, it's easy task to extend my Expr class to support AST trees instead of
+plain strings.
+It's also possible to add folding steps (like I demonstrated in 
+_HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf',`Toy Decompiler')).
+Maybe someone will want to do this as an exercise.
+</p>
+
 _HL2(`Conclusion')
 
 <p>For the sake of demonstration, I made things as simple as possible.
-But reality is always harsh and inconvenientinconvenient, so all this shouldn't be taken as a silver bullet.</p>
+But reality is always harsh and inconvenient, so all this shouldn't be taken as a silver bullet.</p>
 
 <p>More Z3 and KLEE examples: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 
@@ -384,6 +415,10 @@ But reality is always harsh and inconvenientinconvenient, so all this shouldn't 
 Advanced symbolic execution engines uses AST (Abstract Syntax Trees), which are much better and efficient.
 AST in its simplest form is used in my toy decompiler: _HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf').
 The toy decompiler can be used as simple symbolic engine as well, just feed all the instructions to it and it will track contents of each register.</p>
+
+<hr>
+
+<p>Next part: _HTML_LINK_AS_IS(`https://yurichev.com/blog/crypto').</p>
 
 _BLOG_FOOTER()
 
