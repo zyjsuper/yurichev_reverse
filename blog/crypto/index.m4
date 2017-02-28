@@ -12,6 +12,8 @@ _PRE_BEGIN
 m4_include(`blog/crypto/xxtea.py')
 _PRE_END
 
+<p>A key is choosen according to input data, and, obviously, we can't know it during symbolic execution, so we leave expression like k[...].</p>
+
 <p>Now results for just one round, for each of 4 outputs:</p>
 
 _PRE_BEGIN
