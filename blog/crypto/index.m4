@@ -124,7 +124,7 @@ _PRE_BEGIN
 m4_include(`blog/crypto/2.c')
 _PRE_END
 
-<p>Addition (or modular addition, as cryptographers say) can make thing even harder:</p>
+<p>Addition (or _HTML_LINK(`https://yurichev.com/blog/modulo/',`modular addition'), as cryptographers say) can make thing even harder:</p>
 
 _PRE_BEGIN
 m4_include(`blog/crypto/3.c')
