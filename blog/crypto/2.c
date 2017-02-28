@@ -1,18 +1,3 @@
-// copypasted from http://blog.regehr.org/archives/1063
-uint32_t rotl32b (uint32_t x, uint32_t n)
-{
-	assert (n<32);
-	if (!n) return x;
-	return (x<<n) | (x>>(32-n));
-}
-
-uint32_t rotr32b (uint32_t x, uint32_t n)
-{
-	assert (n<32);
-	if (!n) return x;
-	return (x>>n) | (x<<(32-n));
-}
-
 void megahash (uint32_t buf[4])
 {
 	for (int i=0; i<16; i++)
