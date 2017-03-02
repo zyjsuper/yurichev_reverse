@@ -53,7 +53,7 @@ Now we see that at this step, the game is already know where the next 3 balls wi
 
 <p><img src="https://yurichev.com/blog/LCG/2.png"></p>
 
-<p>Now we got 6 pair of coordinates, and we can brute-force PRNG state:</p>
+<p>Now we got 6 pair of coordinates, and we can brute-force PRNG state. I didn't map colors to its numbers, so we ignore them completely.</p>
 
 _PRE_BEGIN
 m4_include(`blog/LCG/src.c')
