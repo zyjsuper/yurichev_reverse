@@ -32,11 +32,11 @@ row=7 col=9, unsat!
 row=8 col=9, unsat!
 _PRE_END
 
-<p>These are cells where I can click, so I did:</p>
+<p>These are cells where I can click freely, so I did:</p>
 
 <p><img src="https://yurichev.com/blog/minesweeper/2.png"></p>
 
-<p>We have more information, so we update input:</p>
+<p>Now we have more information, so we update input:</p>
 
 _PRE_BEGIN
 known=[
@@ -62,7 +62,7 @@ row=9 col=5, unsat!
 row=9 col=6, unsat!
 _PRE_END
 
-<p>I click again:</p>
+<p>I click on these cells again:</p>
 
 <p><img src="https://yurichev.com/blog/minesweeper/3.png"></p>
 
