@@ -18,7 +18,7 @@ _PRE_END
 <p>The code is almost self-explanatory.
 We need border for the same reason, why Conway's "Game of Life" implementations also has border.
 Whenever we know that the cell is free of bomb, we put zero there.
-Whenever we know number of neighbours, we can add a constraint, again, just like in "Game of Life".
+Whenever we know number of neighbours, we add a constraint, again, just like in "Game of Life".
 Then we place bomb somewhere and check.</p>
 
 <p>Let's run:</p>
