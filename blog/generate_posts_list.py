@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 3, 5,0,0,0), "minesweeper","Cracking Minesweeper with Z3 SMT solver")
     post(f1,f2,datetime.datetime(2017, 3, 2,0,0,0), "LCG","Cracking simple LCG PRNG")
     post(f1,f2,datetime.datetime(2017, 2,28,0,0,0), "crypto","Symbolic execution and (amateur) cryptography")
     post(f1,f2,datetime.datetime(2017, 2,25,0,0,0), "compress","Text strings right in the middle of compressed data")
