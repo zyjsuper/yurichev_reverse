@@ -32,7 +32,7 @@ row=7 col=9, unsat!
 row=8 col=9, unsat!
 _PRE_END
 
-<p>These are cells where I can click freely, so I did:</p>
+<p>These are cells where I can click safely, so I did:</p>
 
 <p><img src="https://yurichev.com/blog/minesweeper/2.png"></p>
 
