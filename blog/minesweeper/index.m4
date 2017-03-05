@@ -118,5 +118,7 @@ _PRE_END
 
 <p>More Z3 examples are in _HTML_LINK(`https://yurichev.com/blog/',`my blog') and here: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 
+<p>Some discussion on HN: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=13797375').</p>
+
 _BLOG_FOOTER()
 
