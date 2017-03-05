@@ -116,5 +116,7 @@ _PRE_END
 
 <p>The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/minesweeper/minesweeper_solver.py').</p>
 
+<p>More Z3 examples are in _HTML_LINK(`https://yurichev.com/blog/',`my blog') and here: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
+
 _BLOG_FOOTER()
 
