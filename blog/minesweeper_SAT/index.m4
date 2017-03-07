@@ -168,7 +168,7 @@ Each POPCNTx() function takes list of variable numbers and outputs list of claus
 <p>As of empty cells, we also add them as clauses, but with minus sign, which means, the variable must be False.
 Whenever we try to place bomb, we add its variable as clause without minus sign, this means the variable must be True.</p>
 
-<p>The we execute external minisat process.
+<p>Then we execute external minisat process.
 The only thing we need from it is exit code.
 If an input CNF is UNSAT, it returns 20:</p>
 
