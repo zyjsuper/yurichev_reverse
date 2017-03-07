@@ -120,5 +120,7 @@ _PRE_END
 
 <p>Some discussion on HN: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=13797375').</p>
 
+<p>Update: next part: _HTML_LINK_AS_IS(`https://yurichev.com/blog/minesweeper_SAT/').</p>
+
 _BLOG_FOOTER()
 
