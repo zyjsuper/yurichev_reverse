@@ -142,6 +142,8 @@ _PRE_END
 
 <p>It means, it will return "True", if all input variables are "False".</p>
 
+<p>And yes, you can ask Mathematica for finding CNF expressions for any other truth table.</p>
+
 _HL2(`Simple population count function')
 
 <p>Now we can use Mathematica to get all <i>population count</i> functions for 0..8 neighbours.</p>
