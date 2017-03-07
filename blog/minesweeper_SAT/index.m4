@@ -190,7 +190,7 @@ row=8, col=9, unsat!
 _PRE_END
 
 <p>... but it runs way faster, even considering overhead of executing external program.
-Perhaps, Z3Py version could be optimized much better? I don't know.</p>
+Perhaps, Z3Py version could be optimized much better?</p>
 
 <p>The files, including Wolfram Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/minesweeper_SAT').</p>
 
