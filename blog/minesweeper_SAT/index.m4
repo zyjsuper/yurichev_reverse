@@ -144,7 +144,7 @@ _PRE_END
 
 <p>And yes, you can ask Mathematica for finding CNF expressions for any other truth table.</p>
 
-_HL2(`Simple population count function')
+_HL2(`Minesweeper')
 
 <p>Now we can use Mathematica to get all <i>population count</i> functions for 0..8 neighbours.</p>
 
