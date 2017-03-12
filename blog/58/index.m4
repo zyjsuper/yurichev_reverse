@@ -105,7 +105,9 @@ _PRE_END
 <p>For those who are interested:</p>
 <p><a href="http://conus.info/stuff/tcc-obfuscate/tcc-0.9.25-diff">Patch for Tiny C version 0.9.25</a></p>
 <p><a href="http://conus.info/stuff/tcc-obfuscate/tcc-0.9.25-my-src.rar">Full source code patched</a></p>
-<p><a href="http://conus.info/stuff/tcc-obfuscate/tcc-0.9.25-my-win32-bin.zip">Tiny C 0.9.25 patched win32 executables</a></p>
+<p><a href="http://conus.info/stuff/tcc-obfuscate/tcc-0.9.25-my-win32-bin.rar">Tiny C 0.9.25 patched win32 executables</a>.
+Unfortunately, there were complaints about win32 executables, someone said antivirus detected malware in these.
+So the files archived with a password: 'tcc'.</p>
 
 <p>Update: <a href="http://groups.google.com/group/comp.compilers/browse_thread/thread/3b3049eaf7fd4a1a">comp.compilers thread</a></p>
 
