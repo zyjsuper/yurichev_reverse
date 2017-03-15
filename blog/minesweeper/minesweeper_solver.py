@@ -1,8 +1,5 @@
 #!/usr/bin/python
 
-WIDTH=9
-HEIGHT=9
-
 known=[
 "01?10001?",
 "01?100011",
@@ -16,6 +13,11 @@ known=[
 
 from z3 import *
 import sys
+
+WIDTH=len(known[0])
+HEIGHT=len(known)
+
+print "WIDTH=", WIDTH, "HEIGHT=", HEIGHT
 
 def chk_bomb(row, col):
 
@@ -35,7 +37,7 @@ def chk_bomb(row, col):
         for c in range(1,WIDTH+1):
 
             t=known[r-1][c-1]
-            if t in "0123456789":
+            if t in "012345678":
                 s.add(cells[r][c]==0)
                 # we need empty border so the following expression would be able to work for all possible cases:
                 s.add(cells[r-1][c-1] + cells[r-1][c] + cells[r-1][c+1] + cells[r][c-1] + cells[r][c+1] + cells[r+1][c-1] + cells[r+1][c] + cells[r+1][c+1]==int(t))

@@ -571,6 +571,8 @@ Out[17]= {{0,0,0,0,0,0,0,0,0}->1,
 {0,0,0,0,0,0,0,0,1}->1,
 {1,0,0,0,0,0,0,0,1}->0,
 
+...
+
 In[18]:= BooleanConvert[BooleanFunction[stillife,{center,a,b,c,d,e,f,g,h}],"CNF"]
 Out[18]= (!a||!b||!c||!center||!d)&&(!a||!b||!c||!center||!e)&&(!a||!b||!c||!center||!f)&&
 (!a||!b||!c||!center||!g)&&(!a||!b||!c||!center||!h)&&(!a||!b||!c||center||d||e||f||g||h)&&
@@ -578,6 +580,7 @@ Out[18]= (!a||!b||!c||!center||!d)&&(!a||!b||!c||!center||!e)&&(!a||!b||!c||!cen
 (!a||!b||c||center||d||e||f||!g||h)&&(!a||!b||c||center||d||e||f||g||!h)&&(!a||!b||!center||!d||!e)&&
 
 ...
+
 _PRE_END
 
 _PRE_BEGIN
