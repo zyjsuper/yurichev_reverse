@@ -151,5 +151,8 @@ _HL3(`Links')
 <p>You can find a lot of blog posts about breaking CTF-level crypto using Z3, etc.
 Here is one of them: _HTML_LINK_AS_IS(`http://doar-e.github.io/blog/2015/08/18/keygenning-with-klee/').</p>
 
+<p>Another: _HTML_LINK(`http://blog.cr4.sh/2015/03/automated-algebraic-cryptanalysis-with.html',`Automated algebraic cryptanalysis with OpenREIL and Z3').
+By the way, this solution tracks state of each register at each EIP/RIP, this is almost the same as SSA (Static single assignment form), which is heavily used in compiers and worth learning.</p>
+
 _BLOG_FOOTER()
 
