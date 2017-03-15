@@ -3,9 +3,11 @@
 import os
 from GoL_SAT_utils import *
 
-WIDTH=8
-HEIGHT=8
-VARS_TOTAL=(WIDTH+2)*(HEIGHT+2)
+W=20 # WIDTH
+H=20 # HEIGHT
+
+VARS_TOTAL=W*H+1
+VAR_FALSE=str(VARS_TOTAL)
 
 def stillife (center, a):
     s="(!a||!b||!c||!center||!d)&&(!a||!b||!c||!center||!e)&&(!a||!b||!c||!center||!f)&&(!a||!b||!c||!center||!g)&&" \
@@ -50,62 +52,38 @@ def stillife (center, a):
 
     return mathematica_to_CNF(s, center, a)
 
-def coords_to_var (row, col):
-    # we always use SAT variables as strings, anyway.
-    # the 1st variables is 1, not 0
-    return str(row*(WIDTH+2)+col+1)
-
-# FIXME: slow
-def SAT_solution_to_grid(solution):
-    grid=[[False for c in range(WIDTH)] for r in range(HEIGHT)]
-    for r in range(1,HEIGHT+1):
-        for c in range(1,WIDTH+1):
-            v=coords_to_var(r, c)
-            if v in solution:
-                grid[r-1][c-1]=True
-            if "-"+v in solution:
-                grid[r-1][c-1]=False
-    return grid
-
-def grid_to_clause(grid):
-    rt=[]
-    for r in range(HEIGHT):
-        for c in range(WIDTH):
-            rt.append(("-" if grid[r][c]==False else "") + str(coords_to_var(r+1, c+1)))
-    return rt
-
 def try_again (clauses):
-    # make an empty invisible border
-    # all variables are negated (because they must be False)
-    for c in range(WIDTH+2):
-        clauses.append ("-"+coords_to_var(0,c))
-        clauses.append ("-"+coords_to_var(HEIGHT+1,c))
-    for r in range(HEIGHT+2):
-        clauses.append ("-"+coords_to_var(r,0))
-        clauses.append ("-"+coords_to_var(r,WIDTH+1))
+    # rules for the main part of grid
+    for r in range(H):
+        for c in range(W):
+            clauses=clauses+stillife(coords_to_var(r, c, H, W), get_neighbours(r, c, H, W))
    
-    # make an empty visible border
-    # all variables are negated (because they must be False)
-    for c in range(1,WIDTH+1):
-        clauses.append ("-"+coords_to_var(1,c))
-        clauses.append ("-"+coords_to_var(HEIGHT,c))
-    for r in range(1,HEIGHT+1):
-        clauses.append ("-"+coords_to_var(r,1))
-        clauses.append ("-"+coords_to_var(r,WIDTH))
-
-    for r in range(1,HEIGHT+1):
-        for c in range(1,WIDTH+1):
-            neighbours=[coords_to_var(r-1, c-1), coords_to_var(r-1, c), coords_to_var(r-1, c+1), coords_to_var(r, c-1),
-                            coords_to_var(r, c+1), coords_to_var(r+1, c-1), coords_to_var(r+1, c), coords_to_var(r+1, c+1)]
-            clauses=clauses+stillife(coords_to_var(r, c), neighbours)
-   
+    # cells behind visible grid must always be false:
+    for c in range(-1, W+1):
+        for r in [-1,H]:
+            clauses=clauses+cell_is_false(coords_to_var(r, c, H, W), get_neighbours(r, c, H, W))
+    for c in [-1,W]:
+        for r in range(-1, H+1):
+            clauses=clauses+cell_is_false(coords_to_var(r, c, H, W), get_neighbours(r, c, H, W))
+    
     # each row must contain at least one cell!
-    for r in range(2,HEIGHT):
-        clauses.append(" ".join([coords_to_var(r, c) for c in range(2, WIDTH)]))
+    for r in range(H):
+        clauses.append(" ".join([coords_to_var(r, c, H, W) for c in range(W)]))
 
     # each column must contain at least one cell!
-    for c in range(2,WIDTH):
-        clauses.append(" ".join([coords_to_var(r, c) for r in range(2, HEIGHT)]))
+    for c in range(W):
+        clauses.append(" ".join([coords_to_var(r, c, H, W) for r in range(H)]))
+
+    # make result denser:
+    lst=[]
+    for r in range(H):
+        for c in range(W):
+            lst.append(coords_to_var(r, c, H, W))
+    # divide them all by chunks and add to clauses:
+    CHUNK_LEN=3
+    for c in list_partition(lst,len(lst)/CHUNK_LEN):
+        tmp=" ".join(c)
+        clauses.append(tmp)
 
     write_CNF("tmp.cnf", clauses, VARS_TOTAL)
 
@@ -116,24 +94,26 @@ def try_again (clauses):
     if solution==None:
         print "unsat!"
         exit(0)
-    
-    grid=SAT_solution_to_grid(solution)
+   
+    grid=SAT_solution_to_grid(solution, H, W)
     print_grid(grid)
     write_RLE(grid)
 
     return grid
 
 clauses=[]
+# always false:
+clauses.append ("-"+VAR_FALSE)
+
 while True:
     solution=try_again(clauses)
-    clauses.append(negate_clause(grid_to_clause(solution)))
-    clauses.append(negate_clause(grid_to_clause(reflect_vertically(solution))))
-    clauses.append(negate_clause(grid_to_clause(reflect_horizontally(solution))))
+    clauses.append(negate_clause(grid_to_clause(solution, H, W)))
+    clauses.append(negate_clause(grid_to_clause(reflect_vertically(solution), H, W)))
+    clauses.append(negate_clause(grid_to_clause(reflect_horizontally(solution), H, W)))
     # is this square?
-    if WIDTH==HEIGHT:
-        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,1))))
-        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,2))))
-        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,3))))
+    if W==H:
+        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,1), H, W)))
+        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,2), H, W)))
+        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,3), H, W)))
     print ""
-
 
