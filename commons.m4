@@ -10,9 +10,9 @@ m4_define(`_HEADER',`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//E
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 <meta name="author" content="Dennis Yurichev">
 _MAKE_TITLE(`$1')
-<link rel="stylesheet" href="//yurichev.com/style.css">
-<script src="//yurichev.com/multilang.js" type="text/javascript"></script>
-<script src="//yurichev.com/showhide.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://yurichev.com/style.css">
+<script src="https://yurichev.com/multilang.js" type="text/javascript"></script>
+<script src="https://yurichev.com/showhide.js" type="text/javascript"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
@@ -58,7 +58,7 @@ m4_define(`_GREY', `<font color="#808080">$1</font>')
 m4_define(`_BOOK_NOT_FINISHED', `$1')
 m4_define(`_HEADER_HL1', `_HEADER(`$1')_HL1(`$1')')
 
-m4_define(`_PRE_BEGIN',`<pre class="normal"><span class="inner-pre" style="font-size: 13px">')
+m4_define(`_PRE_BEGIN',`<pre class="normal">')
 m4_define(`_PRE_END',`</pre>')
 
 m4_define(`_COPYPASTED1',`<p>The note below has been copypasted to the _HTML_LINK(`http://beginners.re/',`Reverse Engineering for Beginners book')</p>')
