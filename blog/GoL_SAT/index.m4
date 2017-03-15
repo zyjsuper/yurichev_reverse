@@ -134,65 +134,6 @@ When we get a solution, it is negated and added to the list of clauses, so when 
 it will skip solution which was already printed.</p>
 
 _PRE_BEGIN
-m4_include(`blog/GoL_SAT/reverse1.py')
-_PRE_END
-
-( URL )
-
-<p>Here is a result:</p>
-
-_PRE_BEGIN
-HEIGHT= 3 WIDTH= 3
-2525 clauses
-.*.
-*.*
-.*.
-1.rle written
-
-2526 clauses
-.**
-*..
-*.*
-2.rle written
-
-2527 clauses
-**.
-..*
-*.*
-3.rle written
-
-2528 clauses
-*.*
-*..
-.**
-4.rle written
-
-2529 clauses
-*.*
-..*
-**.
-5.rle written
-
-2530 clauses
-*.*
-.*.
-*.*
-6.rle written
-
-2531 clauses
-unsat!
-_PRE_END
-
-<p>The first result is the same as input state.
-Indeed: this is "still life", i.e., state which will never change, and it is correct solution.
-The last solution is also valid.</p>
-
-<p>Now the problem: 2nd, 3rd, 4th and 5th solutions are equivalent to each other, they just mirrored or rotated.
-In fact, this is _HTML_LINK(`https://en.wikipedia.org/wiki/Reflection_symmetry',`reflectional') (like in mirror) and _HTML_LINK(`https://en.wikipedia.org/wiki/Rotational_symmetry',`rotational') symmetries.
-We can solve this easily: we will take each solution, reflect and rotate it and add them negated to the list of clauses,
-so minisat will skip them during its work:</p>
-
-_PRE_BEGIN
 ...
 
 def cell_is_false (center, a):
@@ -259,13 +200,73 @@ def cell_is_true (center, a):
 ...
 _PRE_END
 
-( URL )
+( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/GoL_SAT_utils.py') )
+
+
+_PRE_BEGIN
+m4_include(`blog/GoL_SAT/reverse1.py')
+_PRE_END
+
+( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/reverse1.py') )
+
+<p>Here is a result:</p>
+
+_PRE_BEGIN
+HEIGHT= 3 WIDTH= 3
+2525 clauses
+.*.
+*.*
+.*.
+1.rle written
+
+2526 clauses
+.**
+*..
+*.*
+2.rle written
+
+2527 clauses
+**.
+..*
+*.*
+3.rle written
+
+2528 clauses
+*.*
+*..
+.**
+4.rle written
+
+2529 clauses
+*.*
+..*
+**.
+5.rle written
+
+2530 clauses
+*.*
+.*.
+*.*
+6.rle written
+
+2531 clauses
+unsat!
+_PRE_END
+
+<p>The first result is the same as input state.
+Indeed: this is "still life", i.e., state which will never change, and it is correct solution.
+The last solution is also valid.</p>
+
+<p>Now the problem: 2nd, 3rd, 4th and 5th solutions are equivalent to each other, they just mirrored or rotated.
+In fact, this is _HTML_LINK(`https://en.wikipedia.org/wiki/Reflection_symmetry',`reflectional') (like in mirror) and _HTML_LINK(`https://en.wikipedia.org/wiki/Rotational_symmetry',`rotational') symmetries.
+We can solve this easily: we will take each solution, reflect and rotate it and add them negated to the list of clauses,
+so minisat will skip them during its work:</p>
 
 _PRE_BEGIN
 m4_include(`blog/GoL_SAT/reverse2.py')
 _PRE_END
 
-( URL )
+( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/reverse2.py') )
 
 <p>Functions reflect_vertically(), reflect_horizontally and rotate_square_array() are simple array manipulation routines.</p>
 
@@ -573,7 +574,7 @@ _PRE_BEGIN
 
 _PRE_END
 
-( URL )
+( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/stillife2.py') )
 
 <p>Now we can see that 3*3 square has 3 possible still lives:</p>
 
@@ -743,7 +744,7 @@ _PRE_BEGIN
 
 _PRE_END
 
-( URL )
+( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/stillife.py') )
 
 <p>This is indeed denser:</p>
 
