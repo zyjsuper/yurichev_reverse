@@ -83,7 +83,7 @@ _PRE_END
 <p>Now this is something more readable, however, a bit LISPy at first sight.
 In fact, this is a function which change endianness in 32-bit word.</p>
 
-<p>By the way, my Toy Decompiler can do this job as well, but operates on AST (Abstract Syntax Trees) instead
+<p>By the way, my Toy Decompiler can do this job as well, but operates on AST (Abstract Syntax Tree) instead
 of plain strings: _HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf').</p>
 
 _HL2(`Fast Fourier transform')
@@ -412,7 +412,7 @@ But reality is always harsh and inconvenient, so all this shouldn't be taken as 
 <p>The files used in this blog post: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/symbolic').</p>
 
 <p>As you noticed in my simple examples, expression is represented as a plain string, for the sake of simplicity.
-Advanced symbolic execution engines uses AST (Abstract Syntax Trees), which are much better and efficient.
+Advanced symbolic execution engines uses AST (Abstract Syntax Tree), which are much better and efficient.
 AST in its simplest form is used in my toy decompiler: _HTML_LINK_AS_IS(`https://yurichev.com/writings/toy_decompiler.pdf').
 The toy decompiler can be used as simple symbolic engine as well, just feed all the instructions to it and it will track contents of each register.</p>
 

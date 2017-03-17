@@ -68,7 +68,9 @@ If the file has maximal entropy (which is unachievable, but...) and we live in a
 You can check: get any compressed file, and use <i>rafind2</i> to search for any 3-letter word (not just that Russian obscene one).<p>
 
 <p>It took ~8-9 GB of my downloaded movies/TV series to find the word "beer" in it (case sensitive).
-Perhaps, these movies wasn't compressed good enough?</p>
+Perhaps, these movies wasn't compressed good enough?
+This is also true for a well-known 4-letter English obscene word.
+</p>
 
 <p>My approach is naive, so I googled for mathematically grounded one, and have find this question:
 _HTML_LINK(`http://math.stackexchange.com/questions/27989/time-until-a-consecutive-sequence-of-ones-in-a-random-bit-sequence/27991#27991',`Time until a consecutive sequence of ones in a random bit sequence').
@@ -94,7 +96,8 @@ and some other points, 10 tails. Again, no one will tell you, when.</p>
 <p>If you can live with strings of mixed case, like "bEeR", probabilities and compressed data sets are much lower:
 $128^3=2MB$ for all 3-letter words of mixed case,
 $128^4=268MB$ for all 4-letter words,
-$128^5=34GB$ for all 5-letter words, etc.</p>
+$128^5=34GB$ for all 5-letter words, etc.
+</p>
 
 <p>Moral of the story: whenever you search for some patterns, you can find it in the middle of compressed blob, but that means nothing else then coincidence.
 In philosophical sense, this is a case of _HTML_LINK(`https://en.wikipedia.org/wiki/Selection_bias',`selection')/_HTML_LINK(`https://en.wikipedia.org/wiki/Confirmation_bias',`confirmation bias'): you find what you search for

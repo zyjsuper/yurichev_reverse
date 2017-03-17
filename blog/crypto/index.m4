@@ -98,7 +98,7 @@ See also: TAOCP volume II page 4, (1997).
 The very first problem is that making an algorithm which can generate very long expressions is tricky thing itself.
 Common error is to use operations like XOR and rotations/permutations, which can't help much.
 Even worse: some people think that XORing a value several times can be better, like: (x^1234)^5678.
-Obviously, these two XOR operations (or many more) can be reduced to single one.
+Obviously, these two XOR operations (or many more) can be reduced to a single one.
 Same story about applied operations like addition and subtraction - they all also can be reduced to single one.
 </p>
 
@@ -146,6 +146,24 @@ Even more: sometimes you have only decryption function, and if algorithm is simp
 One fun thing to mention: if you try to implement amateur cryptoalgorithm in Verilog/VHDL language to run it on FPGA, maybe in brute-force way,
 you can find that EDA tools can optimize many things during synthesis (this is the word they use for "compilation") and can leave amateur cryptoalgorithm much smaller/simpler/faster than it was.
 Even if you try to define DES algorithm with a fixed key, Altera Quartus can optimize first round of it and make it smaller than others.
+</p>
+
+_HL3(`Bugs')
+
+<p>
+Another prominent feature of amateur cryptography is bugs.
+Bugs here often left uncaught because output of encrypting function visually looked "good enough",
+so programmer stopped to work on it.<p>
+
+<p>This is especially feature of hashes, because when you work on block cipher, you have to do two functions
+(encryption/decryption), while hashing function is single.</p>
+
+<p>Weirdest ever amateur encryption algorithm I once saw, encrypted only odd bytes of input block, while even bytes
+left untouched, so the input plain text has been partially seen in the resulting encrypted block.
+It was encryption routine used in license key validation.
+Hard to believe someone did this on purpose.
+Most likely, it was just an unnoticed bug.
+</p>
 
 _HL3(`Links')
 
