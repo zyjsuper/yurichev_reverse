@@ -96,5 +96,7 @@ Mersenne twister is much better, it has bigger internal state.</p>
 then hash results of hashing in infinite loop, this can produce enough entropy to have the same features as PRNG,
 but it will not be crackable as easily as LCG.</p>
 
+<p>More ideas and insights: _HTML_LINK(`https://tools.ietf.org/html/rfc4086',`RFC4086'): "Randomness Requirements for Security".</p>
+
 _BLOG_FOOTER()
 

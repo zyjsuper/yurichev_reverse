@@ -49,6 +49,7 @@ def chk_bomb(row, col):
     if result=="unsat":
         print "row=%d col=%d, unsat!" % (row, col)
 
+# enumerate all hidden cells:
 for r in range(1,HEIGHT+1):
     for c in range(1,WIDTH+1):
         if known[r-1][c-1]=="?":

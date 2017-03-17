@@ -84,6 +84,7 @@ Sometimes even ransomware (but rarely nowadays).
 <p>
 Amateur cryptography is usually based not on theory, but on visual complexity: if one getting results which are seems chaotic enough, one stops to improve it further.
 This is security not even on obscurity, but on chaotic mess.
+This is also sometimes called "The Fallacy of Complex Manipulation" (see _HTML_LINK(`https://tools.ietf.org/html/rfc4086',`RFC4086')).
 </p>
 
 <p>
