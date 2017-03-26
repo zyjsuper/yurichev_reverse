@@ -167,6 +167,9 @@ Most likely, it was just an unnoticed bug.
 
 _HL3(`Links')
 
+<p>Pegasus Mail Password Decoder: _HTML_LINK_AS_IS(`http://phrack.org/issues/52/3.html') -
+very typical example of amateur cruptography.</p>
+
 <p>You can find a lot of blog posts about breaking CTF-level crypto using Z3, etc.
 Here is one of them: _HTML_LINK_AS_IS(`http://doar-e.github.io/blog/2015/08/18/keygenning-with-klee/').</p>
 

@@ -54,7 +54,7 @@ _PRE_END
 
 <p>Now seriously.</p>
 
-<p>It was a nice illustration of _HTML_LINK(`https://en.wikipedia.org/wiki/Apophenia',`apophenia') and _HTML_LINK(`https://en.wikipedia.org/wiki/Pareidolia',`pareidolia')
+<p>It's a nice illustration of _HTML_LINK(`https://en.wikipedia.org/wiki/Apophenia',`apophenia') and _HTML_LINK(`https://en.wikipedia.org/wiki/Pareidolia',`pareidolia')
 (human's mind ability to see faces in clouds, etc) in Lurkmore, Russian counterpart of Encyclopedia Dramatica.
 As _HTML_LINK(`http://lurkmore.to/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D1%8B%D0%B9_%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2%D0%BE%D0%B9_%D1%84%D0%B5%D0%BD%D0%BE%D0%BC%D0%B5%D0%BD',`they wrote') in the article
 about <i>electronic voice phenomenon</i>,
@@ -62,12 +62,12 @@ you can open any long enough compressed file in hex editor and find well-known 3
 
 <p>And I was interested in calculation, how big compressed file must be to contain all possible 3-letter, 4-letter, etc, words?
 In my naive calculations, I've got this: probability of the first specific byte in the middle of compressed data stream with maximal entropy is $\frac{1}{256}$, probability of the 2nd is also $\frac{1}{256}$,
-not probability of specific byte pair is $\frac{1}{256 \cdot 256} = \frac{1}{256^2}$.
+and probability of specific byte pair is $\frac{1}{256 \cdot 256} = \frac{1}{256^2}$.
 Probabilty of specific triple is $\frac{1}{256^3}$.
-If the file has maximal entropy (which is unachievable, but...) and we live in an ideal world, you've got to have file of size just $256^3=16777216$, which is 16-17MB.
+If the file has maximal entropy (which is unachievable, but...) and we live in an ideal world, you've got to have a file of size just $256^3=16777216$, which is 16-17MB.
 You can check: get any compressed file, and use <i>rafind2</i> to search for any 3-letter word (not just that Russian obscene one).<p>
 
-<p>It took ~8-9 GB of my downloaded movies/TV series to find the word "beer" in it (case sensitive).
+<p>It took ~8-9 GB of my downloaded movies/TV series files to find the word "beer" in them (case sensitive).
 Perhaps, these movies wasn't compressed good enough?
 This is also true for a well-known 4-letter English obscene word.
 </p>
@@ -80,7 +80,7 @@ Plug $\frac{1}{256}$ and $3$ and you'll get almost the same as my naive calculat
 <p>So any 3-letter words can be found in the compressed file (with ideal entropy) of length $256^3=~17MB$, any 4-letter word - $256^4=4.7GB$ (size of DVD).
 Any 5-letter word - $256^5=~1TB$.</p>
 
-<p>For the post you are reading now, I mirrored the whole _HTML_LINK(`https://www.kernel.org/',`kernel.org') website (let sysadmins forgive me),
+<p>For the post you are reading now, I mirrored the whole _HTML_LINK(`https://www.kernel.org/',`kernel.org') website (hopefully, sysadmins can forgive me),
 and it has ~430GB of compressed Linux Kernel source trees.
 It has enough compressed data to contain these words, however, I cheated a bit: I searched for both lowercase and uppercase strings, thus compressed data set I need is almost halved.</p>
 
@@ -88,10 +88,10 @@ It has enough compressed data to contain these words, however, I cheated a bit: 
 but the data is encoded not in chains itself, but in the order of chains (no matter of compression algorithm, etc).</p>
 
 <p>Now the information for gamblers: one should throw a dice ~42 times to get a pair of six, but no one will tell you, when exactly.
-I don't remember, how many times coin was tossed in "Rosencrantz & Guildenstern Are Dead" movie, but one should toss it ~2048 times and at some point, you'll get 10 heads,
-and some other points, 10 tails. Again, no one will tell you, when.</p>
+I don't remember, how many times coin was tossed in the "Rosencrantz & Guildenstern Are Dead" movie, but one should toss it ~2048 times and at some point, you'll get 10 heads,
+and at some other point, 10 tails. Again, no one will tell you, when exactly this will happen.</p>
 
-<p>Compressed data also can be treated as random stream, so we can use the same mathematics to determine probabilities, etc.</p>
+<p>Compressed data can also be treated as a random stream, so we can use the same mathematics to determine probabilities, etc.</p>
 
 <p>If you can live with strings of mixed case, like "bEeR", probabilities and compressed data sets are much lower:
 $128^3=2MB$ for all 3-letter words of mixed case,

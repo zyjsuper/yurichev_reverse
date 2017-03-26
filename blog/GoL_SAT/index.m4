@@ -263,7 +263,23 @@ We can solve this easily: we will take each solution, reflect and rotate it and 
 so minisat will skip them during its work:</p>
 
 _PRE_BEGIN
-m4_include(`blog/GoL_SAT/reverse2.py')
+
+...
+
+while True:
+    solution=try_again(clauses)
+    clauses.append(negate_clause(grid_to_clause(solution, H, W)))
+    clauses.append(negate_clause(grid_to_clause(reflect_vertically(solution), H, W)))
+    clauses.append(negate_clause(grid_to_clause(reflect_horizontally(solution), H, W)))
+    # is this square?
+    if W==H:
+        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,1), H, W)))
+        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,2), H, W)))
+        clauses.append(negate_clause(grid_to_clause(rotate_square_array(solution,3), H, W)))
+    print ""
+
+...
+
 _PRE_END
 
 ( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/reverse2.py') )
