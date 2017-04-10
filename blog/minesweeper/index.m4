@@ -11,12 +11,53 @@ _HEADER_HL1(`5-Mar-2017: Cracking Minesweeper with Z3 SMT solver')
 <p>What we have here, actually? Hidden cells, empty cells (where bombs are not present), and empty cells with numbers, which shows how many bombs are placed nearby.
 Here is what we can do: we will try to place a bomb to all possible hidden cells and ask Z3 SMT solver, if it can disprove the very fact that the bomb can be placed there.</p>
 
+_HL2(`The method')
+
+<p>Take a look at this fragment. "?" mark is for unknown cell, "." is for empty cell, digit is a number of neighbours.</p>
+
+_PRE_BEGIN
+? ? ?
+? 3 .
+? 1 .
+_PRE_END
+
+<p>
+So there are 5 unknown cells.
+We will try each unknown cell by placing a bomb there.
+Let's first pick top/left cell:
+</p>
+
+_PRE_BEGIN
+1 ? ?
+? 3 .
+? 1 .
+_PRE_END
+
+<p>Then we will try to solve the following system of equations (RrCc is cell of row r and column c):</p>
+
+_PRE_BEGIN
+R1C2+R2C1+R2C2=1                               (because we placed bomb at R1C1)
+R2C1+R2C2+R3C1=1                               (because we have "1" at R3C2)
+R1C1+R1C2+R1C3+R2C1+R2C2+R2C3+R3C1+R3C2+R3C3=3 (because we have "3" at R2C2)
+R1C2+R1C3+R2C2+R2C3+R3C2+R3C3=0                (because we have "." at R2C3)
+R2C2+R2C3+R3C2+R3C3=0                          (because we have "." at R3C3)
+_PRE_END
+
+<p>
+As it turns out, this system of equations is satisfiable, so there could be a bomb at this cell.
+But this information is not interesting to us, since we want to find cells we can freely click on.
+And we will try another one...
+</p>
+
+_HL2(`The code')
+
 _PRE_BEGIN
 m4_include(`blog/minesweeper/minesweeper_solver.py')
 _PRE_END
 
 <p>The code is almost self-explanatory.
-We need border for the same reason, why Conway's "Game of Life" implementations also has border.
+We need border for the same reason, why Conway's "Game of Life" implementations also has border (to make calculation
+function simpler).
 Whenever we know that the cell is free of bomb, we put zero there.
 Whenever we know number of neighbours, we add a constraint, again, just like in "Game of Life": number of neighbours must be equal to the number we got from the Minesweeper.
 Then we place bomb somewhere and check.</p>

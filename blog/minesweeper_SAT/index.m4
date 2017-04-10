@@ -142,6 +142,20 @@ _PRE_END
 
 <p>It means, it will return "True", if all input variables are "False".</p>
 
+<p>By the way, function for POPCNT1 is also simple:</p>
+
+_PRE_BEGIN
+(!a||!b)&&(!a||!c)&&(!a||!d)&&(!a||!e)&&(!a||!f)&&(!a||!g)&&(!a||!h)&&(a||b||c||d||e||f||g||h)&&
+(!b||!c)&&(!b||!d)&&(!b||!e)&&(!b||!f)&&(!b||!g)&&(!b||!h)&&(!c||!d)&&(!c||!e)&&(!c||!f)&&(!c||!g)&&
+(!c||!h)&&(!d||!e)&&(!d||!f)&&(!d||!g)&&(!d||!h)&&(!e||!f)&&(!e||!g)&&(!e||!h)&&(!f||!g)&&(!f||!h)&&(!g||!h)
+_PRE_END
+
+<p>
+It just enumerates all possible pairs of 8 variables (a/b, a/c, a/d, etc) and says: no two bits must be present
+simultaneously in each possible pair.
+And there is another clause: "(a||b||c||d||e||f||g||h)", which says: at least one bit must be present among 8 variables.
+</p>
+
 <p>And yes, you can ask Mathematica for finding CNF expressions for any other truth table.</p>
 
 _HL2(`Minesweeper')

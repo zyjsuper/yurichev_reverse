@@ -165,6 +165,20 @@ Hard to believe someone did this on purpose.
 Most likely, it was just an unnoticed bug.
 </p>
 
+_HL2(`XOR ciphers')
+
+<p>
+Even simpler amateur cryptography is just application of XOR operation using some kind of table.
+Maybe even simpler. This is a real algorithm I once saw:
+</p>
+
+_PRE_BEGIN
+for (i=0; i&lt;size; i++)
+    buf[i]=buf[i]^(31*(i+1));
+_PRE_END
+
+<p>This is not even encryption, rather concealing or hiding.</p>
+
 _HL3(`Links')
 
 <p>Pegasus Mail Password Decoder: _HTML_LINK_AS_IS(`http://phrack.org/issues/52/3.html') -
