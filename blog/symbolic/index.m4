@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`9-Feb-2017: Symbolic execution')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p>
 The following blog post will be part of bigger article.
 Meanwhile, readers are highly advised to read short introduction into symbolic mathematics:

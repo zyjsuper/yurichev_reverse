@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`12-Mar-2017: Conway’s Game of Life and SAT solver')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 _HL2(`Part I: reversing back state of "Game of Life".')
 
 <p>How could we reverse back a known state of GoL?
