@@ -36,6 +36,8 @@ sat
 667     11      1342    83383
 _PRE_END
 
+_HL2(`Unsat core')
+
 <p>Now the problem: what if there is circular dependency? Like:</p>
 
 _PRE_BEGIN
@@ -75,7 +77,69 @@ _PRE_END
 
 <p>Perhaps, these variables could be removed from the 2D array, marked as "unresolved" and the whole spreadsheet could be recalculated again.</p>
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/spreadsheet').</p>
+_HL2(`Stress test')
+
+How to generate large random spreadsheet?
+What we can do.
+First, create random DAG (Directed acyclic graph), like this one:
+
+<img src="https://yurichev.com/blog/spreadsheet/1.png">
+
+Arrows will represent information flow.
+So the vertex (node) which has arrows to other vertices (outdegree>0) and has no incoming arrows to it (indegree=0), can be filled with random numbers.
+Then we use topological sort to find dependencies between vertices.
+Then we assign spreadsheet cell names to each vertex.
+Then we generate random expression with random operations and random numbers to each cell, which will use information from topological sorted graph.
+
+_PRE_BEGIN
+(* Utility functions *)
+In[1]:= findSublistBeforeElementByValue[lst_,element_]:=lst[[ 1;;Position[lst, element][[1]][[1]]-1]]
+
+(* Input in 1..∞ range. 1A0, 2A1, etc *)
+In[2]:= vertexToName[x_,width_]:=StringJoin[FromCharacterCode[ToCharacterCode["A"][[1]]+Floor[(x-1)/width]],ToString[Mod[(x-1),width]]]
+
+In[3]:= randomNumberAsString[]:=ToString[RandomInteger[{1,1000}]]
+
+In[4]:= interleaveListWithRandomNumbersAsStrings[lst_]:=Riffle[lst,Table[randomNumberAsString[],Length[lst]-1]]
+
+(* We omit division operation because micro-spreadsheet evaluator can't handle division by zero *)
+In[5]:= interleaveListWithRandomOperationsAsStrings[lst_]:=Riffle[lst,Table[RandomChoice[{"+","-","*"}],Length[lst]-1]]
+
+In[6]:= randomNonNumberExpression[g_,vertex_]:=StringJoin[interleaveListWithRandomOperationsAsStrings[interleaveListWithRandomNumbersAsStrings[Map[vertexToName[#,WIDTH]&,pickRandomNonDependentVertices[g,vertex]]]]]
+
+In[7]:= pickRandomNonDependentVertices[g_,vertex_]:=DeleteDuplicates[RandomChoice[findSublistBeforeElementByValue[TopologicalSort[g],vertex],RandomInteger[{1,5}]]]
+
+In[8]:= assignNumberOrExpr[g_,vertex_]:=If[VertexInDegree[g,vertex]==0,randomNumberAsString[],randomNonNumberExpression[g,vertex]]
+
+(* Main part *) 
+(* Create random graph *)
+In[21]:= WIDTH=7;HEIGHT=8;TOTAL=WIDTH*HEIGHT
+Out[21]= 56
+
+In[24]:= g=DirectedGraph[RandomGraph[BernoulliGraphDistribution[TOTAL,0.05]],"Acyclic"];
+
+...
+
+(* Generate random expressions and numbers *)
+In[26]:= expressions=Map[assignNumberOrExpr[g,#]&,VertexList[g]];
+
+(* Make 2D table of it *)
+In[27]:= t=Partition[expressions,WIDTH];
+
+(* Export as tab-separated values *)
+In[28]:= Export["/home/dennis/1.txt",t,"TSV"]
+Out[28]= /home/dennis/1.txt
+
+In[29]:= Grid[t,Frame->All,Alignment->Left]
+_PRE_END
+
+Here is an output from Grid[]:
+
+m4_include(`blog/spreadsheet/grid.html')
+
+_HL2(`Conclusion')
+
+<p>The files, including Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/spreadsheet').</p>
 
 <p>Other Z3-related examples: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 
