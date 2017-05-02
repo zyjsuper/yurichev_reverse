@@ -79,17 +79,17 @@ _PRE_END
 
 _HL2(`Stress test')
 
-How to generate large random spreadsheet?
+<p>How to generate large random spreadsheet?
 What we can do.
-First, create random DAG (Directed acyclic graph), like this one:
+First, create random DAG (Directed acyclic graph), like this one:</p>
 
 <img src="https://yurichev.com/blog/spreadsheet/1.png">
 
-Arrows will represent information flow.
+<p>Arrows will represent information flow.
 So the vertex (node) which has arrows to other vertices (outdegree>0) and has no incoming arrows to it (indegree=0), can be filled with random numbers.
 Then we use topological sort to find dependencies between vertices.
 Then we assign spreadsheet cell names to each vertex.
-Then we generate random expression with random operations and random numbers to each cell, which will use information from topological sorted graph.
+Then we generate random expression with random operations and random numbers to each cell, which will use information from topological sorted graph.</p>
 
 _PRE_BEGIN
 (* Utility functions *)
@@ -133,9 +133,11 @@ Out[28]= /home/dennis/1.txt
 In[29]:= Grid[t,Frame->All,Alignment->Left]
 _PRE_END
 
-Here is an output from Grid[]:
+<p>Here is an output from Grid[]:</p>
 
-m4_include(`blog/spreadsheet/grid.html')
+m4_include(`blog/spreadsheet/grid.txt')
+
+<p>Using this script, I can generate random spreadsheet 26*500 cells (13000 cells), which seems to be processed in couple of seconds.</p>
 
 _HL2(`Conclusion')
 

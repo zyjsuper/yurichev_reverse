@@ -1,0 +1,75 @@
+<table class='Output' frame='box' rules='all'>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>846</span></td>
+  <td style='text-align: left;'><span>499</span></td>
+  <td style='text-align: left;'><span>A3*913-H4</span></td>
+  <td style='text-align: left;'><span>808</span></td>
+  <td style='text-align: left;'><span>278</span></td>
+  <td style='text-align: left;'><span>303</span></td>
+  <td style='text-align: left;'><span>D1+579+B6</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>B4*860+D2</span></td>
+  <td style='text-align: left;'><span>999</span></td>
+  <td style='text-align: left;'><span>59</span></td>
+  <td style='text-align: left;'><span>442</span></td>
+  <td style='text-align: left;'><span>425</span></td>
+  <td style='text-align: left;'><span>A5*163+B2+127*C2*927*D3*213+C1</span></td>
+  <td style='text-align: left;'><span>583</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>G6*379-C3-436-C4-289+H6</span></td>
+  <td style='text-align: left;'><span>972</span></td>
+  <td style='text-align: left;'><span>804</span></td>
+  <td style='text-align: left;'><span>D2</span></td>
+  <td style='text-align: left;'><span>G5+108-F1*413-D3</span></td>
+  <td style='text-align: left;'><span>B5</span></td>
+  <td style='text-align: left;'><span>G4*981*D2</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>F2</span></td>
+  <td style='text-align: left;'><span>E0</span></td>
+  <td style='text-align: left;'><span>B6-731-D3+791+B4*92+C1</span></td>
+  <td style='text-align: left;'><span>551</span></td>
+  <td style='text-align: left;'><span>F4*922*C2+760*A6-992+B4-184-A4</span></td>
+  <td style='text-align: left;'><span>B1-624-E3</span></td>
+  <td style='text-align: left;'><span>F4+182+A4*940-E1+76*C1</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>519</span></td>
+  <td style='text-align: left;'><span>G1*402+D1*107*G3-458*A1</span></td>
+  <td style='text-align: left;'><span>D3</span></td>
+  <td style='text-align: left;'><span>B4</span></td>
+  <td style='text-align: left;'><span>B3*811-D3*345+E0</span></td>
+  <td style='text-align: left;'><span>B5</span></td>
+  <td style='text-align: left;'><span>H5</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>F5-531+B5-222*E4</span></td>
+  <td style='text-align: left;'><span>9</span></td>
+  <td style='text-align: left;'><span>B5+106*B6+600-B1</span></td>
+  <td style='text-align: left;'><span>E3</span></td>
+  <td style='text-align: left;'><span>A5+866*F6+695-A3*226+C6</span></td>
+  <td style='text-align: left;'><span>F4*102*E4*998-H0</span></td>
+  <td style='text-align: left;'><span>B1-616-G5+812-A5</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>C3-956*A5</span></td>
+  <td style='text-align: left;'><span>G4*408-D3*290*B6-899*G5+400+F1</span></td>
+  <td style='text-align: left;'><span>B2-701+H6</span></td>
+  <td style='text-align: left;'><span>A3+782*A5+46-B3-731+C1</span></td>
+  <td style='text-align: left;'><span>42</span></td>
+  <td style='text-align: left;'><span>287</span></td>
+  <td style='text-align: left;'><span>H0</span></td>
+ </tr>
+ <tr style='vertical-align: baseline;'>
+  <td style='text-align: left;'><span>B4-792*H4*407+F6-425-E1</span></td>
+  <td style='text-align: left;'><span>D2</span></td>
+  <td style='text-align: left;'><span>D3</span></td>
+  <td style='text-align: left;'><span>F2-327*G4*35*E1</span></td>
+  <td style='text-align: left;'><span>E1+376*A6-606*F6*554+C5</span></td>
+  <td style='text-align: left;'><span>E3</span></td>
+  <td style='text-align: left;'><span>F6*484+C1-114-H4-638-A3</span></td>
+ </tr>
+</table>
+
