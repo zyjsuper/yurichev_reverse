@@ -32,7 +32,7 @@ cur_C=0
 for row in ar:
     for c in row:
         # string like "A0+B2" becomes "cells["A0"]+cells["B2"]":
-        c=re.sub(r'([A-Z]{1}[0-9]{1})', r'cells["\1"]', c)
+        c=re.sub(r'([A-Z]{1}[0-9]+)', r'cells["\1"]', c)
         st="cells[\"%s\"]==%s" % (coord_to_name(cur_R, cur_C), c)
         # evaluate string. Z3Py expression is constructed at this step:
         e=eval(st)

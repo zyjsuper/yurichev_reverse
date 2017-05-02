@@ -37,7 +37,7 @@ m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _
 m4_define(`_EXERCISE_SPOILER_WARNING',`<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A).</p>')
 
 m4_define(`_BLOG_FOOTER',`<hr>
-<p>&rarr; [_HTML_LINK(`//yurichev.com/blog/index.html',`list of blog posts')]</p>
+<p>&rarr; [_HTML_LINK(`//yurichev.com/blog/index.html',`list of blog posts'), my _HTML_LINK(`https://twitter.com/yurichev',`twitter')/_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook')]</p>
 <p><h5>The page last updated on m4_esyscmd(date -r m4___file__ +"%d-%B-%Y")</h5></p>
 
 <!-- <span class="st_twitter" displayText="Tweet"></span>

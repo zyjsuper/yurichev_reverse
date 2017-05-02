@@ -18,6 +18,7 @@ _PRE_END
 
 <p>All we do is just creating pack of variables for each cell, named A0, B1, etc, of integer type.
 All of them are stored in <i>cells[]</i> dictionary.
+Key is a string.
 Then we parse all the strings from cells, and add to list of constraints "A0=123" (in case of number in cell) or "A0=B1+C2" (in case of expression in cell).
 There is a slight preparation: string like "A0+B2" becomes "cells["A0"]+cells["B2"]".</p>
 
