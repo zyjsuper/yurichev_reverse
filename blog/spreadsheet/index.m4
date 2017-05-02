@@ -95,7 +95,7 @@ _PRE_BEGIN
 (* Utility functions *)
 In[1]:= findSublistBeforeElementByValue[lst_,element_]:=lst[[ 1;;Position[lst, element][[1]][[1]]-1]]
 
-(* Input in 1..∞ range. 1A0, 2A1, etc *)
+(* Input in 1..∞ range. 1->A0, 2->A1, etc *)
 In[2]:= vertexToName[x_,width_]:=StringJoin[FromCharacterCode[ToCharacterCode["A"][[1]]+Floor[(x-1)/width]],ToString[Mod[(x-1),width]]]
 
 In[3]:= randomNumberAsString[]:=ToString[RandomInteger[{1,1000}]]
