@@ -1,5 +1,7 @@
 m4_include(`commons.m4')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 _HEADER_HL1(`29-Apr-2017: Recalculating micro-spreadsheet using Z3Py')
 
 <p>There is a nice exercise (_HTML_LINK(`http://thesz.livejournal.com/280784.html',`blog post in Russian')): write a program to recalculate micro-spreadsheet, like this one:</p>
@@ -86,7 +88,7 @@ First, create random DAG (Directed acyclic graph), like this one:</p>
 <img src="https://yurichev.com/blog/spreadsheet/1.png">
 
 <p>Arrows will represent information flow.
-So the vertex (node) which has arrows to other vertices (outdegree>0) and has no incoming arrows to it (indegree=0), can be filled with random numbers.
+So the vertex (node) which has no incoming arrows to it (indegree=0), can be filled with random numbers.
 Then we use topological sort to find dependencies between vertices.
 Then we assign spreadsheet cell names to each vertex.
 Then we generate random expression with random operations and random numbers to each cell, which will use information from topological sorted graph.</p>
