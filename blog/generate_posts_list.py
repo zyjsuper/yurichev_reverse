@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 5,10,0,0,0), "2017-may-10","News")
     post(f1,f2,datetime.datetime(2017, 4,29,0,0,0), "spreadsheet","Recalculating micro-spreadsheet using Z3Py")
     post(f1,f2,datetime.datetime(2017, 3,12,0,0,0), "GoL_SAT","Conway’s Game of Life and SAT solver")
     post(f1,f2,datetime.datetime(2017, 3, 7,0,0,0), "minesweeper_SAT","Cracking Minesweeper with SAT solver")
