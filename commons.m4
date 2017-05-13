@@ -11,8 +11,6 @@ m4_define(`_HEADER',`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//E
 <meta name="author" content="Dennis Yurichev">
 _MAKE_TITLE(`$1')
 <link rel="stylesheet" href="https://yurichev.com/style.css">
-<script src="https://yurichev.com/multilang.js" type="text/javascript"></script>
-<script src="https://yurichev.com/showhide.js" type="text/javascript"></script>
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({
     tex2jax: {inlineMath: [["$","$"],["\\(","\\)"]]}
@@ -21,13 +19,6 @@ _MAKE_TITLE(`$1')
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
 </head>
 <body>')
-
-m4_define(`_MULTILANG_SWITCH',`<h5>
-<p class="right">
-<a href="javascript:set_english();">English</a>&nbsp;
-<a href="javascript:set_russian();">Русский</a></p>
-</h5>')
-
 
 m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`//yurichev.com',`back to the main page')]</p>
 </body>
