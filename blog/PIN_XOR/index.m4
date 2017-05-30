@@ -170,7 +170,7 @@ _PRE_BEGIN
 .text:000000014004107C
 _PRE_END
 
-<p>This piece has both PXOR and AESENC instruction (which is AES encryption instruction).
+<p>This piece has both PXOR and AESENC instructions (the last is AES encryption instruction).
 So yes, we found encryption function, RAR uses AES.</p>
 
 <p>There is also another big block of almost contiguous XOR instructions:</p>
