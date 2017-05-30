@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`30-May-2017: Using PIN DBI for XOR intercepting')
+_HEADER_HL1(`30-May-2017: Using PIN DBI for XOR interception')
 
 <p>PIN from Intel is a DBI (Dynamic Binary Instrumentation) tool.
 That means, it takes compiled binary and inserts your instructions in it, where you want.</p>
