@@ -6,18 +6,18 @@ _HEADER_HL1(`30-May-2017: Using PIN DBI for XOR intercepting')
 That means, it takes compiled binary and inserts your instructions in it, where you want.</p>
 
 <p>Let's try to intercept all XOR instructions.
-These are heavily used in cryptography, and we can try to run RAR archiver in encryption mode with a hope
+These are heavily used in cryptography, and we can try to run WinRAR archiver in encryption mode with a hope
 that some XOR instruction is indeed is used while encryption.</p>
 
 <p>Here is the source code of my PIN tool: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.cpp').</p>
 
 <p>The code is almost self-explanatory: it scans input executable file for all XOR/PXOR instructions and inserts
 a call to our function before each.
-log_info() function first checks, if operands are different (sine XOR is often used just to clear register,
+log_info() function first checks, if operands are different (since XOR is often used just to clear register,
 like XOR EAX, EAX), and if they are different, it increments a counter at this EIP/RIP, so the statistics will be gathered.</p>
 
 <p>I have prepared two files for test: test1.bin (30720 bytes) and test2.bin
-(5547752 bytes), I'll compress them by RAR with passwords and see difference in statistics.</p>
+(5547752 bytes), I'll compress them by RAR with password and see difference in statistics.</p>
 
 <p>You'll also need to _HTML_LINK(`https://stackoverflow.com/questions/9560993/how-do-you-disable-aslr-address-space-layout-randomization-on-windows-7-x64',`turn off ASLR'),
 so the PIN tool will report the same RIPs as in RAR executable.</p>
@@ -129,7 +129,7 @@ _PRE_BEGIN
 .text:000000014002C505                 inc     ebx
 _PRE_END
 
-<p>Loop body can be written as <b>state = ^ (state<<5) & 0x7FFF</b>.
+<p>Loop body can be written as <b>state = input_byte ^ (state<<5) & 0x7FFF</b>.
 <i>state</i> is then used as index in some table. Is this some kind of CRC? I don't know, but this could be a checksumming routine.
 Or maybe optimized CRC routine? Any ideas?</p>
 
