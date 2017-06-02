@@ -124,6 +124,11 @@ This is relatively fresh feature in Z3, so probably it was not stable in previou
 </p>
 
 <p>
+The files:
+_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/set_cover').
+</p>
+
+<p>
 Further reading:
 _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Set_cover_problem'),
 _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Maximum_satisfiability_problem').
