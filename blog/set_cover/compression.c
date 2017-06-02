@@ -369,7 +369,7 @@ finish:
 }
 
 #define PLAIN_BUF_MAX_LEN 4096
-// just in case, compressed buffer is bigger, since the data is random and has big entropy
+// just in case, compressed buffer is bigger, since the data is random and has high level of entropy
 #define COMPRESSED_BUF_LEN PLAIN_BUF_MAX_LEN*2
 
 
