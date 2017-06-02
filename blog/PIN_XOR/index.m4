@@ -3,7 +3,9 @@ m4_include(`commons.m4')
 _HEADER_HL1(`30-May-2017: Using PIN DBI for XOR interception')
 
 <p>PIN from Intel is a DBI (Dynamic Binary Instrumentation) tool.
-That means, it takes compiled binary and inserts your instructions in it, where you want.</p>
+That means, it takes compiled binary and inserts your instructions in it, where you want.
+It can be viewed as highly advanced and fast debugger.
+</p>
 
 <p>Let's try to intercept all XOR instructions.
 These are heavily used in cryptography, and we can try to run WinRAR archiver in encryption mode with a hope
