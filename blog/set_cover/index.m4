@@ -1,15 +1,15 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`2-Jun-2017: Minimizing test set using Z3')
+_HEADER_HL1(`2-Jun-2017: Making smallest possible test suite using Z3')
 
 <p>
 I once worked on rewriting large piece of code into pure C, and there were a tests, several thousands.
-Testing process was painfully slow, so I thought if the test set can be minimized somehow.
+Testing process was painfully slow, so I thought if the test suite can be minimized somehow.
 </p>
 
 <p>
 What we can do is to run each test and get code coverage.
-Then the task is to build such test set, where coverage is maximum, and number of tests is minimal.
+Then the task is to make such test suite, where coverage is maximum, and number of tests is minimal.
 </p>
 
 <p>
