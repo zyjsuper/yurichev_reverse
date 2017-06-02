@@ -131,7 +131,8 @@ _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/set
 <p>
 Further reading:
 _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Set_cover_problem'),
-_HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Maximum_satisfiability_problem').
+_HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Maximum_satisfiability_problem'),
+_HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Optimization_problem').
 </p>
 
 _BLOG_FOOTER()
