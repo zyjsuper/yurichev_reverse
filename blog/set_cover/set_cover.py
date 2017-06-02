@@ -56,10 +56,10 @@ for line in list(all_lines):
     # the expression is then added as a constraint:
     opt.add(Or(*expressions))
 
-# we need to find a such solution, where minimal number of all tests_X variables will have 1
+# we need to find a such solution, where minimal number of all "test_X" variables will have 1
 # "*tests" unfolds to a list of arguments: [test_1, test_2, test_3,...]
 # "Sum(*tests)" unfolds to the following expression: "Sum(test_1, test_2, ...)"
-# the sum of all test_X variables should be as minimal as possible:
+# the sum of all "test_X" variables should be as minimal as possible:
 h=opt.minimize(Sum(*tests))
 
 print (opt.check())
