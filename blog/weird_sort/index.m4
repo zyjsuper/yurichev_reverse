@@ -11,7 +11,7 @@ eventually terminate, and the implementation must not cheat with tricks like tim
 loops. What is the complexity of your algorithm as a function of n?
 _PRE_END()
 
-<p>The problem is in fact tricky, but I've seen solution once in a serious a big piece of code I've rewritten to C.</p>
+<p>The problem is in fact tricky, but I've seen solution once in a serious and big piece of code I've rewritten to C.</p>
 
 <p>Here it is:</p>
 
