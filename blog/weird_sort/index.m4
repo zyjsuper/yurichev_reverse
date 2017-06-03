@@ -40,7 +40,7 @@ just to be sure everything is sorted at the end.</p>
 <p>The moral of the story: sometimes it's easier to observe inputs/outputs, then to comprehend the code.</p>
 
 <p>Even worse, when I googled for "bubble sort", just to be sure I'm correct, I've found quite similar implementation,
-also without temporary variable:</p>
+also without <i>has-been-swapped</i> variable:</p>
 
 _PRE_BEGIN()
 /* Bubble sort code */
