@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/weird_sort/index.html \
 	blog/set_cover/index.html \
 	blog/PIN_XOR/index.html \
 	blog/cyclomatic/index.html \

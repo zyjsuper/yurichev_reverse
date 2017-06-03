@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 6, 3,0,0,0), "weird_sort","Worst sorting algorithm I ever saw")
     post(f1,f2,datetime.datetime(2017, 6, 2,0,0,0), "set_cover","Making smallest possible test suite using Z3")
     post(f1,f2,datetime.datetime(2017, 5,30,0,0,0), "PIN_XOR","Using PIN DBI for XOR interception")
     post(f1,f2,datetime.datetime(2017, 5,13,0,0,0), "cyclomatic","Cyclomatic complexity")
