@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/8queens/index.html \
 	blog/weird_sort/index.html \
 	blog/set_cover/index.html \
 	blog/PIN_XOR/index.html \
@@ -134,8 +135,10 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 
 all: $(HTML_FILES)
 
-blog/posts.html:
+blog/posts.html: blog/generate_posts_list.py
 	cd blog; python generate_posts_list.py; cd ..
+
+blog/index.html: blog/posts.html
 
 clean: 
 	rm $(HTML_FILES)
