@@ -15,6 +15,7 @@ KNOB<string> KnobOutputFile(KNOB_MODE_WRITEONCE, "pintool",
 std::map<ADDRINT, int> XORs;
 PIN_LOCK lock;
 
+// ==== these functions executed during runtime (begin) ====
 VOID log_info (ADDRINT ip, ADDRINT op1, ADDRINT op2)
 {
 	if (op1!=op2 && op1!=0 && op2!=0 && op1!=0xffffffff && op2!=0xffffffff)
@@ -48,7 +49,9 @@ VOID PXOR(ADDRINT ip, THREADID threadid)
 	XORs[ip]=XORs[ip]+1;
 	PIN_ReleaseLock(&lock);
 }
+// ==== these functions executed during runtime (end) ====
 
+// this function executed only during startup, so no need to optimize anything here:
 VOID InstrumentXOR(INS ins, VOID* v)
 {
 	// XOR reg, reg

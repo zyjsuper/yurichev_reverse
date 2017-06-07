@@ -31,34 +31,7 @@ After the compression/decompression routine has finished its work, GNU gcov util
 </p>
 
 _PRE_BEGIN()
-     1401:  161:static void insert_node(struct encode_state *sp, int r)
-        -:  162:{
-        -:  163:    int  i, p, cmp;
-        -:  164:    u_int8_t  *key;
-        -:  165:
-     1401:  166:    cmp = 1;
-     1401:  167:    key = &sp->text_buf[r];
-     1401:  168:    p = N + 1 + key[0];
-     1401:  169:    sp->rchild[r] = sp->lchild[r] = NIL;
-     1401:  170:    sp->match_length = 0;
-        -:  171:    for ( ; ; ) {
-     3966:  172:        if (cmp >= 0) {
-     2611:  173:            if (sp->rchild[p] != NIL)
-     1783:  174:                p = sp->rchild[p];
-        -:  175:            else {
-      828:  176:                sp->rchild[p] = r;
-      828:  177:                sp->parent[r] = p;
-      828:  178:                return;
-        -:  179:            }
-        -:  180:        } else {
-     1355:  181:            if (sp->lchild[p] != NIL)
-      782:  182:                p = sp->lchild[p];
-        -:  183:            else {
-      573:  184:                sp->lchild[p] = r;
-      573:  185:                sp->parent[r] = p;
-      573:  186:                return;
-        -:  187:            }
-        -:  188:        }
+...
      3395:  189:        for (i = 1; i < F; i++) {
      3395:  190:            if ((cmp = key[i] - sp->text_buf[p + i]) != 0)
      2565:  191:                break;
@@ -76,10 +49,7 @@ _PRE_BEGIN()
     #####:  203:    sp->parent[sp->rchild[p]] = r;
     #####:  204:    if (sp->rchild[sp->parent[p]] == p)
     #####:  205:        sp->rchild[sp->parent[p]] = r;
-        -:  206:    else
-    #####:  207:        sp->lchild[sp->parent[p]] = r;
-    #####:  208:    sp->parent[p] = NIL;  /* remove p */
-        -:  209:}
+...
 _PRE_END()
 
 <p>
