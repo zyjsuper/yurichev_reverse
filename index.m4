@@ -11,7 +11,7 @@ As of 2013-2017 I mostly known for
 _HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
 </p>
 
-<p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p>
+<!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
 
 _HL2(`Some of my writings:')
 

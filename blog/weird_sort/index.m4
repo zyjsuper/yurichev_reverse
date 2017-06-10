@@ -81,7 +81,7 @@ int main()
 }
 _PRE_END()
 
-<p>It's somewhat faster, but still weird.
+<p>It's somewhat faster ($O(\frac{n^2}{2})$, if I'm correct), but still weird.
 I've found it on <i>programmingsimplified.com</i> website:</p>
 
 <p>_HTML_LINK_AS_IS(`http://www.programmingsimplified.com/c/source-code/c-program-bubble-sort'),
