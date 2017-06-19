@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 6,19,0,0,0), "XOR_Z3","Cracking simple XOR cipher with Z3")
     post(f1,f2,datetime.datetime(2017, 6, 7,0,0,0), "8queens","Eight queens problem in 93 bytes")
     post(f1,f2,datetime.datetime(2017, 6, 3,0,0,0), "weird_sort","Worst sorting algorithm I ever saw")
     post(f1,f2,datetime.datetime(2017, 6, 2,0,0,0), "set_cover","Making smallest possible test suite using Z3")
