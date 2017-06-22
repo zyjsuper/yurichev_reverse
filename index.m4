@@ -4,7 +4,9 @@ _HEADER(`index')
 
 _HL1(`Dennis Yurichev / Денис Юричев')
 
-_HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')
+<!--_HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`click for bigger image')')-->
+_HTML_IMG(`pix/DY_mask_m0m0sha.jpg')
+<p><h5>(Photo courtesy of _HTML_LINK(`http://go.yurichev.com/1986',`my younger muse').)</h5></p>
 
 <p>
 As of 2013-2017 I mostly known for 
