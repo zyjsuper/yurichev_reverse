@@ -37,7 +37,7 @@ _HL2(`Replacing rand() calls with our function')
 During startup, PIN replaces all calls to rand() to calls to our function, which writes to log and returns zero.
 OK, I run it, and clicked on leftmost/topmost cell:</p>
 
-<p><img src="blog/minesweeper_PIN/minesweeper1.png"></p>
+<p><img src="minesweeper1.png"></p>
 
 <p>Yes, unlike Minesweeper from Windows XP, mines are places randomly <i>after</i> user's click on cell, so to guarantee
 there is no mine at the cell user first clicked.
@@ -45,13 +45,13 @@ So Minesweeper placed cells on cells other than leftmost/topmost (where I clicke
 
 <p>Now I clicked on rightmost/topmost cell:</p>
 
-<p><img src="blog/minesweeper_PIN/minesweeper2.png"></p>
+<p><img src="minesweeper2.png"></p>
 
 <p>This can be some kind of practical joke? I don't know.</p>
 
 <p>I clicked on 5th cell (right at the middle) on the 1st row:</p>
 
-<p><img src="blog/minesweeper_PIN/minesweeper3.png"></p>
+<p><img src="minesweeper3.png"></p>
 
 <p>This is nice, because Minesweeper can do some correct placement even with such broken PRNG!</p>
 
