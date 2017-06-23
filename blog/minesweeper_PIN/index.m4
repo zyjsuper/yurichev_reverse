@@ -49,7 +49,7 @@ So Minesweeper placed cells on cells other than leftmost/topmost (where I clicke
 
 <p>This can be some kind of practical joke? I don't know.</p>
 
-<p>I clicked on 5th cell (right at the middle) on the 1st row:</p>
+<p>I clicked on 5th cell (right at the middle) at the 1st row:</p>
 
 <p><img src="minesweeper3.png"></p>
 
@@ -182,7 +182,9 @@ so we can see it during free() call.</p>
 <p>Another fact: the method Array&lt;NodeType>::Add(NodeType) modifies blocks we observed, and is called from various places, including Board::placeMines().
 But what is cool: I never got into its details, everything has been resolved using just PIN.</p>
 
-<p>(The post was first published at 24-Jun-2017.)</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/minesweeper_PIN').</p>
+
+<p><h5>(The post was first published at 24-Jun-2017.)</h5></p>
 
 _BLOG_FOOTER()
 
