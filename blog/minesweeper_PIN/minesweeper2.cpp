@@ -25,7 +25,7 @@ int my_rand(ADDRINT RA, THREADID threadid)
 	TraceFile << "my_rand() RA=" << RA << endl;
 	PIN_ReleaseLock(&lock);
 
-	return 0;
+	return 0; // <- the value returned by our rand() implementation
 };
 
 VOID Image(IMG img, VOID *v)
