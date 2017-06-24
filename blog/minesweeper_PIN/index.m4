@@ -184,6 +184,11 @@ But what is cool: I never got into its details, everything has been resolved usi
 
 <p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/minesweeper_PIN').</p>
 
+_HL2(`Exercise')
+
+<p>Try to understand how rand()'s result being converted into coordinate(s).
+As a practical joke, make rand() to output such results, so mines will be placed in shape of some symbol or figure.</p>
+
 <p><h5>(The post was first published at 24-Jun-2017.)</h5></p>
 
 _BLOG_FOOTER()
