@@ -7,7 +7,7 @@ This is simplest possible backtracking SAT solver written in Python (not a DPLL 
 It uses the same backtracking algorithm you can find in many simple Sudoku solvers.
 It works significantly slower, but due to its extreme simplicity, it can also count solutions.
 For example, it count all solutions of _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/SAT_backtrack/queens8.cnf',`8 queens problem').
-For example, there are 70 solutions for POPCNT4 function (the function is true if any 4 of its input 8 variables are true):</p>
+Also, there are 70 solutions for POPCNT4 function (the function is true if any 4 of its input 8 variables are true):</p>
 
 _PRE_BEGIN
 SAT
@@ -30,7 +30,7 @@ UNSAT
 solutions= 70
 _PRE_END
 
-<p>It was also tested on _HTML_LINK(`https://yurichev.com/blog/minesweeper_SAT/',`my Minesweeper cracker'), and works reasonable time (though, slower than MiniSat by a factor of ~10).</p>
+<p>It was also tested on _HTML_LINK(`https://yurichev.com/blog/minesweeper_SAT/',`my Minesweeper cracker'), and finishes in reasonable time (though, slower than MiniSat by a factor of ~10).</p>
 
 <p>On bigger CNF instances, it gets stuck.</p>
 
