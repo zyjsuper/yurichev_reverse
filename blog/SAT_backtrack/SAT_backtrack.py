@@ -62,6 +62,7 @@ def eval_clause (terms, values):
 
 def chk_vals(clauses, variables_idx, vals):
     # check only clauses which affected by the last (new/changed) value, ignore the rest
+    # because since we already got here, all other values are correct, so no need to recheck them
     idx_of_last_var=len(vals)
     # variable can be absent in index, because no clause uses it:
     if idx_of_last_var not in variables_idx:
