@@ -40,7 +40,7 @@ _PRE_BEGIN
 m4_include(`blog/SAT_backtrack/SAT_backtrack.py')
 _PRE_END
 
-<p>As you can see, all it does is enumerating all possible solutions, but it prunes search tree as early as possible. This is backtracking.</p>
+<p>As you can see, all it does is enumerate all possible solutions, but it prunes search tree as early as possible. This is backtracking.</p>
 
 <p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/SAT_backtrack').</p>
 
