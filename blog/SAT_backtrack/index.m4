@@ -46,5 +46,7 @@ _PRE_END
 
 <p>My other notes about SAT/SMT: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf').</p>
 
+<p>Some comments: _HTML_LINK_AS_IS(`https://www.reddit.com/r/compsci/comments/6jn3th/simplest_sat_solver_in_120_lines/').</p>
+
 _BLOG_FOOTER()
 
