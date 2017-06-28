@@ -35,6 +35,8 @@ In[]:= BooleanMinimize[(x != 7 || y != 0) && (x != 6 && x != 7)]
 Out[]:= x != 6 && x != 7
 _PRE_END
 
+<p>$y$ gets reduced.</p>
+
 <p>But am I really right?
 And why Mathematica and Z3 didn't simplify this at first place?</p>
 
