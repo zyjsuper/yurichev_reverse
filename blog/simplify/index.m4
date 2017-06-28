@@ -64,7 +64,8 @@ _PRE_END
 <p>Z3 can't find counterexample, so it says "unsat", meaning, these expressions are equal to each other.
 So I've rewritten this expression in my code, tests has been passed, etc.</p>
 
-<p>Yes, using both Mathematica and Z3 is overkill, and this is basic boolean algebra, but after ~10 hours of work it's nice to have additional proof your piece of code is correct.</p>
+<p>Yes, using both Mathematica and Z3 is overkill, and this is basic boolean algebra, but after ~10 hours of sitting at a computer you can make really dumb mistakes,
+and additional proof your piece of code is correct never unwanted.</p>
 
 <p>My other notes about SAT/SMT: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf').</p>
 
