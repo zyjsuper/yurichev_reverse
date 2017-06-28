@@ -41,7 +41,7 @@ def read_DIMACS (fname):
 
     return clauses, variables_idx
 
-# clause=list of terms. signed integer -x means negated
+# clause=list of terms. signed integer. -x means negated.
 # values=list of values: from 0th: [F,F,F,F,T,F,T,T...]
 def eval_clause (terms, values):
     try:

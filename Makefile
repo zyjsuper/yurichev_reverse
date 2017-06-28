@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/simplify/index.html \
 	blog/SAT_backtrack/index.html \
 	blog/minesweeper_PIN/index.html \
 	blog/XOR_Z3/index.html \
