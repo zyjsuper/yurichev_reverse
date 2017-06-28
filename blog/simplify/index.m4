@@ -31,8 +31,8 @@ _PRE_END
 <p>This is what Mathematica can simplify:</p>
 
 _PRE_BEGIN
-In[]:= BooleanMinimize[(v12 != 7 || e != 0) && (v12 != 6 && v12 != 7)]
-Out[]:= v12 != 6 && v12 != 7
+In[]:= BooleanMinimize[(x != 7 || y != 0) && (x != 6 && x != 7)]
+Out[]:= x != 6 && x != 7
 _PRE_END
 
 <p>But am I really right?
