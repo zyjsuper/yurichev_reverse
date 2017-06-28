@@ -67,7 +67,7 @@ _PRE_END
 So I've rewritten this expression in my code, tests has been passed, etc.</p>
 
 <p>Yes, using both Mathematica and Z3 is overkill, and this is basic boolean algebra, but after ~10 hours of sitting at a computer you can make really dumb mistakes,
-and additional proof your piece of code is correct never unwanted.</p>
+and additional proof your piece of code is correct is never unwanted.</p>
 
 <p>My other notes about SAT/SMT: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf').</p>
 
