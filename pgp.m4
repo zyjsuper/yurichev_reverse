@@ -59,7 +59,7 @@ FgyhTtNK9u2LJ5VZbFnjJA==
 -----END PGP PUBLIC KEY BLOCK-----
 _PRE_END
 
-_HL1(`My new PGP public key generated in June-2015, to be expired in June-2017 (0x3B262349):')
+_HL1(`My old PGP public key generated in June-2015, expired in June-2017 (0x3B262349):')
 
 _PRE_BEGIN
 -----BEGIN PGP PUBLIC KEY BLOCK-----
