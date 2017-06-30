@@ -242,7 +242,7 @@ AND(0 0 1 0 0  0 0 0 1 0)
 AND(0 0 0 1 0  0 0 0 0 1)
 _PRE_END
 
-<p>There is no "0 0 0 0 1" for Ivory, becaus it cannot be the last one.
+<p>There is no "0 0 0 0 1" for Ivory, because it cannot be the last one.
 Now I can convert these conditions to CNF using Wolfram Mathematica:</p>
 
 _PRE_BEGIN
