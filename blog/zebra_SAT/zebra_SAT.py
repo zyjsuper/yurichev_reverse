@@ -4,7 +4,11 @@ import os
 import itertools
 import sys, subprocess
 
+# list of strings:
 clauses=[]
+
+# k=tuple: ("high-level" variable name, number of bit (0..4))
+# v=variable number in CNF
 vars={}
 vars_last=1
 
