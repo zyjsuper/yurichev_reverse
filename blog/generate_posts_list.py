@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 7, 1,0,0,0), "zebra_SAT","Zebra puzzle as a SAT problem")
     post(f1,f2,datetime.datetime(2017, 6,28,0,0,0), "simplify","Simplifying long and messy expressions using Mathematica and Z3")
     post(f1,f2,datetime.datetime(2017, 6,26,0,0,0), "SAT_backtrack","Simplest SAT solver in ~120 lines")
     post(f1,f2,datetime.datetime(2017, 6,24,0,0,0), "minesweeper_PIN","Cracking Minesweeper with PIN")
