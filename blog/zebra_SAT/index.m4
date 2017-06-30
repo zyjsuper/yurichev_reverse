@@ -131,6 +131,8 @@ def add_popcnt1(v1, v2, v3, v4, v5):
 
 ...
 
+# k=tuple: ("high-level" variable name, number of bit (0..4))
+# v=variable number in CNF
 vars={}
 vars_last=1
 
