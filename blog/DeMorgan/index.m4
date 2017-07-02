@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`De Morgan's laws and decompilation')
 
-<p>Sometimes compiler's optimizer can use _HTML_LINK(`https://en.wikipedia.org/wiki/De_Morgan's_laws',`De Morgan’s laws') to make code shorter/faster.</p>
+<p>Sometimes compiler's optimizer can use _HTML_LINK(`https://en.wikipedia.org/w/index.php?title=De_Morgan%27s_laws',`De Morgan’s laws') to make code shorter/faster.</p>
 
 <p>For example, this:</p>
 
@@ -73,11 +73,9 @@ int __fastcall f(int a, int b, int c, int d)
 _PRE_END
 
 <p>The "c <= 0 || d <= 0" expression is inversion of "c>0 && d>0" since 
-$\overline{A \cup B} &= \overline{A} \cap \overline{B}$ and $\overline{A \cap B} &= \overline{A} \cup \overline{B}$, in other words,
+<!-- $\overline{A \cup B} &= \overline{A} \cap \overline{B}$ and $\overline{A \cap B} &= \overline{A} \cup \overline{B}$, in other words, -->
 "!(cond1 || cond2) == !cond1 && !cond2" and "!(cond1 && cond2) == !cond1 || !cond2".
 </p>
-
-<p>$\frac{a}{b}$</p>
 
 <p>These rules are worth to be kept in mind, since this compiler optimization is used heavily almost everywhere.</p>
 
