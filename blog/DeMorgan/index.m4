@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`De Morgan's laws and decompilation')
+_HEADER_HL1(`De Morgan’s laws and decompilation')
 
 <p>Sometimes compiler's optimizer can use _HTML_LINK(`https://en.wikipedia.org/w/index.php?title=De_Morgan%27s_laws',`De Morgan’s laws') to make code shorter/faster.</p>
 
