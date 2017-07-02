@@ -77,6 +77,8 @@ $\overline{A \cup B} &= \overline{A} \cap \overline{B}$ and $\overline{A \cap B}
 "!(cond1 || cond2) == !cond1 && !cond2" and "!(cond1 && cond2) == !cond1 || !cond2".
 </p>
 
+<p>$\frac{a}{b}$</p>
+
 <p>These rules are worth to be kept in mind, since this compiler optimization is used heavily almost everywhere.</p>
 
 _BLOG_FOOTER()
