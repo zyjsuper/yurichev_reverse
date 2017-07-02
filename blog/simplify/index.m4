@@ -7,7 +7,7 @@ _HEADER_HL1(`Simplifying long and messy expressions using Mathematica and Z3')
 <p>I've added to my RE4B book about Wolfram Mathematica capabilities to minimize expressions:
 _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/blob/cd85356051937e87f90967cc272248084808223b/other/hexrays_EN.tex#L412').</p>
 
-<p>Today I stumbled upon that Hex-Rays output:</p>
+<p>Today I stumbled upon this Hex-Rays output:</p>
 
 _PRE_BEGIN
 if ( ( x != 7 || y!=0 ) && (x < 6 || x > 7) )
