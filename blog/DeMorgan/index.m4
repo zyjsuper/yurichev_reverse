@@ -79,5 +79,33 @@ _PRE_END
 
 <p>These rules are worth to be kept in mind, since this compiler optimization is used heavily almost everywhere.</p>
 
+<p>Sometimes it's good idea to invert a condition, in order to understand a code better. This is a piece of a real code decompiled by Hex-Rays:</p>
+
+_PRE_BEGIN
+	for (int i=0; i<12; i++)
+	{
+		if (v1[i-12] != 0.0 || v1[i] != 0.0)
+		{
+			v108=min(v108, (float)v0[i*24 -2]);
+			v113=max(v113, (float)v0[i*24]);
+		};
+	}
+_PRE_END
+
+<p>... it can be rewritten like:</p>
+
+_PRE_BEGIN
+	for (int i=0; i<12; i++)
+	{
+		if (v1[i-12] == 0.0 && v1[i] == 0.0)
+			continue;
+
+		v108=min(v108, (float)v0[i*24 -2]);
+		v113=max(v113, (float)v0[i*24]);
+	}
+_PRE_END
+
+<p>Which is better? I don't know yet, but for better understanding, it's great to take a look on both.</p>
+
 _BLOG_FOOTER()
 
