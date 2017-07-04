@@ -32,7 +32,7 @@ void weird_sort(int* array, size_t size)
 };
 _PRE_END()
 
-<p>This is bubble sort gone wrong, there are no <i>has-been-swapped</i> variable, so the author added another loop,
+<p>This is bubble sort went wrong, there are no <i>has-been-swapped</i> variable, so the author added another loop,
 just to be sure everything is sorted at the end.</p>
 
 <p>Bubble sort has worst-case performance $O(n^2)$ and best-case $O(n)$, this one always requires $n^2$ steps.</p>
