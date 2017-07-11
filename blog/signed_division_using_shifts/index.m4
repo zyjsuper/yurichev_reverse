@@ -41,7 +41,7 @@ _PRE_BEGIN
 	ret
 _PRE_END
 
-<p>If you divide by 4, 3 will needs to be added to the input value if it's negative. So this is what GCC 4.8 does for "x/4":</p>
+<p>If you divide by 4, 3 needs to be added to the input value if it's negative. So this is what GCC 4.8 does for "x/4":</p>
 
 _PRE_BEGIN
 	lea	eax, [rdi+3] ; prepare x+3 value ahead of time

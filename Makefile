@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/de_bruijn_Z3/index.html \
 	blog/DeMorgan/index.html \
 	blog/zebra_SAT/index.html \
 	blog/simplify/index.html \
