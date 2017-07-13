@@ -24,7 +24,7 @@ int LZCNT(uint32_t x)
 _PRE_END
 
 <p>Read more about it: _HTML_LINK_AS_IS(`https://yurichev.com/blog/de_bruijn/').
-The magic number used here is called "de Bruijn sequence", and I once used bruteforce to find it (the result was 0x4badf0d, used here).
+The magic number used here is called "de Bruijn sequence", and I once used bruteforce to find it (the result was 0x4badf0d, which is used here).
 But what if we need magic number for 64-bit values?
 Bruteforce is not an option here.</p>
 

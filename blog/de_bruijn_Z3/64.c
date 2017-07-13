@@ -7,14 +7,14 @@
 int magic_tbl[64];
 
 // returns single bit position counting from LSB
-// not working for i==0
+// not works for i==0
 int bitpos (uint64_t i)
 {
 	return magic_tbl[(MAGIC/i) & 0x3F];
 };
 
-// trailing zeroes count
-// not working for i==0
+// count trailing zeroes
+// not works for i==0
 int tzcnt (uint64_t i)
 {
 	uint64_t a=i & (-i);

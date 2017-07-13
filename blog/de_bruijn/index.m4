@@ -459,5 +459,7 @@ _HTML_LINK_AS_IS(`http://supertech.csail.mit.edu/papers/debruijn.pdf'),
 _HTML_LINK_AS_IS(`http://alexandria.tue.nl/repository/books/252901.pdf'),
 _HTML_LINK(`https://en.wikipedia.org/wiki/De_Bruijn_sequence',`Wikipedia Article about De Bruijn sequences').</p>
 
+<p>See also: _HTML_LINK(`https://yurichev.com/blog/de_bruijn_Z3/',`Generating de Bruijn sequences using Z3 SMT-solver').</p>
+
 _BLOG_FOOTER()
 

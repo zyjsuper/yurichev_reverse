@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 7,13,0,0,0), "xkcd287","Solving XKCD 287 using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2017, 7,11,0,0,0), "de_bruijn_Z3","Generating de Bruijn sequences using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2017, 7, 2,0,0,0), "DeMorgan","De Morgan’s laws and decompilation")
     post(f1,f2,datetime.datetime(2017, 7, 1,0,0,0), "zebra_SAT","Zebra puzzle as a SAT problem")

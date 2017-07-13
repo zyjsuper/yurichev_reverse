@@ -27,7 +27,7 @@ m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`//yurichev.com',`back to the main pa
 m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _HTML_LINK(`//yurichev.com/blog/',`blog') and _HTML_LINK(`https://beginners.re/',`my book').</p>')
 m4_define(`_EXERCISE_SPOILER_WARNING',`<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A).</p>')
 
-m4_define(`_BLOG_FOOTER',`<hr><p>&rarr; [_HTML_LINK(`//yurichev.com/blog/index.html',`list of blog posts')]</p>
+m4_define(`_BLOG_FOOTER',`<hr><p>&rarr; [_HTML_LINK(`//yurichev.com/blog/index.html',`list of blog posts')] please drop me email about any bug(s) and suggestion(s): <i>dennis(@)yurichev.com</i>.</p>
 </body>
 </html>')
 
