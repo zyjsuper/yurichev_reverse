@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Solving XKCD 287 using Z3 SMT-solver')
 
-<p><img src="blog/xkcd287/np_complete.png"></p>
+<p><img src="np_complete.png"></p>
 
 <p>( _HTML_LINK_AS_IS(`https://www.xkcd.com/287/') )</p>
 
