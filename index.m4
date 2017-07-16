@@ -104,7 +104,7 @@ m4_include(`google.html')
 
 _HL2(`Contacts')
 
-<p>E-Mail: <b>dennis(a)yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
+<p>E-Mail: <b>dennis(@)yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
 <p>Skype: <b>dennis.yurichev</b>.</p>
