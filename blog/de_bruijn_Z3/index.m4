@@ -34,7 +34,7 @@ of 5-bit overlapping chunks, and all chunks must be unique, i.e., must not be re
 <p>For 64-bit magic number, these are 6-bit overlapping chunks.</p>
 
 <p>To find the magic number, one can find a Hamiltonian path of a de Bruijn graph.
-But I've found that Z3 is also can do this, though, overkill, but this is more illustrious.</p>
+But I've found that Z3 is also can do this, though, overkill, but this is more illustrative.</p>
 
 _PRE_BEGIN
 #!/usr/bin/python

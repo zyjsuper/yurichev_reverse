@@ -46,11 +46,11 @@ _PRE_END
 <p>Wolfram Mathematica can solve the equation as well:</p>
 
 _PRE_BEGIN
-In[10]:= FindInstance[2.15 a + 2.75 b + 3.35 c + 3.55 d + 4.20 e + 5.80 f == 15.05 && 
+In[]:= FindInstance[2.15 a + 2.75 b + 3.35 c + 3.55 d + 4.20 e + 5.80 f == 15.05 && 
 	a >= 0 && b >= 0 && c >= 0 && d >= 0  && e >= 0 && f >= 0, 
 	{a, b, c, d, e, f}, Integers, 1000]
 
-Out[10]= {{a -> 1, b -> 0, c -> 0, d -> 2, e -> 0, f -> 1},
+Out[]= {{a -> 1, b -> 0, c -> 0, d -> 2, e -> 0, f -> 1},
 	{a -> 7, b -> 0, c -> 0, d -> 0, e -> 0, f -> 0}}
 _PRE_END
 
