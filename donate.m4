@@ -80,4 +80,6 @@ Ukraine
 
 </ul>
 
+<p>Email me: <b>dennis(@)yurichev.com</b></p>
+
 _FOOTER()
