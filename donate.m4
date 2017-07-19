@@ -17,7 +17,7 @@ _HTML_LINK(`http://beginners.re',`my book about reverse engineering') and _HTML_
         <li>
         <img src="paypal_logo.gif">
 
-        <p><b>smatviyc(a)hotmail.com</b> - it is in fact my friend's account, so please add comment like
+        <p><b>smatviyc(@)hotmail.com</b> - it is in fact my friend's account, so please add comment like
         "for Dennis Yurichev".
         I have my own PayPal account, but citizens of Ukraine are not allowed to receive funds in it</p>
 
