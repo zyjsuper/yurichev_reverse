@@ -109,6 +109,8 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 
 <p>Skype: <b>dennis.yurichev</b>.</p>
 
+<p>Telegram: <b>yurichev</b>, my own channel: <b>yurichev_news</b>.</p>
+
 <p>My _HTML_LINK(`https://bitmessage.org/',`BitMessage ID'): <b>BM-2cUyrfGUDyjuUHyzAA63kq5NHAB2zMo4Q2</b></p>
 
 _FOOTER()
