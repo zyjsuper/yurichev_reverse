@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Simplest SAT solver in ~120 lines')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p>
 This is simplest possible backtracking SAT solver written in Python (not a DPLL one).
 It uses the same backtracking algorithm you can find in many simple Sudoku and 8 queens solvers.
