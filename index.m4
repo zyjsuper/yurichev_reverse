@@ -10,6 +10,8 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 <!-- _HTML_IMG(`pix/DY_mask_m0m0sha.jpg')
 <p><h5>(Photo courtesy of _HTML_LINK(`http://go.yurichev.com/1986',`my younger muse').)</h5></p> -->
 
+<p><b>Chess?</b> My account at _HTML_LINK(`https://www.chess.com/members/view/DY1979',`chess.com') and _HTML_LINK(`http://en.lichess.org/@/DY1979',`lichess.org'). Challenge me if you want to.</p>
+
 <p>
 As of 2013-2017 I mostly known for 
 _HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
