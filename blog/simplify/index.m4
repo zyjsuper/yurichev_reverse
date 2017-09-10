@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Simplifying long and messy expressions using Mathematica and Z3')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p>... which can be results of Hex-Rays and/or manual rewriting.</p>
 
 <p>I've added to my RE4B book about Wolfram Mathematica capabilities to minimize expressions:

@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Solving XKCD 287 using Z3 SMT-solver')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p><img src="np_complete.png"></p>
 
 <p>( _HTML_LINK_AS_IS(`https://www.xkcd.com/287/') )</p>

@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`19-Jun-2017: Cracking simple XOR cipher with Z3')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p>What if we've got a text encrypted with simple XOR cipher, where just XOR mask has been applied?
 It may be long, so brute-force is not an option.</p>
 

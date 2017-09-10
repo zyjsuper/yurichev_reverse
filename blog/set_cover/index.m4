@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`2-Jun-2017: Making smallest possible test suite using Z3')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p>
 I once worked on rewriting large piece of code into pure C, and there were a tests, several thousands.
 Testing process was painfully slow, so I thought if the test suite can be minimized somehow.
