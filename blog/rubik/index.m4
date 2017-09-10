@@ -564,5 +564,7 @@ _HL2(`My other notes about SAT/SMT')
 
 <p>_HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf')</p>
 
+<p>At hacker news: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=15214439').</p>
+
 _BLOG_FOOTER()
 
