@@ -28,7 +28,7 @@ L10 L11 | F10 F11 | R10 R11 | B10 B11
           D10 D11
 _PRE_END
 
-<p>Colors on solved cubik are:</p>
+<p>Colors on a solved cube are:</p>
 
 _PRE_BEGIN
     G G
