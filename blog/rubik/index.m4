@@ -528,8 +528,9 @@ _PRE_END
 
 <p>( ~5m on my old Intel Xeon E3-1220 3.10GHz. )<p>
 
-<p>I couldn't find a pure "11-turn state" which is "unsat" for 10-turn, it seems, these are rare
-(like "20-turn states" for 3*3*3 cube).</p>
+<p>I couldn't find a pure "11-turn state" which is "unsat" for 10-turn, it seems, these are rare.
+According to _HTML_LINK(`https://en.wikipedia.org/wiki/Pocket_Cube',`wikipedia'), there are just 0.072% of these states.
+Like "20-turn states" for 3*3*3 cube, which are also rare.</p>
 
 _HL2(`Several solutions')
 
