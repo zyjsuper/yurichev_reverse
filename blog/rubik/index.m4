@@ -468,7 +468,8 @@ def add_r(dst, src):
 _PRE_END
 
 <p>Now the full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/rubik/SAT.py').
-I tried to make it as concise as possible.</p>
+I tried to make it as concise as possible.
+It requires minisat to be installed.</p>
 
 <p>And it works up to 11 turns, starting at 11, then decreasing number of turns.
 Here is an output for a state which can be solved with 4 turns:</p>
