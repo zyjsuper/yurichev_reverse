@@ -4,7 +4,7 @@ _HEADER_HL1(`Solving pocket Rubik's cube (2*2*2) using Z3 and SAT solver.')
 
 <p>Solving Rubik's cube is not a problem, finding shortest solution is.</p>
 
-<p><img src="blog/rubik/190px-Pocket_cube_scrambled.jpg"></p>
+<p><img src="190px-Pocket_cube_scrambled.jpg"></p>
 
 <p>( The image has been taken _HTML_LINK(`https://en.wikipedia.org/wiki/Pocket_Cube',`from Wikipedia'). )</p>
 
@@ -482,7 +482,7 @@ _PRE_BEGIN
 m4_include(`blog/rubik/post_RDUR.txt')
 _PRE_END
 
-<p>Even on my relic Intel Atorm netbook it takes just 20s.</p>
+<p>Even on my relic Intel Atom 1.5GHz netbook it takes just 20s.</p>
 
 <p>You can find redundant turns in 11-turn solution, like double UH turns.
 Of course, two UH turns returns the cube to the previous state.
@@ -556,7 +556,7 @@ Some people do: _HTML_LINK_AS_IS(`https://arxiv.org/pdf/1105.1436.pdf').</p>
 edge and center cubes.
 Here is mine I used, you can see that corners are correctly solved:</p>
 
-<img src="blog/rubik/3solved.jpg">
+<img src="3solved.jpg">
 
 _HL2(`My other notes about SAT/SMT')
 
