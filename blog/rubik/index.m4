@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Solving pocket Rubik's cube (2*2*2) using Z3 and SAT solver.')
+_HEADER_HL1(`Solving pocket Rubik’s cube (2*2*2) using Z3 and SAT solver')
 
 <p>Solving Rubik's cube is not a problem, finding shortest solution is.</p>
 
