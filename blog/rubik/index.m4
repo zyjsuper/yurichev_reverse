@@ -551,7 +551,8 @@ This also slows down my both solvers.</p>
 _HL2(`3*3*3 cube')
 
 <p>3*3*3 cube requires much more turns (20), so I couldn't solve it with my methods.
-Some people do: _HTML_LINK_AS_IS(`https://arxiv.org/pdf/1105.1436.pdf').</p>
+I have success to solve maybe 10 or 11 turns.
+But some people do all 20 turns: _HTML_LINK_AS_IS(`https://arxiv.org/pdf/1105.1436.pdf').</p>
 
 <p>However, you can use 3*3*3 cube to play, because it can act as 2*2*2 cube: just use corners and ignore
 edge and center cubes.
