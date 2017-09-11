@@ -486,7 +486,9 @@ _PRE_END
 
 <p>You can find redundant turns in 11-turn solution, like double UH turns.
 Of course, two UH turns returns the cube to the previous state.
-So these "annihilating turns" are added if the final solution can be shorter.</p>
+So these "annihilating turns" are added if the final solution can be shorter.
+Why the solver added it? There is no "no operation" turn. And the solver is forced to fit into 11 turns.
+Hence, it do what it can to produce correct solution.</p>
 
 <p>Now a hard example:</p>
 
