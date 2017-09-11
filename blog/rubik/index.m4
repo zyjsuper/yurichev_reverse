@@ -566,7 +566,9 @@ _HL2(`My other notes about SAT/SMT')
 
 <p>_HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf')</p>
 
-<p>Some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=15214439'), _HTML_LINK_AS_IS(`'https://www.reddit.com/r/compsci/comments/6zb34i/solving_pocket_rubiks_cube_222_using_z3_and_sat/).</p>
+<p>Some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=15214439'), 
+_HTML_LINK_AS_IS(`https://www.reddit.com/r/compsci/comments/6zb34i/solving_pocket_rubiks_cube_222_using_z3_and_sat/'),
+_HTML_LINK_AS_IS(`https://www.reddit.com/r/Cubers/comments/6ze3ua/theory_dennis_yurichev_solving_pocket_rubiks_cube/').</p>
 
 _BLOG_FOOTER()
 
