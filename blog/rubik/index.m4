@@ -566,7 +566,7 @@ _HL2(`My other notes about SAT/SMT')
 
 <p>_HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf')</p>
 
-<p>At hacker news: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=15214439').</p>
+<p>Some discussion: _HTML_LINK_AS_IS(`https://news.ycombinator.com/item?id=15214439'), _HTML_LINK_AS_IS(`'https://www.reddit.com/r/compsci/comments/6zb34i/solving_pocket_rubiks_cube_222_using_z3_and_sat/).</p>
 
 _BLOG_FOOTER()
 
