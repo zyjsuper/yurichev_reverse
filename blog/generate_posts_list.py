@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017, 9,20,0,0,0), "rubik2","Rubik’s cube (3*3*3) and Z3 SMT-solver, part II")
     post(f1,f2,datetime.datetime(2017, 9,11,0,0,0), "rubik","Solving pocket Rubiks cube (2*2*2) using Z3 and SAT solver")
     post(f1,f2,datetime.datetime(2017, 7,13,0,0,0), "xkcd287","Solving XKCD 287 using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2017, 7,11,0,0,0), "de_bruijn_Z3","Generating de Bruijn sequences using Z3 SMT-solver")

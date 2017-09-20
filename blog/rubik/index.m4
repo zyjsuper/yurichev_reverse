@@ -570,5 +570,7 @@ _HL2(`My other notes about SAT/SMT')
 _HTML_LINK_AS_IS(`https://www.reddit.com/r/compsci/comments/6zb34i/solving_pocket_rubiks_cube_222_using_z3_and_sat/'),
 _HTML_LINK_AS_IS(`https://www.reddit.com/r/Cubers/comments/6ze3ua/theory_dennis_yurichev_solving_pocket_rubiks_cube/').</p>
 
+<p>Next part: _HTML_LINK_AS_IS(`https://yurichev.com/blog/rubik2/').</p>
+
 _BLOG_FOOTER()
 
