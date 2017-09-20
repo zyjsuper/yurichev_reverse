@@ -123,16 +123,16 @@ _PRE_END
 <p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/rubik2/rubik3_z3.py') )</p>
 
 <p>Now the fun statistics.
-Using random walk I collected 928 states and then I tried to solve one face for each state.</p>
+Using random walk I collected 928 states and then I tried to solve one (white/front) face for each state.</p>
 
 _PRE_BEGIN
-      1 sat, turns= 4
-      5 sat, turns= 5
-     57 sat, turns= 6
-    307 sat, turns= 7
-    501 sat, turns= 8
-     56 sat, turns= 9
-      1 sat, turns= 10
+      1 turns= 4
+      5 turns= 5
+     57 turns= 6
+    307 turns= 7
+    501 turns= 8
+     56 turns= 9
+      1 turns= 10
 _PRE_END
 
 <p>It seems that majority of all states can be solved for 7-8 half turns (half-turn is one of 18 turns we used here).
