@@ -30,6 +30,7 @@ m4_define(`_EXERCISE_SPOILER_WARNING',`<p>Spoiler warning! The text below has wh
 m4_define(`_BLOG_FOOTER',`<hr>
 <p>&rarr; [_HTML_LINK(`//yurichev.com/blog/index.html',`list of blog posts'), my _HTML_LINK(`https://twitter.com/yurichev',`twitter')/_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook')]</p>
 Please drop me email about any bug(s) and suggestion(s): <i>dennis(@)yurichev.com</i>.</p>
+m4_include(`disqus.inc')
 </body>
 </html>')
 
