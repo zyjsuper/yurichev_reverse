@@ -70,7 +70,7 @@ _PRE_END
 
 <p>( The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/factor/factor_z3.py') )</p>
 
-<p>When factoring 1234567890:</p>
+<p>When factoring 1234567890 recursively:</p>
 
 _PRE_BEGIN
 % time python z.py
