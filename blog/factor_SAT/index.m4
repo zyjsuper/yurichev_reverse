@@ -417,7 +417,7 @@ _PRE_END
 
 <p>The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/factor_SAT/div.py').</p>
 
-<p>It works very fact, but still, slower than conventional ways.</p>
+<p>It works very fast, but still, slower than conventional ways.</p>
 
 _HL2(`Breaking RSA')
 
