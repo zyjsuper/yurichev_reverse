@@ -124,5 +124,7 @@ Still, I've written this for demonstration.</p>
 <p>The problem of breaking RSA is a problem of factorization of very large numbers, up to 2^4096.
 It's currently not possible to do this in practice.</p>
 
+<p>Next part: _HTML_LINK(`https://yurichev.com/blog/factor_SAT/',`Integer factorization using SAT solver').</p>
+
 _BLOG_FOOTER()
 
