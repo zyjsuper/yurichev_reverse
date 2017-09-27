@@ -115,5 +115,5 @@ for i in range(ROWS):
         print bool_to_int(x),
     print ""
 
-print "stat (bit number: count of changes): ", stat
+print "stat (bit number: number of changes): ", stat
 
