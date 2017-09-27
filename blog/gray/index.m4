@@ -116,7 +116,8 @@ _PRE_END
 
 <p>( _HTML_LINK_AS_IS(`https://groups.google.com/forum/#!topic/rec.puzzles/Dh2H-pGJcbI') )</p>
 
-<p>Obviously, using our solution, you can minimize all movements in this ancient videogame.</p>
+<p>Obviously, using our solution, you can minimize all movements in this ancient videogame, for 4 switches, that would be 4*4=16 switches.
+With our solution (balanced Gray code), switches wearing would be minimal.</p>
 
 _BLOG_FOOTER()
 
