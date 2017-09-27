@@ -3,7 +3,7 @@ m4_include(`commons.m4')
 _HEADER_HL1(`Balanced Gray code and Z3 SMT solver')
 
 <p>Suppose, you are making a rotary encoder.
-This is a device that can signal its position in some form, like:</p>
+This is a device that can signal its angle in some form, like:</p>
 
 <img src="313px-Gray_code_rotary_encoder_13-track_opened.jpg">
 
@@ -11,7 +11,7 @@ This is a device that can signal its position in some form, like:</p>
 
 <p>Click on bigger image: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/gray/Gray_code_rotary_encoder_13-track_opened.jpg').</p>
 
-<p>This is a rotary (shaft) encoder.
+<p>This is a rotary (shaft) encoder: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Rotary_encoder').
 The picture is a cropped and photoshopped version:</p>
 
 <img src="Rotary_Encoder_track_detail_scaled_crop.gif">
