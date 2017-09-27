@@ -12,7 +12,7 @@ This is a device that can signal its angle in some form, like:</p>
 <p>Click on bigger image: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/gray/Gray_code_rotary_encoder_13-track_opened.jpg').</p>
 
 <p>This is a rotary (shaft) encoder: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Rotary_encoder').
-The picture is a cropped and photoshopped version:</p>
+This picture is a cropped and photoshopped version:</p>
 
 <img src="Rotary_Encoder_track_detail_scaled_crop.gif">
 
@@ -50,7 +50,7 @@ _PRE_END
 
 <p>Now the second problem. Look at the picture again. It has a lot of bit changes on the outer circles.
 And this is electromechanical device.
-Surely, you may want to make tracks as long as possible, to reduce wearing of tracks and pins.
+Surely, you may want to make tracks as long as possible, to reduce wearing of both tracks and pins.
 This is a first problem.
 The second: wearing should be even across all tracks (this is balanced Gray code).</p>
 
@@ -59,6 +59,8 @@ The second: wearing should be even across all tracks (this is balanced Gray code
 _PRE_BEGIN
 m4_include(`blog/gray/gray.py')
 _PRE_END
+
+<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/gray/gray.py') )</p>
 
 <p>For 4 bits, 4 changes is enough:</p>
 
