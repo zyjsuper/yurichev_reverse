@@ -71,6 +71,10 @@ _PRE_END
 <p>8 changes for 5 bits: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/gray/5.txt').
 12 for 6 bits (or maybe even less): _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/gray/6.txt').</p>
 
+_HL2(`Duke Nukem 3D from 1990s')
+
+<img src="duke.png">
+
 <p>Another application of Gray code:</p>
 
 _PRE_BEGIN
