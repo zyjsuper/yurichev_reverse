@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html donate.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/XOR_SAT/index.html \
 	blog/tiling_Z3/index.html \
 	blog/gray/index.html \
 	blog/factor_SAT/index.html \
