@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Integer factorization using Z3 SMT solver')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p>Integer factorization is method of breaking a composite (non-prime number) into prime factors.
 Like 12345 = 3*4*823.
 </p>

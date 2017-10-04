@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Balanced Gray code and Z3 SMT solver')
 
+<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+
 <p>Suppose, you are making a rotary encoder.
 This is a device that can signal its angle in some form, like:</p>
 
