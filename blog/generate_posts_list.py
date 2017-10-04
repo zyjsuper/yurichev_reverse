@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017,10, 4,0,0,0), "sorting_network","Proving sorting network correctness using Z3 SMT solver")
     post(f1,f2,datetime.datetime(2017, 9,30,0,0,0), "XOR_SAT","Proving bizarre XOR alternative using SAT solver")
     post(f1,f2,datetime.datetime(2017, 9,29,0,0,0), "tiling_Z3","Tiling puzzle and Z3 SMT solver")
     post(f1,f2,datetime.datetime(2017, 9,27,0,0,0), "gray","Balanced Gray code and Z3 SMT solver")
