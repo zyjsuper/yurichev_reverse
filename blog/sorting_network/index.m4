@@ -86,6 +86,7 @@ If(If(a > c, a, c) > If(b > d, b, d),
    If(b > d, b, d))
 _PRE_END
 
+<p>The first and the last are shorter than the 2nd and the 3rd, they are just min(min(min(a,b),c),d) and max(max(max(a,b),c),d).</p>
 
 _BLOG_FOOTER()
 
