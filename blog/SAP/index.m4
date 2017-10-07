@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`7-Feb-2017: SAP cluster table unpacker')
+_HEADER_HL1(`7-Oct-2017: SAP cluster table unpacker')
 
 <p>SAP has a special <i>cluster tables</i> located in SAPSR3.RFBLG table (as of Oracle RDBMS), which contains compressed blob data
 for tables like BSEG, BSET, BSEC, BSED, etc.</p>
@@ -53,9 +53,7 @@ KOKRS: [1000]
 HKONT: [0000113100]
 _PRE_END
 
-<p>Full IDES dump: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/results.rar').</p>
-
-<p>Anyone interesting in buying such utility? Please contact me then: <b>dennis(a)yurichev.com</b>.</p>
+<p>It's somewhat unfinished, but the source code is available: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAP_cluster_unpacker.tar.bz2').</p>
 
 _BLOG_FOOTER()
 
