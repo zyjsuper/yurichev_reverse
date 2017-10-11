@@ -148,7 +148,7 @@ _HL2(`Couple of words about GCD')
 
 <hr>
 
-<p>GCD is a smallest of factors of several numbers.
+<p>GCD is also a common set of factors of several numbers.
 This we can see in Mathematica:</p>
 
 _PRE_BEGIN
@@ -163,6 +163,24 @@ Out[]= 3
 _PRE_END
 
 <p>I.e., 300=2^2 * 3 * 5^2 and 333=3^2 * 37 and GCD=3, which is smallest factor.</p>
+
+<p>Or:</p>
+
+_PRE_BEGIN
+In[]:= FactorInteger[11*13*17]
+Out[]= {{11, 1}, {13, 1}, {17, 1}}
+
+In[]:= FactorInteger[7*11*13*17]
+Out[]= {{7, 1}, {11, 1}, {13, 1}, {17, 1}}
+
+In[]:= GCD[11*13*17, 7*11*13*17]
+Out[]= 2431
+
+In[]:= 11*13*17
+Out[]= 2431
+_PRE_END
+
+<p>(Common factors are 11, 13 and 17, so GCD = 11*13*17 = 2431.)</p>
 
 _BLOG_FOOTER()
 
