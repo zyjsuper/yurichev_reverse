@@ -78,7 +78,7 @@ _PRE_END
 
 <p>The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_SAT/XOR_SAT.py').</p>
 
-<p>SAT solver returns "unsat", meaning, it could find such a pair.
+<p>SAT solver returns "unsat", meaning, it couldn't find such a pair.
 In other words, it couldn't find a counterexample.
 So the circuit always outputs 0, for all possible inputs, meaning, outputs of two parts are always the same.</p>
 
