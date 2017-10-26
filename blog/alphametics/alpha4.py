@@ -18,7 +18,7 @@ s.add(And(R>=0, R<=9))
 s.add(And(S>=0, S<=9))
 s.add(And(U>=0, U<=9))
 
-s.add(S!=0)
+#s.add(S!=0)
 
 KNIFE, FORK, SPOON, SOUP, SUPPER = Ints('KNIFE FORK SPOON SOUP SUPPER')
 
