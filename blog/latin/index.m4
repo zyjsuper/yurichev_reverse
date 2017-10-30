@@ -31,9 +31,11 @@ _PRE_BEGIN
 m4_include(`blog/latin/latin3.py')
 _PRE_END
 
+<p>Works relatively fast, 1.5 minutes on my ancient Intel Atom 1.5 GHz netbook.</p>
+
 <p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/latin').</p>
 
-<p>So am I wrong somewhere or not? Is there a mistake somewhere?</p>
+<p><b>So am I wrong somewhere or not? Is there a mistake somewhere?</b></p>
 
 _BLOG_FOOTER()
 
