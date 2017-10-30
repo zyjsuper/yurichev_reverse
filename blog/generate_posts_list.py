@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017,10,30,0,0,0), "latin","Finding three 10*10 mutually orthogonal latin squares using Z3: criticism wanted")
     post(f1,f2,datetime.datetime(2017,10,27,0,0,0), "alphametics","Alphametics and Z3 SMT solver")
     post(f1,f2,datetime.datetime(2017,10,22,0,0,0), "LCM","Explanation of the Least Common Multiple using Z3 SMT solver, etc")
     post(f1,f2,datetime.datetime(2017,10,11,0,0,0), "GCD","Explanation of the Greatest Common Divisor using Z3 SMT solver, etc")
