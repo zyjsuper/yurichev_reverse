@@ -117,5 +117,11 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 
 <p>My _HTML_LINK(`https://bitmessage.org/',`BitMessage ID'): <b>BM-2cUyrfGUDyjuUHyzAA63kq5NHAB2zMo4Q2</b></p>
 
+<p>
+_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook'),
+_HTML_LINK(`https://twitter.com/yurichev',`twitter'),
+_HTML_LINK(`https://www.instagram.com/denyurichev/',`instagram').
+</p>
+
 _FOOTER()
 
