@@ -234,7 +234,7 @@ _HL2(`CRC32')
 _PRE_BEGIN
 uint32_t remainder_GF2(uint32_t dividend, uint32_t divisor)
 {
-	// necessary bit shuffling/negation to to make it compatible with other CRC32 implementations.
+	// necessary bit shuffling/negation to make it compatible with other CRC32 implementations.
 	// N.B.: input data is not an array, but a 32-bit integer, hence we need to swap endiannes.
 	uint32_t dividend_negated_swapped = ~swap_endianness32(bitrev32(dividend));
 	buf=(uint8_t*)&dividend_negated_swapped;
