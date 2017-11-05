@@ -316,6 +316,8 @@ This one is for CRC16:</p>
 
 <p>( src of image: _HTML_LINK_AS_IS(`https://olimex.wordpress.com/2014/01/10/weekend-programming-challenge-week-39-crc-16/') )</p>
 
+<p>Only 3 XOR gates are present aside of shift register.</p>
+
 <p>The following page has animation: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Computation_of_cyclic_redundancy_checks').</p>
 
 <p>It can be implemented maybe even using vacuum tubes.</p>
