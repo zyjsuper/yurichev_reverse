@@ -8,6 +8,8 @@ a=BitVec('a', INPUT_SIZE)
 b=BitVec('b', INPUT_SIZE)
 
 """
+rows with dots are partial products:
+
      aaaa
 b    ....
 b   ....
@@ -22,10 +24,12 @@ p=[BitVec('p_%d' % i, OUTPUT_SIZE) for i in range(INPUT_SIZE)]
 s=Solver()
 
 for i in range(INPUT_SIZE):
-    # this is like:
-    # s.add(p[i] == If((b>>i)&1==1, a<<i, 0))
+    # if there is a bit in b[], assign shifted a[] padded with zeroes at left/right
+    # if there is no bit in b[], let p[] be zero
+
     # Concat() is for glueling together bitvectors (of different widths)
     # BitVecVal() is constant of specific width
+
     if i==0:
         s.add(p[i] == If((b>>i)&1==1, Concat(BitVecVal(0, OUTPUT_SIZE-i-INPUT_SIZE), a), 0))
     else:
@@ -52,6 +56,7 @@ poly=0x18005 # CRC-16-IBM, reducible
 #poly=0x132583499 # CRC-32K2 (Koopman {1,1,30}), reducible
 #poly=0x1814141AB # CRC-32Q, reducible
 
+# form expression like s.add(p[0] ^ p[1] ^ ... ^ p[OUTPUT_SIZE-1] == poly)
 # replace operator.xor to operator.add to factorize numbers:
 s.add(reduce (operator.xor, p)==poly)
 
