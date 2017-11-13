@@ -64,6 +64,11 @@ sample_len=1
 #must_be=[0x01B0000000000000]
 #sample_len=1
 
+#width=32
+#samples=["12","ab"]
+#must_be=[0x4F5344CD, 0x9E83486D]
+#sample_len=2
+
 def swap_endianness_16(val):
     return struct.unpack("<H", struct.pack(">H", val))[0]
 
