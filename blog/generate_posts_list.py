@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017,11,14,0,0,0), "CRC_find_poly","Finding (good) CRC polynomial using Z3")
     post(f1,f2,datetime.datetime(2017,11,11,0,0,0), "CRC_cracker_Z3","Getting CRC polynomial and other CRC generator parameters using Z3")
     post(f1,f2,datetime.datetime(2017,11, 6,0,0,0), "CRC2","Factorize GF(2)/CRC polynomials using Z3")
     post(f1,f2,datetime.datetime(2017,11, 5,0,0,0), "CRC","Yet another explanation of CRC (Cyclic redundancy check)")
