@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017,11,22,0,0,0), "knut_vik","Magic/Latin square of Knut Vik design: getting it using Z3")
     post(f1,f2,datetime.datetime(2017,11,15,0,0,0), "crossword_Z3","Crossword generator based on Z3")
     post(f1,f2,datetime.datetime(2017,11,14,0,0,0), "CRC_find_poly","Finding (good) CRC polynomial using Z3")
     post(f1,f2,datetime.datetime(2017,11,11,0,0,0), "CRC_cracker_Z3","Getting CRC polynomial and other CRC generator parameters using Z3")
