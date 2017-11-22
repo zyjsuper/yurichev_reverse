@@ -148,8 +148,7 @@ for i in range(len(vertical)):
     s.add(Or(*list_of_ANDs))
 
 # we collected indices of horizonal/vertical words to make sure they will not be duplicated on resulting crossword:
-s.add(Distinct(*horizontal_idx))
-s.add(Distinct(*vertical_idx))
+s.add(Distinct(*(horizontal_idx+vertical_idx)))
 
 def print_model (m):
     print ""
