@@ -11,7 +11,7 @@ s=Solver()
 
 for person in range(PERSONS):
     for day in range(DAYS):
-        s.add(And(tbl[person][day]>=0, tbl[person][day]<GROUPS))
+        s.add(And(tbl[person][day]>=0, tbl[person][day] < GROUPS))
 
 # one in pair must be equal, all others must differ:
 def only_one_in_pair_can_be_equal(l1, l2):
