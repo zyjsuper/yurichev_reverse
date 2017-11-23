@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017,11,23,0,0,0), "killer_sudoku","Solving Killer Sudoku using Z3")
     post(f1,f2,datetime.datetime(2017,11,23,0,0,0), "sudoku_GT","Greater Than Sudoku")
     post(f1,f2,datetime.datetime(2017,11,23,0,0,0), "kirkman","Kirkman’s Schoolgirl Problem")
     post(f1,f2,datetime.datetime(2017,11,22,0,0,0), "knut_vik","Magic/Latin square of Knut Vik design: getting it using Z3")
