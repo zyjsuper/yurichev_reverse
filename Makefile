@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html donate.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/sudoku_GT/index.html \
 	blog/kirkman/index.html \
 	blog/knut_vik/index.html \
 	blog/crossword_Z3/index.html \
