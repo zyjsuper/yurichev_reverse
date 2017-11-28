@@ -4,9 +4,17 @@ _HEADER(`My Wget patches')
 
 _HL1(`My Wget patches:')
 
-<p><i>--limit-size</i> option support. Nothing special: just skip any HTTP/FTP file with size bigger than set in <i>--limit-size=</i> while mirroring some website.</p> 
+<p><i>--limit-size</i> option support. Nothing special: just skip any HTTP/FTP file with size bigger than set in <i>--limit-size=</i> while mirroring a website.</p>
 
 <p>Size can be set as nnnM, nnnk (megabytes, kilobytes).</p>
+
+<p>_HTML_LINK(`https://yurichev.com/non-wiki-files/wget-1.18-limitsize/wget-1.18-limitsize.patch', `Wget 1.18 patch')</p>
+
+<p>_HTML_LINK(`https://yurichev.com/non-wiki-files/wget-1.18-limitsize/wget-1.18-limitsize-src.tar.bz2', `Full patched 1.18 source tree')</p>
+
+<p>_HTML_LINK(`https://yurichev.com/non-wiki-files/wget-1.18-limitsize/wget-1.18-limitsize-linux64.tar.bz2', `Patched and compiled (linux x64)')</p>
+
+<p>Old version:</p>
 
 <p>_HTML_LINK(`http://yurichev.com/non-wiki-files/wget-1.13.4-limitsize/wget-1.13.4-limitsize.patch', `Wget 1.13.4 patch')</p>
 
