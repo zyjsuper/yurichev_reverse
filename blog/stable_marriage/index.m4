@@ -4,6 +4,8 @@ _HEADER_HL1(`Stable marriage problem and Z3')
 
 <p>See also in _HTML_LINK(`https://en.wikipedia.org/wiki/Stable_marriage_problem',`Wikipedia') and _HTML_LINK(`https://rosettacode.org/wiki/Stable_marriage_problem',`Rosetta code').</p>
 
+<p>Layman's explanation in Russian: _HTML_LINK_AS_IS(`https://lenta.ru/articles/2012/10/15/nobel/').</p>
+
 <p>My solution is much less efficient, because much simpler/better algorithm exists (Gale/Shapley algorithm), but I did it to demonstrate the essence of the problem plus as a yet another SMT-solvers and Z3 demonstration.</p>
 
 <p>See comments:</p>
