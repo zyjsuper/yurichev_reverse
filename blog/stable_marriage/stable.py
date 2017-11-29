@@ -102,7 +102,7 @@ for w in range(SIZE):
 
 # the last part is the essence of this script:
 
-# this is 2D bool array. true if a (married or already connected) man would prefer another women over his wife.
+# this is 2D bool array. "true" if a (married or already connected) man would prefer another women over his wife.
 ManWouldPrefer=[[Bool('ManWouldPrefer_%d_%d' % (m, w)) for w in range(SIZE)] for m in range(SIZE)]
 # same for all women:
 WomanWouldPrefer=[[Bool('WomanWouldPrefer_%d_%d' % (w, m)) for m in range(SIZE)] for w in range(SIZE)]
