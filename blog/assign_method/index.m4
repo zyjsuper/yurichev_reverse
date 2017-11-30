@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Assignment method and Z3')
+_HEADER_HL1(`Assignment problem and Z3')
 
 <p>I've found this at _HTML_LINK_AS_IS(`http://www.math.harvard.edu/archive/20_spring_05/handouts/assignment_overheads.pdf') and took screenshot:</p>
 
