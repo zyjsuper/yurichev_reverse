@@ -50,5 +50,34 @@ _PRE_END
 Gale/Shapley algorithm uses "steps" to "stabilize" marriage.
 There are no "steps", all pairs are married couples already.</p>
 
+<p>Another important thing to notice: only one solution must exist.</p>
+
+_PRE_BEGIN
+...
+
+results=[]
+
+# enumerate all possible solutions:
+while True:
+    if s.check() == sat:
+        m = s.model()
+        #print m
+        results.append(m)
+        block = []
+        for d in m:
+            c=d()
+            block.append(c != m[d])
+        s.add(Or(block))
+    else:
+        print "results total=", len(results)
+        break
+
+...
+_PRE_END
+
+<p>The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/stable_marriage/stable2.py')</p>
+
+<p>That reports only 1 model available, which is correct indeed.</p>
+
 _BLOG_FOOTER()
 
