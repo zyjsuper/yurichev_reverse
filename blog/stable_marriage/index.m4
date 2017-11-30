@@ -14,7 +14,7 @@ _PRE_BEGIN
 m4_include(`blog/stable_marriage/stable.py')
 _PRE_END
 
-<p>The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/stable_marriage/stable.py')</p>
+<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/stable_marriage/stable.py') )</p>
 
 <p>Result is seems to be correct:</p>
 
@@ -75,7 +75,7 @@ while True:
 ...
 _PRE_END
 
-<p>The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/stable_marriage/stable2.py')</p>
+<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/stable_marriage/stable2.py') )</p>
 
 <p>That reports only 1 model available, which is correct indeed.</p>
 
