@@ -46,5 +46,9 @@ ivy <-> abe
 jan <-> ed
 _PRE_END
 
+<p>This is what we did in plain English language. "Connect men and women somehow, we don't care how. But no pair must exist of those who prefer each other (simultaneously) over their current spouses".
+Gale/Shapley algorithm uses "steps" to "stabilize" marriage.
+There are no "steps", all pairs are married couples already.</p>
+
 _BLOG_FOOTER()
 
