@@ -2,6 +2,7 @@
 
 from z3 import *
 
+# this is optimization problem:
 s=Optimize()
 
 choice=[Int('choice_%d' % i) for i in range(3)]
