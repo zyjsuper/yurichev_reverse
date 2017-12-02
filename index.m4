@@ -10,11 +10,9 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 <!-- _HTML_IMG(`pix/DY_mask_m0m0sha.jpg')
 <p><h5>(Photo courtesy of _HTML_LINK(`http://go.yurichev.com/1986',`my younger muse').)</h5></p> -->
 
-<p><b>Chess?</b> My account at _HTML_LINK(`https://www.chess.com/members/view/DY1979',`chess.com') and _HTML_LINK(`http://en.lichess.org/@/DY1979',`lichess.org'). Challenge me if you want to.</p>
-
-<p>
-As of 2013-2017 I mostly known for 
-_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
+<p>Current status: one of my current projects is _HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
+I also currently write a collection of _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf', `examples for SAT/SMT solvers').
+And here is what I do for money: _HTML_LINK_AS_IS(`https://beginners.re/services.html').
 </p>
 
 <!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
@@ -122,6 +120,8 @@ _HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook'),
 _HTML_LINK(`https://twitter.com/yurichev',`twitter'),
 _HTML_LINK(`https://www.instagram.com/denyurichev/',`instagram').
 </p>
+
+<p><b>Chess?</b> My account at _HTML_LINK(`https://www.chess.com/members/view/DY1979',`chess.com') and _HTML_LINK(`http://en.lichess.org/@/DY1979',`lichess.org'). Challenge me if you want to.</p>
 
 _FOOTER()
 
