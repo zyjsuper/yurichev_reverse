@@ -27,7 +27,7 @@ _PRE_END
 
 <p>My solution for Z3: see _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/coin_z3.py',`source code') and comments, _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/z3.txt',`results').</p>
 
-<p>And also MaxSAT solution (uses Open-WBO MaxSAT solver): _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/coin_MaxSAT.py',`source code'), _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/SAT.txt',`results').
+<p>And also MaxSAT solution (uses _HTML_LINK(`http://sat.inesc-id.pt/open-wbo/',`Open-WBO MaxSAT solver')): _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/coin_MaxSAT.py',`source code'), _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/SAT.txt',`results').
 Xu.py and frolic.py are libraries which are used.</p>
 
 <p>4-5 row/column flips can be achieved using this on 8*8 board (like chessboard) in reasonable time (couple of minutes).</p>
