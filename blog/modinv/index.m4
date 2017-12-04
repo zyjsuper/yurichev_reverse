@@ -53,7 +53,7 @@ Let's divide 6 by 3. 6*6=36=0x24, 4 will be left in the register. This is also i
 
 <p>Now the problem: this only works for dividends in 3x form, i.e., which can be divided by 3 with no remainder.
 Try to divide 4 by 3, 4*11=44=0x2c, 12 will be left in register, this is incorrect.
-Correct quotient is 1.</p>
+The correct quotient is 1.</p>
 
 <p>We can also notice that the 4-bit register is "overflown" during multiplication twice as much as in "incorrect" result in low 4 bits.</p>
 
