@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017,12, 4,0,0,0), "coin_flip","Coin flipping problem: Z3 and MaxSAT (Open-WBO)")
     post(f1,f2,datetime.datetime(2017,12, 1,0,0,0), "assign_method","Assignment problem and Z3")
     post(f1,f2,datetime.datetime(2017,11,29,0,0,0), "stable_marriage","Stable marriage problem and Z3")
     post(f1,f2,datetime.datetime(2017,11,23,0,0,0), "killer_sudoku","Solving Killer Sudoku using Z3")
