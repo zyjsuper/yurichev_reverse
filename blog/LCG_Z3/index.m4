@@ -31,6 +31,22 @@ _PRE_END
 
 <p>... and at some point, this piece of code can generate 8 zeroes in row, if the state will be 286227003 (decimal).</p>
 
+Just checked this piece of code in MSVC 2015:
+
+_PRE_BEGIN
+#include <stdio.h>
+
+int main()
+{
+	srand(286227003);
+
+	for (int i=0; i<8; i++)
+		printf ("%d\n", rand() % 10);
+};
+_PRE_END
+
+<p>Yes, it generates 8 zeroes!</p>
+
 <p>What about other modulos?</p>
 
 <p>I can get 4 consecutive zeroes modulo 100:</p>
