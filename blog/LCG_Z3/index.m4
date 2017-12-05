@@ -66,10 +66,12 @@ sat
  state5 = 1389375667]
 _PRE_END
 
+<p>However, 4 consecutive zeroes modulo 100 is impossible (given these constants at least): 
+
 <p>... and 3 consecutive zeroes modulo 1000:</p>
 
 _PRE_BEGIN
-m4_include(`blog/LCG_Z3//LCG100.py')
+m4_include(`blog/LCG_Z3//LCG1000.py')
 _PRE_END
 
 _PRE_BEGIN
@@ -126,7 +128,7 @@ _HL2(`etc:')
 <p>See also: _HTML_LINK(`https://yurichev.com/blog//compress/',`Text strings right in the middle of compressed data').
 Also, my _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf',`SAT/SMT notes') has another LCG-related example.</p>
 
-<p>Further work: check glibc's rand(), Mersenne Twister, etc.</p>
+<p>Further work: check glibc's rand(), Mersenne Twister, etc. Simple 32-bit LCG as described can be checked using simple brute-force, I think.</p>
 
 _FOOTER()
 
