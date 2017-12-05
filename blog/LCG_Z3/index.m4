@@ -34,7 +34,9 @@ _PRE_END
 Just checked this piece of code in MSVC 2015:
 
 _PRE_BEGIN
-#include <stdio.h>
+// MSVC 2015 x86
+
+#include &lt;stdio.h>
 
 int main()
 {
