@@ -96,7 +96,7 @@ _HL2(`UNIX time and srand(time(NULL))')
 
 <p>Given the fact that it's highly popular to initialize LCG PRNG with UNIX time (i.e., <b>srand(time(NULL))</b>), you can probably calculate a moment in time so that LCG PRNG will be initialized as you want to.</p>
 
-<p>For example, can we get a moment in time from now (5-Dec-2017) till 12-Dec-2017 (that is one week), when, if initialized by UNIX time, rand() will output as many similar numbers (modulo 10), as possible?</p>
+<p>For example, can we get a moment in time from now (5-Dec-2017) till 12-Dec-2017 (that is one week from now), when, if initialized by UNIX time, rand() will output as many similar numbers (modulo 10), as possible?</p>
 
 _PRE_BEGIN
 m4_include(`blog/LCG_Z3//LCG10_time.py')
