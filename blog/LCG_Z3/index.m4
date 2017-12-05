@@ -116,7 +116,7 @@ sat
  state7 = 1158878744]
 _PRE_END
 
-<p>If <b>srand(time(NULL))</b> will be executed at <b>Tue Dec  5 21:06:50 EET 2017</b> (this precise second), a next 6 <b>rand() %10</b> lines will output six numbers of 3 in a row.
+<p>If <b>srand(time(NULL))</b> will be executed at <b>Tue Dec  5 21:06:50 EET 2017</b> (this precise second, UNIX time=1512500810), a next 6 <b>rand() %10</b> lines will output six numbers of 3 in a row.
 Don't know if it useful or not, but you've got the idea.</p>
 
 _HL2(`etc:')
