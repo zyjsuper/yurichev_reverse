@@ -66,7 +66,8 @@ sat
  state5 = 1389375667]
 _PRE_END
 
-<p>However, 4 consecutive zeroes modulo 100 is impossible (given these constants at least): 
+<p>However, 4 consecutive zeroes modulo 100 is impossible (given these constants at least), this gives "unsat":
+_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/LCG_Z3/LCG100_v1.py').</p>
 
 <p>... and 3 consecutive zeroes modulo 1000:</p>
 
