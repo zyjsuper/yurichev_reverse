@@ -47,7 +47,7 @@ int main()
 };
 _PRE_END
 
-<p>Yes, it generates 8 zeroes!</p>
+<p>Yes, its output is 8 zeroes!</p>
 
 <p>Given the fact that it's highly popular to initialize LCG PRNG with UNIX time (i.e., srand(time(NULL))), you can probably calculate a moment in time so that LCG PRNG will be seeded as you want to.</p>
 
