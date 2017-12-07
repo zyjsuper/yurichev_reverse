@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2017,12, 7,0,0,0), "menage","Ménage problem")
     post(f1,f2,datetime.datetime(2017,12, 5,0,0,0), "LCG_Z3","Can rand() generate 10 consecutive zeroes?")
     post(f1,f2,datetime.datetime(2017,12, 5,0,0,0), "modinv","Yet another explanation of modulo inverse")
     post(f1,f2,datetime.datetime(2017,12, 4,0,0,0), "coin_flip","Coin flipping problem: Z3 and MaxSAT (Open-WBO)")
