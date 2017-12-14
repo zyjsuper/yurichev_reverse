@@ -202,14 +202,14 @@ def cell_is_true (center, a):
 ...
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/GoL_SAT_utils.py') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/GoL_SAT/GoL_SAT_utils.py') )
 
 
 _PRE_BEGIN
 m4_include(`blog/GoL_SAT/reverse1.py')
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/reverse1.py') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/GoL_SAT/reverse1.py') )
 
 <p>Here is a result:</p>
 
@@ -284,7 +284,7 @@ while True:
 
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/reverse2.py') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/GoL_SAT/reverse2.py') )
 
 <p>Functions reflect_vertically(), reflect_horizontally and rotate_square_array() are simple array manipulation routines.</p>
 
@@ -592,7 +592,7 @@ _PRE_BEGIN
 
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/stillife2.py') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/GoL_SAT/stillife2.py') )
 
 <p>Now we can see that 3*3 square has 3 possible still lives:</p>
 
@@ -762,7 +762,7 @@ _PRE_BEGIN
 
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/GoL_SAT/stillife.py') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/GoL_SAT/stillife.py') )
 
 <p>This is indeed denser:</p>
 
@@ -927,7 +927,7 @@ _PRE_END
 
 _HL2(`Source code')
 
-<p>Source code and Wolfram Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/GoL_SAT').</p>
+<p>Source code and Wolfram Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/GoL_SAT').</p>
 
 _BLOG_FOOTER()
 

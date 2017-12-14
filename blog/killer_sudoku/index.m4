@@ -9,7 +9,7 @@ _HEADER_HL1(`Solving Killer Sudoku using Z3')
 <p>There are <i>cages</i>, each cage must have distinct digits, and its sum must be equal to the number written there in a manner of crossword.
 See also: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Killer_sudoku').</p>
 
-<p>This is also piece of cake for Z3. I've took the same piece of code I used for usual Sudoku ( _HTML_LINK_AS_IS(`https://github.com/dennis714/SAT_SMT_article/blob/master/SMT/sudoku2.py'), 
+<p>This is also piece of cake for Z3. I've took the same piece of code I used for usual Sudoku ( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/SAT_SMT_article/blob/master/SMT/sudoku2.py'), 
 PDF file: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf') ) and added this:</p>
 
 _PRE_BEGIN
@@ -118,7 +118,7 @@ s.add(Sum(*cage)==17)
 ...
 _PRE_END
 
-<p>( The full file: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/killer_sudoku/killer_sudoku.py' ) )</p>
+<p>( The full file: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/killer_sudoku/killer_sudoku.py' ) )</p>
 
 <p>The puzzle marked as "Super-Tough Killer Sudoku Puzzle" (again, for humans?), however it took ~30s on my old Intel Xeon E3-1220 3.10GHz to solve it:</p>
 

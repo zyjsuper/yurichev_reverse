@@ -7,7 +7,7 @@ _HL1(`Copyfile:')
 _HTML_IMG(`pix/copyfile.png',`screenshot')
 
 m4_define(`_DOWNLOAD_URL', `http://conus.info/attic-files/copyfile/copyfile.exe')
-m4_define(`_SOURCE_CODE_URL', `https://github.com/dennis714/Copyfile')
+m4_define(`_SOURCE_CODE_URL', `https://github.com/DennisYurichev/Copyfile')
 
 <hr>
 

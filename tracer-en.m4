@@ -25,7 +25,7 @@ _HL1(`tracer v0.7')
 
 <p>_HTML_LINK(`tracer/tracer-en.pdf',`Tracer manual in English language')</p>
 <p>_HTML_LINK(`tracer/tracer07.rar',`Download version 0.7')</p>
-<p>_HTML_LINK(`https://github.com/dennis714/tracer',`Tracer 0.7 source code repo')</p>
+<p>_HTML_LINK(`https://github.com/DennisYurichev/tracer',`Tracer 0.7 source code repo')</p>
 <p>_HTML_LINK(`http://groups.google.com/group/generic-tracer',`Tracer discussion group at google groups')</p>
 <p>_HTML_LINK(`tracer/old-0.5-0.4/index.html',`old (0.4 and 0.5) versions')</p>
 

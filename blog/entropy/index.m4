@@ -290,7 +290,7 @@ _HL2(`A word about primitive encryption like XORing.')
 
 <p>It's interesting that simple XOR encryption doesn't affect entropy of data.
 I've shown this in "Norton Guide" example in my book (_HTML_LINK(`//beginners.re/',`"Reverse Engineering for Beginners" free book')).
-(The page about XOR encryption is also accessible in LaTeX form: _HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/master/ff/XOR/ng/main.tex',`link').</p>
+(The page about XOR encryption is also accessible in LaTeX form: _HTML_LINK(`https://github.com/DennisYurichev/RE-for-beginners/blob/master/ff/XOR/ng/main.tex',`link').</p>
 
 <p>Generalizing: encryption by substitution cipher also doesn't affect entropy of data (and XOR can be viewed as substitution cipher).
 The reason of that is because entropy calculation algorithm view data on byte-level.

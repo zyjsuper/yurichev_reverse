@@ -100,7 +100,7 @@ _HL2(`Simplest possible spellchecking: typos and  misspellings correction in Wik
 It's size is tremendous, so I'll take only one part of june 2015 dump: 
 _HTML_LINK(`http://dumps.wikimedia.org/enwiki/20150602/enwiki-20150602-pages-meta-current9.xml-p000665001p000925001.bz2',`enwiki-20150602-pages-meta-current9.xml-p000665001p000925001.bz2').</p>
 
-<p>And _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/get_typos.py',`here is my Python script').
+<p>And _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/fuzzy_string/files/get_typos.py',`here is my Python script').
 I use opensource Levenshtein distance Python module, which can be found _HTML_LINK(`https://pypi.python.org/pypi/python-Levenshtein/0.12.0',`here').
 It has very simple function named <i>distance</i>, which just takes two strings on input and returns Levenshtein distance.</p>
 
@@ -141,11 +141,11 @@ _PRE_END
 Keep in mind, my script doesn't have its own English dictionary, its dictionary is built using Wikipedia itself.</p>
 
 <p>The full list of typos my script found is: 
-_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015-current9-dist1.txt',`enwiki2015-current9-dist1.txt').
+_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015-current9-dist1.txt',`enwiki2015-current9-dist1.txt').
 Keep in mind, it's not whole Wikipedia, only it's part (since I do not own powerful computers and my script is very far from optimized).</p>
 
 <p>Update: I added the list of all suspicious typos and misspellings for the whole Wikipedia:
-_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015.typos.txt',`enwiki2015.typos.txt').</p>
+_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015.typos.txt',`enwiki2015.typos.txt').</p>
 
 <hr>
 
@@ -163,12 +163,12 @@ typo? scying (1) suggestions= [u'acting', u'flying', u'buying', u'scoring', u'sp
 _PRE_END
 
 <p>The full list is here:
-_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015-current9-dist2.txt',`enwiki2015-current9-dist2.txt').</p>
+_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/fuzzy_string/files/enwiki2015-current9-dist2.txt',`enwiki2015-current9-dist2.txt').</p>
 
 <hr>
 
 <p>In this example, I use English language Wikipedia, byt my script can be easily extended to any other language.
-Just write your own _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/fuzzy_string/files/get_typos.py#L70',`str_is_latin() function').</p>
+Just write your own _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/fuzzy_string/files/get_typos.py#L70',`str_is_latin() function').</p>
 
 _HL2(`Other applications')
 

@@ -36,7 +36,7 @@ Complex functions are usually evil, because they are hard to maintain, hard to t
 <p>Now let's back to cyclomatic complexity.</p>
 
 <p>Without diving deep into graph theory: there are basic blocks and links between them.
-For example, this is how IDA shows BBs and links (as arrows). Just click space: _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/blob/1058f52612973030e6d7384e7498c91141731a38/patterns/04_scanf/3_checking_retval/IDA.png').
+For example, this is how IDA shows BBs and links (as arrows). Just click space: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners/blob/1058f52612973030e6d7384e7498c91141731a38/patterns/04_scanf/3_checking_retval/IDA.png').
 Each BB is also called vertex or node in graph theory. Each link - edge.</p>
 
 <p>There are at least two popular ways to calculate cyclomatic complexity:
@@ -50,7 +50,7 @@ By 1st rule, this is 2, by the second: 1.</p>
 As you can see, additional exit (return instructions) make things even worse,
 as well as additional links between nodes (including additional goto's).</p>
 
-<p>I wrote the simple IDAPython script (_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/cyclomatic/cyclomatic.py')) to measure it.
+<p>I wrote the simple IDAPython script (_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/cyclomatic/cyclomatic.py')) to measure it.
 Here is result for Linux kernel 4.11 (most complex functions in it):</p>
 
 _PRE_BEGIN
@@ -64,7 +64,7 @@ _PRE_BEGIN
 72c3c0 mmc_init_card edges=593 nodes=365 rets=1 E-N+2=230 E-N+rets=229
 ...
 _PRE_END
-<p>( Full list: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/cyclomatic/linux_4.11_sorted.txt') )</p>
+<p>( Full list: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/DennisYurichev/yurichev.com/master/blog/cyclomatic/linux_4.11_sorted.txt') )</p>
 
 <p>This is source code of some of them:
 _HTML_LINK(`https://github.com/torvalds/linux/blob/56868a460b83c0f93d339256a81064d89aadae8e/kernel/bpf/verifier.c#L2811',`do_check()'),
@@ -85,7 +85,7 @@ _PRE_BEGIN
 ....
 _PRE_END
 
-<p>( Full list: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/cyclomatic/win7_ntoskrnl_sorted.txt') )</p>
+<p>( Full list: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/DennisYurichev/yurichev.com/master/blog/cyclomatic/win7_ntoskrnl_sorted.txt') )</p>
 
 <p>From a bug hunter's standpoint, complex functions are prone to have bugs, so an attention should be paid to them.</p>
 

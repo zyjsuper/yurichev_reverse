@@ -31,7 +31,7 @@ _PRE_BEGIN
 m4_include(`blog/sorting_network/test9.py')
 _PRE_END
 
-<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/sorting_network/test9.py') )</p>
+<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/sorting_network/test9.py') )</p>
 
 <p>There is also smaller 4-channel network I copypasted from Wikipedia:</p>
 
@@ -46,7 +46,7 @@ l=line(l, " ++ ")
 ...
 _PRE_END
 
-<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/sorting_network/test4.py') )</p>
+<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/sorting_network/test4.py') )</p>
 
 <p>It also proved to be correct, but it's interesting, what Z3Py expression we've got at each of 4 outputs:</p>
 

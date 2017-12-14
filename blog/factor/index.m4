@@ -70,7 +70,7 @@ print factor(1234567890) # {{2, 1}, {3, 2}, {5, 1}, {3607, 1}, {3803, 1}}
 #print factor(137446031423)
 _PRE_END
 
-<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/factor/factor_z3.py') )</p>
+<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/factor/factor_z3.py') )</p>
 
 <p>When factoring 1234567890 recursively:</p>
 

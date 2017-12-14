@@ -95,14 +95,14 @@ _PRE_BEGIN
 _PRE_END
 
 <p>
-Perhaps, these users are frequenters of the channel. List of all cliques are _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/clique/files/IRC/results.txt',`here').
+Perhaps, these users are frequenters of the channel. List of all cliques are _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/clique/files/IRC/results.txt',`here').
 The output is not terse, because all listed cliques are cliques indeed, and single user or users group can be member of several cliques, that's correct.
 Cliques can be overlapped and be members of bigger cliques.
 It's possible to produce more human-like results using 
 _HTML_LINK(`https://en.wikipedia.org/wiki/Community_structure#Algorithms_for_finding_communities',`more complex algorithms for finding communities').
 </p>
 
-<p>The source code of my scripts _HTML_LINK(`https://github.com/dennis714/yurichev.com/tree/master/blog/clique/files/IRC',`here'). I used excellent _HTML_LINK(`https://networkx.github.io/',`networkx graph library').</p>
+<p>The source code of my scripts _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/clique/files/IRC',`here'). I used excellent _HTML_LINK(`https://networkx.github.io/',`networkx graph library').</p>
 
 _HL3(`Attempt to find communities in IRC social graph')
 
@@ -188,7 +188,7 @@ By link between articles we would call the case when the first article has the l
 
 <p>Each Wikipedia article within any of these cliques has links to each article in clique.</p>
 
-<p>Full lists of first 1000 largest cliques in English, Russian and Ukrainian Wikipedias plus source code of my scripts is _HTML_LINK(`https://github.com/dennis714/yurichev.com/tree/master/blog/clique/files/wikipedia',`here').</p>
+<p>Full lists of first 1000 largest cliques in English, Russian and Ukrainian Wikipedias plus source code of my scripts is _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/clique/files/wikipedia',`here').</p>
 
 _HL2(`Social graph: LiveJournal spammers')
 

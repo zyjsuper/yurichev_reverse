@@ -19,7 +19,9 @@ _PRE_BEGIN
 m4_include(`blog/assign_method/1.py')
 _PRE_END
 
-<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/assign_method/1.py') )</p>
+<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/assign_method/1.py') )</p>
+
+<p>In plain English this means "choose such columns, so that their sum would be as small as possible.</p>
 
 <p>Result is seems to be correct:</p>
 

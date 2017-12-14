@@ -122,7 +122,7 @@ for STEPS in range(1, 20):
 		exit(0)
 _PRE_END
 
-<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/rubik2/rubik3_z3.py') )</p>
+<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/rubik2/rubik3_z3.py') )</p>
 
 <p>Now the fun statistics.
 Using random walk I collected 928 states and then I tried to solve one (white/front) face for each state.</p>

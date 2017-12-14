@@ -67,7 +67,7 @@ sat
 _PRE_END
 
 <p>However, 4 consecutive zeroes modulo 100 is impossible (given these constants at least), this gives "unsat":
-_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/LCG_Z3/LCG100_v1.py').</p>
+_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/LCG_Z3/LCG100_v1.py').</p>
 
 <p>... and 3 consecutive zeroes modulo 1000:</p>
 
@@ -124,7 +124,7 @@ Don't know if it useful or not, but you've got the idea.</p>
 
 _HL2(`etc:')
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/LCG_Z3').</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/LCG_Z3').</p>
 
 <p>See also: _HTML_LINK(`https://yurichev.com/blog//compress/',`Text strings right in the middle of compressed data').
 Also, my _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf',`SAT/SMT notes') has another LCG-related example.</p>

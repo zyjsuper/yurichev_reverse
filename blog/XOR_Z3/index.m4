@@ -15,9 +15,9 @@ _PRE_BEGIN
 m4_include(`blog/XOR_Z3/1.py')
 _PRE_END
 
-<p>( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_Z3/1.py') )</p>
+<p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_Z3/1.py') )</p>
 
-<p>Let's try it on a _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_Z3/cipher1.txt',`small 350-bytes file'):</p>
+<p>Let's try it on a _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_Z3/cipher1.txt',`small 350-bytes file'):</p>
 
 _PRE_BEGIN
 % python 1.py cipher1.txt
@@ -105,7 +105,7 @@ _PRE_BEGIN
 ...
 _PRE_END
 
-<p>( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_Z3/2.py') )</p>
+<p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_Z3/2.py') )</p>
 
 <p>Now this is something familiar:</p>
 
@@ -151,7 +151,7 @@ _PRE_BEGIN
 ...
 _PRE_END
 
-<p>( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_Z3/3.py') )</p>
+<p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_Z3/3.py') )</p>
 
 <p>This key is seems correct:</p>
 
@@ -188,13 +188,13 @@ _PRE_END
 <p>So this is correct 17-byte XOR-key.</p>
 
 <p>Needless to say, that the bigger input, the better.
-That 350-byte file is in fact the beginning of bigger file I prepared (_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_Z3/cipher2.txt',`cipher2.txt'), 12903 bytes).
+That 350-byte file is in fact the beginning of bigger file I prepared (_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_Z3/cipher2.txt',`cipher2.txt'), 12903 bytes).
 And a correct key for it can be found for it without additional "heuristics" we added.</p>
 
 <p>SMT solver is overkill for this. I once solved this problem naively, and it was much faster: _HTML_LINK_AS_IS(`https://yurichev.com/blog/XOR_mask_2/').
 Nevertheless, this is yet another demonstration of yet another optimization problem.</p>
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/XOR_Z3').</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/XOR_Z3').</p>
 
 <p>Previously: _HTML_LINK(`https://yurichev.com/blog/set_cover/',`Making smallest possible test suite using Z3'),
 _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf',`Quick introduction into SAT/SMT solvers and symbolic execution').</p>

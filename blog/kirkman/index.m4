@@ -117,7 +117,7 @@ _PRE_END
 <p>Unfortunately, sample SGP (social golfer problems) are out of reach. Yet?
 _HTML_LINK_AS_IS(`http://www.mathpuzzle.com/MAA/54-Golf%20Tournaments/mathgames_08_14_07.html').</p>
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/kirkman').</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/kirkman').</p>
 
 _BLOG_FOOTER()
 

@@ -192,7 +192,7 @@ _PRE_BEGIN
 m4_include(`blog/minesweeper_SAT/minesweeper_SAT.py')
 _PRE_END
 
-<p>The output CNF file can be large, up to ~2000 clauses, or more, here is an example: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/minesweeper_SAT/sample.cnf').</p>
+<p>The output CNF file can be large, up to ~2000 clauses, or more, here is an example: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/minesweeper_SAT/sample.cnf').</p>
 
 <p>Anyway, it works just like my previous Z3Py script:</p>
 
@@ -208,7 +208,7 @@ _PRE_END
 <p>... but it runs way faster, even considering overhead of executing external program.
 Perhaps, Z3Py version could be optimized much better?</p>
 
-<p>The files, including Wolfram Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/minesweeper_SAT').</p>
+<p>The files, including Wolfram Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/minesweeper_SAT').</p>
 
 _BLOG_FOOTER()
 

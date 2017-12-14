@@ -11,7 +11,7 @@ It can be viewed as highly advanced and fast debugger.
 These are heavily used in cryptography, and we can try to run WinRAR archiver in encryption mode with a hope
 that some XOR instruction is indeed is used while encryption.</p>
 
-<p>Here is the source code of my PIN tool: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.cpp').</p>
+<p>Here is the source code of my PIN tool: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.cpp').</p>
 
 <p>The code is almost self-explanatory: it scans input executable file for all XOR/PXOR instructions and inserts
 a call to our function before each.
@@ -31,11 +31,11 @@ c:\pin-3.2-81205-msvc-windows\pin.exe -t XOR_ins.dll -- rar a -pLongPassword tmp
 c:\pin-3.2-81205-msvc-windows\pin.exe -t XOR_ins.dll -- rar a -pLongPassword tmp.rar test2.bin
 _PRE_END
 
-<p>Now here is statistics for the test1.bin: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.out.test1').
-... and for test2.bin: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.out.test2').
+<p>Now here is statistics for the test1.bin: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.out.test1').
+... and for test2.bin: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.out.test2').
 So far, you can ignore all addresses other than ip=0x1400xxxxx, which are in other DLLs.</p>
 
-<p>Now let's see a difference: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.diff').</p>
+<p>Now let's see a difference: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/PIN_XOR/files/XOR_ins.diff').</p>
 
 <p>Some XOR instructions executed more often for test2.bin (which is bigger) than for test1.bin (which is smaller).
 So these are clearly related to file size!</p>
@@ -223,7 +223,7 @@ The first function is still unknown for me.</p>
 
 <p>Still, this is impressive, because I didn't dig into RAR code (which is proprietary, of course). I didn't even peek into UnRAR source code (which is available).</p>
 
-<p>The files, including test files and RAR executable I've used (win64, 5.40): _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/PIN_XOR/files').</p>
+<p>The files, including test files and RAR executable I've used (win64, 5.40): _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/PIN_XOR/files').</p>
 
 _HL2(`Why "instrumentation"?')
 

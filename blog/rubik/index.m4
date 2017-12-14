@@ -157,7 +157,7 @@ for TURNS in range(1,12): # 1..11
         exit(0)
 _PRE_END
 
-<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/rubik/rubik2_z3.py') )<p>
+<p>( The full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/rubik/rubik2_z3.py') )<p>
 
 <p>That works:<p>
 
@@ -246,7 +246,7 @@ Depending on "selector" input it "connects" output with "true" or "false" input.
 Using tree of ITE gates we first can build 32-to-1 MUX, then wide 32*3-to-3 MUX.</p>
 
 <p>I once have written small utility to search for shortest possible CNF formula for a specific function,
-in a bruteforce manner (_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/rubik/XOR_CNF_bf.c')).
+in a bruteforce manner (_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/rubik/XOR_CNF_bf.c')).
 It was inspired by "aha! hacker assistant" by Henry Warren.
 So here is a function:</p>
 
@@ -469,7 +469,7 @@ def add_r(dst, src):
 ...
 _PRE_END
 
-<p>Now the full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/rubik/SAT.py').
+<p>Now the full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/rubik/SAT.py').
 I tried to make it as concise as possible.
 It requires minisat to be installed.</p>
 

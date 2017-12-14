@@ -8,7 +8,7 @@ _COPYPASTED1()
 
 <center><img src="//yurichev.com/blog/XOR_mask_2/files/cipher.png"></center>
 
-<p>The encrypted file can be downloaded _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_mask_2/files/cipher.txt',`here').</p>
+<p>The encrypted file can be downloaded _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_mask_2/files/cipher.txt',`here').</p>
 
 <p>ent Linux utility reports about ~7.5 bits per byte, and this is high level of _HTML_LINK(`//yurichev.com/blog/entropy/',`entropy'),
 close to compressed or properly encrypted file.
@@ -85,7 +85,7 @@ for N in range(KEY_LEN):
     print possible_keys, "len=", len(possible_keys)
 _PRE_END
 
-<p>(Full version of the source code is _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_mask_2/files/decrypt2.py',`here')).</p>
+<p>(Full version of the source code is _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_mask_2/files/decrypt2.py',`here')).</p>
 
 <p>Here is its output:</p>
 
@@ -242,7 +242,7 @@ for N in range(KEY_LEN):
     print possible_keys, "len=", len(possible_keys)
 _PRE_END
 
-<p>(Full version of the source code is _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_mask_2/files/decrypt3.py',`here')).</p>
+<p>(Full version of the source code is _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_mask_2/files/decrypt3.py',`here')).</p>
 
 <p>This reports just one single possible byte for each byte of key:</p>
 
@@ -323,7 +323,7 @@ my occupation.
 ...
 _PRE_END
 
-<p>(Full version of the text is _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_mask_2/files/plain.txt',`here')).</p>
+<p>(Full version of the text is _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_mask_2/files/plain.txt',`here')).</p>
 
 <p>The text looks correct.
 Yes, I made up this example and choose well-known text of Conan Doyle, but it's very close to what I had in my practice some time ago.</p>

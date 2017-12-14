@@ -14,7 +14,7 @@ is now stored not in global array, but rather in malloc'ed heap blocks.</p>
 _HL2(`Intercepting all rand() calls')
 
 <p>First, since Minesweeper places mines randomly, it has to call rand() or similar function.
-Let's intercept all rand() calls: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper1.cpp',`minesweeper1.cpp').</p>
+Let's intercept all rand() calls: _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper1.cpp',`minesweeper1.cpp').</p>
 
 <p>Now we can run it:</p>
 
@@ -24,7 +24,7 @@ _PRE_END
 
 <p>During startup, PIN searches for all calls to rand() function and adds a hook right after each call.
 The hook is the RandAfter() function we defined: it is logging about return value and also about return address.
-Here is a log I got during run of standard 9*9 configuration (10 mines): _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper1.out.10mines',`minesweeper1.out.10mines').
+Here is a log I got during run of standard 9*9 configuration (10 mines): _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper1.out.10mines',`minesweeper1.out.10mines').
 The rand() function was called many times from several places, but was called from 0x10002770d just 10 times.
 I switched Minesweeper to 16*16 configuration (40 mines) and rand() was called from 0x10002770d 40 times.
 So yes, this is our point.
@@ -33,7 +33,7 @@ the function which calls rand() at 0x10002770d called Board::placeMines().</p>
 
 _HL2(`Replacing rand() calls with our function')
 
-<p>Let's now try to replace rand() function with our version, let it always return zero: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper2.cpp',`minesweeper2.cpp').
+<p>Let's now try to replace rand() function with our version, let it always return zero: _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper2.cpp',`minesweeper2.cpp').
 During startup, PIN replaces all calls to rand() to calls to our function, which writes to log and returns zero.
 OK, I run it, and clicked on leftmost/topmost cell:</p>
 
@@ -86,7 +86,7 @@ What we need to do:
 
 <p>Tracking all memory writes is slow, but after 2nd call to rand(), we don't need to track it (since we've got already a list of blocks of interest at this point), so we turn it off.</p>
 
-<p>Now the code: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper3.cpp',`minesweeper3.cpp').</p>
+<p>Now the code: _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/minesweeper_PIN/minesweeper3.cpp',`minesweeper3.cpp').</p>
 
 <p>As it turns out, only 4 heap blocks gets modified between first two rand() calls, this is how they looks like:</p>
 
@@ -182,7 +182,7 @@ so we can see it during free() call.</p>
 <p>Another fact: the method Array&lt;NodeType>::Add(NodeType) modifies blocks we observed, and is called from various places, including Board::placeMines().
 But what is cool: I never got into its details, everything has been resolved using just PIN.</p>
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/minesweeper_PIN').</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/minesweeper_PIN').</p>
 
 _HL2(`Exercise')
 

@@ -32,7 +32,7 @@ Theorem states that any planar graph (or map) can be colored only 4 colors.</p>
 
 <p><img src="big1.png"> <img src="big2.png"></p>
 
-<p>The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/tiling_Z3/tiling.py')</p>
+<p>The source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/tiling_Z3/tiling.py')</p>
 
 <p>Further reading: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Exact_cover#Pentomino_tiling').</p>
 

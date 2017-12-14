@@ -16,7 +16,7 @@ _PRE_BEGIN
 m4_include(`blog/spreadsheet/1.py')
 _PRE_END
 
-<p>( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/spreadsheet/1.py') )</p>
+<p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/spreadsheet/1.py') )</p>
 
 <p>All we do is just creating pack of variables for each cell, named A0, B1, etc, of integer type.
 All of them are stored in <i>cells[]</i> dictionary.
@@ -66,7 +66,7 @@ else:
     print s.unsat_core()
 _PRE_END
 
-<p>( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/spreadsheet/2.py') )</p>
+<p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/spreadsheet/2.py') )</p>
 
 <p>We should explicitly turn on unsat core support and use <i>assert_and_track()</i> instead of <i>add()</i> method, because this feature slows down the whole process.
 That works:</p>
@@ -143,7 +143,7 @@ m4_include(`blog/spreadsheet/grid.txt')
 
 _HL2(`Conclusion')
 
-<p>The files, including Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/spreadsheet').</p>
+<p>The files, including Mathematica notebook: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/spreadsheet').</p>
 
 <p>Other Z3-related examples: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 

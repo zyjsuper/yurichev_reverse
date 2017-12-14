@@ -5,7 +5,7 @@ _HEADER_HL1(`6-May-2016: Breaking simple executable cryptor')
 _COPYPASTED1()
 
 <p>I've got an executable file which is encrypted by relatively simple encryption.
-_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/cipher.bin',`Here is it') (only executable section is left).</p>
+_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/cipher.bin',`Here is it') (only executable section is left).</p>
 
 <p>First, all encryption function does is just adds number of position in buffer to the byte.
 Here is how this can be encoded in Python:</p>
@@ -153,7 +153,7 @@ for N in range(KEY_LEN):
     print sorted_stat[0]
 _PRE_END
 
-<p>(Source code can downloaded _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/decrypt.py',`here')).</p>
+<p>(Source code can downloaded _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/decrypt.py',`here')).</p>
 
 <p>I run it and here is a key for which 00/FF/8B bytes presence in decrypted buffer is maximal:</p>
 
@@ -234,7 +234,7 @@ for c in tmp:
 fout.close()
 _PRE_END
 
-<p>(Source code can downloaded _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/decrypt2.py',`here')).</p>
+<p>(Source code can downloaded _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/decrypt2.py',`here')).</p>
 
 <p>Let's check resulting file:</p>
 
@@ -280,7 +280,7 @@ $ objdump -b binary -m i386 -D decrypted.bin
 _PRE_END
 
 <p>Yes, this is seems correctly disassembled piece of x86 code.
-The whole dectyped file can be downloaded _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/decrypted.bin',`here').</p>
+The whole dectyped file can be downloaded _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/breaking_simple_exec_crypto/files/decrypted.bin',`here').</p>
 
 <p>In fact, this is text section from regedit.exe from Windows 7.
 But this example is based on a real case I encountered, so just executable is different (and key), algorithm is the same.</p>

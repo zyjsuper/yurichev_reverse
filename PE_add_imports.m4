@@ -41,7 +41,7 @@ _PRE_END
 
 <p>Download: _HTML_LINK(`utils/PE_add_imports.exe',`win32 executable'), 
 _HTML_LINK(`utils/PE_add_imports64.exe',`win64 executable')</p>
-<p>_HTML_LINK(`https://github.com/dennis714/bolt/blob/master/PE_add_imports.c',`Source code'). 
-_HTML_LINK(`https://github.com/dennis714/bolt',`Bolt library') in which this utility is incorporated</p>
+<p>_HTML_LINK(`https://github.com/DennisYurichev/bolt/blob/master/PE_add_imports.c',`Source code'). 
+_HTML_LINK(`https://github.com/DennisYurichev/bolt',`Bolt library') in which this utility is incorporated</p>
 
 _FOOTER()

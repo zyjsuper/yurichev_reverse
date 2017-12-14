@@ -208,7 +208,7 @@ _PRE_END
 
 _HL2(`The files')
 
-_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/alphametics')
+_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/alphametics')
 
 _BLOG_FOOTER()
 

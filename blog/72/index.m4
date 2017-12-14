@@ -12,7 +12,7 @@ _HEADER_HL1(`15-Mar-2013: Quick introduction to reverse engineering for beginner
 
 <p>"Краткое введение в reverse engineering для начинающих": _HTML_LINK_AS_IS(`//yurichev.com/writings/RE_for_beginners-ru.pdf')</p>
 
-<p>Do not hesitate to send me any corrections, please! Here is also books's source code (LaTeX): _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners')</p>
+<p>Do not hesitate to send me any corrections, please! Here is also books's source code (LaTeX): _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners')</p>
 
 _BLOG_FOOTER_GITHUB(`72')
 

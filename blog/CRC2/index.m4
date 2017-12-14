@@ -18,7 +18,7 @@ _PRE_BEGIN
 m4_include(`blog/CRC2/factor_GF2.py')
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/CRC2/factor_GF2.py') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/CRC2/factor_GF2.py') )
 
 _BLOG_FOOTER()
 

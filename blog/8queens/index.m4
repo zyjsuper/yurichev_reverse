@@ -88,7 +88,7 @@ It still can be optimized further.</p>
 <p>There is no point to write assembly code these days, but it can be good exercise, to understand it better.
 Surprisingly, it also helps during SIMD coding, since you work with CPU instructions rather than functions.</p>
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/8queens').</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/8queens').</p>
 
 _BLOG_FOOTER()
 

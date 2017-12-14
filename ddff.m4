@@ -27,7 +27,7 @@ scanning will be much faster.
 _PRE_END
 
 <p>_HTML_LINK(`http://conus.info/utils/ddff.exe', `Download for win32').</p>
-<p>_HTML_LINK(`https://github.com/dennis714/DDFF', `source code').</p>
+<p>_HTML_LINK(`https://github.com/DennisYurichev/DDFF', `source code').</p>
 
 _FOOTER()
 

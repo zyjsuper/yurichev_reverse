@@ -30,7 +30,7 @@ It's probably related to some orders and/or customers information.</p>
 ...
 </pre>
 
-<p>The file is available _HTML_LINK(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/encrypted_DB_case_1/encrypted.xml',`here').</p>
+<p>The file is available _HTML_LINK(`https://raw.githubusercontent.com/DennisYurichev/yurichev.com/master/blog/encrypted_DB_case_1/encrypted.xml',`here').</p>
 
 <p>This is clearly base64-encoded data, because all strings consisting of Latin characters, digits,
 plus (+) and slash (/) symbols.
@@ -435,10 +435,10 @@ _PRE_END
 I finally concluded that the first 32-bit integer is just OrderID from the XML file,
 and the second is also OrderID, but negated. All other 8 bytes are static.
 Now I have decrypted the whole database: 
-_HTML_LINK(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/encrypted_DB_case_1/decrypted.full.txt',`decrypted.full.txt').</p>
+_HTML_LINK(`https://raw.githubusercontent.com/DennisYurichev/yurichev.com/master/blog/encrypted_DB_case_1/decrypted.full.txt',`decrypted.full.txt').</p>
 
 <p>The Python script used for this is: 
-_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/encrypted_DB_case_1/decrypt_blocks.py',`decrypt_blocks.py').</p>
+_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/encrypted_DB_case_1/decrypt_blocks.py',`decrypt_blocks.py').</p>
 
 <p>Perhaps, author wanted each block encrypted differently, so he/she used OrderID as part of key.
 It would be also possible to make different AES key instead of IV.</p>
@@ -490,7 +490,7 @@ The first byte (or 16-bit word) is seems string length, we can visually check it
 
 <p>There are 12 more bytes after each string.</p>
 
-<p>Using this script (_HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/encrypted_DB_case_1/dump_buffer_rest.py',`dump_buffer_rest.py')) 
+<p>Using this script (_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/encrypted_DB_case_1/dump_buffer_rest.py',`dump_buffer_rest.py')) 
 I've got random selection of the block "tails":</p>
 
 _PRE_BEGIN
@@ -590,8 +590,8 @@ OrderID= 5 name= LENA MARCUS sum= 179.0 date= 2004 / 6 / 3
 _PRE_END
 
 <p>See more: 
-_HTML_LINK(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/encrypted_DB_case_1/decrypted.full.with_data.txt',`decrypted.full.with_data.txt').
-Or filtered: _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/encrypted_DB_case_1/decrypted.short.txt',`decrypted.short.txt').
+_HTML_LINK(`https://raw.githubusercontent.com/DennisYurichev/yurichev.com/master/blog/encrypted_DB_case_1/decrypted.full.with_data.txt',`decrypted.full.with_data.txt').
+Or filtered: _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/encrypted_DB_case_1/decrypted.short.txt',`decrypted.short.txt').
 Seems correct.</p>
 
 <p>This is some kind of OOP serialization, i.e., packing differently typed values into binary buffer for storing and/or transmitting.</p>
@@ -674,7 +674,7 @@ I've got most popular USA names and surnames from there: _HTML_LINK_AS_IS(`http:
 and combined them randomly.
 Dates and sums were also generated randomly.</p>
 
-<p>All files used in this article are here: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/encrypted_DB_case_1').</p>
+<p>All files used in this article are here: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/encrypted_DB_case_1').</p>
 
 <p>Nevertheless, many features like these I've observed in real-world software applications.
 This example is based on them.</p>

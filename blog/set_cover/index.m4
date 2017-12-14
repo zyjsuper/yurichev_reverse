@@ -22,10 +22,10 @@ While simpler algorithms exist (see Wikipedia), it is also possible to solve wit
 <p>
 First, I took _HTML_LINK(`https://github.com/opensource-apple/kext_tools/blob/master/compression.c',`LZSS compression/decompression code') for the example, from Apple sources.
 Such routines are not easy to test.
-Here is _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/set_cover/compression.c',`my version') of it: I've added random generation of input data to be compressed.
+Here is _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/set_cover/compression.c',`my version') of it: I've added random generation of input data to be compressed.
 Random generation is dependent of some kind of input seed.
 Standard srand()/rand() are not recommended to be used, but for such simple task as ours, it's OK.
-I'll _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/set_cover/gen_gcov_tests.sh',`generate') 1000 tests with 0..999 seeds, that would produce random data to be compressed/decompressed/checked.
+I'll _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/set_cover/gen_gcov_tests.sh',`generate') 1000 tests with 0..999 seeds, that would produce random data to be compressed/decompressed/checked.
 </p>
 
 <p>
@@ -97,7 +97,7 @@ This is relatively fresh feature in Z3, so probably it was not stable in previou
 
 <p>
 The files:
-_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/set_cover').
+_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/set_cover').
 </p>
 
 <p>

@@ -8,8 +8,8 @@ _HEADER_HL1(`Simplest SAT solver in ~120 lines')
 This is simplest possible backtracking SAT solver written in Python (not a DPLL one).
 It uses the same backtracking algorithm you can find in many simple Sudoku and 8 queens solvers.
 It works significantly slower, but due to its extreme simplicity, it can also count solutions.
-For example, it count all solutions of _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/SAT_backtrack/queens8.cnf',`8 queens problem').
-Also, there are 70 solutions for _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/SAT_backtrack/POPCNT4.cnf',`POPCNT4 function') (the function is true if any 4 of its input 8 variables are true):</p>
+For example, it count all solutions of _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/SAT_backtrack/queens8.cnf',`8 queens problem').
+Also, there are 70 solutions for _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/SAT_backtrack/POPCNT4.cnf',`POPCNT4 function') (the function is true if any 4 of its input 8 variables are true):</p>
 
 _PRE_BEGIN
 SAT
@@ -44,7 +44,7 @@ _PRE_END
 
 <p>As you can see, all it does is enumerate all possible solutions, but prunes search tree as early as possible. This is backtracking.</p>
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/SAT_backtrack').</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/SAT_backtrack').</p>
 
 <p>My other notes about SAT/SMT: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf').</p>
 

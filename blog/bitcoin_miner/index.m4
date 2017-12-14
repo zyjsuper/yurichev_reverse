@@ -237,7 +237,7 @@ _PRE_BEGIN
 _PRE_END
 
 <p>Multiplication via division is used here, and constant is 0x51EB851F.
-I wrote a simple _HTML_LINK(`https://github.com/dennis714/progcalc',`programmer&rsquo;s calculator') for myself.
+I wrote a simple _HTML_LINK(`https://github.com/DennisYurichev/progcalc',`programmer&rsquo;s calculator') for myself.
 And I have there a feature to calculate modulo inverse.</p>
 
 _PRE_BEGIN

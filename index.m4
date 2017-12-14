@@ -23,7 +23,7 @@ _HL2(`Some of my writings:')
 <li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
 <li>My _HTML_LINK(`blog', `blog'), has some new articles.
 <li>_HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf', `Quick introduction into SAT/SMT solvers and symbolic execution (DRAFT)')
-<li>_HTML_LINK(`https://github.com/dennis714/random_notes/',`Random notes') at GitHub.
+<li>_HTML_LINK(`https://github.com/DennisYurichev/random_notes/',`Random notes') at GitHub.
 <li>_HTML_LINK(`writings/toy_decompiler.pdf', `Toy decompiler for x86-64').
 <li>_HTML_LINK(`writings/log_intro.pdf', `Introduction to logarithms').
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
@@ -71,7 +71,7 @@ _HL2(`Random utilities:')
 <li>_HTML_LINK(`http://conus.info/utils/#sap', `SAP network packets decompressor')
 <li>_HTML_LINK(`http://conus.info/utils/#demux', `The demux command-line utility can be used to demultiplex a file to set of files.')
 <li>_HTML_LINK(`ddff.html', `Duplicate Directories and Files Finder')
-<li>_HTML_LINK(`https://github.com/dennis714/sort_photos', `Simple Python script just for sorting photos (based on EXIF data)')
+<li>_HTML_LINK(`https://github.com/DennisYurichev/sort_photos', `Simple Python script just for sorting photos (based on EXIF data)')
 <li>_HTML_LINK(`copyfile.html', `Copyfile') - A very simple win32-utility to copy a file ignoring errors (including CRC errors).
 </ul>
 

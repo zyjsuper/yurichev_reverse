@@ -389,7 +389,7 @@ But "commit" objects will be different, because, likely, you'll create it under 
 But if you'll go so far, you can recreate commit objects just like mine, of course.</p>
 
 <p>Nonetheless, for those who interested, the repositories I experimented with are here: 
-_HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/git/files').</p>
+_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/git/files').</p>
 
 _HL3(`Trees are always sorted')
 
@@ -859,15 +859,15 @@ _PRE_END
 _HL2(`Pull requests')
 
 <p>Pull request is an offer to merge changes from other's tree.
-Let's say, @while0pass at GitHub wants to fix a bug in my repository ( _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/') ).
+Let's say, @while0pass at GitHub wants to fix a bug in my repository ( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners/') ).
 He/she makes "fork" on GitHub, which is cloning (or copying) repository to his own account ( _HTML_LINK_AS_IS(`https://github.com/while0pass/RE-for-beginners') ).
-He makes change and commits it on his local computer: _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/pull/73/files').
+He makes change and commits it on his local computer: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners/pull/73/files').
 His repository is now different from what is on my GitHub account at the moment: it has one additional commit.
 He then pushes his repository to his personal space at GitHub, in other words, to his fork of my repository.
-Now he making "pull request", an offer to me to grab the changes: _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/pull/73').
+Now he making "pull request", an offer to me to grab the changes: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners/pull/73').
 If everything can go smoothly, GitHub can merge automatically.</p>
 
-<p>Now my own GitHub repository at _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/') has commit from @while0pass.
+<p>Now my own GitHub repository at _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners/') has commit from @while0pass.
 But at the time, on my local computer, I worked on repository and made some changes and commited them.
 Let's say, I forgot about @while0pass's contribution and trying to push my changes to my GitHub account.
 git doesn't allow to do so ("remote rejected"), because repositories (my local and current at GitHub) are different.
@@ -881,7 +881,7 @@ GitHub offers to merge on your local computer, because it requires conflict reso
 <p>In this case I would clone @while0pass's repository from _HTML_LINK_AS_IS(`https://github.com/while0pass/RE-for-beginners.git') to my own repository,
 and do the work locally. This is what people do who do not use GitHub.</p>
 
-<p>Pull request may contain several commits, like that one: _HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/pull/69').</p>
+<p>Pull request may contain several commits, like that one: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners/pull/69').</p>
 
 <p>Pull request is not mandatory: I can merge it with my tree, may not, or may do this in the future at the right moment.</p>
 

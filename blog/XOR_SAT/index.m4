@@ -5,7 +5,7 @@ _HEADER_HL1(`Proving bizarre XOR alternative using SAT solver')
 <p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
 
 <p>I once wrote about quite bizarre XOR alternative I've found using aha! superoptimizer:
-_HTML_LINK_AS_IS(`https://github.com/dennis714/SAT_SMT_article/blob/master/SMT/XOR_EN.tex').
+_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/SAT_SMT_article/blob/master/SMT/XOR_EN.tex').
 See also here: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf').</p>
 
 <p>In short, x^y = -2*(x&y) + (x+y) or x^y = x+y - (x&y)<<1.</p>
@@ -76,7 +76,7 @@ _PRE_END
 
 <p>( Many functions used here has been reused from my previous example: _HTML_LINK_AS_IS(`https://yurichev.com/blog/factor_SAT/') )
 
-<p>The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_SAT/XOR_SAT.py').</p>
+<p>The full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_SAT/XOR_SAT.py').</p>
 
 <p>SAT solver returns "unsat", meaning, it could find such a pair.
 In other words, it couldn't find a counterexample.
@@ -165,7 +165,7 @@ def chk2():
     print "result2=%x" % BV_to_number(get_BV_from_solution(result2, solution))
 _PRE_END
 
-<p>The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/XOR_SAT/XOR_SAT.py').</p>
+<p>The source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/XOR_SAT/XOR_SAT.py').</p>
 
 _BLOG_FOOTER()
 

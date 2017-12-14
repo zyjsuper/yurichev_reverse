@@ -54,7 +54,7 @@ poly=0x461861861861861, init=0xffffffffffffffff, XORout=0
 total results 11
 _PRE_END
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/CRC_cracker_Z3').</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/CRC_cracker_Z3').</p>
 
 <p>The shortcoming: longer samples slows down everything significantly.
 I had luck with samples up to 4 bytes, but no larger.</p>

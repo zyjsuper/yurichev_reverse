@@ -38,7 +38,7 @@ This is a program uses MFC42.dll, so it could be MSVC 6.0, 5.0 or maybe even MSV
 <p>This pair do nothing, so it probably wasn't catched by MSVC compiler tests. Or maybe I wrong?</p>
 
 <p>There are another compiler anomalies 
-_HTML_LINK(`https://github.com/dennis714/RE-for-beginners/blob/3e16e8f3b56aefd69eb6fa931b04cc9a8a354b73/other/compiler_anomalies.tex',`in my book'),
+_HTML_LINK(`https://github.com/DennisYurichev/RE-for-beginners/blob/3e16e8f3b56aefd69eb6fa931b04cc9a8a354b73/other/compiler_anomalies.tex',`in my book'),
 or just open _HTML_LINK(`//beginners.re/Reverse_Engineering_for_Beginners-en.pdf',`PDF') and then Ctrl-F "anomaly".</p>
 
 <p>The reason I cite them is that sometimes practicing reverse engineers are stumbled by them while they should just ignore such quirks.</p>

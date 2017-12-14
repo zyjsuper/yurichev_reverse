@@ -20,7 +20,7 @@ These .o files can be extracted from libserver11.a:
 ar -x libserver11.a
 _PRE_END
 
-<p>_HTML_LINK(`https://github.com/dennis714/oracle-tables', `source code')</p>
+<p>_HTML_LINK(`https://github.com/DennisYurichev/oracle-tables', `source code')</p>
 
 <p>Download compiled version (win64): _HTML_LINK(`oracle/oracle_tables_win64.exe', `oracle_tables_win64.exe')</p>
 <p>Download compiled version (Linux x64): _HTML_LINK(`oracle/oracle_tables_linux64.tar', `oracle_tables_linux64.tar')</p>

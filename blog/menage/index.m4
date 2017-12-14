@@ -78,7 +78,7 @@ while True:
 
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/menage'). )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/menage'). )
 
 <p>For 3 couples:</p>
 
@@ -106,7 +106,8 @@ however, according to https://oeis.org/A059375 : 12
 _PRE_END
 
 <p>We are getting "half" of results because men and women can be then swapped (their sex swapped (or reassigned)) and you've got another 6 results.
-6+6=12 in total.</p>
+6+6=12 in total.
+This is kind of symmetry.</p>
 
 <p>For 4 couples:</p>
 
@@ -152,7 +153,7 @@ results total= 1560
 however, according to https://oeis.org/A059375 : 3120
 _PRE_END
 
-<p>The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/menage').</p>
+<p>The source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/menage').</p>
 
 _FOOTER()
 

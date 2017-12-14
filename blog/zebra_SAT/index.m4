@@ -350,9 +350,9 @@ add_right_or_left("Kools","Horse") # left or right
 _PRE_END
 
 <p>This is it!
-Full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/zebra_SAT/zebra_SAT.py')</p>
+Full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/zebra_SAT/zebra_SAT.py')</p>
 
-<p>Resulting CNF instance has 125 boolean variables and 511 clauses: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/zebra_SAT/1.cnf').
+<p>Resulting CNF instance has 125 boolean variables and 511 clauses: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/zebra_SAT/1.cnf').
 It is a piece of cake for any SAT solver.
 Even _HTML_LINK(`https://yurichev.com/blog/SAT_backtrack/',`my toy-level SAT')
 solver can solve it in ~1 second on my ancient Intel Atom netbook.</p>

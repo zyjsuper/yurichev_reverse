@@ -74,7 +74,7 @@ while True:
         break
 _PRE_END
 
-<p>( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/CRC_find_poly/CRC_find_poly.py') )</p>
+<p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/CRC_find_poly/CRC_find_poly.py') )</p>
 
 <p>Several polynomials for CRC8:</p>
 

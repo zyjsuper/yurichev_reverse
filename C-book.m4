@@ -6,7 +6,7 @@ _HEADER(`C/C++ programming language notes')
 
 <p>"Заметки о языке программирования Си/Си++" теперь находится _HTML_LINK(`//yurichev.com/writings/C-notes-ru.pdf', `тут')</p>
 
-<p>Feel free to send me corrections, or, it's even possible to submit patches on _HTML_LINK(`https://github.com/dennis714/C-notes', `book&#39;s source code')!</p>
+<p>Feel free to send me corrections, or, it's even possible to submit patches on _HTML_LINK(`https://github.com/DennisYurichev/C-notes', `book&#39;s source code')!</p>
 
 <p>Subscribe to _HTML_LINK(`//yurichev.com/mailing_lists.html',`my mailing list') for receiving updates of this book.</p>
 

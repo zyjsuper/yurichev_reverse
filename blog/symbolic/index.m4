@@ -7,7 +7,7 @@ _HEADER_HL1(`9-Feb-2017: Symbolic execution')
 <p>
 The following blog post will be part of bigger article.
 Meanwhile, readers are highly advised to read short introduction into symbolic mathematics:
-_HTML_LINK_AS_IS(`https://github.com/dennis714/SAT_SMT_article/blob/89c46ca2d9040dd46b309043f4937b8e1d49c8ed/symbolic/main.tex').</p>
+_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/SAT_SMT_article/blob/89c46ca2d9040dd46b309043f4937b8e1d49c8ed/symbolic/main.tex').</p>
 
 _HL2(`XOR swap')
 
@@ -204,7 +204,7 @@ _PRE_BEGIN
         sys.stdout.write ("\n")
 _PRE_END
 
-<p>( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/symbolic/4_CRC/2.py') )</p>
+<p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/symbolic/4_CRC/2.py') )</p>
 
 <p>Now this how each input bit of 1-byte input buffer affects each bit of the final CRC state:<p>
 
@@ -411,7 +411,7 @@ But reality is always harsh and inconvenient, so all this shouldn't be taken as 
 
 <p>More Z3 and KLEE examples: _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').</p>
 
-<p>The files used in this blog post: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/symbolic').</p>
+<p>The files used in this blog post: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/symbolic').</p>
 
 <p>As you noticed in my simple examples, expression is represented as a plain string, for the sake of simplicity.
 Advanced symbolic execution engines uses AST (Abstract Syntax Tree), which are much better and efficient.

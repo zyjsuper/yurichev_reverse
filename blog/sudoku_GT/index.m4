@@ -6,7 +6,7 @@ _HEADER_HL1(`Greater Than Sudoku')
 
 <img src="puzzle.png">
 
-<p>It can be solved easily with Z3. I've took the same piece of code I used for usual Sudoku ( _HTML_LINK_AS_IS(`https://github.com/dennis714/SAT_SMT_article/blob/master/SMT/sudoku2.py'), 
+<p>It can be solved easily with Z3. I've took the same piece of code I used for usual Sudoku ( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/SAT_SMT_article/blob/master/SMT/sudoku2.py'), 
 PDF file: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf') ) and added this:</p>
 
 _PRE_BEGIN
@@ -103,7 +103,7 @@ s.add(cells[8][7]>cells[8][8])
 ...
 _PRE_END
 
-<p>( The full file: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/sudoku_GT/sudoku_GT.py' ) )</p>
+<p>( The full file: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/sudoku_GT/sudoku_GT.py' ) )</p>
 
 <p>The puzzle marked as "Outrageous" (for humans?), however it took ~30s on my old Intel Xeon E3-1220 3.10GHz to solve it:</p>
 

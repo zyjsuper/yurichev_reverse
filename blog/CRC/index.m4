@@ -104,7 +104,7 @@ unsigned int divide(unsigned int dividend, unsigned int divisor)
 }
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/CRC/div.c') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/CRC/div.c') )
 
 <p>Let's divide 1234567 by 813 and find remainder:</p>
 
@@ -184,7 +184,7 @@ uint32_t remainder_arith(uint32_t dividend, uint32_t divisor)
 }
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/CRC/div_both.c') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/CRC/div_both.c') )
 	
 <p>Let's divide 1234567 by 813 and find remainder:</p>
 
@@ -277,7 +277,7 @@ uint32_t remainder_GF2(uint32_t dividend, uint32_t divisor)
 }
 _PRE_END
 
-( _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/CRC/div_both.c') )
+( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/CRC/div_both.c') )
 
 <p>And voila, this is the function which computes CRC32 for the input 32-bit value.</p>
 

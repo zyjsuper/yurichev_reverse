@@ -11,7 +11,7 @@ This is a device that can signal its angle in some form, like:</p>
 
 <p>( Taken from Wikipedia: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Gray_code') )</p>
 
-<p>Click on bigger image: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/gray/Gray_code_rotary_encoder_13-track_opened.jpg').</p>
+<p>Click on bigger image: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/DennisYurichev/yurichev.com/master/blog/gray/Gray_code_rotary_encoder_13-track_opened.jpg').</p>
 
 <p>This is a rotary (shaft) encoder: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Rotary_encoder').
 This picture is a cropped and photoshopped version:</p>
@@ -20,7 +20,7 @@ This picture is a cropped and photoshopped version:</p>
 
 <p>( Source: _HTML_LINK_AS_IS(`http://homepages.dordt.edu/~ddeboer//S10/304/c_at_d/304S10_RC_TRK.HTM') )</p>
 
-<p>Click on bigger one: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/dennis714/yurichev.com/master/blog/gray/Rotary_Encoder_track_detail.gif').</p>
+<p>Click on bigger one: _HTML_LINK_AS_IS(`https://raw.githubusercontent.com/DennisYurichev/yurichev.com/master/blog/gray/Rotary_Encoder_track_detail.gif').</p>
 
 <p>There are pins and tracks on rotating wheel.
 How would you do this?
@@ -62,7 +62,7 @@ _PRE_BEGIN
 m4_include(`blog/gray/gray.py')
 _PRE_END
 
-<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/gray/gray.py') )</p>
+<p>( The source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/gray/gray.py') )</p>
 
 <p>For 4 bits, 4 changes is enough:</p>
 
@@ -70,8 +70,8 @@ _PRE_BEGIN
 m4_include(`blog/gray/4.txt')
 _PRE_END
 
-<p>8 changes for 5 bits: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/gray/5.txt').
-12 for 6 bits (or maybe even less): _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/gray/6.txt').</p>
+<p>8 changes for 5 bits: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/gray/5.txt').
+12 for 6 bits (or maybe even less): _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/gray/6.txt').</p>
 
 _HL2(`Duke Nukem 3D from 1990s')
 

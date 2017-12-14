@@ -76,7 +76,7 @@ _PRE_END
 
 <p>Besides recreational mathematics, squares like these are very important in design of experiments.</p>
 
-<p>The files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/knut_vik')</p>
+<p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/knut_vik')</p>
 
 <p>Further reading:</p>
 

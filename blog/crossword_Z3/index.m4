@@ -102,7 +102,7 @@ _PRE_BEGIN
 m4_include(`blog/crossword_Z3/cross_Z3.py')
 _PRE_END
 
-<p>The files, including my dictionary: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/crossword_Z3').</p>
+<p>The files, including my dictionary: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/crossword_Z3').</p>
 
 _BLOG_FOOTER()
 

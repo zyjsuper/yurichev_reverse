@@ -7,7 +7,7 @@ _HEADER_HL1(`Simplifying long and messy expressions using Mathematica and Z3')
 <p>... which can be results of Hex-Rays and/or manual rewriting.</p>
 
 <p>I've added to my RE4B book about Wolfram Mathematica capabilities to minimize expressions:
-_HTML_LINK_AS_IS(`https://github.com/dennis714/RE-for-beginners/blob/cd85356051937e87f90967cc272248084808223b/other/hexrays_EN.tex#L412').</p>
+_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/RE-for-beginners/blob/cd85356051937e87f90967cc272248084808223b/other/hexrays_EN.tex#L412').</p>
 
 <p>Today I stumbled upon this Hex-Rays output:</p>
 

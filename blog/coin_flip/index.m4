@@ -25,14 +25,14 @@ _PRE_END
 
 <p>( _HTML_LINK_AS_IS(`https://www.reddit.com/r/algorithms/comments/7aq9if/coin_flipping_problem_koi_06/') )</p>
 
-<p>My solution for Z3: see _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/coin_z3.py',`source code') and comments, _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/z3.txt',`results').</p>
+<p>My solution for Z3: see _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/coin_flip/coin_z3.py',`source code') and comments, _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/coin_flip/z3.txt',`results').</p>
 
-<p>And also MaxSAT solution (uses _HTML_LINK(`http://sat.inesc-id.pt/open-wbo/',`Open-WBO MaxSAT solver')): _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/coin_MaxSAT.py',`source code'), _HTML_LINK(`https://github.com/dennis714/yurichev.com/blob/master/blog/coin_flip/SAT.txt',`results').
+<p>And also MaxSAT solution (uses _HTML_LINK(`http://sat.inesc-id.pt/open-wbo/',`Open-WBO MaxSAT solver')): _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/coin_flip/coin_MaxSAT.py',`source code'), _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/coin_flip/SAT.txt',`results').
 Xu.py and frolic.py are libraries which are used.</p>
 
 <p>4-5 row/column flips can be achieved using this on 8*8 board (like chessboard) in reasonable time (couple of minutes).</p>
 
-<p>All files: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/tree/master/blog/coin_flip').</p>
+<p>All files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/coin_flip').</p>
 
 _BLOG_FOOTER()
 

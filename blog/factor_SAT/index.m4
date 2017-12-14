@@ -373,7 +373,7 @@ _PRE_END
 <p>It works way faster than by Z3 solution, but still slow.
 It can factor numbers up to maybe ~2^40, while Wolfram Mathematica can factor ~2^80 easily.</p>
 
-<p>The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/factor_SAT/factor_SAT.py').</p>
+<p>The full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/factor_SAT/factor_SAT.py').</p>
 
 _HL2(`Division using multiplier')
 
@@ -417,7 +417,7 @@ def div(dividend,divisor):
 print div (12345678901234567890123456789*12345, 12345)
 _PRE_END
 
-<p>The full source code: _HTML_LINK_AS_IS(`https://github.com/dennis714/yurichev.com/blob/master/blog/factor_SAT/div.py').</p>
+<p>The full source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/factor_SAT/div.py').</p>
 
 <p>It works very fast, but still, slower than conventional ways.</p>
 
