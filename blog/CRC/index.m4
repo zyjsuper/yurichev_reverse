@@ -324,7 +324,8 @@ This one is for CRC16:</p>
 
 <p>And the task is not to compute remainder according to rules of arithmetics, but rather to detect errors.</p>
 
-<p>Compare this to a division circuit with at least one binary adder/subtractor.</p>
+<p>Compare this to a division circuit with at least one binary adder/subtractor, which will have carry-ripple problem.
+On the other hand, addition over GF(2) has no carries, hence, this problem absent.</p>
 
 _HL2(`Further reading')
 
