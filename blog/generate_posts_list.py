@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 1,14,0,0,0), "adder","Simple adder in SAT/SMT")
     post(f1,f2,datetime.datetime(2018, 1,13,0,0,0), "fred_puzzle","Yet another logical puzzle and SAT/SMT solvers")
     post(f1,f2,datetime.datetime(2018, 1,13,0,0,0), "MC_puzzle","Multiple choice logic puzzle, and solving it using SAT/SMT solvers")
     post(f1,f2,datetime.datetime(2018, 1, 1,0,0,0), "ToySMT","ToySMT - simple SMT solver under ~1500 SLOC of pure C.")

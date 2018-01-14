@@ -21,7 +21,7 @@ _PRE_END
 <p>Cited from: _HTML_LINK_AS_IS(`https://www.johndcook.com/blog/2015/07/06/multiple-choice/').</p>
 
 <p>This problem can be easily represented as a system of boolean equations.
-Let's try to solve it using Z3:</p>
+Let's try to solve it using Z3. Each bool represents if the specific sentence is true.</p>
 
 _PRE_BEGIN
 m4_include(`blog/MC_puzzle/mc.py')
