@@ -12,7 +12,7 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 
 <p>Current status: one of my current projects is _HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
 I also currently write a collection of _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf', `examples for SAT/SMT solvers').
-And here is what I do for money: _HTML_LINK_AS_IS(`https://beginners.re/services.html').
+And here is what _HTML_LINK(`https://github.com/DennisYurichev/RE-for-beginners/blob/0f454cc6bc9367ad27fd9f728e8c9530b2d004a2/1st_page_EN.tex#L18',`I do for money').
 </p>
 
 <!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
