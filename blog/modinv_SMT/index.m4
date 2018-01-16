@@ -34,7 +34,7 @@ _PRE_END
 
 <p>Indeed, this is modulo inverse of 3 modulo $2^{32}$: _HTML_LINK_AS_IS(`https://www.wolframalpha.com/input/?i=PowerMod%5B3,-1,2%5E32%5D').</p>
 
-<p>Let's check using my calculator:</p>
+<p>Let's check using _HTML_LINK(`https://github.com/DennisYurichev/progcalc',`my calculator'):</p>
 
 _PRE_BEGIN
 [3] 123456*0xaaaaaaab
