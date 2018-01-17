@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Yet another explanation of modulo inverse using SMT-solvers')
 
-<p>By which constant we must multiply couple of random numbers, so that the result would be as if we divided them by 3?
+<p>By which constant we must multiply a random number, so that the result would be as if we divided them by 3?
 
 _PRE_BEGIN
 from z3 import *
@@ -14,12 +14,10 @@ s=Solver()
 # wouldn't work for 10, etc
 divisor=3
 
-# two random constants, must be divisible by divisor:
-const1=(0x1234567*divisor)
-const2=(0xabcdef0*divisor)
+# random constant, must be divisible by divisor:
+const=(0x1234567*divisor)
 
-s.add(const1*m == const1/divisor)
-s.add(const2*m == const2/divisor)
+s.add(const*m == const/divisor)
 
 print s.check()
 print "%x" % s.model()[m].as_long()
@@ -47,7 +45,7 @@ _PRE_END
 
 <p>It wouldn't work for 10, because there are no modulo inverse of 10 modulo $2^{32}$, SMT solver would give "unsat".</p>
 
-<p>Why random constants must be divisible by divisor? See: _HTML_LINK_AS_IS(`https://yurichev.com/blog/modinv/').</p>
+<p>Why random constant must be divisible by divisor? See: _HTML_LINK_AS_IS(`https://yurichev.com/blog/modinv/').</p>
 
 _FOOTER()
 
