@@ -11,7 +11,9 @@ _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blo
 <p>I could generate only small circuits maybe up to ~10 gates, but this is interesting nonetheless.</p>
 
 <p>Also, I've always wondering how you can do something usable for _HTML_LINK(`https://en.wikipedia.org/wiki/Apollo_Guidance_Computer',`Apollo Guidance Computer'), which had only one single gate: NOR3?
-See also its schematics: _HTML_LINK_AS_IS(`http://klabs.org/history/ech/agc_schematics/').</p>
+See also its schematics: _HTML_LINK_AS_IS(`http://klabs.org/history/ech/agc_schematics/').
+The answer is DeMorgan laws, but this is not obvious.
+</p>
 
 <p>INPUTS[] has all possible bit combinations for all inputs, or all possible truth tables. OUTPUTS[] has truth table for each output.
 All the rest is processed in bitsliced manner.
