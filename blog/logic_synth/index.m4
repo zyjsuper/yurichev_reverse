@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Simple logic synthesis using Z3 and Apollo Guidance Computer')
+_HEADER_HL1(`Simple logic synthesis using Z3; Apollo Guidance Computer')
 
 <p>What a smallest possible logic circuit is possible for a given truth table?</p>
 
