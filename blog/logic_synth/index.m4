@@ -203,6 +203,12 @@ _HL2(`Circuit for a central "g" segment of 7-segment display')
 Yes, encoders like these are usually implemented using a ROM.
 But I always been wondering, how to do this using only gates.</p>
 
+<p>Truth table for "g" segment I've used from this table:</p>
+
+<img src="NV_0501_Marston_Figure02.jpg">
+
+<p>(Image taken from _HTML_LINK_AS_IS(`http://www.nutsvolts.com').</p>
+
 _PRE_BEGIN
 INPUTS=[0b1111111100000000, 0b1111000011110000, 0b1100110011001100, 0b1010101010101010]
 # "g" segment, like here: http://www.nutsvolts.com/uploads/wygwam/NV_0501_Marston_Figure02.jpg
