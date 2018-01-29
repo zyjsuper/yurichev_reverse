@@ -195,6 +195,10 @@ _PRE_END
 
 _HL2(`Circuit for a central "g" segment of 7-segment display')
 
+<img src="blog/logic_synth/192px-7-segment_labeled.svg.png">
+
+<p>(Image taken from _HTML_LINK(`https://commons.wikimedia.org/wiki/File:7-segment_labeled.svg',`Wikipedia').)</p>
+
 <p>I couldn't find a circuit for the all 7 segments, but found for one, a central one ("g").
 Yes, encoders like these are usually implemented using a ROM.
 But I always been wondering, how to do this using only gates.</p>
