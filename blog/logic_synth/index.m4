@@ -155,7 +155,7 @@ _PRE_END
 
 _HL2(`POPCNT')
 
-<p>Smallest circuit to count bits in 3-bit input:</p>
+<p>Smallest circuit to count bits in 3-bit input, producing 2-bit output:</p>
 
 _PRE_BEGIN
 INPUTS=[0b11110000, 0b11001100, 0b10101010]
