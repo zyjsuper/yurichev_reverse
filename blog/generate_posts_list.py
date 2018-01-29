@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 1,30,0,0,0), "logic_synth","Simple logic synthesis using Z3 and Apollo Guidance Computer")
     post(f1,f2,datetime.datetime(2018, 1,17,0,0,0), "Hilbert_10","Hilbert’s 10th problem, Fermat’s last theorem and SMT solvers")
     post(f1,f2,datetime.datetime(2018, 1,16,0,0,0), "modinv_SMT","Yet another explanation of modulo inverse using SMT-solvers")
     post(f1,f2,datetime.datetime(2018, 1,14,0,0,0), "adder","Simple adder in SAT/SMT")
