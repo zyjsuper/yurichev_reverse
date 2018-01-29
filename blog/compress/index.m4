@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`25-Feb-2017: Text strings right in the middle of compressed data')
 
+_COPYPASTED1()
+
 <p>You can download Linux kernel 3.9.2 and find a familiar name right in the middle of compressed data:</p>
 
 _PRE_BEGIN
