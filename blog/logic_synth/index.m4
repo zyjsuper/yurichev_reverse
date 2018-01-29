@@ -12,7 +12,7 @@ _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blo
 
 <p>Also, I've always wondering how you can do something usable for _HTML_LINK(`https://en.wikipedia.org/wiki/Apollo_Guidance_Computer',`Apollo Guidance Computer'), which had only one single gate: NOR3?
 See also its schematics: _HTML_LINK_AS_IS(`http://klabs.org/history/ech/agc_schematics/').
-The answer is DeMorgan laws, but this is not obvious.
+The answer is De Morgan's laws, but this is not obvious.
 </p>
 
 <p>INPUTS[] has all possible bit combinations for all inputs, or all possible truth tables. OUTPUTS[] has truth table for each output.
@@ -40,7 +40,9 @@ r4=OR r3, r2             0111
 r5=NOT r4                1000
 _PRE_END
 
-<p>Using only NOR3 gate?</p>
+<p>This is indeed like stated in De Morgan's laws: AND(x,y) equivalent to ~OR(~x,~y).</p>
+
+<p>Now using only NOR3 gate?</p>
 
 _PRE_BEGIN
 avail=[I_NOR3]
