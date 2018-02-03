@@ -40,7 +40,7 @@ r4=OR r3, r2             0111
 r5=NOT r4                1000
 _PRE_END
 
-<p>This is indeed like stated in De Morgan's laws: AND(x,y) equivalent to ~OR(~x,~y).</p>
+<p>This is indeed like stated in De Morgan's laws: AND(x,y) is equivalent to ~OR(~x,~y). Can be used for obfuscation?</p>
 
 <p>Now using only NOR3 gate?</p>
 
