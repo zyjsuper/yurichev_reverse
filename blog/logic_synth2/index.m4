@@ -8,7 +8,7 @@ Found this exercise in _HTML_LINK(`http://www.cs.utsa.edu/~wagner/knuth/fasc0b.p
 
 <p><img src="page34.png" class="ImageBorder" /></p>
 
-<p>I', not clever enough to solve this manually, but I could try using logic synthesis, _HTML_LINK(`https://yurichev.com/blog/logic_synth/',`as I did before').
+<p>I'm, not clever enough to solve this manually, but I could try using logic synthesis, _HTML_LINK(`https://yurichev.com/blog/logic_synth/',`as I did before').
 As they say, "machines should work; people should think".</p>
 
 <p>My solutions for
