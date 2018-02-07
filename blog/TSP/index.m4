@@ -18,7 +18,7 @@ Denver (700 mi to the next city) ->
 Minneapolis (355 mi to the next city) ->
 Chicago (713 mi to the next city) ->
 New York (1374 mi to the next city) ->
-distance_total= 5213 mil
+distance_total= 5213 mi
 _PRE_END
 
 <p>Map I generated with Wolfram Mathematica:</p>
@@ -35,7 +35,7 @@ Denver (1631 mi to the next city) ->
 New York (2451 mi to the next city) ->
 Los Angeles (1745 mi to the next city) ->
 Chicago (803 mi to the next city) ->
-distance_total= 8192 mil
+distance_total= 8192 mi
 _PRE_END
 
 <p>Map:</p>
@@ -43,7 +43,7 @@ _PRE_END
 <img src="map2.png">
 
 <p>I could only process 6 cities, and it takes starting at several seconds up to 1 minute on my venerable Intel Quad-Core Xeon E3-1220 3.10GHz.
-Perhaps, Z3 is not a right tool for the job.
+Perhaps, Z3 is not a right tool for the job, well-known TSP algorithms way faster.
 However, it still can serve as demonstration.</p>
 
 _FOOTER()

@@ -83,5 +83,5 @@ m=s.model()
 for i in range(cities_t):
     print "%s (%d mi to the next city) ->" % (city_names[m[route[i]].as_long()], m[distance[i]].as_long())
 
-print "distance_total=", m[distance_total], "mil"
+print "distance_total=", m[distance_total], "mi"
 
