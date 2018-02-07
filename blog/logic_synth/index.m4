@@ -252,5 +252,9 @@ _HL2(`The source code')
 
 <p>_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/logic_synth/logic.py').</p>
 
+_HL2(`Next part')
+
+<p>_HTML_LINK_AS_IS(`https://yurichev.com/blog/logic_synth2/').</p>
+
 _FOOTER()
 
