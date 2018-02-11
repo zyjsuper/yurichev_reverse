@@ -15,14 +15,6 @@ _HTML_LINK(`http://beginners.re',`my book about reverse engineering') and _HTML_
 
 	<ul>
         <li>
-        <img src="paypal_logo.gif">
-
-        <p><b>smatviyc(@)hotmail.com</b> - it is in fact my friend's account, so please add comment like
-        "for Dennis Yurichev".
-        I have my own PayPal account, but citizens of Ukraine are not allowed to receive funds in it</p>
-
-	<li><img src="bitcoin_logo.png">
-
 	<p>My Bitcoin address: <b>1LLa7aqQbRmCYbccnCNwaLgxK9jFPTqPw</b></p>
 
 	_HTML_IMG(`bitcoin.png',`QR code of bitcoin address')
