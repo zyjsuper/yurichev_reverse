@@ -15,7 +15,7 @@ in his _HTML_LINK(`https://github.com/msakai/toysolver',`toysolver').</p>
 
 <p>This is solved:</p>
 
-<p><img src="Numberlink_puzzle_solution.svg" width="10%"></p>
+<p><img src="424px-Numberlink_puzzle_solution.svg.png" width="10%"></p>
 
 <p>See also:
 _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Numberlink'),
