@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 2,17,0,0,0), "numberlink_MaxSAT","Numberlink (AKA Flow Free) as a MaxSAT problem + toy PCB router")
     post(f1,f2,datetime.datetime(2018, 2,12,0,0,0), "numberlink","Solving Numberlink (AKA Flow Free) puzzle using Z3")
     post(f1,f2,datetime.datetime(2018, 2, 7,0,0,0), "logic_synth2","Simple logic synthesis using Z3: exercise from TAOCP")
     post(f1,f2,datetime.datetime(2018, 2, 3,0,0,0), "TSP","Travelling salesman problem using Z3")

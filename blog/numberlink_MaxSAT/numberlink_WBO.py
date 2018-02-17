@@ -46,6 +46,7 @@ def do_all():
             if c!=width-1:
                 s.fix_EQ(R[r][c], L[r][c+1])
 
+            # "maximize" number of empty cells:
             s.fix_soft_always_true(cell_is_empty[r][c], 1)
 
     for r in range(height):
