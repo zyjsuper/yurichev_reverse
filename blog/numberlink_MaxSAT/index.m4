@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Numberlink (AKA Flow Free) as a MaxSAT problem + toy PCB router')
+_HEADER_HL1(`Numberlink (AKA Flow Free) puzzle as a MaxSAT problem + toy PCB router')
 
 <p>Let's revisit _HTML_LINK(`https://yurichev.com/blog/numberlink/',`my solution for Numberlink (AKA Flow Free) puzzle written for Z3Py').</p>
 
