@@ -43,8 +43,11 @@ _PRE_END
 <img src="map2.png">
 
 <p>I could only process 6 cities, and it takes starting at several seconds up to 1 minute on my venerable Intel Quad-Core Xeon E3-1220 3.10GHz.
-Perhaps, Z3 is not a right tool for the job, well-known TSP algorithms way faster.
-However, it still can serve as demonstration.</p>
+Perhaps, this is not a right tool for the job, well-known TSP algorithms way faster.</p>
+
+<p>Even bruteforce enumeration is faster (6!=720 paths).</p>
+
+<p>However, it still can serve as demonstration.</p>
 
 _FOOTER()
 
