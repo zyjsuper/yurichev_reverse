@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_203","TAOCP 7.1.3 Exercise 203, MMIX MOR instruction and program synthesis by sketching")
     post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_198","TAOCP 7.1.3 Exercise 198, UTF-8 encoding and program synthesis by sketching")
     post(f1,f2,datetime.datetime(2018, 2,21,0,0,0), "kirkman_SAT","School teams scheduling, Kirkman’s Schoolgirl Problem, etc")
     post(f1,f2,datetime.datetime(2018, 2,17,0,0,0), "numberlink_MaxSAT","Numberlink (AKA Flow Free) puzzle as a MaxSAT problem + toy PCB router")
