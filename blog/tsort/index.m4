@@ -31,7 +31,7 @@ _PRE_END
 
 <p>So you're going to process item 7, then 3, 0, and 2 at the very end.</p>
 
-<p>_HTML_LINK(`https://en.wikipedia.org/wiki/Topological_sorting',`The algorithm the in Wikipedia article')
+<p>_HTML_LINK(`https://en.wikipedia.org/wiki/Topological_sorting',`The algorithm in the Wikipedia article')
 is probably used in "make" and whatever IDE you use for building your code.</p>
 
 <p>However, some older UNIX platforms had separate "tsort" utility spawned from "make" during building.
