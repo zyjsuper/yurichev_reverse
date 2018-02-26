@@ -34,7 +34,7 @@ _PRE_END
 <p>_HTML_LINK(`https://en.wikipedia.org/wiki/Topological_sorting',`The algorithm in the Wikipedia article')
 is probably used in "make" and whatever IDE you use for building your code.</p>
 
-<p>Also, older UNIX platforms had separate "tsort" utility:
+<p>Also, many UNIX platforms had separate "tsort" utility:
 _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Tsort').</p>
 
 <p>This time, I'll use Z3 SMT-solver for topological sort, which is overkill, but quite spectacular: all we need to do
