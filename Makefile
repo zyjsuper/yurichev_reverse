@@ -9,6 +9,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	mailing_lists.html cvt2sparse.html services.html donate.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/tsort/index.html \
 	blog/TAOCP_713_203/index.html \
 	blog/TAOCP_713_198/index.html \
 	blog/kirkman_SAT/index.html \
