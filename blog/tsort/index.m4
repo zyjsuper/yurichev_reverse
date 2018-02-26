@@ -34,7 +34,8 @@ _PRE_END
 <p>_HTML_LINK(`https://en.wikipedia.org/wiki/Topological_sorting',`The algorithm in the Wikipedia article')
 is probably used in "make" and whatever IDE you use for building your code.</p>
 
-<p>However, some older UNIX platforms had separate "tsort" utility spawned from "make" during building.
+<p>However, some older UNIX platforms had separate "tsort" utility spawned from "make" during building:
+_HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Tsort').
 This is a case at least of NetBSD:
 _HTML_LINK_AS_IS(`https://www.unix.com/man-page/netbsd/1/tsort/').</p>
 
