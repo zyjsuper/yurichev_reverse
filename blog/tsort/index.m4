@@ -37,7 +37,35 @@ is probably used in "make" and whatever IDE you use for building your code.</p>
 <p>Also, many UNIX platforms had separate "tsort" utility:
 _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Tsort').</p>
 
-<p>This time, I'll use Z3 SMT-solver for topological sort, which is overkill, but quite spectacular: all we need to do
+<p>How would <i>tsort</i> sort the graph? I'm making the text file with input data:</p>
+
+_PRE_BEGIN
+7 1
+7 0
+5 1
+3 0
+3 4
+1 2
+1 6
+1 4
+0 6
+_PRE_END
+
+<p>And run tsort:</p>
+
+_PRE_BEGIN
+ % tsort tst
+3
+5
+7
+0
+1
+4
+6
+2
+_PRE_END
+
+<p>Now I'll use Z3 SMT-solver for topological sort, which is overkill, but quite spectacular: all we need to do
 is to add constraint for each edge (or "connection") in graph, if "a -> b", then "a" must be less then "b", where
 each variable reflects ordering.</p>
 
