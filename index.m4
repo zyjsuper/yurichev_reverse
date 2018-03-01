@@ -86,6 +86,12 @@ _HL2(`Also hosted somewhere on this website')
 <!-- <li>_HTML_LINK(`http://avantgardeproject.conus.info/mirror/', `Mirror of Avant Garde Project') - series of recordings of 20th-century classical, experimental, and electroacoustic music digitized from LPs whose music has in most cases never been released on CD, and so is effectively inaccessible to the vast majority of music listeners today. mp3 versions of these recordings are also _HTML_LINK(`http://avantgardeproject.conus.info/', `here').-->
 <li>_HTML_LINK(`retrocomputing.html', `Some retrocomputing files')
 <li>_HTML_LINK(`http://conus.info/archive/', `cuetools 1.3.1 win32 binaries, Intel microcode table dumps')
+
+<li id="onion">_HTML_LINK(`https://yurichev.com/files/J_P_Donleavy_Onion_Eaters.rar', `J.P.Donleavy - Onion Eaters') book (1971), scanned. But not OCR'ed. I have no time for this. Maybe someone will do it?
+Russian translation is in archive as well.
+About the book: _HTML_LINK(`https://www.goodreads.com/book/show/824920.The_Onion_Eaters',`goodreads'), 
+_HTML_LINK(`https://www.amazon.com/Onion-Eaters-J-P-Donleavy/dp/0440366437',`amazon'),
+_HTML_LINK(`http://spintongues.livejournal.com/40243.html',`Max Nemtsov') (in Russian).
 </ul>
 
 _HL2(`My patches')
