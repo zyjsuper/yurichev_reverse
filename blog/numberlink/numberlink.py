@@ -14,7 +14,7 @@ puzzle=["   4   ",
 width=len(puzzle[0])
 height=len(puzzle)
 
-# number for each cell:
+# number at each cell:
 cells=[[Int('cell_r%d_c%d' % (r,c)) for c in range(width)] for r in range(height)]
 
 # connections between cells. L means the cell has connection with cell at left, etc:
@@ -38,7 +38,7 @@ for r in range(height):
             s.add(R[r][c]==L[r][c+1])
 
 # yes, I know, we have 4 bools for each cell at this point, and we can half this number,
-# but anyway, for the sake of simplicity, this could be better.
+# but anyway, for the sake of simplicity, this is better.
 
 for r in range(height):
     for c in range(width):
@@ -55,7 +55,7 @@ for r in range(height):
             t.append(And(Not(L[r][c]), Not(R[r][c]), U[r][c], D[r][c]))
             s.add(Or(*t))
         else:
-            # puzzle has number, add it to cells[][] as a constraint:
+            # cell has number, add it to cells[][] as a constraint:
             s.add(cells[r][c]==int(t))
             # cell has degree=1, IOW, this cell must have 1 connection, no more, no less
             # enumerate all possible ways:
@@ -76,7 +76,7 @@ for r in range(height):
         if r!=height-1:
             s.add(If(D[r][c], cells[r][c]==cells[r+1][c], True))
 
-# L/R/U/D at borders sometimes must be always False:
+# specific L/R/U/D's at borders must always be False:
 for r in range(height):
     s.add(L[r][0]==False)
     s.add(R[r][width-1]==False)
