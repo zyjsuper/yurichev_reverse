@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Enumerating all possible inputs for a specific regexp using FSM and Z3 SMT-solver')
+_HEADER_HL1(`Enumerating all possible inputs for a specific regexp using Z3 SMT-solver')
 
 <p>Regular expression if first converted to FSM (finite state machine) before matching.
 Hence, many RE libraries has two functions: "compile" and "execute" (when you match many strings against single RE, no need to recompile it to FSM each time).</p>
