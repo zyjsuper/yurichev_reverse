@@ -36,6 +36,8 @@ _PRE_END
 
 <p>As simple as this.</p>
 
+<p>It can be said, what we did is enumeration of all paths between two vertices of a directed graph (representing FSM).</p>
+
 <p>Also, the transition() function itself can act as a RE matcher, with no relevance to SMT solver(s).
 Just feed input characters to it and track state.
 Whenever you hit one of accepting states, return "match", whenever you hit INVALID_STATE, return "no match".</p>
