@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 3, 3,0,0,0), "regexp","Enumerating all possible inputs for specific regexp using FSM and Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 2,26,0,0,0), "tsort","Dependency graphs and topological sorting using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_203","TAOCP 7.1.3 Exercise 203, MMIX MOR instruction and program synthesis by sketching")
     post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_198","TAOCP 7.1.3 Exercise 198, UTF-8 encoding and program synthesis by sketching")
