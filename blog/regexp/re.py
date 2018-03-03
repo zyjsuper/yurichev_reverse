@@ -7,6 +7,7 @@ ACCEPTING_STATES=[13, 19, 23, 24]
 # s - state
 # i - input character
 def transition (s, i):
+    # this is like switch()
     return If(And(s==0, i==ord('r')), 3,
     If(And(s==0, i==ord('b')), 4,
     If(And(s==0, i==ord('g')), 5,
