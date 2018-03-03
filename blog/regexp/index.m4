@@ -13,7 +13,7 @@ This is fun!</p>
 
 <p><img src="FSM.png"></p>
 
-<p>Accepting states are in double circle, these are the states where matching process stops.</p>
+<p>Accepting states are in double circles, these are the states where matching process stops.</p>
 
 <p>How can we generate an input string which regular expression would match?
 In other words, which inputs FSM would accept?
