@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 3, 8,0,0,0), "color_sched2","Graph coloring and scheduling, part II")
     post(f1,f2,datetime.datetime(2018, 3, 7,0,0,0), "color_sched1","Graph coloring and scheduling, part I")
     post(f1,f2,datetime.datetime(2018, 3, 3,0,0,0), "regexp","Enumerating all possible inputs for specific a regexp using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 2,26,0,0,0), "tsort","Dependency graphs and topological sorting using Z3 SMT-solver")
