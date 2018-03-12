@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Proving bizarre XOR alternative using SAT solver')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 <p>I once wrote about quite bizarre XOR alternative I've found using aha! superoptimizer:
 _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/SAT_SMT_article/blob/master/SMT/XOR_EN.tex').

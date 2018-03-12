@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Generating de Bruijn sequences using Z3 SMT-solver')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 <p>The following piece of quite esoteric code calculates _HTML_LINK(`https://en.wikipedia.org/wiki/Find_first_set',`number of leading zeroes'):</p>
 

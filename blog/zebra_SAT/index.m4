@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Zebra puzzle as a SAT problem')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 <p>Zebra puzzle (AKA Einstein puzzle) defined as follows:
 

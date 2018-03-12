@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`5-Mar-2017: Cracking Minesweeper with Z3 SMT solver')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 <p>For those who are not very good at playing Minesweeper (like me), it's possible to predict bombs' placement without touching debugger.</p>
 

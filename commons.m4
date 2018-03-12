@@ -48,5 +48,6 @@ m4_define(`_PRE_BEGIN',`<pre class="normal">')
 m4_define(`_PRE_END',`</pre>')
 
 m4_define(`_COPYPASTED1',`<p>The note below has been copypasted to the _HTML_LINK(`http://beginners.re/',`Reverse Engineering for Beginners book')</p>')
+m4_define(`_COPYPASTED2',`<p>(The following text has been copypasted to the _HTML_LINK(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf',`SAT/SMT by example').)</p>')
 
 

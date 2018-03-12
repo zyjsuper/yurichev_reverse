@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`7-Mar-2017: Cracking Minesweeper with SAT solver')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 <p>(Previously: _HTML_LINK_AS_IS(`https://yurichev.com/blog/minesweeper/').)</p>
 

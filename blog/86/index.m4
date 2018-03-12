@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`20-Apr-2015: Using Z3 theorem prover to prove equivalence of some bizarre alternative to XOR operation.')
 
-<p>The text has been moved into: _HTML_LINK_AS_IS(`//yurichev.com/tmp/SAT_SMT_DRAFT.pdf')</p>
+_COPYPASTED2()
 
 <p>Update2: some of discussions:</p>
 <p>_HTML_LINK_AS_IS(`http://www.reddit.com/r/programming/comments/33830f/using_z3_theorem_prover_to_prove_equivalence_of/')</p>

@@ -45,7 +45,6 @@ _HL2(`Blogs, etc')
 
 <ul>
 <li>Some kind of tech _HTML_LINK(`http://yurichev.com/blog', `blog here').
-<li>_HTML_LINK(`mailing_lists.html', `My own mailing list').
 <li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account (#1)');
 _HTML_LINK(`http://go.yurichev.com/45004', `Another GitHub account (#2)')
 </ul>
@@ -104,13 +103,6 @@ _HL2(`My patches')
 <li>_HTML_LINK(`cordbg.html', `Cordbg.exe from .NET 1.1 patch')
 <li>_HTML_LINK(`openwatcom.html', `OpenWatcom patches')
 <li>rdesktop-1.7.1 mouse wheel double event issue patch: _HTML_LINK(`http://sourceforge.net/mailarchive/message.php?msg_id=30237555', `post #1'), <a href="https://sourceforge.net/p/rdesktop/patches/215/">patch info</a>. Seemengly fixed in rdesktop 1.8.0.
-</ul>
-
-_HL2(`Other')
-
-<ul>
-<li>_HTML_LINK(`https://github.com/yurichev/IDA_scripts', `My IDA .idc scripts')
-<li>_HTML_LINK(`http://crackmes.de/users/yonkie', `My crackmes/keygenmes')
 </ul>
 
 m4_include(`google.html')

@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Rubik’s cube (3*3*3) and Z3 SMT-solver, part II')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 <p>Previously: _HTML_LINK_AS_IS(`https://yurichev.com/blog/rubik/').</p>
 

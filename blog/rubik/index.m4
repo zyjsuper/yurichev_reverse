@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Solving pocket Rubik’s cube (2*2*2) using Z3 and SAT solver')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 <p><img src="190px-Pocket_cube_scrambled.jpg"></p>
 <p>( The image has been taken _HTML_LINK(`https://en.wikipedia.org/wiki/Pocket_Cube',`from Wikipedia'). )</p>

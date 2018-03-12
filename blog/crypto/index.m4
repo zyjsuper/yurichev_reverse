@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`28-Feb-2017: Symbolic execution and (amateur) cryptography')
 
-<p>(The following text has been moved to the article at _HTML_LINK_AS_IS(`https://yurichev.com/tmp/SAT_SMT_DRAFT.pdf').)</p>
+_COPYPASTED2()
 
 _HL2(`Serious cryptography')
 
