@@ -158,5 +158,5 @@ _PRE_END
 
 <p>Another post in my blog where I write about adders in SAT: _HTML_LINK_AS_IS(`https://yurichev.com/blog/factor_SAT/').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

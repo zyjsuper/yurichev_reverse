@@ -79,5 +79,5 @@ group 2, persons: [0, 3, 11, 13]
 group 3, persons: [6, 10, 14, 15]
 _PRE_END
 
-_FOOTER()
+_BLOG_FOOTER()
 

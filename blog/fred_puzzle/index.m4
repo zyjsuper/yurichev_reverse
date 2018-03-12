@@ -124,5 +124,5 @@ UNSAT
 solutions= 1
 _PRE_END
 
-_FOOTER()
+_BLOG_FOOTER()
 

@@ -256,5 +256,5 @@ _HL2(`Next part')
 
 <p>_HTML_LINK_AS_IS(`https://yurichev.com/blog/logic_synth2/').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

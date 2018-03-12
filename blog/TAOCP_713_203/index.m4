@@ -143,5 +143,5 @@ _PRE_END
 
 <p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/TAOCP_713_203').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

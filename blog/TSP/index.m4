@@ -49,5 +49,5 @@ Perhaps, this is not a right tool for the job, well-known TSP algorithms way fas
 
 <p>However, it still can serve as demonstration.</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

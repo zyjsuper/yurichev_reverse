@@ -47,5 +47,5 @@ _PRE_END
 
 <p>Why random constant must be divisible by divisor? See: _HTML_LINK_AS_IS(`https://yurichev.com/blog/modinv/').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

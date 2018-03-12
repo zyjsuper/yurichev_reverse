@@ -72,5 +72,5 @@ Read more about it:
 _HTML_LINK_AS_IS(`https://yurichev.com/blog/de_bruijn/'),
 _HTML_LINK_AS_IS(`https://yurichev.com/blog/de_bruijn_Z3/').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

@@ -29,5 +29,5 @@ But this is not possible for integers or bit-vectors of any size.</p>
 <p>Another interesting reading about this by Leonardo de Moura:
 _HTML_LINK_AS_IS(`https://stackoverflow.com/questions/13898175/how-does-z3-handle-non-linear-integer-arithmetic').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

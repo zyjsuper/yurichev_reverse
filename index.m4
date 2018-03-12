@@ -120,19 +120,7 @@ _HL2(`Contacts')
 <p>E-Mail: <b>dennis(@)yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
-<p>Skype: <b>dennis.yurichev</b>.</p>
-
-<p>Telegram: <b>yurichev</b>, my own channel: <b>yurichev_news</b>.</p>
-
 <p>My _HTML_LINK(`https://bitmessage.org/',`BitMessage ID'): <b>BM-2cUyrfGUDyjuUHyzAA63kq5NHAB2zMo4Q2</b></p>
-
-<p>
-_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`facebook'),
-_HTML_LINK(`https://twitter.com/yurichev',`twitter'),
-_HTML_LINK(`https://www.instagram.com/denyurichev/',`instagram').
-</p>
-
-<p><b>Chess?</b> My account at _HTML_LINK(`https://www.chess.com/members/view/DY1979',`chess.com') and _HTML_LINK(`http://en.lichess.org/@/DY1979',`lichess.org'). Challenge me if you want to.</p>
 
 _FOOTER()
 

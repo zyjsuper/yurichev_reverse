@@ -44,5 +44,5 @@ _PRE_END
 Just feed input characters to it and track state.
 Whenever you hit one of accepting states, return "match", whenever you hit INVALID_STATE, return "no match".</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

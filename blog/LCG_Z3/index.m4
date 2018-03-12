@@ -131,5 +131,5 @@ Also, my _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf',`SAT/SM
 
 <p>Further work: check glibc's rand(), Mersenne Twister, etc. Simple 32-bit LCG as described can be checked using simple brute-force, I think.</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

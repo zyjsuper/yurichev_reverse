@@ -26,5 +26,5 @@ Also, my versions are sometimes different, but correct and has the same length.<
 
 <p>The _HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/logic_synth2/logic_for_TAOCP.py',`modified Z3Py script').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

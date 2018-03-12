@@ -61,5 +61,5 @@ hour: 2 committees: [2, 5]
 hour: 3 committees: [6]
 _PRE_END
 
-_FOOTER()
+_BLOG_FOOTER()
 

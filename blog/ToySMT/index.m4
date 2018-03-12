@@ -6,5 +6,5 @@ _HEADER_HL1(`ToySMT - simple SMT solver under ~1500 SLOC of pure C.')
 
 <p>_HTML_LINK_AS_IS(`https://github.com/DennisYurichev/ToySMT').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

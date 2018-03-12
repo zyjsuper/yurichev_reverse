@@ -155,5 +155,5 @@ _PRE_END
 
 <p>The source code: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/menage').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

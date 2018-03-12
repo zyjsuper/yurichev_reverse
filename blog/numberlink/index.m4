@@ -33,5 +33,5 @@ _PRE_BEGIN
 m4_include(`blog/numberlink/solution.txt')
 _PRE_END
 
-_FOOTER()
+_BLOG_FOOTER()
 

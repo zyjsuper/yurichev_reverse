@@ -48,5 +48,5 @@ _PRE_END
 
 <p>The files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/numberlink_MaxSAT').</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

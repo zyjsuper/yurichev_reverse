@@ -33,5 +33,5 @@ _HL3(`Mailing list')
 _HTML_LINK(`https://groups.google.com/forum/#!forum/yurichev/join', `Click here to join').
 Or send an empty email to: _HTML_LINK(`mailto:yurichev+subscribe@googlegroups.com',`yurichev+subscribe@googlegroups.com')</p>
 
-_FOOTER()
+_BLOG_FOOTER()
 

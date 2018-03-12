@@ -114,5 +114,5 @@ sat
 [3, 5, 7, 0, 1, 2, 4, 6]
 _PRE_END
 
-_FOOTER()
+_BLOG_FOOTER()
 

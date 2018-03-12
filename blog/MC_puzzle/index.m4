@@ -143,5 +143,5 @@ Also, if I replace the d fact with Equivalent(d, a | b | c), the result is the s
 Thanks for the fun problem. I hope others took the time to solve this in their head before reading the comments.
 _PRE_END
 
-_FOOTER()
+_BLOG_FOOTER()
 
