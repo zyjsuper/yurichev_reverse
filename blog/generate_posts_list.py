@@ -28,15 +28,12 @@ def main():
 
     post(f1,f2,datetime.datetime(2018, 3, 8,0,0,0), "color_sched2","Graph coloring and scheduling, part II")
     post(f1,f2,datetime.datetime(2018, 3, 7,0,0,0), "color_sched1","Graph coloring and scheduling, part I")
-    post(f1,f2,datetime.datetime(2018, 3, 3,0,0,0), "regexp","Enumerating all possible inputs for specific a regexp using Z3 SMT-solver")
-    post(f1,f2,datetime.datetime(2018, 2,26,0,0,0), "tsort","Dependency graphs and topological sorting using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_203","TAOCP 7.1.3 Exercise 203, MMIX MOR instruction and program synthesis by sketching")
     post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_198","TAOCP 7.1.3 Exercise 198, UTF-8 encoding and program synthesis by sketching")
     post(f1,f2,datetime.datetime(2018, 2,21,0,0,0), "kirkman_SAT","School teams scheduling, Kirkman’s Schoolgirl Problem, etc")
     post(f1,f2,datetime.datetime(2018, 2,17,0,0,0), "numberlink_MaxSAT","Numberlink (AKA Flow Free) puzzle as a MaxSAT problem + toy PCB router")
     post(f1,f2,datetime.datetime(2018, 2,12,0,0,0), "numberlink","Solving Numberlink (AKA Flow Free) puzzle using Z3")
     post(f1,f2,datetime.datetime(2018, 2, 7,0,0,0), "logic_synth2","Simple logic synthesis using Z3: exercise from TAOCP")
-    post(f1,f2,datetime.datetime(2018, 2, 3,0,0,0), "TSP","Travelling salesman problem using Z3")
     post(f1,f2,datetime.datetime(2018, 1,30,0,0,0), "logic_synth","Simple logic synthesis using Z3; Apollo Guidance Computer")
     post(f1,f2,datetime.datetime(2018, 1,17,0,0,0), "Hilbert_10","Hilbert’s 10th problem, Fermat’s last theorem and SMT solvers")
     post(f1,f2,datetime.datetime(2018, 1,16,0,0,0), "modinv_SMT","Yet another explanation of modulo inverse using SMT-solvers")
@@ -44,93 +41,39 @@ def main():
     post(f1,f2,datetime.datetime(2018, 1,13,0,0,0), "fred_puzzle","Yet another logical puzzle and SAT/SMT solvers")
     post(f1,f2,datetime.datetime(2018, 1,13,0,0,0), "MC_puzzle","Multiple choice logic puzzle, and solving it using SAT/SMT solvers")
     post(f1,f2,datetime.datetime(2018, 1, 1,0,0,0), "ToySMT","ToySMT - simple SMT solver under ~1500 SLOC of pure C.")
-    post(f1,f2,datetime.datetime(2017,12, 7,0,0,0), "menage","Ménage problem")
-    post(f1,f2,datetime.datetime(2017,12, 5,0,0,0), "LCG_Z3","Can rand() generate 10 consecutive zeroes?")
     post(f1,f2,datetime.datetime(2017,12, 5,0,0,0), "modinv","Yet another explanation of modulo inverse")
     post(f1,f2,datetime.datetime(2017,12, 4,0,0,0), "coin_flip","Coin flipping problem: Z3 and MaxSAT (Open-WBO)")
     post(f1,f2,datetime.datetime(2017,12, 1,0,0,0), "assign_method","Assignment problem and Z3")
-    post(f1,f2,datetime.datetime(2017,11,29,0,0,0), "stable_marriage","Stable marriage problem and Z3")
     post(f1,f2,datetime.datetime(2017,11,23,0,0,0), "killer_sudoku","Solving Killer Sudoku using Z3")
     post(f1,f2,datetime.datetime(2017,11,23,0,0,0), "sudoku_GT","Greater Than Sudoku")
     post(f1,f2,datetime.datetime(2017,11,23,0,0,0), "kirkman","Kirkman’s Schoolgirl Problem")
     post(f1,f2,datetime.datetime(2017,11,22,0,0,0), "knut_vik","Magic/Latin square of Knut Vik design: getting it using Z3")
-    post(f1,f2,datetime.datetime(2017,11,15,0,0,0), "crossword_Z3","Crossword generator based on Z3")
-    post(f1,f2,datetime.datetime(2017,11,14,0,0,0), "CRC_find_poly","Finding (good) CRC polynomial using Z3")
-    post(f1,f2,datetime.datetime(2017,11,11,0,0,0), "CRC_cracker_Z3","Getting CRC polynomial and other CRC generator parameters using Z3")
-    post(f1,f2,datetime.datetime(2017,11, 6,0,0,0), "CRC2","Factorize GF(2)/CRC polynomials using Z3")
-    post(f1,f2,datetime.datetime(2017,11, 5,0,0,0), "CRC","Yet another explanation of CRC (Cyclic redundancy check)")
     #post(f1,f2,datetime.datetime(2017,10,30,0,0,0), "latin","Finding three 10*10 mutually orthogonal latin squares using Z3: criticism wanted")
     post(f1,f2,datetime.datetime(2017,10,27,0,0,0), "alphametics","Alphametics and Z3 SMT solver")
-    post(f1,f2,datetime.datetime(2017,10,22,0,0,0), "LCM","Explanation of the Least Common Multiple using Z3 SMT solver, etc")
-    post(f1,f2,datetime.datetime(2017,10,11,0,0,0), "GCD","Explanation of the Greatest Common Divisor using Z3 SMT solver, etc")
     post(f1,f2,datetime.datetime(2017,10, 7,0,0,0), "SAP","SAP cluster table unpacker")
-    post(f1,f2,datetime.datetime(2017,10, 4,0,0,0), "sorting_network","Proving sorting network correctness using Z3 SMT solver")
-    post(f1,f2,datetime.datetime(2017, 9,30,0,0,0), "XOR_SAT","Proving bizarre XOR alternative using SAT solver")
-    post(f1,f2,datetime.datetime(2017, 9,29,0,0,0), "tiling_Z3","Tiling puzzle and Z3 SMT solver")
-    post(f1,f2,datetime.datetime(2017, 9,27,0,0,0), "gray","Balanced Gray code and Z3 SMT solver")
-    post(f1,f2,datetime.datetime(2017, 9,24,0,0,0), "factor_SAT","Integer factorization using SAT solver")
-    post(f1,f2,datetime.datetime(2017, 9,23,0,0,0), "factor","Integer factorization using Z3 SMT solver")
-    post(f1,f2,datetime.datetime(2017, 9,20,0,0,0), "rubik2","Rubik’s cube (3*3*3) and Z3 SMT-solver, part II")
-    post(f1,f2,datetime.datetime(2017, 9,11,0,0,0), "rubik","Solving pocket Rubiks cube (2*2*2) using Z3 and SAT solver")
-    post(f1,f2,datetime.datetime(2017, 7,13,0,0,0), "xkcd287","Solving XKCD 287 using Z3 SMT-solver")
-    post(f1,f2,datetime.datetime(2017, 7,11,0,0,0), "de_bruijn_Z3","Generating de Bruijn sequences using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2017, 7, 2,0,0,0), "DeMorgan","De Morgan’s laws and decompilation")
-    post(f1,f2,datetime.datetime(2017, 7, 1,0,0,0), "zebra_SAT","Zebra puzzle as a SAT problem")
-    post(f1,f2,datetime.datetime(2017, 6,28,0,0,0), "simplify","Simplifying long and messy expressions using Mathematica and Z3")
-    post(f1,f2,datetime.datetime(2017, 6,26,0,0,0), "SAT_backtrack","Simplest SAT solver in ~120 lines")
     post(f1,f2,datetime.datetime(2017, 6,24,0,0,0), "minesweeper_PIN","Cracking Minesweeper with PIN")
-    post(f1,f2,datetime.datetime(2017, 6,19,0,0,0), "XOR_Z3","Cracking simple XOR cipher with Z3")
     post(f1,f2,datetime.datetime(2017, 6, 7,0,0,0), "8queens","Eight queens problem in 93 bytes")
     post(f1,f2,datetime.datetime(2017, 6, 3,0,0,0), "weird_sort","Worst sorting algorithm I ever saw")
-    post(f1,f2,datetime.datetime(2017, 6, 2,0,0,0), "set_cover","Making smallest possible test suite using Z3")
     post(f1,f2,datetime.datetime(2017, 5,30,0,0,0), "PIN_XOR","Using PIN DBI for XOR interception")
     post(f1,f2,datetime.datetime(2017, 5,13,0,0,0), "cyclomatic","Cyclomatic complexity")
     post(f1,f2,datetime.datetime(2017, 5,10,0,0,0), "2017-may-10","News")
-    post(f1,f2,datetime.datetime(2017, 4,29,0,0,0), "spreadsheet","Recalculating micro-spreadsheet using Z3Py")
-    post(f1,f2,datetime.datetime(2017, 3,12,0,0,0), "GoL_SAT","Conway’s Game of Life and SAT solver")
-    post(f1,f2,datetime.datetime(2017, 3, 7,0,0,0), "minesweeper_SAT","Cracking Minesweeper with SAT solver")
-    post(f1,f2,datetime.datetime(2017, 3, 5,0,0,0), "minesweeper","Cracking Minesweeper with Z3 SMT solver")
     post(f1,f2,datetime.datetime(2017, 3, 2,0,0,0), "LCG","Cracking simple LCG PRNG")
-    post(f1,f2,datetime.datetime(2017, 2,28,0,0,0), "crypto","Symbolic execution and (amateur) cryptography")
-    post(f1,f2,datetime.datetime(2017, 2,25,0,0,0), "compress","Text strings right in the middle of compressed data")
-    post(f1,f2,datetime.datetime(2017, 2, 9,0,0,0), "symbolic","Symbolic execution")
-    post(f1,f2,datetime.datetime(2017, 1,15,0,0,0), "pgm_synth","Simple program synthesis using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2016,12, 5,0,0,0), "farsi","\"Reverse Engineering for Beginners\" book in Farsi (Persian language)")
-    post(f1,f2,datetime.datetime(2016,12, 5,0,0,0), "toy_decompiler","Toy decompiler for x86-64 written in Python")
-    post(f1,f2,datetime.datetime(2016, 7,10,0,0,0), "loop_optimization","Another loop optimization") #
-    post(f1,f2,datetime.datetime(2016, 6,29,0,0,0), "ptrs5","C/C++ pointers: array as function argument") #
-    post(f1,f2,datetime.datetime(2016, 6,27,0,0,0), "bitcoin_miner","Overclocking Cointerra Bitcoin miner") #
-    post(f1,f2,datetime.datetime(2016, 6,13,0,0,0), "ptrs4","C/C++ pointers: null pointers") #
-    post(f1,f2,datetime.datetime(2016, 6, 2,0,0,0), "ptrs3","C/C++ pointers: pointers abuse in Windows kernel") #
-    post(f1,f2,datetime.datetime(2016, 5,22,0,0,0), "ptrs2","C/C++ pointers: yet another abuse") #
-    post(f1,f2,datetime.datetime(2016, 5,19,0,0,0), "weird_loop_optimization","Weird loop optimization") #
-    post(f1,f2,datetime.datetime(2016, 5, 8,0,0,0), "ptrs","C/C++ pointers: yet another short example") #
-
-    post(f1,f2,datetime.datetime(2016, 5, 6,0,0,0), "breaking_simple_exec_crypto","Breaking simple executable cryptor") #
-    post(f1,f2,datetime.datetime(2016, 5, 6,0,0,0), "args_stat","Function arguments statistics") #
-    post(f1,f2,datetime.datetime(2016, 5, 3,0,0,0), "XOR_mask_2","Simple encryption using XOR mask, part II") #
-    post(f1,f2,datetime.datetime(2016, 4,29,0,0,0), "XOR_mask_1","Simple encryption using XOR mask") #
     post(f1,f2,datetime.datetime(2016, 4,22,0,0,0), "signed_division_using_shifts","Signed division using shifts")
     post(f1,f2,datetime.datetime(2016, 4,19,0,0,0), "lzhuf","Bug in LZHuf.c by Haruyasu Yoshizaki")
     post(f1,f2,datetime.datetime(2015,11,12,0,0,0), "challenges.re","My new website about reverse engineering challenges/exercises/problems/tasks: challenges.re")
     post(f1,f2,datetime.datetime(2015, 9,27,0,0,0), "git","Some of git internals")
     post(f1,f2,datetime.datetime(2015, 9,27,0,0,0), "CAS","Content-addressable storage")
     post(f1,f2,datetime.datetime(2015, 9, 8,0,0,0), "typeless","Typeless programming languages (BCPL, B), C evolution and decompiling")
-    post(f1,f2,datetime.datetime(2015, 9, 4,0,0,0), "FAT12", "(Beginners level) packing 12-bit values into array using bit operations (x64, ARM/ARM64, MIPS)") #
-    post(f1,f2,datetime.datetime(2015, 8,26,0,0,0), "2015-aug-26", "Yet another compiler anomaly") #
-    post(f1,f2,datetime.datetime(2015, 8,26,0,0,0), "encrypted_DB_case_1", "Encrypted database case #1") #
     post(f1,f2,datetime.datetime(2015, 8,22,0,0,0), "de_bruijn", "De Bruijn sequences (solution for the exercise posted at 18-Aug-2015); leading/trailing zero bits counting.")
     post(f1,f2,datetime.datetime(2015, 8,20,0,0,0), "2015-aug-20", "Some parts of my Reverse Engineering book translated to Chinese.")
-
     post(f1,f2,datetime.datetime(2015, 8,13,0,0,0), "2015-aug-13", "Introduction to logarithms; yet another x86 reverse engineering exercise")
     post(f1,f2,datetime.datetime(2015, 7,23,0,0,0), "fuzzy_string", "Fuzzy string matching + simplest possible spellchecking + hunting for typos and misspellings in Wikipedia")
     post(f1,f2,datetime.datetime(2015, 7,22,0,0,0), "clique", "Clique in graph theory")
     post(f1,f2,datetime.datetime(2015, 7, 9,0,0,0), "RSA", "How RSA works")
     post(f1,f2,datetime.datetime(2015, 6,13,0,0,0), "modulo", "Modular arithmetic + division by multiplication + reversible LCG (PRNG) + cracking LCG with Z3")
     post(f1,f2,datetime.datetime(2015, 5,16,0,0,0), "llvm", "Tweaking LLVM Obfuscator + quick look into some of LLVM internals")
-    post(f1,f2,datetime.datetime(2015, 5,13,0,0,0), "entropy", "(Beginners level) Analyzing unknown binary files using information entropy") #
-    post(f1,f2,datetime.datetime(2015, 4,25,0,0,0), "fortune", "(Beginners level) reverse engineering of simple fortune program indexing file") #
-    post(f1,f2,datetime.datetime(2015, 4,20,0,0,0), "86", "Using Z3 theorem prover to prove equivalence of some bizarre alternative to XOR operation.")
     post(f1,f2,datetime.datetime(2015, 1,21,0,0,0), "85", "Korean publication of \"Reverse Engineering for Beginners\" book is available for pre-order!")
     post(f1,f2,datetime.datetime(2014, 8,29,0,0,0), "84", "Publishers?")
     post(f1,f2,datetime.datetime(2014, 8, 8,0,0,0), "83", "\"Reverse Engineering for Beginners\" free book news")
