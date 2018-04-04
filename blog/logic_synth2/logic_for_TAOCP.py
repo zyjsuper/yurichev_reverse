@@ -80,7 +80,7 @@ def find_NAND_only_for_TT (OUTPUTS):
             print "r%d=" % i, format(l[i] & 2**BITS-1, '0'+str(BITS)+'b')
     
     """
-    selector() functions generates expression like:
+    selector() function generates expression like:
     
     If(op1_reg_s5 == 0,
        S_s0,

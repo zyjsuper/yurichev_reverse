@@ -26,10 +26,6 @@ def main():
 
     f2.write ("<table>\n")
 
-    post(f1,f2,datetime.datetime(2018, 3, 8,0,0,0), "color_sched2","Graph coloring and scheduling, part II")
-    post(f1,f2,datetime.datetime(2018, 3, 7,0,0,0), "color_sched1","Graph coloring and scheduling, part I")
-    post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_203","TAOCP 7.1.3 Exercise 203, MMIX MOR instruction and program synthesis by sketching")
-    post(f1,f2,datetime.datetime(2018, 2,23,0,0,0), "TAOCP_713_198","TAOCP 7.1.3 Exercise 198, UTF-8 encoding and program synthesis by sketching")
     post(f1,f2,datetime.datetime(2018, 2, 7,0,0,0), "logic_synth2","Simple logic synthesis using Z3: exercise from TAOCP")
     post(f1,f2,datetime.datetime(2018, 1,30,0,0,0), "logic_synth","Simple logic synthesis using Z3; Apollo Guidance Computer")
     post(f1,f2,datetime.datetime(2018, 1,17,0,0,0), "Hilbert_10","Hilbert’s 10th problem, Fermat’s last theorem and SMT solvers")
