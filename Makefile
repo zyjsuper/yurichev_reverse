@@ -7,91 +7,24 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	tracer-en.html tracer-ru.html PE_add_imports.html \
 	PE_patcher.html PE_search_str_refs.html \
 	cvt2sparse.html services.html donate.html \
+	404.html \
 	blog/posts.html \
 	blog/index.html \
-	blog/color_sched2/index.html \
-	blog/color_sched1/index.html \
-	blog/regexp/index.html \
-	blog/tsort/index.html \
-	blog/TAOCP_713_203/index.html \
-	blog/TAOCP_713_198/index.html \
-	blog/kirkman_SAT/index.html \
-	blog/numberlink_MaxSAT/index.html \
-	blog/numberlink/index.html \
-	blog/logic_synth2/index.html \
-	blog/TSP/index.html \
-	blog/logic_synth/index.html \
-	blog/Hilbert_10/index.html \
-	blog/modinv_SMT/index.html \
-	blog/adder/index.html \
-	blog/fred_puzzle/index.html \
-	blog/MC_puzzle/index.html \
-	blog/ToySMT/index.html \
-	blog/menage/index.html \
-	blog/LCG_Z3/index.html \
-	blog/modinv/index.html \
-	blog/coin_flip/index.html \
-	blog/assign_method/index.html \
-	blog/stable_marriage/index.html \
-	blog/killer_sudoku/index.html \
-	blog/sudoku_GT/index.html \
-	blog/kirkman/index.html \
-	blog/knut_vik/index.html \
-	blog/crossword_Z3/index.html \
-	blog/CRC_find_poly/index.html \
-	blog/CRC_cracker_Z3/index.html \
-	blog/CRC2/index.html \
-	blog/CRC/index.html \
-	blog/alphametics/index.html \
-	blog/LCM/index.html \
-	blog/GCD/index.html \
-	blog/sorting_network/index.html \
-	blog/XOR_SAT/index.html \
-	blog/tiling_Z3/index.html \
-	blog/gray/index.html \
-	blog/factor_SAT/index.html \
-	blog/factor/index.html \
-	blog/rubik2/index.html \
-	blog/rubik/index.html \
-	blog/xkcd287/index.html \
-	blog/de_bruijn_Z3/index.html \
-	blog/DeMorgan/index.html \
-	blog/zebra_SAT/index.html \
-	blog/simplify/index.html \
-	blog/SAT_backtrack/index.html \
+	blog/2017-jun-5/index.html \
 	blog/minesweeper_PIN/index.html \
-	blog/XOR_Z3/index.html \
 	blog/8queens/index.html \
 	blog/weird_sort/index.html \
-	blog/set_cover/index.html \
 	blog/PIN_XOR/index.html \
 	blog/cyclomatic/index.html \
-	blog/2017-may-10/index.html \
-	blog/spreadsheet/index.html \
-	blog/GoL_SAT/index.html \
-	blog/minesweeper_SAT/index.html \
-	blog/minesweeper/index.html \
-	blog/LCG/index.html \
-	blog/crypto/index.html \
-	blog/compress/index.html \
-	blog/symbolic/index.html \
 	blog/SAP/index.html \
-	blog/pgm_synth/index.html \
-	blog/farsi/index.html \
-	blog/toy_decompiler/index.html \
-	blog/fortune/index.html \
-	blog/entropy/index.html \
 	blog/modulo/index.html \
 	blog/llvm/index.html \
 	blog/clique/index.html \
 	blog/fuzzy_string/index.html \
 	blog/2015-aug-13/index.html \
 	blog/2015-aug-20/index.html \
-	blog/de_bruijn/index.html \
 	blog/CAS/index.html \
 	blog/git/index.html \
-	blog/encrypted_DB_case_1/index.html \
-	blog/FAT12/index.html \
 	blog/typeless/index.html \
 	blog/RSA/index.html \
 	blog/lzhuf/index.html \
@@ -138,9 +71,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	blog/46/index.html \
 	blog/47/index.html \
 	blog/48/index.html \
-	blog/49/index.html \
 	blog/50/index.html \
-	blog/51/index.html \
 	blog/52/index.html \
 	blog/54/index.html \
 	blog/55/index.html \
@@ -157,32 +88,13 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	blog/69/index.html \
 	blog/70/index.html \
 	blog/71/index.html \
-	blog/72/index.html \
-	blog/73/index.html \
 	blog/74/index.html \
 	blog/75/index.html \
 	blog/76/index.html \
 	blog/77/index.html \
 	blog/79/index.html \
-	blog/80/index.html \
-	blog/81/index.html \
 	blog/82/index.html \
-	blog/83/index.html \
-	blog/84/index.html \
 	blog/85/index.html \
-	blog/86/index.html \
-	blog/ptrs/index.html \
-	blog/ptrs2/index.html \
-	blog/ptrs3/index.html \
-	blog/ptrs4/index.html \
-	blog/ptrs5/index.html \
-	blog/args_stat/index.html \
-	blog/XOR_mask_1/index.html \
-	blog/XOR_mask_2/index.html \
-	blog/breaking_simple_exec_crypto/index.html \
-	blog/weird_loop_optimization/index.html \
-	blog/bitcoin_miner/index.html \
-	blog/loop_optimization/index.html \
 	blog/challenges.re/index.html
 
 all: $(HTML_FILES)

@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 6, 5,0,0,0), "2017-jun-5","News")
     #post(f1,f2,datetime.datetime(2017,10,30,0,0,0), "latin","Finding three 10*10 mutually orthogonal latin squares using Z3: criticism wanted")
     post(f1,f2,datetime.datetime(2017,10, 7,0,0,0), "SAP","SAP cluster table unpacker")
     post(f1,f2,datetime.datetime(2017, 7, 2,0,0,0), "DeMorgan","De Morgan’s laws and decompilation")
