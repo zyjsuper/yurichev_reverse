@@ -26,8 +26,6 @@ def main():
 
     f2.write ("<table>\n")
 
-    post(f1,f2,datetime.datetime(2018, 1,14,0,0,0), "adder","Simple adder in SAT/SMT")
-    post(f1,f2,datetime.datetime(2017,12, 4,0,0,0), "coin_flip","Coin flipping problem: Z3 and MaxSAT (Open-WBO)")
     #post(f1,f2,datetime.datetime(2017,10,30,0,0,0), "latin","Finding three 10*10 mutually orthogonal latin squares using Z3: criticism wanted")
     post(f1,f2,datetime.datetime(2017,10, 7,0,0,0), "SAP","SAP cluster table unpacker")
     post(f1,f2,datetime.datetime(2017, 7, 2,0,0,0), "DeMorgan","De Morgan’s laws and decompilation")
