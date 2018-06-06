@@ -10,29 +10,20 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 <!-- _HTML_IMG(`pix/DY_mask_m0m0sha.jpg')
 <p><h5>(Photo courtesy of _HTML_LINK(`http://go.yurichev.com/1986',`my younger muse').)</h5></p> -->
 
-<p>Current status: one of my current projects is _HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
-I also currently write a collection of _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf', `examples for SAT/SMT solvers').
-Many new articles and texts are posted into my _HTML_LINK(`https://yurichev.com/blog/',`blog') and _HTML_LINK(`https://twitter.com/yurichev',`twitter').
-And here is what _HTML_LINK(`https://github.com/DennisYurichev/RE-for-beginners/blob/0f454cc6bc9367ad27fd9f728e8c9530b2d004a2/1st_page_EN.tex#L18',`I do for money').
-</p>
-
 <!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
 
 _HL2(`Some of my writings:')
 
 <ul>
 <li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
+
+<li>_HTML_LINK(`https://yurichev.com/writings/SAT_SMT_by_example.pdf',`SAT/SMT by example').
+
 <li>My _HTML_LINK(`blog', `blog'), has some new articles.
-<li>Quick introduction into SAT/SMT solvers and symbolic execution (DRAFT): 
-_HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-EN.pdf', `English'),
-_HTML_LINK(`https://yurichev.com/writings/SAT_SMT_draft-RU.pdf', `Russian'),
-_HTML_LINK(`https://github.com/DennisYurichev/SAT_SMT_article',`GitHub').
 
 <li>_HTML_LINK(`https://github.com/DennisYurichev/random_notes/',`Random notes') at GitHub.
-<li>_HTML_LINK(`writings/toy_decompiler.pdf', `Toy decompiler for x86-64').
 <li>_HTML_LINK(`writings/log_intro.pdf', `Introduction to logarithms').
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
-<li>_HTML_LINK(`writings/z3_rockey.pdf', `Finding unknown algorithm using only input/output pairs and Z3 SMT solver').
 <li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 </ul>
 
