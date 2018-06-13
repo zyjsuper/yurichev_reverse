@@ -24,7 +24,7 @@ Now this is why cellular network is a cellular network -- placing stations/tower
 
 <p>
 Mathematicians say, the chromatic number of this (planar) graph is 2.
-Chromatic number is a maximal number of colors.
+Chromatic number is a minimal number of colors.
 And a planar graph is a graph that can be represented on 2D plane with no edges intersected (like a world map).</p>
 
 <p>
