@@ -2,7 +2,9 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`My blog')
 
-<p>Main topics are reverse engineering, programming, math...</p>
+<p>Main topics are reverse engineering, programming, math...
+Missing something?
+_HTML_LINK(`https://yurichev.com/404.html',`Read here.')</p>
 
 _HL2(`The posts:')
 
