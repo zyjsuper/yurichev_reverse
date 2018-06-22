@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/ddff/index.html \
 	blog/cabling_Z3/index.html \
 	blog/cellular/index.html \
 	blog/2017-jun-5/index.html \
