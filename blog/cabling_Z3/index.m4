@@ -157,5 +157,5 @@ _PRE_END
 Even more, we can assign priorities: maybe, we can live with longer network cables, but want to minimize lengths of power cables at first.
 </p>
 
-_FOOTER()
+_BLOG_FOOTER()
 
