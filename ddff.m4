@@ -4,6 +4,8 @@ _HEADER(`Duplicate Directories and Files Finder')
 
 _HL1(`Duplicate Directories and Files Finder:')
 
+<p>Not maintained. See also: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/DDFF2').</p>
+
 _PRE_BEGIN
 * How to run it:
 
