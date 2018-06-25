@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 6,25,0,0,0), "kirchhoff","Kirchhoff’s circuit laws and Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 6,22,0,0,0), "ddff","DDFF - Duplicate Directories and Files Finder")
     post(f1,f2,datetime.datetime(2018, 6,16,0,0,0), "cabling_Z3","Cabling in rack cabinet and Z3")
     post(f1,f2,datetime.datetime(2018, 6,13,0,0,0), "cellular","Why cellular network is a cellular network")
