@@ -30,7 +30,7 @@ def main():
     post(f1,f2,datetime.datetime(2018, 6,22,0,0,0), "ddff","DDFF - Duplicate Directories and Files Finder")
     post(f1,f2,datetime.datetime(2018, 6,16,0,0,0), "cabling_Z3","Cabling in rack cabinet and Z3")
     post(f1,f2,datetime.datetime(2018, 6,13,0,0,0), "cellular","Why cellular network is a cellular network")
-    post(f1,f2,datetime.datetime(2018, 6, 5,0,0,0), "2017-jun-5","News")
+    post(f1,f2,datetime.datetime(2018, 6, 5,0,0,0), "2017-jun-5","News about SAT/SMT by example")
     #post(f1,f2,datetime.datetime(2017,10,30,0,0,0), "latin","Finding three 10*10 mutually orthogonal latin squares using Z3: criticism wanted")
     post(f1,f2,datetime.datetime(2017,10, 7,0,0,0), "SAP","SAP cluster table unpacker")
     post(f1,f2,datetime.datetime(2017, 7, 2,0,0,0), "DeMorgan","De Morgan’s laws and decompilation")
