@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/nonogram/index.html \
 	blog/kirchhoff/index.html \
 	blog/DeMorgan/index.html \
 	blog/ddff/index.html \
