@@ -72,5 +72,7 @@ In other words, col_merged_islands[] must be equal to row_merged_islands[], but 
 
 <p>The solver is surprisingly fast even on hard puzzles.</p>
 
+<p>Further work: colored nonograms.</p>
+
 _BLOG_FOOTER()
 
