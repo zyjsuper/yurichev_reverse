@@ -18,10 +18,8 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	blog/cabling_Z3/index.html \
 	blog/cellular/index.html \
 	blog/2017-jun-5/index.html \
-	blog/minesweeper_PIN/index.html \
 	blog/8queens/index.html \
 	blog/weird_sort/index.html \
-	blog/PIN_XOR/index.html \
 	blog/cyclomatic/index.html \
 	blog/SAP/index.html \
 	blog/modulo/index.html \
