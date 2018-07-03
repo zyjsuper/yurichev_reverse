@@ -71,6 +71,24 @@ _PRE_END
 
 <p>This is the same result: i1, i2 and i3 in numerical form.</p>
 
+<p>ReduceRow output is:</p>
+
+_PRE_BEGIN
+[ 1,0,0 | 3/3400  ]
+[ 0,1,0 | 1/425   ]
+[ 0,0,1 | 11/3400 ]
+_PRE_END
+
+<p>... back to expressions, this is:</p>
+
+_PRE_BEGIN
+1*i1 + 0*i2 + 0*i3 = 3/3400
+0*i1 + 1*i2 + 0*i3 = 1/425
+0*i1 + 0*i2 + 1*i3 = 11/3400
+_PRE_END
+
+<p>In other words, this is just what i1/i2/i3 are.</p>
+
 <p>Now something down-to-earth, C example I've copypasted from 
 _HTML_LINK(`https://rosettacode.org/wiki/Gaussian_elimination#C',`Rosetta Code'):</p>
 
