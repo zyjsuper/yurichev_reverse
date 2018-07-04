@@ -124,6 +124,8 @@ printf ("%s\n", msg1);
 printf ("%s\n", msg2);
 _PRE_END
 
+<p>They can be even aligned on 16-byte border.</p>
+
 <p>... or they can be placed into .s/.asm assembly file and compiled into .o/.obj and then linked to your program.</p>
 
 <p>Aside of order of text strings, you can try to hack a linker and reorder object files in the final executable.
