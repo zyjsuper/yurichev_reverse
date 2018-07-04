@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 7, 4,0,0,0), "lehmer","Executable file watermarking/steganography using Lehmer code and factorial number system")
     post(f1,f2,datetime.datetime(2018, 6,29,0,0,0), "nonogram","Nonogram puzzle solver using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 6,25,0,0,0), "kirchhoff","Kirchhoff’s circuit laws and Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 6,22,0,0,0), "ddff","DDFF - Duplicate Directories and Files Finder")
