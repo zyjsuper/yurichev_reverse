@@ -34,7 +34,9 @@ _PRE_BEGIN
 _PRE_END
 
 <p>Can we hide some information there?
-Not in string themselves, but in *order* of strings?</p>
+Not in string themselves, but in *order* of strings?
+Given the fact, that compiler doesn't guarantee at all,
+in which order the strings will be stored in object/executable file.</p>
 
 <p>Let's say, we've got 26 text strings, and we can swap them how we want, because their order isn't important at all.
 All possible _HTML_LINK(`https://en.wikipedia.org/wiki/Permutation',`permutations') of 26 objects is 
