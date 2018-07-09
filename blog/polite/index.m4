@@ -37,6 +37,10 @@ from_customer_wallet_100= 16
 from_customer= 2155
 _PRE_END
 
+<p>So that the cashier have to pull only 2 tenners from cash desk.</p>
+
+<hr>
+
 <p>Now what if we don't care about small banknotes, but want to make transaction as paperless as possible:</p>
 
 _PRE_BEGIN
