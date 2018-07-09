@@ -4,7 +4,7 @@ _HEADER_HL1(`"Polite customer" problem and Z3 SMT-solver')
 
 <p>This is probably not relevant in the era of credit cards, but...</p>
 
-<p>In shop or bar, you have to pay something in cash and, as a polite customer, you try to give such a set of banknotes,
+<p>In a shop or bar, you have to pay something in cash and, as a polite customer, you try to give such a set of banknotes,
 so that the cashier will not touch small banknotes in his/her cash desk, which are valuable (because of
 impoliteness of other customers).</p>
 
