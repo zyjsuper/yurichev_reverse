@@ -2,6 +2,8 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Executable file watermarking/steganography using Lehmer code and factorial number system')
 
+<p>TL;DR: how to hide information not in objects, but in *order* of objects.</p>
+
 <p>Almost any binary executable file has text strings like (these are from CRT):</p>
 
 _PRE_BEGIN
@@ -127,6 +129,9 @@ _PRE_END
 <p>They can be even aligned on 16-byte border.</p>
 
 <p>... or they can be placed into .s/.asm assembly file and compiled into .o/.obj and then linked to your program.</p>
+
+<p>... or you can swap text strings in already compiled executable and correct their addresses in corresponding instructions.
+If an executable file is not packed/obfuscated, this is possible.</p>
 
 <p>Aside of order of text strings, you can try to hack a linker and reorder object files in the final executable.
 Of course, no one cares about its order.
