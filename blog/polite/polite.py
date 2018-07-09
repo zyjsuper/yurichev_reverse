@@ -11,7 +11,7 @@ cash_register_25=0
 cash_register_50=12
 cash_register_100=10
 
-# ... in cash wallet
+# ... in customer's wallet
 customer_wallet_1=2
 customer_wallet_3=1
 customer_wallet_5=1
