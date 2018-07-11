@@ -103,7 +103,5 @@ _HL2(`Contacts')
 <p>E-Mail: <b>dennis(@)yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
-<p>My _HTML_LINK(`https://bitmessage.org/',`BitMessage ID'): <b>BM-2cUyrfGUDyjuUHyzAA63kq5NHAB2zMo4Q2</b></p>
-
 _FOOTER()
 
