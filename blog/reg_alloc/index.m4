@@ -3,7 +3,7 @@ m4_include(`commons.m4')
 _HEADER_HL1(`Register allocation using graph coloring')
 
 <p>This is an implementation of _HTML_LINK(`https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm',`Knuth-Morris-Pratt algorithm'), it searches for a substring in a string.
-(Copypasted from _HTML_LINK_AS_IS(`http://cprogramming.com/snippets/source-code/knuthmorrispratt-kmp-string-search-algorithm').</p>
+(Copypasted from _HTML_LINK_AS_IS(`http://cprogramming.com/snippets/source-code/knuthmorrispratt-kmp-string-search-algorithm')).</p>
 
 _PRE_BEGIN
 #include &lt;stdlib.h>                                                                                                               
