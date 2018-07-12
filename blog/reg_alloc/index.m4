@@ -73,7 +73,7 @@ _PRE_END
 
 <p>Dangling "noodles" you see at right is a "live ranges" of each vXX variable. "D" means "defined", "U" - "used" or "used and then defined again".
 Whenever live range is started, we need to allocate variable (in a register or a local stack).
-When it's ending, we may do not need to keep it somewhere in storage (in a register or a local stack).</p>
+When it's ending, we do not need to keep it somewhere in storage (in a register or a local stack).</p>
 
 <p>As you can see, the function has two parts: preparation and processing.
 You can clearly see how live ranges are divided by two parts, except of first 4, which are function arguments.</p>
