@@ -31,7 +31,7 @@ def main():
     post(f1,f2,datetime.datetime(2018, 7, 4,0,0,0), "lehmer","Executable file watermarking/steganography using Lehmer code and factorial number system")
     post(f1,f2,datetime.datetime(2018, 6,29,0,0,0), "nonogram","Nonogram puzzle solver using Z3 SMT-solver")
     post(f1,f2,datetime.datetime(2018, 6,25,0,0,0), "kirchhoff","Kirchhoff’s circuit laws and Z3 SMT-solver")
-    post(f1,f2,datetime.datetime(2018, 6,22,0,0,0), "ddff","DDFF - Duplicate Directories and Files Finder")
+    post(f1,f2,datetime.datetime(2018, 6,22,0,0,0), "ddff","DDFF - Duplicat\bee Directories and Files Finder")
     post(f1,f2,datetime.datetime(2018, 6,16,0,0,0), "cabling_Z3","Cabling in rack cabinet and Z3")
     post(f1,f2,datetime.datetime(2018, 6,13,0,0,0), "cellular","Why cellular network is a cellular network")
     post(f1,f2,datetime.datetime(2018, 6, 5,0,0,0), "2017-jun-5","News about SAT/SMT by example")

@@ -75,7 +75,7 @@ Whenever live range is started, we need to allocate variable (in a register or a
 When it's ending, we may do not need to keep it somewhere in storage (in a register or a local stack).</p>
 
 <p>As you can see, the function has two parts: preparation and processing.
-This is clearly see on how live ranges are located, there are also two parts.</p>
+You can clearly see how live ranges are divided by two parts, except of first 4, which are function arguments.</p>
 
 <p>You see, there are 16 variables. But we want to use as small number of registers, as possible.
 If several live ranges are present at some address or point of time, these variables cannot be allocated in the same register.</p>
