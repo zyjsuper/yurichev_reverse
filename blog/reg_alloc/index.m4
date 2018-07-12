@@ -159,7 +159,7 @@ Color reflecting register number.</p>
 
 <p>Almost all compilers (except simplest) do this in code generator. They use simpler algorithms, though, instead of such a heavy machinery as SAT/SMT solvers.</p>
 
-<p>See also: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Register_allocation').</p>
+<p>See also: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Register_allocation'), _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Live_variable_analysis').</p>
 
 _BLOG_FOOTER()
 
