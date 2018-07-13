@@ -41,8 +41,8 @@ kmp_search:
 .L4:                                    #  |   |   |   |   |       |       |
 	addq	$1, %r10                #  |   |   |   |   U       |       |
 	addq	$8, %r11                #  |   |   |   |   |       |       U
-	cmpq	%r10, %r8               #  |   |   |   |   U       U
-	jne	.L6
+	cmpq	%r10, %r8               #  |   |   |   |   U       U       |
+	jne	.L6                     #  |   |   |   |   |       |       |
 .L20:
                                         # v1  v2  v3  v4  v5  v6  v7  v8  v9  v10 v11 v12 v13 v14 v15 v16
                                         #  |   |   |   |
