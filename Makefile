@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/load/index.html \
 	blog/reg_alloc/index.html \
 	blog/polite/index.html \
 	blog/lehmer/index.html \
