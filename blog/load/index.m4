@@ -122,7 +122,8 @@ XOR EAX, 0x53757778
 AND EAX, 0x7274567a
 _PRE_END
 
-<p>Further work: use ForAll quantifier instead of randomly generated test inputs...</p>
+<p>Further work: use ForAll quantifier instead of randomly generated test inputs...
+also, we could try INC EAX/DEC EAX instructions.</p>
 
 _BLOG_FOOTER()
 

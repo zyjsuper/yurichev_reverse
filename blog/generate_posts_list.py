@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 7,23,0,0,0), "missing_op","Almost recreational math: missing operation(s) puzzle")
     post(f1,f2,datetime.datetime(2018, 7,21,0,0,0), "load","Loading a constant into register using ASCII-only x86 code")
     post(f1,f2,datetime.datetime(2018, 7,13,0,0,0), "reg_alloc","Register allocation using graph coloring")
     post(f1,f2,datetime.datetime(2018, 7, 9,0,0,0), "polite","\"Polite customer\" problem and Z3 SMT-solver")
