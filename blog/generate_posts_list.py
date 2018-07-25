@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 7,25,0,0,0), "weird_sort_KLEE","Worst sorting algorithm I ever saw: proving it using KLEE")
     post(f1,f2,datetime.datetime(2018, 7,25,0,0,0), "UAL","Understanding Assembly Language: new title for RE4B")
     post(f1,f2,datetime.datetime(2018, 7,23,0,0,0), "missing_op","Almost recreational math: missing operation(s) puzzle")
     post(f1,f2,datetime.datetime(2018, 7,21,0,0,0), "load","Loading a constant into register using ASCII-only x86 code")
@@ -42,7 +43,6 @@ def main():
     post(f1,f2,datetime.datetime(2017,10, 7,0,0,0), "SAP","SAP cluster table unpacker")
     post(f1,f2,datetime.datetime(2017, 7, 2,0,0,0), "DeMorgan","De Morgan’s laws and decompilation")
     post(f1,f2,datetime.datetime(2017, 6, 7,0,0,0), "8queens","Eight queens problem in 93 bytes")
-    post(f1,f2,datetime.datetime(2017, 6, 3,0,0,0), "weird_sort","Worst sorting algorithm I ever saw")
     post(f1,f2,datetime.datetime(2017, 5,13,0,0,0), "cyclomatic","Cyclomatic complexity")
     post(f1,f2,datetime.datetime(2017, 3, 2,0,0,0), "LCG","Cracking simple LCG PRNG")
     post(f1,f2,datetime.datetime(2016, 4,22,0,0,0), "signed_division_using_shifts","Signed division using shifts")

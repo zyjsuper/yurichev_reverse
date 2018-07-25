@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/weird_sort_KLEE/index.html \
 	blog/UAL/index.html \
 	blog/missing_op/index.html \
 	blog/load/index.html \
@@ -25,7 +26,6 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	blog/cellular/index.html \
 	blog/2017-jun-5/index.html \
 	blog/8queens/index.html \
-	blog/weird_sort/index.html \
 	blog/cyclomatic/index.html \
 	blog/SAP/index.html \
 	blog/modulo/index.html \

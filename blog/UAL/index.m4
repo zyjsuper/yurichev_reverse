@@ -16,7 +16,7 @@ and posted the link to Hacker News website (_HTML_LINK_AS_IS(`https://news.ycomb
 <p>So let it be, the book now has two titles.</p>
 
 <p>However, I've changed the second title to "Understanding Assembly Language", because someone already written "Assembly Language for Beginners" book.
-Also, people say "for Beginners" sounds a bit sarcastic for the book of ~1000 pages.</p>
+Also, people say "for Beginners" sounds a bit sarcastic for a book of ~1000 pages.</p>
 
 <p>Two books differ only by title, filename (UAL-XX.pdf versus RE4B-XX.pdf), URL and couple of first pages.</p>
 
