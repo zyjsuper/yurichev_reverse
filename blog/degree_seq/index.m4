@@ -41,7 +41,7 @@ _PRE_END
 
 _HL2(`Exercise')
 
-... from the "Pearls in Graph Theory":
+... from the "Pearls in Graph Theory" book:
 
 _PRE_BEGIN
 1.1.1. Seven students go on vacations. They decide that each will send a postcard to three of the others.
