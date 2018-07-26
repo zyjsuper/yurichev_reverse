@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html openwatcom.html vuln.ht
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/degree_seq/index.html \
 	blog/weird_sort_KLEE/index.html \
 	blog/UAL/index.html \
 	blog/missing_op/index.html \

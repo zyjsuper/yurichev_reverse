@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 7,26,0,0,0), "degree_seq","[Discrete math][graph theory] degree sequence problem / graph realization problem")
     post(f1,f2,datetime.datetime(2018, 7,25,0,0,0), "weird_sort_KLEE","Worst sorting algorithm I ever saw: proving it using KLEE")
     post(f1,f2,datetime.datetime(2018, 7,25,0,0,0), "UAL","Understanding Assembly Language: new title for RE4B")
     post(f1,f2,datetime.datetime(2018, 7,23,0,0,0), "missing_op","Almost recreational math: missing operation(s) puzzle")
