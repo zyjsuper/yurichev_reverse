@@ -39,5 +39,21 @@ _PRE_END
 
 <img src="1.png">
 
+_HL2(`Exercise')
+
+... from the "Pearls in Graph Theory":
+
+_PRE_BEGIN
+1.1.1. Seven students go on vacations. They decide that each will send a postcard to three of the others.
+Is it possible that every student receives postcards from precisely the three to whom he sent postcards?
+_PRE_END
+
+<p>No, it's not possible, because 7*3 is a odd number.
+However, if you reduce 7 students to 6, this is solvable, the sequence is [3,3,3,3,3,3].</p>
+
+<p>Now the graph of mutual exchanging of postcards between 6 students:</p>
+
+<img src="6_students.png">
+
 _BLOG_FOOTER()
 

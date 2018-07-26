@@ -24,6 +24,7 @@ vertices=len(seq)
 
 if (sum(seq) & 1) == 1:
     print "not a graphical sequence"
+    exit(0)
 
 edges=sum(seq)/2
 print "edges=", edges
