@@ -163,5 +163,7 @@ So we can prove it's correct for all arrays of 1..6 elements of bytes.</p>
 
 <p>Read also about proving sorting network correctness using Z3: _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_by_example.pdf#page=82&zoom=auto,-266,268').</p>
 
+<p>Upd: some people criticize using KLEE for verification: _HTML_LINK_AS_IS(`https://twitter.com/johnregehr/status/1022510275654606848').</p>
+
 _BLOG_FOOTER()
 
