@@ -31,15 +31,11 @@ _HL2(`Some of my writings:')
 <li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 </ul>
 
-_HL2(`Vulnerabilities I found:')
+<p>As seen on _HTML_LINK(`https://www.reddit.com/domain/yurichev.com/',`reddit'), _HTML_LINK(`https://hn.algolia.com/?query=yurichev&sort=byPopularity&prefix&page=0&dateRange=all&type=story',`hacker news').</p>
+
+_HL2(`Vulnerabilities I found (relics):')
 <ul>
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
-</ul>
-
-_HL2(`Github')
-
-<ul>
-<li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account');
 </ul>
 
 _HL2(`Oracle RDBMS stuff:')
@@ -70,36 +66,25 @@ _HL2(`Random utilities:')
 <li>_HTML_LINK(`copyfile.html', `Copyfile') - A very simple win32-utility to copy a file ignoring errors (including CRC errors).
 </ul>
 
-_HL2(`Also hosted somewhere on this website')
-
-<ul>
-<!-- <li>_HTML_LINK(`http://avantgardeproject.conus.info/mirror/', `Mirror of Avant Garde Project') - series of recordings of 20th-century classical, experimental, and electroacoustic music digitized from LPs whose music has in most cases never been released on CD, and so is effectively inaccessible to the vast majority of music listeners today. mp3 versions of these recordings are also _HTML_LINK(`http://avantgardeproject.conus.info/', `here').-->
-<li>_HTML_LINK(`retrocomputing.html', `Some retrocomputing files')
-
-<li id="onion">_HTML_LINK(`https://yurichev.com/files/J_P_Donleavy_Onion_Eaters.rar', `J.P.Donleavy - Onion Eaters') book (1971), scanned. But not OCR'ed. I have no time for this. Maybe someone will do it?
-Russian translation is in archive as well.
-About the book: _HTML_LINK(`https://www.goodreads.com/book/show/824920.The_Onion_Eaters',`goodreads'), 
-_HTML_LINK(`https://www.amazon.com/Onion-Eaters-J-P-Donleavy/dp/0440366437',`amazon'),
-_HTML_LINK(`http://spintongues.livejournal.com/40243.html',`Max Nemtsov') (in Russian).
-</ul>
-
-_HL2(`My patches')
+_HL2(`Patches')
 
 <ul>
 <li>_HTML_LINK(`wget.html', `My Wget patches')
 <li>_HTML_LINK(`dongles.html', `Dongles'): DosBox patches for 93c46-based dongles support, etc.
 </ul>
 
-m4_include(`google.html')
-
 _HL2(`Contacts')
 
 <p>E-Mail: <b>dennis@yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
+<p>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account')</p>
+
 <p>Skype: <b>dennis.yurichev</b>, Telegram: <b>@yurichev</b>, Phone: <b>+380-73-0630418</b>.</p>
 
 <p>_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`Facebook'), _HTML_LINK(`https://twitter.com/yurichev',`twitter').</p>
+
+m4_include(`google.html')
 
 _FOOTER()
 

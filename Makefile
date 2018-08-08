@@ -3,10 +3,10 @@
 	m4 -P $*.m4 >$*.html
 HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html vuln.html ddff.html \
 	wget.html \
-	dongles.html copyfile.html retrocomputing.html oracle_tables.html \
+	dongles.html copyfile.html oracle_tables.html \
 	tracer-en.html tracer-ru.html PE_add_imports.html \
 	PE_patcher.html PE_search_str_refs.html \
-	cvt2sparse.html services.html donate.html \
+	cvt2sparse.html \
 	404.html \
 	blog/posts.html \
 	blog/index.html \
