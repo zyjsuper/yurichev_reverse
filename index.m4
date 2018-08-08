@@ -94,10 +94,12 @@ m4_include(`google.html')
 
 _HL2(`Contacts')
 
-<p>E-Mail: <b>dennis(@)yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
+<p>E-Mail: <b>dennis@yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
 <p>Skype: <b>dennis.yurichev</b>, Telegram: <b>@yurichev</b>, Phone: <b>+380-73-0630418</b>.</p>
+
+<p>_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`Facebook'), _HTML_LINK(`https://twitter.com/yurichev',`twitter').</p>
 
 _FOOTER()
 
