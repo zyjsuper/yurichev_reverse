@@ -49,7 +49,7 @@ loc_35:
 f               endp
 _PRE_END
 
-<p>... also looks innocent, byt Hex-Rays 2.2.0 cannot clearly see that both AND operations were actually used in the source code:</p>
+<p>... also looks innocent, but Hex-Rays 2.2.0 cannot clearly see that both AND operations were actually used in the source code:</p>
 
 _PRE_BEGIN
 int __fastcall f(int a, int b, int c, int d)

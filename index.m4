@@ -12,6 +12,10 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 
 <!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
 
+<p>As of 2018, I mostly known for _HTML_LINK(`http://go.yurichev.com/45000',`Reverse Engineering for Beginners'), 
+_HTML_LINK(`https://yurichev.com/writings/SAT_SMT_by_example.pdf',`SAT/SMT by examples') and 
+_HTML_LINK(`tracer-en.html',`tracer').</p>
+
 _HL2(`Some of my writings:')
 
 <ul>
@@ -32,12 +36,10 @@ _HL2(`Vulnerabilities I found:')
 <li>_HTML_LINK(`vuln.html', `Vulnerabilities I found (Oracle RDBMS, IBM DB2)')
 </ul>
 
-_HL2(`Blogs, etc')
+_HL2(`Github')
 
 <ul>
-<li>Some kind of tech _HTML_LINK(`http://yurichev.com/blog', `blog here').
-<li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account (#1)');
-_HTML_LINK(`http://go.yurichev.com/45004', `Another GitHub account (#2)')
+<li>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account');
 </ul>
 
 _HL2(`Oracle RDBMS stuff:')
@@ -64,9 +66,7 @@ _HL2(`Random utilities:')
 <li>_HTML_LINK(`https://github.com/yurichev/bgrep',`Binary grep')
 <li>_HTML_LINK(`cvt2sparse.html',`Convert to sparse file utility (win32)')
 <li>_HTML_LINK(`http://conus.info/utils/#sap', `SAP network packets decompressor')
-<li>_HTML_LINK(`http://conus.info/utils/#demux', `The demux command-line utility can be used to demultiplex a file to set of files.')
 <li>_HTML_LINK(`ddff.html', `Duplicate Directories and Files Finder')
-<li>_HTML_LINK(`https://github.com/DennisYurichev/sort_photos', `Simple Python script just for sorting photos (based on EXIF data)')
 <li>_HTML_LINK(`copyfile.html', `Copyfile') - A very simple win32-utility to copy a file ignoring errors (including CRC errors).
 </ul>
 
@@ -75,7 +75,6 @@ _HL2(`Also hosted somewhere on this website')
 <ul>
 <!-- <li>_HTML_LINK(`http://avantgardeproject.conus.info/mirror/', `Mirror of Avant Garde Project') - series of recordings of 20th-century classical, experimental, and electroacoustic music digitized from LPs whose music has in most cases never been released on CD, and so is effectively inaccessible to the vast majority of music listeners today. mp3 versions of these recordings are also _HTML_LINK(`http://avantgardeproject.conus.info/', `here').-->
 <li>_HTML_LINK(`retrocomputing.html', `Some retrocomputing files')
-<li>_HTML_LINK(`http://conus.info/archive/', `cuetools 1.3.1 win32 binaries, Intel microcode table dumps')
 
 <li id="onion">_HTML_LINK(`https://yurichev.com/files/J_P_Donleavy_Onion_Eaters.rar', `J.P.Donleavy - Onion Eaters') book (1971), scanned. But not OCR'ed. I have no time for this. Maybe someone will do it?
 Russian translation is in archive as well.
@@ -89,11 +88,6 @@ _HL2(`My patches')
 <ul>
 <li>_HTML_LINK(`wget.html', `My Wget patches')
 <li>_HTML_LINK(`dongles.html', `Dongles'): DosBox patches for 93c46-based dongles support, etc.
-<li>_HTML_LINK(`http://conus.info/patches/BitchX/', `BitchX IRC client patches and binaries').
-<li>_HTML_LINK(`http://conus.info/patches/gcc-RAND/', `GCC 4.5.2 patched to support __RAND__ macro (32-bit random number different at each compilation) + MinGW 4.5.2 compiled with the patch')
-<li>_HTML_LINK(`cordbg.html', `Cordbg.exe from .NET 1.1 patch')
-<li>_HTML_LINK(`openwatcom.html', `OpenWatcom patches')
-<li>rdesktop-1.7.1 mouse wheel double event issue patch: _HTML_LINK(`http://sourceforge.net/mailarchive/message.php?msg_id=30237555', `post #1'), <a href="https://sourceforge.net/p/rdesktop/patches/215/">patch info</a>. Seemengly fixed in rdesktop 1.8.0.
 </ul>
 
 m4_include(`google.html')
@@ -102,6 +96,8 @@ _HL2(`Contacts')
 
 <p>E-Mail: <b>dennis(@)yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
+
+<p>Skype: <b>dennis.yurichev</b>, Telegram: <b>@yurichev</b>, Phone: <b>+380-73-0630418</b>.</p>
 
 _FOOTER()
 
