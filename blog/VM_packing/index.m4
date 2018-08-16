@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`Packing virtual machines into servers using Z3 SMT-solver')
+_HEADER_HL1(`[SMT][Z3] Packing virtual machines into servers')
 
 <p>You've got these servers (all in GBs):</p>
 
