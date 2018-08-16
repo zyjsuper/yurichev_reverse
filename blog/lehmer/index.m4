@@ -139,7 +139,8 @@ And go figure out, what is hidden there.</p>
 
 <p>Surely, hidden data can be encrypted, checksum or MAC can be added, etc.</p>
 
-<p>Other ideas to consider: basic blocks reordering within a function, register allocator hacking, etc.</p>
+<p>Other ideas to consider: reorder functions and fix all addresses,
+reorder basic blocks within a function, register allocator hacking, etc.</p>
 
 <p>Links I find helpful in understanding factorial number system and Lehmer code, aside of Wikipedia:</p>
 

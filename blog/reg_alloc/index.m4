@@ -161,5 +161,8 @@ Color reflecting register number.</p>
 
 <p>See also: _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Register_allocation'), _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Live_variable_analysis').</p>
 
+<p>Since graph coloring can have many solutions, you can probably hide some information
+in "coloring": _HTML_LINK_AS_IS(`https://yurichev.com/blog/lehmer/').</p>
+
 _BLOG_FOOTER()
 
