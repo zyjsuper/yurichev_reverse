@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`[SMT][Z3] Job Shop Scheduling/Problem')
+_HEADER_HL1(`[SMT][Z3][Python] Job Shop Scheduling/Problem')
 
 <p>You have number of machines and number of jobs.
 Each jobs consists of tasks, each task is to be processed on a machine, in specific order.</p>
