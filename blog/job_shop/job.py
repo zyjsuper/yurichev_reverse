@@ -109,7 +109,7 @@ for machine in range(machines):
         ss=ss+("." if t==None else str(st[i]))
     text_result.append(ss)
 
-# we need this jungling to rotate Gantt chart...
+# we need this juggling to rotate Gantt chart...
 
 print "machines :",
 for m in range(len(text_result)):
