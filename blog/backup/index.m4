@@ -6,6 +6,7 @@ _HEADER_HL1(`[SMT][Z3][Python] Organize your backups')
 In the era of audio cassettes (1980s, 1990s), many music lovers recorded their own mix tapes with tracks/songs they like.
 Each side of audio cassette was 30 or 45 minutes.
 The problem was to make such an order of songs, so that a minimal irritating "silent" track at the end of each side would left.
+Surely, you wanted to use the space as efficiently, as possible.
 </p>
 
 <p>This is classic _HTML_LINK(`https://en.wikipedia.org/wiki/Bin_packing_problem',`bin packing problem'): all bins (cassettes) are equally sized.</p>
