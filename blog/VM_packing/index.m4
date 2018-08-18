@@ -5,35 +5,35 @@ _HEADER_HL1(`[SMT][Z3] Packing virtual machines into servers')
 <p>You've got these servers (all in GBs):</p>
 
 _PRE_BEGIN
-RAM storage
-  2     100
-  4     800
-  4    1000
- 16    8000
-  8    3000
- 16    6000
- 16    4000
- 32    2000
-  8    1000
- 16   10000
-  8    1000
+     RAM storage
+ srv0  2     100
+ srv1  4     800
+ srv2  4    1000
+ srv3 16    8000
+ srv4  8    3000
+ srv5 16    6000
+ srv6 16    4000
+ srv7 32    2000
+ srv8  8    1000
+ srv9 16   10000
+srv10  8    1000
 _PRE_END
 
 <p>And you're going to put these virtual machines to servers:</p>
 
 _PRE_BEGIN
-RAM storage
-  1     100
- 16     900
-  4     710
-  2     800
-  4    7000
-  8    4000
-  2     800
-  4    2500
- 16     450
- 16    3700
- 12    1300
+    RAM storage
+ VM0  1     100
+ VM1 16     900
+ VM2  4     710
+ VM3  2     800
+ VM4  4    7000
+ VM5  8    4000
+ VM6  2     800
+ VM7  4    2500
+ VM8 16     450
+ VM9 16    3700
+VM10 12    1300
 _PRE_END
 
 <p>The problem: use as small number of servers, as possible.
