@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018, 8,18,0,0,0), "backup","[SMT][Z3][Python] Organize your backups")
     post(f1,f2,datetime.datetime(2018, 8,17,0,0,0), "job_shop","[SMT][Z3][Python] Job Shop Scheduling/Problem")
     post(f1,f2,datetime.datetime(2018, 8,16,0,0,0), "VM_packing","[SMT][Z3] Packing virtual machines into servers")
     post(f1,f2,datetime.datetime(2018, 7,26,0,0,0), "degree_seq","[Discrete math][graph theory] degree sequence problem / graph realization problem")

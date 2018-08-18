@@ -33,7 +33,7 @@ def try_to_fit_into_storages(storages_to_be_used):
     for i in range(files_n):
         s.add(And(file1_in_storage[i]>=0, file1_in_storage[i]<t))
         s.add(And(file2_in_storage[i]>=0, file2_in_storage[i]<t))
-        # no file can reside on one storage:
+        # no pair can reside on one storage:
         s.add(file1_in_storage[i] != file2_in_storage[i])
 
     for i in range(t):
