@@ -11,8 +11,8 @@ The problem was to make such an order of songs, so that a minimal irritating "si
 <p>This is classic _HTML_LINK(`https://en.wikipedia.org/wiki/Bin_packing_problem',`bin packing problem'): all bins (cassettes) are equally sized.</p>
 
 <p>Now let's advance this problem further: bins can be different.
-You may want to backup your files to all sorts of storages you have: DVD-RW, USB-sticks, remote hosts, cloud storage accounts, etc.
-This is a Multiple Knapsack Problem - you've got several knapsacks with different sizes.</p>
+You may want to backup your files to all sorts of storages you have: DVD-RWs, USB-sticks, remote hosts, cloud storage accounts, etc.
+This is a "Multiple Knapsack Problem" - you've got several knapsacks with different sizes.</p>
 
 <p>This code is also a siplification of my previous post: only one "dimension" (file size) is used: _HTML_LINK(`https://yurichev.com/blog/VM_packing/',`Packing virtual machines into servers').</p>
 
