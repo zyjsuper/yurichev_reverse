@@ -80,10 +80,6 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 
 <p>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account')</p>
 
-<p>Skype: <b>dennis.yurichev</b>, Telegram: <b>@yurichev</b>.</p>
-
-<p>_HTML_LINK(`https://www.facebook.com/dennis.yurichev.5',`Facebook'), _HTML_LINK(`https://twitter.com/yurichev',`twitter').</p>
-
 m4_include(`google.html')
 
 _FOOTER()
