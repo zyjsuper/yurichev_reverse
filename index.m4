@@ -75,7 +75,7 @@ _HL2(`Patches')
 
 _HL2(`Contacts')
 
-<p>E-Mail: <b>dennis@torus.company</b>, _HTML_LINK(`pgp.html', `my PGP public key').
+<p>E-Mail: <b>dennis@yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
 <p>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account')</p>
