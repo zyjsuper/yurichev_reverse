@@ -78,6 +78,8 @@ _HL2(`Contacts')
 <p>E-Mail: <b>dennis@yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
 
+<p>Phone: <b>+1 650 353 7657</b>.</p>
+
 <p>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account')</p>
 
 m4_include(`google.html')
