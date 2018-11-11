@@ -16,6 +16,8 @@ _HTML_LINK(`pix/Dennis_Yurichev.jpg', `_HTML_IMG(`pix/Dennis_Yurichev_tn.jpg',`c
 _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_by_example.pdf',`SAT/SMT by examples') and 
 _HTML_LINK(`tracer-en.html',`tracer').</p>
 
+<p>See also: _HTML_LINK_AS_IS(`http://dongle-emulator.net/').</p>
+
 _HL2(`Some of my writings:')
 
 <ul>
