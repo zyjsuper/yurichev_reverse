@@ -103,7 +103,7 @@ _PRE_END
 I'm telling it: "find a solution, where this expression will be false":</p>
 
 _PRE_BEGIN
-s.add(Not(If(b32>=0, a32+b32<a32, a32+b32>a32)))
+s.add(Not(If(b32>=0, a32+b32&lt;a32, a32+b32>a32)))
 _PRE_END
 
 <p>And it gives unsat, meaning, there is no counterexample, so the expression can be evaluated safely on both ALUs.</p>
@@ -113,7 +113,7 @@ Let's check.
 Find inputs for which this piece of LLVM code will call compilerrt_abort():</p>
 
 _PRE_BEGIN
-s.add(If(b32>=0, a32+b32<a32, a32+b32>a32))
+s.add(If(b32>=0, a32+b32&lt;a32, a32+b32>a32))
 _PRE_END
 
 _PRE_BEGIN
