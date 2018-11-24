@@ -302,5 +302,7 @@ _HL2(`Further reading')
 
 <p>_HTML_LINK(`http://fmv.jku.at/c32sat/',`C32SAT').</p>
 
+<p>My other examples: _HTML_LINK(`https://yurichev.com/writings/SAT_SMT_by_example.pdf',`SAT/SMT by Example').</p>
+
 _BLOG_FOOTER()
 
