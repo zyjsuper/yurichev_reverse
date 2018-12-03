@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`[Z3][SMT][Python][EE] Fault check: minimizing test set')
+_HEADER_HL1(`[Z3][SMT][Python][EE] Fault check of digital circuit: minimizing test set')
 
 <p>Donald Knuth's TAOCP section 7.2.2.2 has the following exercise.</p>
 
