@@ -281,9 +281,10 @@ _PRE_END
 _HL2(`Games')
 
 <p>A lot of video games are prone to integer overflow.
-Which are exploited heavily by gamers.
+Which are exploited actively by gamers.
 As of NetHack:
-_HTML_LINK_AS_IS(`https://nethackwiki.com/wiki/Integer_overflow').</p>
+_HTML_LINK_AS_IS(`https://nethackwiki.com/wiki/Integer_overflow'),
+_HTML_LINK_AS_IS(`https://nethackwiki.com/wiki/Negative_gold').</p>
 
 _HL2(`Summary')
 
