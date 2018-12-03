@@ -16,7 +16,7 @@ But you want to make fault check as fast as possible and minimize test set.</p>
 _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_by_example.pdf#page=250&zoom=auto,-266,710') (page 250).</p>
 
 <p>We want such a test set, so that all gates' outputs will output 0 and 1, at least once.
-ANd the test set should be as small, as possible.</p>
+And the test set should be as small, as possible.</p>
 
 <p>The source code is very close to my previous example...</p>
 
