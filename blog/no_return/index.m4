@@ -9,7 +9,7 @@ _HEADER_HL1(`(C, C++, x86/x64 assembly): The case of forgotten return')
 <p>In the piece of code like that, I forgot to add "return":</p>
 
 _PRE_BEGIN
-#include &lt;stdio.h>                                                                                                                
+#include &lt;stdio.h>
 #include &lt;stdlib.h>
 
 struct color
