@@ -97,5 +97,7 @@ When "return" statement is absent, compiler can just silently do nothing at that
 
 <p>Such a bug left unnoticed can make an extremely bad day.</p>
 
+<p>Also, _HTML_LINK(`https://en.wikipedia.org/wiki/Shotgun_debugging',`shotgun debugging') is bad, because again, such a bug can left unnoticed ("everything works now, so be it").</p>
+
 _BLOG_FOOTER()
 
