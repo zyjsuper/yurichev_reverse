@@ -134,7 +134,7 @@ _PRE_END
 <p>As you can see, it has testing procedure, which is, in turn, can be used instead of RE matcher, if you really need to match
 numbers divisible by 3.</p>
 
-<p>DFA for numbers divisible by 3:</p>
+<p>DFA for numbers divisible by 3. States in double circles - initial (S_0) and accepting:</p>
 
 <img src="3.png">
 
