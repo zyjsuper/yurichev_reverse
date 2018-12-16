@@ -9,7 +9,7 @@ create_color PROC
 	sub	rsp, 56
 	mov	ecx, 12
 	call	malloc
-; EAX = allocated buffer
+; RAX = allocated buffer
 	mov	QWORD PTR rt$[rsp], rax
 	mov	rax, QWORD PTR rt$[rsp]
 	mov	ecx, DWORD PTR R$[rsp]
@@ -21,7 +21,7 @@ create_color PROC
 	mov	ecx, DWORD PTR B$[rsp]
 	mov	DWORD PTR [rax+8], ecx
 	add	rsp, 56
-; EAX didn't change down to this point
+; RAX didn't change down to this point
 	ret	0
 create_color ENDP
 

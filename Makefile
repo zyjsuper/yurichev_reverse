@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html vuln.html ddff.html \
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/DFA/index.html \
 	blog/no_return/index.html \
 	blog/fault_check/index.html \
 	blog/int_over/index.html \

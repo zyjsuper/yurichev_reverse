@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2018,12,16,0,0,0), "DFA","[Z3][SMT][Python] (Mostly for CS geeks) constructing minimal DFA accepting specific binary numbers")
     post(f1,f2,datetime.datetime(2018,12,13,0,0,0), "no_return","(C, C++, x86/x64 assembly): The case of forgotten return")
     post(f1,f2,datetime.datetime(2018,12, 3,0,0,0), "fault_check","[Z3][SMT][Python][EE] Fault check of digital circuit: minimizing test set")
     post(f1,f2,datetime.datetime(2018,11,24,0,0,0), "int_over","[SMT][Z3][Python] Integer overflow and SMT-solvers")

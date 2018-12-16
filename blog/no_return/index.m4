@@ -95,7 +95,7 @@ _PRE_END
 <p>The moral of the story: warnings are very important, use "-Wall", etc, etc...
 When "return" statement is absent, compiler can just silently do nothing at that point.</p>
 
-<p>Such a bug left unnoticed can make an extremely bad day.</p>
+<p>Such a bug left unnoticed can ruin a day.</p>
 
 <p>Also, _HTML_LINK(`https://en.wikipedia.org/wiki/Shotgun_debugging',`shotgun debugging') is bad, because again, such a bug can left unnoticed ("everything works now, so be it").</p>
 
