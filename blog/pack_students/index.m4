@@ -11,7 +11,8 @@ hiking, clubbing, dancing, swimming, maybe hanging out with girls, etc.
 Three students can be accommodated in each room.</p>
 
 <p>The problem to pack them all in such a way, so that all roommates would
-share as many interests/hobbies with each other, as possible.</p>
+share as many interests/hobbies with each other, as possible.
+To make them happy and tight-knit.</p>
 
 <p>This is what I will do using Open-WBO MaxSAT solver (
 _HTML_LINK(`http://sat.inesc-id.pt/open-wbo/',`1'), 
