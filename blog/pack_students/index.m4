@@ -74,5 +74,7 @@ _PRE_BEGIN
 m4_include(`blog/pack_students/res.txt')
 _PRE_END
 
+<p>Surely, you can group any other objects with each other based on multiple preferences.</p>
+
 _BLOG_FOOTER()
 
