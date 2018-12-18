@@ -65,7 +65,7 @@ _PRE_END
 <p>( _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/SAT_SMT_by_example/blob/master/libs/SAT_lib.py') )</p>
 
 <p>... and then Open-WBO MaxSAT searches such a solution, for which as many
-soft clauses as possible would be satisfied, i.e., as many shared hobbies,
+soft clauses as possible would be satisfied, i.e., as many hobbies shared,
 as possible.</p>
 
 <p>And the result:</p>
