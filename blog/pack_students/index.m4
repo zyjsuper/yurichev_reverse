@@ -24,7 +24,7 @@ _PRE_BEGIN
 m4_include(`blog/pack_students/1.py')
 _PRE_END
 
-<p>The most significant parts from the library used, are:</p>
+<p>Most significant parts from the library used, are:</p>
 
 _PRE_BEGIN
     # bitvectors must be different.
