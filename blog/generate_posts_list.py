@@ -26,7 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
-    post(f1,f2,datetime.datetime(2018,12,19,0,0,0), "pack_students","[MaxSAT][Python] Pack students into dorm")
+    post(f1,f2,datetime.datetime(2018,12,19,0,0,0), "pack_students","[MaxSAT][Python] Packing students into dorm")
     post(f1,f2,datetime.datetime(2018,12,16,0,0,0), "DFA","[Z3][SMT][Python] (Mostly for CS geeks) constructing minimal DFA accepting specific binary numbers")
     post(f1,f2,datetime.datetime(2018,12,13,0,0,0), "no_return","(C, C++, x86/x64 assembly): The case of forgotten return")
     post(f1,f2,datetime.datetime(2018,12, 3,0,0,0), "fault_check","[Z3][SMT][Python][EE] Fault check of digital circuit: minimizing test set")

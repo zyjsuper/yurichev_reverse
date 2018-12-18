@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`[MaxSAT][Python] Pack students into dorm')
+_HEADER_HL1(`[MaxSAT][Python] Packing students into dorm')
 
 <p>Given, say, 15 students.
 And they all have various interests/hobbies in their life, like
