@@ -1,7 +1,7 @@
 .SUFFIXES: .m4 .html
 .m4.html:
 	m4 -P $*.m4 >$*.html
-HTML_FILES=index.html pgp.html C-book.html ops_FPGA.html vuln.html ddff.html \
+HTML_FILES=index.html pgp.html C-book.html SAT_SMT.html ops_FPGA.html vuln.html ddff.html \
 	wget.html \
 	dongles.html copyfile.html oracle_tables.html \
 	tracer-en.html tracer-ru.html PE_add_imports.html \

@@ -11,7 +11,7 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 <!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
 
 <p>As of 2018, I mostly known for _HTML_LINK(`http://go.yurichev.com/45000',`Reverse Engineering for Beginners'), 
-_HTML_LINK(`https://yurichev.com/writings/SAT_SMT_by_example.pdf',`SAT/SMT by examples') and 
+_HTML_LINK(`SAT_SMT.html',`SAT/SMT by examples') and 
 _HTML_LINK(`tracer-en.html',`tracer').</p>
 
 <p>See also: _HTML_LINK_AS_IS(`http://dongle-emulator.net/').</p>
@@ -21,7 +21,7 @@ _HL2(`Some of my writings:')
 <ul>
 <li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
 
-<li>_HTML_LINK(`https://yurichev.com/writings/SAT_SMT_by_example.pdf',`SAT/SMT by example').
+<li>_HTML_LINK(`SAT_SMT.html',`SAT/SMT by example').
 
 <li>My _HTML_LINK(`blog', `blog'), has some new articles.
 
@@ -77,8 +77,6 @@ _HL2(`Contacts')
 
 <p>E-Mail: <b>dennis@yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
-
-<p>Phone: <b>+1 650 353 7657</b>.</p>
 
 <p>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account')</p>
 
