@@ -10,38 +10,17 @@ HTML_FILES=index.html pgp.html C-book.html SAT_SMT.html ops_FPGA.html vuln.html 
 	404.html \
 	blog/posts.html \
 	blog/index.html \
-	blog/pack_students/index.html \
-	blog/DFA/index.html \
-	blog/no_return/index.html \
-	blog/fault_check/index.html \
-	blog/int_over/index.html \
-	blog/backup/index.html \
-	blog/job_shop/index.html \
-	blog/VM_packing/index.html \
-	blog/degree_seq/index.html \
+	blog/20190204/index.html \
 	blog/weird_sort_KLEE/index.html \
 	blog/UAL/index.html \
-	blog/missing_op/index.html \
-	blog/load/index.html \
-	blog/reg_alloc/index.html \
-	blog/polite/index.html \
-	blog/lehmer/index.html \
 	blog/LCG/index.html \
-	blog/nonogram/index.html \
-	blog/kirchhoff/index.html \
 	blog/DeMorgan/index.html \
 	blog/ddff/index.html \
-	blog/cabling_Z3/index.html \
-	blog/cellular/index.html \
-	blog/2017-jun-5/index.html \
 	blog/8queens/index.html \
 	blog/cyclomatic/index.html \
 	blog/SAP/index.html \
-	blog/modulo/index.html \
 	blog/llvm/index.html \
-	blog/clique/index.html \
 	blog/fuzzy_string/index.html \
-	blog/2015-aug-13/index.html \
 	blog/2015-aug-20/index.html \
 	blog/CAS/index.html \
 	blog/git/index.html \

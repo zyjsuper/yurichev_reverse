@@ -14,7 +14,7 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 _HTML_LINK(`SAT_SMT.html',`SAT/SMT by example') and 
 _HTML_LINK(`tracer-en.html',`tracer').</p>
 
-<p>See also: _HTML_LINK_AS_IS(`http://dongle-emulator.net/').</p>
+<!-- <p>See also: _HTML_LINK_AS_IS(`http://dongle-emulator.net/').</p> -->
 
 _HL2(`Some of my writings:')
 
@@ -23,10 +23,11 @@ _HL2(`Some of my writings:')
 
 <li>_HTML_LINK(`SAT_SMT.html',`SAT/SMT by example').
 
+<li>_HTML_LINK(`https://yurichev.com/writings/Math-for-programmers.pdf', `Mathematics for programmers').
+
 <li>My _HTML_LINK(`blog', `blog'), has some new articles.
 
 <li>_HTML_LINK(`https://github.com/DennisYurichev/random_notes/',`Random notes') at GitHub.
-<li>_HTML_LINK(`writings/log_intro.pdf', `Introduction to logarithms').
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
 <li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
 </ul>
@@ -75,8 +76,12 @@ _HL2(`Patches')
 
 _HL2(`Contacts')
 
+<p>Skype: <b>dennis.yurichev</b>, Telegram: <b>@yurichev</b>.</p>
+
 <p>E-Mail: <b>dennis@yurichev.com</b>, _HTML_LINK(`pgp.html', `my PGP public key').
 Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</p>
+
+<p>Expecting email from me? Maybe your email gone into spam folder. Please remind me about it using Telegram or Skype.</p>
 
 <p>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account')</p>
 
