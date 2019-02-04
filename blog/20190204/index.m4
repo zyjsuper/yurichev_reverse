@@ -11,5 +11,7 @@ _HTML_LINK_AS_IS(`https://yurichev.com/writings/SAT_SMT_by_example.pdf').</p>
 
 <p>Thanks to Xenia Galinskaya for carefully measured periods of forced distraction from the work...</p>
 
+<p>Also, my math notes has been moved away to the separate PDF: _HTML_LINK_AS_IS(`https://yurichev.com/writings/Math-for-programmers.pdf').</p>
+
 _BLOG_FOOTER()
 
