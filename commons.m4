@@ -24,6 +24,9 @@ m4_define(`_FOOTER',`<p>&rarr; [_HTML_LINK(`//yurichev.com',`back to the main pa
 </body>
 </html>')
 
+m4_define(`_FOOTER_AT_MAIN',`</body>
+</html>')
+
 m4_define(`_EXERCISE_FOOTER',`<p>Other exercises like this are available in my _HTML_LINK(`//yurichev.com/blog/',`blog') and _HTML_LINK(`https://beginners.re/',`my book').</p>')
 m4_define(`_EXERCISE_SPOILER_WARNING',`<p>Spoiler warning! The text below has white color, select it using mouse to read the text (or press Ctrl-A).</p>')
 

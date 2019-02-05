@@ -25,5 +25,3 @@ _HL2(`Subscribe to the blog:')
 
 <p><a href="//yurichev.com/blog/rss.xml"><img src="rss_button.gif"></a></p>
 
-_BLOG_FOOTER()
-

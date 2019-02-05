@@ -20,16 +20,11 @@ _HL2(`Some of my writings:')
 
 <ul>
 <li>_HTML_LINK(`http://go.yurichev.com/45000', `"Reverse Engineering for Beginners"') free book.
-
 <li>_HTML_LINK(`SAT_SMT.html',`SAT/SMT by example').
-
 <li>_HTML_LINK(`https://yurichev.com/writings/Math-for-programmers.pdf', `Mathematics for programmers').
-
-<li>My _HTML_LINK(`blog', `blog'), has some new articles.
-
-<li>_HTML_LINK(`https://github.com/DennisYurichev/random_notes/',`Random notes') at GitHub.
 <li>_HTML_LINK(`C-book.html', `C/C++ programming language notes').
-<li>_HTML_LINK(`writings/oracle.pdf', `Oracle RDBMS rootkits and other modifications')
+<li>My _HTML_LINK(`blog', `blog').
+<li>_HTML_LINK(`https://github.com/DennisYurichev/random_notes/',`Random notes') at GitHub.
 </ul>
 
 <p>As seen on _HTML_LINK(`https://www.reddit.com/domain/yurichev.com/',`reddit'), _HTML_LINK(`https://hn.algolia.com/?query=yurichev&sort=byPopularity&prefix&page=0&dateRange=all&type=story',`hacker news').</p>
@@ -87,5 +82,5 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 
 m4_include(`google.html')
 
-_FOOTER()
+_FOOTER_AT_MAIN()
 
