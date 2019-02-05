@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html SAT_SMT.html ops_FPGA.html vuln.html 
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/20190205/index.html \
 	blog/20190204/index.html \
 	blog/weird_sort_KLEE/index.html \
 	blog/UAL/index.html \
