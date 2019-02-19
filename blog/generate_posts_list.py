@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2019, 2,20,0,0,0), "markov","Autocomplete using Markov chains")
     post(f1,f2,datetime.datetime(2019, 2, 5,0,0,0), "20190205","Reverse Engineering for Beginners (Understanding Assembly Language): translations")
     post(f1,f2,datetime.datetime(2019, 2, 4,0,0,0), "20190204","SAT/SMT by Example has been updated")
     post(f1,f2,datetime.datetime(2018, 7,25,0,0,0), "weird_sort_KLEE","Worst sorting algorithm I ever saw: proving it using KLEE")
