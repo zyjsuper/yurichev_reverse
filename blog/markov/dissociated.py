@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 # python 3! due to random.choices()
@@ -8,9 +9,7 @@ from collections import defaultdict
 with open ("all.txt", "r") as myfile:
     data=myfile.read()
 
-tmp=data.lower().replace('\r',' ').replace('\n',' ').replace('?','.').replace('!','.').replace('“','.')
-tmp=tmp.replace('”','.').replace("\"",".").replace('‘',' ').replace('-',' ').replace('’',' ').replace('\'',' ')
-sentences=tmp.split(".")
+sentences=data.lower().replace('\r',' ').replace('\n',' ').replace('?','.').replace('!','.').replace('“','.').replace('”','.').replace("\"",".").replace('‘',' ').replace('-',' ').replace('’',' ').replace('\'',' ').split(".")
 
 def remove_empty_words(l):
     return list(filter(lambda a: a != '', l))
