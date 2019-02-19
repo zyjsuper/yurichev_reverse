@@ -1,0 +1,21 @@
+the return
+[('of', 8), ('track', 1), ('to', 1)]
+
+return of
+[('sherlock', 6), ('lady', 1), ('the', 1)]
+
+for the
+[('use', 22), ('first', 12), ('purpose', 9), ('sake', 8), ('rest', 7), ('best', 7), ('crime', 6), ('evening', 6), ('ebooks', 6), ('limited', 6), ('moment', 6), ('day', 5), ('future', 5), ('last', 5), ('world', 5), ('time', 5), ('loss', 4), ('second', 4), ('night', 4), ('remainder', 4)]
+
+use of
+[('the', 15), ('anyone', 12), ('it', 6), ('project', 6), ('and', 6), ('having', 2), ('this', 1), ('my', 1), ('a', 1), ('horses', 1), ('some', 1), ('arguing', 1), ('troubling', 1), ('artificial', 1), ('invalids', 1), ('cocaine', 1), ('disguises', 1), ('an', 1), ('our', 1)]
+
+you may
+[('have', 17), ('copy', 13), ('be', 13), ('do', 9), ('choose', 7), ('use', 6), ('obtain', 6), ('convert', 6), ('charge', 6), ('demand', 6), ('remember', 5), ('find', 5), ('take', 4), ('think', 3), ('possibly', 3), ('well', 3), ('know', 3), ('not', 3), ('say', 3), ('imagine', 3)]
+
+the three
+[('of', 8), ('men', 4), ('students', 2), ('glasses', 2), ('which', 1), ('strips', 1), ('is', 1), ('he', 1), ('gentlemen', 1), ('enterprising', 1), ('massive', 1), ('quarter', 1), ('randalls', 1), ('fugitives', 1), ('animals', 1), ('shrieked', 1), ('other', 1), ('murderers', 1), ('fir', 1), ('at', 1)]
+
+it was
+[('a', 179), ('the', 78), ('not', 68), ('only', 40), ('in', 30), ('evident', 28), ('that', 28), ('all', 25), ('to', 21), ('an', 18), ('my', 17), ('at', 17), ('impossible', 17), ('indeed', 15), ('no', 15), ('quite', 15), ('he', 14), ('of', 14), ('one', 12), ('on', 12)]
+

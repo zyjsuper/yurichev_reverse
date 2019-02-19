@@ -1,0 +1,30 @@
+the return of
+[('sherlock', 6), ('lady', 1), ('the', 1)]
+
+the use of
+[('the', 13), ('anyone', 12), ('project', 6), ('having', 2), ('a', 1), ('horses', 1), ('some', 1), ('troubling', 1), ('artificial', 1), ('invalids', 1), ('disguises', 1), ('it', 1)]
+
+of the second
+[('stain', 5), ('floor', 3), ('page', 1), ('there', 1), ('person', 1), ('party', 1), ('day', 1)]
+
+it was in
+[('the', 9), ('vain', 5), ('a', 4), ('his', 2), ('83', 1), ('one', 1), ('motion', 1), ('truth', 1), ('my', 1), ('this', 1), ('march', 1), ('january', 1), ('june', 1), ('me', 1)]
+
+was in the
+[('room', 3), ('habit', 3), ('house', 2), ('last', 2), ('loft', 2), ('spring', 1), ('train', 1), ('bar', 1), ('power', 1), ('immediate', 1), ('year', 1), ('midst', 1), ('forenoon', 1), ('centre', 1), ('papers', 1), ('best', 1), ('darkest', 1), ('prime', 1), ('hospital', 1), ('nursery', 1)]
+
+murder of the
+[('honourable', 1), ('discoverer', 1)]
+
+particulars of the
+[('crime', 1), ('inquest', 1), ('habits', 1), ('voyage', 1)]
+
+the death of
+[('the', 8), ('sir', 8), ('captain', 3), ('their', 2), ('this', 2), ('his', 2), ('her', 2), ('dr', 2), ('sherlock', 1), ('mrs', 1), ('a', 1), ('van', 1), ('that', 1), ('drebber', 1), ('mr', 1), ('stangerson', 1), ('two', 1), ('selden', 1), ('one', 1), ('wallenstein', 1)]
+
+one of the
+[('most', 23), ('best', 3), ('main', 3), ('oldest', 2), ('greatest', 2), ('numerous', 2), ('corners', 2), ('largest', 2), ('papers', 2), ('richest', 2), ('servants', 2), ('moor', 2), ('finest', 2), ('upper', 2), ('very', 2), ('broad', 2), ('side', 2), ('highest', 2), ('australian', 1), ('great', 1)]
+
+so far as
+[('i', 17), ('to', 8), ('that', 2), ('the', 2), ('it', 2), ('was', 1), ('we', 1), ('they', 1), ('he', 1), ('you', 1), ('a', 1), ('your', 1), ('this', 1), ('his', 1), ('she', 1)]
+

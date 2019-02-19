@@ -1,0 +1,15 @@
+return
+[('to', 28), ('or', 12), ('of', 8), ('the', 8), ('for', 5), ('with', 4), ('by', 4), ('journey', 4), ('and', 3), ('when', 2), ('ticket', 2), ('from', 2), ('at', 2), ('you', 2), ('i', 2), ('since', 1), ('on', 1), ('caused', 1), ('but', 1), ('it', 1)]
+
+of
+[('the', 3206), ('a', 680), ('his', 584), ('this', 338), ('it', 304), ('my', 295), ('course', 225), ('them', 167), ('that', 138), ('your', 137), ('our', 135), ('us', 122), ('her', 116), ('him', 111), ('an', 105), ('any', 102), ('these', 92), ('which', 89), ('all', 82), ('those', 75)]
+
+by
+[('the', 532), ('a', 164), ('his', 67), ('my', 39), ('no', 34), ('this', 31), ('an', 30), ('which', 29), ('your', 21), ('that', 19), ('one', 17), ('all', 17), ('jove', 16), ('some', 16), ('sir', 13), ('its', 13), ('him', 13), ('their', 13), ('it', 11), ('her', 10)]
+
+this
+[('is', 177), ('agreement', 96), ('morning', 81), ('was', 61), ('work', 60), ('man', 56), ('case', 43), ('time', 39), ('matter', 37), ('ebook', 36), ('way', 36), ('fellow', 28), ('room', 27), ('letter', 24), ('one', 24), ('i', 23), ('young', 21), ('very', 20), ('project', 18), ('electronic', 18)]
+
+no
+[('doubt', 179), ('one', 134), ('sir', 61), ('more', 56), ('i', 55), ('no', 42), ('other', 36), ('means', 36), ('sign', 34), ('harm', 23), ('reason', 22), ('difficulty', 22), ('use', 21), ('idea', 20), ('longer', 20), ('signs', 18), ('good', 17), ('great', 16), ('trace', 15), ('man', 15)]
+

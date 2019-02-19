@@ -1,0 +1,250 @@
+"i can tell"
+
+* third order. for sequence: i can tell
+you 66%
+my 16%
+them 16%
+* second order. for sequence: can tell
+you 23%
+us 17%
+me 11%
+your 11%
+this 5%
+* first order. for word: tell
+you 35%
+me 25%
+us 6%
+him 5%
+the 4%
+
+"she was a"
+
+* third order. for sequence: she was a
+blonde 12%
+child 6%
+passenger 6%
+free 6%
+very 6%
+* second order. for sequence: was a
+very 4%
+man 3%
+small 3%
+long 2%
+little 2%
+* first order. for word: a
+very 2%
+man 2%
+little 2%
+few 2%
+small 1%
+
+"he was a"
+
+* third order. for sequence: he was a
+man 11%
+very 7%
+young 3%
+tall 3%
+middle 2%
+* second order. for sequence: was a
+very 4%
+man 3%
+small 3%
+long 2%
+little 2%
+* first order. for word: a
+very 2%
+man 2%
+little 2%
+few 2%
+small 1%
+
+"i did not"
+
+* third order. for sequence: i did not
+know 22%
+say 9%
+even 3%
+tell 3%
+mind 3%
+* second order. for sequence: did not
+know 11%
+take 3%
+wish 3%
+go 2%
+say 2%
+* first order. for word: not
+a 4%
+be 4%
+have 3%
+been 3%
+to 2%
+
+"all that she"
+
+* third order. for sequence: all that she
+said 100%
+* second order. for sequence: that she
+had 22%
+was 19%
+would 7%
+is 5%
+has 5%
+* first order. for word: she
+was 12%
+had 10%
+is 5%
+said 3%
+would 3%
+
+"have not been"
+
+* third order. for sequence: have not been
+able 25%
+here 25%
+employed 12%
+shadowed 12%
+personally 12%
+* second order. for sequence: not been
+for 9%
+in 6%
+there 6%
+a 4%
+slept 4%
+* first order. for word: been
+a 5%
+in 4%
+the 2%
+so 2%
+taken 1%
+
+"who wanted to"
+
+* third order. for sequence: who wanted to
+see 100%
+* second order. for sequence: wanted to
+see 15%
+know 15%
+speak 10%
+ask 10%
+hide 5%
+* first order. for word: to
+the 11%
+be 6%
+me 4%
+his 2%
+my 2%
+
+"he wanted to"
+
+* third order. for sequence: he wanted to
+know 50%
+do 50%
+* second order. for sequence: wanted to
+see 15%
+know 15%
+speak 10%
+ask 10%
+hide 5%
+* first order. for word: to
+the 11%
+be 6%
+me 4%
+his 2%
+my 2%
+
+"wanted to do"
+
+* third order. for sequence: wanted to do
+the 100%
+* second order. for sequence: to do
+with 23%
+so 14%
+it 10%
+the 4%
+and 3%
+* first order. for word: do
+you 24%
+not 20%
+with 6%
+so 4%
+it 4%
+
+"it is just"
+
+* third order. for sequence: it is just
+possible 42%
+as 33%
+killing 4%
+such 4%
+in 4%
+* second order. for sequence: is just
+possible 25%
+as 22%
+the 8%
+a 8%
+to 5%
+* first order. for word: just
+as 13%
+now 5%
+a 4%
+to 3%
+the 2%
+
+"you will find"
+
+* third order. for sequence: you will find
+that 20%
+it 20%
+me 8%
+the 8%
+a 6%
+* second order. for sequence: will find
+it 19%
+that 17%
+the 9%
+me 7%
+a 5%
+* first order. for word: find
+that 13%
+the 10%
+it 9%
+out 8%
+a 6%
+
+"you shall"
+
+* second order. for sequence: you shall
+have 15%
+see 12%
+know 12%
+hear 9%
+not 9%
+* first order. for word: shall
+be 20%
+have 7%
+not 4%
+see 3%
+i 3%
+
+"proved to be"
+
+* third order. for sequence: proved to be
+a 42%
+the 14%
+too 4%
+something 4%
+of 4%
+* second order. for sequence: to be
+a 11%
+the 3%
+in 3%
+able 2%
+so 2%
+* first order. for word: be
+a 7%
+the 4%
+in 2%
+of 2%
+no 2%
+
