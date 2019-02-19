@@ -47,6 +47,13 @@ pre.normal
     line-height: 1.1em;
     padding: 15px 20px 15px 20px;
     border-radius: 6px;
+
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 pre.spoiler
 {

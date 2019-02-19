@@ -8,7 +8,9 @@ from collections import defaultdict
 with open ("all.txt", "r") as myfile:
     data=myfile.read()
 
-sentences=data.lower().replace('\r',' ').replace('\n',' ').replace('?','.').replace('!','.').replace('“','.').replace('”','.').replace("\"",".").replace('‘',' ').replace('-',' ').replace('’',' ').replace('\'',' ').split(".")
+tmp=data.lower().replace('\r',' ').replace('\n',' ').replace('?','.').replace('!','.').replace('“','.')
+tmp=tmp.replace('”','.').replace("\"",".").replace('‘',' ').replace('-',' ').replace('’',' ').replace('\'',' ')
+sentences=tmp.split(".")
 
 def remove_empty_words(l):
     return list(filter(lambda a: a != '', l))
