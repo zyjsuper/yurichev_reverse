@@ -120,5 +120,8 @@ _HL2(`The files')
 _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/markov').
 Surely, any other texts can be used, in any language...</p>
 
+<p>Other related post is about typos:
+_HTML_LINK_AS_IS(`https://yurichev.com/blog/fuzzy_string/').</p>
+
 _BLOG_FOOTER()
 
