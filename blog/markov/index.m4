@@ -1,6 +1,10 @@
 m4_include(`commons.m4')
 
 _HEADER_HL1(`Autocomplete using Markov chains')
+
+<p>TL;DR: gather statistics, for a given natural language, what words comes most often after a word/pair of words/triplet of words.</p>
+
+<hr>
  
 <p>What are most chess moves played after 1.e4 e5 2.Nf3 Nf6?
 A big database of chess games can be queried, showing statistics:</p>
@@ -93,7 +97,7 @@ as a first idea.</p>
 
 _HL2(`random.choices() in Python 3')
 
-<p>... was used.
+<p>... is used.
 This is a very _HTML_LINK(`https://docs.python.org/3/library/random.html#random.choices',`useful function'): weights (or probabilities) can be added.</p>
 
 <p>For example:</p>
@@ -120,7 +124,7 @@ _HL2(`The files')
 _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/markov').
 Surely, any other texts can be used, in any language...</p>
 
-<p>Other related post is about typos:
+<p>Another related post is about typos:
 _HTML_LINK_AS_IS(`https://yurichev.com/blog/fuzzy_string/').</p>
 
 _BLOG_FOOTER()
