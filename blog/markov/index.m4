@@ -127,5 +127,11 @@ Surely, any other texts can be used, in any language...</p>
 <p>Another related post is about typos:
 _HTML_LINK_AS_IS(`https://yurichev.com/blog/fuzzy_string/').</p>
 
+_HL2(`Read more')
+
+_HTML_LINK(`https://www.kaggle.com/nulldata/meaningful-random-headlines-by-markov-chain',`Meaningful Random Headlines by Markov Chain').
+
+_HTML_LINK(`https://news.ycombinator.com/item?id=19204186',`At hacker news')
+
 _BLOG_FOOTER()
 
