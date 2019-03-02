@@ -2,7 +2,7 @@ m4_include(`commons.m4')
 
 _HEADER_HL1(`Autocomplete using Markov chains')
 
-<p>TL;DR: gather statistics, for a given natural language, what words come most often after a word/pair of words/triplet of words.</p>
+<p>TL;DR: collect statistics, for a given natural language, what words come most often after a word/pair of words/triplet of words.</p>
 
 <hr>
  
@@ -58,6 +58,9 @@ _PRE_END
 
 <p>By first look, these pieces of text are visually OK, but it is senseless.
 Some people (including me) find it funny.</p>
+
+<p>Spammers also use this technique to make email message visually similar to a meaningful
+text, albeit it is not meaningful at all, rather absurdic and funny.</p>
 
 _HL2(`Autocomplete')
 
