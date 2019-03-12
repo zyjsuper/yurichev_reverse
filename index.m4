@@ -6,7 +6,7 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 
 <p><h5>My surname in IPA form: [yʊritʃev]</h5></p>
 
-<p>_HTML_IMG(`pix/DY2018.jpg')</p>
+<p>_HTML_IMG(`pix/Dennis_Yurichev.jpg')</p>
 
 <!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
 
