@@ -1,0 +1,6 @@
+('red', 'green', 'blue')
+('red', 'blue', 'green')
+('green', 'red', 'blue')
+('green', 'blue', 'red')
+('blue', 'red', 'green')
+('blue', 'green', 'red')
