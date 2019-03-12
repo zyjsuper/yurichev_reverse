@@ -111,7 +111,8 @@ _PRE_BEGIN
 m4_include(`blog/comb/pw2.py')
 _PRE_END
 
-<p>And this is a way to memorize it: the length of the final result equals to lengths of all input lists multiplied with each other.</p>
+<p>And this is a way to memorize it: the length of the final result equals to lengths of all input lists multiplied with each other
+(like "product").</p>
 
 _PRE_BEGIN
 m4_include(`blog/comb/pw21.py')
@@ -140,7 +141,7 @@ _PRE_END
 <p>4*3*13=156, and this is long a list is, to be permuted...</p>
 
 <p>Now the new problem: some Latin characters may be uppercased, some are lowercased.
-I'll add another "cartesian product" operation to alter a string in all possible ways:</p>
+I'll add another "cartesian product" operation to alter a final string in all possible ways:</p>
 
 _PRE_BEGIN
 m4_include(`blog/comb/pw3.py')
@@ -201,7 +202,7 @@ _PRE_END
 <p>Obviously, you can't try all 140400 passwords on Facebook, Twitter or any other well-protected internet service.
 But this is a peace of cake to brute-force them all on password protected RAR-archive or feed them all to John the Ripper, etc.</p>
 
-<p>All the files: ...</p>
+<p>All the files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/comb').</p>
 
 _BLOG_FOOTER()
 
