@@ -200,7 +200,7 @@ _PRE_END
 <p>( 140400 passwords )</p>
 
 <p>Obviously, you can't try all 140400 passwords on Facebook, Twitter or any other well-protected internet service.
-But this is a peace of cake to brute-force them all on password protected RAR-archive or feed them all to John the Ripper, etc.</p>
+But this is a peace of cake to brute-force them all on password protected RAR-archive or feed them all to John the Ripper, HashCat, etc.</p>
 
 <p>All the files: _HTML_LINK_AS_IS(`https://github.com/DennisYurichev/yurichev.com/tree/master/blog/comb').</p>
 
