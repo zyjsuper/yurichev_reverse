@@ -76,6 +76,8 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 
 <p>_HTML_LINK(`http://go.yurichev.com/45003', `My GitHub account')</p>
 
+<p>I'm no longer using social networks (including Facebook and Twitter). I deactivated all my accounts 2nd March 2019.</p>
+
 m4_include(`google.html')
 
 _FOOTER_AT_MAIN()

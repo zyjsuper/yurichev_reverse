@@ -138,7 +138,7 @@ _PRE_BEGIN
 ('emily', '1963', ',')
 _PRE_END
 
-<p>4*3*13=156, and this is long a list is, to be permuted...</p>
+<p>4*3*13=156, and this is a size of a list, to be permuted...</p>
 
 <p>Now the new problem: some Latin characters may be uppercased, some are lowercased.
 I'll add another "cartesian product" operation to alter a final string in all possible ways:</p>
