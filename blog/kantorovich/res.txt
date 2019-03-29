@@ -1,0 +1,10 @@
+sat
+(model
+	(define-fun cut_A () (_ BitVec 16) (_ bv250 16)) ; 0xfa
+	(define-fun cut_B () (_ BitVec 16) (_ bv25 16)) ; 0x19
+	(define-fun cut_C () (_ BitVec 16) (_ bv0 16)) ; 0x0
+	(define-fun cut_D () (_ BitVec 16) (_ bv0 16)) ; 0x0
+	(define-fun out_A () (_ BitVec 16) (_ bv800 16)) ; 0x320
+	(define-fun out_B () (_ BitVec 16) (_ bv400 16)) ; 0x190
+	(define-fun workpieces_total () (_ BitVec 16) (_ bv275 16)) ; 0x113
+)

@@ -1,0 +1,8 @@
+sat
+[cut_B = 25,
+ cut_D = 0,
+ cut_A = 250,
+ out_B = 400,
+ out_A = 800,
+ workpieces_total = 275,
+ cut_C = 0]
