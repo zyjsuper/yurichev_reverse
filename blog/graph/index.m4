@@ -34,7 +34,7 @@ _PRE_BEGIN
 m4_include(`blog/graph/tmp.gv')
 _PRE_END
 
-<p><img src="blog/graph/tmp.png"></p>
+<p><img src="tmp.png"></p>
 
 <p>This is far from what GraphViz can usually do, but this is bettern than nothing.
 Also, it was a fun to do it!</p>
