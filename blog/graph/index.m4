@@ -42,4 +42,6 @@ Also, it was a fun to do it!</p>
 <p>Further work:
 Try to render _HTML_LINK_AS_IS(`https://en.wikipedia.org/wiki/Unit_distance_graph'), all edges of which are of similar length...</p>
 
+<p>Also, we can enumerate as many solutions as possible to find the one, where vertices are not intersected by edges, as in our case.</p>
+
 _BLOG_FOOTER()
