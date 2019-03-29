@@ -36,7 +36,7 @@ _PRE_END
 
 <p><img src="tmp.png"></p>
 
-<p>This is far from what GraphViz can usually do, but this is bettern than nothing.
+<p>This is far from what GraphViz can usually do, but this is better than nothing.
 Also, it was a fun to do it!</p>
 
 <p>Further work:
