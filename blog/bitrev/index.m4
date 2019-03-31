@@ -9,13 +9,14 @@ Unfortunately, such a hackish code is error-prone, an unnoticed typo can easily 
 
 <p>As before, I'm not proving here the function is "correct" in some sense,
 but I'm proving equivalence of two functions: bitrev64()
-and bitrev64_unoptimized(), which use bitrev32(), which in turn uses bitrev16(), etc...</p>
+and bitrev64_unoptimized(), which uses bitrev32(), which in turn uses bitrev16(), etc...</p>
 
 _PRE_BEGIN
 m4_include(`blog/bitrev/bitrev_Z3.py')
 _PRE_END
 
-<p>The problem is easy enough to be solved using my toy MK85 bitblaster, with only tiny modifications:</p>
+<p>The problem is easy enough to be solved using my toy _HTML_LINK(`https://github.com/DennisYurichev/MK85',`MK85 bitblaster'),
+with only tiny modifications:</p>
 
 _PRE_BEGIN
 m4_include(`blog/bitrev/bitrev_MK85.py')
