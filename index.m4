@@ -28,9 +28,9 @@ _HL2(`Some of my writings:')
 </ul>
 
 <p>My writings, as seen on Reddit:
-_HTML_LINK(`https://www.reddit.com/domain/yurichev.com/',`1'),
-_HTML_LINK(`https://www.reddit.com/domain/beginners.re/',`2'),
-_HTML_LINK(`https://www.reddit.com/domain/challenges.re/',`3'),
+_HTML_LINK(`https://www.reddit.com/domain/yurichev.com/top/?sort=top&t=all',`1'),
+_HTML_LINK(`https://www.reddit.com/domain/beginners.re/top/?sort=top&t=all',`2'),
+_HTML_LINK(`https://www.reddit.com/domain/challenges.re/top/?sort=top&t=all',`3'),
 
 on Hacker News:
 
