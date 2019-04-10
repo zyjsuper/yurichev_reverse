@@ -27,7 +27,17 @@ _HL2(`Some of my writings:')
 <li>_HTML_LINK(`https://github.com/DennisYurichev/random_notes/',`Random notes') at GitHub.
 </ul>
 
-<p>As seen on _HTML_LINK(`https://www.reddit.com/domain/yurichev.com/',`reddit'), _HTML_LINK(`https://hn.algolia.com/?query=yurichev&sort=byPopularity&prefix&page=0&dateRange=all&type=story',`hacker news').</p>
+<p>My writings, as seen on Reddit:
+_HTML_LINK(`https://www.reddit.com/domain/yurichev.com/',`1'),
+_HTML_LINK(`https://www.reddit.com/domain/beginners.re/',`2'),
+_HTML_LINK(`https://www.reddit.com/domain/challenges.re/',`3'),
+
+on Hacker News:
+
+_HTML_LINK(`https://hn.algolia.com/?query=yurichev&sort=byPopularity&prefix&page=0&dateRange=all&type=story',`1'),
+_HTML_LINK(`https://hn.algolia.com/?query=dennisyurichev&sort=byPopularity&prefix&page=0&dateRange=all&type=story',`2'),
+_HTML_LINK(`https://hn.algolia.com/?query=beginners.re&sort=byPopularity&prefix&page=0&dateRange=all&type=story',`3').
+</p>
 
 _HL2(`Vulnerabilities I found (relics):')
 <ul>
