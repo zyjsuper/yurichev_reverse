@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2019, 4,10,0,0,0), "random","[Math][Python] random.choices() from Python 3")
     post(f1,f2,datetime.datetime(2019, 3,31,0,0,0), "bitrev","[Math][Python][Z3] Bit reverse function verification")
     post(f1,f2,datetime.datetime(2019, 3,29,0,0,0), "graph","[Math][Python][Z3] Graph drawing and ILP")
     post(f1,f2,datetime.datetime(2019, 3,29,0,0,0), "kantorovich","[Math][Python][Z3] Wood workshop, linear programming and Leonid Kantorovich")

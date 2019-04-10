@@ -17,6 +17,7 @@ _HTML_LINK(`https://www.reddit.com/r/ReverseEngineering/comments/6aibcu/quick_in
 _HTML_LINK(`https://www.reddit.com/r/compsci/comments/6ai9w0/quick_introduction_into_satsmt_solvers_and/',`3').</p>
 
 <p>It's recommended at least in _HTML_LINK(`http://www.cs.toronto.edu/~chechik/courses18/csc410/readings.html',`University of Toronto'),
+_HTML_LINK(`https://cs.stanford.edu/people/niemetz/files/talks/Niemetz-Preiner-SATSMT-summer-school-2018.pdf',`Stanford'),
 _HTML_LINK(`https://wiki.cs.byu.edu/cs-686/schedule',`Brigham Young University'),
 _HTML_LINK(`https://www.sosy-lab.org/Teaching/2017-WS-FormaleSpezifikationVerifikation2/',`Software and Computational Systems Lab'),
 _HTML_LINK(`https://softech.cs.uni-kl.de/homepage/teaching/SS17/logik/log08b.pdf',`University of Kaiserslautern'),
