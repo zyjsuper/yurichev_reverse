@@ -10,6 +10,7 @@ HTML_FILES=index.html pgp.html C-book.html SAT_SMT.html ops_FPGA.html vuln.html 
 	404.html \
 	blog/posts.html \
 	blog/index.html \
+	blog/minesweeper_SAT_SN/index.html \
 	blog/random/index.html \
 	blog/bitrev/index.html \
 	blog/graph/index.html \
