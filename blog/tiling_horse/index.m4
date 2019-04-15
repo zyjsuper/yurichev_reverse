@@ -48,7 +48,7 @@ _HTML_LINK(`https://arxiv.org/pdf/cs/0011047.pdf',`Dancing Links paper')
 (I translated it to SAT).</p>
 
 <p>Thanks to parallelized _HTML_LINK(`http://fmv.jku.at/lingeling/',`Plingeling'), I could
-find a solution for a 40*30 [units] plate:</p>
+find a solution for a 40*30 [units] plate in minutes:</p>
 
 <p><img src="1_plate.png"></p>
 
@@ -91,8 +91,8 @@ Then you get 10 OR result.
 Each OR result is "commander", like, commander of a squad.
 Join them together with quadratic AMO1/ALO1 constraint again.</p>
 
-<p>I do this recursively, so it looks like a tree.
-Changing these 5 and 10 constants influences SAT solver's perfomance significantly, probably, tuning is required for each type of task...</p>
+<p>I do this recursively, so it looks like a multi-tiered tree of "commanders".
+Also, changing these constants (5 and 10) influences SAT solver's perfomance significantly, probably, tuning is required for each type of task...</p>
 
 _PRE_BEGIN
     # naive/pairwise/quadratic encoding
