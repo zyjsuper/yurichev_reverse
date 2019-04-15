@@ -1,6 +1,6 @@
 m4_include(`commons.m4')
 
-_HEADER_HL1(`[Python][SAT] Optimizing production of a cardboard toy')
+_HEADER_HL1(`[Python][SAT] Optimizing production of a cardboard toy using SAT-solver')
 
 <p>This is a do-it-yourself toy horse I once bought, made of cardboard parts:</p>
 
