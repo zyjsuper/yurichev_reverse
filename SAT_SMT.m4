@@ -30,8 +30,6 @@ _HL2(`Praise')
 "Dennis Yurichev's "SAT/SMT by Example" is an impressive monograph. It provides an extensive and diverse collection of problems that
 can be encoded as SAT or SMT problems, and discusses their encodings in detail. Its wealth of SMT examples in particular has made it
 popular among researchers and practitioners interested in leveraging the power of SMT solvers."
-</p>
-<p>
 ( _HTML_LINK(`http://homepage.cs.uiowa.edu/~tinelli/',`Cesare Tinelli'),
 one of _HTML_LINK(`http://cvc4.cs.stanford.edu/web/',`CVC4')'s authors )
 </p>
