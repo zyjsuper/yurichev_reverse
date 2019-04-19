@@ -355,7 +355,9 @@ for t in inv_tbl_poly:
 for t in inv_tbl_board:
     tmp=[rows[q] for q in inv_tbl_board[t]]
 
-    # only one True must be present in tmp:
+    # only one True may be present in tmp:
+    # We use AtMost1() here instead of make_one_hot(), because a cell may be empty (board is bigger than all tiles joined together).
+    # But still, all tiles must be present (so we use make_one_hot() there).
     s.AtMost1(tmp)
 
 # enumerate all possible solutions:

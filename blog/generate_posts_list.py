@@ -26,6 +26,7 @@ def main():
 
     f2.write ("<table>\n")
 
+    post(f1,f2,datetime.datetime(2019, 4,19,0,0,0), "20190419","SAT/SMT by Example: what people say")
     post(f1,f2,datetime.datetime(2019, 4,16,0,0,0), "tiling_horse","[Python][SAT] Optimizing production of a cardboard toy using SAT-solver")
     post(f1,f2,datetime.datetime(2019, 4,12,0,0,0), "minesweeper_SAT_SN","[Python][SAT] Cracking Minesweeper with SAT solver and sorting network")
     post(f1,f2,datetime.datetime(2019, 4,10,0,0,0), "random","[Math][Python] random.choices() from Python 3")

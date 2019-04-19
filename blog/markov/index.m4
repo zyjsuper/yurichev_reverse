@@ -57,7 +57,7 @@ m4_include(`blog/markov/diss.txt')
 _PRE_END
 
 <p>By first look, these pieces of text are visually OK, but it is senseless.
-Some people (including me) find it funny.</p>
+Some people (including me) find it amusing.</p>
 
 <p>Spammers also use this technique to make email message visually similar to a meaningful
 text, albeit it is not meaningful at all, rather absurdic and funny.</p>
@@ -120,6 +120,10 @@ _PRE_END
 
 <p>"1" is generated in 25% of cases, "2" in 60% and "3" in 15%.
 Well, almost.</p>
+
+_HL2(`Further work')
+
+<p>Comma can be a separator as well, etc...</p>
 
 _HL2(`The files')
 

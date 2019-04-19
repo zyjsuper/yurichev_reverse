@@ -71,7 +71,7 @@ _PRE_END
 
 <p><img src="3_plates.png"></p>
 
-<p>This is slightly better than what was produced by the toy factory (20*30 [units]).</p>
+<p>This is slightly better than what was produced by the toy factory (20*30 [units], as measured by my notebook).</p>
 
 <p>But keep in mind, how coarse my "units" are (~5mm).
 You can "digitize" better if you use
