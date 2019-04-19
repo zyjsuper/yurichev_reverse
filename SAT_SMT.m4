@@ -26,7 +26,18 @@ _HTML_LINK(`http://www.iitg.ac.in/pbhaduri/cs525-2019/cs525-19.html',`Indian Ins
 
 _HL2(`Praise')
 
-<p>"This is quite instructive for students. I will point my students to this!" (_HTML_LINK(`http://fmv.jku.at/biere/',`Armin Biere')).</p>
+<p>
+"Dennis Yurichev's "SAT/SMT by Example" is an impressive monograph. It provides an extensive and diverse collection of problems that
+can be encoded as SAT or SMT problems, and discusses their encodings in detail. Its wealth of SMT examples in particular has made it
+popular among researchers and practitioners interested in leveraging the power of SMT solvers."
+</p>
+<p>
+( _HTML_LINK(`http://homepage.cs.uiowa.edu/~tinelli/',`Cesare Tinelli'),
+one of _HTML_LINK(`http://cvc4.cs.stanford.edu/web/',`CVC4')'s authors )
+</p>
+
+<p>"This is quite instructive for students. I will point my students to this!" (_HTML_LINK(`http://fmv.jku.at/biere/',`Armin Biere'),
+one of Boolector's authors).</p>
 
 <p>"_HTML_LINK(`https://github.com/Z3Prover/z3/wiki',`"An excellent source of well-worked through and motivating examples of using Z3's python interface.')"
 (Nikolaj Bjorner, one of Z3's developers).</p>
