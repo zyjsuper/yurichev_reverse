@@ -94,6 +94,8 @@ Join them together with quadratic AMO1/ALO1 constraint again.</p>
 <p>I do this recursively, so it looks like a multi-tiered tree of "commanders".
 Also, changing these constants (5 and 10) influences SAT solver's perfomance significantly, probably, tuning is required for each type of task...</p>
 
+<p>(The constants defines breadth and depth of a tree.)</p>
+
 _PRE_BEGIN
     # naive/pairwise/quadratic encoding
     def AtMost1_pairwise(self, lst):
