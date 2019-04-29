@@ -55,7 +55,8 @@ find a solution for a 40*30 [units] plate in minutes:</p>
 <p>(_HTML_LINK(`https://github.com/DennisYurichev/yurichev.com/blob/master/blog/tiling_horse/tiling_horse.py',`The source code'),
 it uses _HTML_LINK(`https://github.com/DennisYurichev/SAT_SMT_by_example/blob/master/libs/SAT_lib.py',`SAT_lib library') and Plingeling).</p>
 
-<p>Probably this is smallest plate possible, however, I didn't checked even smaller.</p>
+<p>Probably this is smallest plate possible, however, I didn't checked even smaller.
+You can decrease dimensions and run it again and again...</p>
 
 <p>Now the question: the toy factory wants to ship all parts in several (smaller) plates.
 Like, 3 of them.
