@@ -11,7 +11,8 @@ _HL1(`Dennis Yurichev / Денис Юричев')
 <!-- <p style="color:red">My CV/resume: _HTML_LINK_AS_IS(`https://yurichev.com/Dennis_Yurichev.pdf').</p> -->
 
 <p>As of 2018, I mostly known for _HTML_LINK(`http://go.yurichev.com/45000',`Reverse Engineering for Beginners'), 
-_HTML_LINK(`SAT_SMT.html',`SAT/SMT by example') and 
+_HTML_LINK(`SAT_SMT.html',`SAT/SMT by example'),
+_HTML_LINK(`blog',`blog posts') and 
 _HTML_LINK(`tracer-en.html',`tracer').</p>
 
 <!-- <p>See also: _HTML_LINK_AS_IS(`http://dongle-emulator.net/').</p> -->
