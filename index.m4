@@ -91,6 +91,10 @@ Sometimes I may delay my E-Mail reply. Sorry in advance for the inconvenience.</
 See _HTML_LINK(`https://yurichev.com/blog/',`my blog') for news.
 </p>
 
+<p style="opacity: 0;">
+<a href="http://hackspace-in-ukraine.site/">.</a>
+</p>
+
 m4_include(`google.html')
 
 _FOOTER_AT_MAIN()
