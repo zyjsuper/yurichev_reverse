@@ -92,7 +92,7 @@ See _HTML_LINK(`https://yurichev.com/blog/',`my blog') for news.
 </p>
 
 <p style="opacity: 0;">
-<a href="http://hackspace-in-ukraine.site/">.</a>
+<a href="http://hackspace.odessa.ua/">.</a>
 </p>
 
 m4_include(`google.html')
